@@ -144,6 +144,7 @@
       font-size: 1.05rem;
     }
     .gear {
+          .gear {
       width: 80px; height: 80px;
       border: 8px solid #bfa14a;
       border-radius: 50%;
@@ -151,20 +152,27 @@
       border-right: 8px solid transparent;
       animation: spin 2s linear infinite;
     }
-    .construction {
-  display: flex;
-  flex-direction: column;
-  align-items: center;     /* Centra horizontal */
-  justify-content: center; /* Centra vertical */
-  text-align: center;
-  min-height: 40vh;
-}
-
-.gear {
-  margin-bottom: 1rem; /* Espacio entre el círculo y el texto */
-}
-
     @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+    /* ✅ Centrado de la sección en construcción */
+    #construction {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 40vh;
+    }
+
+    #construction .gear {
+      margin-bottom: 1rem;
+    }
+
+    .social-float {
+      position: fixed;
+      bottom: 20px; right: 20px;
+      display: flex; flex-direction: column;
+
 
     .social-float {
       position: fixed;
@@ -301,4 +309,5 @@
   </footer>
 </body>
 </html>
+
 
