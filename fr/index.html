@@ -286,6 +286,43 @@
 </script>
 
 </head>
+<head>
+  <style>
+    /* Tus estilos generales */
+    header h1 { font-size: 2.5rem; }
+    header p { font-size: 1.2rem; }
+    .social-float { /* ... */ }
+
+    /* Banner YouTube profesional */
+    .banner-youtube { 
+      display: flex; 
+      justify-content: space-between; 
+      /* resto del CSS del banner */ 
+    }
+
+    /* Media queries */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      header p { font-size: 1rem; }
+      .social-float { flex-direction: row; bottom: 15px; right: 15px; }
+      .banner-youtube { flex-direction: column; text-align: center; }
+      .banner-button { margin-top: 10px; }
+    }
+  </style>
+</head>
+<body>
+    <!-- Aquí va tu HTML, incluyendo el banner -->
+  <div class="banner-youtube">
+    <div class="banner-left">
+      <i class="fab fa-youtube"></i>
+      <div class="banner-text">
+        <strong>Bientôt sur YouTube !</strong>
+        <p>Tutoriels, astuces et projets de sysadmin et cybersécurité.</p>
+      </div>
+    </div>
+    <a href="https://www.youtube.com/@tuusuario" target="_blank" class="banner-button">S’abonner</a>
+  </div>
+</body>
 <body>
   <div class="language-switcher">
     <a href="/index.html">🇪🇸 Español</a> |
@@ -437,6 +474,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
