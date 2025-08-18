@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rafael Moreno Pérez - SysAdmin & Ciberseguridad</title>
@@ -11,14 +9,18 @@
   <!-- Fuentes modernas -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     body {
       margin: 0;
-      font-family: Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-color: #fff;
       color: #111;
       line-height: 1.7;
     }
+
     header {
       position: relative;
       background: #000;
@@ -27,19 +29,22 @@
       padding: 4rem 1rem;
       overflow: hidden;
     }
+
     header h1 {
       margin: 0;
       font-size: 3rem;
-      font-family: 'Roboto Slab', serif;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
     }
+
     header p {
       margin-top: 0.5rem;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
+      font-family: 'Poppins', sans-serif;
       font-weight: 300;
       color: #ddd;
     }
 
-    /* Animación tipo "matrix" binaria */
     .matrix {
       position: absolute;
       top: 0;
@@ -56,10 +61,12 @@
       animation: fall 5s linear infinite;
       z-index: 0;
     }
+
     @keyframes fall {
       from { background-position: 0 -200px; }
       to { background-position: 0 0; }
     }
+
     header h1, header p {
       position: relative;
       z-index: 1;
@@ -73,14 +80,28 @@
       background: #111;
       padding: 1rem;
     }
+
     nav a {
+      position: relative;
       color: rgb(208, 190, 85);
       text-decoration: none;
       font-weight: bold;
       font-size: 1.1rem;
     }
-    nav a:hover {
-      color: #fff;
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: rgb(229, 207, 82);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
     }
 
     section {
@@ -89,6 +110,7 @@
       padding: 0 1rem;
       text-align: center;
     }
+
     h2 {
       font-family: 'Roboto Slab', serif;
       font-size: 2rem;
@@ -97,6 +119,7 @@
       padding-bottom: 0.5rem;
       margin-bottom: 1.5rem;
     }
+
     .card {
       background: #fdfdfd;
       border: 1px solid #ccc;
@@ -107,7 +130,6 @@
       font-size: 1.05rem;
     }
 
-    /* Bloque YouTube */
     .youtube-box {
       background: #000;
       color: rgb(229, 207, 82);
@@ -122,13 +144,13 @@
       margin: 2rem auto;
       max-width: 700px;
     }
+
     @keyframes pulse {
       0% { transform: scale(1); box-shadow: 0 0 20px rgba(255,255,255,0.3); }
       50% { transform: scale(1.05); box-shadow: 0 0 40px rgba(255,255,255,0.6); }
       100% { transform: scale(1); box-shadow: 0 0 20px rgba(255,255,255,0.3); }
     }
 
-    /* Página en construcción */
     .construccion {
       display: flex;
       flex-direction: column;
@@ -137,6 +159,7 @@
       text-align: center;
       min-height: 40vh;
     }
+
     .gear {
       width: 80px;
       height: 80px;
@@ -146,19 +169,21 @@
       border-right: 8px solid transparent;
       animation: spin 2s linear infinite;
     }
+
     .construccion h2 {
       color: #bfa14a;
       margin-top: 1rem;
     }
+
     .construccion p {
       color: #100e09;
     }
+
     @keyframes spin {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
 
-    /* Redes sociales flotantes */
     .social-float {
       position: fixed;
       bottom: 20px;
@@ -168,6 +193,7 @@
       gap: 12px;
       z-index: 999;
     }
+
     .social-float a {
       width: 45px;
       height: 45px;
@@ -181,6 +207,7 @@
       transition: 0.3s;
       text-decoration: none;
     }
+
     .social-float a:hover {
       transform: scale(1.15);
       background: rgb(229, 207, 82);
@@ -196,7 +223,6 @@
       margin-top: 3rem;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       header h1 { font-size: 2.2rem; }
       header p { font-size: 1rem; }
@@ -219,57 +245,53 @@
     <a href="#contacto">Contacto</a>
   </nav>
 
-
-
-
-
   <section id="sobre-mi">
-    <h2>👨‍💻 Sobre mí</h2>
+    <h2><i class="fas fa-user-shield"></i> Sobre mí</h2>
     <div class="card">
       <p>Hola, soy Rafael, estudiante de primer año en Administración de Sistemas Informáticos en Red (ASIR), con certificaciones Cisco CCST Cibersecurity y Networking, y una fuerte vocación por la ciberseguridad. Me especializo en asegurar infraestructuras, optimizar entornos IT y analizar vulnerabilidades para construir sistemas más robustos y confiables.</p>
     </div>
   </section>
 
   <section id="proyectos">
-    <h2>🛡️ Proyectos</h2>
+    <h2><i class="fas fa-project-diagram"></i> Proyectos</h2>
     <div class="card">
-      <h3>🔒 Honeypot de Seguridad</h3>
+      <h3><i class="fas fa-lock"></i> Honeypot de Seguridad</h3>
       <p>Implementación de un honeypot para detectar intrusiones y analizar patrones de ataque en tiempo real.</p>
     </div>
     <div class="card">
-      <h3>☁️ Automatización en la Nube</h3>
-      <p>Despliegue automatizado de servidores seguros con scripts en Bash y Ansible.</p>
+      <h3><i class="fas fa-cloud"></i> Automatización
+         <p>Despliegue automatizado de servidores seguros con scripts en Bash y Ansible.</p>
     </div>
   </section>
 
-  <section id="cv">
-    <h2>📄 CV</h2>
-    <div class="card">
-      <p>Puedes descargar mi CV completo en PDF haciendo clic <a href="#">aquí</a>.</p>
-    </div>
-  </section>
+<section id="cv">
+  <h2><i class="fas fa-file-alt"></i> CV</h2>
+  <div class="card">
+    <p><i class="fas fa-file-pdf"></i> Puedes descargar mi CV completo en PDF haciendo clic <a href="#">aquí</a>.</p>
+  </div>
+</section>
 
-  <section id="habilidades">
-    <h2>⚡ Habilidades</h2>
-    <div class="card">
-      <ul style="list-style:none; padding:0;">
-        <li>Administración de sistemas Linux & Windows</li>
-        <li>Ciberseguridad ofensiva y defensiva</li>
-        <li>Automatización con Ansible y Bash</li>
-        <li>Cloud: AWS, Azure</li>
-        <li>Monitorización y hardening de servidores</li>
-        <li>Idioma Francés C1</li>
-      </ul>
-    </div>
-  </section>
+<section id="habilidades">
+  <h2><i class="fas fa-bolt"></i> Habilidades</h2>
+  <div class="card">
+    <ul style="list-style:none; padding:0;">
+      <li><i class="fas fa-server"></i> Administración de sistemas Linux & Windows</li>
+      <li><i class="fas fa-shield-alt"></i> Ciberseguridad ofensiva y defensiva</li>
+      <li><i class="fas fa-terminal"></i> Automatización con Ansible y Bash</li>
+      <li><i class="fas fa-cloud"></i> Cloud: AWS, Azure</li>
+      <li><i class="fas fa-chart-line"></i> Monitorización y hardening de servidores</li>
+      <li><i class="fas fa-language"></i> Idioma Francés C1</li>
+    </ul>
+  </div>
+</section>
 
+<section id="contacto">
+  <h2><i class="fas fa-envelope"></i> Contacto</h2>
+  <div class="card">
+    <p><i class="fas fa-at"></i> Email: <a href="mailto:Iloveprivacy_us@proton.me">Iloveprivacy_us@proton.me</a></p>
+  </div>
+</section>
 
-  <section id="contacto">
-    <h2>📬 Contacto</h2>
-    <div class="card">
-      <p>📧 Email: <a href="mailto:Iloveprivacy_us@proton.me">Iloveprivacy_us@proton.me</a></p>
-    </div>
-  </section>
 
   <!-- Bloque de anuncio de YouTube -->
   <div class="youtube-box">
@@ -296,5 +318,6 @@
   </footer>
 </body>
 </html>
+
 
 
