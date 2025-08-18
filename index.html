@@ -6,37 +6,24 @@
   <title>Rafael Moreno Pérez - Administrateur Systèmes | Cybersécurité</title>
   <link rel="icon" href="redhat.ico" type="image/x-icon">
 
-  <!-- ✅ Open Graph para compartir en redes sociales -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Rafael Moreno Pérez - Administrateur Systèmes | Cybersécurité" />
   <meta property="og:description" content="Portfolio en cybersécurité, administration des systèmes et projets IT." />
   <meta property="og:image" content="https://rafaelmorenoperez.github.io/images/banner.jpg" />
   <meta property="og:url" content="https://rafaelmorenoperez.github.io/" />
   <meta property="og:type" content="website" />
-</head>
-<body>
-  <!-- Aquí va el resto del contenido -->
-</body>
-</html>
 
-
-
-  <!-- ✅ Twitter Cards -->
+  <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Rafael Moreno Pérez - SysAdmin | Ciberseguridad" />
   <meta name="twitter:description" content="Portfolio en cybersécurité, administration des systèmes et projets IT." />
   <meta name="twitter:image" content="https://rafaelmorenoperez.github.io/images/banner.jpg" />
 
-  <!-- Fuentes modernas -->
+  <!-- Fuentes y estilos -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome para iconos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Google tag (gtag.js) -->
-  ...
-
-
-    <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1T24E1NDR"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -45,10 +32,7 @@
     gtag('config', 'G-J1T24E1NDR');
   </script>
 
-  <style>
-    /* Todo tu CSS aquí... */
-  </style>
-</head>
+  <!-- Tu CSS aquí -->
   <style>
     body {
       margin: 0;
@@ -57,243 +41,42 @@
       color: #111;
       line-height: 1.7;
     }
-       .language-switcher {
+
+    .language-switcher {
       position: absolute;
-      top: 10px;
+      top: 0;
       right: 10px;
       z-index: 1000;
       font-weight: bold;
       font-size: 0.95rem;
+      padding: 10px;
+      background-color: #000;
     }
 
     .language-switcher a {
-      color: #ddd;
+      color: rgb(229, 207, 82);
       text-decoration: none;
       margin: 0 5px;
       transition: color 0.3s;
     }
 
     .language-switcher a:hover {
-      color: rgb(229, 207, 82);
-    }
-
-    header {
-      position: relative;
-      background: #000;
-      color: rgb(229, 207, 82);
-      text-align: center;
-      padding: 4rem 1rem;
-      overflow: hidden;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-    }
-
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1.3rem;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 300;
-      color: #ddd;
-    }
-
-    .matrix {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: repeating-linear-gradient(
-        to bottom,
-        rgba(255,255,255,0.02) 0,
-        rgba(255,255,255,0.02) 2px,
-        transparent 2px,
-        transparent 4px
-      );
-      animation: fall 5s linear infinite;
-      z-index: 0;
-    }
-
-    @keyframes fall {
-      from { background-position: 0 -200px; }
-      to { background-position: 0 0; }
-    }
-
-    header h1, header p {
-      position: relative;
-      z-index: 1;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      background: #111;
-      padding: 1rem;
-    }
-
-    nav a {
-      position: relative;
-      color: rgb(208, 190, 85);
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-
-    nav a::after {
-      content: '';
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      bottom: -4px;
-      left: 0;
-      background-color: rgb(229, 207, 82);
-      transition: width 0.3s ease;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    section {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      text-align: center;
-    }
-
-    h2 {
-      font-family: 'Roboto Slab', serif;
-      font-size: 2rem;
-      color: #000;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .card {
-      background: #fdfdfd;
-      border: 1px solid #ccc;
-      padding: 1.8rem;
-      border-radius: 12px;
-      margin-bottom: 1.8rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      font-size: 1.05rem;
-    }
-
-    .youtube-box {
-      background: #000;
-      color: rgb(229, 207, 82);
-      font-size: 1.8rem;
-      font-weight: bold;
-      padding: 2rem 3rem;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(255,255,255,0.2);
-      text-align: center;
-      font-family: 'Roboto Slab', serif;
-      animation: pulse 2s infinite;
-      margin: 2rem auto;
-      max-width: 700px;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); box-shadow: 0 0 20px rgba(255,255,255,0.3); }
-      50% { transform: scale(1.05); box-shadow: 0 0 40px rgba(255,255,255,0.6); }
-      100% { transform: scale(1); box-shadow: 0 0 20px rgba(255,255,255,0.3); }
-    }
-
-    .construccion {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      min-height: 40vh;
-    }
-
-    .gear {
-      width: 80px;
-      height: 80px;
-      border: 8px solid #bfa14a;
-      border-radius: 50%;
-      border-top: 8px solid transparent;
-      border-right: 8px solid transparent;
-      animation: spin 2s linear infinite;
-    }
-
-    .construccion h2 {
-      color: #bfa14a;
-      margin-top: 1rem;
-    }
-
-    .construccion p {
-      color: #100e09;
-    }
-
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    .social-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      z-index: 999;
-    }
-
-    .social-float a {
-      width: 45px;
-      height: 45px;
-      background: #000;
       color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      font-size: 1.4rem;
-      transition: 0.3s;
-      text-decoration: none;
     }
 
-    .social-float a:hover {
-      transform: scale(1.15);
-      background: rgb(229, 207, 82);
-      color: #000;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #000;
-      color: #aaa;
-      font-size: 0.9rem;
-      margin-top: 3rem;
-    }
-
-    @media (max-width: 768px) {
-      header h1 { font-size: 2.2rem; }
-      header p { font-size: 1rem; }
-      .social-float { flex-direction: row; bottom: 15px; right: 15px; }
-    }
+    /* Resto de tu CSS... */
   </style>
-</head>
-
-</script>
-
 </head>
 <body>
   <div class="language-switcher">
     <a href="/index.html">🇪🇸 Español</a> |
     <a href="/fr/index.html">🇫🇷 Français</a>
+  </div>
+  <!-- Resto del contenido -->
+</body>
+</html>
+
+
   </div>
   <header>
     <div class="matrix"></div>
@@ -425,6 +208,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
