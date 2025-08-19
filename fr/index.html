@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rafael Moreno Pérez - Administrateur Systèmes | Cybersécurité</title>
+  <title>Rafael Moreno Pérez - SysAdmin & Ciberseguridad</title>
+  
   <link rel="icon" href="redhat.ico" type="image/x-icon">
 
-  <!-- ✅ Open Graph -->
+  <!-- ✅ Open Graph para compartir en redes sociales -->
   <meta property="og:title" content="Rafael Moreno Pérez - Administrateur Systèmes | Cybersécurité" />
   <meta property="og:description" content="Portfolio en cybersécurité, administration des systèmes et projets IT." />
   <meta property="og:image" content="https://rafaelmorenoperez.github.io/images/banner.jpg" />
   <meta property="og:url" content="https://rafaelmorenoperez.github.io/" />
   <meta property="og:type" content="website" />
+</head>
+<body>
+  <!-- Aquí va el resto del contenido -->
+</body>
+</html>
+
 
   <!-- ✅ Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -19,13 +26,14 @@
   <meta name="twitter:description" content="Portfolio en cybersécurité, administration des systèmes et projets IT." />
   <meta name="twitter:image" content="https://rafaelmorenoperez.github.io/images/banner.jpg" />
 
-  <!-- Fuentes -->
+  <!-- Fuentes modernas -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome -->
+  <!-- Font Awesome para iconos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Google Analytics -->
+
+    <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1T24E1NDR"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -35,14 +43,35 @@
   </script>
 
   <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #fff;
-      color: #111;
-      line-height: 1.7;
-    }
-    .language-switcher {
+  /* Todo tu CSS aquí... */
+
+footer {
+  width: 100%;          /* 100% del ancho de la ventana */
+  margin: 0;             /* quita márgenes que lo puedan achicar */
+  padding: 1rem;
+  background: #000;      /* negro */
+  color: #aaa;
+  font-size: 0.9rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+</style>
+
+</head>
+  <style>
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 100vw;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #111;
+  line-height: 1.7;
+  box-sizing: border-box;
+}
+       .language-switcher {
       position: absolute;
       top: 10px;
       right: 10px;
@@ -50,13 +79,17 @@
       font-weight: bold;
       font-size: 0.95rem;
     }
+
     .language-switcher a {
       color: #ddd;
       text-decoration: none;
       margin: 0 5px;
       transition: color 0.3s;
     }
-    .language-switcher a:hover { color: rgb(229, 207, 82); }
+
+    .language-switcher a:hover {
+      color: rgb(229, 207, 82);
+    }
 
     header {
       position: relative;
@@ -66,22 +99,28 @@
       padding: 4rem 1rem;
       overflow: hidden;
     }
+
     header h1 {
       margin: 0;
       font-size: 3rem;
+      font-family: 'Poppins', sans-serif;
       font-weight: 700;
     }
+
     header p {
       margin-top: 0.5rem;
       font-size: 1.3rem;
+      font-family: 'Poppins', sans-serif;
       font-weight: 300;
       color: #ddd;
     }
 
     .matrix {
       position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background: repeating-linear-gradient(
         to bottom,
         rgba(255,255,255,0.02) 0,
@@ -92,8 +131,16 @@
       animation: fall 5s linear infinite;
       z-index: 0;
     }
-    @keyframes fall { from { background-position: 0 -200px; } to { background-position: 0 0; } }
-    header h1, header p { position: relative; z-index: 1; }
+
+    @keyframes fall {
+      from { background-position: 0 -200px; }
+      to { background-position: 0 0; }
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
 
     nav {
       display: flex;
@@ -103,6 +150,7 @@
       background: #111;
       padding: 1rem;
     }
+
     nav a {
       position: relative;
       color: rgb(208, 190, 85);
@@ -110,15 +158,21 @@
       font-weight: bold;
       font-size: 1.1rem;
     }
+
     nav a::after {
       content: '';
       position: absolute;
-      width: 0%; height: 2px;
-      bottom: -4px; left: 0;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
       background-color: rgb(229, 207, 82);
       transition: width 0.3s ease;
     }
-    nav a:hover::after { width: 100%; }
+
+    nav a:hover::after {
+      width: 100%;
+    }
 
     section {
       max-width: 900px;
@@ -126,6 +180,7 @@
       padding: 0 1rem;
       text-align: center;
     }
+
     h2 {
       font-family: 'Roboto Slab', serif;
       font-size: 2rem;
@@ -134,6 +189,7 @@
       padding-bottom: 0.5rem;
       margin-bottom: 1.5rem;
     }
+
     .card {
       background: #fdfdfd;
       border: 1px solid #ccc;
@@ -143,171 +199,426 @@
       box-shadow: 0 4px 15px rgba(0,0,0,0.05);
       font-size: 1.05rem;
     }
+
+    .youtube-box {
+      background: #000;
+      color: rgb(229, 207, 82);
+      font-size: 1.8rem;
+      font-weight: bold;
+      padding: 2rem 3rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(255,255,255,0.2);
+      text-align: center;
+      font-family: 'Roboto Slab', serif;
+      animation: pulse 2s infinite;
+      margin: 2rem auto;
+      max-width: 700px;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 20px rgba(255,255,255,0.3); }
+      50% { transform: scale(1.05); box-shadow: 0 0 40px rgba(255,255,255,0.6); }
+      100% { transform: scale(1); box-shadow: 0 0 20px rgba(255,255,255,0.3); }
+    }
+
+   .construction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* Centra horizontal */
+  justify-content: center; /* Centra vertical */
+  text-align: center;
+  min-height: 40vh;
+}
+
+
     .gear {
-          .gear {
-      width: 80px; height: 80px;
+      width: 80px;
+      height: 80px;
       border: 8px solid #bfa14a;
       border-radius: 50%;
       border-top: 8px solid transparent;
       border-right: 8px solid transparent;
       animation: spin 2s linear infinite;
     }
-    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
-    /* ✅ Centrado de la sección en construcción */
-    #construction {
+    .construccion h2 {
+      color: #bfa14a;
+      margin-top: 1rem;
+    }
+
+    .construccion p {
+      color: #100e09;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .social-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
       display: flex;
       flex-direction: column;
+      gap: 12px;
+      z-index: 999;
+    }
+
+    .social-float a {
+      width: 45px;
+      height: 45px;
+      background: #000;
+      color: #fff;
+      display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      min-height: 40vh;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      transition: 0.3s;
+      text-decoration: none;
     }
 
-    #construction .gear {
-      margin-bottom: 1rem;
-    }
-
-    .social-float {
-      position: fixed;
-      bottom: 20px; right: 20px;
-      display: flex; flex-direction: column;
-
-
-    .social-float {
-      position: fixed;
-      bottom: 20px; right: 20px;
-      display: flex; flex-direction: column;
-      gap: 12px; z-index: 999;
-    }
-    .social-float a {
-      width: 45px; height: 45px;
-      background: #000; color: #fff;
-      display: flex; align-items: center; justify-content: center;
-      border-radius: 50%; font-size: 1.4rem;
-      transition: 0.3s; text-decoration: none;
-    }
     .social-float a:hover {
       transform: scale(1.15);
-      background: rgb(229, 207, 82); color: #000;
+      background: rgb(229, 207, 82);
+      color: #000;
     }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #000;
-      color: #aaa;
-      font-size: 0.9rem;
-      margin-top: 3rem;
-    }
-    @media (max-width: 768px) {
+
+footer {
+  width: 100;
+  margin: 0;
+  padding: 1rem;
+  background: #000;
+  color: #aaa;
+  font-size: 0.9rem;
+  text-align: center;
+  position: relative;
+}
+
+  @media (max-width: 768px) {
       header h1 { font-size: 2.2rem; }
       header p { font-size: 1rem; }
       .social-float { flex-direction: row; bottom: 15px; right: 15px; }
     }
+
+  /* 👇 Nuevo espacio entre formulario y construcción */
+  .contact-form {
+    margin-bottom: 110px; /* espacio debajo del formulario */
+  }
+
+  #construction {
+    margin-top: 110px; /* espacio arriba de la sección de construcción */
+  }
   </style>
+</head>
+
+</script>
+
 </head>
 <body>
   <div class="language-switcher">
     <a href="/index.html">🇪🇸 Español</a> |
     <a href="/fr/index.html">🇫🇷 Français</a>
   </div>
-
   <header>
     <div class="matrix"></div>
     <h1>Rafael Moreno Pérez</h1>
-    <p>Administrateur Systèmes & Cybersécurité</p>
+    <p>SysAdmin & Especialista en Ciberseguridad</p>
   </header>
 
   <nav>
-    <a href="#about">À propos de moi</a>
-    <a href="#projects">Projets</a>
-    <a href="#certifications">Certifications</a>
+    <a href="#sobre-mi">À propos de moi</a>
+    <a href="#proyectos">Projects</a>
+    <a href="#certificaciones">Certifications</a>
     <a href="#cv">CV</a>
-    <a href="#skills">Compétences</a>
-    <a href="#contact">Contact</a>
+    <a href="#habilidades">Compétences</a>
+    <a href="#contacto">Contacte-moi</a>
   </nav>
 
-  <section id="about">
+  <section id="sobre-mi">
     <h2><i class="fas fa-user-shield"></i> À propos de moi</h2>
     <div class="card">
-      <p>Bonjour, je suis Rafael, étudiant en ASIR avec des certifications Cisco CCST en cybersécurité et réseaux. Je me spécialise dans la protection des infrastructures IT, l'optimisation des systèmes et l'analyse des vulnérabilités. Je parle couramment le français, ce qui me permet de travailler dans des environnements internationaux. Passionné par la cybersécurité, je cherche à créer des systèmes sûrs et efficaces. Découvrez mes projets sur GitHub ou contactez-moi pour collaborer.</p>
+    <p>Bonjour, je suis Rafael, étudiant en ASIR avec des certifications Cisco CCST en cybersécurité et réseaux. Je me spécialise dans la protection des infrastructures IT, l'optimisation des systèmes et l'analyse des vulnérabilités. Je parle couramment le français, ce qui me permet de travailler dans des environnements internationaux. Passionné par la cybersécurité, je cherche à créer des systèmes sûrs et efficaces. Découvrez mes projets sur GitHub ou contactez-moi pour collaborer.
+
+</p>
+
     </div>
   </section>
 
-  <section id="projects">
+  <section id="projets">
     <h2><i class="fas fa-project-diagram"></i> Projets</h2>
     <div class="card">
       <h3><i class="fas fa-lock"></i> Honeypot de Sécurité</h3>
       <p>Implémentation d'un honeypot pour détecter les intrusions et analyser les schémas d'attaque en temps réel.</p>
     </div>
     <div class="card">
-      <h3><i class="fas fa-cloud"></i> Automatisation</h3>
-      <p>Déploiement automatisé de serveurs sécurisés avec des scripts en Bash et Ansible.</p>
+      <h3><i class="fas fa-cloud"></i> Automatisation</h2>
+         <p>Déploiement automatisé de serveurs sécurisés avec des scripts en Bash et Ansible.
+
+.</p>
     </div>
   </section>
 
-  <section id="certifications">
-    <h2><i class="fas fa-certificate"></i> Certifications</h2>
-    <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-      <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="dad4ad76-045d-4df9-b408-907234ae2168" data-share-badge-host="https://www.credly.com"></div>
-      <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="6ae1a6bb-5ef6-4dcb-97e3-965c7ebc4947" data-share-badge-host="https://www.credly.com"></div>
-    </div>
-  </section>
+<section id="certificaciones">
+  <h2><i class="fas fa-certificate"></i> Certifications</h2>
 
-  <script src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+  <div class="certificaciones-container" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+    <div data-iframe-width="150" data-iframe-height="270" 
+         data-share-badge-id="dad4ad76-045d-4df9-b408-907234ae2168" 
+         data-share-badge-host="https://www.credly.com"></div>
 
-  <section id="cv">
-    <h2><i class="fas fa-file-alt"></i> CV</h2>
-    <div class="card">
-      <p><i class="fas fa-file-pdf"></i> Vous pouvez télécharger mon CV complet en cliquant
-      <a href="https://drive.google.com/uc?export=download&id=1PSYhsI1UjcgmiqFde5W8DHpSlBdg4EON" target="_blank">ici</a>.
-      </p>
-    </div>
-  </section>
-
-  <section id="skills">
-    <h2><i class="fas fa-bolt"></i> Compétences</h2>
-    <div class="card">
-      <ul style="list-style:none; padding:0;">
-        <li><i class="fas fa-server"></i> Administration Linux & Windows</li>
-        <li><i class="fas fa-shield-alt"></i> Cybersécurité offensive et défensive</li>
-        <li><i class="fas fa-terminal"></i> Automatisation avec Ansible et Bash</li>
-        <li><i class="fas fa-cloud"></i> Cloud: AWS, Azure</li>
-        <li><i class="fas fa-chart-line"></i> Supervision et hardening des serveurs</li>
-        <li><i class="fas fa-language"></i> Français C1, Espagnol natif</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2><i class="fas fa-envelope"></i> Contact</h2>
-    <div class="card">
-      <p><i class="fas fa-at"></i> Email: <a href="mailto:Iloveprivacy_us@proton.me">Iloveprivacy_us@proton.me</a></p>
-    </div>
-  </section>
-
-  <section id="construction">
-    <div class="gear"></div>
-    <h2>🚧 Site web en construction 🚧</h2>
-    <p>Nous travaillons constamment sur de nouveaux projets et compétences, revenez bientôt.</p>
-  </section>
-
-  <div class="social-float">
-    <a href="https://www.linkedin.com/in/tuusuario" title="LinkedIn" style="background-color: #0077B5;">
-      <i class="fab fa-linkedin-in"></i>
-    </a>
-    <a href="https://www.youtube.com/@tuusuario" title="YouTube" style="background-color: #FF0000;">
-      <i class="fab fa-youtube"></i>
-    </a>
-    <a href="https://github.com/tuusuario" title="GitHub" style="background-color: #181717;">
-      <i class="fab fa-github"></i>
-    </a>
+    <div data-iframe-width="150" data-iframe-height="270" 
+         data-share-badge-id="6ae1a6bb-5ef6-4dcb-97e3-965c7ebc4947" 
+         data-share-badge-host="https://www.credly.com"></div>
   </div>
 
-  <footer>
-    <p>© 2025 Rafael Moreno Pérez. Site développé avec HTML5 & CSS, édité dans VS Code et hébergé sur GitHub Pages.</p>
-  </footer>
+  <!-- Texto explicativo debajo -->
+  <p class="certificacion-descripcion">
+  Certificaciones <strong>CCST Cybersecurity & CCST Networking</strong> Obtenues en juillet 2025, ces certifications attestent de compétences essentielles en sécurité informatique, en réseaux, en identification des menaces et en application des bonnes pratiques dans des environnements professionnels.
+</section>
+
+
+<script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+
+
+  
+  
+  
+  
+<section id="cv">
+  <h2><i class="fas fa-file-alt"></i> CV</h2>
+  <div class="card">
+    <p><i class="fas fa-file-pdf"></i> Vous pouvez télécharger mon CV complet en cliquant
+    <a href="https://drive.google.com/uc?export=download&id=1PSYhsI1UjcgmiqFde5W8DHpSlBdg4EON
+" 
+   class="download-button" 
+   target="_blank">
+   ici
+      </a>.
+    </p>
+  </div>
+</section>
+
+<section id="habilidades">
+  <h2><i class="fas fa-bolt"></i> Compétences</h2>
+  <div class="card">
+    <ul style="list-style:none; padding:0;">
+      <li><i class="fas fa-server"></i> Administration Linux & Windows</li>
+      <li><i class="fas fa-shield-alt"></i> Cybersécurité offensive et défensive</li>
+      <li><i class="fas fa-terminal"></i> Automatisation avec Ansible y Bash</li>
+      <li><i class="fas fa-cloud"></i> Cloud: AWS, Azure</li>
+      <li><i class="fas fa-chart-line"></i> Supervision et hardening des serveurs</li>
+      <li><i class="fas fa-language"></i> Français C1, Espagnol natif</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contacto">
+  <h2><i class="fas fa-envelope"></i> Contacte-moi</h2>
+  
+  <!-- Email -->
+  <div class="card">
+    <p><i class="fas fa-at"></i> Email: 
+      <a href="mailto:Iloveprivacy_us@proton.me">Iloveprivacy_us@proton.me</a>
+    </p>
+  </div>
+
+  <!-- Formulario de contacto -->
+  <div class="card">
+    <form action="https://api.web3forms.com/submit" method="POST">
+<style>
+  .contact-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+  }
+
+  .form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+  }
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+textarea {
+  min-height: 150px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #000305;
+  color: rgb(229, 207, 82);
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+  button:hover {
+    background: #005fcc;
+  }
+</style>
+
+<div class="contact-form">
+  <h2></h2>
+  <form action="https://api.web3forms.com/submit" method="POST">
+    <!-- Tu Access Key de Web3Forms -->
+    <input type="hidden" name="access_key" value="59463dca-91ec-41ee-ae46-c66f76606caf" />
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="name">Prénom</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail de contact</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+<!-- 🚧 Sección de construcción -->
+<section id="construction" class="construction">
+  <div class="gear"></div>
+  <h2>🚧 Site web en construction 🚧</h2>
+  <p>Nous travaillons constamment sur de nouveaux projets et compétences, revenez bientôt..</p>
+</section>
+</div>
+
+<!-- Redes Sociales flotantes -->
+<div class="social-float">
+  <a href="https://www.linkedin.com/in/tuusuario" title="LinkedIn" style="background-color: #0077B5;">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+  <a href="https://www.youtube.com/@tuusuario" title="YouTube" style="background-color: #FF0000;">
+    <i class="fab fa-youtube"></i>
+  </a>
+  <a href="https://github.com/tuusuario" title="GitHub" style="background-color: #181717;">
+    <i class="fab fa-github"></i>
+  </a>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 Rafael Moreno Pérez. Site développé avec HTML5 & CSS, édité dans VS Code et hébergé sur GitHub Pages.</p>
+</footer>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
