@@ -43,33 +43,34 @@
   </script>
 
   <style>
-  <style>
   /* Todo tu CSS aquí... */
 
-  footer {
-    width: 100%;
-    text-align: center;
-    padding: 1rem;
-    background: #000;
-    color: #aaa;
-    font-size: 0.9rem;
-    margin-top: 3rem;
-
-    /* Asegura que ocupe todo el ancho */
-    max-width: 100% !important;
-    box-sizing: border-box;
-  }
+footer {
+  width: 100%;          /* 100% del ancho de la ventana */
+  margin: 0;             /* quita márgenes que lo puedan achicar */
+  padding: 1rem;
+  background: #000;      /* negro */
+  color: #aaa;
+  font-size: 0.9rem;
+  text-align: center;
+  box-sizing: border-box;
+}
 </style>
 
 </head>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #fff;
-      color: #111;
-      line-height: 1.7;
-    }
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 100vw;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #111;
+  line-height: 1.7;
+  box-sizing: border-box;
+}
        .language-switcher {
       position: absolute;
       top: 10px;
@@ -284,21 +285,31 @@
       color: #000;
     }
 
-    footer {
-      width: 100%;
-      text-align: center;
-      padding: 1rem;
-      background: #000;
-      color: #aaa;
-      font-size: 0.9rem;
-      margin-top: 3rem;
-    }
+footer {
+  width: 100;
+  margin: 0;
+  padding: 1rem;
+  background: #000;
+  color: #aaa;
+  font-size: 0.9rem;
+  text-align: center;
+  position: relative;
+}
 
-    @media (max-width: 768px) {
+  @media (max-width: 768px) {
       header h1 { font-size: 2.2rem; }
       header p { font-size: 1rem; }
       .social-float { flex-direction: row; bottom: 15px; right: 15px; }
     }
+
+  /* 👇 Nuevo espacio entre formulario y construcción */
+  .contact-form {
+    margin-bottom: 110px; /* espacio debajo del formulario */
+  }
+
+  #construction {
+    margin-top: 110px; /* espacio arriba de la sección de construcción */
+  }
   </style>
 </head>
 
@@ -322,7 +333,7 @@
     <a href="#certificaciones">Certificaciones</a>
     <a href="#cv">CV</a>
     <a href="#habilidades">Habilidades</a>
-    <a href="#contacto">Contacto</a>
+    <a href="#contacto">Contáctame</a>
   </nav>
 
   <section id="sobre-mi">
@@ -348,19 +359,21 @@
 <section id="certificaciones">
   <h2><i class="fas fa-certificate"></i> Certificaciones</h2>
 
- <div class="certificaciones-container" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-
-  
+  <div class="certificaciones-container" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
     <div data-iframe-width="150" data-iframe-height="270" 
          data-share-badge-id="dad4ad76-045d-4df9-b408-907234ae2168" 
          data-share-badge-host="https://www.credly.com"></div>
 
-  
     <div data-iframe-width="150" data-iframe-height="270" 
          data-share-badge-id="6ae1a6bb-5ef6-4dcb-97e3-965c7ebc4947" 
          data-share-badge-host="https://www.credly.com"></div>
   </div>
+
+  <!-- Texto explicativo debajo -->
+  <p class="certificacion-descripcion">
+  Certificaciones <strong>CCST Cybersecurity & CCST Networking</strong> obtenidas en julio de 2025. Estas acreditaciones avalan conocimientos esenciales en seguridad informática, redes, identificación de amenazas y aplicación de buenas prácticas en entornos profesionales.
 </section>
+
 
 <script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
 
@@ -398,7 +411,7 @@
 </section>
 
 <section id="contacto">
-  <h2><i class="fas fa-envelope"></i> Contacto</h2>
+  <h2><i class="fas fa-envelope"></i> Contáctame</h2>
   
   <!-- Email -->
   <div class="card">
@@ -410,27 +423,98 @@
   <!-- Formulario de contacto -->
   <div class="card">
     <form action="https://api.web3forms.com/submit" method="POST">
-      <!-- Tu Access Key de Web3Forms -->
-      <input type="hidden" name="access_key" value="59463dca-91ec-41ee-ae46-c66f76606caf" />
+<style>
+  .contact-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+  }
 
-      <!-- Nombre -->
-      <label for="name">Nombre</label>
-      <input type="text" id="name" name="name" required>
+  .contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
 
-      <!-- Email -->
-      <label for="email">Email de contacto</label>
-      <input type="email" id="email" name="email" required>
+  .form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
 
-      <!-- Mensaje -->
+  .form-row .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #000204;
+    color: rgb(229, 207, 82);
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  button:hover {
+    background: #005fcc;
+  }
+</style>
+
+<div class="contact-form">
+  <h2></h2>
+  <form action="https://api.web3forms.com/submit" method="POST">
+    <!-- Tu Access Key de Web3Forms -->
+    <input type="hidden" name="access_key" value="59463dca-91ec-41ee-ae46-c66f76606caf" />
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email de contacto</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+    </div>
+
+    <div class="form-group">
       <label for="message">Mensaje</label>
       <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
 
-      <!-- Botón de envío -->
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
-
-
+    <button type="submit">Enviar</button>
+  </form>
+</div>
 
 
 
@@ -439,31 +523,31 @@
 
 
 
-<!-- Sección de construcción debajo -->
+<!-- 🚧 Sección de construcción -->
 <section id="construction" class="construction">
   <div class="gear"></div>
   <h2>🚧 Página en construcción 🚧</h2>
   <p>Estamos continuamente trabajando en nuevos proyectos y habilidades, vuelve pronto.</p>
 </section>
+</div>
 
+<!-- Redes Sociales flotantes -->
+<div class="social-float">
+  <a href="https://www.linkedin.com/in/tuusuario" title="LinkedIn" style="background-color: #0077B5;">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+  <a href="https://www.youtube.com/@tuusuario" title="YouTube" style="background-color: #FF0000;">
+    <i class="fab fa-youtube"></i>
+  </a>
+  <a href="https://github.com/tuusuario" title="GitHub" style="background-color: #181717;">
+    <i class="fab fa-github"></i>
+  </a>
+</div>
 
-  <!-- Redes Sociales flotantes -->
-  <div class="social-float">
-    <a href="https://www.linkedin.com/in/tuusuario" title="LinkedIn" style="background-color: #0077B5;">
-      <i class="fab fa-linkedin-in"></i>
-    </a>
-    <a href="https://www.youtube.com/@tuusuario" title="YouTube" style="background-color: #FF0000;">
-      <i class="fab fa-youtube"></i>
-    </a>
-    <a href="https://github.com/tuusuario" title="GitHub" style="background-color: #181717;">
-      <i class="fab fa-github"></i>
-    </a>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Rafael Moreno Pérez. Sitio desarrollado con HTML5 y CSS, editado en Visual Studio Code y alojado en GitHub Pages.</p>
-  </footer>
+<!-- Footer -->
+<footer>
+  <p>© 2025 Rafael Moreno Pérez. Sitio desarrollado con HTML5 y CSS, editado en Visual Studio Code y alojado en GitHub Pages.</p>
+</footer>
 </body>
 </html>
 
