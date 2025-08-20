@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -285,16 +286,6 @@ body {
       color: #000;
     }
 
-footer {
-  width: 100;
-  margin: 0;
-  padding: 1rem;
-  background: #000;
-  color: #aaa;
-  font-size: 0.9rem;
-  text-align: center;
-  position: relative;
-}
 
   @media (max-width: 768px) {
       header h1 { font-size: 2.2rem; }
@@ -309,6 +300,101 @@ footer {
 
   #construction {
     margin-top: 110px; /* espacio arriba de la sección de construcción */
+  }
+
+    .contact-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+  }
+
+  .form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+  }
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+textarea {
+  min-height: 150px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #000305;
+  color: rgb(229, 207, 82);
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+  button:hover {
+    background: #005fcc;
   }
   </style>
 </head>
@@ -420,7 +506,7 @@ Mi portafolio web es una idea que me surgió cuando finalicé mis estudios de SM
 
 <section id="contacto">
   <h2><i class="fas fa-envelope"></i> Contáctame</h2>
-  
+
   <!-- Email -->
   <div class="card">
     <p><i class="fas fa-at"></i> Email: 
@@ -430,130 +516,34 @@ Mi portafolio web es una idea que me surgió cuando finalicé mis estudios de SM
 
   <!-- Formulario de contacto -->
   <div class="card">
-    <form action="https://api.web3forms.com/submit" method="POST">
-<style>
-  .contact-form {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 25px;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    font-family: Arial, sans-serif;
-  }
+    <div class="contact-form">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <!-- Tu Access Key de Web3Forms -->
+        <input type="hidden" name="access_key" value="59463dca-91ec-41ee-ae46-c66f76606caf" />
 
-  .form-group label {
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #444;
-  }
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required>
+          </div>
 
-  .form-group input,
-  .form-group textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
-  }
+          <div class="form-group">
+            <label for="email">Email de contacto</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
 
-  .form-group textarea {
-    resize: vertical;
-  }
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
 
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 2rem;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.contact-form h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: #333;
-}
-
-.form-row {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.form-group {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-}
-
-label {
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-  color: #555;
-}
-
-input, textarea {
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  resize: vertical;
-}
-
-textarea {
-  min-height: 150px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-button {
-  background-color: #000305;
-  color: rgb(229, 207, 82);
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #005fa3;
-}
-
-  button:hover {
-    background: #005fcc;
-  }
-</style>
-
-<div class="contact-form">
-  <h2></h2>
-  <form action="https://api.web3forms.com/submit" method="POST">
-    <!-- Tu Access Key de Web3Forms -->
-    <input type="hidden" name="access_key" value="59463dca-91ec-41ee-ae46-c66f76606caf" />
-
-    <div class="form-row">
-      <div class="form-group">
-        <label for="name">Nombre</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-
-      <div class="form-group">
-        <label for="email">Email de contacto</label>
-        <input type="email" id="email" name="email" required>
-      </div>
+        <button type="submit">Enviar</button>
+      </form>
     </div>
+  </div>
+</section>
 
-    <div class="form-group">
-      <label for="message">Mensaje</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-    </div>
-
-    <button type="submit">Enviar</button>
-  </form>
-</div>
 
 
 <!-- Redes Sociales flotantes -->
