@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <!-- Página principal Español -->
@@ -18,50 +18,6 @@
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://rafaelmorenoperez.github.io/fr/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://rafaelmorenoperez.github.io/"/>
-  </url>
-
-  <!-- Secciones principales (español) -->
-  <url>
-    <loc>https://rafaelmorenoperez.github.io/#sobre-mi</loc>
-    <lastmod>2025-08-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rafaelmorenoperez.github.io/#habilidades</loc>
-    <lastmod>2025-08-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rafaelmorenoperez.github.io/#proyectos</loc>
-    <lastmod>2025-08-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rafaelmorenoperez.github.io/#certificaciones</loc>
-    <lastmod>2025-08-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rafaelmorenoperez.github.io/#cv</loc>
-    <lastmod>2025-08-21</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://rafaelmorenoperez.github.io/#contacto</loc>
-    <lastmod>2025-08-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rafaelmorenoperez.github.io/#seguridad</loc>
-    <lastmod>2025-08-21</lastmod>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- CV PDF -->
-  <url>
-    <loc>https://drive.google.com/uc?export=download&id=1PSYhsI1UjcgmiqFde5W8DHpSlBdg4EON</loc>
-    <lastmod>2025-08-21</lastmod>
-    <priority>0.6</priority>
   </url>
 
 </urlset>
