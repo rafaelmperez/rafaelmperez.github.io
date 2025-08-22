@@ -103,6 +103,60 @@
   <style>
   /* Todo tu CSS aquí... */
 
+  
+.barra-superior {
+  position: relative;
+  display: flex;
+  justify-content: center;  /* ahora el menú queda centrado */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #0a0a0a;
+}
+
+.barra-superior .social-float {
+  position: absolute;
+  right: 20px;    
+  top: 50%;
+  transform: translateY(-50%); /* centrado vertical con el menú */
+  display: flex;
+  gap: 10px;
+}
+
+
+nav a {
+  margin-right: 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.social-float {
+  display: flex;
+  gap: 10px;
+}
+
+.social-float a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  line-height: 36px;
+  font-size: 18px;
+}
+
+.social-float a:nth-child(1) {
+  background-color: #0077B5; /* LinkedIn */
+}
+.social-float a:nth-child(2) {
+  background-color: #FF0000; /* YouTube */
+}
+.social-float a:nth-child(3) {
+  background-color: #181717; /* GitHub */
+}
+
+
 footer {
   width: 100%;          /* 100% del ancho de la ventana */
   margin: 0;             /* quita márgenes que lo puedan achicar */
@@ -322,16 +376,6 @@ body {
       to { transform: rotate(360deg); }
     }
 
-    .social-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      z-index: 999;
-    }
-
     .social-float a {
       width: 45px;
       height: 45px;
@@ -479,6 +523,7 @@ button:hover {
     <p>Sysadmin en formación | Enfocado en Ciberseguridad</p>
   </header>
 
+<div class="barra-superior">
   <nav>
     <a href="#sobre-mi">Sobre mí</a>
     <a href="#habilidades">Habilidades</a>
@@ -488,6 +533,19 @@ button:hover {
     <a href="#contacto">Contáctame</a>
     <a href="#seguridad">Seguridad del sitio</a>
   </nav>
+
+  <div class="social-float">
+    <a href="https://www.linkedin.com/in/rafaelmperez/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="https://www.youtube.com/@rafaelmpTech" title="YouTube" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-youtube"></i>
+    </a>
+    <a href="https://github.com/Rafaelmorenoperez" title="GitHub" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
+</div>
 
 <section id="sobre-mi">
   <h2><i class="fas fa-user-shield"></i> Sobre mí</h2>
@@ -619,31 +677,6 @@ Este sitio nació al terminar mis estudios de SMR. Aunque mis estudios se centra
 
 
 
-<!-- Redes Sociales flotantes -->
-<div class="social-float">
-  <a href="https://www.linkedin.com/in/rafaelmperez/" 
-     title="LinkedIn" 
-     target="_blank" 
-     rel="noopener noreferrer"
-     style="background-color: #0077B5;">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-  <a href="https://www.youtube.com/@rafaelmpTech" 
-     title="YouTube" 
-     target="_blank" 
-     rel="noopener noreferrer"
-     style="background-color: #FF0000;">
-    <i class="fab fa-youtube"></i>
-  </a>
-  <a href="https://github.com/Rafaelmorenoperez" 
-     title="GitHub" 
-     target="_blank" 
-     rel="noopener noreferrer"
-     style="background-color: #181717;">
-    <i class="fab fa-github"></i>
-  </a>
-</div>
-
 <section id="seguridad">
   <h2><i class="fas fa-shield-alt"></i> Seguridad del sitio</h2>
   <div class="card">
@@ -725,7 +758,6 @@ Este sitio nació al terminar mis estudios de SMR. Aunque mis estudios se centra
 
 </body>
 </html>
-
 
 
 
