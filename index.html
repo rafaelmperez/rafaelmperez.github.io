@@ -173,6 +173,94 @@ footer a {
   text-decoration: none;
 }
 
+/* 📱 Responsive: menú centrado y redes debajo en pantallas pequeñas */
+@media (max-width: 768px) {
+  .barra-superior {
+    flex-direction: column; /* Menú arriba, iconos debajo */
+    align-items: center;
+  }
+
+  .barra-superior nav {
+    margin-bottom: 10px;
+  }
+
+  .barra-superior .social-float {
+    position: static;   /* Quitamos posición absoluta */
+    transform: none;
+    justify-content: center; /* Centramos los iconos */
+  }
+}
+/* 🔹 Barra superior */
+.barra-superior {
+  position: relative;
+  display: flex;
+  justify-content: center;  /* Menú centrado */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #0a0a0a;
+}
+
+.barra-superior nav {
+  text-align: center;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #ffcc00;
+}
+
+/* 🔹 Iconos sociales */
+.barra-superior .social-float {
+  position: absolute;
+  right: 20px;    
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 15px;
+}
+
+.social-float a {
+  color: white;
+  font-size: 1.5em;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-float a:hover {
+  transform: scale(1.2);
+  color: #ffcc00;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .barra-superior {
+    flex-direction: column; /* Menú arriba, iconos debajo */
+    align-items: center;
+  }
+
+  .barra-superior nav {
+    margin-bottom: 10px;
+  }
+
+  .barra-superior .social-float {
+    position: static;   /* Quitamos absolute */
+    transform: none;
+    justify-content: center;
+  }
+}
+
+
 </style>
 
 
