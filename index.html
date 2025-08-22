@@ -268,6 +268,7 @@ footer a {
 </head>
 
   <style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;500&display=swap');
 
 body {
   margin: 0;
@@ -306,7 +307,9 @@ body {
   z-index: 1000;
   font-weight: bold;
   font-size: 0.95rem;
+  margin-bottom: 2rem; /* ← Esta línea crea espacio debajo */
 }
+
 
 .language-switcher a {
   color: #ddd;
@@ -333,18 +336,14 @@ body {
   transform: scale(1.1); /* Efecto hover */
 }
 
-header {
-  position: relative;
-  background: #000;
-  color: rgb(229, 207, 82);
-  text-align: center;
-  padding-top: 6rem;   /* 👈 más espacio arriba */
-  padding-bottom: 4rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  overflow: hidden;
-}
-
+    header {
+      position: relative;
+      background: #000;
+      color: rgb(229, 207, 82);
+      text-align: center;
+      padding: 4rem 1rem;
+      overflow: hidden;
+    }
 
     header h1 {
       margin: 0;
@@ -420,21 +419,37 @@ header {
       width: 100%;
     }
 
-    section {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      text-align: center;
-    }
+section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
 
-    h2 {
-      font-family: 'Roboto Slab', serif;
-      font-size: 2rem;
-      color: #000;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1.5rem;
-    }
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  color: #e0d20d;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Estilo general para todos los encabezados */
+h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+  color: #000000;
+  letter-spacing: 1px;
+}
+
+h1.titulo-principal {
+  margin-top: 4rem; /* Añade espacio arriba del título */
+  margin-bottom: 2rem;
+  color: rgb(227, 207, 82) !important;
+  font-size: 2.5rem;
+}
+
+
 
     .card {
       background: #fdfdfd;
@@ -655,8 +670,8 @@ button:hover {
 
   <header>
     <div class="matrix"></div>
-    <h1 style="font-size: 42px;">Rafael M. Pérez</h1>
-    <p>Sysadmin en formación | Enfocado en Ciberseguridad</p>
+<h1 class="titulo-principal">Rafael M. Pérez</h1>
+<p>Sysadmin en formación | Enfocado en Ciberseguridad</p>
   </header>
 
 <div class="barra-superior">
