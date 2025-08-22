@@ -299,6 +299,39 @@ body {
     .language-switcher a:hover {
       color: rgb(229, 207, 82);
     }
+.language-switcher {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.language-switcher a {
+  color: #ddd;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s;
+}
+
+.language-switcher a:hover {
+  color: rgb(229, 207, 82);
+}
+
+/* 👇 Nuevo bloque para ajustar banderas */
+.language-switcher .flag {
+  width: 20px;          /* Reduce tamaño */
+  height: auto;         /* Mantiene proporción */
+  margin-right: 6px;    /* Espacio entre bandera y texto */
+  vertical-align: middle; /* Alinea con el texto */
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.language-switcher .flag:hover {
+  transform: scale(1.1); /* Efecto hover */
+}
 
     header {
       position: relative;
@@ -602,9 +635,20 @@ button:hover {
 </head>
 <body>
   <div class="language-switcher">
-    <a href="/index.html">🇪🇸 Español</a> |
-    <a href="/fr/index.html">🇫🇷 Français</a>
+    <a href="/index.html">
+      <img src="https://rafaelmorenoperez.github.io/esflags.png" alt="Español" class="flag"> Español
+    </a> |
+    <a href="/en/index.html">
+      <img src="https://rafaelmorenoperez.github.io/enflags.png" alt="English" class="flag"> English
+    </a> |
+    <a href="/fr/index.html">
+      <img src="https://rafaelmorenoperez.github.io/frflags.png" alt="Français" class="flag"> Français
+    </a>
   </div>
+</body>
+
+
+
   <header>
     <div class="matrix"></div>
     <h1 style="font-size: 42px;">Rafael M. Pérez</h1>
@@ -856,7 +900,6 @@ Este sitio nació al terminar mis estudios de SMR. Aunque mis estudios se centra
 
 </body>
 </html>
-
 
 
 
