@@ -748,8 +748,10 @@ Este sitio nació al terminar mis estudios de SMR. Aunque mis estudios se centra
           <label for="message">Mensaje</label>
           <textarea id="message" name="message" rows="5" required></textarea>
         </div>
+<label>¿Cuánto es 2 + 3?</label>
+<input type="text" name="captcha" required>
+<button type="submit">Enviar</button>
 
-        <button type="submit">Enviar</button>
       </form>
       
     </div>
@@ -842,11 +844,18 @@ Este sitio nació al terminar mis estudios de SMR. Aunque mis estudios se centra
   <a href="/politica-de-cookies.html" target="_blank" rel="noopener noreferrer">Política de cookies</a>
 </footer>
 
+<script>
+  document.querySelector("form").addEventListener("submit", function(e) {
+    const captcha = document.querySelector('input[name="captcha"]').value.trim();
+    if (captcha !== "5") {
+      e.preventDefault(); // Detiene el envío
+      alert("Respuesta incorrecta a la pregunta de seguridad.");
+    }
+  });
+</script>
 
 </body>
 </html>
-
-
 
 
 
