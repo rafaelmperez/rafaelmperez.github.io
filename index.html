@@ -75,6 +75,10 @@
 
   <!-- Aquí va el resto del contenido -->
 
+
+
+
+
   <script>
     function aceptarCookies() {
       localStorage.setItem("cookies_decision", "accepted");
@@ -182,7 +186,7 @@ footer a {
   }
 
   .barra-superior nav {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
   }
 
   .barra-superior .social-float {
@@ -259,7 +263,29 @@ footer a {
     transform: none;
     justify-content: center;
   }
+.encabezado {
+  display: flex;
+  justify-content: center;   /* centra horizontalmente */
+  align-items: center;       /* centra verticalmente */
+  padding: 20px;
 }
+
+.banner-header {
+  max-width: 20% !important;
+  height: auto !important;
+}
+
+
+header {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+nav {
+  margin-top: 0;
+  padding-top: 0;
+}
+
 
 
 </style>
@@ -677,16 +703,22 @@ button:hover {
   </div>
 </body>
 
+<header class="encabezado">
+  <div class="header-content" style="text-align: center;">
+    <img src="https://rafaelmorenoperez.github.io/assets/img/imagentitulo.png" 
+         alt="Sysadmin en formación | Enfocado en ciberseguridad" 
+         class="banner-header" style="width: 550px; max-width: 100%;">
+    <p style="margin-top: 40px; font-size: 1.4em; font-weight: bold;">
+      Sysadmin en formación | Enfocado en ciberseguridad
+    </p>
+  </div>
+</header>
 
 
 
-  <header>
-    <div class="matrix"></div>
-<h1 class="titulo-principal">Rafael M. Pérez</h1>
-<p>Sysadmin en formación | Enfocado en Ciberseguridad</p>
-  </header>
 
 <div class="barra-superior">
+  
   <nav>
     <a href="#sobre-mi">Sobre mí</a>
     <a href="#habilidades">Habilidades</a>
@@ -961,7 +993,6 @@ Este sitio nació al terminar mis estudios de SMR. Aunque mis estudios se centra
 
 
  
-
 
 
 
