@@ -908,7 +908,23 @@ html, body {
 .habilidades-icons img:hover {
   transform: scale(1.2); /* o el efecto que quieras */
 }
+/* 🔹 Contacto: desactivar hover en el contenedor */
+.contact-form:hover {
+  transform: none;
+}
 
+/* 🔹 Solo el botón tiene animación */
+.contact-form button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #005fa3;
+  transform: scale(1.05);
+}
+#sobre-mi .card:hover {
+  transform: none;
+}
 
   </style>
 
