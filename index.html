@@ -210,17 +210,47 @@ footer a {
     transform: none;
     justify-content: center;
   }
-.encabezado {
-  display: flex;
-  justify-content: center;   /* centra horizontalmente */
-  align-items: center;       /* centra verticalmente */
-  padding: 20px;
+.banner-header {
+  width: 100%;
+  max-width: 400px;!important /* Reducido para que la imagen sea más pequeña */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  image-rendering: crisp-edges;
 }
 
-.banner-header {
-  max-width: 20% !important;
-  height: auto !important;
+@media screen and (max-width: 768px) {
+  .banner-header {
+    max-width: 90%; /* Se adapta mejor en móviles, puedes ajustarlo si quieres */
+  }
 }
+
+
+
+
+
+/* Texto debajo del banner */
+.banner-text {
+  margin-top: 0px;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 📱 Responsive para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .banner-header {
+    max-width: 70%; /* Se adapta mejor en móviles */
+  }
+
+  .banner-text {
+    font-size: 1.1em;
+    padding: 0 10px;
+  }
+}
+
 
 
 header {
@@ -738,14 +768,16 @@ button:hover {
 
 <header class="encabezado">
   <div class="header-content" style="text-align: center;">
-    <img src="https://rafaelmorenoperez.github.io/assets/img/imagentitulo.png" 
-         alt="Sysadmin en formación | Enfocado en ciberseguridad" 
-         class="banner-header" style="width: 550px; max-width: 100%;">
-    <p style="margin-top: 40px; font-size: 1.4em; font-weight: bold;">
+    <img src="https://rafaelmorenoperez.github.io/assets/img/bannerprincipal2.png" 
+         alt="Banner principal de Sysadmin en formación" 
+         class="banner-header" width="1100">
+    <p style="margin-top: 15px; font-size: 1.2em; font-weight: bold;">
       Sysadmin en formación | Enfocado en ciberseguridad
     </p>
   </div>
 </header>
+
+
 
 
 
@@ -1003,6 +1035,5 @@ Este sitio nació al terminar mis estudios de SMR. Aunque mis estudios se centra
 
 </body>
 </html>
-
 
 
