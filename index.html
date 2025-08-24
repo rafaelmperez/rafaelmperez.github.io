@@ -808,6 +808,7 @@ html, body {
 
 
   </style>
+
 </head>
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
 
@@ -882,7 +883,7 @@ html, body {
       alt="Foto de Rafael M. Pérez">
     </div>
     
- <p>Hola, soy Rafael, estudiante de ASIR con certificaciones Cisco CCST en Ciberseguridad y Networking. Me especializo en proteger infraestructuras IT, optimizar servidores y detectar vulnerabilidades. Hablo francés (C1), lo que me permite colaborar en equipos internacionales. 
+    <p>Hola, soy Rafael, estudiante de ASIR con certificaciones Cisco CCST en Ciberseguridad y Networking. Me especializo en proteger infraestructuras IT, optimizar servidores y detectar vulnerabilidades. Hablo francés (C1), lo que me permite colaborar en equipos internacionales. 
 
       <p>Cada proyecto que desarrollo es práctica real para crecer y aportar valor.Te invito a explorar mis trabajos en <strong>GitHub/Portfolio</strong> y a contactarme si quieres colaborar.</p></p>
 
@@ -914,8 +915,10 @@ html, body {
       <img src="https://rafaelmorenoperez.github.io/assets/img/proyectoweb.jpg" 
            alt="Previsualización Portafolio Web" class="proyecto-img">
       <h3><i class="fas fa-lock"></i> Portafolio web</h3>
+      <p>Proyecto desarrollado desde cero, utilizando HTML5, CSS y GitHub Pages. Visual Studio Code fue el entorno elegido para su construcción. Este portafolio representa un proyecto madre, con arquitectura modular y capacidad de expansión hacia entornos distribuidos.</p>
+    </div>
 
-<p>Proyecto desarrollado íntegramente desde cero con un enfoque minimalista, utilizando HTML5, CSS y GitHub Pages. Visual Studio Code fue el entorno elegido para su construcción. Este portafolio representa un proyecto madre,con arquitectura modular y capacidad de expansión hacia entornos distribuidos.</p>    <div class="card">
+    <div class="card">
       <img src="https://rafaelmorenoperez.github.io/assets/img/proyecto2.png" 
            alt="Previsualización Automatización" class="proyecto-img">
       <h3><i class="fas fa-cloud"></i> Automatización</h3>
@@ -926,36 +929,58 @@ html, body {
       <img src="https://rafaelmorenoperez.github.io/assets/img/proyecto3.png" 
            alt="Previsualización Honeypot de Seguridad" class="proyecto-img">
       <h3><i class="fas fa-cloud"></i> Honeypot de Seguridad</h3>
-      <p>Implementación de un honeypot para detectar las intrusiones y analizar los patrones de ataque en tiempo real.</p>
+      <p>Implementación de un honeypot para detectar las intrusiones.</p>
     </div>
 
-  </div>
-</section>
-
-
+  </div> <!-- Cierra grid-proyectos -->
+</section> <!-- Cierra la sección de proyectos -->
 
 <section id="certificaciones">
-  <h2><i class="fas fa-certificate"></i> certificaciones.conf</h2>
-
-  <div class="certificaciones-container" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <div class="badge-wrapper">
+  <div class="container">
+    <h2><i class="fas fa-certificate"></i> certificaciones.conf</h2>
+    <div class="certificaciones-container">
       <div data-iframe-width="150" data-iframe-height="270" 
            data-share-badge-id="dad4ad76-045d-4df9-b408-907234ae2168" 
            data-share-badge-host="https://www.credly.com"></div>
-    </div>
-    <div class="badge-wrapper">
+
       <div data-iframe-width="150" data-iframe-height="270" 
            data-share-badge-id="6ae1a6bb-5ef6-4dcb-97e3-965c7ebc4947" 
            data-share-badge-host="https://www.credly.com"></div>
     </div>
-  </div>
 
-  <!-- Texto explicativo debajo -->
-  <p class="certificacion-descripcion">
-    Certificaciones <strong>CCST Cybersecurity & CCST Networking</strong> obtenidas en julio de 2025. Estas acreditaciones avalan conocimientos esenciales en seguridad informática, redes, identificación de amenazas y aplicación de buenas prácticas en entornos profesionales.
-  </p>
+    <p class="certificacion-descripcion">
+      Certificaciones <strong>CCST Cybersecurity & CCST Networking</strong> obtenidas en julio de 2025. Estas acreditaciones avalan conocimientos esenciales en seguridad informática, redes, identificación de amenazas y aplicación de buenas prácticas en entornos profesionales.
+    </p>
+  </div>
+</section>
+
+
+<!-- Script de Credly -->
+<script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+
+
+<style>
+  .badge-wrapper iframe {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .badge-wrapper:hover iframe {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+</style>
+
 
   <style>
+    .badge-wrapper {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.badge-wrapper:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
     .certificaciones-container {
       display: flex;
       gap: 20px;
@@ -964,12 +989,6 @@ html, body {
       align-items: center;
     }
 
-    .badge-wrapper {
-      flex: 0 0 auto;
-      width: 150px; /* Coincide con data-iframe-width */
-      height: 270px; /* Coincide con data-iframe-height */
-      overflow: hidden;
-    }
 
     .certificaciones-container iframe {
       max-width: 150px;
@@ -1154,13 +1173,5 @@ html, body {
   });
 </script>
 </html>
-
-
-
-
-
-
-
-
 
 
