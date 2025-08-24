@@ -743,6 +743,56 @@ button:hover {
   margin-bottom: 0.5rem;
 }
 
+#proyectos {
+  padding: 40px;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+#proyectos h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .grid-proyectos {
+    grid-template-columns: 1fr;
+  }
+}
+
+
   </style>
 </head>
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
@@ -843,22 +893,24 @@ button:hover {
   </div>
 </section>
 
-  <section id="proyectos">
-    <h2><i class="fas fa-project-diagram"></i>ls -la ~/proyectos/</h2>
+<section id="proyectos">
+  <h2><i class="fas fa-project-diagram"></i> ls -la ~/proyectos/</h2>
+  <div class="grid-proyectos">
     <div class="card">
       <h3><i class="fas fa-lock"></i> Portafolio web</h3>
-      <p></p>
-Este sitio nació al terminar mis estudios de SMR. Aunque mis estudios se centraron en otras áreas, decidí ir más allá y creé un espacio para mostrar quién soy, lo que hago y mis proyectos futuros. Aprender a maquetar webs ha sido un reto enriquecedor que refleja mi curiosidad y mis ganas constantes de crecer.</p>
+      <p>Este sitio nació al terminar mis estudios de SMR. Aunque mis estudios se centraron en otras áreas, decidí ir más allá y creé un espacio para mostrar quién soy, lo que hago y mis proyectos futuros. Aprender a maquetar webs ha sido un reto enriquecedor que refleja mi curiosidad y mis ganas constantes de crecer.</p>
     </div>
     <div class="card">
       <h3><i class="fas fa-cloud"></i> Automatización</h3>
-         <p>Despliegue automatizado de servidores seguros con scripts en Bash y Ansible.</p>
+      <p>Despliegue automatizado de servidores seguros con scripts en Bash y Ansible.</p>
     </div>
-        <div class="card">
+    <div class="card">
       <h3><i class="fas fa-cloud"></i> Honeypot de Seguridad</h3>
-         <p>Implementación de un honeypot para detectar las intrusiones y analizar los patrones de ataque en tiempo real.</p>
+      <p>Implementación de un honeypot para detectar las intrusiones y analizar los patrones de ataque en tiempo real.</p>
     </div>
-  </section>
+  </div>
+</section>
+
 
 
 
@@ -1035,7 +1087,6 @@ Este sitio nació al terminar mis estudios de SMR. Aunque mis estudios se centra
 
 </body>
 </html>
-
 
 
 
