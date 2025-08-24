@@ -45,63 +45,10 @@
   </script>
 
 <style>
-    #cookie-banner {
-      display: none;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: #000;
-      color: gold;
-      padding: 1rem;
-      text-align: center;
-      z-index: 9999;
-    }
-    #cookie-banner button {
-      margin: 0 5px;
-    }
+   
   </style>
 </head>
 <body>
-  <!-- Banner de cookies -->
-  <div id="cookie-banner">
-    <p>
-      Usamos cookies para mejorar tu experiencia.
-      <a href="/politica-de-cookies.html" style="color:gold;">Más info</a>
-    </p>
-    <button id="btn-aceptar">Aceptar</button>
-    <button id="btn-rechazar">Rechazar</button>
-  </div>
-
-  <!-- Aquí va el resto del contenido -->
-
-
-
-
-
-  <script>
-    function aceptarCookies() {
-      localStorage.setItem("cookies_decision", "accepted");
-      document.getElementById("cookie-banner").style.display = "none";
-    }
-
-    function rechazarCookies() {
-      localStorage.setItem("cookies_decision", "declined");
-      document.getElementById("cookie-banner").style.display = "none";
-    }
-
-    window.onload = function() {
-      const decision = localStorage.getItem("cookies_decision");
-      if (!decision) {
-        document.getElementById("cookie-banner").style.display = "block";
-      }
-    };
-
-    document.getElementById("btn-aceptar").addEventListener("click", aceptarCookies);
-    document.getElementById("btn-rechazar").addEventListener("click", rechazarCookies);
-  </script>
-</body>
-</html>
 
 
   <style>
@@ -286,6 +233,53 @@ nav {
   padding-top: 0;
 }
 
+#sobre-mi {
+  margin-top: 100px;
+  padding: 20px; /* opcional, para dar espacio interno */
+  position: relative;
+  overflow: visible;
+}
+
+
+
+
+}
+
+.imagen-sobre-mi {
+  width: 250px; /* Puedes subirlo a 250px si quieres más presencia */
+  height: 320px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.imagen-sobre-mi img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+
+.card {
+  background-color: #fff;
+  padding: 60px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 900px; /* antes 300px */
+  margin: 0 auto;
+}
+
+
+
+
+
+
 
 
 </style>
@@ -451,10 +445,6 @@ body {
     nav a:hover::after {
       width: 100%;
     }
-
-    #sobre-mi {
-  margin-top: 100px; /* Ajusta el valor según el alto de tu menú */
-}
 
 
 section {
@@ -744,17 +734,24 @@ button:hover {
 </div>
 
 <section id="sobre-mi">
-  <h2><i class="fas fa-user-shield"></i> # Sobre mí</h2>
   <div class="card">
+    <h2><i class="fas fa-user-shield"></i> # Sobre mí</h2>
 
+    <!-- Imagen centrada y pequeña -->
+    <div class="imagen-sobre-mi">
+      <img src="https://rafaelmorenoperez.github.io/assets/img/sobremi.png" 
+      alt="Foto de Rafael M. Pérez">
+    </div>
+    
     <p>Soy Rafael M. Pérez, estudiante de Administración de Sistemas Informáticos en Red (ASIR) con certificaciones Cisco CCST en Ciberseguridad y Networking.</p>
 
     <p>Me especializo en proteger infraestructuras IT, optimizar servidores y analizar vulnerabilidades, aplicando tanto estrategias ofensivas como defensivas. Hablo francés a nivel C1, lo que me permite trabajar en entornos internacionales y colaborar en equipos multiculturales.</p>
 
     <p>Apasionado por la ciberseguridad y la administración de sistemas, busco aportar valor en proyectos que promuevan entornos tecnológicos seguros, escalables y sostenibles. Te invito a explorar mis proyectos en mi <strong>GitHub/Portfolio</strong> y a contactarme para colaborar.</p>
-
   </div>
 </section>
+
+
 
     <section id="habilidades">
   <h2><i class="fas fa-bolt"></i> habilidades.sh</h2>
@@ -963,44 +960,4 @@ Este sitio nació al terminar mis estudios de SMR. Aunque mis estudios se centra
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
 
