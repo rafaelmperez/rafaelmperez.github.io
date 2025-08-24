@@ -53,6 +53,10 @@
 
   <style>
   /* Todo tu CSS aquí... */
+/* 🔹 Espacio entre la última sección y el footer */
+#seguridad {
+  margin-bottom: 35px !important; /* ajusta según lo necesites */
+}
 
   
 .barra-superior {
@@ -202,7 +206,7 @@ footer a {
   }
 
   .barra-superior nav {
-    margin-bottom: 10px;
+    margin-bottom: 60px;
   }
 
   .barra-superior .social-float {
@@ -263,12 +267,13 @@ nav {
   padding-top: 0;
 }
 
+/* 🔹 Espacio entre el nav y la sección Sobre Mí */
 #sobre-mi {
-  margin-top: 100px;
-  padding: 20px; /* opcional, para dar espacio interno */
-  position: relative;
-  overflow: visible;
+  margin-top: 150px !important; /* ajusta este valor a tu gusto */
+  padding-top: 0 !important;     /* opcional, para que no haya padding extra */
 }
+
+
 
 
 
@@ -295,15 +300,6 @@ nav {
 
 
 
-.card {
-  background-color: #fff;
-  padding: 60px;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  max-width: 900px; /* antes 300px */
-  margin: 0 auto;
-}
 
 
 
@@ -479,8 +475,8 @@ body {
 
 section {
   max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  margin: 1rem auto !important;
+  padding: 0.5 1rem;
   text-align: center;
 }
 
@@ -510,12 +506,27 @@ h1.titulo-principal {
     .card {
       background: #fdfdfd;
       border: 1px solid #ccc;
-      padding: 1.8rem;
+      padding: 15px !important;
       border-radius: 12px;
-      margin-bottom: 1.8rem;
+      margin-bottom: 1rem !important;
       box-shadow: 0 4px 15px rgba(0,0,0,0.05);
       font-size: 1.05rem;
     }
+
+    /* Reducir márgenes y paddings solo en Proyectos y Certificaciones */
+#proyectos,
+#certificaciones {
+  margin-top: 5px !important;    /* margen superior reducido */
+  margin-bottom: 5px !important; /* margen inferior reducido */
+  padding: 5px !important;       /* padding interno reducido */
+}
+
+/* Si quieres reducir también los espacios entre cards */
+#proyectos .card,
+#certificaciones .card {
+  margin-bottom: 5px !important; /* menos espacio entre tarjetas */
+  padding: 15px !important;       /* menos padding dentro de las tarjetas */
+}
 
     .youtube-box {
       background: #000;
@@ -1173,5 +1184,4 @@ html, body {
   });
 </script>
 </html>
-
 
