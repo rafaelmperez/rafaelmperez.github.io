@@ -849,6 +849,66 @@ html, body {
     grid-template-columns: 1fr;
   }
 }
+.grid-habilidades {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas en paralelo */
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Cards: sin movimiento al pasar el cursor */
+.grid-habilidades .card {
+  background-color: #fdfdfd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: none; /* eliminamos cualquier animación */
+}
+
+/* Contenedor de iconos */
+.habilidades-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.habilidades-icons img {
+  width: 60px;
+  height: auto;
+  transition: transform 0.3s; /* solo los iconos se animan */
+}
+
+.habilidades-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive: se apilan en móvil */
+@media (max-width: 768px) {
+  .grid-habilidades {
+    grid-template-columns: 1fr;
+  }
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Evita que los contenedores de habilidades se muevan */
+.grid-habilidades .card:hover {
+  transform: none;  /* No se mueve */
+}
+
+/* Solo los iconos dentro de habilidades reaccionan al hover */
+.habilidades-icons img {
+  transition: transform 0.3s ease;
+}
+
+.habilidades-icons img:hover {
+  transform: scale(1.2); /* o el efecto que quieras */
+}
+
 
   </style>
 
@@ -959,7 +1019,7 @@ html, body {
       <div class="habilidades-icons">
         <img src="https://rafaelmorenoperez.github.io/assets/img/visualstudiocode.png" alt="Visual Studio Code" title="Visual Studio Code">
         <img src="https://rafaelmorenoperez.github.io/assets/img/kalilinux.png" alt="Kali Linux" title="Kali Linux">
-        <img src="https://rafaelmorenoperez.github.io/assets/img/linux1.png" alt="Ubuntu" title="Ubuntu">
+        <img src="https://rafaelmorenoperez.github.io/assets/img/linux1.png" alt="Linux" title="Linux">
         <img src="https://rafaelmorenoperez.github.io/assets/img/windows.png" alt="Windows" title="Windows">
         <img src="https://rafaelmorenoperez.github.io/assets/img/python.png" alt="Python" title="Python">
         <img src="https://rafaelmorenoperez.github.io/assets/img/grafana.png" alt="Grafana" title="Grafana">
@@ -1239,5 +1299,4 @@ html, body {
   });
 </script>
 </html>
-
 
