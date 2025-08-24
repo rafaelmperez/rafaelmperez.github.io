@@ -910,7 +910,7 @@ html, body {
 }
 /* 🔹 Contacto: desactivar hover en el contenedor */
 .contact-form:hover {
-    transform: none !important;
+  transform: none;
 }
 
 /* 🔹 Solo el botón tiene animación */
@@ -1030,40 +1030,24 @@ html, body {
       </ul>
     </div>
 
-<!-- Contenedor de iconos -->
-<div class="card">
-  <h3><i class=""></i></h3>
-  <div class="habilidades-icons">
-    <a href="https://code.visualstudio.com/docs" target="_blank">
-      <img src="https://rafaelmorenoperez.github.io/assets/img/visualstudiocode.png" alt="Visual Studio Code" title="Visual Studio Code">
-    </a>
-    <a href="https://www.kali.org/docs/" target="_blank">
-      <img src="https://rafaelmorenoperez.github.io/assets/img/kalilinux.png" alt="Kali Linux" title="Kali Linux">
-    </a>
-    <a href="https://help.ubuntu.com/" target="_blank">
-      <img src="https://rafaelmorenoperez.github.io/assets/img/linux1.png" alt="Ubuntu" title="Ubuntu">
-    </a>
-    <a href="https://learn.microsoft.com/es-es/windows/" target="_blank">
-      <img src="https://rafaelmorenoperez.github.io/assets/img/windows.png" alt="Windows" title="Windows">
-    </a>
-    <a href="https://docs.python.org/es/3/tutorial/" target="_blank">
-      <img src="https://rafaelmorenoperez.github.io/assets/img/python.png" alt="Python" title="Python">
-    </a>
-    <a href="https://www.redhat.com/es/topics/open-source/que-es-grafana" target="_blank">
-      <img src="https://rafaelmorenoperez.github.io/assets/img/grafana.png" alt="Grafana" title="Grafana">
-    </a>
-    <a href="https://www.redhat.com/es/topics/automation/learning-ansible-tutorial" target="_blank">
-      <img src="https://rafaelmorenoperez.github.io/assets/img/ansible.png" alt="Ansible" title="Ansible">
-    </a>
-    <a href="https://www.gnu.org/software/bash/manual/bash.html" target="_blank">
-      <img src="https://rafaelmorenoperez.github.io/assets/img/bash.png" alt="Bash" title="Bash">
-    </a>
-    <a href="https://docs.github.com/es/get-started/start-your-journey/about-github-and-git" target="_blank">
-      <img src="https://rafaelmorenoperez.github.io/assets/img/github.png" alt="GitHub" title="GitHub">
-    </a>
-  </div>
-</div>
+    <!-- Contenedor de iconos -->
+    <div class="card">
+      <h3><i class=></i></h3>
+      <div class="habilidades-icons">
+        <img src="https://rafaelmorenoperez.github.io/assets/img/visualstudiocode.png" alt="Visual Studio Code" title="Visual Studio Code">
+        <img src="https://rafaelmorenoperez.github.io/assets/img/kalilinux.png" alt="Kali Linux" title="Kali Linux">
+        <img src="https://rafaelmorenoperez.github.io/assets/img/linux1.png" alt="Linux" title="Linux">
+        <img src="https://rafaelmorenoperez.github.io/assets/img/windows.png" alt="Windows" title="Windows">
+        <img src="https://rafaelmorenoperez.github.io/assets/img/python.png" alt="Python" title="Python">
+        <img src="https://rafaelmorenoperez.github.io/assets/img/grafana.png" alt="Grafana" title="Grafana">
+        <img src="https://rafaelmorenoperez.github.io/assets/img/ansible.png" alt="Ansible" title="Ansible">
+        <img src="https://rafaelmorenoperez.github.io/assets/img/bash.png" alt="Bash" title="Bash">
+        <img src="https://rafaelmorenoperez.github.io/assets/img/github.png" alt="GitHub" title="GitHub">
+      </div>
+    </div>
 
+  </div> <!-- Cierra grid-habilidades -->
+</section>
 
 
 <section id="proyectos">
@@ -1163,28 +1147,6 @@ html, body {
       color: #555;
       line-height: 1.6;
     }
-/* 🔹 Email como botón grande */
-
-/* Email card: efecto hover igual que los proyectos */
-.email-card {
-  background-color: #ffffff;
-  color: #000000;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 1.2rem;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  border: 2px solid transparent;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-}
-
-.email-card:hover {
-  transform: translateY(-5px) scale(1.02); /* se mueve y se escala un poquito */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* sombra más evidente */
-  background-color: #fdfdfd; /* opcional, si quieres mantener contraste */
-}
-
   </style>
   <script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
 
@@ -1197,29 +1159,29 @@ html, body {
 
 <section id="cv">
   <h2><i class="fas fa-file-alt"></i> $ cat curriculum.txt</h2>
-
-  <!-- Contenedor clicable que redirige al PDF -->
-  <div class="card pdf-card" onclick="window.location.href='https://drive.google.com/file/d/XXXXXXXXXXXX/view?usp=sharing'" style="cursor: pointer;">
+  <div class="card">
     <p>
-     <!-- Bloque clicable del email -->
-      <div class="card " onclick="window.location.href='https://drive.google.com/file/d/XXXXXXXXXXXX/view?usp=sharing
-        <p><i class="fas fa-at"></i> Descargar CV en PDF
-      </div>
+      <i class="fas fa-file-pdf"></i>
+      <a href="https://drive.google.com/uc?export=download&id=1PSYhsI1U..." 
+         class="download-button" 
+         target="_blank" 
+         rel="noopener noreferrer">
+          Descargar mi CV en PDF
+      </a>.
     </p>
   </div>
 </section>
 
 
-
-
-
 <section id="contacto">
   <h2><i class="fas fa-envelope"></i> ping world > contacto.log</h2>
+
 
   <!-- Formulario de contacto -->
   <div class="card">
     <div class="contact-form">
       <form action="https://api.web3forms.com/submit" method="POST">
+        <!-- Tu Access Key de Web3Forms -->
         <input type="hidden" name="access_key" value="59463dca-91ec-41ee-ae46-c66f76606caf" />
 
         <div class="form-row">
@@ -1238,54 +1200,93 @@ html, body {
           <label for="message">Mensaje</label>
           <textarea id="message" name="message" rows="5" required></textarea>
         </div>
+<label for="captcha">¿Cuánto es 2 + 3?</label>
+<input type="text" id="captcha" name="captcha" required>
+<button type="submit">Enviar</button>
 
-        <label for="captcha">¿Cuánto es 2 + 3?</label>
-        <input type="text" id="captcha" name="captcha" required>
-        <button type="submit">Enviar</button>
+
+        
       </form>
+      
     </div>
+      <!-- Email -->
+  <div class="card">
+    <p><i class="fas fa-at"></i> Email: 
+      <a href="mailto:sysadmin.rmp@proton.me">sysadmin.rmp@proton.me</a>
+    </p>
   </div>
-
-
-    <!-- 🔹 Aquí va el bloque clicable del email -->
-  <div class="email-card" onclick="window.location.href='mailto:sysadminweb@proton.me'">
-    <p><i class="fas fa-at"></i> Email: sysadminweb@proton.me</p>
   </div>
 </section>
 
 
+
 <section id="seguridad">
   <h2><i class="fas fa-shield-alt"></i> root@secure:~$ ./status.sh</h2>
-  <div class="card" onclick="window.location.href='https://www.ssllabs.com/ssltest/analyze.html?d=rafaelmorenoperez.github.io&latest'" style="cursor:pointer;">
-    <ul style="list-style:none; padding:0; gap:0.5rem; display:flex; flex-direction:column;">
+  <div class="card">
+    <ul style="list-style:none; padding:0;">
       <li><i class="fas fa-lock"></i> Certificado SSL activo</li>
       <li><i class="fas fa-user-secret"></i> Protección contra ataques XSS y CSRF</li>
       <li><i class="fas fa-fire"></i> Firewall de aplicaciones web (WAF)</li>
       <li><i class="fas fa-search"></i> Auditorías periódicas de vulnerabilidades</li>
       <li><i class="fas fa-database"></i> Cifrado de datos sensibles</li>
     </ul>
+    <!-- Badge SSL Labs – RafaelMorenoPerez.github.io -->
+<a
+  href="https://www.ssllabs.com/ssltest/analyze.html?d=rafaelmorenoperez.github.io&latest"
+  target="_blank"
+  rel="noopener nofollow"
+  aria-label="Ver informe de SSL Labs para rafaelmorenoperez.github.io"
+  style="
+    --ssl-badge-bg: #0f172a;        /* fondo (modo claro) */
+    --ssl-badge-fg: #e2e8f0;        /* texto/icono (modo claro) */
+    --ssl-badge-accent: #16a34a;    /* borde/acento */
+    --ssl-badge-grade: #10b981;     /* cápsula de la nota */
+    display:inline-flex;align-items:center;gap:.6rem;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji';
+    text-decoration:none;border:1px solid var(--ssl-badge-accent);
+    background:var(--ssl-badge-bg);color:var(--ssl-badge-fg);
+    padding:.5rem .75rem;border-radius:999px; box-shadow:0 4px 16px rgba(0,0,0,.12);
+  "
+>
+  <!-- Candado SVG -->
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+       style="flex:0 0 auto">
+    <path d="M17 8h-1V6a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2Zm-8-2a3 3 0 0 1 6 0v2H9V6Zm9 12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v8Z"/>
+  </svg>
 
-    <!-- Badge SSL Labs solo visual -->
-    <div
-      style="
-        display:inline-flex; align-items:center; gap:.6rem;
-        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans';
-        text-decoration:none; border:1px solid #16a34a;
-        background:#0f172a; color:#e2e8f0; padding:.5rem .75rem; border-radius:999px; box-shadow:0 4px 16px rgba(0,0,0,.12);
-      "
-    >
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex:0 0 auto">
-        <path d="M17 8h-1V6a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2Zm-8-2a3 3 0 0 1 6 0v2H9V6Zm9 12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v8Z"/>
-      </svg>
-      <span style="line-height:1.1;display:flex;flex-direction:column;">
-        <strong style="font-size:.95rem;">Conexión segura SSL</strong>
-        <span style="font-size:.8rem;opacity:.9;">Analizado en SSL Labs · clic para ver informe</span>
-      </span>
-      <span style="margin-left:.25rem; padding:.2rem .5rem; border-radius:999px; background:#10b981; color:#052e16; font-weight:700; font-size:.85rem; border:1px solid rgba(0,0,0,.08);" aria-hidden="true">A+</span>
-    </div>
+  <!-- Texto -->
+  <span style="line-height:1.1;display:flex;flex-direction:column;">
+    <strong style="font-size:.95rem;">Conexión segura SSL</strong>
+    <span style="font-size:.8rem;opacity:.9;">Analizado en SSL Labs · clic para ver informe</span>
+  </span>
+
+  <!-- Etiqueta de nota -->
+  <span
+    style="
+      margin-left:.25rem; padding:.2rem .5rem; border-radius:999px;
+      background:var(--ssl-badge-grade); color:#052e16; font-weight:700; font-size:.85rem;
+      border:1px solid rgba(0,0,0,.08);
+    "
+    aria-hidden="true"
+  >A+</span>
+</a>
+
+<!-- Modo oscuro automático (opcional) -->
+<style>
+@media (prefers-color-scheme: dark) {
+  a[aria-label^="Ver informe de SSL Labs"]{
+    --ssl-badge-bg:#020617;
+    --ssl-badge-fg:#e5e7eb;
+    --ssl-badge-accent:#22c55e;
+    --ssl-badge-grade:#22c55e;
+  }
+}
+</style>
+
+
   </div>
+  
 </section>
-
 
 
 <!-- Footer -->
@@ -1315,5 +1316,4 @@ html, body {
   });
 </script>
 </html>
-
 
