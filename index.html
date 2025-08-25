@@ -504,14 +504,15 @@ color: rgb(177, 135, 0);}
 }
 
 
-    header {
-      position: relative;
-      background: #000;
-      color: rgb(177, 135, 0);
-      text-align: center;
-      padding: 6.8rem 1rem;
-      overflow: hidden;
-    }
+header {
+  position: relative;
+  background: #000;
+  color: rgb(177, 135, 0);
+  text-align: center;
+  padding: 6.8rem 1rem;
+  overflow: hidden;
+}
+
 
     header h1 {
       margin: 0;
@@ -593,6 +594,34 @@ color: rgb(177, 135, 0);}
       width: 100%;
     }
 
+    header nav {
+  display: flex;
+  justify-content: center; /* centra el menú */
+  flex-wrap: wrap; /* se acomoda en varias líneas si la pantalla es chica */
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+header nav a {
+  color: rgb(177, 135, 0);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #fff; /* contraste al pasar el mouse */
+}
+@media (max-width: 768px) {
+  header {
+    padding: 4rem 1rem; /* menos alto en móviles */
+  }
+
+  header nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
 
 section {
   max-width: 900px;
@@ -671,6 +700,9 @@ h1.titulo-principal {
   justify-content: center; /* Centra vertical */
   text-align: center;
   min-height: 40vh;
+}
+* {
+  box-sizing: border-box;
 }
 
 
@@ -937,14 +969,6 @@ html, body {
 }
 
 
-.grid-habilidades {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
-  gap: 30px;
-  max-width: 1000px;
-  margin: auto;
-}
-
 .habilidades-icons {
   display: flex;
   flex-wrap: wrap;
@@ -979,7 +1003,7 @@ html, body {
 
 /* Cards: sin movimiento al pasar el cursor */
 .grid-habilidades .card {
-  background-color: #fdfdfd;
+  background-color: #f5f5f5;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -1019,14 +1043,7 @@ html, body {
 .grid-habilidades .card:hover {
   transform: none;
 }
-/* Solo los iconos dentro de habilidades reaccionan al hover */
-.habilidades-icons img {
-  transition: transform 0.3s ease;
-}
 
-.habilidades-icons img:hover {
-  transform: scale(1.2); /* o el efecto que quieras */
-}
 /* 🔹 Contacto: desactivar hover en el contenedor */
 .contact-form:hover {
   transform: none;
@@ -1127,6 +1144,11 @@ a[href^="mailto:"] {
   transform: none !important;  /* desactiva escalado o rotación */
   animation: none !important;  /* desactiva animaciones */
   cursor: default;      /* el cursor no cambia al pasar el mouse */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
   </style>
