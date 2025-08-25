@@ -53,6 +53,12 @@
 
   <style>
   /* Todo tu CSS aquí... */
+ .descripcion {
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  line-height: 1.7;
+}
+
   /* RESET */
 * {
   margin: 0;
@@ -1077,6 +1083,32 @@ img {
   display: block;
 }
 
+a[href^="mailto:"] {
+  font-size: 1.1rem; /* Ajusta el tamaño según lo que necesites */
+  font-weight: bold; /* Opcional: para que se vea más destacado */
+  color: #000000;     /* Opcional: para que combine con tu estilo */
+}
+#sobre-mi p {
+  margin-bottom: 2rem; /* Aumenta el espacio entre párrafos */
+  line-height: 1.6;       /* Mejora la legibilidad del texto */
+  font-size: 1.9rem;      /* Si aún no lo has ajustado, esto lo hace más cómodo de leer */
+}
+#sobre-mi .card {
+  padding: 2rem;
+}
+
+#sobre-mi .imagen-sobre-mi {
+  margin-bottom: 1.5rem;
+}
+
+.texto-sobre-mi {
+  padding: 1rem 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+
+
   </style>
   
 
@@ -1155,6 +1187,8 @@ img {
            alt="Foto de Rafael M. Pérez">
     </div>
 
+
+    <div class="texto-sobre-mi"></div>
     <p>Hola, soy Rafael, estudiante de ASIR con certificaciones Cisco CCST en Ciberseguridad y Networking. Me especializo en proteger infraestructuras IT, optimizar servidores y detectar vulnerabilidades. Hablo francés (C1), lo que me permite colaborar en equipos internacionales.</p>
 
     <p>Cada proyecto que desarrollo es práctica real para crecer y aportar valor. Te invito a explorar mis trabajos en <strong>GitHub/Portfolio</strong> y a contactarme si quieres colaborar.</p>
@@ -1377,7 +1411,7 @@ img {
       <!-- Email -->
   <div class="card">
     <p><i class="fas fa-at"></i> Email: 
-      <a href="mailto:sysadminweb@proton.me">sysadminweb@proton.me</a>
+<a href="mailto:sysadminweb@proton.me">sysadminweb@proton.me</a>
     </p>
   </div>
   </div>
