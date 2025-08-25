@@ -1052,7 +1052,6 @@ html, body {
 
 .terminal-heading:hover {
   color: rgb(177, 135, 0);
-  text-shadow: 0 0 5px rgb(177,135,0);
   transform: none;
 }
 .terminal-heading {
@@ -1072,7 +1071,7 @@ html, body {
 }
 img {
   max-width: 100%;
-  height: auto;
+  height: auto; 
   display: block;
 }
 
@@ -1105,6 +1104,10 @@ a[href^="mailto:"] {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+#certificaciones .card:hover {
+  transform: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
 
   </style>
@@ -1268,10 +1271,11 @@ a[href^="mailto:"] {
 </section> <!-- Cierra la sección de proyectos -->
 
 <section id="certificaciones">
-  <div class="container">
-<h2 class="terminal-heading">
-  <i class="fas fa-certificate"></i>
-  </i>certificaciones.conf</h2>
+  <div class="card">
+    <h2 class="terminal-heading">
+      <i class="fas fa-certificate"></i> certificaciones.conf
+    </h2>
+
     <div class="certificaciones-container">
       <div data-iframe-width="150" data-iframe-height="270" 
            data-share-badge-id="dad4ad76-045d-4df9-b408-907234ae2168" 
@@ -1287,6 +1291,7 @@ a[href^="mailto:"] {
     </p>
   </div>
 </section>
+
 
 
 <!-- Script de Credly -->
