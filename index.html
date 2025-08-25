@@ -53,6 +53,144 @@
 
   <style>
   /* Todo tu CSS aquí... */
+  /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBAL */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #111;
+  color: #eee;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* HEADER */
+header {
+  background: #000;
+  color: yellow;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: .5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 .8rem;
+}
+
+nav ul li a {
+  color: yellow;
+  text-decoration: none;
+  transition: color .3s;
+}
+
+nav ul li a:hover {
+  color: white;
+}
+
+/* SECTIONS */
+section {
+  margin: 2rem 0;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: yellow;
+  text-align: center;
+}
+
+/* SKILLS */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  text-align: center;
+}
+
+/* PROJECTS */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: #222;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform .3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: .5rem;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+input, textarea, button {
+  padding: .7rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background: yellow;
+  color: #000;
+  cursor: pointer;
+  transition: background .3s;
+}
+
+button:hover {
+  background: #ffd700;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  color: #aaa;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
 /* 🔹 Espacio entre la última sección y el footer */
 #seguridad {
   margin-bottom: 35px !important; /* ajusta según lo necesites */
@@ -230,7 +368,7 @@ footer a {
 
 /* Texto debajo del banner */
 .banner-text {
-  margin-top: 0px;
+  margin-top: 1px;
   font-size: 1.4em;
   font-weight: bold;
   color: #333;
@@ -368,7 +506,7 @@ color: rgb(177, 135, 0);}
       background: #000;
       color: rgb(177, 135, 0);
       text-align: center;
-      padding: 5.6rem 1rem;
+      padding: 6.8rem 1rem;
       overflow: hidden;
     }
 
@@ -791,7 +929,9 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+
 }
+
 
 .grid-habilidades {
   display: grid;
@@ -926,6 +1066,15 @@ html, body {
   letter-spacing: 0.5px;
   font-size: 1.2rem;
   white-space: nowrap;
+}
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; !important
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
   </style>
