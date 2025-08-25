@@ -925,9 +925,33 @@ html, body {
 #sobre-mi .card:hover {
   transform: none;
 }
+.terminal-heading {
+  font-family: 'Courier New', monospace;
+  color: #b5b80f;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
 
+.terminal-heading:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px #ffffff;
+  transform: translateY(-1px);
+}
+.terminal-heading {
+  font-family: 'Courier New', monospace;
+  color: rgb(227, 255, 82);
+  background-color: #0d0d0d;
+  padding: 12px 20px;
+  border-left: 4px solid rgb(0, 0, 0);
+  box-shadow: inset 0 0 10px rgba(0, 255, 153, 0.1);
+  letter-spacing: 0.5px;
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
 
   </style>
+  
 
 </head>
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
@@ -995,25 +1019,28 @@ html, body {
 
 <section id="sobre-mi">
   <div class="card">
-    <h2><i class="fas fa-user-shield"></i> # Sobre mí</h2>
+    <h2 class="terminal-heading">
+      <i class="fas fa-user-shield"></i> # Sobre mí
+    </h2>
 
-    <!-- Imagen centrada y pequeña -->
     <div class="imagen-sobre-mi">
       <img src="https://rafaelmorenoperez.github.io/assets/img/sobremi.png" 
-      alt="Foto de Rafael M. Pérez">
+           alt="Foto de Rafael M. Pérez">
     </div>
-    
-    <p>Hola, soy Rafael, estudiante de ASIR con certificaciones Cisco CCST en Ciberseguridad y Networking. Me especializo en proteger infraestructuras IT, optimizar servidores y detectar vulnerabilidades. Hablo francés (C1), lo que me permite colaborar en equipos internacionales. 
 
-      <p>Cada proyecto que desarrollo es práctica real para crecer y aportar valor.Te invito a explorar mis trabajos en <strong>GitHub/Portfolio</strong> y a contactarme si quieres colaborar.</p></p>
+    <p>Hola, soy Rafael, estudiante de ASIR con certificaciones Cisco CCST en Ciberseguridad y Networking. Me especializo en proteger infraestructuras IT, optimizar servidores y detectar vulnerabilidades. Hablo francés (C1), lo que me permite colaborar en equipos internacionales.</p>
 
+    <p>Cada proyecto que desarrollo es práctica real para crecer y aportar valor. Te invito a explorar mis trabajos en <strong>GitHub/Portfolio</strong> y a contactarme si quieres colaborar.</p>
   </div>
 </section>
 
 
 
+
    <section id="habilidades">
-  <h2><i class="fas fa-bolt"></i> ls -la ~/habilidades/</h2>
+<h2 class="terminal-heading">
+  <i class="fas fa-bolt"></i> habilidades.sh</h2>
+
   <div class="grid-habilidades">
 
     <!-- Contenedor de texto -->
@@ -1051,7 +1078,10 @@ html, body {
 
 
 <section id="proyectos">
-  <h2><i class="fas fa-project-diagram"></i> ls -la ~/proyectos/</h2>
+<h2 class="terminal-heading">
+
+  <i class="fas fa-project-diagram"></i> ls -la ~/proyectos/
+</h2>
   <div class="grid-proyectos">
     
     <div class="card">
@@ -1080,7 +1110,8 @@ html, body {
 
 <section id="certificaciones">
   <div class="container">
-    <h2><i class="fas fa-certificate"></i> certificaciones.conf</h2>
+<h2 class="terminal-heading">
+  <i class="fas fa-project-diagram"></i>certificaciones.conf</h2>
     <div class="certificaciones-container">
       <div data-iframe-width="150" data-iframe-height="270" 
            data-share-badge-id="dad4ad76-045d-4df9-b408-907234ae2168" 
@@ -1158,11 +1189,13 @@ html, body {
 
 
 <section id="cv">
-  <h2><i class="fas fa-file-alt"></i> $ cat curriculum.txt</h2>
+  <h2 class="terminal-heading">
+    <i class="fas fa-file-alt"></i> $ cat curriculum.txt
+  </h2>
   <div class="card">
     <p>
       <i class="fas fa-file-pdf"></i>
-      <a href="https://drive.google.com/uc?export=download&id=1PSYhsI1U..." 
+      <a href="https://drive.google.com/uc?export=download&id=..." 
          class="download-button" 
          target="_blank" 
          rel="noopener noreferrer">
@@ -1173,8 +1206,12 @@ html, body {
 </section>
 
 
+
 <section id="contacto">
-  <h2><i class="fas fa-envelope"></i> ping world > contacto.log</h2>
+<h2 class="terminal-heading">
+  <i class="fas fa-project-diagram"></i>ping world > contacto.log
+
+</h2>
 
 
   <!-- Formulario de contacto -->
@@ -1221,7 +1258,11 @@ html, body {
 
 
 <section id="seguridad">
-  <h2><i class="fas fa-shield-alt"></i> root@secure:~$ ./status.sh</h2>
+  <h2 class="terminal-heading">
+  <i class="fas fa-project-diagram"></i>root@secure:~$ ./status.sh
+</h2>
+
+
   <div class="card">
     <ul style="list-style:none; padding:0;">
       <li><i class="fas fa-lock"></i> Certificado SSL activo</li>
