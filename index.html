@@ -85,21 +85,6 @@ nav a {
   font-weight: bold;
 }
 
-.social-float {
-  display: flex;
-  gap: 10px;
-}
-
-.social-float a {
-  display: inline-block;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  color: white;
-  text-align: center;
-  line-height: 36px;
-  font-size: 18px;
-}
 
 .social-float a:nth-child(1) {
   background-color: #0077B5; /* LinkedIn */
@@ -176,27 +161,35 @@ footer a {
 .menu li a:hover {
   color: #ffcc00;
 }
-
 /* 🔹 Iconos sociales */
 .barra-superior .social-float {
   position: absolute;
-  right: 20px;    
+  right: 20px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
-  gap: 8px;
+  gap: 10px; /* Usamos el valor más amplio */
 }
 
 .social-float a {
-  color: white;
-  font-size: 1.5em;
+  display: inline-block;
+  width: 48px; /* Más grande que 36px */
+  height: 48px;
+  border-radius: 50%;
+  color: rgb(255, 255, 255);
+  background-color: #333; /* Opcional: fondo para destacar */
+  text-align: center;
+  line-height: 48px;
+  font-size: 24px; /* Más grande que 18px */
   transition: transform 0.3s, color 0.3s;
 }
 
 .social-float a:hover {
-  transform: scale(1.2);
-  color: #ffcc00;
+  transform: scale(1.3);
+  color: #000000;
+  background-color: rgb(177, 135, 0); /* Opcional: efecto inverso */
 }
+
 
 /* 📱 Responsive */
 @media (max-width: 768px) {
@@ -340,7 +333,7 @@ body {
     }
 
     .language-switcher a:hover {
-      color: rgb(229, 207, 82);
+      color: rgb(177, 135, 0);
     }
 .language-switcher {
   position: absolute;
@@ -361,8 +354,7 @@ body {
 }
 
 .language-switcher a:hover {
-  color: rgb(229, 207, 82);
-}
+color: rgb(177, 135, 0);}
 
 /* 👇 Nuevo bloque para ajustar banderas */
 .language-switcher .flag {
@@ -382,9 +374,9 @@ body {
     header {
       position: relative;
       background: #000;
-      color: rgb(229, 207, 82);
+      color: rgb(177, 135, 0);
       text-align: center;
-      padding: 5.6em 1rem;
+      padding: 5.6rem 1rem;
       overflow: hidden;
     }
 
@@ -447,7 +439,7 @@ body {
 
     nav a {
       position: relative;
-      color: rgb(229, 207, 82);
+      color: rgb(177, 135, 0);
       text-decoration: none;
       font-weight: bold;
       font-size: 1.1rem;
@@ -460,7 +452,7 @@ body {
       height: 2px;
       bottom: -4px;
       left: 0;
-      background-color: rgb(229, 207, 82);
+      background-color: rgb(177, 135, 0);
       transition: width 0.3s ease;
     }
 
@@ -493,7 +485,7 @@ h2 {
 h1.titulo-principal {
   margin-top: 4rem; /* Añade espacio arriba del título */
   margin-bottom: 2rem;
-  color: rgb(227, 207, 82) !important;
+  color: rgb(177, 135, 0) !important;
   font-size: 2.5rem;
 }
 
@@ -526,7 +518,7 @@ h1.titulo-principal {
 
     .youtube-box {
       background: #000;
-      color: rgb(229, 207, 82);
+      color: rgb(177, 135, 0);
       font-size: 1.8rem;
       font-weight: bold;
       padding: 2rem 3rem;
@@ -595,7 +587,7 @@ h1.titulo-principal {
 
     .social-float a:hover {
       transform: scale(1.15);
-      background: rgb(229, 207, 82);
+      background: rgb(177, 135, 0);
       color: #000;
     }
 
@@ -708,7 +700,7 @@ textarea {
 
 button {
   background-color: #000305;
-  color: rgb(229, 207, 82);
+  color: rgb(177, 135, 0);
   padding: 0.8rem 1.5rem;
   border: none;
   border-radius: 6px;
@@ -927,20 +919,20 @@ html, body {
 
 .terminal-heading {
   font-family: ;
-  color: rgb(229, 207, 82);
+  color: rgb(177, 135, 0);
   background-color: transparent;
   transition: none;
   display: inline-block;
 }
 
 .terminal-heading:hover {
-  color: rgb(229, 207, 82);
-  text-shadow: 0 0 5px rgb(229, 207, 82);
+  color: rgb(177, 135, 0);
+  text-shadow: 0 0 5px rgb(177,135,0);
   transform: none;
 }
 .terminal-heading {
   font-family: Fira Code;
-  color: rgb(229, 207, 82);
+  color: rgb(177, 135, 0);
   background-color: #0d0d0d;
   padding: 12px 20px;
   border-left: 4px solid rgb(0, 0, 0);
