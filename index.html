@@ -786,10 +786,17 @@ button:hover {
   transition: transform 0.2s ease;
 }
 
+/* 🔹 Desactivar el movimiento de las tarjetas por defecto */
 .card:hover {
-  transform: translateY(-5px);
+  transform: none; 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Mantén la sombra original si la tienes */
 }
 
+/* 🔹 Activar el movimiento SOLO en las tarjetas de la sección "Proyectos" */
+#proyectos .card:hover {
+  transform: none; 
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Efecto de "elevación" para destacarse */
+}
 .card h3 {
   font-size: 20px;
   margin-bottom: 10px;
@@ -892,9 +899,8 @@ html, body {
 
 /* Evita que los contenedores de habilidades se muevan */
 .grid-habilidades .card:hover {
-  transform: none;  /* No se mueve */
+  transform: none;
 }
-
 /* Solo los iconos dentro de habilidades reaccionan al hover */
 .habilidades-icons img {
   transition: transform 0.3s ease;
@@ -918,24 +924,24 @@ html, body {
   transform: scale(1.05);
 }
 #sobre-mi .card:hover {
-  transform: none;
+  transform: none !important;
 }
 .terminal-heading {
   font-family: 'Courier New', monospace;
-  color: #b5b80f;
+  color: rgb(229, 207, 82);
   background-color: transparent;
-  transition: all 0.3s ease;
+  transition: none;
   display: inline-block;
 }
 
 .terminal-heading:hover {
   color: #ffffff;
   text-shadow: 0 0 5px #ffffff;
-  transform: translateY(-1px);
+  transform: none;
 }
 .terminal-heading {
   font-family: 'Courier New', monospace;
-  color: rgb(227, 255, 82);
+  color: rgb(229, 207, 82);
   background-color: #0d0d0d;
   padding: 12px 20px;
   border-left: 4px solid rgb(0, 0, 0);
