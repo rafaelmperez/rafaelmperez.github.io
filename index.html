@@ -1034,11 +1034,11 @@ html, body {
 
 /* 🔹 Solo el botón tiene animación */
 .contact-form button {
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color none, transform none;
 }
 
 .contact-form button:hover {
-  background-color: #005fa3;
+  background-color: #003255;
   transform: scale(1.05);
 }
 
@@ -1103,12 +1103,31 @@ a[href^="mailto:"] {
   transform: none !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-
 #certificaciones .card:hover {
-  transform: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: none !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+#contacto .card {
+  transition: none !important;
+  transform: none !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important; /* sombra fija */
 }
 
+#contacto .card:hover {
+  transition: none !important;
+  transform: none !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important; /* misma sombra en hover */
+}
+
+.habilidades-icons img {
+  width: 60px;          /* tamaño fijo de los iconos */
+  height: auto;
+  margin: 0.9rem;       /* separación entre ellos */
+  transition: none !important; /* desactiva cualquier transición */
+  transform: none !important;  /* desactiva escalado o rotación */
+  animation: none !important;  /* desactiva animaciones */
+  cursor: default;      /* el cursor no cambia al pasar el mouse */
+}
 
   </style>
   
