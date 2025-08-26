@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portafolio de Rafael Moreno Pérez, administrador de sistemas en formación y en proceso de especializarme en ciberseguridad. Experiencia en gestión de servidores, seguridad informática y soporte técnico.">
@@ -48,6 +49,7 @@
    
   </style>
 </head>
+
 <body>
 
 
@@ -244,13 +246,13 @@ footer {
   margin: 0;             /* quita márgenes que lo puedan achicar */
   padding: 1rem;
   background: #000;      /* negro */
-  color: rgb(177,135,0);
+  color: rgb(255,204, 0);
   font-size: 0.9rem;
   text-align: center;
   box-sizing: border-box;
 }
 footer a {
-  color: rgb(229, 207, 82);
+  color: rgb(255,204, 0);
   margin: 0 0.5rem;
   text-decoration: none;
 }
@@ -328,7 +330,7 @@ footer a {
 .social-float a:hover {
   transform: scale(1.3);
   color: #000000;
-  background-color: rgb(177, 135, 0); /* Opcional: efecto inverso */
+  background-color: rgb(255,204, 0); /* Opcional: efecto inverso */
 }
 
 
@@ -466,7 +468,7 @@ body {
     }
 
     .language-switcher a:hover {
-      color: rgb(177, 135, 0);
+      color: rgb(255,204, 0);
     }
 .language-switcher {
   position: absolute;
@@ -487,7 +489,7 @@ body {
 }
 
 .language-switcher a:hover {
-color: rgb(177, 135, 0);}
+color: rgb(255,204, 0);}
 
 /* 👇 Nuevo bloque para ajustar banderas */
 .language-switcher .flag {
@@ -573,7 +575,7 @@ header {
 
     nav a {
       position: relative;
-      color: rgb(177, 135, 0);
+      color: rgb(255,204, 0);
       text-decoration: none;
       font-weight: bold;
       font-size: 1.1rem;
@@ -586,7 +588,7 @@ header {
       height: 2px;
       bottom: -4px;
       left: 0;
-      background-color: rgb(177, 135, 0);
+      background-color: rgb(255,204, 0);
       transition: width 0.3s ease;
     }
 
@@ -602,7 +604,7 @@ header {
   margin-top: 1rem;
 }
 header nav a {
-  color: rgb(177, 135, 0);
+  color: rgb(255,204, 0);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -641,7 +643,7 @@ h2 {
 h1.titulo-principal {
   margin-top: 4rem; /* Añade espacio arriba del título */
   margin-bottom: 2rem;
-  color: rgb(177, 135, 0) !important;
+  color: rgb(255,204, 0) !important;
   font-size: 2.5rem;
 }
 
@@ -674,7 +676,7 @@ h1.titulo-principal {
 
     .youtube-box {
       background: #000;
-      color: rgb(177, 135, 0);
+      color: rgb(255,204, 0);
       font-size: 1.8rem;
       font-weight: bold;
       padding: 2rem 3rem;
@@ -746,7 +748,7 @@ h1.titulo-principal {
 
     .social-float a:hover {
       transform: scale(1.15);
-      background: rgb(177, 135, 0);
+      background: rgb(255,204, 0);
       color: #000;
     }
 
@@ -859,7 +861,7 @@ textarea {
 
 button {
   background-color: #000305;
-  color: rgb(177, 135, 0);
+  color: rgb(255,204, 0);
   padding: 0.8rem 1.5rem;
   border: none;
   border-radius: 6px;
@@ -1061,24 +1063,24 @@ html, body {
 
 .terminal-heading {
   font-family: ;
-  color: rgb(177, 135, 0);
+  color: rgb(255,204, 0);
   background-color: transparent;
   transition: none;
   display: inline-block;
 }
 
 .terminal-heading:hover {
-  color: rgb(177, 135, 0);
+  color: rgb(255,204, 0);
   transform: none;
 }
 .terminal-heading {
   font-family: Fira Code;
-  color: rgb(177, 135, 0);
+  color: rgb(255,204, 0);
   background-color: #0d0d0d;
   padding: 12px 20px;
   border-left: 4px solid rgb(0, 0, 0);
   box-shadow: inset 0 0 10px rgba(0, 255, 153, 0.1);
-  letter-spacing: 0.5px;
+  letter-spac0)ing: 0.5px;
   font-size: 1.2rem;
   white-space: nowrap;
 }
@@ -1149,6 +1151,31 @@ a[href^="mailto:"] {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.sobre-mi {
+  position: relative;
+  display: inline-block;
+}
+
+.foto {
+  width: 200px;
+  border-radius: 50%;
+}
+
+.mensaje {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-family: sans-serif;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
 }
 
   </style>
@@ -1236,6 +1263,7 @@ a[href^="mailto:"] {
     <p>Cada proyecto que desarrollo es práctica real para crecer y aportar valor. Te invito a explorar mis trabajos en <strong>GitHub/Portfolio</strong> y a contactarme si quieres colaborar.</p>
   </div>
 </section>
+
 
 
 
@@ -1551,6 +1579,7 @@ a[href^="mailto:"] {
   <p class="terminal-line">$ exit # Sesión finalizada. ¡Gracias por visitar mi sistema!</p>
 </footer>
 
+
 <script>
   document.querySelector("form").addEventListener("submit", function(e) {
     const captcha = document.querySelector('input[name="captcha"]').value.trim();
@@ -1571,4 +1600,3 @@ a[href^="mailto:"] {
   });
 </script>
 </html>
-
