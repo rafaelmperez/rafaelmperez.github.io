@@ -429,6 +429,9 @@ nav {
   object-fit: cover;
 }
 
+function sanitizeInput(input) {
+  return input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
 
 
 </style>
@@ -1177,6 +1180,14 @@ a[href^="mailto:"] {
   transition: opacity 0.4s ease;
   pointer-events: none;
 }
+const helmet = require('helmet');
+app.use(helmet.contentSecurityPolicy({
+  directives: {
+    defaultSrc: ["'self'"],
+    scriptSrc: ["'self'"]
+  }
+}));
+
 
   </style>
   
@@ -1502,11 +1513,11 @@ a[href^="mailto:"] {
 
   <div class="card">
     <ul style="list-style:none; padding:0;">
-      <li><i class="fas fa-lock"></i> Certificado SSL activo</li>
-      <li><i class="fas fa-user-secret"></i> Protección contra ataques XSS y CSRF</li>
-      <li><i class="fas fa-fire"></i> Firewall de aplicaciones web (WAF)</li>
-      <li><i class="fas fa-search"></i> Auditorías periódicas de vulnerabilidades</li>
-      <li><i class="fas fa-database"></i> Cifrado de datos sensibles</li>
+   <li><i class="fas fa-lock"></i> Certificado SSL activo</li>
+<li><i class="fas fa-user-secret"></i> Protección contra scripts maliciosos</li>
+<li><i class="fas fa-fire"></i> Infraestructura segura mediante proveedor confiable</li>
+<li><i class="fas fa-search"></i> Actualizaciones periódicas y revisión de dependencias</li>
+
     </ul>
     <!-- Badge SSL Labs – RafaelMorenoPerez.github.io -->
 <a
