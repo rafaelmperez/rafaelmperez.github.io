@@ -1250,16 +1250,23 @@ app.use(helmet.contentSecurityPolicy({
 
 <div class="barra-superior">
   
- <nav>
-  <a href="#sobre-mi">Sobre mí</a>
-  <a href="#habilidades">Habilidades</a>
-  <a href="#proyectos">Proyectos</a>
-  <a href="#certificaciones">Certificaciones</a>
-  <a href="#cv">CV</a>
-  <a href="#contacto">Contáctame</a>
-</nav>
+</head>
+<body>
+  <nav>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#certificaciones">Certificaciones</a>
+    <a href="#cv">CV</a>
+    <a href="#contacto">Contáctame</a>
+  </nav>
 
-<!-- Agregamos un elemento de audio oculto --><audio id="menu-sound" src="https://rafaelmperez.github.io/sounds/clip.mp3" preload="auto"></audio>
+  <audio id="menu-sound" src="https://rafaelmperez.github.io/sounds/clip.mp3" preload="auto"></audio>
+
+  <!-- 👇 Aquí va el script, justo antes de cerrar body -->
+  <script src="script.js"></script>
+</body>
+</html>
 
 
   <div class="social-float">
@@ -1652,6 +1659,7 @@ app.use(helmet.contentSecurityPolicy({
   });
 </script>
 </html>
+
 
 
 
