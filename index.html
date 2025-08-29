@@ -580,18 +580,16 @@ header {
   background-color: #000000; /* o el color que elijas */
 }
 
-nav a {
-  transition: all 0.2s ease-in-out;
+}
+header nav a {
+  color: rgb(255,204, 0);
   text-decoration: none;
-  color: #fff;
-  padding: 8px 12px;
-  display: inline-block;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-    nav a:hover {
-  color: rgb(255,204, 0); /* Cambia el color al pasar el ratón */
-  transform: scale(1.05); /* Efecto de zoom sutil */
-  cursor: pointer;
+header nav a:hover {
+  color: #fff; /* contraste al pasar el mouse */
 }
 
 
@@ -1668,6 +1666,7 @@ app.use(helmet.contentSecurityPolicy({
   });
 </script>
 </html>
+
 
 
 
