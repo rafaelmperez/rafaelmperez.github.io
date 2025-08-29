@@ -49,6 +49,20 @@
    
   </style>
 </head>
+<script>
+  // Obtenemos el sonido
+  const sound = document.getElementById("menu-sound");
+  // Seleccionamos todos los enlaces del nav
+  const links = document.querySelectorAll("nav a");
+
+  // Recorremos y añadimos el evento
+  links.forEach(link => {
+    link.addEventListener("mouseenter", () => {
+      sound.currentTime = 0; // Reinicia el sonido
+      sound.play();
+    });
+  });
+</script>
 
 <body>
 
@@ -1248,14 +1262,19 @@ app.use(helmet.contentSecurityPolicy({
 
 <div class="barra-superior">
   
-  <nav>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#habilidades">Habilidades</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#certificaciones">Certificaciones</a>
-    <a href="#cv">CV</a>
-    <a href="#contacto">Contáctame</a>
-  </nav>
+ <nav>
+  <a href="#sobre-mi">Sobre mí</a>
+  <a href="#habilidades">Habilidades</a>
+  <a href="#proyectos">Proyectos</a>
+  <a href="#certificaciones">Certificaciones</a>
+  <a href="#cv">CV</a>
+  <a href="#contacto">Contáctame</a>
+</nav>
+
+<!-- Agregamos un elemento de audio oculto -->
+<audio id="menu-sound" src="https://rafaelmperez.github.io/sounds
+/clip.mp3" preload="auto"></audio>
+
 
   <div class="social-float">
     <a href="https://www.linkedin.com/in/rafaelmperez/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
@@ -1647,6 +1666,7 @@ app.use(helmet.contentSecurityPolicy({
   });
 </script>
 </html>
+
 
 
 
