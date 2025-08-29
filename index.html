@@ -239,6 +239,10 @@ nav a {
   background-color: #6e6e6e ; /* Github */
 }
 
+    document.body.addEventListener("click", () => {
+  sound.play().catch(() => {}); // Esto activa el permiso
+});
+
 
 
 footer {
@@ -1657,6 +1661,7 @@ app.use(helmet.contentSecurityPolicy({
   });
 </script>
 </html>
+
 
 
 
