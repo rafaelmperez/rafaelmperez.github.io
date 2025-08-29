@@ -49,20 +49,8 @@
    
   </style>
 </head>
-<script>
-  // Obtenemos el sonido
-  const sound = document.getElementById("menu-sound");
-  // Seleccionamos todos los enlaces del nav
-  const links = document.querySelectorAll("nav a");
-
-  // Recorremos y añadimos el evento
-  links.forEach(link => {
-    link.addEventListener("mouseenter", () => {
-      sound.currentTime = 0; // Reinicia el sonido
-      sound.play();
-    });
-  });
-</script>
+  
+<script src="script.js"></script>
 
 <body>
 
@@ -1666,6 +1654,7 @@ app.use(helmet.contentSecurityPolicy({
   });
 </script>
 </html>
+
 
 
 
