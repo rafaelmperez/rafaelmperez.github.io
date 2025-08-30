@@ -1231,11 +1231,42 @@ app.use(helmet.contentSecurityPolicy({
   background-color: #f5f5f5;
   padding: 10px;
   border-radius: 8px;
+  transform: scale(0.9); /* Escala visual del bloque */
+  transform-origin: top left; /* Mantiene la alineación */
 }
+
 .audio-presentacion p {
   margin-bottom: 8px;
   font-weight: bold;
+  font-size: 0.9em; /* Texto ligeramente más pequeño */
 }
+
+.audio-presentacion audio {
+  width: 100%; /* Mantiene el ancho relativo */
+  height: 28px; /* Opcional: ajusta la altura si el navegador lo permite */
+}
+
+
+.audio-proyecto {
+  margin-top: 15px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 6px;
+  transform: scale(0.9); /* Escala todo el bloque */
+  transform-origin: top left; /* Mantiene la alineación */
+}
+
+.audio-proyecto p {
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 0.9em; /* Texto ligeramente más pequeño */
+}
+
+.audio-proyecto audio {
+  width: 100%; /* Mantiene el ancho relativo */
+  height: 28px; /* Opcional: ajusta la altura si el navegador lo permite */
+}
+
 
   </style>
   
@@ -1393,12 +1424,29 @@ app.use(helmet.contentSecurityPolicy({
 </h2>
   <div class="grid-proyectos">
     
-    <div class="card">
-      <img src="https://rafaelmperez.github.io/assets/img/proyectoweb.jpg" 
-           alt="Previsualización Portafolio Web" class="proyecto-img">
-      <h3><i class="fas fa-lock"></i> Portafolio técnico central</h3>
-<p>Proyecto desarrollado desde cero utilizando HTML5, CSS y GitHub Pages. Visual Studio Code fue el entorno elegido para su construcción. Este portafolio funciona como núcleo técnico central, estructurado para documentar, organizar y escalar proyectos hacia entornos distribuidos. Su propósito no es estético, sino funcional.</p>
-    </div>
+<div class="card">
+  <img src="https://rafaelmperez.github.io/assets/img/proyectoweb.jpg" 
+       alt="Previsualización Portafolio Web" class="proyecto-img">
+
+  <h3><i class="fas fa-lock"></i> Portafolio técnico central</h3>
+
+<div class="descripcion-proyecto">
+<div class="descripcion-proyecto">
+<p>Este proyecto es un portafolio técnico central, desarrollado desde cero con un enfoque funcional. Fue construido con el propósito de organizar, documentar y escalar proyectos hacia entornos distribuidos. Más que un escaparate visual, este portafolio está diseñado con un enfoque práctico y estructurado.</p>
+</div>
+
+</div>
+
+
+  <div class="audio-proyecto">
+    <p><strong>🎧 Escuchar presentación:</strong></p>
+    <audio controls controlsList="nodownload noplaybackrate">
+      <source src="https://rafaelmperez.github.io/sounds/proyecto.mp3" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+  </div>
+</div>
+
 
     <div class="card">
       <img src="https://rafaelmperez.github.io/assets/img/proyecto2.png" 
