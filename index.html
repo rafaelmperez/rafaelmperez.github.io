@@ -1330,6 +1330,11 @@ app.use(helmet.contentSecurityPolicy({
 
   // Botón Play/Pause de la narración
   playBtn.addEventListener("click", () => {
+    // Reproduce el sonidito al hacer clic
+    const sonido = menuSound.cloneNode(true);
+    sonido.play();
+
+    // Controla narración
     if (narracion.paused) {
       narracion.play();
       playBtn.textContent = "⏸";
@@ -1347,12 +1352,12 @@ app.use(helmet.contentSecurityPolicy({
   const enlaces = document.querySelectorAll("nav a, .play-btn");
   enlaces.forEach(enlace => {
     enlace.addEventListener("mouseenter", () => {
-      // clona el sonido para que suene cada vez aunque se solape
       const sonido = menuSound.cloneNode(true);
       sonido.play();
     });
   });
 </script>
+
 
 
   <!-- 👇 Aquí va el script, justo antes de cerrar body -->
@@ -1779,4 +1784,5 @@ app.use(helmet.contentSecurityPolicy({
   });
 </script>
 </html>
+
 
