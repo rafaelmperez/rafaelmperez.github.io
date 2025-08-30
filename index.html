@@ -1248,6 +1248,8 @@ app.use(helmet.contentSecurityPolicy({
 
 <div class="barra-superior">
   
+</head>
+<body>
   <nav>
     <a href="#sobre-mi">Sobre mí</a>
     <a href="#habilidades">Habilidades</a>
@@ -1256,6 +1258,14 @@ app.use(helmet.contentSecurityPolicy({
     <a href="#cv">CV</a>
     <a href="#contacto">Contáctame</a>
   </nav>
+
+  <audio id="menu-sound" src="https://rafaelmperez.github.io/sounds/clip.mp3" preload="auto"></audio>
+
+  <!-- 👇 Aquí va el script, justo antes de cerrar body -->
+  <script src="script.js"></script>
+</body>
+</html>
+
 
   <div class="social-float">
     <a href="https://www.linkedin.com/in/rafaelmperez/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
@@ -1647,3 +1657,4 @@ app.use(helmet.contentSecurityPolicy({
   });
 </script>
 </html>
+
