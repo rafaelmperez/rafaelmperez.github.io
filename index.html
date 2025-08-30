@@ -1226,6 +1226,16 @@ app.use(helmet.contentSecurityPolicy({
   }
 }));
 
+.audio-presentacion {
+  margin-top: 20px;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+}
+.audio-presentacion p {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
 
   </style>
   
@@ -1315,11 +1325,20 @@ app.use(helmet.contentSecurityPolicy({
            alt="Foto de Rafael M. Pérez">
     </div>
 
+    <div class="texto-sobre-mi">
+      <p>Hola, soy Rafael, estudiante de ASIR con certificaciones Cisco CCST en Ciberseguridad y Networking. Me especializo en proteger infraestructuras IT, optimizar servidores y detectar vulnerabilidades. Hablo francés (C1), lo que me permite colaborar en equipos internacionales.</p>
 
-    <div class="texto-sobre-mi"></div>
-    <p>Hola, soy Rafael, estudiante de ASIR con certificaciones Cisco CCST en Ciberseguridad y Networking. Me especializo en proteger infraestructuras IT, optimizar servidores y detectar vulnerabilidades. Hablo francés (C1), lo que me permite colaborar en equipos internacionales.</p>
+      <p>Cada proyecto que desarrollo es práctica real para crecer y aportar valor. Te invito a explorar mis trabajos en <strong>GitHub/Portfolio</strong> y a contactarme si quieres colaborar.</p>
 
-    <p>Cada proyecto que desarrollo es práctica real para crecer y aportar valor. Te invito a explorar mis trabajos en <strong>GitHub/Portfolio</strong> y a contactarme si quieres colaborar.</p>
+      <!-- 🎧 Reproductor de audio sin opción de descarga -->
+      <div class="audio-presentacion">
+        <p><strong>🎙️ Escucha esta presentación generada por IA</strong></p>
+        <audio controls controlsList="nodownload noplaybackrate">
+          <source src="https://rafaelmperez.github.io/sounds/presentacion.mp3" type="audio/mpeg">
+          Tu navegador no soporta el elemento de audio.
+        </audio>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1681,4 +1700,5 @@ app.use(helmet.contentSecurityPolicy({
   });
 </script>
 </html>
+
 
