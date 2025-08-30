@@ -239,10 +239,6 @@ nav a {
   background-color: #6e6e6e ; /* Github */
 }
 
-    document.body.addEventListener("click", () => {
-  sound.play().catch(() => {}); // Esto activa el permiso
-});
-
 
 
 footer {
@@ -580,18 +576,13 @@ header {
   background-color: #000000; /* o el color que elijas */
 }
 
-}
-header nav a {
-  color: rgb(255,204, 0);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-header nav a:hover {
-  color: #fff; /* contraste al pasar el mouse */
-}
-
+    nav a {
+      position: relative;
+      color: rgb(255,204, 0);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
 
     nav a::after {
       content: '';
@@ -616,14 +607,14 @@ header nav a:hover {
   margin-top: 1rem;
 }
 header nav a {
-  color: rgb(255, 204, 0) !important;
+  color: rgb(255,204, 0);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 header nav a:hover {
-  color: rgb(255, 204, 0); /* contraste al pasar el mouse */
+  color: rgb(255,204, 0); /* contraste al pasar el mouse */
 }
 @media (max-width: 768px) {
   header {
@@ -718,6 +709,9 @@ h1.titulo-principal {
 * {
   box-sizing: border-box;
 }
+.certificacion-descripcion {
+  color: #000000; /* negro */
+}
 
 
     .gear {
@@ -778,9 +772,6 @@ h3 {
   color: #000000;
 }
 
-.certificacion-descripcion {
-  color: #000000; /* negro */
-}
 
 
   @media (max-width: 768px) {
@@ -1257,8 +1248,6 @@ app.use(helmet.contentSecurityPolicy({
 
 <div class="barra-superior">
   
-</head>
-<body>
   <nav>
     <a href="#sobre-mi">Sobre mí</a>
     <a href="#habilidades">Habilidades</a>
@@ -1267,14 +1256,6 @@ app.use(helmet.contentSecurityPolicy({
     <a href="#cv">CV</a>
     <a href="#contacto">Contáctame</a>
   </nav>
-
-  <audio id="menu-sound" src="https://rafaelmperez.github.io/sounds/clip.mp3" preload="auto"></audio>
-
-  <!-- 👇 Aquí va el script, justo antes de cerrar body -->
-  <script src="script.js"></script>
-</body>
-</html>
-
 
   <div class="social-float">
     <a href="https://www.linkedin.com/in/rafaelmperez/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
@@ -1499,7 +1480,7 @@ app.use(helmet.contentSecurityPolicy({
          class="download-button" 
          target="_blank" 
          rel="noopener noreferrer">
-          Ver CV en PDF
+          Descargar mi CV en PDF
       </a>.
     </p>
   </div>
@@ -1573,7 +1554,7 @@ app.use(helmet.contentSecurityPolicy({
     </ul>
     <!-- Badge SSL Labs – RafaelMPerez.github.io -->
 <a
-  href="https://www.ssllabs.com/ssltest/analyze.html?d=rafaelmperez.github.io&latest"
+  href="https://www.ssllabs.com/ssltest/analyze.html?d=rafaelmorenoperez.github.io&latest"
   target="_blank"
   rel="noopener nofollow"
   aria-label="Ver informe de SSL Labs para rafaelmorenoperez.github.io"
@@ -1666,29 +1647,3 @@ app.use(helmet.contentSecurityPolicy({
   });
 </script>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
