@@ -47,22 +47,6 @@
 <body>
   <!-- Tu HTML aquí -->
 
-  <div id="activar-sonido" style="position:fixed;top:0;left:0;width:100%;background:#222;color:#fff;text-align:center;padding:10px;cursor:pointer;z-index:9999;">
-    🔊 Haz clic aquí para activar el sonido
-  </div>
-
-  <audio id="menu-sound" src="click.mp3" preload="auto"></audio>
-
-  <script src="script.js"></script>
-  <script>
-    document.getElementById("activar-sonido").addEventListener("click", () => {
-      const sound = document.getElementById("menu-sound");
-      sound.play().catch(() => {});
-      sound.pause();
-      sound.currentTime = 0;
-      document.getElementById("activar-sonido").remove();
-    });
-  </script>
 </body>
 
 
@@ -1676,6 +1660,7 @@ app.use(helmet.contentSecurityPolicy({
   });
 </script>
 </html>
+
 
 
 
