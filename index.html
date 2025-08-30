@@ -584,60 +584,55 @@ header {
     }
 
     nav {
-
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      background: #9c9595;
-      padding: 1rem;
-    }
-
-    nav {
-  width: 100%;
-  background-color: #000000; /* o el color que elijas */
-}
-
-    nav a {
-      position: relative;
-      color: rgb(255,204, 0);
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-
-    nav a::after {
-      content: '';
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      bottom: -4px;
-      left: 0;
-      background-color: rgb(255,204, 0);
-      transition: width 0.3s ease;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    header nav {
   display: flex;
-  justify-content: center; /* centra el menú */
-  flex-wrap: wrap; /* se acomoda en varias líneas si la pantalla es chica */
+  align-items: center; /* para alinear el botón con los links */
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 1.5rem;
-  margin-top: 1rem;
-}
-header nav a {
-  color: rgb(255,204, 0);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  background: #000000;
+  padding: 1rem;
+  width: 100%;
 }
 
-header nav a:hover {
-  color: rgb(255,204, 0); /* contraste al pasar el mouse */
+nav a {
+  position: relative;
+  color: rgb(255,204,0);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: rgb(255,204,0);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Botón Play */
+.play-btn {
+  background: none;
+  border: none;
+  color: rgb(255,204,0);
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+  padding: 0;
+}
+
+.play-btn:hover {
+  transform: scale(1.2);
+  color: rgb(255,204,0);
+}
+
 @media (max-width: 768px) {
   header {
     padding: 4rem 1rem; /* menos alto en móviles */
@@ -1313,14 +1308,38 @@ app.use(helmet.contentSecurityPolicy({
   
 </head>
 <body>
-  <nav>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#habilidades">Habilidades</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#certificaciones">Certificaciones</a>
-    <a href="#cv">CV</a>
-    <a href="#contacto">Contáctame</a>
-  </nav>
+<nav>
+  <button class="play-btn" id="playPauseBtn" aria-label="Reproducir narración">▶</button>
+  <a href="#sobre-mi">Sobre mí</a>
+  <a href="#habilidades">Habilidades</a>
+  <a href="#proyectos">Proyectos</a>
+  <a href="#certificaciones">Certificaciones</a>
+  <a href="#cv">CV</a>
+  <a href="#contacto">Contáctame</a>
+</nav>
+
+<audio id="narracion" src="https://rafaelmperez.github.io/sounds/portafolioplay.mp3"></audio>
+
+<script>
+  const audio = document.getElementById("narracion");
+  const btn = document.getElementById("playPauseBtn");
+
+  btn.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+      btn.textContent = "⏸"; // cambia a pausa
+    } else {
+      audio.pause();
+      btn.textContent = "▶"; // vuelve a play
+    }
+  });
+
+  // Si el audio termina, vuelve el botón a "play"
+  audio.addEventListener("ended", () => {
+    btn.textContent = "▶";
+  });
+</script>
+
 
   <audio id="menu-sound" src="https://rafaelmperez.github.io/sounds/clip.mp3" preload="auto"></audio>
 
