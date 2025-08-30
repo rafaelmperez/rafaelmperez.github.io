@@ -1316,10 +1316,18 @@ app.use(helmet.contentSecurityPolicy({
   <a href="#certificaciones">Certificaciones</a>
   <a href="#cv">CV</a>
   <a href="#contacto">Contáctame</a>
+<nav>
+  <button class="play-btn" id="playPauseBtn" aria-label="Reproducir narración">▶</button>
+  <a href="#sobre-mi">Sobre mí</a>
+  <a href="#habilidades">Habilidades</a>
+  <a href="#proyectos">Proyectos</a>
+  <a href="#certificaciones">Certificaciones</a>
+  <a href="#cv">CV</a>
+  <a href="#contacto">Contáctame</a>
 </nav>
 
 <!-- narración principal -->
-<audio id="narracion" src="narracion.mp3" preload="auto"></audio>
+<audio id="narracion" src="https://rafaelmperez.github.io/sounds/portafolioplay.mp3" preload="auto"></audio>
 <!-- sonido corto del menú -->
 <audio id="menu-sound" src="https://rafaelmperez.github.io/sounds/clip.mp3" preload="auto"></audio>
 
@@ -1328,35 +1336,19 @@ app.use(helmet.contentSecurityPolicy({
   const playBtn = document.getElementById("playPauseBtn");
   const menuSound = document.getElementById("menu-sound");
 
-  // Botón Play/Pause de la narración
-  playBtn.addEventListener("click", () => {
-    // Reproduce el sonidito al hacer clic
+  // función para reproducir el sonidito corto
+  function playMenuSound() {
     const sonido = menuSound.cloneNode(true);
-    sonido.play();
+    sonido.play().catch(()=>{});
+  }
 
-    // Controla narración
+  // Botón Play/Pause de la narración
+  playBtn.addEventListener("click", async () => {
+    playMenuSound(); // suena también al pinchar el botón
+
     if (narracion.paused) {
-      narracion.play();
-      playBtn.textContent = "⏸";
-    } else {
-      narracion.pause();
-      playBtn.textContent = "▶";
-    }
-  });
+      tr
 
-  narracion.addEventListener("ended", () => {
-    playBtn.textContent = "▶";
-  });
-
-  // Reproducir sonido al pasar por los enlaces del menú
-  const enlaces = document.querySelectorAll("nav a, .play-btn");
-  enlaces.forEach(enlace => {
-    enlace.addEventListener("mouseenter", () => {
-      const sonido = menuSound.cloneNode(true);
-      sonido.play();
-    });
-  });
-</script>
 
 
 
@@ -1784,5 +1776,6 @@ app.use(helmet.contentSecurityPolicy({
   });
 </script>
 </html>
+
 
 
