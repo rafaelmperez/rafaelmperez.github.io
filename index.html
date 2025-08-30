@@ -1339,7 +1339,30 @@ app.use(helmet.contentSecurityPolicy({
     playMenuSound(); // suena también al pinchar el botón
 
     if (narracion.paused) {
-      tr
+      try {
+        await narracion.play();
+        playBtn.textContent = "⏸";
+      } catch (err) {
+        console.error("Error al reproducir narración:", err);
+      }
+    } else {
+      narracion.pause();
+      playBtn.textContent = "▶";
+    }
+  });
+
+  narracion.addEventListener("ended", () => {
+    playBtn.textContent = "▶";
+  });
+
+  // Sonidito al pasar el ratón por los enlaces
+  const enlaces = document.querySelectorAll("nav a, #playPauseBtn");
+  enlaces.forEach(enlace => {
+    enlace.addEventListener("mouseenter", playMenuSound);
+    enlace.addEventListener("click", playMenuSound); // también al pinchar
+  });
+</script>
+
 
 
 
@@ -1768,6 +1791,7 @@ app.use(helmet.contentSecurityPolicy({
   });
 </script>
 </html>
+
 
 
 
