@@ -1289,37 +1289,20 @@ app.use(helmet.contentSecurityPolicy({
 </html>
 
 
-<div class="social-float">
-  <a href="https://www.linkedin.com/in/rafaelmperez/" title="LinkedIn" target="_blank" rel="noopener noreferrer" onclick="playSound('click')">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-  <a href="https://github.com/Rafaelmorenoperez" title="GitHub" target="_blank" rel="noopener noreferrer" onclick="playSound('beep')">
-    <i class="fab fa-github"></i>
-  </a>
-  <a href="https://www.youtube.com/@rafaelmpTech" title="YouTube" target="_blank" rel="noopener noreferrer" onclick="playSound('pop')">
-    <i class="fab fa-youtube"></i>
-  </a>
+  <div class="social-float">
+    <a href="https://www.linkedin.com/in/rafaelmperez/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+       <a href="https://github.com/Rafaelmorenoperez" title="GitHub" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-github"></i>
+    </a>
+      <a href="https://www.youtube.com/@rafaelmpTech" title="YouTube" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-youtube"></i>
+    </a>
+ 
+    </a>
+  </div>
 </div>
-
-<script>
-function playSound(type) {
-  let sound;
-  switch(type) {
-    case 'click':
-      sound = new Audio('click.mp3');
-      break;
-    case 'beep':
-      sound = new Audio('beep.mp3');
-      break;
-    case 'pop':
-      sound = new Audio('pop.mp3');
-      break;
-  }
-  sound.volume = 0.5; // puedes ajustar el volumen
-  sound.play();
-}
-</script>
-
 
 <section id="sobre-mi">
   <div class="card">
@@ -1698,15 +1681,4 @@ function playSound(type) {
   });
 </script>
 </html>
-
-
-
-
-
-
-
-
-
-
-
 
