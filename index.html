@@ -1318,25 +1318,39 @@ app.use(helmet.contentSecurityPolicy({
   <a href="#contacto">Contáctame</a>
 </nav>
 
-<audio id="narracion" src="https://rafaelmperez.github.io/sounds/portafolioplay.mp3"></audio>
+<!-- narración principal -->
+<audio id="narracion" src="narracion.mp3" preload="auto"></audio>
+<!-- sonido corto del menú -->
+<audio id="menu-sound" src="https://rafaelmperez.github.io/sounds/clip.mp3" preload="auto"></audio>
 
 <script>
-  const audio = document.getElementById("narracion");
-  const btn = document.getElementById("playPauseBtn");
+  const narracion = document.getElementById("narracion");
+  const playBtn = document.getElementById("playPauseBtn");
+  const menuSound = document.getElementById("menu-sound");
 
-  btn.addEventListener("click", () => {
-    if (audio.paused) {
-      audio.play();
-      btn.textContent = "⏸"; // cambia a pausa
+  // Botón Play/Pause de la narración
+  playBtn.addEventListener("click", () => {
+    if (narracion.paused) {
+      narracion.play();
+      playBtn.textContent = "⏸";
     } else {
-      audio.pause();
-      btn.textContent = "▶"; // vuelve a play
+      narracion.pause();
+      playBtn.textContent = "▶";
     }
   });
 
-  // Si el audio termina, vuelve el botón a "play"
-  audio.addEventListener("ended", () => {
-    btn.textContent = "▶";
+  narracion.addEventListener("ended", () => {
+    playBtn.textContent = "▶";
+  });
+
+  // Reproducir sonido al pasar por los enlaces del menú
+  const enlaces = document.querySelectorAll("nav a, .play-btn");
+  enlaces.forEach(enlace => {
+    enlace.addEventListener("mouseenter", () => {
+      // clona el sonido para que suene cada vez aunque se solape
+      const sonido = menuSound.cloneNode(true);
+      sonido.play();
+    });
   });
 </script>
 
