@@ -646,7 +646,7 @@ nav a:hover::after {
 
 
 section {
-  max-width: 900px;
+  max-width: none;
   margin: 1rem auto !important;
   padding: 1rem 1rem;
   text-align: center;
@@ -934,14 +934,16 @@ button:hover {
   display: block;
 }
 
-
 #proyectos {
   padding: 40px;
   background-color: #fdfdfd;
   border-radius: 12px;
-  max-width: 1000px;
-  margin: auto;
+  max-width: 1600px;  /* Más ancho que antes */
+  margin: 0 auto;
+  box-sizing: border-box;
 }
+
+
 
 
 .grid-proyectos {
@@ -967,7 +969,10 @@ button:hover {
   padding: 20px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.2s ease;
+  width: 100%;           /* Se adapta al ancho de la columna del grid */
+  box-sizing: border-box; /* Evita que el padding desborde el ancho */
 }
+
 
 
 
@@ -1002,9 +1007,10 @@ button:hover {
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-
+  width: 100%;
+  overflow-x: visible;
 }
+
 
 
 .habilidades-icons {
@@ -1260,6 +1266,30 @@ app.use(helmet.contentSecurityPolicy({
 .audio-proyecto audio {
   width: 100%; /* Mantiene el ancho relativo */
   height: 28px; /* Opcional: ajusta la altura si el navegador lo permite */
+}
+
+
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 columnas flexibles */
+  gap: 2rem;
+  width: 100vw; /* Ocupa todo el ancho de la ventana */
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .grid-proyectos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-proyectos {
+    grid-template-columns: 1fr;
+  }
 }
 
 
