@@ -1169,10 +1169,24 @@ a[href^="mailto:"] {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
 }
 #contacto .card {
+  max-width: 400px;       /* Ajusta según lo que consideres "más chica" */
+  width: 100%;
+  margin: 0 auto;         /* Centra la tarjeta */
+  padding: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
   transition: none !important;
   transform: none !important;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important; /* sombra fija */
+  box-sizing: border-box;
 }
+
+#cv .card {
+  max-width: 300px; /* Ajusta este valor según el ancho deseado */
+  margin: 0 auto; /* Centra la tarjeta horizontalmente */
+  padding: 1.5rem; /* Ajusta el padding para que sea más compacto */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Mantiene la sombra consistente */
+  border-radius: 8px; /* Mantiene los bordes redondeados */
+}
+
 
 #contacto .card:hover {
   transition: none !important;
@@ -1648,6 +1662,20 @@ Desplegado en una Raspberry Pi 2, prioriza privacidad, eficiencia y resiliencia,
       color: #555;
       line-height: 1.6;
     }
+
+   .small-card {
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto; /* 🔥 Esto la centra horizontalmente */
+  padding: 16px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+}
+
+
   </style>
   <script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
 
@@ -1662,7 +1690,7 @@ Desplegado en una Raspberry Pi 2, prioriza privacidad, eficiencia y resiliencia,
   <h2 class="terminal-heading">
     <i class="fas fa-file-alt"></i> $ cat curriculum.txt
   </h2>
-  <div class="card">
+  <div class="card small-card">
     <p>
       <i class="fas fa-file-pdf"></i>
       <a href="https://drive.google.com/uc?export=download&id=..." 
@@ -1838,11 +1866,3 @@ Desplegado en una Raspberry Pi 2, prioriza privacidad, eficiencia y resiliencia,
   });
 </script>
 </html>
-
-
-
-
-
-
-
-
