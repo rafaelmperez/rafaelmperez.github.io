@@ -1,143 +1,179 @@
 <!DOCTYPE html>
 <html lang="es">
-    <br><br>
-<hr style="border: none; border-top: 1px solid #ccc; margin: 2rem 0;">
-<br><br>
-
 <head>
   <meta charset="UTF-8">
-  <title>Correo Falso - Simulación Phishing Educativo </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Correo Falso - Simulación Phishing Educativo</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
       padding: 2rem;
+      color: #333;
     }
 
     .email-box {
       background-color: #fff;
       padding: 1.5rem;
       border: 1px solid #ccc;
-      max-width: 600px;
-      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      max-width: 650px;
+      margin: 2rem auto;
     }
 
     .logo {
       display: block;
-      margin: 0 auto 0rem auto;
-      width: 400px;
+      margin: 0 auto 1rem auto;
+      max-width: 350px;
     }
 
     .btn {
       display: inline-block;
-      padding: 0.6rem 1rem;
+      padding: 0.8rem 1.2rem;
       background-color: #d50000;
       color: white;
+      font-weight: bold;
       text-decoration: none;
-      border-radius: 4px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
     }
 
     .btn:hover {
       background-color: #a00000;
     }
 
-    .warning-box {
+    .warning-box, .awareness-box {
       background-color: #fffbe6;
       border-left: 6px solid #ffcc00;
       padding: 1.5rem;
       margin-top: 2rem;
-      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      max-width: 650px;
       margin: 2rem auto;
     }
 
-    .warning-box h3 {
+    .warning-box h3,
+    .awareness-box h3 {
       margin-top: 0;
       color: #a67c00;
     }
 
-  .warning-box p,
-  .warning-box h4 {
-    margin-bottom: 1rem;
-  }
+    .warning-box ul,
+    .awareness-box ul {
+      padding-left: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
 
-  .warning-box ul {
-    padding-left: 1.2rem;
-    margin-bottom: 2rem;
-  }
+    .warning-box li,
+    .awareness-box li {
+      margin-bottom: 0.6rem;
+    }
 
-  .warning-box li {
-    margin-bottom: 0.8rem;
-  }
+    code {
+      background: #eee;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.95em;
+    }
 
-  .warning-box p:last-of-type {
-  margin-bottom: 2rem;
-}
-.warning-box h4 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
+    a {
+      color: #d50000;
+      font-weight: bold;
+      text-decoration: none;
+    }
 
-</style>
+    a:hover {
+      text-decoration: underline;
+    }
 
+    .legal-note {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 1.5rem;
+    }
   </style>
 </head>
 <body>
-  <div class="email-box">
-    <img src="https://rafaelmperez.github.io/assets/img/santander.jpg" alt="Logo Banco Santander" class="logo">
-    <h2>⚠️ Aviso urgente de Banco Santander</h2>
-    <p>Estimado cliente,</p>
-    <p>Hemos detectado intentos de acceso no autorizados a su cuenta en las últimas horas. Por motivos de seguridad, es necesario que confirme su identidad para evitar la suspensión temporal de sus servicios.</p>
-    <p><strong>Debe realizar la verificación en un plazo máximo de 24 horas.</strong></p>
-    <p>De no hacerlo, el acceso online quedará restringido preventivamente.</p>
-    <a href="http://verificacion-falsa.com" class="btn">Verificar ahora</a>
-    <p>Atentamente,</p>
-    <p>Departamento de Seguridad Digital</p>
-    <strong><p>Banco Santander</p></strong>
-  </div>
 
-<div class="warning-box">
-  <h3>⚠️🔍 ¿Podrías haber caído en esto?</h3>
+  <main>
+    <!-- Simulación de phishing -->
+    <section class="email-box">
+      <img src="https://rafaelmperez.github.io/assets/img/santander.jpg" alt="Logo Banco Santander" class="logo">
+      <h2>⚠️ Aviso urgente de Banco Santander</h2>
+      <p>Estimado cliente,</p>
+      <p>Hemos detectado intentos de acceso no autorizados a su cuenta en las últimas horas. Por motivos de seguridad, es necesario que confirme su identidad para evitar la suspensión temporal de sus servicios.</p>
+      <p><strong>Debe realizar la verificación en un plazo máximo de 24 horas.</strong></p>
+      <p>De no hacerlo, el acceso online quedará restringido preventivamente.</p>
+      <a href="http://verificacion-falsa.com" class="btn">Verificar ahora</a>
+      <p>Atentamente,<br>
+      Departamento de Seguridad Digital<br>
+      <strong>Banco Santander</strong></p>
+    </section>
 
-  <p>Este correo es <strong>ficticio</strong> y forma parte de una simulación educativa sobre phishing. Está diseñado para parecer auténtico, suplantando elementos visuales como el propio logo de la empresa, utilizando lenguaje formal y técnicas de urgencia psicológica que los ciberdelincuentes suelen emplear.</p>
-  
-  <p><em>Esto podría ser un email real en tu bandeja de entrada. Hay días en los que estamos más despistados que otros, y basta un clic para comprometer tu seguridad.</em></p>
+    <!-- Explicación educativa -->
+    <section class="warning-box">
+      <h3>⚠️🔍 ¿Podrías haber caído en esto?</h3>
+      <p>Este correo es <strong>ficticio</strong> y forma parte de una simulación educativa sobre phishing. Está diseñado para parecer auténtico, suplantando elementos visuales como el logo, utilizando lenguaje formal y técnicas de urgencia psicológica.</p>
+      <p><em>Esto podría ser un email real en tu bandeja de entrada. Basta un clic para comprometer tu seguridad.</em></p>
 
-  <h4>🎭 Técnicas comunes usadas en phishing</h4>
-  <ul>
-    <li><strong>Dominios homógrafos:</strong> Direcciones falsas que parecen reales, como <code>microsоft.com</code> (la “o” es cirílica).</li>
-    <li><strong>Acortadores de URL:</strong> Enlaces disfrazados con servicios como <em>bit.ly</em> o <em>tinyurl</em>.</li>
-    <li><strong>Adjuntos maliciosos:</strong> Archivos en PDF, DOC o ZIP que contienen malware o macros peligrosas.</li>
-    <li><strong>Mensajes de ingeniería social:</strong> Correos que generan <em>miedo</em> (“Tu cuenta será bloqueada”), <em>ganas de recompensa</em> (“Has ganado un premio”) o <em>presión</em> (“Debes actuar en 24h”).</li>
-  </ul>
+      <h4>🎭 Técnicas comunes usadas en phishing</h4>
+      <ul>
+        <li><strong>Dominios homógrafos:</strong> Como <code>microsоft.com</code> (la “o” es cirílica).</li>
+        <li><strong>Acortadores de URL:</strong> <em>bit.ly</em>, <em>tinyurl</em>, etc.</li>
+        <li><strong>Adjuntos maliciosos:</strong> Archivos PDF, DOC, ZIP con malware.</li>
+        <li><strong>Ingeniería social:</strong> miedo, urgencia o recompensas falsas.</li>
+      </ul>
 
-  <h4>🛡️ ¿Cómo protegerte?</h4>
-  <ul>
-    <li><strong>Verifica el remitente:</strong> ¿El dominio es legítimo? Algunos atacantes modifican sutilmente una letra o carácter en la URL. Asegúrate también de que el sitio utiliza <code>https://</code> y tiene un certificado válido. Para verificar webs dudosas, puedes usar <a href="https://www.virustotal.com/es/" target="_blank">VirusTotal.com</a>, que analiza enlaces y archivos.</li>
-    <li><strong>Evita actuar bajo presión:</strong> Los atacantes suelen generar urgencia para forzar decisiones rápidas. Tómate tu tiempo antes de hacer clic o responder.</li>
-    <li><strong>Inspecciona los enlaces:</strong> Pasa el cursor sobre ellos antes de hacer clic. ¿Apuntan realmente al sitio oficial?</li>
-    <li><strong>Busca errores:</strong> Faltas de ortografía, diseño inconsistente o lenguaje poco natural pueden ser señales de alerta.</li>
-    <li><strong>Consulta directamente:</strong> Ante la duda, contacta con la entidad por canales oficiales o teléfono. Nunca respondas al correo sospechoso.</li>
-    <li><strong>Activa la autenticación en dos pasos (MFA):</strong> Incluso si tu contraseña se ve comprometida, el acceso a tu cuenta quedará protegido.</li>
-    <li><strong>Usa contraseñas únicas y un gestor de contraseñas:</strong> Reducirás el impacto si un servicio resulta comprometido.</li>
-    <li><strong>Instala extensiones y herramientas de seguridad:</strong> Navegadores y antivirus modernos pueden detectar webs de phishing automáticamente.</li>
-  </ul>
+      <h4>🛡️ ¿Cómo protegerte?</h4>
+      <ul>
+        <li>Verifica el remitente y el dominio (<code>https://</code>, certificado válido).</li>
+        <li>No actúes bajo presión: los atacantes buscan prisa y descuido.</li>
+        <li>Pasa el cursor sobre los enlaces antes de hacer clic.</li>
+        <li>Busca errores de ortografía o diseño sospechoso.</li>
+        <li>Contacta directamente con la entidad oficial, no respondas al correo.</li>
+        <li>Activa MFA y usa contraseñas únicas con un gestor.</li>
+        <li>Apóyate en extensiones y antivirus modernos.</li>
+      </ul>
 
-  <h4>🚨 ¿Qué hacer si ya has hecho clic?</h4>
-  <ul>
-    <li><strong>No ingreses datos personales:</strong> Si lo hiciste, cambia tus contraseñas inmediatamente.</li>
-    <li><strong>Desconecta tu dispositivo de la red:</strong> Esto puede evitar que se envíe información sensible.</li>
-    <li><strong>Ejecuta un análisis de seguridad:</strong> Usa tu antivirus o herramientas de escaneo para detectar posibles amenazas.</li>
-    <li><strong>Informa al equipo técnico o al proveedor:</strong> Reportar el incidente puede ayudar a prevenir daños mayores.</li>
-  </ul>
+      <h4>🚨 ¿Qué hacer si ya has hecho clic?</h4>
+      <ul>
+        <li>No ingreses datos personales. Si lo hiciste, cambia tus contraseñas.</li>
+        <li>Desconecta tu dispositivo de la red.</li>
+        <li>Pasa un análisis de seguridad.</li>
+        <li>Informa al equipo técnico o a la entidad afectada.</li>
+      </ul>
 
-  <h4>📚 Recursos recomendados</h4>
-  <ul>
-    <li><a href="https://www.incibe.es" target="_blank">INCIBE (Instituto Nacional de Ciberseguridad - España)</a></li>
-    <li><a href="https://phishing.org" target="_blank">Phishing.org - Guías y recursos</a></li>
-    <li><a href="https://www.virustotal.com/es/" target="_blank">VirusTotal - Analiza enlaces y archivos sospechosos</a></li>
-  </ul>
+      <h4>📚 Recursos recomendados</h4>
+      <ul>
+        <li><a href="https://www.incibe.es" target="_blank">INCIBE (España)</a></li>
+        <li><a href="https://phishing.org" target="_blank">Phishing.org</a></li>
+        <li><a href="https://www.virustotal.com/es/" target="_blank">VirusTotal</a></li>
+      </ul>
 
-  <p><strong>💡 Recuerda:</strong> El phishing no es un fallo técnico, es un ataque a tu atención. <em>Tu mejor antivirus es la desconfianza informada.</em></p>
+      <p class="legal-note"><em>⚠️ Aviso: Este ejercicio es parte de una simulación educativa. No contiene enlaces ni archivos maliciosos.</em></p>
+    </section>
 
-  <p class="legal-note"><em>⚠️ Aviso: Este ejercicio es parte de una simulación educativa. No contiene enlaces ni archivos maliciosos.</em></p>
-</div>
+    <!-- Claves para concienciación en empresas -->
+    <section class="awareness-box">
+      <h3>🏢🔑 Claves de concienciación en empresas</h3>
+      <ul>
+        <li><strong>Formación continua:</strong> simulaciones periódicas de phishing y talleres prácticos.</li>
+        <li><strong>Política de contraseñas y MFA:</strong> obligatorio en accesos críticos.</li>
+        <li><strong>Cultura de reporte:</strong> canal simple para avisar de correos sospechosos.</li>
+        <li><strong>Mínimo privilegio:</strong> limitar permisos reduce impacto de incidentes.</li>
+        <li><strong>Uso seguro de dispositivos:</strong> evitar USB desconocidos, BYOD controlado.</li>
+        <li><strong>Comunicación clara desde IT:</strong> avisos de campañas activas y consejos rápidos.</li>
+        <li><strong>Gamificación:</strong> rankings, insignias o recompensas por detección.</li>
+        <li><strong>Verificación de correos internos:</strong> Desconfiar incluso de mensajes que parecen venir de compañeros o directivos. Confirmar por un canal alternativo (teléfono, chat corporativo) antes de seguir instrucciones inusuales.</li>
+
+      </ul>
+      <p><strong>💡 Recuerda:</strong> En ciberseguridad, el eslabón débil puede convertirse en la primera línea de defensa con la formación adecuada.</p>
+    </section>
+  </main>
+
+</body>
+</html>
+
