@@ -972,6 +972,36 @@ button:hover {
   width: 100%;           /* Se adapta al ancho de la columna del grid */
   box-sizing: border-box; /* Evita que el padding desborde el ancho */
 }
+.card {
+  width: 100%;
+  max-width: 600px;       /* Limita el ancho en pantallas grandes */
+  margin: 20px auto;      /* Centrado con espacio vertical */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Estilos específicos para pantallas pequeñas */
+@media (max-width: 480px) {
+  .form-row {
+    display: block;       /* Apila los campos verticalmente */
+  }
+
+  .form-group {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  input, textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+}
 
 
 
@@ -1179,6 +1209,12 @@ a[href^="mailto:"] {
   box-sizing: border-box;
 }
 
+#contacto .card:hover {
+  transition: none !important;
+  transform: none !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important; /* misma sombra en hover */
+}
+
 #cv .card {
   max-width: 300px; /* Ajusta este valor según el ancho deseado */
   margin: 0 auto; /* Centra la tarjeta horizontalmente */
@@ -1188,11 +1224,7 @@ a[href^="mailto:"] {
 }
 
 
-#contacto .card:hover {
-  transition: none !important;
-  transform: none !important;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important; /* misma sombra en hover */
-}
+
 
 .habilidades-icons img {
   width: 60px;          /* tamaño fijo de los iconos */
