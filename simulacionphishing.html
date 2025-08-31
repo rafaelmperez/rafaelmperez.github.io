@@ -2,13 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Correo Falso - Simulación Phishing</title>
+  <title>Correo Falso - Simulación Santander</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
       padding: 2rem;
     }
+
     .email-box {
       background-color: #fff;
       padding: 1.5rem;
@@ -17,11 +18,11 @@
       margin: auto;
     }
 
-.logo {
-  display: block;
-  margin: 0 auto 0rem auto; /* antes era 1rem */
-  width: 400px;
-}
+    .logo {
+      display: block;
+      margin: 0 auto 0rem auto;
+      width: 400px;
+    }
 
     .btn {
       display: inline-block;
@@ -31,8 +32,31 @@
       text-decoration: none;
       border-radius: 4px;
     }
+
     .btn:hover {
       background-color: #a00000;
+    }
+
+    .warning-box {
+      background-color: #fffbe6;
+      border-left: 6px solid #ffcc00;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+
+    .warning-box h3 {
+      margin-top: 0;
+      color: #a67c00;
+    }
+
+    .warning-box ul {
+      padding-left: 1.2rem;
+    }
+
+    .warning-box li {
+      margin-bottom: 0.5rem;
     }
   </style>
 </head>
@@ -41,18 +65,43 @@
     <img src="https://rafaelmperez.github.io/assets/img/santander.jpg" alt="Logo Banco Santander" class="logo">
     <h2>⚠️ Aviso urgente de Banco Santander</h2>
     <p>Estimado cliente,</p>
-    <p>Hemos detectado intentos de acceso no autorizados a su cuenta en las últimas horas. Por motivos de seguridad, es necesario que confirme su identidad para evitar la suspensión temporal de sus servicios.
-</p>
+    <p>Hemos detectado intentos de acceso no autorizados a su cuenta en las últimas horas. Por motivos de seguridad, es necesario que confirme su identidad para evitar la suspensión temporal de sus servicios.</p>
     <p><strong>Debe realizar la verificación en un plazo máximo de 24 horas.</strong></p>
     <p>De no hacerlo, el acceso online quedará restringido preventivamente.</p>
-      <a href="http://verificacion-falsa.com" class="btn">Verificar ahora</a>
-    </p>
+    <a href="http://verificacion-falsa.com" class="btn">Verificar ahora</a>
     <p>Atentamente,</p>
-       <p>Departamento de Seguridad Digital</p>
-   <strong><p>Banco Santander</p></strong>
+    <p>Departamento de Seguridad Digital</p>
+    <strong><p>Banco Santander</p></strong>
   </div>
-</body>
-</html>
+
+<div class="warning-box">
+<h3>⚠️🔍 ¿Podrías haber caído en esto?</h3>
+
+  <p>Este correo es <strong>ficticio</strong> y forma parte de una simulación educativa sobre phishing. Está diseñado para parecer auténtico, utilizando elementos visuales, lenguaje formal y técnicas de urgencia que los atacantes suelen emplear.</p>
+  <p><em>Esto podría ser un email real en tu bandeja de entrada. Hay días en los que estamos más despistados que otros, y basta un clic para comprometer tu seguridad.</em></p>
+
+  <h4>🛡️ ¿Cómo protegerte?</h4>
+  <ul>
+    <li><strong>Verifica el remitente:</strong> ¿El dominio es legítimo? Algunos atacantes modifican sutilmente una letra o carácter en la URL. Asegúrate también de que el sitio utiliza <code>https://</code> y tiene un certificado válido.</li>
+    <li><strong>Evita actuar bajo presión:</strong> Los atacantes suelen generar urgencia para forzar decisiones rápidas. Si puedes verificar que el remitente es legítimo, hazlo antes de realizar cualquier acción.</li>
+    <li><strong>Inspecciona los enlaces:</strong> Pasa el cursor sobre ellos antes de hacer clic. ¿Apuntan realmente al sitio oficial?</li>
+    <li><strong>Busca errores:</strong> Faltas de ortografía, diseño inconsistente o lenguaje poco natural pueden ser señales de alerta.</li>
+    <li><strong>Consulta directamente:</strong> Si tienes dudas, contacta con la entidad por canales oficiales o por teléfono. Nunca respondas directamente al correo sospechoso.</li>
+  </ul>
+
+  <h4>🚨 ¿Qué hacer si ya has hecho clic?</h4>
+  <ul>
+    <li><strong>No ingreses datos personales:</strong> Si lo hiciste, cambia tus contraseñas inmediatamente.</li>
+    <li><strong>Desconecta tu dispositivo de la red:</strong> Esto puede evitar que se envíe información sensible.</li>
+    <li><strong>Ejecuta un análisis de seguridad:</strong> Usa tu antivirus o herramientas de escaneo para detectar posibles amenazas.</li>
+    <li><strong>Informa al equipo técnico o al proveedor:</strong> Reportar el incidente puede ayudar a prevenir daños mayores.</li>
+  </ul>
+
+
+
+
+<p>Este ejercicio busca fomentar la conciencia sobre ciberseguridad y promover buenas prácticas defensivas. Puedes incluir capturas de pantalla con anotaciones para reforzar el aprendizaje o compartir esta simulación con tu equipo como parte de una formación interna.</p>
+</div>
 
 
 
