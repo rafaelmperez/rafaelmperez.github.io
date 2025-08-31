@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Correo Falso - Simulación Santander</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 2rem;
+    }
+    .email-box {
+      background-color: #fff;
+      padding: 1.5rem;
+      border: 1px solid #ccc;
+      max-width: 600px;
+      margin: auto;
+    }
+
+.logo {
+  display: block;
+  margin: 0 auto 0rem auto; /* antes era 1rem */
+  width: 400px;
+}
+
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1rem;
+      background-color: #d50000;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .btn:hover {
+      background-color: #a00000;
+    }
+  </style>
+</head>
+<body>
+  <div class="email-box">
+    <img src="https://rafaelmperez.github.io/assets/img/santander.jpg" alt="Logo Banco Santander" class="logo">
+    <h2>⚠️ Aviso urgente de Banco Santander</h2>
+    <p>Estimado cliente,</p>
+    <p>Hemos detectado intentos de acceso no autorizados a su cuenta en las últimas horas. Por motivos de seguridad, es necesario que confirme su identidad para evitar la suspensión temporal de sus servicios.
+</p>
+    <p><strong>Debe realizar la verificación en un plazo máximo de 24 horas.</strong></p>
+    <p>De no hacerlo, el acceso online quedará restringido preventivamente.</p>
+      <a href="http://verificacion-falsa.com" class="btn">Verificar ahora</a>
+    </p>
+    <p>Atentamente,</p>
+       <p>Departamento de Seguridad Digital</p>
+   <strong><p>Banco Santander.</p></strong>
+  </div>
+</body>
+</html>
+
+
+
+
