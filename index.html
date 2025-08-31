@@ -1319,7 +1319,7 @@ app.use(helmet.contentSecurityPolicy({
 </nav>
 
 <!-- narración principal -->
-<audio id="narracion" src="https://rafaelmperez.github.io/sounds/portafolioplay.mp3" preload="auto"></audio>
+<audio id="narracion" src="narracion.mp3" preload="auto"></audio>
 <!-- sonido corto del menú -->
 <audio id="menu-sound" src="https://rafaelmperez.github.io/sounds/clip.mp3" preload="auto"></audio>
 
@@ -1328,23 +1328,11 @@ app.use(helmet.contentSecurityPolicy({
   const playBtn = document.getElementById("playPauseBtn");
   const menuSound = document.getElementById("menu-sound");
 
-  // función para reproducir el sonidito corto
-  function playMenuSound() {
-    const sonido = menuSound.cloneNode(true);
-    sonido.play().catch(()=>{});
-  }
-
   // Botón Play/Pause de la narración
-  playBtn.addEventListener("click", async () => {
-    playMenuSound(); // suena también al pinchar el botón
-
+  playBtn.addEventListener("click", () => {
     if (narracion.paused) {
-      try {
-        await narracion.play();
-        playBtn.textContent = "⏸";
-      } catch (err) {
-        console.error("Error al reproducir narración:", err);
-      }
+      narracion.play();
+      playBtn.textContent = "⏸";
     } else {
       narracion.pause();
       playBtn.textContent = "▶";
@@ -1355,17 +1343,19 @@ app.use(helmet.contentSecurityPolicy({
     playBtn.textContent = "▶";
   });
 
-  // Sonidito al pasar el ratón por los enlaces
-  const enlaces = document.querySelectorAll("nav a, #playPauseBtn");
+  // Reproducir sonido al pasar por los enlaces del menú
+  const enlaces = document.querySelectorAll("nav a, .play-btn");
   enlaces.forEach(enlace => {
-    enlace.addEventListener("mouseenter", playMenuSound);
-    enlace.addEventListener("click", playMenuSound); // también al pinchar
+    enlace.addEventListener("mouseenter", () => {
+      // clona el sonido para que suene cada vez aunque se solape
+      const sonido = menuSound.cloneNode(true);
+      sonido.play();
+    });
   });
 </script>
 
 
-
-
+  <audio id="menu-sound" src="https://rafaelmperez.github.io/sounds/clip.mp3" preload="auto"></audio>
 
   <!-- 👇 Aquí va el script, justo antes de cerrar body -->
   <script src="script.js"></script>
@@ -1491,12 +1481,27 @@ app.use(helmet.contentSecurityPolicy({
 </div>
 
 
-    <div class="card">
-      <img src="https://rafaelmperez.github.io/assets/img/proyecto2.png" 
-           alt="Previsualización Automatización" class="proyecto-img">
-      <h3><i class="fas fa-cloud"></i> Automatización</h3>
-      <p>Despliegue automatizado de servidores seguros con scripts en Bash y Ansible.</p>
-    </div>
+<div class="card">
+  <img src="https://rafaelmperez.github.io/assets/img/proyectoonion.jpg" 
+       alt="Previsualización Tor Hidden Service" class="proyecto-img">
+
+  <h3><i class="fas fa-user-secret"></i> Hidden Service en Tor (.onion)</h3>
+
+  <div class="descripcion-proyecto">
+    <p>Este proyecto es una versión autoalojada y descentralizada de mi portafolio técnico, accesible exclusivamente a través de la red Tor.  
+    Implementado en una Raspberry Pi 2, combina privacidad, eficiencia y resiliencia. Es una prueba práctica de cómo desplegar servicios web estáticos en entornos limitados, manteniendo el control total sobre la infraestructura.</p>
+    <p><a href="http://xwzrrbprgbg324sgzacioafol47j3smjwvatbfwys2cqqr6q4ridanyd.onion/" target="_blank" rel="noopener noreferrer">Enlace .onion</a></p>
+  </div>
+
+  <div class="audio-proyecto">
+    <p><strong>🎧 Escuchar versión en audio:</strong></p>
+    <audio controls controlsList="nodownload noplaybackrate">
+      <source src="https://rafaelmperez.github.io/sounds/proyectoonion.mp3" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+  </div>
+</div>
+
 
     <div class="card">
       <img src="https://rafaelmperez.github.io/assets/img/proyecto3.png" 
@@ -1791,8 +1796,3 @@ app.use(helmet.contentSecurityPolicy({
   });
 </script>
 </html>
-
-
-
-
-
