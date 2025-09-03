@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Implementación y Activación UFW | Portafolio Rafael M.Pérez | Sysadmin Junior</title>
+
+  <!-- Fuentes Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Roboto', 'sans-serif'],
+            montserrat: ['Montserrat', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- Header -->
+<header class="p-6 shadow-lg font-montserrat" style="background-color: #000; color: rgb(255, 204, 0);">
+  <div class="max-w-6xl mx-auto flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Portafolio Rafael M.Pérez | Sysadmin Junior</h1>
+    <a href="siguiente_reto.html" class="text-sm flex items-center" style="color: rgb(255, 204, 0);">
+      Siguiente reto <span class="ml-1">→</span>
+    </a>
+  </div>
+</header>
+
+  <!-- Contenido del microproyecto -->
+  <main class="max-w-4xl mx-auto px-6 py-12">
+   <h2 class="text-2xl font-bold mb-6 font-montserrat">
+  Implementación y Validación de UFW como Firewall Local en Linux
+</h2>
+
+    
+<ul class="list-disc list-inside text-black mb-6">
+      Este microproyecto aborda la necesidad de fortificar la seguridad de sistemas Linux mediante la activación y configuración de un firewall local. Muchos entornos operan sin restricciones de tráfico entrante, lo que representa un riesgo significativo. El objetivo es aplicar UFW (Uncomplicated Firewall) para establecer políticas de acceso claras, minimizar la superficie de ataque y garantizar que solo los servicios autorizados estén expuestos.
+    </p>
+
+    <h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Tecnologías utilizadas</h3>
+<ul class="list-disc list-inside text-black">
+      <li>Linux (Ubuntu Server 20.04)</li>
+      <li>Bash</li>
+      <li>UFW (Uncomplicated Firewall)</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Pasos realizados:</h3>
+<ol class="list-decimal list-inside text-black space-y-8">
+  <li>
+    <p class="mb-2"><strong>Actualización del sistema e instalación de UFW:</p></strong> 
+    <p class="text-black mb6">
+      Para comenzar, se ejecutó la actualización del sistema con el comando <code class="bg-gray-200 px-1 rounded">sudo apt update && sudo apt upgrade -y</code>, lo que garantiza que todos los paquetes estén en su versión más reciente. A continuación, se procedió con la instalación de <strong>UFW (Uncomplicated Firewall)</strong> mediante <code class="bg-gray-200 px-1 rounded">sudo apt install ufw -y</code>. Esta herramienta permite gestionar reglas de firewall de forma sencilla y efectiva, ideal para entornos Linux donde se requiere control de tráfico entrante y saliente.
+    </p>
+  </li>
+
+  <li>
+    <p class="mb-2"></p><strong>Establecimiento de políticas por defecto:</p></strong> 
+    <p class="text-black mb6">
+      Tras instalar UFW, se verificó su correcta instalación ejecutando <code class="bg-gray-200 px-1 rounded">ufw --version</code>. Este comando muestra la versión instalada y confirma que el firewall está disponible en el sistema. Si se presenta algún error o advertencia, se recomienda revisar los permisos, el estado del paquete o reinstalarlo.
+    </p>
+    <p class="text-black mb6">
+      A continuación, se definieron las políticas por defecto del firewall. Estas reglas establecen el comportamiento general ante el tráfico entrante y saliente:
+    </p>
+<pre class="bg-gray-100 p-4 rounded text-sm text-black overflow-x-auto mb-4">
+<code class="bg-gray-200 px-1 rounded">sudo ufw default deny incoming</code>
+<code class="bg-gray-200 px-1 rounded">sudo ufw default allow outgoing</code>
+    </pre>
+    <p class="text-black mb6">
+      Con estas configuraciones, se bloquea todo el tráfico entrante no autorizado, mientras se permite el tráfico saliente. Esta política es ideal para servidores que deben protegerse de accesos externos no deseados, pero que necesitan comunicarse con otros servicios o realizar actualizaciones.
+    </p>
+  </li>
+
+  <li>
+    <p class="mb-2"></p><strong>Permitir acceso SSH:</p></strong> 
+    <p class="text-black mb6">
+      Antes de activar UFW, es fundamental permitir el acceso por SSH si estás conectado remotamente al servidor. De lo contrario, podrías bloquear tu propia conexión y perder el acceso. Para habilitar el puerto estándar de SSH (22), se ejecuta el siguiente comando:
+    </p>
+<pre class="bg-gray-100 p-4 rounded text-base text-black overflow-x-auto mb-4">
+    <code class="bg-gray-200 px-1 rounded">sudo ufw allow ssh</code>
+    </pre>
+    <p class="text-black mb6">
+      En caso de haber modificado el puerto SSH por razones de seguridad (por ejemplo, al <code class="bg-gray-200 px-1 rounded">2222</code>), se debe especificar el nuevo puerto en la regla:
+    </p>
+<pre class="bg-gray-100 p-4 rounded text-sm text-black overflow-x-auto mb-4">
+    <code class="bg-gray-200 px-1 rounded">sudo ufw allow 2222/tcp</code>
+    </pre>
+    <p class="text-black mb6">
+      Esta configuración garantiza que el acceso remoto permanezca disponible una vez que el firewall esté activo. Es una medida preventiva esencial para evitar bloqueos involuntarios, especialmente en entornos sin acceso físico al servidor.
+    </p>
+  </li>
+
+  <li>
+    <p class="mb-2"></p><strong>Activar el firewall:</p></strong> 
+<img src="https://rafaelmperez.github.io/assets/img/activarufw.jpg" alt="Activar el firewall" style="width:100%; max-width:900px;" class="rounded-lg shadow-md">
+    <p class="text-black mb6">
+      Una vez definidas las políticas por defecto y permitidos los accesos necesarios (como SSH), se procede a activar el firewall. Este paso aplica todas las reglas configuradas y comienza a proteger el sistema de forma efectiva:
+    </p>
+<pre class="bg-gray-100 p-4 rounded text-sm text-black overflow-x-auto mb-4">
+<code class="bg-gray-200 px-1 rounded">sudo ufw enable</code>
+    </pre>
+    <p class="text-black mb6">
+      El sistema solicitará confirmación antes de activar UFW. Tras aceptar, el firewall entra en funcionamiento y comienza a aplicar las reglas definidas. Es recomendable realizar este paso con precaución, especialmente si se está conectado remotamente.
+    </p>
+  </li>
+
+  <li>
+    <p class="mb-2"></p><strong>Verificar el estado y las reglas:</p></strong> 
+<img src="https://rafaelmperez.github.io/assets/img/verificarestado.jpg" alt="Activar el firewall" style="width:100%; max-width:900px;" class="rounded-lg shadow-md">
+    <p class="text-black mb6">
+      Para confirmar que UFW está activo y que las reglas se han aplicado correctamente, se utiliza el siguiente comando. Este muestra el estado actual del firewall, las políticas por defecto y las reglas específicas habilitadas:
+    </p>
+    <pre class="bg-gray-100 p-4 rounded text-sm text-black overflow-x-auto mb-4">
+
+    <code class="bg-gray-200 px-1 rounded">sudo ufw status verbose</code>
+    </pre>
+    <p class="text-black mb6">
+      El modo <code class="bg-gray-200 px-1 rounded">verbose</code> ofrece una vista detallada, ideal para auditorías o revisiones técnicas. Si alguna regla no aparece como esperada, se recomienda revisar la configuración o consultar los registros del sistema.
+    </p>
+  </li>
+</ol>
+<div class="p-4 mb-4">
+  <h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Conclusiones y Recomendaciones Finales:</h3>
+  <p class="text-black mb6">
+    La implementación de UFW como firewall local en sistemas Linux representa una medida fundamental para reforzar la seguridad perimetral de servidores. Al establecer políticas restrictivas por defecto y permitir únicamente los servicios necesarios, se reduce significativamente la superficie de ataque y se mejora el control sobre el tráfico de red.
+  </p>
+  <ul class="list-disc list-inside mb-2">
+    <li><strong>Auditorías periódicas:</strong> Revisa las reglas de UFW regularmente para asegurarte de que siguen alineadas con los servicios activos del sistema.</li>
+    <li><strong>Registro de eventos:</strong> Considera integrar UFW con herramientas como <code>logwatch</code> o <code>fail2ban</code> para detectar intentos de acceso no autorizados.</li>
+    <li><strong>Seguridad por capas:</strong> Complementa el firewall con otras medidas como autenticación por clave SSH, desactivación de servicios innecesarios y actualizaciones constantes.</li>
+    <li><strong>Pruebas de conectividad:</strong> Después de cada cambio en las reglas, realiza pruebas desde clientes externos para verificar que los servicios autorizados siguen accesibles.</li>
+  </ul>
+  <p>
+    Estas recomendaciones fortalecen la postura de seguridad del sistema y aseguran que el firewall no sea solo una barrera inicial, sino parte de una estrategia integral de protección.
+  </p>
+</div>
+
+
+
+
+  </main>
+
+ <footer class="text-center py-6 mt-16 font-montserrat" style="background-color: #000; color: rgb(255, 204, 0);">
+  <p>© 2025 Rafael M. Pérez - Portafolio Sysadmin</p>
+</footer>
+
+
+</body>
+</html>
