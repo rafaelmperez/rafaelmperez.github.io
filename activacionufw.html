@@ -43,14 +43,17 @@
 
     
 <ul class="list-disc list-inside text-black mb-6">
-      Este microproyecto aborda la necesidad de fortificar la seguridad de sistemas Linux mediante la activación y configuración de un firewall local. Muchos entornos operan sin restricciones de tráfico entrante, lo que representa un riesgo significativo. El objetivo es aplicar UFW (Uncomplicated Firewall) para establecer políticas de acceso claras, minimizar la superficie de ataque y garantizar que solo los servicios autorizados estén expuestos.
-    </p>
+Este microproyecto aborda la necesidad de fortificar la seguridad de sistemas Linux mediante la activación y configuración de un firewall local. Muchos entornos operan sin restricciones de tráfico entrante, lo que representa un riesgo significativo. El objetivo es aplicar UFW (Uncomplicated Firewall) para establecer políticas de acceso claras, minimizar la superficie de ataque y garantizar que solo los servicios autorizados estén expuestos.
+
+Como parte del proceso de validación, se ha incluido la configuración y prueba de acceso remoto mediante SSH desde una máquina cliente con Parrot OS. Esta integración permite comprobar que UFW no solo bloquea el tráfico no deseado, sino que también permite conexiones legítimas y funcionales bajo condiciones seguras.    </p>
 
     <h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Tecnologías utilizadas:</h3>
 <ul class="list-disc list-inside text-black">
-      <li>Linux (Ubuntu Server 20.04)</li>
-      <li>Bash</li>
-      <li>UFW (Uncomplicated Firewall)</li>
+      <li><strong>Linux (Ubuntu 24.04 LTS)</strong>  Sistema operativo del servidor protegido.</li>
+      <li><strong>Parrot OS</strong> Máquina cliente utilizada para pruebas de acceso remoto</li>
+      <li><strong>Bash</strong> Utilizada para ejecutar comandos y scripts de configuración.</li>
+      <li><strong>UFW (Uncomplicated Firewall)</strong> Herramienta principal para definir reglas de tráfico.</li>
+      <li><strong>OpenSSH</strong> Protocolo utilizado para validar el acceso remoto seguro.</li>
     </ul>
 
     <h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Pasos realizados:</h3>
@@ -126,22 +129,72 @@
       El modo <code class="bg-gray-200 px-1 rounded">verbose</code> ofrece una vista detallada, ideal para auditorías o revisiones técnicas. Si alguna regla no aparece como esperada, se recomienda revisar la configuración o consultar los registros del sistema.
     </p>
   </li>
+  <li>
+  <p class="mb-2"><strong>Pruebas de acceso:</strong></p>
+  <img src="https://rafaelmperez.github.io/assets/img/nmap.png" alt="Activar el firewall" style="width:100%; max-width:900px;" class="rounded-lg shadow-md">
+
+<p class="text-black mb-6">
+    Una vez activado UFW, es fundamental realizar pruebas desde otro equipo o máquina virtual para verificar que las reglas están funcionando correctamente. Estas pruebas permiten validar que el tráfico no autorizado está siendo bloqueado y que los servicios permitidos siguen accesibles.
+  </p>
+  <ul class="list-disc list-inside text-black mb-4">
+    <li>Intentar conectarte por SSH al servidor.</li>
+    <li>Probar el acceso a puertos que deberían estar bloqueados.</li>
+    <li>Verificar si el tráfico se filtra correctamente según las reglas definidas.</li>
+  </ul>
+  <p class="text-black mb-4">
+    Para realizar un escaneo de puertos, puedes utilizar la herramienta <strong>nmap</strong> desde otro equipo. El siguiente comando escanea los primeros 1000 puertos del servidor:
+  </p>
+  <pre class="bg-gray-100 p-4 rounded text-sm text-black overflow-x-auto mb-4">
+<code class="bg-gray-200 px-1 rounded">nmap -p 1-1000 &lt;IP-del-servidor&gt;</code>
+  </pre>
+  <p class="text-black">
+    Si el firewall está correctamente configurado, deberías ver únicamente los puertos que has permitido explícitamente (como el de SSH). Esta prueba confirma que UFW está filtrando el tráfico como se espera.
+  </p>
+</li>
+
+<p class="mb-2"><strong>Acceso remoto controlado (SSH):</strong></p>
+  <img src="https://rafaelmperez.github.io/assets/img/sshconnect.png" alt="Activar el firewall" style="width:100%; max-width:900px;" class="rounded-lg shadow-md">
+<p class="text-black mb-6">
+  Como parte de la validación del firewall, se configuró y probó el acceso remoto mediante SSH desde una máquina virtual con Parrot OS hacia el servidor Ubuntu. Esta conexión permite administrar el servidor de forma segura, siempre que el puerto 22 esté habilitado y las reglas de UFW lo permitan.
+</p>
+<ul class="list-disc list-inside text-black mb-4">
+  <li>Se creó el usuario <code class="bg-gray-200 px-1 rounded">world</code> en el servidor Ubuntu.</li>
+  <li>Se verificó que el servicio SSH estuviera activo y escuchando en el puerto 22.</li>
+  <li>Se intentó la conexión desde Parrot OS utilizando el comando <code class="bg-gray-200 px-1 rounded">ssh world@&lt;IP-del-servidor&gt;</code>.</li>
+  <li>Se detectó lentitud en la respuesta de la terminal, lo cual se resolvió ajustando la configuración del servidor SSH.</li>
+</ul>
+<p class="text-black mb-4">
+  Para mejorar el rendimiento de la conexión, se modificaron los siguientes parámetros en el archivo <code class="bg-gray-200 px-1 rounded">/etc/ssh/sshd_config</code>:
+</p>
+<pre class="bg-gray-100 p-4 rounded text-sm text-black overflow-x-auto mb-4">
+<code class="bg-gray-200 px-1 rounded">UseDNS no
+GSSAPIAuthentication no</code>
+</pre>
+<p class="text-black mb-4">
+  Además, se verificó que el usuario tuviera asignado un shell válido (<code class="bg-gray-200 px-1 rounded">/bin/bash</code>) y se renombraron temporalmente los archivos de inicio (<code class="bg-gray-200 px-1 rounded">.bashrc</code> y <code class="bg-gray-200 px-1 rounded">.profile</code>) para descartar bloqueos en la sesión.
+</p>
+<p class="text-black mb-4">
+  Finalmente, se logró establecer una conexión SSH estable y funcional, confirmando que el firewall permite el acceso remoto de forma controlada. Esta prueba valida que las reglas de UFW están correctamente aplicadas y que el servicio SSH está operativo bajo condiciones seguras.
+</p>
+
+
 </ol>
 <div class="p-4 mb-4">
   <h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Conclusiones y Recomendaciones Finales:</h3>
   <p class="text-black mb6">
-    La implementación de UFW como firewall local en sistemas Linux representa una medida fundamental para reforzar la seguridad perimetral de servidores. Al establecer políticas restrictivas por defecto y permitir únicamente los servicios necesarios, se reduce significativamente la superficie de ataque y se mejora el control sobre el tráfico de red.
+    La implementación de UFW como firewall local en sistemas Linux —especialmente sobre plataformas modernas como Ubuntu 24.04 LTS— representa una medida esencial para reforzar la seguridad perimetral de servidores. Al establecer políticas restrictivas por defecto y permitir únicamente los servicios necesarios, se reduce significativamente la superficie de ataque y se mejora el control sobre el tráfico de red.
   </p>
   <ul class="list-disc list-inside mb-2">
-    <li><strong>Auditorías periódicas:</strong> Revisa las reglas de UFW regularmente para asegurarte de que siguen alineadas con los servicios activos del sistema.</li>
-    <li><strong>Registro de eventos:</strong> Considera integrar UFW con herramientas como <code>logwatch</code> o <code>fail2ban</code> para detectar intentos de acceso no autorizados.</li>
-    <li><strong>Seguridad por capas:</strong> Complementa el firewall con otras medidas como autenticación por clave SSH, desactivación de servicios innecesarios y actualizaciones constantes.</li>
-    <li><strong>Pruebas de conectividad:</strong> Después de cada cambio en las reglas, realiza pruebas desde clientes externos para verificar que los servicios autorizados siguen accesibles.</li>
+    <li><strong>Auditorías periódicas:</strong> Revisa las reglas de UFW regularmente mediante comandos como <code>ufw status numbered</code> para garantizar que estén alineadas con los servicios activos del sistema.</li>
+    <li><strong>Registro de eventos:</strong> Considera integrar UFW con herramientas como <code class="bg-gray-200 px-1 rounded">logwatch</code>, <code class="bg-gray-200 px-1 rounded">fail2ban</code> o el sistema de <code class="bg-gray-200 px-1 rounded">journald</code></code> para detectar y mitigar intentos de acceso no autorizados.</li>
+    <li><strong>Seguridad por capas:</strong> Refuerza el firewall con autenticación por clave SSH, desactivación de servicios innecesarios mediante <code class="bg-gray-200 px-1 rounded">systemctl</code>, uso de puertos alternativos y aplicación de actualizaciones automáticas con <code class="bg-gray-200 px-1 rounded">unattended-upgrades</code> o Snap.</li>
+    <li><strong>Pruebas de conectividad:</strong> Después de cada cambio en las reglas, realiza pruebas desde clientes externos utilizando herramientas como <code class="bg-gray-200 px-1 rounded">nmap</code>, <code class="bg-gray-200 px-1 rounded">telnet</code> o <code class="bg-gray-200 px-1 rounded">curl</code> para verificar que los servicios autorizados siguen accesibles.</li>
   </ul>
   <p>
-    Estas recomendaciones fortalecen la postura de seguridad del sistema y aseguran que el firewall no sea solo una barrera inicial, sino parte de una estrategia integral de protección.
+    Estas recomendaciones fortalecen la postura de seguridad del sistema y aseguran que el firewall no sea solo una barrera inicial, sino parte de una estrategia integral, escalable y sostenible de protección, especialmente en entornos con soporte extendido como Ubuntu 24.04 LTS.
   </p>
 </div>
+
 
 
 
@@ -149,7 +202,7 @@
   </main>
 
  <footer class="text-center py-6 mt-16 font-montserrat" style="background-color: #000; color: rgb(255, 204, 0);">
-  <p>© 2025 Rafael M. Pérez - Portafolio Sysadmin</p>
+  <p>© 2025 Rafael M. Pérez - Portafolio Sysadmin Junior</p>
 </footer>
 
 
