@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <link rel="icon" href="favicon.png" type="image/x-icon">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Implementación y Activación UFW | Portafolio Rafael M.Pérez | Sysadmin Junior</title>
@@ -30,38 +29,51 @@
 <header class="p-6 shadow-lg font-montserrat" style="background-color: #000; color: rgb(255, 204, 0);">
   <div class="max-w-6xl mx-auto flex justify-between items-center">
     <h1 class="text-2xl font-bold">Portafolio Rafael M.Pérez | Sysadmin Junior</h1>
-    <a href="siguiente_reto.html" class="text-sm flex items-center" style="color: rgb(255, 204, 0);">
-      Siguiente práctica técnica<span class="ml-1">→</span>
+
     </a>
   </div>
 </header>
+<!-- Contenido del microproyecto -->
+ 
+<main class="w-full max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+<h2 class="text-2xl font-bold mb-6 font-montserrat underline underline-offset-4">
+  Implementación y Validación de UFW como Firewall Local en Linux
+</h2>
 
-  <!-- Contenido del microproyecto -->
-<main class="max-w-4xl mx-auto px-6 py-12">
-  <h2 class="text-2xl font-bold mb-6 font-montserrat">
-    Implementación y Validación de UFW como Firewall Local en Linux
-  </h2>
 
   <!-- Logo insertado -->
   <div class="flex justify-center mb-6">
-    <img src="https://rafaelmperez.github.io/assets/img/logoufw.jpg" alt="Logo UFW" class="w-full max-w-xl h-auto">
+<img src="https://rafaelmperez.github.io/assets/img/logoufw.jpg" alt="Logo UFW" style="width: 50%; max-width: 800px; height: auto; display: block; margin: 0 auto 1.5rem;">
+</div>
+
   </div>
 
   <ul class="list-disc list-inside text-black mb-6">
     Este microproyecto aborda la necesidad de fortificar la seguridad de sistemas Linux mediante la activación y configuración de un firewall local. Muchos entornos operan sin restricciones de tráfico entrante, lo que representa un riesgo significativo. El objetivo es aplicar UFW (Uncomplicated Firewall) para establecer políticas de acceso claras, minimizar la superficie de ataque y garantizar que solo los servicios autorizados estén expuestos.
 
     Como parte del proceso de validación, se ha incluido la configuración y prueba de acceso remoto mediante SSH desde una máquina cliente con Parrot OS. Esta integración permite comprobar que UFW no solo bloquea el tráfico no deseado, sino que también permite conexiones legítimas y funcionales bajo condiciones seguras.</p>
+
+
+
     <h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Tecnologías utilizadas:</h3>
+    <!-- Logos en fila arriba -->
+<div class="flex gap-4 mb-4">
+  <img src="https://rafaelmperez.github.io/assets/img/tecnologiaubuntu.png" alt="Ubuntu" class="w-8 h-8">
+  <img src="https://rafaelmperez.github.io/assets/img/tecnologiaparrot.png" alt="Parrot OS" class="w-8 h-8">
+  <img src="https://rafaelmperez.github.io/assets/img/tecnologia bash.png" alt="Bash" class="w-8 h-8">
+  <img src="https://rafaelmperez.github.io/assets/img/ufwtecnologia.png" alt="UFW" class="w-8 h-8">
+  <img src="https://rafaelmperez.github.io/assets/img/sshtecnologia.png" alt="OpenSSH" class="w-8 h-8">
+</div>
 <ul class="list-disc list-inside text-black">
-      <li><strong>Ubuntu 24.04 LTS</strong>  Sistema operativo del servidor protegido.</li>
-      <li><strong>Parrot OS</strong> Máquina cliente utilizada para pruebas de acceso remoto.</li>
+      <li><strong>Linux (Ubuntu 24.04 LTS)</strong>  Sistema operativo del servidor protegido.</li>
+      <li><strong>Parrot OS</strong> Máquina cliente utilizada para pruebas de acceso remoto</li>
       <li><strong>Bash</strong> Utilizada para ejecutar comandos y scripts de configuración.</li>
       <li><strong>UFW (Uncomplicated Firewall)</strong> Herramienta principal para definir reglas de tráfico.</li>
       <li><strong>OpenSSH</strong> Protocolo utilizado para validar el acceso remoto seguro.</li>
     </ul>
 
     <h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Pasos realizados:</h3>
-<ol class="list-decimal list-inside text-black space-y-8">
+<ol class="list-decimal text-black space-y-8">
   <li>
     <p class="mb-2"><strong>Actualización del sistema e instalación de UFW:</p></strong> 
     <p class="text-black mb6">
@@ -135,7 +147,7 @@
   </li>
   <li>
   <p class="mb-2"><strong>Pruebas de acceso:</strong></p>
-  <img src="https://rafaelmperez.github.io/assets/img/nmap.png" alt="Activar el firewall" style="width:100%; max-width:900px;" class="rounded-lg shadow-md">
+  <img src="https://rafaelmperez.github.io/assets/img/nmap.png" alt="Activar el firewall" style="width:80%; max-width:900px;" class="rounded-lg shadow-md">
 
 <p class="text-black mb-6">
     Una vez activado UFW, es fundamental realizar pruebas desde otro equipo o máquina virtual para verificar que las reglas están funcionando correctamente. Estas pruebas permiten validar que el tráfico no autorizado está siendo bloqueado y que los servicios permitidos siguen accesibles.
@@ -156,11 +168,20 @@
   </p>
 </li>
 
-<p class="mb-2"><strong>Acceso remoto controlado (SSH):</strong></p>
-  <img src="https://rafaelmperez.github.io/assets/img/sshconnect.png" alt="Activar el firewall" style="width:100%; max-width:900px;" class="rounded-lg shadow-md">
-<p class="text-black mb-6">
-  Como parte de la validación del firewall, se configuró y probó el acceso remoto mediante SSH desde una máquina virtual con Parrot OS hacia el servidor Ubuntu. Esta conexión permite administrar el servidor de forma segura, siempre que el puerto 22 esté habilitado y las reglas de UFW lo permitan.
-</p>
+<ol class="list-decimal list-outside pl-6 text-black space-y-8" start="7">
+  <li>
+    <p class="mb-2"><strong>Acceso remoto controlado (SSH):</strong></p>
+      <img src="https://rafaelmperez.github.io/assets/img/sshconnect.png" alt="Acceso SSH" style="width:80%; max-width:900px;" class="rounded-lg shadow-md">
+    <p class="text-black mb-6 leading-relaxed">
+      Como parte de la validación del firewall, se configuró y probó el acceso remoto mediante SSH 
+      desde una máquina virtual con Parrot OS hacia el servidor Ubuntu. 
+      Esta conexión permite administrar el servidor de forma segura, siempre que el puerto 22 
+      esté habilitado y las reglas de UFW lo permitan.
+    </p>
+  </li>
+</ol>
+
+
 <ul class="list-disc list-inside text-black mb-4">
   <li>Se creó el usuario <code class="bg-gray-200 px-1 rounded">world</code> en el servidor Ubuntu.</li>
   <li>Se verificó que el servicio SSH estuviera activo y escuchando en el puerto 22.</li>
@@ -183,27 +204,60 @@ GSSAPIAuthentication no</code>
 
 
 </ol>
-<div class="p-4 mb-4">
-  <h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Conclusiones y Recomendaciones Finales:</h3>
-  <p class="text-black mb6">
+<div class="p-4 sm:p-6 mt-16 mb-6 bg-white rounded-lg shadow-md">
+  <h3 class="text-lg sm:text-xl font-semibold mt-6 mb-2 font-montserrat">
+    Conclusiones y Recomendaciones Finales:
+  </h3>
+
+
+  <p class="text-black mb-4 leading-relaxed text-sm sm:text-base">
     La implementación de UFW como firewall local en sistemas Linux —especialmente sobre plataformas modernas como Ubuntu 24.04 LTS— representa una medida esencial para reforzar la seguridad perimetral de servidores. Al establecer políticas restrictivas por defecto y permitir únicamente los servicios necesarios, se reduce significativamente la superficie de ataque y se mejora el control sobre el tráfico de red.
   </p>
-  <ul class="list-disc list-inside mb-2">
-    <li><strong>Auditorías periódicas:</strong> Revisa las reglas de UFW regularmente mediante comandos como <code>ufw status numbered</code> para garantizar que estén alineadas con los servicios activos del sistema.</li>
-    <li><strong>Registro de eventos:</strong> Considera integrar UFW con herramientas como <code class="bg-gray-200 px-1 rounded">logwatch</code>, <code class="bg-gray-200 px-1 rounded">fail2ban</code> o el sistema de <code class="bg-gray-200 px-1 rounded">journald</code></code> para detectar y mitigar intentos de acceso no autorizados.</li>
-    <li><strong>Seguridad por capas:</strong> Refuerza el firewall con autenticación por clave SSH, desactivación de servicios innecesarios mediante <code class="bg-gray-200 px-1 rounded">systemctl</code>, uso de puertos alternativos y aplicación de actualizaciones automáticas con <code class="bg-gray-200 px-1 rounded">unattended-upgrades</code> o Snap.</li>
-    <li><strong>Pruebas de conectividad:</strong> Después de cada cambio en las reglas, realiza pruebas desde clientes externos utilizando herramientas como <code class="bg-gray-200 px-1 rounded">nmap</code>, <code class="bg-gray-200 px-1 rounded">telnet</code> o <code class="bg-gray-200 px-1 rounded">curl</code> para verificar que los servicios autorizados siguen accesibles.</li>
+
+  <ul class="list-disc list-inside mb-4 space-y-2 text-sm sm:text-base leading-relaxed">
+    <li>
+      <strong>Auditorías periódicas:</strong> Revisa las reglas de UFW regularmente mediante comandos como 
+      <code class="bg-gray-200 px-1 rounded">ufw status numbered</code> para garantizar que estén alineadas con los servicios activos del sistema.
+    </li>
+    <li>
+      <strong>Registro de eventos:</strong> Considera integrar UFW con herramientas como 
+      <code class="bg-gray-200 px-1 rounded">logwatch</code>, 
+      <code class="bg-gray-200 px-1 rounded">fail2ban</code> o el sistema de 
+      <code class="bg-gray-200 px-1 rounded">journald</code> para detectar y mitigar intentos de acceso no autorizados.
+    </li>
+    <li>
+      <strong>Seguridad por capas:</strong> Refuerza el firewall con autenticación por clave SSH, desactivación de servicios innecesarios mediante 
+      <code class="bg-gray-200 px-1 rounded">systemctl</code>, uso de puertos alternativos y aplicación de actualizaciones automáticas con 
+      <code class="bg-gray-200 px-1 rounded">unattended-upgrades</code> o Snap.
+    </li>
+    <li>
+      <strong>Pruebas de conectividad:</strong> Después de cada cambio en las reglas, realiza pruebas desde clientes externos utilizando herramientas como 
+      <code class="bg-gray-200 px-1 rounded">nmap</code>, 
+      <code class="bg-gray-200 px-1 rounded">telnet</code> o 
+      <code class="bg-gray-200 px-1 rounded">curl</code> para verificar que los servicios autorizados siguen accesibles.
+    </li>
   </ul>
-  <p>
-    Estas recomendaciones fortalecen la postura de seguridad del sistema y aseguran que el firewall no sea solo una barrera inicial, sino parte de una estrategia integral, escalable y sostenible de protección, especialmente en entornos con soporte extendido como Ubuntu 24.04 LTS.
-  </p>
+<p class="text-black leading-relaxed text-sm sm:text-base">
+  Estas recomendaciones fortalecen la postura de seguridad del sistema y aseguran que el firewall no sea solo una barrera inicial, 
+  sino parte de una estrategia integral, escalable y sostenible de protección, especialmente en entornos con soporte extendido como Ubuntu 24.04 LTS.
+</p>
 </div>
 
 
 
+</div>
+
+
+
+<div class="flex items-center">
+  <a href="siguiente_reto.html" class="text-sm flex items-center ml-auto text-black">
+    Ver siguiente práctica técnica <span class="ml-1">→</span>
+  </a>
+</div>
 
 
   </main>
+  
 
  <footer class="text-center py-6 mt-16 font-montserrat" style="background-color: #000; color: rgb(255, 204, 0);">
   <p>© 2025 Rafael M. Pérez - Portafolio Sysadmin Junior</p>
