@@ -28,7 +28,18 @@
   tailwind.config = {
     theme: { ... }
   }
-</script>
+module.exports = {
+  content: ["./**/*.html"],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
+      }
+    }
+  },
+  plugins: [],
+}
 
 </head>
 
