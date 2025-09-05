@@ -3,12 +3,16 @@
 <head>
     <link rel="icon" href="favicon.png" type="image/x-icon">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Implementación y Activación UFW | Portafolio Rafael M.Pérez | Sysadmin Junior</title>
 
-  <!-- Fuentes Google -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<!-- Google Fonts optimizado -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!-- TailwindCSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -25,16 +29,23 @@
     }
   </script>
 </head>
+
 <body class="bg-gray-100 text-gray-800 font-sans">
 
   <!-- Header -->
-<header class="p-6 shadow-lg font-montserrat" style="background-color: #000; color: rgb(255, 204, 0);">
-  <div class="max-w-6xl mx-auto flex justify-between items-center">
-    <h1 class="text-2xl font-bold">Portafolio Rafael M.Pérez | Sysadmin Junior</h1>
+<header class="p-6 shadow-lg font-montserrat bg-black text-yellow-400">
+  <div class="max-w-6xl mx-auto flex items-center justify-between">
+    <!-- Título -->
+    <h1 class="text-2xl font-bold">
+      Portafolio Rafael M.Pérez | Sysadmin Junior
+    </h1>
 
-    </a>
+    <!-- Imagen pequeña a la derecha -->
+<i class="fas fa-shield-alt" style="color: rgb(255, 204, 0); font-size: 24px;"></i>
+
   </div>
 </header>
+
 <!-- Contenido del microproyecto -->
  
 <main class="w-full max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
@@ -45,7 +56,7 @@
 
   <!-- Logo insertado -->
   <div class="flex justify-center mb-6">
-<img src="https://rafaelmperez.github.io/assets/img/logoufw.jpg" alt="Logo UFW" style="width: 50%; max-width: 800px; height: auto; display: block; margin: 0 auto 1.5rem;">
+<img src="https://rafaelmperez.github.io/assets/img/logoufw.webp" alt="Logo UFW" style="width: 50%; max-width: 800px; height: auto; display: block; margin: 0 auto 1.5rem;">
 </div>
 
   </div>
@@ -60,11 +71,11 @@
     <h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Tecnologías utilizadas:</h3>
     <!-- Logos en fila arriba -->
 <div class="flex gap-4 mb-4">
-  <img src="https://rafaelmperez.github.io/assets/img/tecnologiaubuntu.png" alt="Ubuntu" class="w-8 h-8">
-  <img src="https://rafaelmperez.github.io/assets/img/tecnologiaparrot.png" alt="Parrot OS" class="w-8 h-8">
-  <img src="https://rafaelmperez.github.io/assets/img/tecnologia bash.png" alt="Bash" class="w-8 h-8">
-  <img src="https://rafaelmperez.github.io/assets/img/ufwtecnologia.png" alt="UFW" class="w-8 h-8">
-  <img src="https://rafaelmperez.github.io/assets/img/sshtecnologia.png" alt="OpenSSH" class="w-8 h-8">
+  <img src="https://rafaelmperez.github.io/assets/img/tecnologiaubuntu.webp" alt="Ubuntu" class="w-8 h-8">
+  <img src="https://rafaelmperez.github.io/assets/img/tecnologiaparrot.webp" alt="Parrot OS" class="w-8 h-8">
+  <img src="https://rafaelmperez.github.io/assets/img/tecnologia bash.webp" alt="Bash" class="w-8 h-8">
+  <img src="https://rafaelmperez.github.io/assets/img/ufwtecnologia.webp" alt="UFW" class="w-8 h-8">
+  <img src="https://rafaelmperez.github.io/assets/img/sshtecnologia.webp" alt="OpenSSH" class="w-8 h-8">
 </div>
 <ul class="list-disc list-inside text-black">
       <li><strong>Linux (Ubuntu 24.04 LTS)</strong>  Sistema operativo del servidor protegido.</li>
@@ -121,7 +132,7 @@
 
   <li>
     <p class="mb-2"></p><strong>Activar el firewall:</p></strong> 
-<img src="https://rafaelmperez.github.io/assets/img/activarufw.jpg" alt="Activar el firewall" style="width:100%; max-width:900px;" class="rounded-lg shadow-md">
+<img src="https://rafaelmperez.github.io/assets/img/activarufw.webp" alt="Activar el firewall" style="width:100%; max-width:900px;" class="rounded-lg shadow-md">
     <p class="text-black mb6">
       Una vez definidas las políticas por defecto y permitidos los accesos necesarios (como SSH), se procede a activar el firewall. Este paso aplica todas las reglas configuradas y comienza a proteger el sistema de forma efectiva:
     </p>
@@ -149,7 +160,7 @@
   </li>
   <li>
   <p class="mb-2"><strong>Pruebas de acceso:</strong></p>
-  <img src="https://rafaelmperez.github.io/assets/img/nmap.png" alt="Activar el firewall" style="width:80%; max-width:900px;" class="rounded-lg shadow-md">
+  <img src="https://rafaelmperez.github.io/assets/img/nmap.webp" alt="Activar el firewall" style="width:80%; max-width:900px;" class="rounded-lg shadow-md">
 
 <p class="text-black mb-6">
     Una vez activado UFW, es fundamental realizar pruebas desde otro equipo o máquina virtual para verificar que las reglas están funcionando correctamente. Estas pruebas permiten validar que el tráfico no autorizado está siendo bloqueado y que los servicios permitidos siguen accesibles.
@@ -173,7 +184,7 @@
 <ol class="list-decimal list-outside pl-6 text-black space-y-8" start="7">
   <li>
     <p class="mb-2"><strong>Acceso remoto controlado (SSH):</strong></p>
-      <img src="https://rafaelmperez.github.io/assets/img/sshconnect.png" alt="Acceso SSH" style="width:80%; max-width:900px;" class="rounded-lg shadow-md">
+      <img src="https://rafaelmperez.github.io/assets/img/sshconnect.webp" alt="Acceso SSH" style="width:80%; max-width:900px;" class="rounded-lg shadow-md">
     <p class="text-black mb-6 leading-relaxed">
       Como parte de la validación del firewall, se configuró y probó el acceso remoto mediante SSH 
       desde una máquina virtual con Parrot OS hacia el servidor Ubuntu. 
@@ -253,7 +264,7 @@ GSSAPIAuthentication no</code>
 
 <div class="flex items-center">
   <a href="siguiente_reto.html" class="text-sm flex items-center ml-auto text-black">
-    Ver siguiente práctica técnica <span class="ml-1">→</span>
+    Siguiente práctica técnica <span class="ml-1">→</span>
   </a>
 </div>
 
