@@ -52,36 +52,42 @@
 <!-- Contenido del microproyecto -->
  
 <main class="w-full max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
-<h2 class="text-2xl font-bold mb-6 font-montserrat underline underline-offset-4">
-  Implementación y Validación de UFW como Firewall Local en Linux
-</h2>
-
+  <h2 class="text-2xl font-bold mb-6 font-montserrat underline underline-offset-4">
+    Implementación y Validación de UFW como Firewall Local en Linux
+  </h2>
 
   <!-- Logo insertado -->
   <div class="flex justify-center mb-6">
-<img src="https://rafaelmperez.github.io/assets/img/logoufw.webp" alt="Logo UFW" style="width: 50%; max-width: 800px; height: auto; display: block; margin: 0 auto 1.5rem;">
-</div>
+    <img src="https://rafaelmperez.github.io/assets/img/logoufw.webp" alt="Logo UFW" class="w-1/2 max-w-[800px] h-auto mx-auto mb-6">
+  </div>
 
+  <p class="text-black mb-6">
+    Este microproyecto aborda la necesidad de fortificar la seguridad de sistemas Linux mediante la activación y configuración de un firewall local. Muchos entornos operan sin restricciones de tráfico entrante, lo que representa un riesgo significativo. El objetivo es aplicar UFW (Uncomplicated Firewall) para establecer políticas de acceso claras, minimizar la superficie de ataque y garantizar que solo los servicios autorizados estén expuestos.
+  </p>
+
+  <p class="text-black mb-6">
+    Como parte del proceso de validación, se ha incluido la configuración y prueba de acceso remoto mediante SSH desde una máquina cliente con Parrot OS. Esta integración permite comprobar que UFW no solo bloquea el tráfico no deseado, sino que también permite conexiones legítimas y funcionales bajo condiciones seguras.
+  </p>
+
+  <h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Tecnologías utilizadas:</h3>
+
+  <div class="flex gap-4 mb-4">
+    <img src="https://rafaelmperez.github.io/assets/img/tecnologiaubuntu.webp" alt="Ubuntu" class="w-12 h-12">
+    <img src="https://rafaelmperez.github.io/assets/img/tecnologiaparrot.webp" alt="Parrot OS" class="w-12 h-12">
+    <img src="https://rafaelmperez.github.io/assets/img/tecnologia bash.webp" alt="Bash" class="w-12 h-12">
+    <img src="https://rafaelmperez.github.io/assets/img/ufwtecnologia.webp" alt="UFW" class="w-12 h-12">
+    <img src="https://rafaelmperez.github.io/assets/img/sshtecnologia.webp" alt="OpenSSH" class="w-12 h-12">
   </div>
 
   <ul class="list-disc list-inside text-black mb-6">
-    Este microproyecto aborda la necesidad de fortificar la seguridad de sistemas Linux mediante la activación y configuración de un firewall local. Muchos entornos operan sin restricciones de tráfico entrante, lo que representa un riesgo significativo. El objetivo es aplicar UFW (Uncomplicated Firewall) para establecer políticas de acceso claras, minimizar la superficie de ataque y garantizar que solo los servicios autorizados estén expuestos.
+    <li><strong>Linux (Ubuntu 24.04 LTS):</strong> Sistema operativo del servidor protegido.</li>
+    <li><strong>Parrot OS:</strong> Máquina cliente utilizada para pruebas de acceso remoto.</li>
+    <li><strong>Bash:</strong> Utilizada para ejecutar comandos y scripts de configuración.</li>
+    <li><strong>UFW (Uncomplicated Firewall):</strong> Herramienta principal para definir reglas de tráfico.</li>
+    <li><strong>OpenSSH:</strong> Protocolo utilizado para validar el acceso remoto seguro.</li>
+  </ul>
+</main>
 
-    Como parte del proceso de validación, se ha incluido la configuración y prueba de acceso remoto mediante SSH desde una máquina cliente con Parrot OS. Esta integración permite comprobar que UFW no solo bloquea el tráfico no deseado, sino que también permite conexiones legítimas y funcionales bajo condiciones seguras.</p>
-
-
-
-
-<h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Tecnologías utilizadas:</h3>
-
-<!-- Logos en fila arriba -->
-<div class="flex gap-4 mb-4">
-  <img src="https://rafaelmperez.github.io/assets/img/tecnologiaubuntu.webp" alt="Ubuntu" class="w-12 h-12">
-  <img src="https://rafaelmperez.github.io/assets/img/tecnologiaparrot.webp" alt="Parrot OS" class="w-12 h-12">
-  <img src="https://rafaelmperez.github.io/assets/img/tecnologia bash.webp" alt="Bash" class="w-12 h-12">
-  <img src="https://rafaelmperez.github.io/assets/img/ufwtecnologia.webp" alt="UFW" class="w-12 h-12">
-  <img src="https://rafaelmperez.github.io/assets/img/sshtecnologia.webp" alt="OpenSSH" class="w-12 h-12">
-</div>
 
 <ul class="list-disc list-inside text-black">
   <!-- contenido de la lista -->
