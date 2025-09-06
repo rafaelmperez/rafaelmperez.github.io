@@ -65,13 +65,23 @@
 
 
     <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1T24E1NDR"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-J1T24E1NDR');
-  </script>
+<script>
+  window.addEventListener('scroll', function () {
+    if (!window.gtmLoaded) {
+      window.gtmLoaded = true;
+      const gtmScript = document.createElement('script');
+      gtmScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-J1T24E1NDR';
+      gtmScript.async = true;
+      document.head.appendChild(gtmScript);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-J1T24E1NDR');
+    }
+  });
+</script>
+
 <body>
   <!-- Tu HTML aquí -->
 
@@ -2064,6 +2074,7 @@ Implementé un sistema de detección de intrusos en un servidor Linux que permit
   });
 </script>
 </html>
+
 
 
 
