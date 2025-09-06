@@ -572,9 +572,10 @@ color: rgb(255,204, 0);}
   cursor: pointer;
 }
 
-.language-switcher .flag:hover {
-  transform: scale(1.1); /* Efecto hover */
+.language-switcher {
+  display: none;
 }
+
 
 
 header {
@@ -1267,6 +1268,8 @@ a[href^="mailto:"] {
   box-sizing: border-box;
 }
 
+  
+
 #contacto .card:hover {
   transition: none !important;
   transform: none !important;
@@ -1443,7 +1446,7 @@ app.use(helmet.contentSecurityPolicy({
 
 <body>
 
-  <div class="language-switcher">
+<div class="language-switcher" style="display: none;">
     <a href="/fr/index.html">
       <img src="https://rafaelmperez.github.io/frflags.webp" alt="Drapeau de la France" class="flag"> Français
     </a>
@@ -2047,6 +2050,7 @@ Implementé un sistema de detección de intrusos en un servidor Linux que permit
   });
 </script>
 </html>
+
 
 
 
