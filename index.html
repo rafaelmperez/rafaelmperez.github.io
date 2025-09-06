@@ -82,6 +82,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
   <style>
   /* Todo tu CSS aquí... */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .menu {
+    display: block;
+  }
+}
+
+/* Teléfonos pequeños */
+@media (max-width: 480px) { ... }
+
+/* Tablets en vertical */
+@media (min-width: 481px) and (max-width: 768px) { ... }
+
+/* Tablets en horizontal y pantallas medianas */
+@media (min-width: 769px) and (max-width: 1024px) { ... }
+
+.container {
+  width: 90%;
+  padding: 2vw;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+}
 
 
   /* RESET */
@@ -1997,3 +2034,5 @@ Implementé un sistema de detección de intrusos en un servidor Linux que permit
   });
 </script>
 </html>
+
+
