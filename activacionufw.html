@@ -70,20 +70,46 @@
 
 
   <!-- Logo insertado -->
-  <div class="flex justify-center mb-6">
-<img src="https://rafaelmperez.github.io/assets/img/logoufw.v1.webp" alt="Logo UFW" style="width: 50%; max-width: 800px; height: auto; display: block; margin: 0 auto 1.5rem;">
+<div class="flex justify-center mb-6">
+  <img src="https://rafaelmperez.github.io/assets/img/logoufw.v1.webp" 
+       alt="Logo UFW" 
+       style="width: 50%; max-width: 800px; height: auto; display: block; margin: 0 auto 1.5rem;">
 </div>
-<h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Desafío:</h3>
-  </div>
 
-  <ul class="list-disc list-inside text-black mb-6">
-    Este microproyecto aborda la necesidad de fortificar la seguridad de sistemas Linux mediante la activación y configuración de un firewall local. Muchos entornos operan sin restricciones de tráfico entrante, lo que representa un riesgo significativo. El objetivo es aplicar UFW (Uncomplicated Firewall) para establecer políticas de acceso claras, minimizar la superficie de ataque y garantizar que solo los servicios autorizados estén expuestos.
+<!-- 📑 Índice del proyecto (navegador horizontal) -->
+<nav class="flex flex-wrap justify-center gap-4 bg-white shadow-md rounded-lg p-3 mb-8">
+  <a href="#desafio" class="px-3 py-1 text-sm sm:text-base font-medium text-gray-700 hover:text-yellow-500 transition-colors">
+    Desafío
+  </a>
+  <a href="#tecnologias utilizadas" class="px-3 py-1 text-sm sm:text-base font-medium text-gray-700 hover:text-yellow-500 transition-colors">
+    Tecnologías utilizadas
+  </a>
+  <a href="#pasos realizados" class="px-3 py-1 text-sm sm:text-base font-medium text-gray-700 hover:text-yellow-500 transition-colors">
+    Pasos realizados
+  </a>
+  <a href="#resultado" class="px-3 py-1 text-sm sm:text-base font-medium text-gray-700 hover:text-yellow-500 transition-colors">
+    Resultado
+  </a>
+  <a href="#conclusiones" class="px-3 py-1 text-sm sm:text-base font-medium text-gray-700 hover:text-yellow-500 transition-colors">
+    Conclusiones
+  </a>
+</nav>
 
-    Como parte del proceso de validación, se ha incluido la configuración y prueba de acceso remoto mediante SSH desde una máquina cliente con Parrot OS. Esta integración permite comprobar que UFW no solo bloquea el tráfico no deseado, sino que también permite conexiones legítimas y funcionales bajo condiciones seguras.</p>
 
 
+<!-- Sección Desafío -->
+<h3 id="desafio" class="text-xl font-semibold mt-8 mb-4 font-montserrat">Desafío:</h3>
+
+<ul class="list-disc list-inside text-black mb-6">
+  Este microproyecto aborda la necesidad de fortificar la seguridad de sistemas Linux mediante la activación y configuración de un firewall local. Muchos entornos operan sin restricciones de tráfico entrante, lo que representa un riesgo significativo. El objetivo es aplicar UFW (Uncomplicated Firewall) para establecer políticas de acceso claras, minimizar la superficie de ataque y garantizar que solo los servicios autorizados estén expuestos.
+
+  Como parte del proceso de validación, se ha incluido la configuración y prueba de acceso remoto mediante SSH desde una máquina cliente con Parrot OS. Esta integración permite comprobar que UFW no solo bloquea el tráfico no deseado, sino que también permite conexiones legítimas y funcionales bajo condiciones seguras.
+</ul>
 
 
+<!-- Sección Tecnologías -->
+<h3 id="tecnologias utilizadas" class="text-xl font-semibold mt-8 mb-4 font-montserrat scroll-mt-24">
+</h3>
 <h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Tecnologías utilizadas:</h3>
 
 <!-- Logos en fila arriba -->
@@ -110,6 +136,10 @@
       <li><strong>OpenSSH</strong> Protocolo utilizado para validar el acceso remoto seguro.</li>
     </ul>
 
+    <!-- Sección Pasos -->
+<h3 id="pasos realizados" class="text-xl font-semibold mt-8 mb-4 font-montserrat scroll-mt-24">
+  Pasos realizados:
+</h3>
     <h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Pasos realizados:</h3>
 <ol class="list-decimal text-black space-y-8">
   <li>
@@ -242,6 +272,11 @@ GSSAPIAuthentication no</code>
 
 
 </ol>
+
+
+<!-- Sección Conclusión -->
+<h3 id="conclusiones" class="text-xl font-semibold mt-8 mb-4 font-montserrat scroll-mt-24">
+</h3>
 <div class="p-4 sm:p-6 mt-16 mb-6 bg-white rounded-lg shadow-md">
   <h3 class="text-lg sm:text-xl font-semibold mt-6 mb-2 font-montserrat">
     Conclusiones y Recomendaciones Finales:
