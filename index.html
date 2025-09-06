@@ -1451,12 +1451,29 @@ app.use(helmet.contentSecurityPolicy({
 
 <body>
 
-<div class="language-switcher" style="display: none;">
+  <!-- Contenido de tu página -->
+  <div class="language-switcher">
     <a href="/fr/index.html">
-      <img src="https://rafaelmperez.github.io/frflags.webp" alt="Drapeau de la France" class="flag"> Français
+      <img src="https://rafaelmperez.github.io/frflags.webp" alt="Français" class="flag"> Français
     </a>
   </div>
-</body>
+
+  <!-- ✅ Aquí va tu script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const switcher = document.querySelector('.language-switcher');
+      if (switcher) {
+        switcher.style.display = 'block';
+      }
+    });
+
+    if (navigator.userAgent.includes('Instagram')) {
+  // Opcional: mostrar un mensaje o redirigir
+}
+
+  </script>
+
+  
 
 
 
@@ -2055,6 +2072,7 @@ Implementé un sistema de detección de intrusos en un servidor Linux que permit
   });
 </script>
 </html>
+
 
 
 
