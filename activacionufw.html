@@ -116,13 +116,13 @@
 
 
 
-<!-- Sección Desafío -->
-<h3 id="desafio" class="text-xl font-semibold mt-8 mb-4 font-montserrat">Desafío:</h3>
-
 <ul class="list-disc list-inside text-black mb-6">
-  Este ejercicio técnico aborda la necesidad de fortificar la seguridad de sistemas Linux mediante la activación y configuración de un firewall local. Muchos entornos operan sin restricciones de tráfico entrante, lo que representa un riesgo significativo. El objetivo es aplicar UFW (Uncomplicated Firewall) para establecer políticas de acceso claras, minimizar la superficie de ataque y garantizar que solo los servicios autorizados estén expuestos.
-
-  Como parte del proceso de validación, se ha incluido la configuración y prueba de acceso remoto mediante SSH desde una máquina cliente con Parrot OS. Esta integración permite comprobar que UFW no solo bloquea el tráfico no deseado, sino que también permite conexiones legítimas y funcionales bajo condiciones seguras.
+  <li>
+    Este ejercicio técnico aborda la necesidad de fortificar la seguridad de sistemas Linux mediante la activación y configuración de un firewall local. Muchos entornos operan sin restricciones de tráfico entrante, lo que representa un riesgo significativo. El objetivo es aplicar UFW (Uncomplicated Firewall) para establecer políticas de acceso claras, minimizar la superficie de ataque y garantizar que solo los servicios autorizados estén expuestos.
+  </li>
+  <li>
+    Como parte del proceso de validación, se ha incluido la configuración y prueba de acceso remoto mediante SSH desde una máquina cliente con Parrot OS. Esta integración permite comprobar que UFW no solo bloquea el tráfico no deseado, sino que también permite conexiones legítimas y funcionales bajo condiciones seguras.
+  </li>
 </ul>
 
 
@@ -146,10 +146,8 @@
 
 
 <ul class="list-disc list-inside text-black">
-  <!-- contenido de la lista -->
-</ul>
       <li><strong>Linux (Ubuntu 24.04 LTS)</strong>  Sistema operativo del servidor protegido.</li>
-      <li><strong>Parrot OS</strong> Máquina cliente utilizada para pruebas de acceso remoto.</li>
+      <li><strong>Parrot OS</strong> Máquina cliente utilizada para pruebas de acceso remoto</li>
       <li><strong>Bash</strong> Utilizada para ejecutar comandos y scripts de configuración.</li>
       <li><strong>UFW (Uncomplicated Firewall)</strong> Herramienta principal para definir reglas de tráfico.</li>
       <li><strong>OpenSSH</strong> Protocolo utilizado para validar el acceso remoto seguro.</li>
@@ -161,14 +159,14 @@
     <h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Pasos realizados:</h3>
 <ol class="list-decimal text-black space-y-8">
   <li>
-    <p class="mb-2"><strong>Actualización del sistema e instalación de UFW:</p></strong> 
+<p class="mb-2"><strong>Actualización del sistema e instalación de UFW:</strong></p>
     <p class="text-black mb6">
       Para comenzar, se ejecutó la actualización del sistema con el comando <code class="bg-gray-200 px-1 rounded">sudo apt update && sudo apt upgrade -y</code>, lo que garantiza que todos los paquetes estén en su versión más reciente. A continuación, se procedió con la instalación de <strong>UFW (Uncomplicated Firewall)</strong> mediante <code class="bg-gray-200 px-1 rounded">sudo apt install ufw -y</code>. Esta herramienta permite gestionar reglas de firewall de forma sencilla y efectiva, ideal para entornos Linux donde se requiere control de tráfico entrante y saliente.
     </p>
   </li>
 
   <li>
-    <p class="mb-2"></p><strong>Establecimiento de políticas por defecto:</p></strong> 
+    <p class="mb-2"><strong>Establecimiento de políticas por defecto:</strong></p> 
     <p class="text-black mb6">
       Tras instalar UFW, se verificó su correcta instalación ejecutando <code class="bg-gray-200 px-1 rounded">ufw --version</code>. Este comando muestra la versión instalada y confirma que el firewall está disponible en el sistema. Si se presenta algún error o advertencia, se recomienda revisar los permisos, el estado del paquete o reinstalarlo.
     </p>
@@ -185,7 +183,7 @@
   </li>
 
   <li>
-    <p class="mb-2"></p><strong>Permitir acceso SSH:</p></strong> 
+    <p class="mb-2"><strong>Permitir acceso SSH:</strong></p>
     <p class="text-black mb6">
       Antes de activar UFW, es fundamental permitir el acceso por SSH si estás conectado remotamente al servidor. De lo contrario, podrías bloquear tu propia conexión y perder el acceso. Para habilitar el puerto estándar de SSH (22), se ejecuta el siguiente comando:
     </p>
@@ -204,7 +202,7 @@
   </li>
 
   <li>
-    <p class="mb-2"></p><strong>Activar el firewall:</p></strong> 
+    <p class="mb-2"><strong>Activar el firewall:</strong></p> 
 <img src="https://rafaelmperez.github.io/assets/img/activarufw.v1.webp" alt="Activar el firewall" style="width:100%; max-width:900px;" class="rounded-lg shadow-md">
     <p class="text-black mb6">
       Una vez definidas las políticas por defecto y permitidos los accesos necesarios (como SSH), se procede a activar el firewall. Este paso aplica todas las reglas configuradas y comienza a proteger el sistema de forma efectiva:
@@ -218,7 +216,7 @@
   </li>
 
   <li>
-    <p class="mb-2"></p><strong>Verificar el estado y las reglas:</p></strong> 
+    <p class="mb-2"><strong>Verificar el estado y las reglas:</strong></p> 
 <img src="https://rafaelmperez.github.io/assets/img/verificarestado.v1.webp" alt="Activar el firewall" style="width:100%; max-width:900px;" class="rounded-lg shadow-md">
     <p class="text-black mb6">
       Para confirmar que UFW está activo y que las reglas se han aplicado correctamente, se utiliza el siguiente comando. Este muestra el estado actual del firewall, las políticas por defecto y las reglas específicas habilitadas:
