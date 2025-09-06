@@ -35,6 +35,10 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
   media="print" 
   onload="this.media='all'">
+<noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</noscript>
+
 
 
   <!-- Font Awesome para iconos -->
@@ -1434,12 +1438,23 @@ app.use(helmet.contentSecurityPolicy({
   
 
 </head>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  
+<link 
+  rel="preload" 
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Fira+Code&display=swap" 
+  as="style" 
+  onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link 
+    rel="stylesheet" 
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Fira+Code&display=swap">
+</noscript>
+
 
 
 </script>
 </head>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
 
 <body>
   <div class="language-switcher">
@@ -2044,6 +2059,7 @@ Implementé un sistema de detección de intrusos en un servidor Linux que permit
   });
 </script>
 </html>
+
 
 
 
