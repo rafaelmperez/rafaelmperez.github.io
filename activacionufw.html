@@ -43,7 +43,25 @@
   }
 </script>
 
+
 </head>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'nav-bg': '#000000',          // fondo negro
+          'nav-text': 'rgb(255, 204, 0)', // texto amarillo vibrante
+          'nav-hover': '#FFB800'        // color hover amarillo más oscuro
+        }
+      }
+    }
+  }
+</script>
+
+
 
 <body class="bg-gray-100 text-gray-800 font-sans">
 
@@ -77,23 +95,24 @@
 </div>
 
 <!-- 📑 Índice del proyecto (navegador horizontal) -->
-<nav class="flex flex-wrap justify-center gap-4 bg-white shadow-md rounded-lg p-3 mb-8">
-  <a href="#desafio" class="px-3 py-1 text-sm sm:text-base font-medium text-gray-700 hover:text-yellow-500 transition-colors">
+<nav class="flex flex-wrap justify-center gap-4 bg-nav-bg shadow-md rounded-lg p-3 mb-8">
+  <a href="#desafio" class="px-3 py-1 text-sm sm:text-base font-medium text-nav-text hover:text-nav-hover transition-colors">
     Desafío
   </a>
-  <a href="#tecnologias utilizadas" class="px-3 py-1 text-sm sm:text-base font-medium text-gray-700 hover:text-yellow-500 transition-colors">
+  <a href="#tecnologias utilizadas" class="px-3 py-1 text-sm sm:text-base font-medium text-nav-text hover:text-nav-hover transition-colors">
     Tecnologías utilizadas
   </a>
-  <a href="#pasos realizados" class="px-3 py-1 text-sm sm:text-base font-medium text-gray-700 hover:text-yellow-500 transition-colors">
+  <a href="#pasos realizados" class="px-3 py-1 text-sm sm:text-base font-medium text-nav-text hover:text-nav-hover transition-colors">
     Pasos realizados
   </a>
-  <a href="#resultado" class="px-3 py-1 text-sm sm:text-base font-medium text-gray-700 hover:text-yellow-500 transition-colors">
+  <a href="#resultado" class="px-3 py-1 text-sm sm:text-base font-medium text-nav-text hover:text-nav-hover transition-colors">
     Resultado
   </a>
-  <a href="#conclusiones" class="px-3 py-1 text-sm sm:text-base font-medium text-gray-700 hover:text-yellow-500 transition-colors">
+  <a href="#conclusiones" class="px-3 py-1 text-sm sm:text-base font-medium text-nav-text hover:text-nav-hover transition-colors">
     Conclusiones
   </a>
 </nav>
+
 
 
 
@@ -101,7 +120,7 @@
 <h3 id="desafio" class="text-xl font-semibold mt-8 mb-4 font-montserrat">Desafío:</h3>
 
 <ul class="list-disc list-inside text-black mb-6">
-  Este microproyecto aborda la necesidad de fortificar la seguridad de sistemas Linux mediante la activación y configuración de un firewall local. Muchos entornos operan sin restricciones de tráfico entrante, lo que representa un riesgo significativo. El objetivo es aplicar UFW (Uncomplicated Firewall) para establecer políticas de acceso claras, minimizar la superficie de ataque y garantizar que solo los servicios autorizados estén expuestos.
+  Este ejercicio técnico aborda la necesidad de fortificar la seguridad de sistemas Linux mediante la activación y configuración de un firewall local. Muchos entornos operan sin restricciones de tráfico entrante, lo que representa un riesgo significativo. El objetivo es aplicar UFW (Uncomplicated Firewall) para establecer políticas de acceso claras, minimizar la superficie de ataque y garantizar que solo los servicios autorizados estén expuestos.
 
   Como parte del proceso de validación, se ha incluido la configuración y prueba de acceso remoto mediante SSH desde una máquina cliente con Parrot OS. Esta integración permite comprobar que UFW no solo bloquea el tráfico no deseado, sino que también permite conexiones legítimas y funcionales bajo condiciones seguras.
 </ul>
@@ -138,7 +157,6 @@
 
     <!-- Sección Pasos -->
 <h3 id="pasos realizados" class="text-xl font-semibold mt-8 mb-4 font-montserrat scroll-mt-24">
-  Pasos realizados:
 </h3>
     <h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Pasos realizados:</h3>
 <ol class="list-decimal text-black space-y-8">
