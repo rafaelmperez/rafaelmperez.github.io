@@ -16,7 +16,7 @@
 
    <!-- ✅ Open Graph (Facebook, LinkedIn, WhatsApp) -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Rafael M. Pérez - SysAdmin Junior | Ciberseguridad" />
+  <meta property="og:title" content="Rafael M. Pérez - Administrador de Sistemas | Ciberseguridad" />
   <meta property="og:description" content="Portafolio en ciberseguridad, administración de sistemas y proyectos IT." />
   <meta property="og:image" content="https://rafaelmperez.github.io/assets/img/vistapreliminar.webp" />
   <meta property="og:url" content="https://rafaelmperez.github.io/" />
@@ -30,7 +30,7 @@
   
   <!-- ✅ Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Rafael M. Pérez - SysAdmin Junior | Ciberseguridad" />
+  <meta name="twitter:title" content="Rafael M. Pérez - Administrador de Sistemas | Ciberseguridad" />
   <meta name="twitter:description" content="Portafolio en ciberseguridad, administración de sistemas y proyectos IT." />
   <meta name="twitter:image" content="https://rafaelmperez.github.io/assets/img/vistapreliminar.webp" />
 
@@ -577,10 +577,9 @@ color: rgb(255,204, 0);}
   cursor: pointer;
 }
 
-.language-switcher {
-  display: none;
+.language-switcher .flag:hover {
+  transform: scale(1.1); /* Efecto hover */
 }
-
 
 
 header {
@@ -1273,8 +1272,6 @@ a[href^="mailto:"] {
   box-sizing: border-box;
 }
 
-  
-
 #contacto .card:hover {
   transition: none !important;
   transform: none !important;
@@ -1450,31 +1447,12 @@ app.use(helmet.contentSecurityPolicy({
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
 <body>
-
-  <!-- Contenido de tu página -->
   <div class="language-switcher">
     <a href="/fr/index.html">
-      <img src="https://rafaelmperez.github.io/frflags.webp" alt="Français" class="flag"> Français
+      <img src="https://rafaelmperez.github.io/frflags.webp" alt="Drapeau de la France" class="flag"> Français
     </a>
   </div>
-
-  <!-- ✅ Aquí va tu script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const switcher = document.querySelector('.language-switcher');
-      if (switcher) {
-        switcher.style.display = 'block';
-      }
-    });
-
-    if (navigator.userAgent.includes('Instagram')) {
-  // Opcional: mostrar un mensaje o redirigir
-}
-
-  </script>
-
-  
-
+</body>
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -1748,32 +1726,35 @@ Configuré y activé un firewall UFW en un servidor Linux, estableciendo políti
       Tu navegador no soporta el elemento de audio.
     </audio>
   </div>
-<!-- 🔒 Aquí cerramos la quinta card -->
+</div> <!-- 🔒 Aquí cerramos la quinta card -->
 
-<div class="card"> 
-  <img src="" alt=""> 
+ <div class="card">
+    <img src="https://rafaelmperez.github.io/assets/img/Microproyecto2.webp" alt="">
+
   
-  
-  <h3><i class="fas fa-qrcode"></i> Sistema de Detección de Intrusos con Visualización en Grafana</h3> 
-  
-  <p> 
-    Implementé un sistema de detección de intrusos en un servidor Linux que permite identificar intentos de acceso sospechosos (como fuerza bruta por SSH, escaneos de puertos o actividad anómala) y visualicé estos eventos en tiempo real mediante paneles gráficos en Grafana. El objetivo es reforzar la seguridad del sistema mediante monitoreo activo y alertas automatizadas. </p> 
-  <p> 
-    <a href="" target="_blank"> 
-      Microproyecto en desarrollo 
-    </a> 
-  </p> 
-  
-  <div class="audio-proyecto" style="margin-top: 8px;"> <p><strong>
-    🎧 Escuchar versión en audio:</strong></p> 
-    <audio controls controlsList="nodownload noplaybackrate"> 
-      <source src="" type="audio/mpeg"> 
-      Tu navegador no soporta el elemento de audio. 
-    audio> 
-    </div> 
+
+  <h3><i class="fas fa-qrcode"></i> Sistema de Detección de Intrusos con Visualización en Grafana</h3>
+
+<p>
+Implementé un sistema de detección de intrusos en un servidor Linux que permite identificar intentos de acceso sospechosos (como fuerza bruta por SSH, escaneos de puertos o actividad anómala) y visualicé estos eventos en tiempo real mediante paneles gráficos en Grafana. El objetivo es reforzar la seguridad del sistema mediante monitoreo activo y alertas automatizadas.
+</p>
+
+<p>
+  <a href="https://rafaelmperez.github.io/grafana.html" target="_blank">
+    Ver práctica técnica
+  </a>
+</p>
+
+  <div class="audio-proyecto" style="margin-top: 8px;">
+    <p><strong>🎧 Escuchar versión en audio:</strong></p>
+    <audio controls controlsList="nodownload noplaybackrate">
+      <source src="https://rafaelmperez.github.io/sounds/microproyecto2.aac" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+  </div>
+</div> 
 </section>
 <!-- FIN SECCIÓN RETOS/MICROPROYECTOS -->
-
 
 
 
@@ -2069,15 +2050,5 @@ Configuré y activé un firewall UFW en un servidor Linux, estableciendo políti
   });
 </script>
 </html>
-
-
-
-
-
-
-
-
-
-
 
 
