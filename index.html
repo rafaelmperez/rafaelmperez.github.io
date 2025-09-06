@@ -87,13 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 
 /* GLOBAL */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: #111;
-  color: #eee;
-  overflow-x: hidden;
-}
 
 .container {
   max-width: 1100px;
@@ -426,8 +419,19 @@ nav {
   padding-top: 0 !important;     /* opcional, para que no haya padding extra */
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
 
+section#sobre-mi {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
 
+section#sobre-mi > *:first-child {
+  margin-top: 0 !important;
+}
 
 
 
@@ -1184,7 +1188,6 @@ a[href^="mailto:"] {
   max-width: 700px;
   margin: 0 auto;
 }
-
 
 #sobre-mi .card:hover {
   transform: none !important;
@@ -1955,14 +1958,6 @@ Implementé un sistema de detección de intrusos en un servidor Linux que permit
 <!-- Footer -->
 <footer>
   <p>© 2025 Desarrollado por Rafael M. Pérez · HTML5 · CSS · JavaScript · GitHub Pages. Diseño minimalista creado desde cero con enfoque limpio y funcional.</p>
-  
-  <p style="font-size: 14px; color: #676767; margin-top: 8px;">
-    También disponible en la red Tor: 
-    <a href="http://xwzrrbprgbg324sgzacioafol47j3smjwvatbfwys2cqqr6q4ridanyd.onion/" target="_blank" rel="noopener noreferrer" style="color: #676767;">
-     http://xwzrrbprgbg324sgzacioafol47j3smjwvatbfwys2cqqr6q4ridanyd.onion/
-    </a>
-    <i class="fas fa-user-secret" title="Acceso por Tor" style="margin-left: 6px;"></i>
-  </p>
 
   <p class="terminal-line">$ exit # Sesión finalizada. ¡Gracias por visitar mi sistema!</p>
 </footer>
