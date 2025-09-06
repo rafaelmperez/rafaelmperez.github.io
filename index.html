@@ -800,6 +800,13 @@ h1.titulo-principal {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
+.social-float {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
 
     .social-float a {
       width: 45px;
@@ -1033,6 +1040,23 @@ button:hover {
   .form-row {
     display: block;       /* Apila los campos verticalmente */
   }
+  @media (max-width: 768px) {
+  .grid-proyectos {
+    grid-template-columns: 1fr;
+  }
+}
+/* Responsive: en móvil apilan verticalmente */
+@media (max-width: 768px) {
+  .grid-habilidades {
+    grid-template-columns: 1fr;
+  }
+}
+/* Responsive: se apilan en móvil */
+@media (max-width: 768px) {
+  .grid-habilidades {
+    grid-template-columns: 1fr;
+  }
+}
 
   .form-group {
     width: 100%;
@@ -1077,11 +1101,7 @@ button:hover {
   margin-bottom: 1.5rem; /* separar párrafos */
 }
 
-@media (max-width: 768px) {
-  .grid-proyectos {
-    grid-template-columns: 1fr;
-  }
-}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -1109,12 +1129,7 @@ html, body {
   transform: scale(1.2);
 }
 
-/* Responsive: en móvil apilan verticalmente */
-@media (max-width: 768px) {
-  .grid-habilidades {
-    grid-template-columns: 1fr;
-  }
-}
+
 .grid-habilidades {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Dos columnas en paralelo */
@@ -1151,12 +1166,7 @@ html, body {
   transform: scale(1.2);
 }
 
-/* Responsive: se apilan en móvil */
-@media (max-width: 768px) {
-  .grid-habilidades {
-    grid-template-columns: 1fr;
-  }
-}
+
 .card:hover {
   transform: translateY(-5px);
 }
@@ -1419,6 +1429,7 @@ app.use(helmet.contentSecurityPolicy({
 }
 
 
+
   </style>
   
 
@@ -1591,7 +1602,7 @@ app.use(helmet.contentSecurityPolicy({
       <div class="habilidades-icons">
         <img src="https://rafaelmperez.github.io/assets/img/visualstudiocode.webp" alt="Visual Studio Code" title="Visual Studio Code">
         <img src="https://rafaelmperez.github.io/assets/img/kalilinux.webp" alt="Kali Linux" title="Kali Linux">
-        <img src="https://rafaelmperez.github.io/assets/img/linux.webp" alt="Linux" title="Linux">
+        <img src="https://rafaelmperez.github.io/assets/img/linux1.webp" alt="Linux" title="Linux">
         <img src="https://rafaelmperez.github.io/assets/img/windows.webp" alt="Windows" title="Windows">
         <img src="https://rafaelmperez.github.io/assets/img/python.webp" alt="Python" title="Python">
         <img src="https://rafaelmperez.github.io/assets/img/grafana.webp" alt="Grafana" title="Grafana">
@@ -2034,6 +2045,5 @@ Implementé un sistema de detección de intrusos en un servidor Linux que permit
   });
 </script>
 </html>
-
 
 
