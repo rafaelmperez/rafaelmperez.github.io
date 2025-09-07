@@ -1714,7 +1714,6 @@ app.use(helmet.contentSecurityPolicy({
     <div class="card">
       <img src="https://rafaelmperez.github.io/assets/img/Microproyecto1.v1.webp" alt="Implementación de Firewall con UFW">
       <strong>Ubuntu | Parrot | Bash | UFW | SSH Connect</strong>
-
       <h3><i class="fas fa-qrcode"></i> Implementación de Firewall con UFW</h3>
       <p>
         Configuré y activé un firewall UFW en un servidor Linux, estableciendo políticas predeterminadas restrictivas y habilitando acceso seguro por SSH, y finalmente verifiqué su correcto funcionamiento, reforzando así la seguridad del sistema mediante un enfoque simple, eficiente y profesional.
@@ -1735,10 +1734,12 @@ app.use(helmet.contentSecurityPolicy({
 
     <!-- CARD 2 -->
     <div class="card">
-      <img src="" alt="">
-      <strong>Ubuntu | Grafana | Prometheus | Node Exporter | Fail2ban</strong>
+<img src="https://rafaelmperez.github.io/assets/img/proyectografana2.webp" 
+     alt="Sistema de Detección de Intrusos con Visualización en Grafana" 
+     style="width:100%; height:200px; object-fit:cover;">
+
+      <strong>Ubuntu | Grafana | Suricata | Node Exporter | Fail2ban</strong>
       <h3><i class="fas fa-qrcode"></i> Sistema de Detección de Intrusos con Visualización en Grafana</h3>
-      
       <p>
         Implementé un sistema de detección de intrusos en un servidor Linux que permite identificar intentos de acceso sospechosos (como fuerza bruta por SSH, escaneos de puertos o actividad anómala) y visualicé estos eventos en tiempo real mediante paneles gráficos en Grafana. El objetivo es reforzar la seguridad del sistema mediante monitoreo activo y alertas automatizadas.
       </p>
@@ -1755,9 +1756,8 @@ app.use(helmet.contentSecurityPolicy({
     <!-- CARD 3 -->
     <div class="card">
       <img src="" alt="">
-            <strong>VirtualBox | Kali Linux | Metasploitable | OWASP Juice Shop</strong>
-
-
+      <strong>VirtualBox | Kali Linux | Metasploitable | OWASP Juice Shop</strong>
+     
       <h3><i class="fas fa-qrcode"></i> Laboratorio de Pentesting Local con Máquinas Vulnerables</h3>
       <p>
 <p>
@@ -1923,45 +1923,35 @@ app.use(helmet.contentSecurityPolicy({
 </h2>
 
 
-  <!-- Formulario de contacto -->
-  <div class="card">
-    <div class="contact-form">
-      <form action="https://api.web3forms.com/submit" method="POST">
-        <!-- Tu Access Key de Web3Forms -->
-        <input type="hidden" name="access_key" value="59463dca-91ec-41ee-ae46-c66f76606caf" />
+ <div class="card form-wrapper">
+  <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+    <input type="hidden" name="access_key" value="59463dca-91ec-41ee-ae46-c66f76606caf" />
 
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Nombre</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email de contacto</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="message">Mensaje</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-<label for="captcha">¿Cuánto es 2 + 3?</label>
-<input type="text" id="captcha" name="captcha" required>
-<button type="submit">Enviar</button>
-
-
-        
-      </form>
-      
+    <div class="form-group">
+      <label for="name">Nombre</label>
+      <input type="text" id="name" name="name" required>
     </div>
-      <!-- Email -->
-  <div class="card">
-    <p><i class="fas fa-at"></i> Email: 
-<a href="mailto:sysadminweb@proton.me">sysadminweb@proton.me</a>
-    </p>
-  </div>
-  </div>
+
+    <div class="form-group">
+      <label for="email">Email de contacto</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Mensaje</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+
+    <div class="form-group captcha">
+      <label for="captcha">¿Cuánto es 2 + 3?</label>
+      <input type="text" id="captcha" name="captcha" required>
+    </div>
+
+    <button type="submit" class="btn-submit">
+      <i class="fas fa-paper-plane"></i> Enviar
+    </button>
+  </form>
+</div>
 </section>
 
 
@@ -2072,8 +2062,6 @@ app.use(helmet.contentSecurityPolicy({
   });
 </script>
 </html>
-
-
 
 
 
