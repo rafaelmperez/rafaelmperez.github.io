@@ -1,40 +1,22 @@
 <?php
-// Tu clave secreta de reCAPTCHA
-$secretKey = "6LdFMMErAAAAAOtat8QTS3HltaZNcw0CecuTHtxZ";
+$nombre = $_POST['nombre'];
+$captcha = $_POST['g-recaptcha-response'];
 
-// Recoge el token enviado por el formulario
-$recaptchaResponse = $_POST['g-recaptcha-response'];
+if (!$captcha) {
+  echo "Por favor, verifica que no eres un robot.";
+  exit;
+}
 
-// IP del usuario
-$userIP = $_SERVER['REMOTE_ADDR'];
+$secretKey = "6LcQNMErAAAAAGxtSPC-Xr0oGa64SdH6ZA5PVAf6";
+$ip = $_SERVER['REMOTE_ADDR'];
 
-// Verifica el token con Google
-$verifyURL = "https://www.google.com/recaptcha/api/siteverify";
-$data = [
-    'secret' => $secretKey,
-    'response' => $recaptchaResponse,
-    'remoteip' => $userIP
-];
+$verify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$captcha&remoteip=$ip");
+$response = json_decode($verify);
 
-// Realiza la petición
-$options = [
-    'http' => [
-        'method' => 'POST',
-        'header' => "Content-Type: application/x-www-form-urlencoded\r\n",
-        'content' => http_build_query($data)
-    ]
-];
-$context = stream_context_create($options);
-$response = file_get_contents($verifyURL, false, $context);
-$result = json_decode($response);
-
-// Verifica el resultado
-if ($result->success) {
-    // ✅ El usuario pasó el reCAPTCHA
-    echo "Formulario enviado correctamente.";
-    // Aquí puedes guardar los datos, enviar email, etc.
+if ($response->success) {
+  echo "Formulario enviado correctamente. Hola, " . htmlspecialchars($nombre);
+  // Aquí puedes guardar los datos, enviar email, etc.
 } else {
-    // ❌ Falló el reCAPTCHA
-    echo "Por favor, verifica que no eres un robot.";
+  echo "Verificación fallida. Intenta de nuevo.";
 }
 ?>
