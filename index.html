@@ -1918,41 +1918,32 @@ Implementé un sistema de detección de intrusos en un servidor Linux que permit
 </h2>
 
 
-<!-- Formulario de contacto -->
-<div class="card">
-  <div class="contact-form">
-    <form action="form-handler.php" method="POST">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="name">Nombre</label>
-          <input type="text" id="name" name="name" required>
+  <!-- Formulario de contacto -->
+  <div class="card">
+    <div class="contact-form">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <!-- Tu Access Key de Web3Forms -->
+        <input type="hidden" name="access_key" value="59463dca-91ec-41ee-ae46-c66f76606caf" />
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email de contacto</label>
+            <input type="email" id="email" name="email" required>
+          </div>
         </div>
 
         <div class="form-group">
-          <label for="email">Email de contacto</label>
-          <input type="email" id="email" name="email" required>
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
         </div>
-      </div>
-
-      <div class="form-group">
-        <label for="message">Mensaje</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-      </div>
-
-      <!-- hCaptcha widget -->
-      <div class="h-captcha" data-sitekey="c014ae50-7520-4b6a-9118-cb98cc363a7e"></div>
-
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
-</div>
-
-<!-- Script de hCaptcha -->
-<script src="https://hcaptcha.com/1/api.js" async defer></script>
-
-
-
-
+<label for="captcha">¿Cuánto es 2 + 3?</label>
+<input type="text" id="captcha" name="captcha" required>
+<button type="submit">Enviar</button>
 
 
         
