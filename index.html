@@ -125,10 +125,9 @@ document.addEventListener("DOMContentLoaded", () => {
 @media (min-width: 769px) and (max-width: 1024px) { ... }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
+  width: 90%;
+  padding: 2vw;
 }
-
 .flex-container {
   display: flex;
   flex-wrap: wrap;
@@ -155,10 +154,11 @@ document.addEventListener("DOMContentLoaded", () => {
 /* GLOBAL */
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
+  max-width: 1100px;
+  width: 100%;
+  margin: auto;
+  padding: 1rem;
 }
-
 
 
 /* HEADER */
@@ -339,11 +339,10 @@ footer a {
 
 /* 📱 Responsive: menú centrado y redes debajo en pantallas pequeñas */
 @media (max-width: 768px) {
-  .menu {
-    display: block;
+  .barra-superior {
+    flex-direction: column; /* Menú arriba, iconos debajo */
+    align-items: center;
   }
-}
-
 
   .barra-superior nav {
     margin-bottom: 0px;
@@ -486,10 +485,8 @@ nav {
 }
 
 body {
-  width: 100%;
-  margin: 0 auto;
-  min-width: 320px;
-  max-width: 2000px;
+  margin: 0;
+  padding: 0;
 }
 
 section#sobre-mi {
@@ -1543,7 +1540,7 @@ app.use(helmet.contentSecurityPolicy({
     <a href="https://www.linkedin.com/in/rafaelmperez/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
       <i class="fab fa-linkedin-in"></i>
     </a>
-       <a href="https://github.com/Rafaelmperez" title="GitHub" target="_blank" rel="noopener noreferrer">
+       <a href="https://github.com/Rafaelmorenoperez" title="GitHub" target="_blank" rel="noopener noreferrer">
       <i class="fab fa-github"></i>
     </a>
       <a href="https://www.youtube.com/@rafaelmpTech" title="YouTube" target="_blank" rel="noopener noreferrer">
@@ -1941,9 +1938,24 @@ Implementé un sistema de detección de intrusos en un servidor Linux que permit
           <label for="message">Mensaje</label>
           <textarea id="message" name="message" rows="5" required></textarea>
         </div>
-<label for="captcha">¿Cuánto es 2 + 3?</label>
-<input type="text" id="captcha" name="captcha" required>
-<button type="submit">Enviar</button>
+
+
+  <meta charset="UTF-8">
+  <title>Formulario con reCAPTCHA</title>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  <form action="submit.php" method="POST">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <!-- Casilla reCAPTCHA -->
+    <div class="g-recaptcha" data-sitekey="6LcQNMErAAAAAJx0Rl61IJPWIJUXS0qXnwMHgZ37"></div>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+
 
 
         
@@ -2067,11 +2079,6 @@ Implementé un sistema de detección de intrusos en un servidor Linux que permit
   });
 </script>
 </html>
-
-
-
-
-
 
 
 
