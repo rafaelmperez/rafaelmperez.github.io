@@ -1104,11 +1104,10 @@ button:hover {
 
 
 
-/* 🔹 Desactivar el movimiento de las tarjetas por defecto */
-.card:hover {
-  transform: none; 
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Mantén la sombra original si la tienes */
+.card:not(#sobre-mi .card):not(#habilidades .card):not(#certificaciones .card):not(#cursos .card):not(#seguridad .card):not(#contacto .card):hover {
+  transform: translateY(-10px);
 }
+
 
 /* 🔹 Activar el movimiento SOLO en las tarjetas de la sección "Proyectos" */
 #proyectos .card:hover {
@@ -1192,10 +1191,6 @@ html, body {
   transform: scale(1.2);
 }
 
-
-.card:hover {
-  transform: translateY(-5px);
-}
 
 /* Evita que los contenedores de habilidades se muevan */
 .grid-habilidades .card:hover {
