@@ -1754,8 +1754,11 @@ app.use(helmet.contentSecurityPolicy({
     </div>
 
     <!-- CARD 3 -->
-    <div class="card">
-      <img src="" alt="">
+      <div class="card">
+<img src="https://rafaelmperez.github.io/assets/img/proyectopentesting.webp" 
+     alt="Laboratorio de Pentesting Local con Máquinas Vulnerables" 
+     style="width:100%; height:200px; object-fit:cover;">
+        
       <strong>VirtualBox | Kali Linux | Metasploitable | OWASP Juice Shop</strong>
      
       <h3><i class="fas fa-qrcode"></i> Laboratorio de Pentesting Local con Máquinas Vulnerables</h3>
@@ -1923,35 +1926,43 @@ app.use(helmet.contentSecurityPolicy({
 </h2>
 
 
- <div class="card form-wrapper">
-  <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-    <input type="hidden" name="access_key" value="59463dca-91ec-41ee-ae46-c66f76606caf" />
+  <!-- Formulario de contacto -->
+  <div class="card">
+    <div class="contact-form">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <!-- Tu Access Key de Web3Forms -->
+        <input type="hidden" name="access_key" value="59463dca-91ec-41ee-ae46-c66f76606caf" />
 
-    <div class="form-group">
-      <label for="name">Nombre</label>
-      <input type="text" id="name" name="name" required>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email de contacto</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+<label for="captcha">¿Cuánto es 2 + 3?</label>
+<input type="text" id="captcha" name="captcha" required>
+<button type="submit">Enviar</button>
+      
+      </form>
+      
     </div>
-
-    <div class="form-group">
-      <label for="email">Email de contacto</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-
-    <div class="form-group">
-      <label for="message">Mensaje</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-    </div>
-
-    <div class="form-group captcha">
-      <label for="captcha">¿Cuánto es 2 + 3?</label>
-      <input type="text" id="captcha" name="captcha" required>
-    </div>
-
-    <button type="submit" class="btn-submit">
-      <i class="fas fa-paper-plane"></i> Enviar
-    </button>
-  </form>
-</div>
+      <!-- Email -->
+  <div class="card">
+    <p><i class="fas fa-at"></i> Email: 
+<a href="mailto:sysadminweb@proton.me">sysadminweb@proton.me</a>
+    </p>
+  </div>
+  </div>
 </section>
 
 
@@ -2062,6 +2073,7 @@ app.use(helmet.contentSecurityPolicy({
   });
 </script>
 </html>
+
 
 
 
