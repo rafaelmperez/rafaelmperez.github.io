@@ -1156,12 +1156,22 @@ html, body {
 
 
 .grid-habilidades {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas en paralelo */
-  gap: 30px;
-  max-width: 1000px;
-  margin: auto;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .grid-habilidades {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
 
 /* Cards: sin movimiento al pasar el cursor */
 .grid-habilidades .card {
@@ -2074,6 +2084,7 @@ app.use(helmet.contentSecurityPolicy({
   });
 </script>
 </html>
+
 
 
 
