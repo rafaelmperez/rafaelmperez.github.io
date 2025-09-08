@@ -1032,11 +1032,42 @@ button:hover {
 
 
 
+/* Estilo base para grid */
 .grid-proyectos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
 }
+
+/* Estilo para las cards */
+.card {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+
+/* Efecto hover opcional */
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Mejora en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .grid-proyectos {
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+  }
+
+  .card {
+    padding: 1rem;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
   .terminal-heading {
   font-size: 1.5em;
   margin-bottom: 15px;
@@ -2086,6 +2117,7 @@ app.use(helmet.contentSecurityPolicy({
   });
 </script>
 </html>
+
 
 
 
