@@ -1,36 +1,67 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rafael Moreno Pérez - SysAdmin & Ciberseguridad</title>
-  
-<link rel="icon" type="image/png" href="favicon.png">
+  <meta name="description" content="Portfolio de Rafael M. Pérez, Administrateur Système Junior | Spécialisé en Cybersécurité.">
+  <title>Portfolio Web | Rafael M. Pérez – Administrateur Système Junior | Spécialisé en Cybersécurité</title>
 
-  <!-- ✅ Open Graph para compartir en redes sociales -->
-  <meta property="og:title" content="Rafael Moreno Pérez - Administrateur Systèmes | Cybersécurité" />
-  <meta property="og:description" content="Portfolio en cybersécurité, administration des systèmes et projets IT." />
-  <meta property="og:image" content="https://rafaelmorenoperez.github.io/images/banner.jpg" />
-  <meta property="og:url" content="https://rafaelmorenoperez.github.io/" />
-  <meta property="og:type" content="website" />
+    <!-- Indicamos que hay una versión en francés -->
+  <link rel="alternate" hreflang="es" href="https://rafaelmperez.github.io/index.html" />
+  <link rel="alternate" hreflang="fr" href="https://rafaelmperez.github.io/fr/index.html" />
 </head>
-<body>
-  <!-- Aquí va el resto del contenido -->
-</body>
-</html>
+
+<style>
+  /* Ejemplo de CSS crítico */
+  body { font-family: 'Montserrat', sans-serif; }
+  h1 { font-weight: 600; }
+</style>
 
 
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+
+   <!-- ✅ Open Graph (Facebook, LinkedIn, WhatsApp) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Rafael M. Pérez - Administrateur Système Junior | Spécialisé en Cybersécurité." />
+  <meta property="og:description" content="Administrateur Système Junior | Spécialisé en Cybersécurité." />
+  <meta property="og:image" content="https://rafaelmperez.github.io/assets/img/vistapreliminar.v1.webp" />
+  <meta property="og:url" content="https://rafaelmperez.github.io/fr/index.html" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:image" content="https://rafaelmperez.github.io/assets/img/vistapreliminar.v1.webp" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  
   <!-- ✅ Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Rafael Moreno Pérez - Administrateur Systèmes | Cybersécurité" />
-  <meta name="twitter:description" content="Portfolio en cybersécurité, administration des systèmes et projets IT." />
-  <meta name="twitter:image" content="https://rafaelmorenoperez.github.io/images/banner.jpg" />
+  <meta name="twitter:title" content="Rafael M. Pérez - Administrador de Sistemas | Ciberseguridad" />
+  <meta name="twitter:description" content="Portafolio en ciberseguridad, administración de sistemas y proyectos IT." />
+  <meta name="twitter:image" content="https://rafaelmperez.github.io/assets/img/vistapreliminar.v1.webp" />
 
-  <!-- Fuentes modernas -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    
+<head>
+  <!-- Font Awesome optimizado (solo una versión) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </noscript>
 
-  <!-- Font Awesome para iconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Google Fonts con preload y carga no bloqueante -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap">
+  </noscript>
+
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap">
+  </noscript>
+</head>
 
 
     <!-- Google tag (gtag.js) -->
@@ -41,24 +72,470 @@
     gtag('js', new Date());
     gtag('config', 'G-J1T24E1NDR');
   </script>
+<body>
+  <!-- Tu HTML aquí -->
+
+</body>
+
+
+<style>
+document.addEventListener("DOMContentLoaded", () => {
+  const sound = document.getElementById("menu-sound");
+  const links = document.querySelectorAll("nav a");
+
+  // 🔓 Desbloquear sonido tras la primera interacción
+  document.body.addEventListener("click", () => {
+    sound.play().catch(() => {});
+    sound.pause();
+    sound.currentTime = 0;
+  }, { once: true });
+
+  // 🎧 Reproducir sonido al pasar el ratón por encima
+  links.forEach(link => {
+    link.addEventListener("mouseenter", () => {
+      sound.currentTime = 0;
+      sound.play().catch(() => {}); // Reproduce el sonido y maneja posibles errores
+    });
+  });
+});
+
+   
+  </style>
+</head>
 
   <style>
   /* Todo tu CSS aquí... */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .menu {
+    display: block;
+  }
+}
+
+/* Teléfonos pequeños */
+@media (max-width: 480px) { ... }
+
+/* Tablets en vertical */
+@media (min-width: 481px) and (max-width: 768px) { ... }
+
+/* Tablets en horizontal y pantallas medianas */
+@media (min-width: 769px) and (max-width: 1024px) { ... }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
+
+  /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBAL */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+/* HEADER */
+header {
+  background: #000;
+  color: yellow;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: .5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 .8rem;
+}
+
+nav ul li a {
+  color: yellow;
+  text-decoration: none;
+  transition: color .3s;
+}
+
+nav ul li a:hover {
+  color: white;
+}
+
+/* SECTIONS */
+section {
+  margin: 2rem 0;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: yellow;
+  text-align: center;
+}
+
+/* SKILLS */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  text-align: center;
+}
+
+/* PROJECTS */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: #222;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform .3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: .5rem;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+input, textarea, button {
+  padding: .7rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background: yellow;
+  color: #000;
+  cursor: pointer;
+  transition: background .3s;
+}
+
+button:hover {
+  background: #ffd700;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  color: #aaa;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* 🔹 Espacio entre la última sección y el footer */
+#seguridad {
+  margin-bottom: 35px !important; /* ajusta según lo necesites */
+}
+
+  
+.barra-superior {
+  position: relative;
+  display: flex;
+  justify-content: center;  /* ahora el menú queda centrado */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #0a0a0a;
+}
+
+.barra-superior .social-float {
+  position: absolute;
+  right: 20px;    
+  top: 50%;
+  transform: translateY(-50%); /* centrado vertical con el menú */
+  display: flex;
+  gap: 10px;
+}
+
+
+nav a {
+  margin-right: 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+.social-float a:nth-child(1) {
+  background-color: #0077B5; /* LinkedIn */
+}
+.social-float a:nth-child(3) {
+  background-color: #FF0000 /* Youtube */
+}
+.social-float a:nth-child(2) {
+  background-color: #6e6e6e ; /* Github */
+}
+
+
 
 footer {
   width: 100%;          /* 100% del ancho de la ventana */
   margin: 0;             /* quita márgenes que lo puedan achicar */
   padding: 1rem;
   background: #000;      /* negro */
-  color: #aaa;
+  color: rgb(255,204, 0);
   font-size: 0.9rem;
   text-align: center;
   box-sizing: border-box;
 }
+footer a {
+  color: rgb(255,204, 0);
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+/* 📱 Responsive: menú centrado y redes debajo en pantallas pequeñas */
+@media (max-width: 768px) {
+  .menu {
+    display: block;
+  }
+}
+
+
+  .barra-superior nav {
+    margin-bottom: 0px;
+  }
+
+  .barra-superior .social-float {
+    position: static;   /* Quitamos posición absoluta */
+    transform: none;
+    justify-content: center; /* Centramos los iconos */
+  }
+}
+/* 🔹 Barra superior */
+.barra-superior {
+  position: relative;
+  display: flex;
+  justify-content: center;  /* Menú centrado */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #0a0a0a;
+}
+
+.barra-superior nav {
+  text-align: center;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #ffcc00;
+}
+/* 🔹 Iconos sociales */
+.barra-superior .social-float {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 10px; /* Usamos el valor más amplio */
+}
+
+.social-float a {
+  display: inline-block;
+  width: 48px; /* Más grande que 36px */
+  height: 48px;
+  border-radius: 50%;
+  color: rgb(255, 255, 255);
+  background-color: #333; /* Opcional: fondo para destacar */
+  text-align: center;
+  line-height: 48px;
+  font-size: 24px; /* Más grande que 18px */
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-float a:hover {
+  transform: scale(1.3);
+  color: #000000;
+  background-color: rgb(255,204, 0); /* Opcional: efecto inverso */
+}
+
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .barra-superior {
+    flex-direction: column; /* Menú arriba, iconos debajo */
+    align-items: center;
+  }
+
+  .barra-superior nav {
+    margin-bottom: 60px;
+  }
+
+  .barra-superior .social-float {
+    position: static;   /* Quitamos absolute */
+    transform: none;
+    justify-content: center;
+  }
+.banner-header {
+  width: 100%;
+  max-width: 400px;!important /* Reducido para que la imagen sea más pequeña */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  image-rendering: crisp-edges;
+}
+
+@media screen and (max-width: 768px) {
+  .banner-header {
+    max-width: 90%; /* Se adapta mejor en móviles, puedes ajustarlo si quieres */
+  }
+}
+
+
+
+
+
+/* Texto debajo del banner */
+.banner-text {
+  margin-top: 1px;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 📱 Responsive para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .banner-header {
+    max-width: 70%; /* Se adapta mejor en móviles */
+  }
+
+  .banner-text {
+    font-size: 1.1em;
+    padding: 0 10px;
+  }
+}
+
+
+
+nav {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* 🔹 Espacio entre el nav y la sección Sobre Mí */
+#sobre-mi {
+  margin-top: 300px !important; /* ajusta este valor a tu gusto */
+  padding-top: 0 !important;     /* opcional, para que no haya padding extra */
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 2000px;
+}
+
+section#sobre-mi {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+section#sobre-mi > *:first-child {
+  margin-top: 0 !important;
+}
+
+
+
+}
+
+.imagen-sobre-mi {
+  width: 250px; /* Puedes subirlo a 250px si quieres más presencia */
+  height: 320px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.imagen-sobre-mi img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+}
+
+function sanitizeInput(input) {
+  return input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+
 </style>
 
+
+
 </head>
+
   <style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;500&display=swap');
 
 body {
   margin: 0;
@@ -88,17 +565,53 @@ body {
     }
 
     .language-switcher a:hover {
-      color: rgb(229, 207, 82);
+      color: rgb(255,204, 0);
     }
+.language-switcher {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-bottom: 2rem; /* ← Esta línea crea espacio debajo */
+}
 
-    header {
-      position: relative;
-      background: #000;
-      color: rgb(229, 207, 82);
-      text-align: center;
-      padding: 4rem 1rem;
-      overflow: hidden;
-    }
+
+.language-switcher a {
+  color: #ddd;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s;
+}
+
+.language-switcher a:hover {
+color: rgb(255,204, 0);}
+
+/* 👇 Nuevo bloque para ajustar banderas */
+.language-switcher .flag {
+  width: 20px;          /* Reduce tamaño */
+  height: auto;         /* Mantiene proporción */
+  margin-right: 6px;    /* Espacio entre bandera y texto */
+  vertical-align: middle; /* Alinea con el texto */
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.language-switcher .flag:hover {
+  transform: scale(1.1); /* Efecto hover */
+}
+
+
+header {
+  position: relative;
+  background: #000;
+  color: rgb(177, 135, 0);
+  text-align: center;
+  padding: 7.1rem 1rem;
+  overflow: hidden;
+}
+
 
     header h1 {
       margin: 0;
@@ -112,7 +625,7 @@ body {
       font-size: 1.3rem;
       font-family: 'Poppins', sans-serif;
       font-weight: 300;
-      color: #ddd;
+      color: #b6b6b6	;
     }
 
     .matrix {
@@ -143,66 +656,119 @@ body {
     }
 
     nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      background: #111;
-      padding: 1rem;
-    }
+  display: flex;
+  align-items: center; /* para alinear el botón con los links */
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  background: #000000;
+  padding: 1rem;
+  width: 100%;
+}
 
-    nav a {
-      position: relative;
-      color: rgb(208, 190, 85);
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
+nav a {
+  position: relative;
+  color: rgb(255,204,0);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
 
-    nav a::after {
-      content: '';
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      bottom: -4px;
-      left: 0;
-      background-color: rgb(229, 207, 82);
-      transition: width 0.3s ease;
-    }
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: rgb(255,204,0);
+  transition: width 0.3s ease;
+}
 
-    nav a:hover::after {
-      width: 100%;
-    }
+nav a:hover::after {
+  width: 100%;
+}
 
-    section {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      text-align: center;
-    }
+/* Botón Play */
+.play-btn {
+  background: none;
+  border: none;
+  color: rgb(255,204,0);
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+  padding: 0;
+}
 
-    h2 {
-      font-family: 'Roboto Slab', serif;
-      font-size: 2rem;
-      color: #000;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1.5rem;
-    }
+.play-btn:hover {
+  transform: scale(1.2);
+  color: rgb(255,204,0);
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 4rem 1rem; /* menos alto en móviles */
+  }
+
+  header nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+
+section {
+  max-width: none;
+  margin: 1rem auto !important;
+  padding: 1rem 1rem;
+  text-align: center;
+
+
+
+h2 {
+  font-size: 2.2rem;
+  color: #463e3e;
+}
+
+
+
+h1.titulo-principal {
+  margin-top: 4rem; /* Añade espacio arriba del título */
+  margin-bottom: 2rem;
+  color: rgb(255,204, 0) !important;
+  font-size: 2.5rem;
+}
+
+
 
     .card {
       background: #fdfdfd;
       border: 1px solid #ccc;
-      padding: 1.8rem;
+      padding: 15px !important;
       border-radius: 12px;
-      margin-bottom: 1.8rem;
+      margin-bottom: 1rem !important;
       box-shadow: 0 4px 15px rgba(0,0,0,0.05);
       font-size: 1.05rem;
     }
 
+    /* Reducir márgenes y paddings solo en Proyectos y Certificaciones */
+#proyectos,
+#certificaciones {
+  margin-top: 5px !important;    /* margen superior reducido */
+  margin-bottom: 5px !important; /* margen inferior reducido */
+  padding: 5px !important;       /* padding interno reducido */
+}
+
+/* Si quieres reducir también los espacios entre cards */
+#proyectos .card,
+#certificaciones .card {
+  margin-bottom: 5px !important; /* menos espacio entre tarjetas */
+  padding: 15px !important;       /* menos padding dentro de las tarjetas */
+}
+
     .youtube-box {
       background: #000;
-      color: rgb(229, 207, 82);
+      color: rgb(255,204, 0);
       font-size: 1.8rem;
       font-weight: bold;
       padding: 2rem 3rem;
@@ -229,6 +795,12 @@ body {
   text-align: center;
   min-height: 40vh;
 }
+* {
+  box-sizing: border-box;
+}
+.certificacion-descripcion {
+  color: #000000; /* negro */
+}
 
 
     .gear {
@@ -254,16 +826,13 @@ body {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
-
-    .social-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      z-index: 999;
-    }
+.social-float {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
 
     .social-float a {
       width: 45px;
@@ -281,20 +850,32 @@ body {
 
     .social-float a:hover {
       transform: scale(1.15);
-      background: rgb(229, 207, 82);
+      background: rgb(255,204, 0);
       color: #000;
     }
-
-footer {
-  width: 100;
-  margin: 0;
-  padding: 1rem;
-  background: #000;
-  color: #aaa;
-  font-size: 0.9rem;
-  text-align: center;
-  position: relative;
+  
+  @font-face {
+  font-family: 'Font Awesome 5 Brands';
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-brands-400.woff2') format('woff2');
+  font-display: swap;
 }
+
+
+    h2 {
+  font-family: 'Fira Code', monospace;
+  font-size: 1.7rem; /* ligeramente más grande */
+  color: #000000;
+  margin-bottom: 1rem;
+  text-shadow: none; /* sin difuminado */
+}
+
+h3 {
+  font-family: 'VT323', monospace;
+  font-size: 1.8rem;
+  color: #000000;
+}
+
+
 
   @media (max-width: 768px) {
       header h1 { font-size: 2.2rem; }
@@ -310,126 +891,8 @@ footer {
   #construction {
     margin-top: 110px; /* espacio arriba de la sección de construcción */
   }
-  </style>
-</head>
 
-</script>
-
-</head>
-<body>
-  <div class="language-switcher">
-    <a href="/index.html">🇪🇸 Español</a> |
-    <a href="/fr/index.html">🇫🇷 Français</a>
-  </div>
-  <header>
-    <div class="matrix"></div>
-    <h1>Rafael Moreno Pérez</h1>
-    <p>Spécialiste en cybersécurité et administration des systèmes.</p>
-  </header>
-
-  <nav>
-    <a href="#sobre-mi">À propos de moi</a>
-    <a href="#proyectos">Projects</a>
-    <a href="#certificaciones">Certifications</a>
-    <a href="#cv">CV</a>
-    <a href="#habilidades">Compétences</a>
-    <a href="#contacto">Contactez-moi</a>
-    <a href="#seguridad">Securite du site</a>
-  </nav>
-
-  <section id="sobre-mi">
-    <h2><i class="fas fa-user-shield"></i> À propos de moi</h2>
-    <div class="card">
-    <p>Bonjour, je suis Rafael, étudiant en ASIR avec des certifications Cisco CCST en cybersécurité et réseaux. Je me spécialise dans la protection des infrastructures IT, l'optimisation des systèmes et l'analyse des vulnérabilités. Je parle couramment le français, ce qui me permet de travailler dans des environnements internationaux. Passionné par la cybersécurité, je cherche à créer des systèmes sûrs et efficaces. Découvrez mes projets sur GitHub ou contactez-moi pour collaborer.
-
-</p>
-
-    </div>
-  </section>
-
-  <section id="projets">
-    <h2><i class="fas fa-project-diagram"></i> Projets</h2>
-    <div class="card">
-      <h3><i class="fas fa-lock"></i> Honeypot de Sécurité</h3>
-      <p>Implémentation d'un honeypot pour détecter les intrusions et analyser les schémas d'attaque en temps réel.</p>
-    </div>
-    <div class="card">
-      <h3><i class="fas fa-cloud"></i> Automatisation</h2>
-         <p>Déploiement automatisé de serveurs sécurisés avec des scripts en Bash et Ansible.
-
-.</p>
-    </div>
-  </section>
-
-<section id="certificaciones">
-  <h2><i class="fas fa-certificate"></i> Certifications</h2>
-
-  <div class="certificaciones-container" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-    <div data-iframe-width="150" data-iframe-height="270" 
-         data-share-badge-id="dad4ad76-045d-4df9-b408-907234ae2168" 
-         data-share-badge-host="https://www.credly.com"></div>
-
-    <div data-iframe-width="150" data-iframe-height="270" 
-         data-share-badge-id="6ae1a6bb-5ef6-4dcb-97e3-965c7ebc4947" 
-         data-share-badge-host="https://www.credly.com"></div>
-  </div>
-
-  <!-- Texto explicativo debajo -->
-  <p class="certificacion-descripcion">
-  Certificaciones <strong>CCST Cybersecurity & CCST Networking</strong> Obtenues en juillet 2025, ces certifications attestent de compétences essentielles en sécurité informatique, en réseaux, en identification des menaces et en application des bonnes pratiques dans des environnements professionnels.
-</section>
-
-
-<script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
-
-
-  
-  
-  
-  
-<section id="cv">
-  <h2><i class="fas fa-file-alt"></i> CV</h2>
-  <div class="card">
-    <p><i class="fas fa-file-pdf"></i> Vous pouvez télécharger mon CV complet en cliquant
-    <a href="https://drive.google.com/uc?export=download&id=1PSYhsI1UjcgmiqFde5W8DHpSlBdg4EON
-" 
-   class="download-button" 
-   target="_blank">
-   ici
-      </a>.
-    </p>
-  </div>
-</section>
-
-<section id="habilidades">
-  <h2><i class="fas fa-bolt"></i> Compétences</h2>
-  <div class="card">
-    <ul style="list-style:none; padding:0;">
-      <li><i class="fas fa-server"></i> Administration Linux & Windows</li>
-      <li><i class="fas fa-shield-alt"></i> Cybersécurité offensive et défensive</li>
-      <li><i class="fas fa-terminal"></i> Automatisation avec Ansible y Bash</li>
-      <li><i class="fas fa-cloud"></i> Cloud: AWS, Azure</li>
-      <li><i class="fas fa-chart-line"></i> Supervision et hardening des serveurs</li>
-      <li><i class="fas fa-language"></i> Français C1, Espagnol natif</li>
-    </ul>
-  </div>
-</section>
-
-<section id="contacto">
-  <h2><i class="fas fa-envelope"></i> Contactez-moi</h2>
-  
-  <!-- Email -->
-  <div class="card">
-    <p><i class="fas fa-at"></i> Email: 
-      <a href="mailto:Iloveprivacy_us@proton.me">Iloveprivacy_us@proton.me</a>
-    </p>
-  </div>
-
-  <!-- Formulario de contacto -->
-  <div class="card">
-    <form action="https://api.web3forms.com/submit" method="POST">
-<style>
-  .contact-form {
+    .contact-form {
     max-width: 600px;
     margin: 40px auto;
     padding: 25px;
@@ -507,7 +970,7 @@ textarea {
 
 button {
   background-color: #000305;
-  color: rgb(229, 207, 82);
+  color: rgb(255,204, 0);
   padding: 0.8rem 1.5rem;
   border: none;
   border-radius: 6px;
@@ -523,116 +986,1087 @@ button:hover {
   button:hover {
     background: #005fcc;
   }
-</style>
-
-<div class="contact-form">
-  <h2></h2>
-  <form action="https://api.web3forms.com/submit" method="POST">
-    <!-- Tu Access Key de Web3Forms -->
-    <input type="hidden" name="access_key" value="59463dca-91ec-41ee-ae46-c66f76606caf" />
-
-    <div class="form-row">
-      <div class="form-group">
-        <label for="name">Prénom</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-
-      <div class="form-group">
-        <label for="email">E-mail de contact</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-    </div>
-
-    <button type="submit">Envoyer</button>
-  </form>
-</div>
 
 
+  .encabezado {
+  padding-bottom: 0;
+}
+
+.header-content p {
+  margin-top: 20px; /* o menos, según lo que se vea mejor */
+}
+
+.barra-superior {
+  margin-top: 0px; /* o incluso 0 si quieres que esté pegado */
+}
+
+.header-content p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.terminal-title {
+  font-family: 'VT323', monospace;
+  font-size: 5rem;
+  color: #57605c;
+  margin-bottom: 0.5rem;
+}
+.proyecto-img {
+  width: 100%;         /* Ocupa todo el ancho de la tarjeta */
+  max-height: 200px;   /* Ajusta altura según prefieras */
+  object-fit: cover;   /* Recorta la imagen si es necesario */
+  border-radius: 8px;  /* Bordes redondeados */
+  margin-bottom: 15px; /* Separación con el título */
+  display: block;
+}
+
+#proyectos {
+  padding: 40px;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  max-width: 1600px;  /* Más ancho que antes */
+  margin: 0 auto;
+  box-sizing: border-box;
+}
 
 
 
 
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+  .terminal-heading {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #00ffcc; /* Estilo tipo terminal */
+}
+
+.certificacion-descripcion {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.card {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  box-sizing: border-box;
+}
 
 
-<!-- 🚧 Sección de construcción -->
-<section id="construction" class="construction">
-  <div class="gear"></div>
-  <h2>🚧 Site web en construction 🚧</h2>
-  <p>Nous travaillons constamment sur de nouveaux projets et compétences, revenez bientôt..</p>
-</section>
-</div>
+/* Estilos específicos para pantallas pequeñas */
+@media (max-width: 480px) {
+  .form-row {
+    display: block;       /* Apila los campos verticalmente */
+  }
+  @media (max-width: 768px) {
+  .grid-proyectos {
+    grid-template-columns: 1fr;
+  }
+}
+/* Responsive: en móvil apilan verticalmente */
+@media (max-width: 768px) {
+  .grid-habilidades {
+    grid-template-columns: 1fr;
+  }
+}
+/* Responsive: se apilan en móvil */
+@media (max-width: 768px) {
+  .grid-habilidades {
+    grid-template-columns: 1fr;
+  }
+}
+
+  .form-group {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  input, textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+
+
+
+.card:not(#sobre-mi .card):not(#habilidades .card):not(#certificaciones .card):not(#cursos .card):not(#seguridad .card):not(#contacto .card):hover {
+  transform: translateY(-10px);
+}
+
+
+/* 🔹 Activar el movimiento SOLO en las tarjetas de la sección "Proyectos" */
+#proyectos .card:hover {
+  transform: none; 
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Efecto de "elevación" para destacarse */
+}
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #222;
+}
+.card p { 
+  font-size: 16px;  /* más grande y fácil de leer */
+  color: #000000;
+  line-height: 1.8; /* más espacio entre líneas */
+  margin-bottom: 1.5rem; /* separar párrafos */
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: visible;
+}
+
+
+
+.habilidades-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.habilidades-icons img {
+  width: 60px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.habilidades-icons img:hover {
+  transform: scale(1.2);
+}
+
+
+.grid-habilidades {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas en paralelo */
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Cards: sin movimiento al pasar el cursor */
+.grid-habilidades .card {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: none; /* eliminamos cualquier animación */
+}
+
+/* Contenedor de iconos */
+.habilidades-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.habilidades-icons img {
+  width: 60px;
+  height: auto;
+  transition: transform 0.3s; /* solo los iconos se animan */
+}
+
+.habilidades-icons img:hover {
+  transform: scale(1.2);
+}
+
+
+/* Evita que los contenedores de habilidades se muevan */
+.grid-habilidades .card:hover {
+  transform: none;
+}
+
+/* 🔹 Contacto: desactivar hover en el contenedor */
+.contact-form:hover {
+  transform: none;
+}
+
+/* 🔹 Solo el botón tiene animación */
+.contact-form button {
+  transition: background-color none, transform none;
+}
+
+.contact-form button:hover {
+  background-color: #003255;
+  transform: scale(1.05);
+}
+
+.terminal-heading {
+  font-family: ;
+  color: rgb(255,204, 0);
+  background-color: transparent;
+  transition: none;
+  display: inline-block;
+}
+
+.terminal-heading:hover {
+  color: rgb(255,204, 0);
+  transform: none;
+}
+.terminal-heading {
+  font-family: Fira Code;
+  color: rgb(255,204, 0);
+  background-color: #0d0d0d;
+  padding: 12px 20px;
+  border-left: 4px solid rgb(0, 0, 0);
+  box-shadow: inset 0 0 10px rgba(0, 255, 153, 0.1);
+  letter-spac0)ing: 0.5px;
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; !important
+}
+img {
+  max-width: 100%;
+  height: auto; 
+  display: block;
+}
+
+a[href^="mailto:"] {
+  font-size: 1.1rem; /* Ajusta el tamaño según lo que necesites */
+  font-weight: bold; /* Opcional: para que se vea más destacado */
+  color: #000000;     /* Opcional: para que combine con tu estilo */
+}
+#sobre-mi p {
+  margin-bottom: 2.5rem; /* Aumenta el espacio entre párrafos */
+  line-height: 1.8;       /* Mejora la legibilidad del texto */
+  font-size: 2.1rem;      /* Si aún no lo has ajustado, esto lo hace más cómodo de leer */
+}
+#sobre-mi .card {
+  padding: 2rem;
+}
+
+#sobre-mi .imagen-sobre-mi {
+  margin-bottom: 1.5rem;
+}
+
+.texto-sobre-mi {
+  padding: 1rem 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#sobre-mi .card:hover {
+  transform: none !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+#certificaciones .card:hover {
+  transform: none !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+#contacto .card {
+  max-width: 400px;       /* Ajusta según lo que consideres "más chica" */
+  width: 100%;
+  margin: 0 auto;         /* Centra la tarjeta */
+  padding: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+  transition: none !important;
+  transform: none !important;
+  box-sizing: border-box;
+}
+
+#contacto .card:hover {
+  transition: none !important;
+  transform: none !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important; /* misma sombra en hover */
+}
+
+#cv .card {
+  max-width: 300px; /* Ajusta este valor según el ancho deseado */
+  margin: 0 auto; /* Centra la tarjeta horizontalmente */
+  padding: 1.5rem; /* Ajusta el padding para que sea más compacto */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Mantiene la sombra consistente */
+  border-radius: 8px; /* Mantiene los bordes redondeados */
+}
+
+
+
+
+.habilidades-icons img {
+  width: 60px;          /* tamaño fijo de los iconos */
+  height: auto;
+  margin: 0.9rem;       /* separación entre ellos */
+  transition: none !important; /* desactiva cualquier transición */
+  transform: none !important;  /* desactiva escalado o rotación */
+  animation: none !important;  /* desactiva animaciones */
+  cursor: default;      /* el cursor no cambia al pasar el mouse */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.sobre-mi {
+  position: relative;
+  display: inline-block;
+}
+
+.foto {
+  width: 200px;
+  border-radius: 50%;
+}
+
+.mensaje {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-family: sans-serif;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+const helmet = require('helmet');
+app.use(helmet.contentSecurityPolicy({
+  directives: {
+    defaultSrc: ["'self'"],
+    scriptSrc: ["'self'"]
+  }
+}));
+
+.audio-presentacion {
+  margin-top: 20px;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+  transform: scale(0.9); /* Escala visual del bloque */
+  transform-origin: top left; /* Mantiene la alineación */
+}
+
+.audio-presentacion p {
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 0.9em; /* Texto ligeramente más pequeño */
+}
+
+.audio-presentacion audio {
+  width: 100%; /* Mantiene el ancho relativo */
+  height: 28px; /* Opcional: ajusta la altura si el navegador lo permite */
+}
+
+
+.audio-proyecto {
+  margin-top: 15px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 6px;
+  transform: scale(0.9); /* Escala todo el bloque */
+  transform-origin: top left; /* Mantiene la alineación */
+}
+
+.audio-proyecto p {
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 0.9em; /* Texto ligeramente más pequeño */
+}
+
+.audio-proyecto audio {
+  width: 100%; /* Mantiene el ancho relativo */
+  height: 28px; /* Opcional: ajusta la altura si el navegador lo permite */
+}
+
+
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 columnas flexibles */
+  gap: 2rem;
+  width: 100vw; /* Ocupa todo el ancho de la ventana */
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .grid-proyectos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-proyectos {
+    grid-template-columns: 1fr;
+  }
+
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-brands-400.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-solid-900.woff2') format('woff2');
+  font-display: swap;
+}
+
+
+
+
+  </style>
   
-<section id="seguridad">
-  <h2><i class="fas fa-shield-alt"></i> Securité du site</h2>
-  <div class="card">
-    <ul style="list-style:none; padding:0;">
-    <ul>
-  <li><i class="fas fa-lock"></i> Certificat SSL actif</li>
-  <li><i class="fas fa-user-secret"></i> Protection contre les attaques XSS et CSRF</li>
-  <li><i class="fas fa-fire"></i> Pare-feu d'applications web (WAF)</li>
-  <li><i class="fas fa-search"></i> Audits périodiques de vulnérabilités</li>
-  <li><i class="fas fa-database"></i> Chiffrement des données sensibles</li>
-</ul>
 
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+
+
+</script>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+<body>
+  <div class="language-switcher">
+    <a href="/fr/index.html">
+      <img src="https://rafaelmperez.github.io/esflags.png" alt="Bandera de españa" class="flag"> Español
+    </a>
   </div>
-</section>
-<!-- Redes Sociales flotantes -->
-<div class="social-float">
-  <a href="https://www.linkedin.com/in/tuusuario" title="LinkedIn" style="background-color: #0077B5;">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-  <a href="https://www.youtube.com/@tuusuario" title="YouTube" style="background-color: #FF0000;">
-    <i class="fab fa-youtube"></i>
-  </a>
-  <a href="https://github.com/tuusuario" title="GitHub" style="background-color: #181717;">
-    <i class="fab fa-github"></i>
-  </a>
-</div>
+</body>
 
-<!-- Footer -->
-<footer>
-  <p>© 2025 Rafael Moreno Pérez. Site développé avec HTML5 & CSS, édité dans VS Code et hébergé sur GitHub Pages.</p>
-</footer>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<header class="encabezado">
+  <div class="header-content" style="text-align: center;">
+    <img 
+      src="https://rafaelmperez.github.io/assets/img/logo1.v1.webp" 
+      alt="Banner principal de Sysadmin en formación" 
+      class="banner-header" 
+      width="1000" 
+      loading="eager" 
+      fetchpriority="high">
+      
+    <p class="animate__animated animate__fadeInDown" 
+       style="animation-duration: 2s; font-size: 1.5em; font-weight: bold;">
+      Administrateur systèmes junior | Spécialisé en cybersécurité
+    </p>
+  </div>
+</header>
+
+
+
+
+<div class="barra-superior">
+  
+</head>
+<body>
+<nav>
+  <button class="play-btn" id="playPauseBtn" aria-label="Reproducir narración">▶</button>
+  <a href="#sobre-mi">À propos de moi</a>
+  <a href="#habilidades">Compétences</a>
+  <a href="#proyectos">Projets</a>
+  <a href="#certificaciones">Certifications</a>
+  <a href="#cv">CV</a>
+  <a href="#contacto">Contactez-moi</a>
+</nav>
+
+<!-- narración principal -->
+<audio id="narracion" src="https://rafaelmperez.github.io/sounds/portafolioplay.aac" preload="auto"></audio>
+<!-- sonido corto del menú -->
+<audio id="menu-sound" src="https://rafaelmperez.github.io/sounds/clip.aac" preload="auto"></audio>
+
+<script>
+  const narracion = document.getElementById("narracion");
+  const playBtn = document.getElementById("playPauseBtn");
+  const menuSound = document.getElementById("menu-sound");
+
+  // Botón Play/Pause de la narración
+  playBtn.addEventListener("click", () => {
+    if (narracion.paused) {
+      narracion.play();
+      playBtn.textContent = "⏸";
+    } else {
+      narracion.pause();
+      playBtn.textContent = "▶";
+    }
+  });
+
+  narracion.addEventListener("ended", () => {
+    playBtn.textContent = "▶";
+  });
+
+  // Reproducir sonido al pasar por los enlaces del menú
+  const enlaces = document.querySelectorAll("nav a, .play-btn");
+  enlaces.forEach(enlace => {
+    enlace.addEventListener("mouseenter", () => {
+      // clona el sonido para que suene cada vez aunque se solape
+      const sonido = menuSound.cloneNode(true);
+      sonido.play();
+    });
+  });
+</script>
+
+
+  <!-- 👇 Aquí va el script, justo antes de cerrar body -->
+  <script src="script.js"></script>
 </body>
 </html>
 
 
+  <div class="social-float">
+    <a href="https://www.linkedin.com/in/rafaelmperez/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+       <a href="https://github.com/Rafaelmperez" title="GitHub" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-github"></i>
+    </a>
+      <a href="https://www.youtube.com/@rafaelmpTech" title="YouTube" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-youtube"></i>
+    </a>
+ 
+    </a>
+  </div>
+</div>
+
+<section id="sobre-mi">
+  <div class="card">
+    <h2 class="terminal-heading">
+      <i class="fas fa-user-shield"></i> #À propos de moi
+    </h2>
+
+    
+
+    <div class="imagen-sobre-mi">
+   <img 
+  src="https://rafaelmperez.github.io/assets/img/sobremi.v1.webp" 
+  alt="Foto de Rafael M. Pérez" 
+  fetchpriority="high">
+    </div>
+
+    
+
+    <div class="texte-sur-moi"> <p>Bonjour, je suis Rafael, étudiant en ASIR (Administration de Systèmes Informatiques et Réseaux), titulaire des certifications Cisco CCST en cybersécurité et de réseaux. Je me spécialise dans la protection des infrastructures IT, l’optimisation des serveurs et la détection de vulnérabilités. Je parle français (niveau C1), ce qui me permet de collaborer efficacement au sein d’équipes internationales.</p>
+
+<p>Chaque projet que je développe constitue une pratique réelle pour progresser et apporter de la valeur. Je vous invite à explorer mes travaux dans ce <strong>portfolio</strong> et à me contacter si vous souhaitez collaborer.</p>
+
+      <!-- 🎧 Reproductor de audio sin opción de descarga -->
+      <div class="audio-presentacion">
+        <p><strong>🎧 Écouter la version audio :</strong></p>
+        <audio controls controlsList="nodownload noplaybackrate">
+          <source src="https://rafaelmperez.github.io/sounds/presentacion.aac" type="audio/mpeg">
+           Votre navigateur ne prend pas en charge l’élément audio.
+        </audio>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
 
 
+   <section id="habilidades">
+<h2 class="terminal-heading">
+  <i class="fas fa-bolt"></i> competences.sh</h2>
+
+  <div class="grid-habilidades">
+
+ <!-- Conteneur de texte --> <div class="card"> 
+    <h3><i class=></i></h3> <ul style="list-style:none; padding:0;"> <li><i class="fas fa-server">
+        </i> Administration des systèmes Windows et Linux</li> <li><i class="fas fa-shield-alt">
+            </i> Cybersécurité offensive et défensive</li> 
+            <li><i class="fas fa-terminal">
+                </i> Automatisation avec Ansible et Bash</li> 
+                <li><i class="fas fa-cloud"></i> Cloud : AWS, Azure</li> 
+                <li><i class="fas fa-chart-line"></i> Renforcement de la sécurité des serveurs</li> 
+                <li><i class="fas fa-laptop-code"></i> Intégration web adaptative</li> 
+                <li><i class="fas fa-language"></i> Langues : français niveau C1</li> 
+                </ul> 
+                </div>
+
+    <!-- Contenedor de iconos -->
+    <div class="card">
+      <h3><i class=></i></h3>
+      <div class="habilidades-icons">
+        <img src="https://rafaelmperez.github.io/assets/img/visualstudiocode.v1.webp" alt="Visual Studio Code" title="Visual Studio Code">
+        <img src="https://rafaelmperez.github.io/assets/img/kalilinux.v1.webp" alt="Kali Linux" title="Kali Linux">
+        <img src="https://rafaelmperez.github.io/assets/img/linux.v1.webp" alt="Linux" title="Linux">
+        <img src="https://rafaelmperez.github.io/assets/img/windows.v1.webp" alt="Windows" title="Windows">
+        <img src="https://rafaelmperez.github.io/assets/img/python.v1.webp" alt="Python" title="Python">
+        <img src="https://rafaelmperez.github.io/assets/img/grafana.v1.webp" alt="Grafana" title="Grafana">
+        <img src="https://rafaelmperez.github.io/assets/img/ansible.v1.webp" alt="Ansible" title="Ansible">
+        <img src="https://rafaelmperez.github.io/assets/img/bash.v1.webp" alt="Bash" title="Bash">
+        <img src="https://rafaelmperez.github.io/assets/img/github.v1.webp" alt="GitHub" title="GitHub">
+      </div>
+    </div>
+
+  </div> <!-- Cierra grid-habilidades -->
+</section>
+
+
+<!-- SECCIÓN ORIGINAL -->
+<section id="proyectos">
+<h2 class="terminal-heading">
+  <i class="fas fa-project-diagram"></i> ls -la ~/projets/
+</h2>
+  <div class="grid-proyectos">
+    
+<div class="card">
+  <img src="https://rafaelmperez.github.io/assets/img/proyectoweb.v1.webp" 
+       alt="Previsualización Portafolio Web" class="proyecto-img">
+
+<h3><i class="fas fa-lock"></i> Portfolio technique central</h3>
+
+<div class="description-projet"> <p>Ce projet constitue mon portefeuille technique, conçu entièrement depuis zéro avec une approche fonctionnelle et évolutive. Plus qu’une vitrine, il s’agit d’un outil pratique permettant d’organiser, de documenter et de déployer des projets dans des environnements distribués.</p> </div>
+
+  <div class="audio-proyecto">
+    <p><strong>🎧 Écouter la version audio :</strong></p>
+    <audio controls controlsList="nodownload noplaybackrate">
+      <source src="https://rafaelmperez.github.io/sounds/proyectoweb.aac" type="audio/mpeg">
+      Votre navigateur ne prend pas en charge l’élément audio.
+    </audio>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://rafaelmperez.github.io/assets/img/proyectoonion.v1.webp" 
+       alt="Previsualización Tor Hidden Service" class="proyecto-img">
+
+  <h3><i class="fas fa-user-secret"></i> Service caché Tor(.onion)</h3>
+
+  <div class="description-projet"> <p>Projet auto-hébergé et décentralisé de mon portfolio technique, accessible exclusivement via le réseau Tor. Déployé sur un Raspberry Pi 2, il privilégie la confidentialité, l’efficacité et la résilience, démontrant comment fournir des services web statiques dans des environnements contraints, tout en assurant sécurité et contrôle total de l’infrastructure. <a href="http://xwzrrbprgbg324sgzacioafol47j3smjwvatbfwys2cqqr6q4ridanyd.onion/" target="_blank" rel="noopener noreferrer">Lien .onion </a></p> </div>
+
+   <a>
+    <strong>Projet en cours de développement. Bientôt disponible.</strong>
+  </a>
+
+  <div class="audio-proyecto">
+    <p><strong>🎧 Écouter la version audio :</strong></p>
+    <audio controls controlsList="nodownload noplaybackrate">
+      <source src="https://rafaelmperez.github.io/sounds/proyectoonion.aac" type="audio/mpeg">
+      Votre navigateur ne prend pas en charge l’élément audio.
+    </audio>
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="https://rafaelmperez.github.io/assets/img/proyectoia.v1.webp" 
+       alt="Narrateur web à voix personnalisée" class="proyecto-img">
+
+<h3><i class="fas fa-lock"></i> Narrateur web à voix personnalisée</h3>
+
+<div class="description-projet"> <p>Projet inclusif intégrant des narrations générées par intelligence artificielle à partir de ma propre voix. Les textes du site web sont convertis en audio avec une intonation naturelle, ce qui améliore considérablement l’accessibilité, la présentation de la documentation technique et, en définitive, l’expérience utilisateur (UX) pour tous les profils.</p> </div>
+
+  <div class="audio-proyecto">
+    <p><strong>🎧 Écouter la version audio :</strong></p>
+    <audio controls controlsList="nodownload noplaybackrate">
+      <source src="https://rafaelmperez.github.io/sounds/proyectoia.aac" type="audio/mpeg">
+      Votre navigateur ne prend pas en charge l’élément audio.
+    </audio>
+  </div>
+</div>
+
+</section>
+<!-- FIN SECCIÓN PROYECTOS -->
+
+
+<!-- 🚀 SECCIÓN RETOS/MICROPROYECTOS-->
+<section id="simulaciones">
+  <h2 class="terminal-heading">
+    <i class="fas fa-project-diagram"></i> ls -la ~/pratiques_techniques/
+  </h2>
+
+  <div class="grid-proyectos">
+
+    <!-- CARD 1 -->
+    <div class="card">
+      <img src="https://rafaelmperez.github.io/assets/img/Microproyecto1.v1.webp" alt="Implémentation d’un pare-feu avec UFW">
+      <strong>Ubuntu | Parrot | Bash | UFW | SSH Connect</strong>
+      <h3><i class="fas fa-qrcode"></i> Implémentation d’un pare-feu avec UFW</h3>
+      <p>
+J’ai configuré et activé un pare-feu UFW sur un serveur Linux, en définissant des politiques par défaut restrictives et en autorisant un accès sécurisé via SSH. J’ai ensuite vérifié son bon fonctionnement, renforçant ainsi la sécurité du système grâce à une approche simple, efficace et professionnelle.      </p>
+      <p>
+        <a href="https://rafaelmperez.github.io/activacionufw.html" target="_blank">
+          <strong>🔍Cliquez pour voir le processus</strong>
+        </a>
+      </p>
+      <div class="audio-proyecto" style="margin-top: 8px;">
+        <p><strong>🎧 Écouter la version audio :</strong></p>
+        <audio controls controlsList="nodownload noplaybackrate">
+          <source src="https://rafaelmperez.github.io/sounds/microproyecto1.aac" type="audio/mpeg">
+          Votre navigateur ne prend pas en charge l’élément audio.
+        </audio>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card">
+<img src="https://rafaelmperez.github.io/assets/img/proyectografana2.webp" 
+     alt="Système de détection d'intrusions avec visualisation via Grafana" 
+     style="width:100%; height:200px; object-fit:cover;">
+
+      <strong>Ubuntu | Grafana | Suricata | Node Exporter | Fail2ban</strong>
+      <h3><i class="fas fa-qrcode"></i> Système de détection d'intrusions avec visualisation via Grafana</h3>
+      <p>
+J’ai mis en place un système de détection d’intrusions sur un serveur Linux permettant d’identifier les tentatives d’accès suspectes (telles que les attaques par force brute sur SSH, les scans de ports ou les comportements anormaux), et j’ai visualisé ces événements en temps réel à l’aide de tableaux de bord graphiques dans Grafana. L’objectif est de renforcer la sécurité du système grâce à une surveillance active et des alertes automatisées.      </p>
+      <p><strong>Microprojet en cours de développement. Bientôt disponible.</strong></p>
+      <div class="audio-proyecto" style="margin-top: 8px;">
+        <p><strong>🎧 Écouter la version audio :</strong></p>
+        <audio controls controlsList="nodownload noplaybackrate">
+          <source src="" type="audio/mpeg">
+          Votre navigateur ne prend pas en charge l’élément audio.
+        </audio>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+      <div class="card">
+<img src="https://rafaelmperez.github.io/assets/img/proyectopentesting.webp" 
+     alt="Laboratorio de Pentesting Local con Máquinas Vulnerables" 
+     style="width:100%; height:200px; object-fit:cover;">
+        
+      <strong>VirtualBox | Kali Linux | Metasploitable | OWASP Juice Shop</strong>
+     
+      <h3><i class="fas fa-qrcode"></i> Laboratoire de pentesting local avec machines vulnérables</h3>
+      <p>
+<p>
+J’ai conçu un environnement virtuel dédié aux tests d’intrusion, intégrant des machines volontairement vulnérables telles que Metasploitable et OWASP Juice Shop, déployées via VirtualBox aux côtés de Kali Linux. Des analyses réseau ont été réalisées à l’aide de Nmap, suivies d’exploitations basiques via Metasploit. Par ailleurs, des techniques de renforcement de la sécurité (hardening) ont été appliquées afin de durcir les systèmes ciblés.</p>
+      </p>
+      <p><strong>Microprojet en cours de développement. Bientôt disponible.</strong></p>
+      <div class="audio-proyecto" style="margin-top: 8px;">
+        <p><strong>🎧 Écouter la version audio :</strong></p>
+        <audio controls controlsList="nodownload noplaybackrate">
+          <source src="" type="audio/mpeg">
+          Votre navigateur ne prend pas en charge l’élément audio.
+        </audio>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- FIN SECCIÓN RETOS/MICROPROYECTOS -->
+
+
+
+<section id="certificaciones">
+  <!-- Primer card -->
+  <div class="card">
+    <h2 class="terminal-heading">
+      <i class="fas fa-certificate"></i> certifications.conf
+    </h2>
+
+    <div class="certificaciones-container">
+      <div data-iframe-width="150" data-iframe-height="270" 
+           data-share-badge-id="dad4ad76-045d-4df9-b408-907234ae2168" 
+           data-share-badge-host="https://www.credly.com"></div>
+
+      <div data-iframe-width="150" data-iframe-height="270" 
+           data-share-badge-id="6ae1a6bb-5ef6-4dcb-97e3-965c7ebc4947" 
+           data-share-badge-host="https://www.credly.com"></div>
+    </div>
+
+ <p class="certificacion-descripcion">
+      Certifications <strong>CCST Cybersecurity et CCST Networking</strong> obtenues en juillet 2025. Ces accréditations valident des connaissances essentielles en sécurité informatique, réseaux, identification des menaces et application de bonnes pratiques dans des environnements professionnels.
+</p>
+</div>
+
+<!-- Deuxième carte dupliquée -->
+<div class="card">
+  <h2 class="terminal-heading">
+    <i class="fas fa-laptop-code"></i> cours_relevants.log
+  </h2>
+
+
+
+<section class="certifications">
+  <div class="certificacion-descripcion">
+<strong>IFCM026PO – Sécurité informatique et signature électronique</strong><br>
+Cours de 50 heures sur la signature électronique, les certificats numériques, l’authentification sécurisée et les mesures de protection de l’identité numérique dans les environnements télématiques. Inclut des aspects techniques et juridiques essentiels pour la sécurité des documents et des communications.
+</div>
+
+
+
+  <div class="certificacion-descripcion">
+    <strong>IFCT0087 – Cybersécurité de base</strong><br>
+Cours de 60 heures axé sur l’identification des menaces numériques, la protection des systèmes informatiques et l’application de bonnes pratiques en matière de sécurité. Comprend une formation sur les malwares, les réseaux sécurisés, la gestion des mots de passe et l’utilisation responsable des appareils connectés.
+</div>
+
+</section>
 
 
 
 
+<!-- Script de Credly -->
+<script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+
+
+<style>
+  .badge-wrapper iframe {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .badge-wrapper:hover iframe {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+</style>
+
+
+  <style>
+    .badge-wrapper {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.badge-wrapper:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+    .certificaciones-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .certificaciones-container iframe {
+      max-width: 150px;
+      max-height: 270px;
+      border: none;
+      display: block;
+    }
+
+    .certificacion-descripcion {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+   .small-card {
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto; /* 🔥 Esto la centra horizontalmente */
+  padding: 16px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+}
+
+
+  </style>
+  <script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+
+
+<script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+
+</section>
+
+
+
+<section id="cv">
+  <h2 class="terminal-heading">
+    <i class="fas fa-file-alt"></i> $ cat curriculum.txt
+  </h2>
+  <div class="card small-card">
+    <p>
+      <i class="fas fa-file-pdf"></i>
+      <a href="https://drive.google.com/uc?export=download&id=..." 
+         class="download-button" 
+         target="_blank" 
+         rel="noopener noreferrer">
+          Consulter le CV au format PDF
+      </a>.
+    </p>
+  </div>
+</section>
+
+
+
+<section id="contacto">
+<h2 class="terminal-heading">
+  <i class="fas fa-envelope"></i>  </i>ping world > contact.log
+
+</h2>
+
+
+  <!-- Formulaire de contact -->
+  <div class="card">
+    <div class="contact-form">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <!-- Tu Access Key de Web3Forms -->
+        <input type="hidden" name="access_key" value="59463dca-91ec-41ee-ae46-c66f76606caf" />
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Prénom</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail de contact</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+<label for="captcha">¿Combien font 2 + 3?</label>
+<input type="text" id="captcha" name="captcha" required>
+<button type="submit">Envoyer</button>
+      
+      </form>
+      
+    </div>
+      <!-- Email -->
+  <div class="card">
+    <p><i class="fas fa-at"></i> Adresse e-mail de contact: 
+<a href="mailto:sysadminweb@proton.me">sysadminweb@proton.me</a>
+    </p>
+  </div>
+  </div>
+</section>
+
+
+
+<section id="seguridad">
+  <h2 class="terminal-heading">
+  <i class="fas fa-project-diagram"></i>root@secure:~$ ./status.sh
+</h2>
+
+
+  <div class="card">
+    <ul style="list-style:none; padding:0;">
+
+<li><i class="fas fa-lock"></i> Certificat SSL actif</li>
+<li><i class="fas fa-user-secret"></i> Protection contre les scripts malveillants</li>
+<li><i class="fas fa-user-ninja"></i> Serveur Tor caché protégé par Fail2ban</li>
+<li><i class="fas fa-fire"></i> Infrastructure sécurisée via un fournisseur fiable</li>
+<li><i class="fas fa-search"></i> Mises à jour régulières et vérification des dépendances</li>
+
+
+
+    </ul>
+    <!-- Badge SSL Labs – RafaelMPerez.github.io -->
+<a
+  href="https://www.ssllabs.com/ssltest/analyze.html?d=rafaelmperez.github.io&latest"
+  target="_blank"
+  rel="noopener nofollow"
+  aria-label="Ver informe de SSL Labs para rafaelmperez.github.io"
+  style="
+    --ssl-badge-bg: #0f172a;        /* fondo (modo claro) */
+    --ssl-badge-fg: #e2e8f0;        /* texto/icono (modo claro) */
+    --ssl-badge-accent: #16a34a;    /* borde/acento */
+    --ssl-badge-grade: #10b981;     /* cápsula de la nota */
+    display:inline-flex;align-items:center;gap:.6rem;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji';
+    text-decoration:none;border:1px solid var(--ssl-badge-accent);
+    background:var(--ssl-badge-bg);color:var(--ssl-badge-fg);
+    padding:.5rem .75rem;border-radius:999px; box-shadow:0 4px 16px rgba(0,0,0,.12);
+  "
+>
+  <!-- Candado SVG -->
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+       style="flex:0 0 auto">
+    <path d="M17 8h-1V6a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2Zm-8-2a3 3 0 0 1 6 0v2H9V6Zm9 12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v8Z"/>
+  </svg>
+
+  <!-- Texto -->
+  <span style="line-height:1.1;display:flex;flex-direction:column;">
+    <strong style="font-size:.95rem;"><strong>Connexion sécurisée SSL</strong>
+<span style="font-size:.8rem;opacity:.9;">Analysée sur SSL Labs · cliquez pour voir le rapport</span>
+</span>
+  </span>
+
+  <!-- Etiqueta de nota -->
+  <span
+    style="
+      margin-left:.25rem; padding:.2rem .5rem; border-radius:999px;
+      background:var(--ssl-badge-grade); color:#052e16; font-weight:700; font-size:.85rem;
+      border:1px solid rgba(0,0,0,.08);
+    "
+    aria-hidden="true"
+  >A+</span>
+</a>
+
+<!-- Modo oscuro automático (opcional) -->
+<style>
+@media (prefers-color-scheme: dark) {
+  a[aria-label^="Ver informe de SSL Labs"]{
+    --ssl-badge-bg:#020617;
+    --ssl-badge-fg:#e5e7eb;
+    --ssl-badge-accent:#22c55e;
+    --ssl-badge-grade:#22c55e;
+  }
+}
+</style>
+
+
+  </div>
+  
+</section>
+
+<!-- Footer -->
+<footer>
+ <p>© 2025 Développé par Rafael M. Pérez · HTML5 · CSS · JavaScript · GitHub Pages. Design minimaliste créé de zéro avec une approche épurée et fonctionnelle.</p>
+
+<p class="terminal-line">$ exit # Session terminée. Merci d’avoir visité mon système!</p>
+
+
+</footer>
 
 
 
 
+<script>
+  document.querySelector("form").addEventListener("submit", function(e) {
+    const captcha = document.querySelector('input[name="captcha"]').value.trim();
+    if (captcha !== "5") {
+      e.preventDefault(); // Detiene el envío
+      alert("Respuesta incorrecta a la pregunta de seguridad.");
+    }
+  });
+</script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</body>
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function() {
+    var script = document.createElement("script");
+    script.src = "https://cdn.credly.com/assets/utilities/embed.js";
+    script.type = "text/javascript";
+    document.body.appendChild(script);
+  });
+</script>
+</html>
 
 
 
