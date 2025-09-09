@@ -1469,20 +1469,31 @@ app.use(helmet.contentSecurityPolicy({
 
 <header class="encabezado">
   <div class="header-content" style="text-align: center;">
+    <!-- Imagen principal optimizada para LCP -->
     <img 
       src="https://rafaelmperez.github.io/assets/img/logo1.jpg" 
+      alt="Logo principal" 
+      width="1300" 
+      height="431" 
+      fetchpriority="high">
+
+    <!-- Banner adicional -->
+    <img 
+      src="https://rafaelmperez.github.io/assets/img/banner.jpg" 
       alt="Banner principal de Sysadmin en formación" 
       class="banner-header" 
       width="1000" 
       loading="eager" 
       fetchpriority="high">
-      
+
+    <!-- Texto animado -->
     <p class="animate__animated animate__fadeInDown" 
        style="animation-duration: 2s; font-size: 1.5em; font-weight: bold;">
       Sysadmin Junior | Enfocado en ciberseguridad
     </p>
   </div>
 </header>
+
 
 
 
@@ -2086,6 +2097,7 @@ app.use(helmet.contentSecurityPolicy({
   });
 </script>
 </html>
+
 
 
 
