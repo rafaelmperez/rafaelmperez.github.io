@@ -4,16 +4,9 @@
 <html lang="es">
 <head>
 
-    <!-- Encabezados de seguridad -->
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <!-- Evita que el navegador intente adivinar el tipo de contenido -->
+<meta name="referrer" content="no-referrer">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 
-<!-- Política de referencia para evitar filtrado de URLs -->
-<meta name="referrer" content="no-referrer">
-
-<!-- Política de permisos para desactivar APIs sensibles -->
-<meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=()">
 
 
 
@@ -2069,6 +2062,7 @@ app.use(helmet.contentSecurityPolicy({
   });
 </script>
 </html>
+
 
 
 
