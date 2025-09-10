@@ -1967,20 +1967,24 @@ app.use(helmet.contentSecurityPolicy({
 
 <section id="seguridad">
   <h2 class="terminal-heading">
-  <i class="fas fa-project-diagram"></i>./status.sh
-
-
-</h2>
-
+    <i class="fas fa-project-diagram"></i> ./status.sh
+  </h2>
 
   <div class="card">
     <ul style="list-style:none; padding:0;">
 
-<li><i class="fas fa-lock"></i> Certificado SSL activo</li>
-<li><i class="fas fa-user-secret"></i> Protección contra scripts maliciosos</li>
-<li><i class="fas fa-user-ninja"></i> Servidor oculto Tor protegido con Fail2ban</li>
-<li><i class="fas fa-fire"></i> Infraestructura segura mediante proveedor confiable</li>
-<li><i class="fas fa-search"></i> Actualizaciones periódicas y revisión de dependencias</li>
+      <li><i class="fas fa-lock"></i> Certificado SSL activo y precarga HSTS</li>
+      <li><i class="fas fa-user-secret"></i> Protección contra scripts maliciosos (CSP, XSS, Referrer Policy)</li>
+      <li><i class="fas fa-user-ninja"></i> Servidor oculto Tor con Fail2ban y UFW configurado</li>
+      <li><i class="fas fa-shield-alt"></i> Reglas de seguridad personalizadas en Cloudflare</li>
+      <li><i class="fas fa-fire"></i> Infraestructura segura mediante proveedor confiable</li>
+      <li><i class="fas fa-search"></i> Auditorías periódicas con Snyk, SecurityHeaders y SSL Labs</li>
+      <li><i class="fas fa-sync-alt"></i> Actualizaciones automáticas y revisión de dependencias</li>
+
+    </ul>
+  </div>
+</section>
+
 
 
     </ul>
@@ -2077,6 +2081,7 @@ app.use(helmet.contentSecurityPolicy({
   });
 </script>
 </html>
+
 
 
 
