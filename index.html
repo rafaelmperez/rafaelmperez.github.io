@@ -1996,24 +1996,29 @@ app.use(helmet.contentSecurityPolicy({
     font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans';
   ">
 
-    <!-- Badge SSL Labs -->
-    <a href="https://www.ssllabs.com/ssltest/analyze.html?d=rafaelmperez.com&latest"
-       target="_blank"
-       rel="noopener nofollow"
-       style="
-         display: inline-flex;
-         align-items: center;
-         gap: .5rem;
-         background: #0f172a;
-         color: #e2e8f0;
-         border: 1px solid #16a34a;
-         padding: .5rem .75rem;
-         border-radius: 999px;
-         text-decoration: none;
-         box-shadow: 0 4px 16px rgba(0,0,0,.12);
-       ">
-      🔒 <strong>SSL Labs</strong>: A+  
-    </a>
+<!-- Badge SSL Labs con candado SVG -->
+<a href="https://www.ssllabs.com/ssltest/analyze.html?d=rafaelmperez.com&latest"
+   target="_blank"
+   rel="noopener nofollow"
+   style="
+     display: inline-flex;
+     align-items: center;
+     gap: .5rem;
+     background: #0f172a;
+     color: #e2e8f0;
+     border: 1px solid #16a34a;
+     padding: .5rem .75rem;
+     border-radius: 999px;
+     text-decoration: none;
+     box-shadow: 0 4px 16px rgba(0,0,0,.12);
+   ">
+  <!-- Candado SVG -->
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+       style="flex:0 0 auto">
+    <path d="M17 8h-1V6a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2Zm-8-2a3 3 0 0 1 6 0v2H9V6Zm9 12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v8Z"/>
+  </svg>
+
+  <strong>SSL Labs</strong>: A+
 
     <!-- Badge Snyk -->
     <a href="https://securityheaders.com/?q=rafaelmperez.com&followRedirects=on"
@@ -2035,13 +2040,6 @@ app.use(helmet.contentSecurityPolicy({
     </a>
 
   </div>
-</div>
-
-
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
-       style="flex:0 0 auto">
-    <path d="M17 8h-1V6a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2Zm-8-2a3 3 0 0 1 6 0v2H9V6Zm9 12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v8Z"/>
-  </svg>
 
 <!-- Modo oscuro automático (opcional) -->
 <style>
@@ -2079,6 +2077,7 @@ app.use(helmet.contentSecurityPolicy({
   });
 </script>
 </html>
+
 
 
 
