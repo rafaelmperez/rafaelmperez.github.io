@@ -1837,13 +1837,17 @@ app.use(helmet.contentSecurityPolicy({
 
 <section class="certificaciones">
   <div class="certificacion-descripcion">
-    <strong>IFCM026PO – Seguridad Informática y Firma Digital</strong><br>
-    Curso de 50 horas sobre firma electrónica, certificados digitales, autenticación segura y medidas de protección de la identidad digital en entornos telemáticos. Incluye aspectos técnicos y legales clave para la seguridad documental y de las comunicaciones.
-  </div>
 
-  <div class="certificacion-descripcion">
+    <strong>IFCT013 – Ciberseguridad: Prevención, Análisis y Respuesta a Incidentes</strong><br>
+    Curso de 60 horas sobre detección, análisis y respuesta ante incidentes de seguridad informática. Aborda técnicas de prevención, gestión de riesgos, análisis forense y recuperación ante ataques cibernéticos. Incluye herramientas prácticas y metodologías clave para proteger sistemas, redes y datos frente a amenazas avanzadas.
+  </div>
+ 
     <strong>IFCT0087 – Ciberseguridad Básica</strong><br>
     Curso de 60 horas centrado en la identificación de amenazas digitales, protección de sistemas informáticos y aplicación de buenas prácticas en seguridad. Incluye formación en malware, redes seguras, gestión de contraseñas y uso responsable de dispositivos conectados.
+  </div>
+
+    <strong>IFCM026PO – Seguridad Informática y Firma Digital</strong><br>
+    Curso de 50 horas sobre firma electrónica, certificados digitales, autenticación segura y medidas de protección de la identidad digital en entornos telemáticos. Incluye aspectos técnicos y legales clave para la seguridad documental y de las comunicaciones.
   </div>
 </section>
 
@@ -2047,19 +2051,6 @@ app.use(helmet.contentSecurityPolicy({
   </strong>
 </footer>
 
-
-
-
-<script>
-  document.querySelector("form").addEventListener("submit", function(e) {
-    const captcha = document.querySelector('input[name="captcha"]').value.trim();
-    if (captcha !== "5") {
-      e.preventDefault(); // Detiene el envío
-      alert("Respuesta incorrecta a la pregunta de seguridad.");
-    }
-  });
-</script>
-
 </body>
 <script type="text/javascript">
   document.addEventListener("DOMContentLoaded", function() {
@@ -2070,6 +2061,7 @@ app.use(helmet.contentSecurityPolicy({
   });
 </script>
 </html>
+
 
 
 
