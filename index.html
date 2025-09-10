@@ -1984,30 +1984,43 @@ app.use(helmet.contentSecurityPolicy({
 
 
     </ul>
-    <!-- Badge SSL Labs – RafaelMPerez.github.io -->
-<a   
-  href="https://www.ssllabs.com/ssltest/analyze.html?d=rafaelmperez.com&latest"
-  target="_blank"
-  rel="noopener nofollow"
-  aria-label="Ver informe de SSL Labs para rafaelmperez.github.io"
-  style="
-    --ssl-badge-bg: #0f172a;        /* fondo (modo claro) */
-    --ssl-badge-fg: #e2e8f0;        /* texto/icono (modo claro) */
-    --ssl-badge-accent: #16a34a;    /* borde/acento */
-    --ssl-badge-grade: #10b981;     /* cápsula de la nota */
-    display:inline-flex;align-items:center;gap:.6rem;
-    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji';
-    text-decoration:none;border:1px solid var(--ssl-badge-accent);
-    background:var(--ssl-badge-bg);color:var(--ssl-badge-fg);
-    padding:.5rem .75rem;border-radius:999px; box-shadow:0 4px 16px rgba(0,0,0,.12);
-  "
->
+    <!-- Contenedor de badges de seguridad -->
+<div style="
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji';
+">
 
-    <a href="https://securityheaders.com/?q=rafaelmperez.com&followRedirects=on" target="_blank">
-  <img src="https://img.shields.io/badge/Snyk-Security%20Scan-blueviolet?logo=snyk&style=flat-square" alt="Snyk Security Scan">
-</a>
+  <!-- Badge SSL Labs -->
+  <a   
+    href="https://www.ssllabs.com/ssltest/analyze.html?d=rafaelmperez.com&latest"
+    target="_blank"
+    rel="noopener nofollow"
+    aria-label="Ver informe de SSL Labs para rafaelmperez.com"
+    style="
+      border: 1px solid #16a34a;
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: .5rem .75rem;
+      border-radius: 999px;
+      box-shadow: 0 4px 16px rgba(0,0,0,.12);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+    "
+  >
+    🔒 SSL Labs: A
+  </a>
 
-  <!-- Candado SVG -->
+  <!-- Badge Snyk -->
+  <a href="https://securityheaders.com/?q=rafaelmperez.com&followRedirects=on" target="_blank" rel="noopener nofollow">
+    <img src="https://img.shields.io/badge/Snyk-Security%20Scan-blueviolet?logo=snyk&style=flat-square" alt="Snyk Security Scan" style="height: 28px;">
+  </a>
+
+</div>
+
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
        style="flex:0 0 auto">
     <path d="M17 8h-1V6a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2Zm-8-2a3 3 0 0 1 6 0v2H9V6Zm9 12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v8Z"/>
@@ -2066,6 +2079,7 @@ app.use(helmet.contentSecurityPolicy({
   });
 </script>
 </html>
+
 
 
 
