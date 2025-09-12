@@ -1634,51 +1634,105 @@ app.use(helmet.contentSecurityPolicy({
     </div>
 
   </div> <!-- Cierra grid-habilidades -->
+<!-- SECCIÓN ORIGINAL -->
 <section id="proyectos">
-  <div class="card">
+<h2 class="terminal-heading">
+  <i class="fas fa-project-diagram"></i> ls -la ~/proyectos/
+</h2>
+  <div class="grid-proyectos">
 
-    <h2 class="terminal-heading">
-      <i class="fas fa-project-diagram"></i> ls -la ~/proyectos/
-    </h2>
 
-    <div class="grid-proyectos">
+    <div class="card">
+  <img src="https://rafaelmperez.github.io/assets/img/bastionamiento.jpg" 
+       alt="Bastionamiento del sitio web" class="proyecto-img">
+<strong>
+  <span style="color:#17A2B8;">Cloudflare</span> |
+  <span style="color:#6C757D;">Nikto</span> |
+  <span style="color:#28A745;">Nmap</span> |
+  <span style="color:#007BFF;">SSLyze</span> |
+  <span style="color:#FFA500;">Security Headers</span>
+</strong>
 
-      <!-- CARD 1 -->
-      <div class="card">
-        <img src="https://rafaelmperez.github.io/assets/img/bastionamiento.jpg" alt="Bastionamiento del sitio web" class="proyecto-img">
-        <strong>
-          <span style="color:#17A2B8;">Cloudflare</span> |
-          <span style="color:#6C757D;">Nikto</span> |
-          <span style="color:#28A745;">Nmap</span> |
-          <span style="color:#007BFF;">SSLyze</span> |
-          <span style="color:#FFA500;">Security Headers</span>
-        </strong>
-        <h3><i class="fas fa-lock"></i> Bastionamiento del sitio web</h3>
-        <div class="descripcion-proyecto">
-          <p>Este proyecto consiste en el bastionamiento progresivo de mi sitio web, acompañado de auditorías periódicas para reforzar su seguridad. He implementado cabeceras HTTP, políticas de permisos y configuraciones clave, mitigando diversos vectores de amenaza. Utilizo herramientas como Nmap, Nikto y SSLyze para auditar y documentar cada fase del proceso. El resultado es una infraestructura más resiliente, que refleja mi compromiso constante con la ciberseguridad aplicada.</p>
-        </div>
-        <div class="audio-proyecto">
-          <p><strong>🎧 Versión en audio:</strong></p>
-          <audio controls controlsList="nodownload noplaybackrate">
-            <source src="https://rafaelmperez.github.io/sounds/bastionamiento.aac" type="audio/mpeg">
-            Tu navegador no soporta el elemento de audio.
-          </audio>
-        </div>
-      </div>
+  <h3><i class="fas fa-lock"></i> Bastionamiento del sitio web</h3>
 
-      <!-- CARD 2 -->
-      <div class="card">
-        <img src="https://rafaelmperez.github.io/assets/img/proyectoonion.jpg" alt="Previsualización Tor Hidden Service" class="proyecto-img">
-        <strong>
-          <span style="color:#7E4798;">Tor</span> |
-          <span style="color:#D42029;">Apache</span> |
-          <span style="color:#A0C52F;">Raspberry Pi OS</span> |
-          <span style="color:#6C757D;">Nikto</span> |
-          <span style="color:#28A745;">Nmap</span>
-        </strong>
-        <h3><i class="fas fa-user-secret"></i> Hidden Service en Tor (.onion)</h3>
-        <div class="descripcion-proyecto">
-          <p>Proyecto
+  <div class="descripcion-proyecto">
+<p>Este proyecto consiste en el bastionamiento progresivo de mi sitio web, acompañado de auditorías periódicas para reforzar su seguridad. 
+
+He implementado cabeceras HTTP, políticas de permisos y configuraciones clave, mitigando diversos vectores de amenaza. 
+
+Utilizo herramientas como Nmap, Nikto y SSLyze para auditar y documentar cada fase del proceso. El resultado es una infraestructura más resiliente, que refleja mi compromiso constante con la ciberseguridad aplicada.</p>  </div>
+
+  <div class="audio-proyecto">
+    <p><strong>🎧 Versión en audio:</strong></p>
+    <audio controls controlsList="nodownload noplaybackrate">
+      <source src="https://rafaelmperez.github.io/sounds/bastionamiento.aac" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://rafaelmperez.github.io/assets/img/proyectoonion.jpg" 
+       alt="Previsualización Tor Hidden Service" class="proyecto-img">
+<strong>
+  <span style="color:#7E4798;">Tor</span> |
+  <span style="color:#D42029;">Apache</span> |
+  <span style="color:#A0C52F;">Raspberry Pi OS</span> |
+  <span style="color:#6C757D;">Nikto</span> |
+  <span style="color:#28A745;">Nmap</span>
+</strong>
+  <h3><i class="fas fa-user-secret"></i> Hidden Service en Tor (.onion)</h3>
+
+  <div class="descripcion-proyecto">
+    <p>Proyecto autoalojado y descentralizado de mi portafolio técnico, accesible únicamente a través de la red Tor. 
+    Desplegado en una Raspberry Pi 2, prioriza privacidad, eficiencia y resiliencia, demostrando como ofrecer servicios web estáticos en entornos limitados con seguridad y control total de la infraestructura.  
+    <a href="http://xwzrrbprgbg324sgzacioafol47j3smjwvatbfwys2cqqr6q4ridanyd.onion/" target="_blank" rel="noopener noreferrer">Enlace .onion</a></p>
+  </div>
+
+   <a>
+    <strong>Proyecto en fase de desarrollo. Próximamente.</strong>
+  </a>
+
+  <div class="audio-proyecto">
+    <p><strong>🎧 Versión en audio:</strong></p>
+    <audio controls controlsList="nodownload noplaybackrate">
+      <source src="https://rafaelmperez.github.io/sounds/proyectoonion.aac" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+  </div>
+</div>
+    
+    
+    
+<div class="card">
+  <img src="https://rafaelmperez.github.io/assets/img/proyectoweb.jpg" 
+       alt="Previsualización Portafolio Web" class="proyecto-img">
+<strong>
+  <span style="color:#007ACC;">VS Code</span> |
+  <span style="color:#24292E;">GitHub Pages</span> |
+  <span style="color:#28A745;">Lighthouse</span> |
+  <span style="color:#FFA500;">HTML/CSS/JS</span>
+</strong>
+
+  <h3><i class="fas fa-laptop-code"></i> Portafolio técnico central</h3>
+
+<div class="descripcion-proyecto">
+<p>Este proyecto es mi portafolio técnico, diseñado desde cero con un enfoque funcional y escalable. Más que un escaparate, es una herramienta práctica para organizar, documentar y desplegar proyectos en entornos distribuidos.</p>
+</div>
+
+  <div class="audio-proyecto">
+    <p><strong>🎧 Versión en audio:</strong></p>
+    <audio controls controlsList="nodownload noplaybackrate">
+      <source src="https://rafaelmperez.github.io/sounds/proyectoweb.aac" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+  </div>
+</div>
+
+
+
+
+
 
 </section>
 <!-- FIN SECCIÓN PROYECTOS -->
@@ -2081,6 +2135,7 @@ app.use(helmet.contentSecurityPolicy({
   });
 </script>
 </html>
+
 
 
 
