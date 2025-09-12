@@ -1637,45 +1637,48 @@ app.use(helmet.contentSecurityPolicy({
 </section>
 
 
-<!-- SECCIÓN ORIGINAL -->
 <section id="proyectos">
-   <div class="card">
-     
-<h2 class="terminal-heading">
-  <i class="fas fa-project-diagram"></i> ls -la ~/proyectos/
-</h2>
-     
-  <div class="grid-proyectos">
+  <div class="card">
 
+    <h2 class="terminal-heading">
+      <i class="fas fa-project-diagram"></i> ls -la ~/proyectos/
+    </h2>
 
-   
-  <img src="https://rafaelmperez.github.io/assets/img/bastionamiento.jpg" 
-       alt="Bastionamiento del sitio web" class="proyecto-img">
-<strong>
-  <span style="color:#17A2B8;">Cloudflare</span> |
-  <span style="color:#6C757D;">Nikto</span> |
-  <span style="color:#28A745;">Nmap</span> |
-  <span style="color:#007BFF;">SSLyze</span> |
-  <span style="color:#FFA500;">Security Headers</span>
-</strong>
+    <div class="grid-proyectos">
 
-  <h3><i class="fas fa-lock"></i> Bastionamiento del sitio web</h3>
+      <!-- CARD: Bastionamiento del sitio web -->
+      <div class="card">
+        <img src="https://rafaelmperez.github.io/assets/img/bastionamiento.jpg" 
+             alt="Bastionamiento del sitio web" class="proyecto-img">
 
-  <div class="descripcion-proyecto">
-<p>Este proyecto consiste en el bastionamiento progresivo de mi sitio web, acompañado de auditorías periódicas para reforzar su seguridad. 
+        <strong>
+          <span style="color:#17A2B8;">Cloudflare</span> |
+          <span style="color:#6C757D;">Nikto</span> |
+          <span style="color:#28A745;">Nmap</span> |
+          <span style="color:#007BFF;">SSLyze</span> |
+          <span style="color:#FFA500;">Security Headers</span>
+        </strong>
 
-He implementado cabeceras HTTP, políticas de permisos y configuraciones clave, mitigando diversos vectores de amenaza. 
+        <h3><i class="fas fa-lock"></i> Bastionamiento del sitio web</h3>
 
-Utilizo herramientas como Nmap, Nikto y SSLyze para auditar y documentar cada fase del proceso. El resultado es una infraestructura más resiliente, que refleja mi compromiso constante con la ciberseguridad aplicada.</p>  </div>
+        <div class="descripcion-proyecto">
+          <p>Este proyecto consiste en el bastionamiento progresivo de mi sitio web, acompañado de auditorías periódicas para reforzar su seguridad. He implementado cabeceras HTTP, políticas de permisos y configuraciones clave, mitigando diversos vectores de amenaza. Utilizo herramientas como Nmap, Nikto y SSLyze para auditar y documentar cada fase del proceso. El resultado es una infraestructura más resiliente, que refleja mi compromiso constante con la ciberseguridad aplicada.</p>
+        </div>
 
-  <div class="audio-proyecto">
-    <p><strong>🎧 Versión en audio:</strong></p>
-    <audio controls controlsList="nodownload noplaybackrate">
-      <source src="https://rafaelmperez.github.io/sounds/bastionamiento.aac" type="audio/mpeg">
-      Tu navegador no soporta el elemento de audio.
-    </audio>
-  </div>
-</div>
+        <div class="audio-proyecto">
+          <p><strong>🎧 Versión en audio:</strong></p>
+          <audio controls controlsList="nodownload noplaybackrate">
+            <source src="https://rafaelmperez.github.io/sounds/bastionamiento.aac" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+          </audio>
+        </div>
+      </div> <!-- Fin card bastionamiento -->
+
+    </div> <!-- Fin grid-proyectos -->
+
+  </div> <!-- Fin card envolvente -->
+</section>
+
 
 <div class="card">
   <img src="https://rafaelmperez.github.io/assets/img/proyectoonion.jpg" 
@@ -2141,6 +2144,7 @@ Utilizo herramientas como Nmap, Nikto y SSLyze para auditar y documentar cada fa
   });
 </script>
 </html>
+
 
 
 
