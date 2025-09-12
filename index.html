@@ -220,11 +220,7 @@ h2 {
 }
 
 /* PROJECTS */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
+
 
 .project-card {
   background: #222;
@@ -1038,11 +1034,7 @@ button:hover {
 
 
 
-.grid-proyectos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 30px;
-}
+
   .terminal-heading {
   font-size: 1.5em;
   margin-bottom: 15px;
@@ -1412,25 +1404,27 @@ app.use(helmet.contentSecurityPolicy({
 
 .grid-proyectos {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 columnas flexibles */
-  gap: 2rem;
-  width: 100vw; /* Ocupa todo el ancho de la ventana */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  justify-content: center;
   max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
-  box-sizing: border-box;
 }
 
 @media (max-width: 1024px) {
   .grid-proyectos {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* ← Fuerza 2 columnas */
   }
 }
 
 @media (max-width: 600px) {
   .grid-proyectos {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* ← Solo 1 columna en móviles */
   }
+}
+
+
+
 
 @font-face {
   font-family: 'Font Awesome 5 Brands';
@@ -2139,7 +2133,6 @@ Utilizo herramientas como Nmap, Nikto y SSLyze para auditar y documentar cada fa
   });
 </script>
 </html>
-
 
 
 
