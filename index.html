@@ -1443,6 +1443,37 @@ app.use(helmet.contentSecurityPolicy({
 }
 
 
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .grid-proyectos {
+    grid-template-columns: repeat(2, 1fr); /* ← Fuerza 2 columnas */
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-proyectos {
+    grid-template-columns: 1fr; /* ← Solo 1 columna en móviles */
+  }
+}
+
+
+.grid-habilidades {
+  display: grid;
+  grid-template-columns: 1fr; /* una sola columna */
+  gap: 0;                     /* sin espacio entre cards */
+  padding: 0;
+  margin: 0;
+}
+
+
 
 
   </style>
@@ -1598,42 +1629,52 @@ app.use(helmet.contentSecurityPolicy({
 
 
    <section id="habilidades">
-<h2 class="terminal-heading">
-  <i class="fas fa-bolt"></i> habilidades.sh</h2>
+  <!-- Card envolvente -->
+  <div class="card">
 
-  <div class="grid-habilidades">
+    <!-- Terminal heading dentro de la card -->
+    <h2 class="terminal-heading">
+      <i class="fas fa-bolt"></i> habilidades.sh
+    </h2>
 
-    <!-- Contenedor de texto -->
-    <div class="card">
-      <h3><i class=></i></h3>
-      <ul style="list-style:none; padding:0;">
-        <li><i class="fas fa-server"></i> Administración de sistemas Windows y Linux</li>
-        <li><i class="fas fa-shield-alt"></i> Ciberseguridad ofensiva y defensiva</li>
-        <li><i class="fas fa-terminal"></i> Automatización con Ansible y Bash</li>
-        <li><i class="fas fa-cloud"></i> Cloud: AWS, Azure</li>
-        <li><i class="fas fa-chart-line"></i> Supervisión y hardening de servidores</li>
-        <li><i class="fas fa-laptop-code"></i> Maquetación web responsive</li>
-        <li><i class="fas fa-language"></i> Idiomas Francés C1</li>
-      </ul>
-    </div>
+    <!-- Grid de habilidades con dos cards internas -->
+    <div class="grid-habilidades">
 
-    <!-- Contenedor de iconos -->
-    <div class="card">
-      <h3><i class=></i></h3>
-      <div class="habilidades-icons">
-        <img src="https://rafaelmperez.github.io/assets/img/visualstudiocode.jpg" alt="Visual Studio Code" title="Visual Studio Code">
-        <img src="https://rafaelmperez.github.io/assets/img/kalilinux.jpg" alt="Kali Linux" title="Kali Linux">
-        <img src="https://rafaelmperez.github.io/assets/img/linux.jpg" alt="Linux" title="Linux">
-        <img src="https://rafaelmperez.github.io/assets/img/windows.jpg" alt="Windows" title="Windows">
-        <img src="https://rafaelmperez.github.io/assets/img/python.jpg" alt="Python" title="Python">
-        <img src="https://rafaelmperez.github.io/assets/img/grafana.jpg" alt="Grafana" title="Grafana">
-        <img src="https://rafaelmperez.github.io/assets/img/ansible.jpg" alt="Ansible" title="Ansible">
-        <img src="https://rafaelmperez.github.io/assets/img/bash.jpg" alt="Bash" title="Bash">
-        <img src="https://rafaelmperez.github.io/assets/img/github.jpg" alt="GitHub" title="GitHub">
+      <!-- Card 1: Lista de habilidades -->
+      <div class="card">
+        <h3><i class="fas fa-tools"></i> Competencias técnicas</h3>
+        <ul style="list-style:none; padding:0;">
+          <li><i class="fas fa-server"></i> Administración de sistemas Windows y Linux</li>
+          <li><i class="fas fa-shield-alt"></i> Ciberseguridad ofensiva y defensiva</li>
+          <li><i class="fas fa-terminal"></i> Automatización con Ansible y Bash</li>
+          <li><i class="fas fa-cloud"></i> Cloud: AWS, Azure</li>
+          <li><i class="fas fa-chart-line"></i> Supervisión y hardening de servidores</li>
+          <li><i class="fas fa-laptop-code"></i> Maquetación web responsive</li>
+          <li><i class="fas fa-language"></i> Idiomas Francés C1</li>
+        </ul>
       </div>
-    </div>
 
-  </div> <!-- Cierra grid-habilidades -->
+      <!-- Card 2: Iconos de herramientas -->
+      <div class="card">
+        <h3><i class="fas fa-cogs"></i> Herramientas dominadas</h3>
+        <div class="habilidades-icons">
+          <img src="https://rafaelmperez.github.io/assets/img/visualstudiocode.jpg" alt="Visual Studio Code" title="Visual Studio Code">
+          <img src="https://rafaelmperez.github.io/assets/img/kalilinux.jpg" alt="Kali Linux" title="Kali Linux">
+          <img src="https://rafaelmperez.github.io/assets/img/linux.jpg" alt="Linux" title="Linux">
+          <img src="https://rafaelmperez.github.io/assets/img/windows.jpg" alt="Windows" title="Windows">
+          <img src="https://rafaelmperez.github.io/assets/img/python.jpg" alt="Python" title="Python">
+          <img src="https://rafaelmperez.github.io/assets/img/grafana.jpg" alt="Grafana" title="Grafana">
+          <img src="https://rafaelmperez.github.io/assets/img/ansible.jpg" alt="Ansible" title="Ansible">
+          <img src="https://rafaelmperez.github.io/assets/img/bash.jpg" alt="Bash" title="Bash">
+          <img src="https://rafaelmperez.github.io/assets/img/github.jpg" alt="GitHub" title="GitHub">
+        </div>
+      </div>
+
+    </div> <!-- Fin grid-habilidades -->
+
+  </div> <!-- Fin card envolvente -->
+</section>
+
 <!-- SECCIÓN ORIGINAL -->
 <section id="proyectos">
 <h2 class="terminal-heading">
@@ -2135,7 +2176,6 @@ Utilizo herramientas como Nmap, Nikto y SSLyze para auditar y documentar cada fa
   });
 </script>
 </html>
-
 
 
 
