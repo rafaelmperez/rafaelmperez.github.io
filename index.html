@@ -1839,23 +1839,25 @@ Utilizo herramientas como Nmap, Nikto y SSLyze para auditar y documentar cada fa
       <p>
          <style>
            
-     .sysadmin-badge {
-    display: inline-block;
-    background-color: #1f1f1f;
-    color: rgb(255,204,0);
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.95rem;
-    padding: 10px 16px;
-    border-radius: 6px;
-    text-decoration: none;
-    box-shadow: 0 0 5px rgb(255,204,0);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  }
+.sysadmin-badge {
+  display: inline-block;
+  background-color: #1f1f1f;
+  color: #ffffff; /* blanco apagado */
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.2); /* sombra tenue blanca */
+  transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
 
-  .sysadmin-badge:hover {
-    background-color: #2a2a2a;
-    box-shadow: 0 0 10px #a00000;
-  }
+.sysadmin-badge:hover {
+  color: rgb(255, 204, 0); /* amarillo encendido */
+  box-shadow: 0 0 12px rgb(255, 204, 0), 0 0 24px rgb(255, 204, 0);
+  transform: scale(1.05);
+}
+
 </style>
 
 <p>
@@ -2249,6 +2251,7 @@ Utilizo herramientas como Nmap, Nikto y SSLyze para auditar y documentar cada fa
   });
 </script>
 </html>
+
 
 
 
