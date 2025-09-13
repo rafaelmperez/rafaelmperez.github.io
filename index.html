@@ -1482,6 +1482,18 @@ section {
   padding: 0;
 }
 
+.sysadmin-badge {
+  display: inline-block;
+  background-color: #1f1f1f;
+  color: rgb(255, 204, 0) !important; /* ← fuerza el color del texto */
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 0 5px rgb(255, 204, 0);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
 
 
 
@@ -2091,9 +2103,11 @@ Utilizo herramientas como Nmap, Nikto y SSLyze para auditar y documentar cada fa
       <i class="fas fa-envelope"></i> ping > contacto.log
     </h2>
 
-    <p><i class="fas fa-at"></i> Email de contacto: 
-      <a href="mailto:sysadminweb@proton.me">sysadminweb@proton.me</a>
-    </p>
+<p>
+  <a href="mailto:sysadminweb@proton.me" class="sysadmin-badge">
+    📡 sysadminweb@proton.me
+  </a>
+</p>
 
   </div>
 </section>
@@ -2229,6 +2243,7 @@ Utilizo herramientas como Nmap, Nikto y SSLyze para auditar y documentar cada fa
   });
 </script>
 </html>
+
 
 
 
