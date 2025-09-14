@@ -203,7 +203,7 @@
   <p class="mb-2"><strong>Security Headers:</strong></p> 
   <img src="https://rafaelmperez.github.io/assets/img/securityheaders.jpg" alt="Security Headers Scan" style="width:100%; max-width:900px;" class="rounded-lg shadow-md">
   <p class="text-black mb6">
-    Se utilizó la herramienta web <a href="https://securityheaders.com">Security Headers</a> para evaluar la implementación de cabeceras HTTP de seguridad en el sitio web. Esta herramienta analiza si el servidor incluye cabeceras que protegen contra ataques comunes como XSS, clickjacking, fuga de datos y ejecución de contenido malicioso.
+    Utilicé la herramienta web <a href="https://securityheaders.com">Security Headers</a> para evaluar la implementación de cabeceras HTTP de seguridad en el sitio web. Esta herramienta analiza si el servidor incluye cabeceras que protegen contra ataques comunes como XSS, clickjacking, fuga de datos y ejecución de contenido malicioso.
   </p>
   <pre class="bg-gray-100 p-4 rounded text-sm text-black overflow-x-auto mb-4">
     <code class="bg-gray-200 px-1 rounded">https://securityheaders.com/?q=rafaelmperez.com</code>
@@ -229,7 +229,7 @@
   <p class="mb-2"><strong>Nikto:</strong></p> 
   <img src="https://rafaelmperez.github.io/assets/img/analisisnikto.jpg" alt="Nikto Scan Result" style="width:100%; max-width:900px;" class="rounded-lg shadow-md">
   <p class="text-black mb6">
-    Se utilizó la herramienta <a href="https://cirt.net/Nikto2">Nikto</a> para realizar un escaneo de seguridad sobre el sitio <code>rafaelmperez.com</code>. Nikto permite detectar configuraciones inseguras, cabeceras mal implementadas, archivos expuestos y comportamientos anómalos del servidor web.
+    Seguidamente utilicé la herramienta <a href="https://cirt.net/Nikto2">Nikto</a> para realizar un escaneo de seguridad sobre el sitio web. Nikto permite detectar configuraciones inseguras, cabeceras mal implementadas, archivos expuestos y comportamientos anómalos del servidor web.
   </p>
   <pre class="bg-gray-100 p-4 rounded text-sm text-black overflow-x-auto mb-4">
     <code class="bg-gray-200 px-1 rounded">nikto -h https://rafaelmperez.com -p 443</code>
@@ -256,7 +256,7 @@
   <p class="mb-2"><strong>testssl.sh:</strong></p> 
   <img src="https://rafaelmperez.github.io/assets/img/testssl-sh.jpg" alt="testssl.sh Scan Result" style="width:100%; max-width:900px;" class="rounded-lg shadow-md">
   <p class="text-black mb6">
-    Se utilizó la herramienta <a href="https://testssl.sh/">testssl.sh</a> para realizar un escaneo técnico profundo del canal HTTPS del sitio <code>rafaelmperez.com</code>. Esta herramienta permite detectar vulnerabilidades conocidas, evaluar la configuración de cifrado y verificar el soporte de protocolos SSL/TLS.
+    Posteriormente utilicé la herramienta <a href="https://testssl.sh/">testssl.sh</a> para realizar un escaneo técnico profundo del canal HTTPS del sitio web. Esta herramienta permite detectar vulnerabilidades conocidas, evaluar la configuración de cifrado y verificar el soporte de protocolos SSL/TLS.
   </p>
   <pre class="bg-gray-100 p-4 rounded text-sm text-black overflow-x-auto mb-4">
     <code class="bg-gray-200 px-1 rounded">./testssl.sh https://rafaelmperez.com</code>
@@ -290,7 +290,7 @@
   <p class="mb-2"><strong>SSL Labs:</strong></p> 
   <img src="https://rafaelmperez.github.io/assets/img/ssllabs.jpg" alt="SSL Labs Scan Result" style="width:100%; max-width:900px;" class="rounded-lg shadow-md">
   <p class="text-black mb6">
-    Se utilizó la herramienta web <a href="https://www.ssllabs.com/ssltest/">SSL Labs</a> de Qualys para evaluar la configuración SSL/TLS del sitio <code>rafaelmperez.com</code>. Esta herramienta realiza un análisis profundo del cifrado, certificados, compatibilidad con navegadores y resistencia frente a vulnerabilidades conocidas.
+    Por último, en esta primera fase de detección utilicé la herramienta web <a href="https://www.ssllabs.com/ssltest/">SSL Labs</a> de Qualys para evaluar la configuración SSL/TLS del sitio <code>rafaelmperez.com</code>. Esta herramienta realiza un análisis profundo del cifrado, certificados, compatibilidad con navegadores y resistencia frente a vulnerabilidades conocidas.
   </p>
   <pre class="bg-gray-100 p-4 rounded text-sm text-black overflow-x-auto mb-4">
     <code class="bg-gray-200 px-1 rounded">https://www.ssllabs.com/ssltest/analyze.html?d=rafaelmperez.com</code>
@@ -325,7 +325,7 @@
   <p class="mb-2"><strong>Vinculación con Cloudflare:</strong></p> 
   <img src="https://rafaelmperez.github.io/assets/img/cloudflare.jpg" alt="Configuración DNS en Cloudflare para GitHub Pages" style="width:100%; max-width:900px;" class="rounded-lg shadow-md">
   <p class="text-black mb6">
-    Se configuró el dominio <code>rafaelmperez.com</code> en Cloudflare para gestionar el tráfico web, aplicar políticas de seguridad y optimizar el rendimiento. En el panel de DNS se añadieron los registros necesarios para apuntar a GitHub Pages:
+    Para comenzar se configuró el dominio <code>rafaelmperez.com</code> en Cloudflare para gestionar el tráfico web, aplicar políticas de seguridad y optimizar el rendimiento. En el panel de DNS se añadieron los registros necesarios para apuntar a GitHub Pages:
   </p>
   <ul class="list-disc pl-6 text-black mb-6">
     <li>Registro tipo <strong>A</strong> apuntando a <code>185.199.108.153</code> (IP de GitHub Pages).</li>
@@ -495,7 +495,7 @@
 <li>
   <p class="mb-2"><strong>Escaneo con Nikto:</strong></p> 
   <p class="text-black mb6">
-    Se ejecutó un escaneo con <strong>Nikto</strong> sobre el dominio usando el comando <code>nikto -h https://rafaelmperez.com -p 443</code> para detectar vulnerabilidades comunes en servidores web. El resultado fue positivo desde el punto de vista defensivo, ya que el sitio respondió con código 403, lo que indica que el firewall bloqueó el escaneo.
+    Por último en la fase de comprobación ejecuté un escaneo con <strong>Nikto</strong> sobre el dominio usando el comando <code>nikto -h https://rafaelmperez.com -p 443</code> para detectar vulnerabilidades comunes en servidores web. El resultado fue positivo desde el punto de vista defensivo, ya que el sitio respondió con código 403, lo que indica que el firewall bloqueó el escaneo.
   </p>
   <ul class="list-disc pl-6 text-black mb-6">
     <li><strong>Servidor detectado:</strong> Cloudflare</li>
@@ -510,7 +510,7 @@
 <li>
   <p class="mb-2"><strong>Escaneo con SSL Labs:</strong></p> 
   <p class="text-black mb6">
-    Se realizó un escaneo completo del dominio utilizando la herramienta <strong>SSL Labs</strong>, con el objetivo de validar la configuración TLS, el certificado SSL y la seguridad del canal de transporte. El resultado fue una calificación <strong>A+</strong>, lo que indica cumplimiento total con las mejores prácticas de cifrado y seguridad.
+    Seguidamente un escaneo completo del dominio utilizando la herramienta <strong>SSL Labs</strong>, con el objetivo de validar la configuración TLS, el certificado SSL y la seguridad del canal de transporte. El resultado fue una calificación <strong>A+</strong>, lo que indica cumplimiento total con las mejores prácticas de cifrado y seguridad.
   </p>
   <ul class="list-disc pl-6 text-black mb-6">
     <li><strong>Protocolos activos:</strong> TLS 1.2 y TLS 1.3</li>
