@@ -389,14 +389,9 @@
   <p class="mb-2"><strong>Edge Certificates y configuración de HSTS:</strong></p> 
   <img src="https://rafaelmperez.github.io/assets/img/cloudflare4.jpg" alt="Configuración de HSTS en Cloudflare" style="width:100%; max-width:900px;" class="rounded-lg shadow-md">
   <p class="text-black mb6">
-    Se activó el certificado SSL universal gestionado por Cloudflare para el dominio <code>rafaelmperez.com</code> y su subdominio <code>*.rafaelmperez.com</code>. Este certificado es emitido por la autoridad <strong>SSL.com</strong> y validado mediante registros TXT internos (_acme-challenge), sin necesidad de intervención manual.
+    Se activó el certificado SSL universal gestionado por Cloudflare para el dominio. Este certificado es emitido por la autoridad <strong>SSL.com</strong> y validado mediante registros TXT internos (_acme-challenge), sin necesidad de intervención manual.
   </p>
-  <ul class="list-disc pl-6 text-black mb-6">
-    <li><strong>Tipo de certificado:</strong> ECDSA SHA256</li>
-    <li><strong>Validez:</strong> hasta el 8 de diciembre de 2025</li>
-    <li><strong>Renovación:</strong> automática cada 3 meses</li>
-    <li><strong>Dominios cubiertos:</strong> <code>rafaelmperez.com</code> y <code>*.rafaelmperez.com</code></li>
-  </ul>
+
   <p class="text-black mb6">
     Además, se activó la política <strong>HTTP Strict Transport Security (HSTS)</strong> en Cloudflare, con los siguientes parámetros:
   </p>
@@ -474,11 +469,11 @@
 </h3>
 <section id="resultado-security-headers" class="mb-12">
   
-  <h2 class="text-xl font-bold mb-4">📊 Resultado: Auditoría de cabeceras HTTP (Security Headers)</h2>
+  <h2 class="text-xl font-bold mb-4">Resultado: Auditoría de cabeceras HTTP (Security Headers)</h2>
 
   <p class="text-black mb-6">
     <img src="https://rafaelmperez.github.io/assets/img/bastionamientoresultado.jpg" alt="Resultado del escaneo en SecurityHeaders.com" style="width:100%; max-width:900px;" class="rounded-lg shadow-md">
-    Tras aplicar las medidas de bastionado en Cloudflare, el sitio <code>rafaelmperez.com</code> pasó de una calificación <strong>F</strong> a <strong>A+</strong> en <strong>SecurityHeaders.com</strong>, validando la correcta implementación de cabeceras críticas como <code>Strict-Transport-Security</code>, <code>Content-Security-Policy</code> y <code>Permissions-Policy</code>.
+    Tras aplicar las medidas de bastionado en Cloudflare, el sitio web pasó de una calificación <strong>F</strong> a <strong>A+</strong> en <strong>SecurityHeaders.com</strong>, validando la correcta implementación de cabeceras críticas como <code>Strict-Transport-Security</code>, <code>Content-Security-Policy</code> y <code>Permissions-Policy</code>.
   </p>
 
   <ul class="list-disc pl-6 text-black mb-6">
@@ -494,6 +489,62 @@
 </section>
 
 
+<li>
+  <p class="mb-2"><strong>Escaneo con Nikto:</strong></p> 
+  <p class="text-black mb6">
+    Se ejecutó un escaneo con <strong>Nikto</strong> sobre el dominio usando el comando <code>nikto -h https://rafaelmperez.com -p 443</code> para detectar vulnerabilidades comunes en servidores web. El resultado fue positivo desde el punto de vista defensivo, ya que el sitio respondió con código 403, lo que indica que el firewall bloqueó el escaneo.
+  </p>
+  <ul class="list-disc pl-6 text-black mb-6">
+    <li><strong>Servidor detectado:</strong> Cloudflare</li>
+    <li><strong>CGI directories:</strong> no se encontraron rutas vulnerables</li>
+    <li><strong>Código de respuesta:</strong> 403 Forbidden (escaneo bloqueado)</li>
+  </ul>
+  <p class="text-black mb6">
+    Aunque Nikto no pudo completar el escaneo por bloqueo del firewall, esto es deseable en entornos productivos. Se recomienda revisar la cabecera <code>X-Frame-Options</code> para confirmar que esté activa y no duplicada, como se detectó en escaneos anteriores.
+  </p>
+</li>
+
+<li>
+  <p class="mb-2"><strong>Escaneo con SSL Labs:</strong></p> 
+  <p class="text-black mb6">
+    Se realizó un escaneo completo del dominio utilizando la herramienta <strong>SSL Labs</strong>, con el objetivo de validar la configuración TLS, el certificado SSL y la seguridad del canal de transporte. El resultado fue una calificación <strong>A+</strong>, lo que indica cumplimiento total con las mejores prácticas de cifrado y seguridad.
+  </p>
+  <ul class="list-disc pl-6 text-black mb-6">
+    <li><strong>Protocolos activos:</strong> TLS 1.2 y TLS 1.3</li>
+    <li><strong>Certificado:</strong> válido, emitido por Cloudflare, con cadena completa</li>
+    <li><strong>HSTS:</strong> activo con <code>preload</code> habilitado</li>
+    <li><strong>Forward Secrecy:</strong> soportado en todos los navegadores modernos</li>
+    <li><strong>Servidores detectados:</strong> se pasó de 4 a 14 servidores distribuidos globalmente, lo que mejora la disponibilidad y la tolerancia a fallos</li>
+    <li><strong>Vulnerabilidades conocidas:</strong> no se detectaron (Heartbleed, ROBOT, etc.)</li>
+  </ul>
+  <p class="text-black mb6">
+    Este resultado confirma que el sitio no solo está bastionado en la capa de aplicación, sino también en la capa de transporte. La expansión de infraestructura con más servidores mejora la resiliencia y el rendimiento global.
+  </p>
+</li>
+
+
+
+<li>
+  <p class="mb-2"><strong>Escaneo con testssl.sh:</strong></p> 
+  <p class="text-black mb6">
+    Por último se volvió a ejecutar un escaneo local utilizando la herramienta <strong>testssl.sh</strong> para validar la seguridad del canal TLS. Los comandos utilizados fueron:
+  </p>
+  <pre class="bg-gray-100 p-4 rounded text-sm text-black mb-4">
+<code>cd testssl.sh
+./testssl.sh https://rafaelmperez.com</code>
+  </pre>
+  <ul class="list-disc pl-6 text-black mb-6">
+    <li><strong>Heartbleed, CCS, Ticketbleed, POODLE, FREAK, DROWN:</strong> no vulnerabilidades detectadas</li>
+    <li><strong>ROBOT:</strong> no se soportan suites RSA inseguras (OK)</li>
+    <li><strong>Secure Renegotiation:</strong> soportado correctamente</li>
+    <li><strong>CRIME, BEAST, LOGJAM, Winshock:</strong> no vulnerabilidades detectadas</li>
+    <li><strong>RC4 y SSLv3:</strong> no soportados</li>
+    <li><strong>TLS_FALLBACK_SCSV:</strong> activo, evita degradación de protocolo</li>
+  </ul>
+  <p class="text-black mb6">
+    El escaneo confirma que el sitio <code>rafaelmperez.com</code> opera bajo una configuración TLS moderna y segura, sin exposición a vulnerabilidades críticas conocidas. Se valida así la efectividad del bastionado aplicado en la capa de transporte.
+  </p>
+</li>
 
 
 
@@ -511,44 +562,7 @@
 
 
 
-<h3 id="conclusiones" class="text-xl font-semibold mt-8 mb-4 font-montserrat scroll-mt-24">
-</h3>
-<div class="p-4 sm:p-6 mt-16 mb-6 bg-white rounded-lg shadow-md">
-  <h3 class="text-lg sm:text-xl font-semibold mt-6 mb-2 font-montserrat">
-    Conclusiones y Recomendaciones Finales:
-  </h3>
-
-
-  <p class="text-black mb-4 leading-relaxed text-sm sm:text-base">
-    La implementación de UFW como firewall local en sistemas Linux —especialmente sobre plataformas modernas como Ubuntu 24.04 LTS— representa una medida esencial para reforzar la seguridad perimetral de servidores. Al establecer políticas restrictivas por defecto y permitir únicamente los servicios necesarios, se reduce significativamente la superficie de ataque y se mejora el control sobre el tráfico de red.
-  </p>
-
-  <ul class="list-disc list-inside mb-4 space-y-2 text-sm sm:text-base leading-relaxed">
-    <li>
-      <strong>Auditorías periódicas:</strong> Revisa las reglas de UFW regularmente mediante comandos como 
-      <code class="bg-gray-200 px-1 rounded">ufw status numbered</code> para garantizar que estén alineadas con los servicios activos del sistema.
-    </li>
-    <li>
-      <strong>Registro de eventos:</strong> Considera integrar UFW con herramientas como 
-      <code class="bg-gray-200 px-1 rounded">logwatch</code>, 
-      <code class="bg-gray-200 px-1 rounded">fail2ban</code> o el sistema de 
-      <code class="bg-gray-200 px-1 rounded">journald</code> para detectar y mitigar intentos de acceso no autorizados.
-    </li>
-    <li>
-      <strong>Seguridad por capas:</strong> Refuerza el firewall con autenticación por clave SSH, desactivación de servicios innecesarios mediante 
-      <code class="bg-gray-200 px-1 rounded">systemctl</code>, uso de puertos alternativos y aplicación de actualizaciones automáticas con 
-      <code class="bg-gray-200 px-1 rounded">unattended-upgrades</code> o Snap.
-    </li>
-    <li>
-      <strong>Pruebas de conectividad:</strong> Después de cada cambio en las reglas, realiza pruebas desde clientes externos utilizando herramientas como 
-      <code class="bg-gray-200 px-1 rounded">nmap</code>, 
-      <code class="bg-gray-200 px-1 rounded">telnet</code> o 
-      <code class="bg-gray-200 px-1 rounded">curl</code> para verificar que los servicios autorizados siguen accesibles.
-    </li>
-  </ul>
-<p class="text-black leading-relaxed text-sm sm:text-base">
-  Estas recomendaciones fortalecen la postura de seguridad del sistema y aseguran que el firewall no sea solo una barrera inicial, 
-  sino parte de una estrategia integral, escalable y sostenible de protección, especialmente en entornos con soporte extendido como Ubuntu 24.04 LTS.
+ntegral, escalable y sostenible de protección, especialmente en entornos con soporte extendido como Ubuntu 24.04 LTS.
 </p>
 </div>
 
@@ -562,6 +576,37 @@
   <a href="" class="text-sm flex items-center ml-auto text-black">
     Siguiente práctica técnica <span class="ml-1">→</span>
   </a>
+  <h3 id="conclusiones" class="text-xl font-semibold mt-8 mb-4 font-montserrat scroll-mt-24">
+  </h3>
+</div>
+
+<div class="p-4 sm:p-6 mt-16 mb-6 bg-white rounded-lg shadow-md">
+  <h3 class="text-lg sm:text-xl font-semibold mt-6 mb-2 font-montserrat">
+    Conclusiones y Recomendaciones Finales:
+  </h3>
+
+  <p class="text-black mb-4 leading-relaxed text-sm sm:text-base">
+    El sitio web ha evolucionado de una configuración predeterminada y vulnerable a una plataforma bastionada con cabeceras clave, cifrado robusto y escaneos técnicos que validan su seguridad. La infraestructura ha crecido de 4 a 14 servidores distribuidos, lo que mejora la resiliencia y el rendimiento global.
+  </p>
+
+  <ul class="list-disc list-inside mb-4 space-y-2 text-sm sm:text-base leading-relaxed">
+    <li>
+      <strong>Aplicación de buenas prácticas:</strong> Se han implementado cabeceras HTTP seguras, redirección forzada a HTTPS, y compatibilidad con TLS 1.2/1.3.
+    </li>
+    <li>
+      <strong>Escaneos técnicos:</strong> Se han utilizado herramientas como <code class="bg-gray-200 px-1 rounded">Nikto</code>, <code class="bg-gray-200 px-1 rounded">SSL Labs</code> y <code class="bg-gray-200 px-1 rounded">testssl.sh</code> para validar la seguridad desde distintas capas.
+    </li>
+    <li>
+      <strong>Firewall perimetral:</strong> Cloudflare actúa como primera línea de defensa, bloqueando escaneos y mitigando ataques comunes.
+    </li>
+    <li>
+      <strong>Compromiso personal:</strong> Aunque ningún sistema está exento de ser atacado, este sitio no representa un objetivo atractivo. Aun así, se ha reforzado con convicción y se recomienda aplicar estas prácticas, ya que muchas brechas ocurren por descuidos evitables.
+    </li>
+  </ul>
+
+  <p class="text-black leading-relaxed text-sm sm:text-base">
+    Este ejercicio no solo mejora la postura de seguridad del sitio, sino que refleja una cultura de prevención y responsabilidad digital que debería ser estándar en cualquier proyecto web.
+  </p>
 </div>
 
 
