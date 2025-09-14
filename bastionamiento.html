@@ -474,6 +474,7 @@
   <h2 class="text-xl font-bold mb-4">📊 Resultado: Auditoría de cabeceras HTTP (Security Headers)</h2>
 
   <p class="text-black mb-6">
+    <img src="https://rafaelmperez.github.io/assets/img/bastionamientoresultado.jpg" alt="Regla de seguridad geográfica en Cloudflare" style="width:100%; max-width:900px;" class="rounded-lg shadow-md">
     Se realizó una auditoría externa del sitio <code>rafaelmperez.com</code> utilizando <strong>SecurityHeaders.com</strong> y herramientas como <code>curl -I</code> para inspeccionar las cabeceras HTTP devueltas por el servidor. El objetivo fue validar que las configuraciones aplicadas en Cloudflare se reflejan correctamente en la capa web.
   </p>
 
@@ -533,6 +534,24 @@
 
 
 
+<li>
+  <p class="mb-2"><strong>Resultado de auditoría de cabeceras HTTP:</strong></p> 
+  <p class="text-black mb6">
+    Se realizó un escaneo externo del dominio <code>rafaelmperez.com</code> utilizando la herramienta <strong>SecurityHeaders.com</strong>. El resultado fue una calificación <strong>A+</strong>, lo que confirma que el sitio opera bajo una configuración de seguridad avanzada y conforme a las mejores prácticas modernas.
+  </p>
+  <ul class="list-disc pl-6 text-black mb-6">
+    <li><strong>Cabeceras detectadas:</strong> <code>Referrer-Policy</code>, <code>X-Frame-Options</code>, <code>Strict-Transport-Security</code>, <code>X-Content-Type-Options</code>, <code>Content-Security-Policy</code>, <code>Permissions-Policy</code></li>
+    <li><strong>Política CSP activa:</strong> <code>default-src 'self'; script-src 'self' cdn.jsdelivr.net; style-src 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none';</code></li>
+    <li><strong>Redirección HTTPS:</strong> confirmada</li>
+    <li><strong>Modo TLS:</strong> TLS 1.2 y 1.3 activos</li>
+  </ul>
+  <p class="text-black mb6">
+    Aunque el escaneo fue parcialmente bloqueado (código HTTP 403), las cabeceras fueron detectadas correctamente. Se observaron duplicados en <code>X-Frame-Options</code>, <code>Strict-Transport-Security</code> y <code>X-Content-Type-Options</code>, lo que puede corregirse consolidando las reglas de transformación en Cloudflare.
+  </p>
+  <p class="text-black mb6">
+    Este resultado valida que el bastionado aplicado en fases anteriores ha sido efectivo. El sitio cuenta con protección contra ataques XSS, clickjacking, suplantación de contenido y otras amenazas comunes. Se recomienda mantener la monitorización periódica y revisar cabeceras en cada despliegue.
+  </p>
+</li>
 
 
 
