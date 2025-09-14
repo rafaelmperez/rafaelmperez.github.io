@@ -474,84 +474,23 @@
   <h2 class="text-xl font-bold mb-4">📊 Resultado: Auditoría de cabeceras HTTP (Security Headers)</h2>
 
   <p class="text-black mb-6">
-    <img src="https://rafaelmperez.github.io/assets/img/bastionamientoresultado.jpg" alt="Regla de seguridad geográfica en Cloudflare" style="width:100%; max-width:900px;" class="rounded-lg shadow-md">
-    Se realizó una auditoría externa del sitio <code>rafaelmperez.com</code> utilizando <strong>SecurityHeaders.com</strong> y herramientas como <code>curl -I</code> para inspeccionar las cabeceras HTTP devueltas por el servidor. El objetivo fue validar que las configuraciones aplicadas en Cloudflare se reflejan correctamente en la capa web.
+    <img src="https://rafaelmperez.github.io/assets/img/bastionamientoresultado.jpg" alt="Resultado del escaneo en SecurityHeaders.com" style="width:100%; max-width:900px;" class="rounded-lg shadow-md">
+    Tras aplicar las medidas de bastionado en Cloudflare, el sitio <code>rafaelmperez.com</code> pasó de una calificación <strong>F</strong> a <strong>A+</strong> en <strong>SecurityHeaders.com</strong>, validando la correcta implementación de cabeceras críticas como <code>Strict-Transport-Security</code>, <code>Content-Security-Policy</code> y <code>Permissions-Policy</code>.
   </p>
 
-  <table class="table-auto w-full text-left mb-6 border border-gray-300">
-    <thead class="bg-gray-100">
-      <tr>
-        <th class="px-4 py-2">Cabecera</th>
-        <th class="px-4 py-2">Valor esperado</th>
-        <th class="px-4 py-2">Estado</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="px-4 py-2">Strict-Transport-Security</td>
-        <td class="px-4 py-2">max-age=31536000; includeSubDomains; preload</td>
-        <td class="px-4 py-2">✅ Presente</td>
-      </tr>
-      <tr>
-        <td class="px-4 py-2">X-Frame-Options</td>
-        <td class="px-4 py-2">DENY</td>
-        <td class="px-4 py-2">✅ Presente</td>
-      </tr>
-      <tr>
-        <td class="px-4 py-2">X-Content-Type-Options</td>
-        <td class="px-4 py-2">nosniff</td>
-        <td class="px-4 py-2">✅ Presente</td>
-      </tr>
-      <tr>
-        <td class="px-4 py-2">Referrer-Policy</td>
-        <td class="px-4 py-2">strict-origin-when-cross-origin</td>
-        <td class="px-4 py-2">✅ Presente</td>
-      </tr>
-      <tr>
-        <td class="px-4 py-2">Permissions-Policy</td>
-        <td class="px-4 py-2">Restricciones activas</td>
-        <td class="px-4 py-2">✅ Presente</td>
-      </tr>
-      <tr>
-        <td class="px-4 py-2">Content-Security-Policy</td>
-        <td class="px-4 py-2">default-src 'self'</td>
-        <td class="px-4 py-2">✅ Presente</td>
-      </tr>
-    </tbody>
-  </table>
-
   <ul class="list-disc pl-6 text-black mb-6">
-    <li>Puntuación obtenida: <strong>A+</strong> en SecurityHeaders.com</li>
-    <li>Redirección automática de HTTP a HTTPS: confirmada</li>
-    <li>Compatibilidad con TLS 1.2 y 1.3: validada</li>
-    <li>Cabeceras internas como <code>x-github-request-id</code>: no detectadas</li>
+    <li>Cabeceras duplicadas corregidas mediante reglas de transformación</li>
+    <li>Redirección forzada a HTTPS y TLS 1.2/1.3 activos</li>
+    <li>Política CSP personalizada aplicada con fuentes seguras</li>
+    <li>Cabeceras internas eliminadas desde el perímetro</li>
   </ul>
 
   <p class="text-black mb-6">
-    Este resultado confirma que el bastionado aplicado en fases anteriores ha sido efectivo. El sitio opera bajo un entorno seguro, cifrado y conforme a estándares modernos. Se recomienda mantener la monitorización periódica y revisar cabeceras en cada despliegue.
+    Este resultado demuestra que el entorno web ha sido reforzado con éxito, alcanzando un nivel de seguridad óptimo sin afectar la disponibilidad ni la experiencia del usuario.
   </p>
 </section>
 
 
-
-<li>
-  <p class="mb-2"><strong>Resultado de auditoría de cabeceras HTTP:</strong></p> 
-  <p class="text-black mb6">
-    Se realizó un escaneo externo del dominio <code>rafaelmperez.com</code> utilizando la herramienta <strong>SecurityHeaders.com</strong>. El resultado fue una calificación <strong>A+</strong>, lo que confirma que el sitio opera bajo una configuración de seguridad avanzada y conforme a las mejores prácticas modernas.
-  </p>
-  <ul class="list-disc pl-6 text-black mb-6">
-    <li><strong>Cabeceras detectadas:</strong> <code>Referrer-Policy</code>, <code>X-Frame-Options</code>, <code>Strict-Transport-Security</code>, <code>X-Content-Type-Options</code>, <code>Content-Security-Policy</code>, <code>Permissions-Policy</code></li>
-    <li><strong>Política CSP activa:</strong> <code>default-src 'self'; script-src 'self' cdn.jsdelivr.net; style-src 'self' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none';</code></li>
-    <li><strong>Redirección HTTPS:</strong> confirmada</li>
-    <li><strong>Modo TLS:</strong> TLS 1.2 y 1.3 activos</li>
-  </ul>
-  <p class="text-black mb6">
-    Aunque el escaneo fue parcialmente bloqueado (código HTTP 403), las cabeceras fueron detectadas correctamente. Se observaron duplicados en <code>X-Frame-Options</code>, <code>Strict-Transport-Security</code> y <code>X-Content-Type-Options</code>, lo que puede corregirse consolidando las reglas de transformación en Cloudflare.
-  </p>
-  <p class="text-black mb6">
-    Este resultado valida que el bastionado aplicado en fases anteriores ha sido efectivo. El sitio cuenta con protección contra ataques XSS, clickjacking, suplantación de contenido y otras amenazas comunes. Se recomienda mantener la monitorización periódica y revisar cabeceras en cada despliegue.
-  </p>
-</li>
 
 
 
