@@ -161,10 +161,14 @@
 <ul class="list-disc list-inside text-black">
       <li><strong>Cloudflare</strong>  Plataforma de seguridad y rendimiento que protege el servidor mediante mitigación de ataques DDoS, firewall de aplicaciones web (WAF), gestión de certificados SSL y políticas de acceso.</li>
       <li><strong>Nikto</strong> Escáner de vulnerabilidades que se ejecuta desde una máquina cliente para detectar configuraciones inseguras, archivos expuestos y cabeceras mal implementadas en el servidor web.</li>
-      <li><strong>Nmap</strong> Herramienta de escaneo de red utilizada para identificar puertos abiertos, servicios activos y ejecutar scripts de diagnóstico que permiten mapear la superficie de exposición del servidor.</li>
-      <li><strong>SSLyze</strong> Analizador de configuración SSL/TLS que permite evaluar la fortaleza criptográfica del sitio, detectar protocolos inseguros y definir reglas de cifrado adecuadas para el tráfico seguro.</li>
-      <li><strong>OWASP ZAP:</strong> Herramienta de análisis de seguridad que permite detectar vulnerabilidades en aplicaciones web mediante escaneo activo y pasivo, interceptación de tráfico HTTP/HTTPS y simulación de ataques como XSS, CSRF y inyecciones SQL.</li>
+      <li><strong>SSL Labs</strong> Plataforma de análisis profundo de configuración TLS/SSL que permite evaluar la calidad del cifrado, la compatibilidad con navegadores modernos y la presencia de cabeceras como HSTS. Ideal para validar la robustez del canal seguro.</li>
+      <li><strong>Security Headers</strong> Herramienta que analiza las cabeceras HTTP de seguridad implementadas en el sitio, como <code>X-Frame-Options</code>, <code>Content-Security-Policy</code> y <code>Strict-Transport-Security</code>, ayudando a detectar omisiones o configuraciones débiles.</li>
+      <li><strong>testssl.sh</strong> Script local de escaneo TLS que permite detectar vulnerabilidades criptográficas conocidas (Heartbleed, ROBOT, POODLE, etc.), validar protocolos activos y revisar la calidad de las suites de cifrado ofrecidas por el servidor.</li>
     </ul>
+  
+
+
+  
 
     <!-- Sección Pasos -->
 <h3 id="pasos realizados" class="text-xl font-semibold mt-8 mb-4 font-montserrat scroll-mt-24">
