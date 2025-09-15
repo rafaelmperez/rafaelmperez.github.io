@@ -1453,9 +1453,10 @@ app.use(helmet.contentSecurityPolicy({
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  width: 100vw; /* ← fuerza el ancho completo de la ventana */
-  margin: 0;
-  padding: 0;
+  width: 100%;
+  max-width: 1280px; /* límite razonable para pantallas grandes */
+  margin: 0 auto;
+  padding: 0 1rem;
   box-sizing: border-box;
 }
 
@@ -1468,8 +1469,10 @@ app.use(helmet.contentSecurityPolicy({
 @media (max-width: 640px) {
   .grid-proyectos {
     grid-template-columns: 1fr;
+    padding: 0 1rem;
   }
 }
+
 
 
 
@@ -2229,6 +2232,7 @@ Utilizo herramientas como Nmap, Nikto y SSLyze para auditar y documentar cada fa
   });
 </script>
 </html>
+
 
 
 
