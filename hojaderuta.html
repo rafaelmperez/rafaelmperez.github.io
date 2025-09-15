@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Implementación y activación de UFW en sistemas Linux. Proyecto de ciberseguridad con Ubuntu, Parrot OS, Bash, OpenSSH y más. Portafolio de Rafael M. Pérez, Sysadmin Junior.">
+  <title> Portafolio técnico central | Portafolio Rafael M.Pérez | Sysadmin Junior</title>
+
+  <!-- Estilos y recursos -->
+  <link rel="stylesheet" href="assets/css/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+</head>
+  
+   <!-- ✅ Open Graph (Facebook, LinkedIn, WhatsApp) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Implementación y Activación UFW" />
+  <meta property="og:description" content="Portafolio Rafael M.Pérez | Sysadmin Junior" />
+  <meta property="og:image" content="https://rafaelmperez.github.io/assets/img/vistapreliminarufw.v1.webp" />
+  <meta property="og:url" content="https://rafaelmperez.github.io/activacionufw.html" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:image" content="https://rafaelmperez.github.io/assets/img/vistapreliminarufw.v1.webp" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+<body>
+  <!-- Aquí va el contenido de tu página -->
+</body>
+</html>
+
+
+<!-- Google Fonts optimizado -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" as="style">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" media="print" onload="this.media='all'">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- TailwindCSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { ... }
+  }
+</script>
+
+
+</head>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'nav-bg': '#000000',          // fondo negro
+          'nav-text': 'rgb(255, 204, 0)', // texto amarillo vibrante
+          'nav-hover': '#FFB800'        // color hover amarillo más oscuro
+        }
+      }
+    }
+  }
+</script>
+
+
+
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- Header -->
+<header class="p-6 shadow-lg font-montserrat bg-black text-yellow-400">
+  <div class="max-w-6xl mx-auto flex items-center justify-between">
+    <!-- Título -->
+    <h1 class="text-2xl font-bold">
+      Portafolio Rafael M.Pérez | Sysadmin Junior
+    </h1>
+
+    <!-- Imagen pequeña a la derecha -->
+<i class="fas fa-shield-alt" style="color: rgb(255, 204, 0); font-size: 24px;"></i>
+
+  </div>
+</header>
+
+
+<section id="cronologia" class="max-w-5xl mx-auto px-4 py-12">
+<h2 class="text-3xl font-bold text-center mb-10 text-black font-montserrat">
+  <i class="fas fa-stream"></i> Cronología de mi Hoja de Ruta Pro
+</h2>
+
+  </h2>
+
+  <div class="relative border-l-4 border-yellow-400 pl-6">
+    <!-- Primer año -->
+    <div class="mb-10">
+      <div class="text-sm text-gray-500">2024–2025</div>
+      <h3 class="text-xl font-semibold text-black">🔹 Primer año (ya logrado)</h3>
+      <p class="mt-2 text-gray-700">
+        Formación en fundamentos de sistemas, redes y Linux. Desarrollo de proyectos prácticos como bastionado web, automatización con Bash y scripting. Creación de mi portafolio técnico. Obtención del título SMR.
+      </p>
+    </div>
+
+    <!-- Próximos pasos -->
+    <div class="mb-10">
+      <div class="text-sm text-gray-500">2025–2026</div>
+      <h3 class="text-xl font-semibold text-black">🔹 Próximos pasos (6–12 meses)</h3>
+      <p class="mt-2 text-gray-700">
+        Profundizar en seguridad ofensiva y defensiva. Obtener certificaciones base como CompTIA Security+ y LPIC-1. Montar un laboratorio de ciberseguridad para simular escenarios reales.
+      </p>
+    </div>
+
+    <!-- Meta a medio plazo -->
+    <div class="mb-10">
+      <div class="text-sm text-gray-500">2026–2028</div>
+      <h3 class="text-xl font-semibold text-black">🔹 Meta a medio plazo (2–3 años)</h3>
+      <p class="mt-2 text-gray-700">
+        Participar en proyectos profesionales de ciberseguridad. Contribuir a la comunidad mediante proyectos open source, blogs técnicos y charlas. Preparar certificaciones avanzadas como OSCP. Cursar y obtener el título ASIR.
+      </p>
+    </div>
+
+    <!-- Meta a largo plazo -->
+    <div class="mb-10">
+      <div class="text-sm text-gray-500">2028 en adelante</div>
+      <h3 class="text-xl font-semibold text-black">🔹 Meta a largo plazo (5 años en adelante)</h3>
+      <p class="mt-2 text-gray-700">
+        Consolidarme como especialista en ciberseguridad ofensiva y defensiva. Liderar proyectos de protección de infraestructuras críticas. Mantener formación continua y compartir conocimientos mediante mentoring y cursos.
+      </p>
+    </div>
+
+    <!-- Nota final -->
+    <div class="mt-6 text-sm text-gray-600 italic">
+       Esta hoja de ruta es dinámica y evoluciona según mis avances, intereses y los desafíos que voy enfrentando.
+    </div>
+  </div>
+</section>
+  
+
+
+
+ <footer class="text-center py-6 mt-16 font-montserrat" style="background-color: #000; color: rgb(255, 204, 0);">
+  <p>© 2025 Rafael M. Pérez - Portafolio Sysadmin Junior</p>
+</footer>
+
+
+</body>
+</html>
