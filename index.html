@@ -78,7 +78,31 @@
     gtag('js', new Date());
     gtag('config', 'G-J1T24E1NDR');
   </script>
-<body>
+
+  <!-- ... contenido de tu página ... -->
+
+<!-- sonido corto del menú -->
+<audio id="menu-sound" src="https://rafaelmperez.github.io/sounds/clip.aac" preload="auto"></audio>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const sound = document.getElementById("menu-sound");
+    const badges = document.querySelectorAll(".sysadmin-badge");
+
+    badges.forEach(badge => {
+      badge.addEventListener("mouseenter", () => {
+        sound.currentTime = 0;
+        sound.play();
+      });
+    });
+  });
+</script>
+
+</body>
+
+  
+  
+  <body>
   <!-- Tu HTML aquí -->
 
 </body>
@@ -2240,6 +2264,7 @@ Utilizo herramientas como Nmap, Nikto y SSLyze para auditar y documentar cada fa
   });
 </script>
 </html>
+
 
 
 
