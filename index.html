@@ -1407,10 +1407,9 @@ app.use(helmet.contentSecurityPolicy({
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  max-width: 1400px; /* punto medio entre estrecho y ancho */
+  margin: 0 auto;
+  padding: 0 1rem;
   box-sizing: border-box;
 }
 
@@ -1423,10 +1422,10 @@ app.use(helmet.contentSecurityPolicy({
 @media (max-width: 640px) {
   .grid-proyectos {
     grid-template-columns: 1fr;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding: 0 1rem;
   }
 }
+
 
 
 
@@ -2232,6 +2231,7 @@ Utilizo herramientas como Nmap, Nikto y SSLyze para auditar y documentar cada fa
   });
 </script>
 </html>
+
 
 
 
