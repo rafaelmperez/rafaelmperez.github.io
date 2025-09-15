@@ -1449,25 +1449,21 @@ app.use(helmet.contentSecurityPolicy({
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  max-width: 1600px; /* Asegura espacio para 4 cards */
+  width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
-
-
 @media (max-width: 1024px) {
   .grid-proyectos {
-    grid-template-columns: repeat(2, 1fr); /* ← Fuerza 2 columnas */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 600px) {
   .grid-proyectos {
-    grid-template-columns: 1fr; /* ← Solo 1 columna en móviles */
+    grid-template-columns: 1fr;
+    padding: 0 0.5rem; /* menos padding en pantallas pequeñas */
   }
-}
-.card-proyecto {
-  width: 100%;
 }
 
 
@@ -2226,6 +2222,7 @@ Utilizo herramientas como Nmap, Nikto y SSLyze para auditar y documentar cada fa
   });
 </script>
 </html>
+
 
 
 
