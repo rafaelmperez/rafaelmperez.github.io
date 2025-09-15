@@ -1447,12 +1447,13 @@ app.use(helmet.contentSecurityPolicy({
 
 .grid-proyectos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  justify-content: center;
-  max-width: 100%;
+  max-width: 1600px; /* Asegura espacio para 4 cards */
   margin: 0 auto;
+  padding: 0 20px;
 }
+
 
 @media (max-width: 1024px) {
   .grid-proyectos {
@@ -2222,6 +2223,7 @@ Utilizo herramientas como Nmap, Nikto y SSLyze para auditar y documentar cada fa
   });
 </script>
 </html>
+
 
 
 
