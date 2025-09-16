@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Implementación y activación de UFW en sistemas Linux. Proyecto de ciberseguridad con Ubuntu, Parrot OS, Bash, OpenSSH y más. Portafolio de Rafael M. Pérez, Sysadmin Junior.">
+  <title> Portafolio técnico central | Portafolio Rafael M.Pérez | Sysadmin Junior</title>
+
+  <!-- Estilos y recursos -->
+  <link rel="stylesheet" href="assets/css/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+</head>
+  
+   <!-- ✅ Open Graph (Facebook, LinkedIn, WhatsApp) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Implementación y Activación UFW" />
+  <meta property="og:description" content="Portafolio Rafael M.Pérez | Sysadmin Junior" />
+  <meta property="og:image" content="https://rafaelmperez.github.io/assets/img/vistapreliminarufw.v1.webp" />
+  <meta property="og:url" content="https://rafaelmperez.github.io/activacionufw.html" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:image" content="https://rafaelmperez.github.io/assets/img/vistapreliminarufw.v1.webp" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+<body>
+  <!-- Aquí va el contenido de tu página -->
+</body>
+</html>
+
+
+<!-- Google Fonts optimizado -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" as="style">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" media="print" onload="this.media='all'">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- TailwindCSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { ... }
+  }
+</script>
+
+
+</head>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'nav-bg': '#000000',          // fondo negro
+          'nav-text': 'rgb(255, 204, 0)', // texto amarillo vibrante
+          'nav-hover': '#FFB800'        // color hover amarillo más oscuro
+        }
+      }
+    }
+  }
+</script>
+
+
+
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- Header -->
+<header class="p-6 shadow-lg font-montserrat bg-black text-yellow-400">
+  <div class="max-w-6xl mx-auto flex items-center justify-between">
+    <!-- Título -->
+    <h1 class="text-2xl font-bold">
+      Portafolio Rafael M.Pérez | Sysadmin Junior
+    </h1>
+
+    <!-- Imagen pequeña a la derecha -->
+<i class="fas fa-shield-alt" style="color: rgb(255, 204, 0); font-size: 24px;"></i>
+
+  </div>
+</header>
+
+
+<section id="cronologia" class="max-w-5xl mx-auto px-4 py-12">
+<h2 class="text-2xl font-bold text-center mb-10 text-black font-montserrat">
+  <i class="fas fa-stream"></i>Recursos & Créditos
+</h2>
+
+
+
+<p class="mt-6 text-sm text-gray-600 italic">
+  <i class="fas fa-link text-black mr-2"></i>
+  <strong>Reconozco y agradezco el trabajo de los creadores de contenido que han contribuido, directa o indirectamente, a mi desarrollo técnico. Este espacio es un pequeño agradecimiento a su impacto silencioso pero poderoso. Desde mi portafolio, comparto y difundo estos recursos como muestra de gratitud y compromiso con el aprendizaje colaborativo. Cada vídeo aquí incluido representa una etapa de mi evolución como Sysadmin Junior, y ha servido como complemento valioso a la enseñanza de mis profesores.</strong>
+</p>
+
+
+  </div>
+</section>
+  
+<section class="max-w-5xl mx-auto px-4 py-8">
+
+<div class="mb-10">
+  <h3 class="text-xl font-bold text-black mb-4">🚢 Introducción a Kubernetes</h3>
+  <div class="aspect-w-16 aspect-h-9 mb-4">
+    <iframe class="w-full h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/DCoBcpOA7W4?si=eHdFia2VvBebakuM" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <p class="text-sm text-gray-700 italic">
+    Aprende los fundamentos de Kubernetes, el orquestador de contenedores más popular, explicado de forma clara y desde cero. <strong>Pelado Nerd</strong>
+  </p>
+</div>
+
+<div class="mb-10">
+  <h3 class="text-xl font-bold text-black mb-4">📊 Curso completo de Grafana</h3>
+  <div class="mb-4">
+    <iframe 
+      width="100%" 
+      height="360" 
+      class="rounded-lg shadow-lg" 
+      src="https://www.youtube.com/embed/Bs-ddcPQJWU?list=PLkqaOL-oB94GZiTFd9FOrq0m4naZkVWYg" 
+      frameborder="0" 
+      allowfullscreen>
+    </iframe>
+  </div>
+  <p class="text-sm text-gray-700 italic">
+    Aprende a usar Grafana desde cero hasta nivel avanzado con este curso completo que incluye instalación, dashboards, Prometheus y alertas. <strong>Apasoft Training</strong>
+  </p>
+</div>
+
+<div class="mb-10">
+  <h3 class="text-xl font-bold text-black mb-4">⚙️ Curso completo de Ansible</h3>
+  <div class="mb-4">
+    <iframe 
+      width="100%" 
+      height="360" 
+      class="rounded-lg shadow-lg" 
+      src="https://www.youtube.com/embed/bpBieTSorCQ?list=PLkqaOL-oB94HrOAxHbZ0QmIQ1JMklqG0q" 
+      frameborder="0" 
+      allowfullscreen>
+    </iframe>
+  </div>
+  <p class="text-sm text-gray-700 italic">
+    Aprende a automatizar tareas de administración de sistemas con Ansible. Este curso completo cubre desde la instalación hasta la creación de playbooks avanzados. <strong>Apasoft Training</strong>
+  </p>
+</div>
+
+
+<div class="mb-10">
+  <h3 class="text-xl font-bold text-black mb-4">🧪 Burp Suite en Kali Linux</h3>
+  <div class="aspect-w-16 aspect-h-9 mb-4">
+    <iframe class="w-full h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/KT6McmK0FgA" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <p class="text-sm text-gray-700 italic">
+    Aprende a configurar Burp Suite como proxy de interceptación para analizar y modificar peticiones web en entornos de hacking ético. <strong>El Pingüino de Mario</strong>
+  </p>
+</div>
+
+
+<div class="mb-10">
+  <h3 class="text-xl font-bold text-black mb-4"> ¿Qué estudiar para ser SysAdmin?</h3>
+  <div class="aspect-w-16 aspect-h-9 mb-4">
+    <iframe class="w-full h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/jtEzi5ev-xA?si=8OJb0w3-ei95ee5T" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <p class="text-sm text-gray-700 italic">
+    Este video ofrece una guía completa sobre los conocimientos y habilidades que necesitas para convertirte en administrador de sistemas. Desde instalación de hardware, gestión de cuentas y redes, hasta actitud proactiva y documentación técnica. Ideal para quienes buscan orientación clara en su camino hacia el rol de Sysadmin. <strong>Edge Seguridad Informática</strong>  </p>
+</div>
+
+
+<div class="mb-10">
+  <h3 class="text-xl font-bold text-black mb-4">🔍 IDS con Snort (Parte 1 de 9)</h3>
+  <div class="aspect-w-16 aspect-h-9 mb-4">
+    <iframe class="w-full h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/PHwaH6z0MJ0" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <p class="text-sm text-gray-700 italic">
+    Introducción a los sistemas de detección de intrusos (IDS) usando Snort. Esta es la primera entrega de una serie de 9 partes sobre ciberseguridad paso a paso. <strong>Aprendiendo Ciberseguridad</strong>
+  </p>
+</div>
+
+<div class="mb-10">
+  <h3 class="text-xl font-bold text-black mb-4">🧱 Curso completo de pfSense</h3>
+  <div class="aspect-w-16 aspect-h-9 mb-4">
+    <iframe class="w-full h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/jp1ec41xEHE" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <p class="text-sm text-gray-700 italic">
+    Aprende a instalar, configurar y administrar pfSense desde cero. Este curso completo incluye múltiples entregas prácticas sobre firewall, NAT, VPN y más. <strong>Wilmer Almazan / NSS</strong>
+  </p>
+</div>
+
+<div class="mb-10">
+  <h3 class="text-xl font-bold text-black mb-4">🧬 Introducción a Ghidra</h3>
+  <div class="aspect-w-16 aspect-h-9 mb-4">
+    <iframe class="w-full h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/A4fRQ5k6SJo" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <p class="text-sm text-gray-700 italic">
+    Descubre cómo usar Ghidra, la potente herramienta gratuita de ingeniería inversa desarrollada por la NSA, ideal para análisis de malware y ciberseguridad avanzada. <strong>Mark H4CK</strong>
+  </p>
+</div>
+
+<div class="mb-10">
+  <h3 class="text-xl font-bold text-black mb-4">🕵️‍♂️ Tutorial de Maltego para OSINT</h3>
+  <div class="aspect-w-16 aspect-h-9 mb-4">
+    <iframe class="w-full h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/Ph_KmKY1yEM" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <p class="text-sm text-gray-700 italic">
+    Aprende a usar Maltego para realizar investigaciones OSINT y análisis forense digital. Ideal para quienes buscan iniciarse en el mundo del hacking ético. <strong>TheGoodHacker</strong>
+  </p>
+</div>
+
+
+  <div class="mb-10">
+    <h3 class="text-xl font-bold text-black mb-4">🎥 Aprende Metasploit desde cero</h3>
+    <div class="aspect-w-16 aspect-h-9 mb-4">
+      <iframe class="w-full h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/43wbfCsFefg" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <p class="text-sm text-gray-700 italic">
+      Este vídeo explica paso a paso cómo utilizar Metasploit Framework para realizar pruebas de penetración en entornos controlados. Ideal para quienes se inician en el pentesting. <strong>El Pingüino de Mario</strong>
+    </p>
+  </div>
+
+    <div class="mb-10">
+    <h3 class="text-xl font-bold text-black mb-4">🛡️ Curso de Wireshark</h3>
+<div class="aspect-w-16 aspect-h-9 mb-4">
+      <iframe class="w-full h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/1wxnyqlLFhw?si=neoGvl_KI1rHU47u" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <p class="text-sm text-gray-700 italic">
+      Aprende a usar Wireshark para analizar tráfico de red paso a paso. Ideal para principiantes en ciberseguridad. <strong>Seguridad Cero</strong></p>
+  </div>
+
+<div class="mb-10">
+  <h3 class="text-xl font-bold text-black mb-4">📢 Tutorial Fail2Ban ⭕ Protección contra ataques de fuerza bruta 🐲 – SSH y FTP</h3>
+  <div class="mb-4">
+    <iframe 
+      width="100%" 
+      height="360" 
+      class="rounded-lg shadow-lg" 
+      src="https://www.youtube.com/embed/k3s1J0Zw140" 
+      frameborder="0" 
+      allowfullscreen>
+    </iframe>
+  </div>
+  <p class="text-sm text-gray-700 italic">
+    Aprende a configurar Fail2Ban para proteger tu servidor Linux contra intentos de acceso no autorizados mediante fuerza bruta en servicios como SSH y FTP. <strong>Aprendiendo Ciberseguridad</strong>
+  </p>
+</div>
+
+
+
+  <div class="mb-10">
+    <h3 class="text-xl font-bold text-black mb-4">🛡️ OWASP ZAP para escaneo web</h3>
+<div class="aspect-w-4 aspect-h-3 mb-4">
+      <iframe class="w-full h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/dHYJvLujkjg?si=lqKCp2dRfokSv9-o" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <p class="text-sm text-gray-700 italic">
+      Una guía práctica sobre cómo usar OWASP ZAP para auditar servicios web, interceptar tráfico HTTP/HTTPS y detectar vulnerabilidades comunes. <strong>Seguridad Cero</strong>
+    </p>
+  </div>
+</section>
+
+
+
+ <footer class="text-center py-6 mt-16 font-montserrat" style="background-color: #000; color: rgb(255, 204, 0);">
+  <p>© 2025 Rafael M. Pérez - Portafolio Sysadmin Junior</p>
+</footer>
+
+
+</body>
+</html>
