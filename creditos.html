@@ -102,11 +102,15 @@ Cada vídeo incluido ha sido un complemento valioso a la enseñanza de mis profe
 
   </div>
 </section>
-  
-<section class="max-w-5xl mx-auto px-4 py-8">
-  <section class="mb-12">
-  <!-- Título de sección más grande -->
-  <h2 class="text-2xl md:text-1xl font-extrabold text-black mb-8">🟢 Fundamentos de Sysadmin:</h2>
+
+<div class="space-y-4">
+  <!-- Acordeón: Fundamentos de Sysadmin -->
+  <div class="border rounded-lg">
+    <button onclick="toggleAccordion('sysadmin')" class="w-full text-left px-4 py-3 bg-gray-100 hover:bg-gray-200 font-semibold">
+      🟢 Fundamentos de Sysadmin
+    </button>
+    <div id="sysadmin" class="hidden px-4 py-3">
+   <h2 class="text-2xl md:text-1xl font-extrabold text-black mb-8">🟢 Fundamentos de Sysadmin:</h2>
 
     <div class="mb-10">
   <h3 class="text-xl font-bold text-black mb-4"> ¿Qué estudiar para ser SysAdmin?</h3>
@@ -139,14 +143,23 @@ Cada vídeo incluido ha sido un complemento valioso a la enseñanza de mis profe
     Aprende paso a paso cómo montar servidores en un rack 42U, incluyendo la instalación de rieles, alineación, seguridad física y mejores prácticas para trabajar en datacenters. Ideal para quienes buscan experiencia en infraestructura física. <strong>GabakTech</strong>
   </p>
 </div>
-
-    
-    <!-- Sección:🖥️ Sistemas operativos y administración (títulos más grandes que las cards) -->
-<section class="mb-12">
+    </div>
+  </div>
+     
+      <section class="max-w-5xl mx-auto px-4 py-8">
+  <section class="mb-12">
   <!-- Título de sección más grande -->
-  <h2 class="text-2xl md:text-1xl font-extrabold text-black mb-8">🖥️ Sistemas operativos y administración:</h2>
+ 
 
-<div class="mb-10">
+  
+
+  <!-- Acordeón: Sistemas operativos -->
+  <div class="border rounded-lg">
+    <button onclick="toggleAccordion('sistemas')" class="w-full text-left px-4 py-3 bg-gray-100 hover:bg-gray-200 font-semibold">
+      🖥️ Sistemas operativos y administración
+    </button>
+    <div id="sistemas" class="hidden px-4 py-3">
+     <div class="mb-10">
   <h3 class="text-xl font-bold text-black mb-4">🧭 Curso de Linux: Comandos básicos para navegar por la terminal</h3>
   <div class="aspect-w-16 aspect-h-9 mb-4">
     <iframe class="w-full h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/TGhh7b9SBfU?list=PLTDhSVtYdnF4spmWWdWgB9lX_mA9_UREf" frameborder="0" allowfullscreen></iframe>
@@ -242,13 +255,19 @@ Cada vídeo incluido ha sido un complemento valioso a la enseñanza de mis profe
   </p>
 </div>
 
+    </div>
+  </div>
 
-    <!-- Sección:💾 Backup y recuperación de sistemas (títulos más grandes que las cards) -->
-<section class="mb-12">
-  <!-- Título de sección más grande -->
-  <h2 class="text-2xl md:text-1xl font-extrabold text-black mb-8">💾 Backup y recuperación de sistemas:</h2>
 
-  <div class="mb-10">
+  <!-- Acordeón: 💾 Backup y recuperación de sistemas: -->
+  <div class="border rounded-lg">
+    <button onclick="toggleAccordion('sysadmin')" class="w-full text-left px-4 py-3 bg-gray-100 hover:bg-gray-200 font-semibold">
+      💾 Backup y recuperación de sistemas:
+    </button>
+    <div id="sysadmin" class="hidden px-4 py-3">
+      <!-- Aquí van tus bloques HTML de videos -->
+   
+       <div class="mb-10">
   <h3 class="text-xl font-bold text-black mb-4">💾 Backup en Windows Server 2025: Copia de seguridad local y remota</h3>
   <div class="aspect-w-16 aspect-h-9 mb-4">
     <iframe class="w-full h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/G9eD-2HD0JA" frameborder="0" allowfullscreen></iframe>
@@ -258,13 +277,15 @@ Cada vídeo incluido ha sido un complemento valioso a la enseñanza de mis profe
   </p>
 </div>
 
-<!-- Sección:📡 Redes y conectividad: (títulos más grandes que las cards) -->
-<section class="mb-12">
-  <!-- Título de sección más grande -->
-  <h2 class="text-2xl md:text-1xl font-extrabold text-black mb-8">📡 Redes y conectividad:</h2>
 
-  
-<div class="mb-10">
+    
+  <!-- Acordeón: 📡 Redes y conectividad: -->
+  <div class="border rounded-lg">
+    <button onclick="toggleAccordion('sysadmin')" class="w-full text-left px-4 py-3 bg-gray-100 hover:bg-gray-200 font-semibold">
+      📡 Redes y conectividad:
+    </button>
+    <div id="sysadmin" class="hidden px-4 py-3">
+     <div class="mb-10">
   <h3 class="text-xl font-bold text-black mb-4">🌐 Curso de redes desde cero</h3>
   <div class="aspect-w-16 aspect-h-9 mb-4">
     <iframe class="w-full h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/um41JAqO42g" frameborder="0" allowfullscreen></iframe>
@@ -274,16 +295,17 @@ Cada vídeo incluido ha sido un complemento valioso a la enseñanza de mis profe
   </p>
 </div>
 
+      <!-- Puedes insertar aquí los <iframe> o enlaces -->
+    </div>
+  </div>
 
-
-  
-
-<!-- Sección:⚙️ Automatización y gestión de configuración (títulos más grandes que las cards) -->
-<section class="mb-12">
-  <!-- Título de sección más grande -->
-  <h2 class="text-2xl md:text-1xl font-extrabold text-black mb-8">⚙️ Automatización y gestión de configuración:</h2>
-
-
+  <!-- Acordeón: ⚙️ Automatización y gestión de configuración: -->
+  <div class="border rounded-lg">
+    <button onclick="toggleAccordion('sistemas')" class="w-full text-left px-4 py-3 bg-gray-100 hover:bg-gray-200 font-semibold">
+      ⚙️ Automatización y gestión de configuración:
+    </button>
+    <div id="sistemas" class="hidden px-4 py-3">
+      
   <div class="mb-10">
   <h3 class="text-xl font-bold text-black mb-4">⚙️ Curso completo de Ansible</h3>
   <div class="aspect-w-16 aspect-h-9 mb-4">
@@ -295,14 +317,13 @@ Cada vídeo incluido ha sido un complemento valioso a la enseñanza de mis profe
 </div>
 
 
-  <!-- Sección:🐳 Contenerización y orquestación (títulos más grandes que las cards) -->
-<section class="mb-12">
-  <!-- Título de sección más grande -->
-  <h2 class="text-2xl md:text-1xl font-extrabold text-black mb-8">🐳 Contenerización y orquestación:</h2>
-  
-  
-
-<div class="mb-10">
+      <!-- Acordeón: Contenerización y orquestación: -->
+  <div class="border rounded-lg">
+    <button onclick="toggleAccordion('sistemas')" class="w-full text-left px-4 py-3 bg-gray-100 hover:bg-gray-200 font-semibold">
+      Contenerización y orquestación:
+    </button>
+    <div id="sistemas" class="hidden px-4 py-3">
+      <div class="mb-10">
   <h3 class="text-xl font-bold text-black mb-4">🐳 Curso de Docker</h3>
   <div class="aspect-w-16 aspect-h-9 mb-4">
     <iframe class="w-full h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/4Dko5W96WHg?si=GplYn7pac4qQsjap" frameborder="0" allowfullscreen></iframe>
@@ -323,14 +344,13 @@ Cada vídeo incluido ha sido un complemento valioso a la enseñanza de mis profe
   </p>
 </div>
 
-
-  <!-- Sección:🧪 Laboratorios virtuales y entornos de prueba (títulos más grandes que las cards) -->
-<section class="mb-12">
-  <!-- Título de sección más grande -->
-  <h2 class="text-2xl md:text-1xl font-extrabold text-black mb-8">🧪 Laboratorios virtuales y entornos de prueba:</h2>
-
-
-<div class="mb-10">
+        <!-- Acordeón: 🧪 Laboratorios virtuales y entornos de prueba: -->
+  <div class="border rounded-lg">
+    <button onclick="toggleAccordion('sistemas')" class="w-full text-left px-4 py-3 bg-gray-100 hover:bg-gray-200 font-semibold">
+      🧪 Laboratorios virtuales y entornos de prueba:
+    </button>
+    <div id="sistemas" class="hidden px-4 py-3">
+      <div class="mb-10">
   <h3 class="text-xl font-bold text-black mb-4">📦 Curso completo de Virtualización con VirtualBox</h3>
   <div class="aspect-w-16 aspect-h-9 mb-4">
     <iframe class="w-full h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/CLdHQPyHeN0" frameborder="0" allowfullscreen></iframe>
@@ -340,16 +360,13 @@ Cada vídeo incluido ha sido un complemento valioso a la enseñanza de mis profe
   </p>
 </div>
 
-
-  
-
-<!-- Sección:☁️ Infraestructura en la nube (títulos más grandes que las cards) -->
-<section class="mb-12">
-  <!-- Título de sección más grande -->
-  <h2 class="text-2xl md:text-1xl font-extrabold text-black mb-8">☁️ Infraestructura en la nube:</h2>
-  
-
-  <div class="mb-10">
+  <!-- Acordeón: ☁️ Infraestructura en la nube: -->
+  <div class="border rounded-lg">
+    <button onclick="toggleAccordion('sistemas')" class="w-full text-left px-4 py-3 bg-gray-100 hover:bg-gray-200 font-semibold">
+      ☁️ Infraestructura en la nube:
+    </button>
+    <div id="sistemas" class="hidden px-4 py-3">
+       <div class="mb-10">
   <h3 class="text-xl font-bold text-black mb-4">☁️ Curso completo de AWS</h3>
   <div class="aspect-w-16 aspect-h-9 mb-4">
     <iframe class="w-full h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/dJUUHT8EwjI?list=PLDbrnXa6SAzXGTlbgK42iQklMhEuZQFMf" frameborder="0" allowfullscreen></iframe>
@@ -360,13 +377,13 @@ Cada vídeo incluido ha sido un complemento valioso a la enseñanza de mis profe
 </div>
 
 
-  <!-- Sección:📊 Monitoreo y visualización (títulos más grandes que las cards) -->
-<section class="mb-12">
-  <!-- Título de sección más grande -->
-  <h2 class="text-2xl md:text-1xl font-extrabold text-black mb-8">📊 Monitoreo y visualización:</h2>
-
-
-  <div class="mb-10">
+  <!-- Acordeón:📊 Monitoreo y visualización:-->
+  <div class="border rounded-lg">
+    <button onclick="toggleAccordion('sistemas')" class="w-full text-left px-4 py-3 bg-gray-100 hover:bg-gray-200 font-semibold">
+      📊 Monitoreo y visualización:
+    </button>
+    <div id="sistemas" class="hidden px-4 py-3">
+       <div class="mb-10">
   <h3 class="text-xl font-bold text-black mb-4">📊 Curso completo de Grafana</h3>
   <div class="aspect-w-16 aspect-h-9 mb-4">
     <iframe class="w-full h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/Bs-ddcPQJWU?list=PLkqaOL-oB94GZiTFd9FOrq0m4naZkVWYg" frameborder="0" allowfullscreen></iframe>
@@ -376,12 +393,13 @@ Cada vídeo incluido ha sido un complemento valioso a la enseñanza de mis profe
   </p>
 </div>
 
-  <!-- Sección:🔐 Seguridad y detección de intrusos(títulos más grandes que las cards) -->
-<section class="mb-12">
-  <!-- Título de sección más grande -->
-  <h2 class="text-2xl md:text-1xl font-extrabold text-black mb-8">🔐 Seguridad y detección de intrusos:</h2>
-
-    <div class="mb-10">
+        <!-- Acordeón: 🔐 Seguridad y detección de intrusos: -->
+  <div class="border rounded-lg">
+    <button onclick="toggleAccordion('sistemas')" class="w-full text-left px-4 py-3 bg-gray-100 hover:bg-gray-200 font-semibold">
+      🔐 Seguridad y detección de intrusos:
+    </button>
+    <div id="sistemas" class="hidden px-4 py-3">
+          <div class="mb-10">
     <h3 class="text-xl font-bold text-black mb-4">🦈 Curso de Wireshark</h3>
 <div class="aspect-w-16 aspect-h-9 mb-4">
       <iframe class="w-full h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/1wxnyqlLFhw?si=neoGvl_KI1rHU47u" frameborder="0" allowfullscreen></iframe>
@@ -456,15 +474,13 @@ Cada vídeo incluido ha sido un complemento valioso a la enseñanza de mis profe
     </p>
   </div>
 
-
-
-  <!-- Sección: 🧪 Pentesting y análisis forense (títulos más grandes que las cards) -->
-<section class="mb-12">
-  <!-- Título de sección más grande -->
-  <h2 class="text-2xl md:text-1xl font-extrabold text-black mb-8">🧪 Pentesting y análisis forense:</h2>
-
-
-<div class="mb-10">
+        <!-- Acordeón: 🧪 Pentesting y análisis forense: -->
+  <div class="border rounded-lg">
+    <button onclick="toggleAccordion('sistemas')" class="w-full text-left px-4 py-3 bg-gray-100 hover:bg-gray-200 font-semibold">
+      🧪 Pentesting y análisis forense:
+    </button>
+    <div id="sistemas" class="hidden px-4 py-3">
+      <div class="mb-10">
   <h3 class="text-xl font-bold text-black mb-4">🧪 Burp Suite en Kali Linux</h3>
   <div class="aspect-w-16 aspect-h-9 mb-4">
     <iframe class="w-full h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/KT6McmK0FgA" frameborder="0" allowfullscreen></iframe>
@@ -494,6 +510,20 @@ Cada vídeo incluido ha sido un complemento valioso a la enseñanza de mis profe
     Aprende a usar Maltego para realizar investigaciones OSINT y análisis forense digital. Ideal para quienes buscan iniciarse en el mundo del hacking ético. <strong>TheGoodHacker</strong>
   </p>
 </div>
+    </div>
+<script>
+  function toggleAccordion(id) {
+    const section = document.getElementById(id);
+    section.classList.toggle('hidden');
+  }
+</script>
+
+    </div>
+  </div>
+
+
+
+
 </section>
 
 
