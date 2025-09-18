@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Implementación y activación de UFW en sistemas Linux. Proyecto de ciberseguridad con Ubuntu, Parrot OS, Bash, OpenSSH y más. Portafolio de Rafael M. Pérez, Sysadmin Junior.">
+  <title>Instalación de IA Local con Ollama | Portafolio Rafael M.Pérez | Sysadmin Junior</title>
+
+  <!-- Estilos y recursos -->
+  <link rel="stylesheet" href="assets/css/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+</head>
+  
+   <!-- ✅ Open Graph (Facebook, LinkedIn, WhatsApp) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Implementación y Activación UFW" />
+  <meta property="og:description" content="Portafolio Rafael M.Pérez | Sysadmin Junior" />
+  <meta property="og:image" content="https://rafaelmperez.github.io/assets/img/vistapreliminarufw.jpg" />
+  <meta property="og:url" content="https://rafaelmperez.github.io/activacionufw.html" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:image" content="https://rafaelmperez.github.io/assets/img/vistapreliminarufw.jpg" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+<body>
+  <!-- Aquí va el contenido de tu página -->
+</body>
+</html>
+
+
+<!-- Google Fonts optimizado -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" as="style">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" media="print" onload="this.media='all'">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- TailwindCSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { ... }
+  }
+</script>
+
+
+</head>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'nav-bg': '#000000',          // fondo negro
+          'nav-text': 'rgb(255, 204, 0)', // texto amarillo vibrante
+          'nav-hover': '#FFB800'        // color hover amarillo más oscuro
+        }
+      }
+    }
+  }
+</script>
+
+
+
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- Header -->
+<header class="p-6 shadow-lg font-montserrat bg-black text-yellow-400">
+  <div class="max-w-6xl mx-auto flex items-center justify-between">
+    <!-- Título -->
+    <h1 class="text-2xl font-bold">
+      Portafolio Rafael M.Pérez | Sysadmin Junior
+    </h1>
+
+    <!-- Imagen pequeña a la derecha -->
+<i class="fas fa-shield-alt" style="color: rgb(255, 204, 0); font-size: 24px;"></i>
+
+  </div>
+</header>
+
+<!-- Contenido del microproyecto -->
+ 
+<main class="w-full max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+<h2 class="text-2xl font-bold mb-6 font-montserrat underline underline-offset-4">
+  Instalación de IA Local con Ollama
+</h2>
+
+
+  <!-- Logo insertado -->
+<div class="flex justify-center mb-6">
+  <img src="https://rafaelmperez.github.io/assets/img/logoialocal.jpg" 
+       alt="Logo UFW" 
+       style="width: 50%; max-width: 800px; height: auto; display: block; margin: 0 auto 1.5rem;">
+</div>
+
+<!-- 📑 Índice del proyecto (navegador horizontal) -->
+<nav class="flex flex-wrap justify-center gap-4 bg-nav-bg shadow-md rounded-lg p-3 mb-8">
+  <a href="#desafio" class="px-3 py-1 text-sm sm:text-base font-medium text-nav-text hover:text-nav-hover transition-colors">
+    Desafío
+  </a>
+  <a href="#tecnologias utilizadas" class="px-3 py-1 text-sm sm:text-base font-medium text-nav-text hover:text-nav-hover transition-colors">
+    Tecnologías utilizadas
+  </a>
+  <a href="#pasos realizados" class="px-3 py-1 text-sm sm:text-base font-medium text-nav-text hover:text-nav-hover transition-colors">
+    Pasos realizados
+  </a>
+  <a href="#conclusiones" class="px-3 py-1 text-sm sm:text-base font-medium text-nav-text hover:text-nav-hover transition-colors">
+    Resultado
+  </a>
+</nav>
+
+
+
+
+<!-- Sección Desafío -->
+<h3 id="desafio" class="text-xl font-semibold mt-8 mb-4 font-montserrat">Desafío:</h3>
+
+<p class="text-black mb-4">
+  Este ejercicio técnico aborda la necesidad de ejecutar modelos de lenguaje de forma local, sin depender de servicios en la nube ni requerir GPU. En entornos donde la privacidad, la autonomía y el bajo consumo de recursos son prioritarios, contar con una IA que funcione desde la terminal representa una solución eficiente y accesible. La instalación de Ollama en Linux permite preparar el entorno para ejecutar modelos como Mistral directamente desde la línea de comandos.
+</p>
+
+<p class="text-black mb-6">
+  El objetivo principal es validar el funcionamiento del modelo Mistral en condiciones locales, comprobando su capacidad para <strong>generar documentación técnica automatizada.</strong> Esta implementación demuestra que es posible integrar inteligencia artificial en flujos de trabajo sin conexión, manteniendo el control total sobre los datos y el entorno operativo.
+</p>
+
+
+<!-- Sección Tecnologías -->
+<h3 id="tecnologias utilizadas" class="text-xl font-semibold mt-8 mb-4 font-montserrat scroll-mt-24">
+</h3>
+<h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Tecnologías utilizadas:</h3>
+
+<!-- Logos en fila arriba -->
+<div class="flex gap-4 mb-4">
+  <img src="https://rafaelmperez.github.io/assets/img/tecnologiaubuntu.jpg" alt="Ubuntu" class="w-12 h-12">
+  <img src="https://rafaelmperez.github.io/assets/img/tecnologia bash.jpg" alt="Bash" class="w-12 h-12">
+</div>
+
+<ul class="list-disc list-inside text-black">
+  <!-- contenido de la lista -->
+</ul>
+
+
+<ul class="list-disc list-inside text-black">
+<ul>
+  <li><strong>Linux (Ubuntu 24.04 LTS)</strong> Sistema operativo utilizado para ejecutar la IA local.</li>
+  <li><strong>Ollama</strong> Plataforma que permite la ejecución de modelos de lenguaje directamente desde la terminal.</li>
+  <li><strong>Mistral</strong> Modelo de lenguaje instalado localmente para generar documentación técnica automatizada.</li>
+  <li><strong>Bash</strong> Shell utilizada para instalar, configurar y ejecutar comandos relacionados con Ollama y Mistral.</li>
+</ul>
+
+<!-- Sección Pasos -->
+<h3 id="pasos realizados" class="text-xl font-semibold mt-8 mb-4 font-montserrat scroll-mt-24">
+</h3>
+<h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Pasos realizados:</h3>
+
+<ol class="list-decimal text-black space-y-8">
+  <li>
+    <p class="mb-2"><strong>Instalación de curl:</strong></p>
+    <p class="text-black mb-6">
+      Se instaló la herramienta <strong>curl</strong> mediante el comando 
+      <code class="bg-gray-200 px-1 rounded">sudo apt install curl</code>. Esta utilidad es necesaria para descargar el script oficial de instalación de Ollama desde su sitio web.
+    </p>
+  </li>
+
+  <li>
+    <p class="mb-2"><strong>Instalación de Ollama:</strong></p>
+<img src="https://rafaelmperez.github.io/assets/img/ialocal1.jpg" alt="Ejecución del modelo Mistral" style="width:100%; max-width:600px;" class="rounded-lg shadow-md">
+
+    <p class="text-black mb-6">
+      Se ejecutó el script de instalación de <strong>Ollama</strong> con el siguiente comando:
+      <code class="bg-gray-200 px-1 rounded">curl -fsSL https://ollama.com/install.sh | sh</code>. Este paso configura el entorno para ejecutar modelos de lenguaje localmente desde la terminal.
+    </p>
+  </li>
+
+  <li>
+    <p class="mb-2"><strong>Descarga del modelo Mistral:</strong></p>
+    <p class="text-black mb-6">
+      Una vez instalado Ollama, se descargó el modelo <strong>Mistral</strong> utilizando el comando 
+      <code class="bg-gray-200 px-1 rounded">ollama pull mistral</code>. Este modelo permite generar documentación técnica automatizada sin conexión a la nube.
+    </p>
+  </li>
+
+  <li>
+    <p class="mb-2"><strong>Ejecución del modelo Mistral:</strong></p>
+<img src="https://rafaelmperez.github.io/assets/img/ialocal2.jpg" alt="Ejecución del modelo Mistral" style="width:100%; max-width:600px;" class="rounded-lg shadow-md">
+
+
+    <p class="text-black mb-6">
+      Finalmente, se ejecutó el modelo con 
+      <code class="bg-gray-200 px-1 rounded">ollama run mistral</code>, iniciando una sesión interactiva en la terminal para realizar pruebas de generación de contenido técnico.
+    </p>
+  </li>
+</ol>
+
+
+
+
+
+
+<!-- Sección Conclusión -->
+<h3 id="conclusiones" class="text-xl font-semibold mt-8 mb-4 font-montserrat scroll-mt-24">
+</h3>
+<div class="p-4 sm:p-6 mt-16 mb-6 bg-white rounded-lg shadow-md">
+  <h3 class="text-lg sm:text-xl font-semibold mt-6 mb-2 font-montserrat">
+    Resultado y recomendaciones Finales:
+  </h3>
+    <img src="https://rafaelmperez.github.io/assets/img/ialocal3.jpg" alt="Activar el firewall" style="width:100%; max-width:900px;" class="rounded-lg shadow-md">
+
+  <p class="text-black mb-4 leading-relaxed text-sm sm:text-base">
+    La instalación de Ollama en Ubuntu 24.04 LTS, junto con la ejecución del modelo Mistral desde la terminal, demuestra que es posible integrar inteligencia artificial local sin necesidad de GPU ni conexión a la nube. Este enfoque garantiza privacidad, control total del entorno y eficiencia operativa en sistemas ligeros.
+  </p>
+
+  <ul class="list-disc list-inside mb-4 space-y-2 text-sm sm:text-base leading-relaxed">
+    <li>
+      <strong>Validación visual:</strong> Se realizaron pruebas fotográficas que documentan la interacción con el modelo Mistral, incluyendo prompts técnicos y respuestas generadas en tiempo real desde la terminal.
+    </li>
+    <li>
+      <strong>Generación eficiente:</strong> El modelo respondió con contenido estructurado, útil y coherente en temas como bastionado de sistemas, documentación de APIs y respuesta a incidentes.
+    </li>
+        <img src="https://rafaelmperez.github.io/assets/img/ialocal4.jpg" alt="Activar el firewall" style="width:100%; max-width:900px;" class="rounded-lg shadow-md">
+
+    <li>
+
+      <strong>Entorno autónomo:</strong> Todo el proceso se ejecutó sin conexión externa, lo que refuerza la viabilidad de soluciones IA locales en contextos donde la soberanía de datos es prioritaria.
+    </li>
+    <li>
+      <strong>Aplicaciones futuras:</strong> Este entorno puede escalarse para generar documentación técnica automatizada, asistir en tareas de redacción especializada o integrarse en flujos de trabajo DevSecOps.
+    </li>
+  </ul>
+
+  <p class="text-black leading-relaxed text-sm sm:text-base">
+    La combinación de Ollama y Mistral en un entorno Linux moderno representa una solución práctica y sostenible para profesionales que buscan incorporar inteligencia artificial sin depender de servicios externos. Las pruebas realizadas confirman que este enfoque es funcional, seguro y adaptable a múltiples escenarios técnicos.
+  </p>
+</div>
+
+
+
+
+</div>
+
+
+
+<div class="flex items-center">
+  <a href="" class="text-sm flex items-center ml-auto text-black">
+    Siguiente práctica técnica <span class="ml-1">→</span>
+  </a>
+</div>
+
+
+  </main>
+  
+
+ <footer class="text-center py-6 mt-16 font-montserrat" style="background-color: #000; color: rgb(255, 204, 0);">
+  <p>© 2025 Rafael M. Pérez - Portafolio Sysadmin Junior</p>
+</footer>
+
+
+</body>
+</html>
