@@ -1798,6 +1798,51 @@ Utilizo herramientas como Nmap, Nikto y SSLyze para auditar y documentar cada fa
 </div>
 
 
+    <!-- CARD NUEVO PROYECTO -->
+<div class="card">
+  <img src="https://rafaelmperez.com/assets/img/geoip.jpg" 
+       alt="Nombre del proyecto" 
+       style="width:100%; height:200px; object-fit:cover;">
+
+  <h3 style="font-size: 1em;">
+    <i class="fas fa-shield-alt"></i> Firewall dinámico con GeoIP
+  </h3>
+
+<strong>
+  <span style="color:#E95420;">iptables</span> |
+  <span style="color:#007BFF;">GeoIP</span> |
+  <span style="color:#28A745;">Bash</span> |
+  <span style="color:#6f42c1;">SSH</span> |
+  <span style="color:#20c997;">Auth.log</span>
+</strong>
+
+
+  <p>
+  Este proyecto implementa un sistema defensivo automatizado que analiza los intentos fallidos de acceso SSH y bloquea IPs sospechosas según su país de origen.
+
+  Utiliza GeoIP para identificar conexiones no españolas y aplica reglas dinámicas con iptables. El script se ejecuta localmente, registra cada acción y permite visualizar los bloqueos en tiempo real.
+
+  El resultado es una capa de protección reactiva, ligera y documentable, alineada con buenas prácticas de ciberseguridad operativa.
+  </p>
+
+  <p>
+    <a href="https://tudocumentacion.html" 
+       target="_blank" 
+       class="sysadmin-badge">
+      <strong>💻 Ver documentación técnica</strong>
+    </a>
+  </p>
+
+  <div class="audio-proyecto" style="margin-top: 8px;">
+    <p><strong>🎧 Versión en audio:</strong></p>
+    <audio controls controlsList="nodownload noplaybackrate">
+      <source src="https://rafaelmperez.com/sounds/geoip.aac" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+  </div>
+</div>
+
+
   <!-- CARD 1 -->
     <div class="card">
       <img src="https://rafaelmperez.com/assets/img/Microproyecto1.jpg" alt="Implementación de Firewall con UFW">
@@ -2018,46 +2063,15 @@ Este microproyecto documenta la instalación de Ollama en un entorno Linux, conf
   </div>
 </div>
 
-
-<div class="card">
-  <img src="https://rafaelmperez.com/assets/img/proyectoonion.jpg" 
-       alt="Previsualización Tor Hidden Service" class="proyecto-img">
-
-  <h3 style="font-size: 1em;"><i class="fas fa-user-secret"></i> Hidden Service en Tor (.onion)</h3>
-
-  <strong>
-    <span style="color:#7E4798;">Tor</span> |
-    <span style="color:#D42029;">Apache</span> |
-    <span style="color:#A0C52F;">Raspberry Pi OS</span> |
-    <span style="color:#6C757D;">Nikto</span> |
-    <span style="color:#28A745;">Nmap</span>
-  </strong>
-
-  <div class="descripcion-proyecto">
-    <p>
-      Proyecto autoalojado y descentralizado de mi portafolio técnico, accesible únicamente a través de la red Tor. 
-      Desplegado en una Raspberry Pi 2, prioriza privacidad, eficiencia y resiliencia, demostrando cómo ofrecer servicios web estáticos en entornos limitados con seguridad y control total de la infraestructura.
-    </p>
-
-    <p>
-      <a href="http://xwzrrbprgbg324sgzacioafol47j3smjwvatbfwys2cqqr6q4ridanyd.onion/" target="_blank" class="sysadmin-badge">
-        <strong>🧅 Enlace .onion (Tor)</strong>
-      </a>
-    </p>
-
-    <p>
-      <strong>Proyecto en fase de desarrollo. Próximamente.</strong>
-    </p>
-  </div>
-
-  <div class="audio-proyecto">
-    <p><strong>🎧 Versión en audio:</strong></p>
-    <audio controls controlsList="nodownload noplaybackrate">
-      <source src="https://rafaelmperez.com/sounds/proyectoonion.aac" type="audio/mpeg">
-      Tu navegador no soporta el elemento de audio.
-    </audio>
+  <div style="grid-column: 1 / -1; text-align: center; margin-top: 20px;">
+    <a href="https://rafaelmperez.com/restodeproyectos.html" 
+       target="_blank" 
+       class="sysadmin-badge">
+      <strong>🗂️ Ver todos mis proyectos</strong>
+    </a>
   </div>
 </div>
+
 
     
 
@@ -2306,6 +2320,7 @@ Este microproyecto documenta la instalación de Ollama en un entorno Linux, conf
   });
 </script>
 </html>
+
 
 
 
