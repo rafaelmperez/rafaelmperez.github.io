@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Implementación y activación de UFW en sistemas Linux. Proyecto de ciberseguridad con Ubuntu, Parrot OS, Bash, OpenSSH y más. Portafolio de Rafael M. Pérez, Sysadmin Junior.">
+  <title> Firewall dinámico con GeoIP | Portafolio Rafael M.Pérez | Sysadmin Junior</title>
+
+  <!-- Estilos y recursos -->
+  <link rel="stylesheet" href="assets/css/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+</head>
+  
+   <!-- ✅ Open Graph (Facebook, LinkedIn, WhatsApp) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Implementación y Activación UFW" />
+  <meta property="og:description" content="Portafolio Rafael M.Pérez | Sysadmin Junior" />
+  <meta property="og:image" content="https://rafaelmperez.com/assets/img/vistapreliminarufw.v1.webp" />
+  <meta property="og:url" content="https://rafaelmperez.com/activacionufw.html" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:image" content="https://rafaelmperez.com/assets/img/vistapreliminarufw.v1.webp" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+<body>
+  <!-- Aquí va el contenido de tu página -->
+</body>
+</html>
+
+
+<!-- Google Fonts optimizado -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" as="style">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" media="print" onload="this.media='all'">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- TailwindCSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { ... }
+  }
+</script>
+
+
+</head>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'nav-bg': '#000000',          // fondo negro
+          'nav-text': 'rgb(255, 204, 0)', // texto amarillo vibrante
+          'nav-hover': '#FFB800'        // color hover amarillo más oscuro
+        }
+      }
+    }
+  }
+</script>
+
+
+
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- Header -->
+<header class="p-6 shadow-lg font-montserrat bg-black text-yellow-400">
+  <div class="max-w-6xl mx-auto flex items-center justify-between">
+    <!-- Título -->
+    <h1 class="text-2xl font-bold">
+      Portafolio Rafael M.Pérez | Sysadmin Junior
+    </h1>
+
+    <!-- Imagen pequeña a la derecha -->
+<i class="fas fa-shield-alt" style="color: rgb(255, 204, 0); font-size: 24px;"></i>
+
+  </div>
+</header>
+
+<!-- Contenido del microproyecto -->
+ 
+<main class="w-full max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+<h2 class="text-2xl font-bold mb-6 font-montserrat underline underline-offset-4">
+  Firewall dinámico con GeoIP
+</h2>
+
+
+  <!-- Logo insertado -->
+<div class="flex justify-center mb-6">
+  <img src="https://rafaelmperez.com/assets/img/bastionamiento.jpg" 
+       alt="Logo UFW" 
+       style="width: 50%; max-width: 800px; height: auto; display: block; margin: 0 auto 1.5rem;">
+</div>
+
+<!-- 📑 Índice del proyecto (navegador horizontal) -->
+<nav class="flex flex-wrap justify-center gap-4 bg-nav-bg shadow-md rounded-lg p-3 mb-8">
+  <a href="#desafio" class="px-3 py-1 text-sm sm:text-base font-medium text-nav-text hover:text-nav-hover transition-colors">
+    Desafío
+  </a>
+  <a href="#tecnologias utilizadas" class="px-3 py-1 text-sm sm:text-base font-medium text-nav-text hover:text-nav-hover transition-colors">
+    Tecnologías utilizadas
+  </a>
+  <a href="#pasos realizados" class="px-3 py-1 text-sm sm:text-base font-medium text-nav-text hover:text-nav-hover transition-colors">
+    Pasos realizados
+  </a>
+  <a href="#resultado" class="px-3 py-1 text-sm sm:text-base font-medium text-nav-text hover:text-nav-hover transition-colors">
+    Resultado
+  </a>
+  <a href="#conclusiones" class="px-3 py-1 text-sm sm:text-base font-medium text-nav-text hover:text-nav-hover transition-colors">
+    Conclusiones
+  </a>
+</nav>
+
+
+
+
+<!-- Sección Desafío -->
+<h3 id="desafio" class="text-xl font-semibold mt-8 mb-4 font-montserrat">Desafío:</h3>
+
+<ul class="list-disc list-inside text-black mb-6">
+
+<div class="text-black mb-6">
+<div class="text-black mb-6">
+  <p style="margin-bottom: 1rem;">
+<div class="descripcion-proyecto">
+  <p>
+    El principal reto consistía en diseñar un sistema defensivo capaz de reaccionar ante intentos de acceso no autorizados, bloqueando IPs agresivas en tiempo real sin depender de soluciones externas ni afectar la disponibilidad del servicio SSH.
+  </p>
+
+  <p style="margin-bottom: 1rem;">
+    La infraestructura carecía de mecanismos de respuesta automatizada, filtrado geográfico o trazabilidad de eventos, lo que dificultaba la detección y mitigación de accesos maliciosos.
+  </p>
+
+  <p style="margin-bottom: 1rem;">
+    Este desafío exigía una solución ligera y autónoma que permitiera auditar los intentos fallidos, identificar el país de origen de cada IP y aplicar bloqueos dinámicos mediante iptables, todo ello documentado y ejecutable desde un entorno local.
+  </p>
+</div>
+
+
+
+
+<!-- Sección Tecnologías -->
+<h3 id="tecnologias utilizadas" class="text-xl font-semibold mt-8 mb-4 font-montserrat scroll-mt-24">
+</h3>
+<h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Tecnologías utilizadas:</h3>
+
+<!-- Logos en fila arriba -->
+<div class="flex gap-4 mb-4">
+  <img src="https://rafaelmperez.com/assets/icons/cloudflare.png" alt="Cloudflare" class="w-12 h-12">
+  <img src="https://rafaelmperez.com/assets/icons/nikto.png" alt="Nikto" class="w-12 h-12">
+  <img src="https://rafaelmperez.com/assets/icons/sslyze.png" alt="SSLyze" class="w-12 h-12">
+  <img src="https://rafaelmperez.com/assets/icons/owaspzap.png" alt="Owasp Zap" class="w-12 h-12">
+</div>
+
+<ul class="list-disc list-inside text-black">
+  <!-- contenido de la lista -->
+</ul>
+
+
+<ul class="list-disc list-inside text-black">
+  <li><strong>iptables</strong> Sistema de filtrado de paquetes que permite bloquear IPs específicas en tiempo real, aplicando reglas dinámicas en la cadena <code>INPUT</code> del firewall local.</li>
+  
+  <li><strong>GeoIP</strong> Herramienta de geolocalización que identifica el país de origen de cada IP mediante consultas locales, permitiendo aplicar criterios defensivos basados en ubicación.</li>
+  
+  <li><strong>Bash</strong> Lenguaje de scripting utilizado para automatizar la detección de intentos fallidos, el análisis GeoIP y la ejecución de bloqueos, todo dentro de un script autónomo y documentado.</li>
+  
+  <li><strong>Auth.log</strong> Archivo de registro del sistema que almacena los intentos de autenticación SSH, utilizado como fuente principal para detectar accesos fallidos y comportamientos sospechosos.</li>
+  
+  <li><strong>iptables -L</strong> Comando de verificación que permite listar las reglas activas del firewall, confirmando que las IPs bloqueadas han sido correctamente añadidas a la política defensiva.</li>
+</ul>
+
+
+
+  
+<!-- Sección Pasos -->
+<h3 id="pasos realizados" class="text-xl font-semibold mt-8 mb-4 font-montserrat scroll-mt-24">
+</h3>
+<h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Pasos realizados:</h3>
+<ol class="list-decimal text-black space-y-8">
+  <li>
+    <div class="text-black mb-6">
+      <p><strong>Fase 0: Inicio desde configuración predeterminada</strong></p>
+      <p style="margin-bottom: 1.5rem;">
+        El proceso comienza desde una instalación limpia de sistema Linux, sin reglas de firewall activas ni mecanismos de bloqueo automatizado. No se cuenta con herramientas de geolocalización ni scripts defensivos, lo que permite documentar cada ajuste desde su origen y evaluar su impacto de forma progresiva.
+      </p>
+      <p style="margin-bottom: 1.5rem;">
+        El servicio SSH está expuesto con su configuración predeterminada, sin límites de intentos ni filtrado por país. El sistema no registra ni reacciona ante accesos fallidos, y no existen logs estructurados ni visualización de eventos.
+      </p>
+      <p style="margin-bottom: 1.5rem;">
+        El objetivo de esta fase es establecer un punto de partida claro y documentado para aplicar medidas defensivas. Se busca capturar el estado original del sistema, identificar carencias básicas y preparar el entorno para la implementación progresiva de un firewall reactivo con geolocalización.
+      </p>
+<img src="https://rafaelmperez.com/assets/img/geoip1.jpg" alt="Estado inicial sin reglas de firewall" style="width: 92%; max-width: 600px;" class="preview-img">
+    </div>
+  </li>
+
+  <li>
+    <div class="text-black mb-6">
+      <p><strong>Fase 1: Instalación de herramientas</strong></p>
+      <ul>
+        <li>Creación del entorno de trabajo:</li>
+        <pre>mkdir -p ~/proyectos/geo-firewall && cd ~/proyectos/geo-firewall</pre>
+        <li>Actualización del sistema:</li>
+        <pre>sudo apt update && sudo apt upgrade -y</pre>
+        <li>Instalación de <code>geoip-bin</code> para consultas locales:</li>
+        <pre>sudo apt install geoip-bin</pre>
+        <li>Prueba de geolocalización:</li>
+        <pre>geoiplookup 8.8.8.8</pre>
+        <li>Verificación de intentos SSH en <code>/var/log/auth.log</code></li>
+        <li>Creación y edición del script <code>geo-block.sh</code> con lógica de detección y bloqueo</li>
+        <li>Asignación de permisos de ejecución:</li>
+        <pre>chmod +x geo-block.sh</pre>
+      </ul>
+      <img src="https://rafaelmperez.com/assets/img/geoip2.jpg" alt="Edición del script geo-block.sh" style="width: 92%; max-width: 600px;" class="preview-img">
+    </div>
+  </li>
+
+  <li>
+    <div class="text-black mb-6">
+      <p><strong>Fase 2: Ejecución y pruebas</strong></p>
+      <ul>
+        <li>Simulación de intentos fallidos desde IP local</li>
+        <li>Ejecución del script:</li>
+        <pre>sudo ./geo-block.sh</pre>
+        <li>Verificación de bloqueos en <code>iptables -L</code> y <code>logs/blocked.log</code></li>
+        <li>Visualización de los últimos registros:</li>
+        <pre>tail -n 5 logs/blocked.log</pre>
+        <li>Notificación local (opcional):</li>
+        <pre>notify-send "geoFirewall" "Blocked $IP from $COUNTRY"</pre>
+      </ul>
+      <img src="https://rafaelmperez.com/assets/img/geoip3.jpg" alt="Bloqueo de IPs y log generado" class="preview-img">
+    </div>
+  </li>
+
+  <li>
+    <div class="text-black mb-6">
+      <p><strong>Fase 3: Validación y trazabilidad</strong></p>
+      <p style="margin-bottom: 1.5rem;">
+        El sistema ahora detecta intentos fallidos de acceso SSH, identifica el país de origen de cada IP y bloquea automáticamente aquellas que superan el umbral configurado y no pertenecen a España. Cada acción queda registrada en un log estructurado, lo que permite trazabilidad y revisión posterior.
+      </p>
+      <p style="margin-bottom: 1.5rem;">
+        Se ha verificado que las reglas <code>DROP</code> se aplican correctamente en iptables, y que el log <code>blocked.log</code> contiene entradas con fecha, IP, país y motivo del bloqueo. Esto permite auditar el comportamiento del sistema y ajustar los umbrales si es necesario.
+      </p>
+      <img src="https://rafaelmperez.com/assets/img/geoip4.jpg" alt="Log de IPs bloqueadas" class="preview-img">
+    </div>
+  </li>
+</ol>
+
+
+
+
+</div>
+
+<div class="text-black mb-6">
+  <h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Resultado:</h3>
+  
+
+  <p style="margin-bottom: 1.5rem;">
+    El sistema ahora detecta intentos fallidos de acceso SSH, identifica el país de origen de cada IP mediante GeoIP y bloquea automáticamente aquellas que superan el umbral configurado y no pertenecen a España. Cada acción queda registrada en un log estructurado, lo que permite trazabilidad, revisión y mejora continua.
+  </p>
+
+  <p style="margin-bottom: 1.5rem;">
+    El script <code>geo-block.sh</code> se ejecuta localmente, sin depender de servicios externos, y aplica reglas <code>DROP</code> en iptables de forma dinámica. El archivo <code>blocked.log</code> documenta cada evento con fecha, IP, país y motivo del bloqueo.
+  </p>
+
+  <p style="margin-bottom: 1.5rem;">
+    Se ha validado el funcionamiento mediante simulaciones locales, visualización de logs y revisión de reglas activas en el firewall. El sistema es ligero, reproducible y ampliable, y puede integrarse con herramientas como Grafana o Suricata para visualización y detección avanzada.
+  </p>
+
+
+</div>
+
+
+<div class="p-4 sm:p-6 mt-16 mb-6 bg-white rounded-lg shadow-md">
+  <h3 class="text-lg sm:text-xl font-semibold mt-6 mb-2 font-montserrat">
+    Conclusiones y Recomendaciones Finales:
+  </h3>
+  <h3 id="conclusiones" class="text-xl font-semibold mt-8 mb-4 font-montserrat scroll-mt-24">
+  </h3>
+
+  <p class="text-black mb-4 leading-relaxed text-sm sm:text-base">
+    El sistema ha evolucionado desde una configuración básica y expuesta a una solución defensiva automatizada capaz de bloquear IPs maliciosas en tiempo real. El script reactivo con GeoIP permite filtrar accesos por país y comportamiento, reforzando el servicio SSH sin depender de herramientas externas.
+  </p>
+
+
+
+  <ul class="list-disc list-inside mb-4 space-y-2 text-sm sm:text-base leading-relaxed">
+    <li>
+      <strong>Aplicación de buenas prácticas:</strong> Se ha implementado un sistema de bloqueo reactivo por IP y país, con trazabilidad en logs y reglas iptables verificables.
+    </li>
+    <li>
+      <strong>Auditoría local:</strong> Se ha utilizado <code class="bg-gray-200 px-1 rounded">auth.log</code> como fuente principal para detectar intentos fallidos y <code class="bg-gray-200 px-1 rounded">geoiplookup</code> para filtrar por país.
+    </li>
+    <li>
+      <strong>Firewall activo:</strong> Las reglas iptables se actualizan dinámicamente, bloqueando IPs agresivas sin afectar la disponibilidad del servicio.
+    </li>
+    <li>
+      <strong>Compromiso personal:</strong> Aunque ningún sistema está exento de ataques, este entorno ha sido reforzado con convicción y se recomienda aplicar estas prácticas como base de cualquier sistema expuesto.
+    </li>
+  </ul>
+
+  <p class="text-black leading-relaxed text-sm sm:text-base">
+    Este ejercicio no solo mejora la postura defensiva del sistema, sino que refleja una cultura de prevención y respuesta que debería ser estándar en cualquier entorno administrado.
+  </p>
+
+  <p class="text-black leading-relaxed text-sm sm:text-base mt-4 italic">
+    <strong>📌Nota: Este proyecto no termina aquí, se contempla la integración futura con herramientas como <code class="bg-gray-200 px-1 rounded">Grafana</code> para visualización de eventos y <code class="bg-gray-200 px-1 rounded">Suricata</code> para detección avanzada. La mejora continua es parte del compromiso con la ciberseguridad aplicada.</strong>
+  </p>
+</div>
+
+  
+<div class="flex items-center">
+  <a href="" class="text-sm flex items-center ml-auto text-black">
+    Siguiente práctica técnica <span class="ml-1">→</span>
+  </a>
+  <h3 id="conclusiones" class="text-xl font-semibold mt-8 mb-4 font-montserrat scroll-mt-24">
+  </h3>
+</div>
+  </p>
+</div>
+  </main>
+  
+
+ <footer class="text-center py-6 mt-16 font-montserrat" style="background-color: #000; color: rgb(255, 204, 0);">
+  <p>© 2025 Rafael M. Pérez - Portafolio Sysadmin Junior</p>
+</footer>
+
+
+</body>
+</html>
