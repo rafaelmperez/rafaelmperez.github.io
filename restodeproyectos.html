@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Implementación y activación de UFW en sistemas Linux. Proyecto de ciberseguridad con Ubuntu, Parrot OS, Bash, OpenSSH y más. Portafolio de Rafael M. Pérez, Sysadmin Junior.">
+  <title>Instalación de IA Local con Ollama | Portafolio Rafael M.Pérez | Sysadmin Junior</title>
+
+  <!-- Estilos y recursos -->
+  <link rel="stylesheet" href="assets/css/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+</head>
+  
+   <!-- ✅ Open Graph (Facebook, LinkedIn, WhatsApp) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Implementación y Activación UFW" />
+  <meta property="og:description" content="Portafolio Rafael M.Pérez | Sysadmin Junior" />
+  <meta property="og:image" content="https://rafaelmperez.github.io/assets/img/vistapreliminarufw.jpg" />
+  <meta property="og:url" content="https://rafaelmperez.github.io/activacionufw.html" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:image" content="https://rafaelmperez.github.io/assets/img/vistapreliminarufw.jpg" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+<body>
+  <!-- Aquí va el contenido de tu página -->
+</body>
+</html>
+
+
+<!-- Google Fonts optimizado -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" as="style">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" media="print" onload="this.media='all'">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- TailwindCSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { ... }
+  }
+</script>
+
+
+</head>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'nav-bg': '#000000',          // fondo negro
+          'nav-text': 'rgb(255, 204, 0)', // texto amarillo vibrante
+          'nav-hover': '#FFB800'        // color hover amarillo más oscuro
+        }
+      }
+    }
+  }
+</script>
+
+
+
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- Header -->
+<header class="p-6 shadow-lg font-montserrat bg-black text-yellow-400">
+  <div class="max-w-6xl mx-auto flex items-center justify-between">
+    <!-- Título -->
+    <h1 class="text-2xl font-bold">
+      Portafolio Rafael M.Pérez | Sysadmin Junior
+    </h1>
+
+    <!-- Imagen pequeña a la derecha -->
+<i class="fas fa-shield-alt" style="color: rgb(255, 204, 0); font-size: 24px;"></i>
+
+  </div>
+</header>
+
+
+
+
+
+<!-- SECCIÓN ORIGINAL -->
+<section id="proyectos">
+<h2 class="terminal-heading">
+  <i class="fas fa-project-diagram"></i> ls -la ~/proyectos/
+</h2>
+  <div class="grid-proyectos">
+
+
+
+
+
+  <!-- CARD 1 -->
+    <div class="card">
+      <img src="https://rafaelmperez.github.io/assets/img/Microproyecto1.jpg" alt="Implementación de Firewall con UFW">
+   
+      <h3 style="font-size: 1em;"><i class="fas fa-shield-alt"></i> <strong>Implementación de Firewall con UFW</strong></h3>
+      
+      <strong>
+  <span style="color:#E95420;">Ubuntu</span> |
+  <span style="color:#00BFA5;">Parrot</span> |
+  <span style="color:#6C757D;">Bash</span> |
+  <span style="color:#28A745;">UFW</span> |
+  <span style="color:#007BFF;">SSH Connect</span>
+</strong>
+
+           
+      
+      <p>
+        Configuré y activé un firewall UFW en un servidor Linux, estableciendo políticas predeterminadas restrictivas y habilitando acceso seguro por SSH, y finalmente verifiqué su correcto funcionamiento, reforzando así la seguridad del sistema mediante un enfoque simple, eficiente y profesional.
+      </p>
+      <p>
+         <style>
+           
+.sysadmin-badge {
+  display: inline-block;
+  background-color: #1f1f1f;
+  color: #ffffff; /* blanco apagado */
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.2); /* sombra tenue blanca */
+  transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.sysadmin-badge:hover {
+  color: rgb(255, 204, 0); /* amarillo encendido */
+  box-shadow: 0 0 12px rgb(255, 204, 0), 0 0 24px rgb(255, 204, 0);
+  transform: scale(1.05);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 100vw;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #111;
+  line-height: 1.7;
+  box-sizing: border-box;
+}
+
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .grid-proyectos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid-proyectos {
+    grid-template-columns: 1fr;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+.card-proyecto {
+  width: 100%;
+}
+
+
+.terminal-heading {
+  font-family: Fira Code;
+  color: rgb(255, 255, 255);
+  background-color: #0d0d0d;
+  padding: 12px 20px;
+  border-left: 4px solid rgb(0, 0, 0);
+  box-shadow: inset 0 0 10px rgba(0, 255, 153, 0.1);
+  letter-spacing: 0.5px; /* corregido */
+  font-size: 1.2rem;
+  white-space: nowrap;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+
+</style>
+
+<p>
+  <a href="https://rafaelmperez.github.io/activacionufw.html" target="_blank" class="sysadmin-badge">
+   <strong>💻 Ver documentación técnica</strong>
+  </a>
+</p>
+      <div class="audio-proyecto" style="margin-top: 8px;">
+        <p><strong>🎧 Versión en audio:</strong></p>
+        <audio controls controlsList="nodownload noplaybackrate">
+          <source src="https://rafaelmperez.github.io/sounds/microproyecto1.aac" type="audio/mpeg">
+          Tu navegador no soporta el elemento de audio.
+        </audio>
+      </div>
+    </div>
+
+<div class="card">
+  <img src="https://rafaelmperez.com/assets/img/proyectoonion.jpg" 
+       alt="Previsualización Tor Hidden Service" class="proyecto-img">
+
+  <h3 style="font-size: 1em;"><i class="fas fa-user-secret"></i><strong> Hidden Service en Tor (.onion) </strong></h3>
+
+  <strong>
+    <span style="color:#7E4798;">Tor</span> |
+    <span style="color:#D42029;">Apache</span> |
+    <span style="color:#A0C52F;">Raspberry Pi OS</span> |
+    <span style="color:#6C757D;">Nikto</span> |
+    <span style="color:#28A745;">Nmap</span>
+  </strong>
+
+  <div class="descripcion-proyecto">
+    <p>
+      Proyecto autoalojado y descentralizado de mi portafolio técnico, accesible únicamente a través de la red Tor. 
+      Desplegado en una Raspberry Pi 2, prioriza privacidad, eficiencia y resiliencia, demostrando cómo ofrecer servicios web estáticos en entornos limitados con seguridad y control total de la infraestructura.
+    </p>
+
+    <p>
+      <a href="http://xwzrrbprgbg324sgzacioafol47j3smjwvatbfwys2cqqr6q4ridanyd.onion/" target="_blank" class="sysadmin-badge">
+        <strong>🧅 Enlace .onion (Tor)</strong>
+      </a>
+    </p>
+
+    <p>
+      <strong>Proyecto en fase de desarrollo. Próximamente.</strong>
+    </p>
+  </div>
+
+  <div class="audio-proyecto">
+    <p><strong>🎧 Versión en audio:</strong></p>
+    <audio controls controlsList="nodownload noplaybackrate">
+      <source src="https://rafaelmperez.com/sounds/proyectoonion.aac" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+  </div>
+</div>
+
+
+    
+
+    
+
+  
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+    
+
+      </div>
+</section>
+<!-- FIN SECCIÓN RETOS/MICROPROYECTOS -->
+ 
+
+
+
+  </main>
+  
+
+ <footer class="text-center py-6 mt-16 font-montserrat" style="background-color: #000; color: rgb(255, 204, 0);">
+  <p>© 2025 Rafael M. Pérez - Portafolio Sysadmin Junior</p>
+</footer>
+
+
+</body>
+</html>
+
+
