@@ -238,9 +238,6 @@
     <div class="text-black mb-6">
       <p><strong>Fase 3: Validación y trazabilidad</strong></p>
       <p style="margin-bottom: 1.5rem;">
-        El sistema ahora detecta intentos fallidos de acceso SSH, identifica el país de origen de cada IP y bloquea automáticamente aquellas que superan el umbral configurado y no pertenecen a España. Cada acción queda registrada en un log estructurado, lo que permite trazabilidad y revisión posterior.
-      </p>
-      <p style="margin-bottom: 1.5rem;">
         Se ha verificado que las reglas <code>DROP</code> se aplican correctamente en iptables, y que el log <code>blocked.log</code> contiene entradas con fecha, IP, país y motivo del bloqueo. Esto permite auditar el comportamiento del sistema y ajustar los umbrales si es necesario.
       </p>
       <img src="https://rafaelmperez.com/assets/img/geoip4.jpg" alt="Log de IPs bloqueadas" class="preview-img">
