@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Buenas prácticas de bastionado en Linux. Proyecto de ciberseguridad con Ubuntu, Parrot OS, Bash, OpenSSH y más. Portafolio de Rafael M. Pérez, Sysadmin Junior.">
+  <title> Buenas prácticas de bastionado en Linux | Portafolio Rafael M.Pérez | Sysadmin Junior</title>
+
+  <!-- Estilos y recursos -->
+  <link rel="stylesheet" href="assets/css/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+</head>
+  
+   <!-- ✅ Open Graph (Facebook, LinkedIn, WhatsApp) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Firewall dinámico con GeoIP" />
+  <meta property="og:description" content="Portafolio Rafael M.Pérez | Sysadmin Junior" />
+  <meta property="og:image" content="https://rafaelmperez.com/assets/img/vistapreliminarufw.v1.webp" />
+  <meta property="og:url" content="https://rafaelmperez.com/activacionufw.html" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:image" content="https://rafaelmperez.com/assets/img/vistapreliminarufw.v1.webp" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+<body>
+  <!-- Aquí va el contenido de tu página -->
+</body>
+</html>
+
+
+<!-- Google Fonts optimizado -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" as="style">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" media="print" onload="this.media='all'">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- TailwindCSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { ... }
+  }
+</script>
+
+
+</head>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'nav-bg': '#000000',          // fondo negro
+          'nav-text': 'rgb(255, 204, 0)', // texto amarillo vibrante
+          'nav-hover': '#FFB800'        // color hover amarillo más oscuro
+        }
+      }
+    }
+  }
+</script>
+
+
+
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- Header -->
+<header class="p-6 shadow-lg font-montserrat bg-black text-yellow-400">
+  <div class="max-w-6xl mx-auto flex items-center justify-between">
+    <!-- Título -->
+    <h1 class="text-2xl font-bold">
+      Portafolio Rafael M.Pérez | Sysadmin Junior
+    </h1>
+
+    <!-- Imagen pequeña a la derecha -->
+<i class="fas fa-shield-alt" style="color: rgb(255, 204, 0); font-size: 24px;"></i>
+
+  </div>
+</header>
+
+<!-- Contenido del microproyecto -->
+ 
+<main class="w-full max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+<h2 class="text-2xl font-bold mb-6 font-montserrat underline underline-offset-4">
+  Buenas prácticas de bastionado en Linux
+</h2>
+
+
+  <!-- Logo insertado -->
+<div class="flex justify-center mb-6">
+  <img src="https://rafaelmperez.com/assets/img/buenasbanner.jpg" 
+       alt="Logo UFW" 
+       style="width: 35%; max-width: 600px; height: auto; display: block; margin: 0 auto 1.5rem;">
+</div>
+
+<!-- 📑 Índice del proyecto (navegador horizontal) -->
+<nav class="flex flex-wrap justify-center gap-4 bg-nav-bg shadow-md rounded-lg p-3 mb-8">
+  <a href="#desafio" class="px-3 py-1 text-sm sm:text-base font-medium text-nav-text hover:text-nav-hover transition-colors">
+    Desafío
+  </a>
+  <a href="#tecnologias utilizadas" class="px-3 py-1 text-sm sm:text-base font-medium text-nav-text hover:text-nav-hover transition-colors">
+    Tecnologías utilizadas
+  </a>
+  <a href="#pasos realizados" class="px-3 py-1 text-sm sm:text-base font-medium text-nav-text hover:text-nav-hover transition-colors">
+    Pasos realizados
+  </a>
+  <a href="#resultado" class="px-3 py-1 text-sm sm:text-base font-medium text-nav-text hover:text-nav-hover transition-colors">
+    Resultado
+  </a>
+  <a href="#conclusiones" class="px-3 py-1 text-sm sm:text-base font-medium text-nav-text hover:text-nav-hover transition-colors">
+    Conclusiones
+  </a>
+</nav>
+
+
+
+
+<!-- Sección Desafío -->
+<h3 id="desafio" class="text-xl font-semibold mt-8 mb-4 font-montserrat">Desafío:</h3>
+
+<ul class="list-disc list-inside text-black mb-6">
+
+<div class="text-black mb-6">
+<div class="text-black mb-6">
+  <p style="margin-bottom: 1rem;">
+<div class="descripcion-proyecto">
+  <p>
+    El principal reto consistía en aplicar un conjunto de buenas prácticas defensivas sobre un sistema Linux recién instalado, sin depender de herramientas externas ni soluciones complejas, garantizando trazabilidad, integridad y control sobre cada medida aplicada.
+  </p>
+
+  <p style="margin-bottom: 1rem;">
+    El sistema, tras una instalación limpia, carecía de sistema de bastionado básico: accesos remotos inseguros, ausencia de firewall activo, sin auditoría de eventos ni mecanismos de verificación de integridad. Esto suponía una superficie de ataque amplia y difícil de auditar.
+  </p>
+
+  <p style="margin-bottom: 1rem;">
+    Este desafío exigía una solución modular, ligera y reproducible que permitiera endurecer el sistema paso a paso: deshabilitar accesos privilegiados, configurar un firewall explícito, activar auditoría de eventos, escanear la integridad del sistema y evaluar su estado mediante herramientas locales. Todo ello documentado con comandos, evidencia funcional y justificación técnica.
+  </p>
+</div>
+
+
+
+
+
+<!-- Sección Tecnologías -->
+<h3 id="tecnologias utilizadas" class="text-xl font-semibold mt-8 mb-4 font-montserrat scroll-mt-24">
+</h3>
+<h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Tecnologías utilizadas:</h3>
+
+<!-- Logos en fila arriba -->
+<div class="flex gap-4 mb-4">
+  <img src="https://rafaelmperez.com/assets/img/tecnologiaubuntu.jpg" alt="Ubuntu" class="w-12 h-12">
+  <img src="https://rafaelmperez.com/assets/img/bash.jpg" alt="Bash" class="w-12 h-12">
+  
+</div>
+
+<ul class="list-disc list-inside text-black">
+  <!-- contenido de la lista -->
+</ul>
+
+
+<ul class="list-disc list-inside text-black">
+  <li><strong>SSH</strong> Servicio de acceso remoto que ha sido endurecido deshabilitando el login directo como root y reforzando la autenticación, reduciendo la exposición a ataques automatizados.</li>
+
+  <li><strong>UFW</strong> Firewall de alto nivel que permite aplicar políticas restrictivas y reglas explícitas para controlar el tráfico entrante y saliente, alineado con principios de mínima exposición.</li>
+
+  <li><strong>auditd</strong> Sistema de auditoría que registra eventos críticos del sistema, como accesos, modificaciones y ejecuciones, proporcionando trazabilidad y evidencia operativa.</li>
+
+  <li><strong>AIDE</strong> Herramienta de verificación de integridad que escanea archivos clave del sistema y detecta alteraciones no autorizadas, reforzando la seguridad pasiva.</li>
+
+  <li><strong>Lynis</strong> Auditor de seguridad que evalúa el estado general del sistema y ofrece recomendaciones defensivas, permitiendo validar el bastionado aplicado y detectar configuraciones inseguras.</li>
+</ul>
+
+
+
+
+  
+<!-- Sección Pasos -->
+<h3 id="pasos realizados" class="text-xl font-semibold mt-8 mb-4 font-montserrat scroll-mt-24">
+</h3>
+<h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Pasos realizados:</h3>
+<ol class="list-decimal text-black space-y-8">
+  <li>
+  <div class="text-black mb-6">
+    <p><strong>Fase 1: Bastionado del servicio SSH</strong></p>
+    <p style="margin-bottom: 1.5rem;">
+      Se deshabilita el acceso remoto directo como <code>root</code> mediante la directiva <code>PermitRootLogin no</code> en el archivo <code>/etc/ssh/sshd_config</code>. Esta medida reduce la exposición a ataques automatizados y obliga al uso de cuentas con privilegios controlados.
+    </p>
+    <p style="margin-bottom: 1.5rem;">
+      Se verifica el cambio con <code>sshd -T | grep permitrootlogin</code> y se documenta el intento fallido de conexión como root, confirmando que el sistema rechaza accesos privilegiados directos. Esta acción representa una mejora inmediata en la seguridad del sistema.
+    </p>
+    <p style="margin-bottom: 1.5rem;">
+      No se modifica la autenticación por contraseña en esta fase para evitar bloqueos en caso de pérdida de claves. Se prioriza una medida defensiva segura pero reversible, ideal para entornos en formación o auditoría.
+    </p>
+    <img src="https://rafaelmperez.com/assets/img/buenas1.jpg" alt="Archivo sshd_config modificado" style="width: 92%; max-width: 600px;" class="preview-img">
+    <img src="https://rafaelmperez.com/assets/img/buenas2.jpg" alt="Intento de conexión como root bloqueado" style="width: 92%; max-width: 600px;" class="preview-img">
+  </div>
+</li>
+
+
+ <li>
+  <div class="text-black mb-6">
+    <p><strong>Fase 2: Configuración del firewall con UFW</strong></p>
+    <ul>
+      <li>Instalación del firewall UFW:</li>
+      <pre>sudo apt install ufw</pre>
+
+      <li>Aplicación de política restrictiva por defecto:</li>
+      <pre>sudo ufw default deny incoming</pre>
+      <pre>sudo ufw default allow outgoing</pre>
+
+      <li>Permitir únicamente el acceso SSH:</li>
+      <pre>sudo ufw allow 22/tcp</pre>
+
+      <li>Activación del firewall:</li>
+      <pre>sudo ufw enable</pre>
+
+      <li>Verificación del estado y reglas activas:</li>
+      <pre>sudo ufw status verbose</pre>
+    </ul>
+
+    <p style="margin-bottom: 1.5rem;">
+      Esta fase establece una política de seguridad basada en el principio de mínima exposición. Se bloquea todo el tráfico entrante por defecto y se permite únicamente el acceso SSH, reforzando el control sobre los servicios accesibles desde el exterior.
+    </p>
+
+    <p style="margin-bottom: 1.5rem;">
+      La configuración es sencilla, trazable y fácilmente replicable en otros entornos. UFW permite auditar las reglas activas y mantener una gestión clara del tráfico autorizado.
+    </p>
+
+    <img src="https://rafaelmperez.com/assets/img/buenas3.jpg" alt="Estado del firewall UFW tras configuración" style="width: 92%; max-width: 600px;" class="preview-img">
+  </div>
+</li>
+
+
+<li>
+  <div class="text-black mb-6">
+    <p><strong>Fase 3: Activación de auditoría con auditd</strong></p>
+    <ul>
+      <li>Instalación del sistema de auditoría:</li>
+      <pre>sudo apt install auditd audispd-plugins</pre>
+
+      <li>Activación y habilitación del servicio:</li>
+      <pre>sudo systemctl enable auditd</pre>
+      <pre>sudo systemctl start auditd</pre>
+
+      <li>Verificación del estado del servicio:</li>
+      <pre>sudo systemctl status auditd</pre>
+
+      <li>Visualización de eventos registrados:</li>
+      <pre>sudo tail -n 10 /var/log/audit/audit.log</pre>
+
+      <li>Auditoría de accesos a archivos críticos (ejemplo):</li>
+      <pre>sudo auditctl -w /etc/passwd -p wa -k passwd-watch</pre>
+      <pre>sudo ausearch -k passwd-watch</pre>
+    </ul>
+
+    <p style="margin-bottom: 1.5rem;">
+      Esta fase permite registrar eventos clave del sistema, como accesos, modificaciones y ejecuciones. La activación de <code>auditd</code> proporciona trazabilidad operativa y refuerza la capacidad de respuesta ante incidentes.
+    </p>
+
+    <p style="margin-bottom: 1.5rem;">
+      Las reglas pueden personalizarse para auditar rutas sensibles, comandos críticos o acciones específicas. Los registros generados son estructurados y compatibles con herramientas de visualización como Grafana o ELK.
+    </p>
+
+    <img src="https://rafaelmperez.com/assets/img/buenas4.jpg" alt="Activación del servicio auditd y visualización de eventos" style="width: 92%; max-width: 600px;" class="preview-img">
+  </div>
+</li>
+
+  <li>
+  <div class="text-black mb-6">
+    <p><strong>Fase 4: Verificación de integridad con AIDE</strong></p>
+    <ul>
+      <li>Instalación de la herramienta:</li>
+      <pre>sudo apt install aide</pre>
+
+      <li>Inicialización de la base de datos de integridad:</li>
+      <pre>sudo aideinit</pre>
+      <pre>sudo cp /var/lib/aide/aide.db.new /var/lib/aide/aide.db</pre>
+
+      <li>Ejecución del escaneo de integridad:</li>
+      <pre>sudo aide --config=/etc/aide/aide.conf --check</pre>
+
+      <li>Visualización de advertencias y rutas no verificables:</li>
+      <pre>tail -n 20 /var/log/aide/aide.log</pre>
+    </ul>
+
+    <p style="margin-bottom: 1.5rem;">
+      Esta fase permite detectar modificaciones no autorizadas en archivos clave del sistema. AIDE compara el estado actual con una base de referencia y reporta cualquier alteración, reforzando la seguridad pasiva y la trazabilidad.
+    </p>
+
+    <p style="margin-bottom: 1.5rem;">
+      Se han registrado advertencias en rutas dinámicas y contenedores, lo cual es esperado en entornos con Docker. La configuración puede ajustarse para excluir rutas volátiles y centrarse en directorios críticos como <code>/etc</code>, <code>/usr/bin</code> y <code>/var/log</code>.
+    </p>
+
+    <img src="https://rafaelmperez.com/assets/img/buenas5.jpg" alt="Salida del escaneo de integridad con AIDE" style="width: 92%; max-width: 600px;" class="preview-img">
+  </div>
+</li>
+
+
+<li>
+  <div class="text-black mb-6">
+    <p><strong>Fase 5: Auditoría general con Lynis</strong></p>
+    <ul>
+      <li>Instalación del auditor de seguridad:</li>
+      <pre>sudo apt install lynis</pre>
+
+      <li>Ejecución del escaneo completo del sistema:</li>
+      <pre>sudo lynis audit system</pre>
+
+      <li>Visualización del resumen final:</li>
+      <pre>tail -n 20 /var/log/lynis-report.dat</pre>
+
+      <li>Revisión de sugerencias defensivas:</li>
+      <pre>grep suggestion /var/log/lynis-report.dat</pre>
+    </ul>
+
+    <p style="margin-bottom: 1.5rem;">
+      Esta fase permite evaluar el estado general del sistema tras aplicar las medidas de bastionado. Lynis analiza múltiples áreas: autenticación, permisos, servicios, kernel, logs, firewall y más, ofreciendo recomendaciones concretas para reforzar la seguridad.
+    </p>
+
+    <p style="margin-bottom: 1.5rem;">
+      El informe generado incluye una puntuación de seguridad, advertencias y sugerencias técnicas. Estas pueden integrarse como tareas futuras o como checklist de mejora continua. Lynis no modifica el sistema, lo que garantiza trazabilidad y control total por parte del administrador.
+    </p>
+
+    <img src="https://rafaelmperez.com/assets/img/buenas6.jpg" alt="Informe de auditoría generado por Lynis" style="width: 92%; max-width: 600px;" class="preview-img">
+  </div>
+</li>
+
+
+
+<div class="text-black mb-6">
+  <h3 class="text-xl font-semibold mt-8 mb-4 font-montserrat">Resultado:</h3>
+
+  <p style="margin-bottom: 1.5rem;">
+    El sistema, tras aplicar cinco módulos defensivos, presenta una configuración endurecida y trazable. Se ha deshabilitado el acceso remoto como <code>root</code>, se ha activado un firewall restrictivo con reglas explícitas, y se han incorporado mecanismos de auditoría y verificación de integridad.
+  </p>
+
+  <p style="margin-bottom: 1.5rem;">
+    Cada medida ha sido documentada con comandos, capturas y justificación técnica. El sistema registra eventos críticos mediante <code>auditd</code>, detecta alteraciones con <code>AIDE</code> y ha sido evaluado globalmente con <code>Lynis</code>, obteniendo recomendaciones defensivas que pueden integrarse en futuras mejoras.
+  </p>
+
+  <p style="margin-bottom: 1.5rem;">
+    El entorno resultante es ligero, reproducible y ampliable. Puede integrarse con herramientas como Grafana para visualización de logs o con Suricata para detección avanzada. El proyecto demuestra cómo bastionar un sistema Linux desde cero, con trazabilidad completa y enfoque profesional.
+  </p>
+</div>
+
+
+
+<div class="p-4 sm:p-6 mt-16 mb-6 bg-white rounded-lg shadow-md">
+  <h3 class="text-lg sm:text-xl font-semibold mt-6 mb-2 font-montserrat">
+    Conclusiones y Recomendaciones Finales:
+  </h3>
+  <h3 id="conclusiones" class="text-xl font-semibold mt-8 mb-4 font-montserrat scroll-mt-24">
+  </h3>
+
+  <p class="text-black mb-4 leading-relaxed text-sm sm:text-base">
+    El sistema ha evolucionado desde una instalación limpia y expuesta a una infraestructura bastionada, trazable y evaluada. Se han aplicado cinco medidas defensivas clave que refuerzan la seguridad operativa sin depender de soluciones externas ni complejidad innecesaria.
+  </p>
+
+  <ul class="list-disc list-inside mb-4 space-y-2 text-sm sm:text-base leading-relaxed">
+    <li>
+      <strong>Aplicación de buenas prácticas:</strong> Se ha deshabilitado el acceso remoto como root, activado un firewall restrictivo, incorporado auditoría de eventos y verificación de integridad, y evaluado el sistema con Lynis.
+    </li>
+    <li>
+      <strong>Auditoría local:</strong> Se han utilizado herramientas como <code class="bg-gray-200 px-1 rounded">auditd</code>, <code class="bg-gray-200 px-1 rounded">AIDE</code> y <code class="bg-gray-200 px-1 rounded">auth.log</code> para registrar eventos y detectar alteraciones.
+    </li>
+    <li>
+      <strong>Firewall activo:</strong> UFW ha sido configurado con política restrictiva y reglas explícitas, permitiendo solo el tráfico necesario y reforzando el control de acceso.
+    </li>
+    <li>
+      <strong>Compromiso personal:</strong> Aunque ningún sistema es invulnerable, este entorno ha sido reforzado con convicción, trazabilidad y ética técnica. Se recomienda aplicar estas prácticas como base mínima en cualquier sistema expuesto.
+    </li>
+  </ul>
+
+  <p class="text-black leading-relaxed text-sm sm:text-base">
+    Este ejercicio no solo mejora la postura defensiva del sistema, sino que refleja una cultura de prevención, trazabilidad y mejora continua que debería ser estándar en cualquier entorno administrado profesionalmente.
+  </p>
+
+  <p class="text-black leading-relaxed text-sm sm:text-base mt-4 italic">
+    <strong>📌Nota: Este proyecto no termina aquí. Se contempla la integración futura con herramientas como <code class="bg-gray-200 px-1 rounded">Grafana</code> para visualización de eventos y <code class="bg-gray-200 px-1 rounded">Suricata</code> para detección avanzada. La mejora continua forma parte del compromiso con la ciberseguridad aplicada.</strong>
+  </p>
+</div>
+
+
+  
+<div class="flex items-center">
+  <a href="" class="text-sm flex items-center ml-auto text-black">
+    Siguiente práctica técnica <span class="ml-1">→</span>
+  </a>
+  <h3 id="conclusiones" class="text-xl font-semibold mt-8 mb-4 font-montserrat scroll-mt-24">
+  </h3>
+</div>
+  </p>
+</div>
+  </main>
+  
+
+ <footer class="text-center py-6 mt-16 font-montserrat" style="background-color: #000; color: rgb(255, 204, 0);">
+  <p>© 2025 Rafael M. Pérez - Portafolio Sysadmin Junior</p>
+</footer>
+
+
+</body>
+</html>
