@@ -198,7 +198,8 @@
       <p><strong>Fase 1: Instalación de herramientas</strong></p>
       <ul>
         <li>Creación del entorno de trabajo:</li>
-        <pre>mkdir -p ~/proyectos/geo-firewall && cd ~/proyectos/geo-firewall</pre>
+        <pre>mkdir -p ~/proyectos/geo-firewall</pre> 
+        <pre>cd ~/proyectos/geo-firewall</pre>
         <li>Actualización del sistema:</li>
         <pre>sudo apt update && sudo apt upgrade -y</pre>
         <li>Instalación de <code>geoip-bin</code> para consultas locales:</li>
@@ -225,8 +226,8 @@
         <li>Visualización de los últimos registros:</li>
         <pre>tail -n 5 logs/blocked.log</pre>
         <li>Notificación local (opcional):</li>
-        <pre>notify-send "geoFirewall" 
-          "Blocked $IP from $COUNTRY"</pre>
+        <pre>notify-send "geoFirewall"</pre> 
+        <pre>"Blocked $IP from $COUNTRY"</pre>
       </ul>
       <img src="https://rafaelmperez.com/assets/img/geoip3.jpg" alt="Bloqueo de IPs y log generado" class="preview-img">
     </div>
