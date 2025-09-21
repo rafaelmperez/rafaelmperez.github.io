@@ -167,8 +167,7 @@
 
   <li>
     <p class="mb-2"><strong>Instalación de Ollama:</strong></p>
-<img src="https://rafaelmperez.github.io/assets/img/ialocal1.jpg" alt="Ejecución del modelo Mistral" style="width:100%; max-width:600px;" class="rounded-lg shadow-md">
-
+    <img src="https://rafaelmperez.github.io/assets/img/ialocal1.jpg" alt="Ejecución del modelo Mistral" style="width:100%; max-width:600px;" class="rounded-lg shadow-md">
     <p class="text-black mb-6">
       Se ejecutó el script de instalación de <strong>Ollama</strong> con el siguiente comando:
       <code class="bg-gray-200 px-1 rounded">curl -fsSL https://ollama.com/install.sh | sh</code>. Este paso configura el entorno para ejecutar modelos de lenguaje localmente desde la terminal.
@@ -185,15 +184,35 @@
 
   <li>
     <p class="mb-2"><strong>Ejecución del modelo Mistral:</strong></p>
-<img src="https://rafaelmperez.github.io/assets/img/ialocal2.jpg" alt="Ejecución del modelo Mistral" style="width:100%; max-width:600px;" class="rounded-lg shadow-md">
-
-
+    <img src="https://rafaelmperez.github.io/assets/img/ialocal2.jpg" alt="Ejecución del modelo Mistral" style="width:100%; max-width:600px;" class="rounded-lg shadow-md">
     <p class="text-black mb-6">
       Finalmente, se ejecutó el modelo con 
       <code class="bg-gray-200 px-1 rounded">ollama run mistral</code>, iniciando una sesión interactiva en la terminal para realizar pruebas de generación de contenido técnico.
     </p>
   </li>
+
+  <li>
+    <p class="mb-2"><strong>Diseño de interfaz CLI interactiva:</strong></p>
+    <p class="text-black mb-6">
+      Se creó un script llamado <code class="bg-gray-200 px-1 rounded">asistente.sh</code> que permite seleccionar entre tres funciones: generar informes de escaneo, documentar scripts defensivos y responder preguntas técnicas sobre configuración de firewall. El menú se implementó con <strong>fzf</strong> para facilitar la navegación desde terminal.
+    </p>
+  </li>
+
+  <li>
+    <p class="mb-2"><strong>Integración con Ollama desde CLI:</strong></p>
+    <p class="text-black mb-6">
+      Cada opción del menú ejecuta una llamada al modelo <strong>Mistral</strong> mediante <code class="bg-gray-200 px-1 rounded">ollama run mistral</code>, utilizando prompts personalizados que permiten generar contenido técnico útil y contextualizado. El sistema puede leer archivos locales, interpretar scripts y responder preguntas defensivas en tiempo real.
+    </p>
+  </li>
+
+  <li>
+    <p class="mb-2"><strong>Validación funcional del asistente:</strong></p>
+    <p class="text-black mb-6">
+      Se realizaron pruebas con escaneos reales (Nikto, testssl.sh), scripts defensivos (geo-block.sh) y preguntas técnicas sobre iptables. El asistente respondió con contenido estructurado, útil y coherente, demostrando su utilidad como herramienta de documentación y apoyo técnico local.
+    </p>
+  </li>
 </ol>
+
 
 
 
