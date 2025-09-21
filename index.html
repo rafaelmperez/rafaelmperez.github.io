@@ -2301,18 +2301,25 @@ Este microproyecto documenta la instalación de Ollama en un entorno Linux, conf
     <div class="cf-turnstile" data-sitekey="0x4AAAAAAB2gSyBoa7kMyPVF"></div>
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
-<!-- Botones de acción -->
-<div class="flex flex-col sm:flex-row sm:justify-between items-center gap-4 mt-8">
-  <a href="#" onclick="document.querySelector('form').submit();" class="sysadmin-badge">
-    📨 Enviar mensaje
+<!-- Botón para enviar el formulario -->
+<div class="mt-8 text-center">
+  <a href="#" onclick="document.querySelector('form').submit();" class="sysadmin-badge inline-block">
+    <strong>📨 Enviar mensaje</strong>
   </a>
+</div>
 
-  <span class="text-gray-500 text-sm">o</span>
+<!-- Separador visual opcional -->
+<div class="my-4 text-center text-gray-500 text-sm">
+  — o si lo prefieres —
+</div>
 
-  <a href="mailto:sysadminweb@proton.me" class="sysadmin-badge">
+<!-- Botón para enviar email directo -->
+<div class="text-center">
+  <a href="mailto:sysadminweb@proton.me" class="sysadmin-badge inline-block">
     📧 Email directo: sysadminweb@proton.me
   </a>
 </div>
+
 
 
   </form>
@@ -2362,6 +2369,7 @@ Este microproyecto documenta la instalación de Ollama en un entorno Linux, conf
   });
 </script>
 </html>
+
 
 
 
