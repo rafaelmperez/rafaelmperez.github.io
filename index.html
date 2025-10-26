@@ -18,6 +18,21 @@
   <link rel="alternate" hreflang="fr" href="https://rafaelmperez.com/fr/index.html" />
 </head>
 
+  <!-- En la cabecera, si no la tienes ya -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Botón -->
+<div class="mt-8 text-center">
+  <a href="#" onclick="document.querySelector('form').submit();" class="sysadmin-badge inline-flex items-center gap-2">
+    <strong>Enviar mensaje</strong>
+    <i data-lucide="send" class="w-5 h-5"></i>
+  </a>
+</div>
+
+<!-- Inicializa los iconos -->
+<script>lucide.createIcons();</script>
+
+
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -2366,12 +2381,13 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
     <div class="cf-turnstile" data-sitekey="0x4AAAAAAB2gSyBoa7kMyPVF"></div>
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
-<!-- Botón para enviar el formulario -->
 <div class="mt-8 text-center">
   <a href="#" onclick="document.querySelector('form').submit();" class="sysadmin-badge inline-block">
     <strong>Enviar mensaje</strong>
+    <i class="fa-solid fa-paper-plane ms-2"></i>
   </a>
 </div>
+
 
 <!-- Separador visual opcional -->
 <div class="my-4 text-center text-gray-500 text-sm">
@@ -2434,6 +2450,7 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
   });
 </script>
 </html>
+
 
 
 
