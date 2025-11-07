@@ -1602,37 +1602,51 @@ section {
   box-shadow: 0 0 12px rgb(255, 204, 0), 0 0 24px rgb(255, 204, 0);
   transform: scale(1.05);
 }
-nav a i {
+
+    .nav-link {
+  position: relative;
+  color: #333;
+  text-decoration: none;
+  padding: 6px 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007BFF;
+}
+
+.nav-link i {
   margin-left: 6px;
   font-size: 0.8em;
   color: #007BFF;
   transition: transform 0.3s ease;
 }
 
-nav a:hover i {
+.nav-link:hover i {
   transform: translateY(3px);
 }
 
-.nav-hint {
-  display: block;
-  text-align: center;
-  font-size: 0.9rem;       /* tamaño único */
-  color: #007BFF;          /* color principal */
-  margin-top: 8px;
-  font-style: italic;
-  animation: fade 2s infinite; /* animación integrada */
+/* Tooltip personalizado */
+.nav-link::after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #007BFF;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
 }
 
-.nav-hint i {
-  margin-right: 5px;
-  color: #007BFF;
+.nav-link:hover::after {
+  opacity: 1;
 }
-
-@keyframes fade {
-  0%,100% { opacity: 0.4; }
-  50% { opacity: 1; }
-}
-
 
 
     
@@ -1678,14 +1692,14 @@ nav a:hover i {
 <body>
 <nav>
   <button class="play-btn" id="playPauseBtn" aria-label="Reproducir narración">▶</button>
-  <a href="#sobre-mi">Sobre mí <i class="fas fa-arrow-down"></i></a>
-  <a href="#habilidades">Habilidades <i class="fas fa-arrow-down"></i></a>
-  <a href="#proyectos">Proyectos <i class="fas fa-arrow-down"></i></a>
-  <a href="#certificaciones">Certificaciones <i class="fas fa-arrow-down"></i></a>
-  <a href="#objetivos">Roadmap <i class="fas fa-arrow-down"></i></a>
-  <a href="#contacto">Contáctame <i class="fas fa-arrow-down"></i></a>
-  <span class="nav-hint"><i class="fas fa-hand-point-down"></i> Haz clic en cada sección para deslizarte</span>
+  <a href="#sobre-mi" class="nav-link" data-title="Haz clic en cada sección para deslizarte">Sobre mí <i class="fas fa-arrow-down"></i></a>
+  <a href="#habilidades" class="nav-link" data-title="Haz clic en cada sección para deslizarte">Habilidades <i class="fas fa-arrow-down"></i></a>
+  <a href="#proyectos" class="nav-link" data-title="Haz clic en cada sección para deslizarte">Proyectos <i class="fas fa-arrow-down"></i></a>
+  <a href="#certificaciones" class="nav-link" data-title="Haz clic en cada sección para deslizarte">Certificaciones <i class="fas fa-arrow-down"></i></a>
+  <a href="#objetivos" class="nav-link" data-title="Haz clic en cada sección para deslizarte">Roadmap <i class="fas fa-arrow-down"></i></a>
+  <a href="#contacto" class="nav-link" data-title="Haz clic en cada sección para deslizarte">Contáctame <i class="fas fa-arrow-down"></i></a>
 </nav>
+
 
 
 <!-- narración principal -->
@@ -2505,6 +2519,7 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
   });
 </script>
 </html>
+
 
 
 
