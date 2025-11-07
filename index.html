@@ -1603,7 +1603,7 @@ section {
   transform: scale(1.05);
 }
 
-    .nav-link {
+.nav-link {
   position: relative;
   color: #333;
   text-decoration: none;
@@ -1615,22 +1615,11 @@ section {
   color: #007BFF;
 }
 
-.nav-link i {
-  margin-left: 6px;
-  font-size: 0.8em;
-  color: #007BFF;
-  transition: transform 0.3s ease;
-}
-
-.nav-link:hover i {
-  transform: translateY(3px);
-}
-
 /* Tooltip personalizado */
 .nav-link::after {
   content: attr(data-title);
   position: absolute;
-  bottom: -28px;
+  bottom: -28px; /* aparece debajo del enlace */
   left: 50%;
   transform: translateX(-50%);
   background: #007BFF;
@@ -1647,7 +1636,6 @@ section {
 .nav-link:hover::after {
   opacity: 1;
 }
-
 
     
   </style>
@@ -1692,13 +1680,14 @@ section {
 <body>
 <nav>
   <button class="play-btn" id="playPauseBtn" aria-label="Reproducir narración">▶</button>
-  <a href="#sobre-mi" class="nav-link" data-title="Haz clic en cada sección para deslizarte">Sobre mí <i class="fas fa-arrow-down"></i></a>
-  <a href="#habilidades" class="nav-link" data-title="Haz clic en cada sección para deslizarte">Habilidades <i class="fas fa-arrow-down"></i></a>
-  <a href="#proyectos" class="nav-link" data-title="Haz clic en cada sección para deslizarte">Proyectos <i class="fas fa-arrow-down"></i></a>
-  <a href="#certificaciones" class="nav-link" data-title="Haz clic en cada sección para deslizarte">Certificaciones <i class="fas fa-arrow-down"></i></a>
-  <a href="#objetivos" class="nav-link" data-title="Haz clic en cada sección para deslizarte">Roadmap <i class="fas fa-arrow-down"></i></a>
-  <a href="#contacto" class="nav-link" data-title="Haz clic en cada sección para deslizarte">Contáctame <i class="fas fa-arrow-down"></i></a>
+  <a href="#sobre-mi" class="nav-link" data-title="Haz clic en cada sección para deslizarte">Sobre mí</a>
+  <a href="#habilidades" class="nav-link" data-title="Haz clic en cada sección para deslizarte">Habilidades</a>
+  <a href="#proyectos" class="nav-link" data-title="Haz clic en cada sección para deslizarte">Proyectos</a>
+  <a href="#certificaciones" class="nav-link" data-title="Haz clic en cada sección para deslizarte">Certificaciones</a>
+  <a href="#objetivos" class="nav-link" data-title="Haz clic en cada sección para deslizarte">Roadmap</a>
+  <a href="#contacto" class="nav-link" data-title="Haz clic en cada sección para deslizarte">Contáctame</a>
 </nav>
+
 
 
 
@@ -2519,6 +2508,7 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
   });
 </script>
 </html>
+
 
 
 
