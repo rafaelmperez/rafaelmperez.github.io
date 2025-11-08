@@ -1569,19 +1569,19 @@ section {
   margin: 0;
   padding: 0;
 }
-
 .sysadmin-badge {
-  display: block;                    /* Para que ocupe toda la línea */
-  margin: 1rem auto 0 auto;          /* Centrado horizontal con espacio arriba */
-  padding: 0.6rem 1.2rem;
-  background-color: #222;
-  color: #fff;
-  border-radius: 8px;
+  display: inline-block;
+  background-color: #1f1f1f;
+  color: rgb(255, 204, 0) !important; /* ← fuerza el color del texto */
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+  padding: 10px 16px;
+  border-radius: 6px;
   text-decoration: none;
-  transition: background-color 0.2s ease;
-  width: fit-content;                /* Que se ajuste al contenido */
-  text-align: center;
+  box-shadow: 0 0 5px rgb(255, 204, 0);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .sysadmin-badge:hover {
   background-color: #444;
@@ -2471,6 +2471,7 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
   });
 </script>
 </html>
+
 
 
 
