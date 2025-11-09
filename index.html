@@ -2214,36 +2214,45 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
 </h2>
   <div class="grid-proyectos">
 
-    <div class="card"> 
-  <img src="https://rafaelmperez.com/assets/img/resultadolynis.jpg" alt="Bastionado Ubuntu 24.04 LTS" style="width:100%; height:200px; object-fit:cover;">
+  <div class="card">
+  <img src="https://rafaelmperez.com/assets/img/nmap-auto-scanner.jpg" 
+       alt="Nmap Auto Scanner" 
+       style="width:100%; height:200px; object-fit:cover; border-radius:6px;">
 
-  <h3 style="font-size: 1em;"> <i class="fas fa-lock"></i> Bastionado completo de Ubuntu 24.04 LTS </h3>
+  <h3 style="font-size: 1em; margin-top: 10px;">
+    <i class="fas fa-bolt"></i> Nmap Auto Scanner
+  </h3>
 
-  <strong> 
-    <span style="color:#E95420;">Kernel</span> | 
-    <span style="color:#007BFF;">PAM</span> | 
-    <span style="color:#28A745;">Auditd</span> | 
-    <span style="color:#6f42c1;">USBGuard</span> | 
-    <span style="color:#20c997;">Lynis</span> 
+  <strong>
+    <span style="color:#3776AB;">Python</span> | 
+    <span style="color:#E95420;">Nmap</span> | 
+    <span style="color:#F0DB4F;">YAML</span> | 
+    <span style="color:#28A745;">Cron</span> | 
+    <span style="color:#6f42c1;">JSON/CSV</span>
   </strong>
 
-  <p> Este proyecto documenta el proceso completo de bastionado de un sistema Ubuntu 24.04 LTS, siguiendo estándares CIS, NIST y OWASP. Se aplicaron medidas defensivas en múltiples capas: kernel, autenticación, servicios, red, logging y control físico, sin comprometer la funcionalidad del sistema.
+  <p style="margin-top: 8px; text-align: justify;">
+    <strong>Nmap Auto Scanner</strong> automatiza escaneos de red en entornos Linux, 
+    genera reportes en <code>JSON</code> y <code>CSV</code>, y compara resultados entre ejecuciones
+    para detectar cambios, nuevos servicios o posibles amenazas. Ideal para auditorías 
+    periódicas, bastionado y tareas de <em>blue team</em>.
+  </p>
 
-  Se utilizó Lynis como herramienta de auditoría continua, logrando una mejora de seguridad de <strong>68 a 87 puntos</strong>. Cada fase está documentada con comandos, configuraciones y validaciones técnicas. </p>
+  <p style="text-align: justify;">
+    Desarrollado en <strong>Python</strong> con integración de <code>python-nmap</code>, 
+    utiliza un archivo <code>config.yaml</code> para configurar objetivos, opciones y directorios 
+    de salida, además de soportar ejecución programada mediante <code>cron</code>.
+  </p>
 
-  <div class="audio-proyecto" style="margin-top: 8px;"> 
-    <p><strong>Versión en audio:</strong></p> 
-    <audio controls controlsList="nodownload noplaybackrate"> 
-      <source src="https://rafaelmperez.com/sounds/bastionamientoubuntu.aac" type="audio/mpeg"> 
-      Tu navegador no soporta el elemento de audio. 
-    </audio> 
+  <div style="margin-top: 10px;">
+    <a href="https://github.com/rafaelmperez/nmap-auto-scanner" 
+       target="_blank" 
+       class="sysadmin-badge"
+       style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+      <i class="fab fa-github"></i> Ver en GitHub
+    </a>
 
-    <p> 
-      <a href="https://rafaelmperez.com/docs/Rafael_MPerez_Bastionado_Ubuntu24.04_Informe_Tecnico.pdf" target="_blank" class="sysadmin-badge"> 
-        <strong>Ver informe técnico PDF</strong> 
-      </a> 
-    </p>
-  </div> 
+  </div>
 </div>
 
 
@@ -2627,6 +2636,7 @@ El resultado es un sistema más seguro, trazable y alineado con estándares prof
   });
 </script>
 </html>
+
 
 
 
