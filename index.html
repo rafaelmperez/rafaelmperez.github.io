@@ -2301,86 +2301,92 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
 
 
 
-<!-- CARD NUEVO PROYECTO --> 
-    <div class="card"> 
-      <img src="https://rafaelmperez.com/assets/img/buenascard.jpg
-" alt="Buenas prácticas de bastionado Linux" style="width:100%; height:200px; object-fit:cover;">
-
-<h3 style="font-size: 1em;"> <i class="fas fa-shield-alt"></i> Buenas prácticas de bastionado Linux </h3>
-
-<strong> 
-  <span style="color:#E95420;">SSH</span> | 
-  <span style="color:#007BFF;">UFW</span> | 
-  <span style="color:#28A745;">Auditd</span> | 
-  <span style="color:#6f42c1;">AIDE</span> | 
-  <span style="color:#20c997;">Lynis</span> </strong>
-
-<p> Este proyecto aplica un conjunto de buenas prácticas defensivas sobre un sistema Linux, con el objetivo de reducir su superficie de ataque de forma simple pero efectiva.
-
-Se han deshabilitado accesos remotos inseguros, reforzado el firewall con políticas restrictivas, activado auditoría de eventos y configurado herramientas de integridad y escaneo. Cada medida está documentada con comandos, justificación técnica y evidencia funcional.
-
-El resultado es un sistema más seguro, trazable y alineado con estándares profesionales de bastionado. </p>
-
-
-
-<div class="audio-proyecto" style="margin-top: 8px;"> 
-  <p><strong>Versión en audio:</strong></p> 
-  <audio controls controlsList="nodownload noplaybackrate"> <source src="https://rafaelmperez.com/sounds/buenaspracticas.aac" type="audio/mpeg"> 
-    Tu navegador no soporta el elemento de audio. 
-  </audio> 
-<p> 
-  <a href="https://rafaelmperez.com/buenaspracticas.html" target="_blank" class="sysadmin-badge"> 
-    <strong>Ver documentación técnica</strong> </a> 
-</p>
-  
-</div> 
-    </div>
-    
-
-    
-    <!-- CARD NUEVO PROYECTO -->
+<!-- CARD NUEVO PROYECTO -->
 <div class="card">
-  <img src="https://rafaelmperez.com/assets/img/geoip.jpg" 
-       alt="Nombre del proyecto" 
-       style="width:100%; height:200px; object-fit:cover;">
+  <img src="https://rafaelmperez.com/assets/img/gmail-auto-responder.jpg" 
+       alt="Gmail Auto-Responder" 
+       style="width:100%; height:200px; object-fit:cover; border-radius:6px;">
 
-  <h3 style="font-size: 1em;">
-    <i class="fas fa-shield-alt"></i> Firewall dinámico con GeoIP
+  <h3 style="font-size: 1em; margin-top: 10px;">
+    <i class="fas fa-robot"></i> Gmail Auto-Responder
   </h3>
 
-<strong>
-  <span style="color:#E95420;">iptables</span> |
-  <span style="color:#007BFF;">GeoIP</span> |
-  <span style="color:#28A745;">Bash</span> |
-  <span style="color:#6f42c1;">SSH</span> |
-  <span style="color:#20c997;">Auth.log</span>
-</strong>
+  <strong>
+    <span style="color:#3776AB;">Python</span> | 
+    <span style="color:#D44638;">Gmail API</span> | 
+    <span style="color:#00A67E;">OpenAI API</span> | 
+    <span style="color:#6C757D;">Systemd</span> | 
+    <span style="color:#28A745;">OAuth 2.0</span>
+  </strong>
 
-
-  <p>
-  Este proyecto implementa un sistema defensivo automatizado que analiza los intentos fallidos de acceso SSH y bloquea IPs sospechosas según su país de origen.
-
-  Utiliza GeoIP para identificar conexiones no españolas y aplica reglas dinámicas con iptables. El script se ejecuta localmente, registra cada acción y permite visualizar los bloqueos en tiempo real.
-
-  El resultado es una capa de protección reactiva, ligera y documentable, alineada con buenas prácticas de ciberseguridad operativa.
+  <p style="margin-top: 8px; text-align: justify;">
+    Proyecto de <strong>automatización de respuestas en Gmail</strong> mediante Python y la 
+    <em>Gmail API</em>, diseñado para ejecutarse de forma autónoma como servicio 
+    <code>systemd</code>. Permite responder correos entrantes de manera automática, 
+    con opción de <strong>respuestas inteligentes generadas por IA (OpenAI)</strong>.
   </p>
 
+  <p style="text-align: justify;">
+    Integra autenticación <strong>OAuth 2.0</strong>, gestión de logs detallada y control de 
+    duplicados para evitar bucles de respuesta. Su configuración se realiza mediante 
+    <code>.env</code>, con intervalos de verificación ajustables. 
+    Ideal para tareas de productividad, administración IT o flujos automatizados.
+  </p>
 
-
-  <div class="audio-proyecto" style="margin-top: 8px;">
-    <p><strong>Versión en audio:</strong></p>
-    <audio controls controlsList="nodownload noplaybackrate">
-      <source src="https://rafaelmperez.com/sounds/geoip.aac" type="audio/mpeg">
-      Tu navegador no soporta el elemento de audio.
-    </audio>
-  <p>
-    <a href="https://rafaelmperez.com/proyectogeoip.html" 
+  <div style="margin-top: 10px;">
+    <a href="https://github.com/rafaelmperez/gmail-auto-responder" 
        target="_blank" 
-       class="sysadmin-badge">
-      <strong>Ver documentación técnica</strong>
+       class="sysadmin-badge"
+       style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+      <i class="fab fa-github"></i> Ver en GitHub
     </a>
-  </p>
     
+  </div>
+</div>
+
+    
+
+    
+<!-- CARD NUEVO PROYECTO -->
+<div class="card">
+  <img src="https://rafaelmperez.com/assets/img/youtube-batch-downloader.jpg" 
+       alt="YouTube Batch Downloader" 
+       style="width:100%; height:200px; object-fit:cover; border-radius:6px;">
+
+  <h3 style="font-size: 1em; margin-top: 10px;">
+    <i class="fas fa-download"></i> YouTube Batch Downloader
+  </h3>
+
+  <strong>
+    <span style="color:#3776AB;">Python</span> | 
+    <span style="color:#FF0000;">YouTube</span> | 
+    <span style="color:#FFB400;">yt-dlp</span> | 
+    <span style="color:#28A745;">ffmpeg</span> | 
+    <span style="color:#6C757D;">CLI</span>
+  </strong>
+
+  <p style="margin-top: 8px; text-align: justify;">
+    Script en <strong>Python 3</strong> para descargar múltiples vídeos de YouTube 
+    en la mejor calidad disponible (video + audio) de forma interactiva desde la terminal. 
+    Desarrollado con <code>yt-dlp</code> y compatible con 
+    <strong>Windows, macOS y Linux</strong>.
+  </p>
+
+  <p style="text-align: justify;">
+    Permite introducir enlaces uno a uno, crear automáticamente la carpeta de destino 
+    <code>descargas_youtube/</code> y mostrar el progreso de descarga en tiempo real. 
+    Ideal para automatizar descargas en lote, entornos educativos o prácticas de 
+    <strong>automatización en Python</strong>.
+  </p>
+
+  <div style="margin-top: 10px;">
+    <a href="https://github.com/rafaelmperez/youtube_batch_downloader" 
+       target="_blank" 
+       class="sysadmin-badge"
+       style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+      <i class="fab fa-github"></i> Ver en GitHub
+    </a>
+
   </div>
 </div>
 
@@ -2635,6 +2641,7 @@ El resultado es un sistema más seguro, trazable y alineado con estándares prof
   });
 </script>
 </html>
+
 
 
 
