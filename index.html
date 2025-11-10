@@ -1838,6 +1838,43 @@ section {
   }
 }
 
+    /* Ajustes visuales para la sección "Sobre mí" */
+#sobre-mi {
+  margin-bottom: 40px; /* separa del resto de secciones */
+}
+
+#sobre-mi .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* reduce el espacio vertical entre elementos */
+  padding: 20px;
+}
+
+/* Imagen más compacta y centrada */
+.imagen-sobre-mi img {
+  width: 180px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px; /* menos espacio debajo de la imagen */
+}
+
+/* Texto más ajustado */
+.texto-sobre-mi {
+  max-width: 800px;
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+.texto-sobre-mi p {
+  margin-bottom: 10px; /* menos separación entre párrafos */
+}
+
+/* Botón PDF más cerca del texto */
+#sobre-mi .sysadmin-badge {
+  margin-top: 10px;
+}
+
 
   </style>
 </head>
@@ -2858,6 +2895,7 @@ section {
   });
 </script>
 </html>
+
 
 
 
