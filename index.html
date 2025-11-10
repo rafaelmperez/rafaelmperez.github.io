@@ -1840,6 +1840,50 @@ section {
 }
 
  
+/* Sección Competencias Técnicas */
+.competencias {
+  background-color: #000;
+  border: 1px solid #d4af37;
+  border-radius: 10px;
+  padding: 20px 25px;
+  color: #d4af37;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+}
+
+.titulo-competencias {
+  font-size: 1.1em;
+  text-align: center;
+  margin-bottom: 12px;
+  color: #d4af37;
+}
+
+.lista-competencias {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.8;
+}
+
+.lista-competencias li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 0.95em;
+}
+
+.lista-competencias i {
+  color: #d4af37;
+  width: 18px;
+  text-align: center;
+}
+
+/* Efecto al pasar el cursor */
+.lista-competencias li:hover {
+  color: #fff;
+  transform: translateX(3px);
+  transition: all 0.2s ease-in-out;
+}
 
 
   </style>
@@ -2069,19 +2113,22 @@ section {
     <div class="grid-habilidades">
 
 <!-- Card 1: Lista de habilidades -->
-<div class="card">
-  <h3 style="font-size: 1em;"><i class="fas fa-tools"></i> Competencias técnicas</h3>
-  <ul style="list-style:none; padding:0;">
-    <li><i class="fas fa-server"></i> Administración de sistemas Linux y Windows</li>
-    <li><i class="fas fa-shield-alt"></i> Bastionado de sistemas, servidores y servicios web</li>
-    <li><i class="fas fa-bug"></i> Respuesta a incidentes y monitoreo activo</li>
-    <li><i class="fas fa-terminal"></i> Automatización con Bash y Ansible</li>
-    <li><i class="fas fa-search"></i> Auditoría técnica con Nikto, Nmap, OWASP ZAP... </li>
-    <li><i class="fas fa-cloud"></i> Infraestructura en la nube: gestión básica en AWS y Azure</li>
-    <li><i class="fas fa-laptop-code"></i> Maquetación web responsive y optimización SEO</li>
-    <li><i class="fas fa-language"></i> Idiomas: Francés C1</li>
+<div class="card competencias">
+  <h3 class="titulo-competencias">
+    <i class="fas fa-tools"></i> Competencias técnicas
+  </h3>
+  <ul class="lista-competencias">
+    <li><i class="fas fa-server"></i> Administración de sistemas <strong>Linux</strong> y <strong>Windows Server</strong></li>
+    <li><i class="fas fa-shield-alt"></i> <strong>Bastionado</strong> de sistemas, servidores y servicios web</li>
+    <li><i class="fas fa-bug"></i> <strong>Respuesta a incidentes</strong> y monitoreo activo</li>
+    <li><i class="fas fa-terminal"></i> <strong>Automatización</strong> con Bash, Ansible y Python</li>
+    <li><i class="fas fa-search"></i> <strong>Auditoría técnica</strong> con Nmap, Nikto, OWASP ZAP y Lynis</li>
+    <li><i class="fas fa-cloud"></i> <strong>Infraestructura en la nube</strong>: AWS y Azure</li>
+    <li><i class="fas fa-laptop-code"></i> <strong>Maquetación web</strong> responsive y optimización SEO</li>
+    <li><i class="fas fa-language"></i> <strong>Idiomas</strong>: Francés C1</li>
   </ul>
 </div>
+
 
 
 <!-- CARD: Entornos & Herramientas (Badges estilo GitHub) -->
@@ -2864,6 +2911,7 @@ section {
   });
 </script>
 </html>
+
 
 
 
