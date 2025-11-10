@@ -1832,10 +1832,44 @@ section {
     color: #000 !important;
   }
 
-    @media (min-width: 1024px) {
-  html {
-    zoom: 0.9;
-  }
+/* 🎧 Recuadro de presentación en negro */
+.audio-presentacion {
+  background-color: #000;          /* Fondo negro */
+  border: 1px solid #d4af37;       /* Borde dorado */
+  border-radius: 10px;             /* Esquinas redondeadas */
+  padding: 15px 20px;              /* Espaciado interno */
+  margin-top: 20px;                /* Separación superior */
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.15); /* Brillo sutil dorado */
+  color: #d4af37;                  /* Texto dorado */
+}
+
+/* Título y texto dentro */
+.audio-presentacion p strong {
+  color: #d4af37;
+  font-weight: 600;
+}
+
+/* Personalización del reproductor */
+.audio-presentacion audio {
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 8px;
+  background-color: #111;
+}
+
+/* Enlace del PDF */
+.audio-presentacion .sysadmin-badge {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #24292e !important;
+  color: #fff !important;
+  border: 1px solid #d4af37 !important;
+  transition: all 0.3s ease;
+}
+
+.audio-presentacion .sysadmin-badge:hover {
+  background-color: #d4af37 !important;
+  color: #000 !important;
 }
 
 
@@ -2919,6 +2953,7 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
   });
 </script>
 </html>
+
 
 
 
