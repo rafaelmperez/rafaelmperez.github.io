@@ -1,18 +1,38 @@
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+
+
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio de Rafael M. Pérez, Administrateur Système Junior | Spécialisé en Cybersécurité.">
-  <title>Portfolio Web | Rafael M. Pérez – Administrateur Système Junior | Spécialisé en Cybersécurité</title>
+  <meta name="description" content="Portafolio de Rafael M. Pérez, administrador de sistemas en formación y en proceso de especializarme en ciberseguridad. Experiencia en gestión de servidores, seguridad informática y soporte técnico.">
+  <title>Portafolio Web | Rafael M. Pérez - Administrador de Sistemas| Seguridad, Bastionado & Respuesta a Incidentes</title>
 
     <!-- Indicamos que hay una versión en francés -->
-  <link rel="alternate" hreflang="es" href="https://rafaelmperez.github.io/index.html" />
-  <link rel="alternate" hreflang="fr" href="https://rafaelmperez.github.io/fr/index.html" />
+  <link rel="alternate" hreflang="es" href="https://rafaelmperez.com/index.html" />
+  <link rel="alternate" hreflang="fr" href="https://rafaelmperez.com/fr/index.html" />
 </head>
+
+  <!-- En la cabecera, si no la tienes ya -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Inicializa los iconos -->
+<script>lucide.createIcons();</script>
+
+
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  integrity="sha512-Fo3rlrZj/k7ujTTXrwE8n0z2C2FZpIh1oLz4hJxQ1S2vYp1XbVZKXqkqjvXQp4I8O6D+oUuT3Ue8D6U5yT1JfA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
 
 <style>
   /* Ejemplo de CSS crítico */
@@ -23,33 +43,35 @@
 
   <link rel="icon" href="favicon.png" type="image/x-icon">
 
-   <!-- ✅ Open Graph (Facebook, LinkedIn, WhatsApp) -->
+   <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Rafael M. Pérez - Administrateur Système Junior | Spécialisé en Cybersécurité." />
-  <meta property="og:description" content="Administrateur Système Junior | Spécialisé en Cybersécurité." />
-  <meta property="og:image" content="https://rafaelmperez.github.io/assets/img/vistapreliminar.jpg" />
-  <meta property="og:url" content="https://rafaelmperez.github.io/fr/index.html" />
-  <meta property="og:locale" content="fr_FR" />
-  <meta property="og:image" content="https://rafaelmperez.github.io/assets/img/vistapreliminar.jpg" />
+  <meta property="og:title" content="Rafael M. Pérez - Administrador de Sistemas | Ciberseguridad" />
+  <meta property="og:description" content="Portafolio en ciberseguridad, administración de sistemas y proyectos IT." />
+  <meta property="og:image" content="https://rafaelmperez.com/assets/img/vistapreliminar.jpg" />
+  <meta property="og:url" content="https://rafaelmperez.com/" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:image" content="https://rafaelmperez.com/assets/img/vistapreliminar.jpg" />
   <meta property="og:image:type" content="image/webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
 
   
-  <!-- ✅ Twitter Cards -->
+  <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Rafael M. Pérez - Administrador de Sistemas | Ciberseguridad" />
   <meta name="twitter:description" content="Portafolio en ciberseguridad, administración de sistemas y proyectos IT." />
-  <meta name="twitter:image" content="https://rafaelmperez.github.io/assets/img/vistapreliminar.jpg" />
+  <meta name="twitter:image" content="https://rafaelmperez.com/assets/img/vistapreliminar.jpg" />
 
-    
+
 <head>
   <!-- Font Awesome optimizado (solo una versión) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
   <noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </noscript>
+
+
 
   <!-- Google Fonts con preload y carga no bloqueante -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" as="style" onload="this.rel='stylesheet'">
@@ -62,7 +84,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap">
   </noscript>
 </head>
-
+<meta name="google-site-verification" content="uumuF7y73hfuDoXFjUW66ETAXtE-WjolU9Pv0aWhCyo" />
 
     <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1T24E1NDR"></script>
@@ -72,7 +94,31 @@
     gtag('js', new Date());
     gtag('config', 'G-J1T24E1NDR');
   </script>
-<body>
+
+  <!-- ... contenido de tu página ... -->
+
+<!-- sonido corto del menú -->
+<audio id="menu-sound" src="https://rafaelmperez.com/sounds/clip.aac" preload="auto"></audio>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const sound = document.getElementById("menu-sound");
+    const badges = document.querySelectorAll(".sysadmin-badge");
+
+    badges.forEach(badge => {
+      badge.addEventListener("mouseenter", () => {
+        sound.currentTime = 0;
+        sound.play();
+      });
+    });
+  });
+</script>
+
+</body>
+
+  
+  
+  <body>
   <!-- Tu HTML aquí -->
 
 </body>
@@ -83,14 +129,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const sound = document.getElementById("menu-sound");
   const links = document.querySelectorAll("nav a");
 
-  // 🔓 Desbloquear sonido tras la primera interacción
+  // Desbloquear sonido tras la primera interacción
   document.body.addEventListener("click", () => {
     sound.play().catch(() => {});
     sound.pause();
     sound.currentTime = 0;
   }, { once: true });
 
-  // 🎧 Reproducir sonido al pasar el ratón por encima
+  // Reproducir sonido al pasar el ratón por encima
   links.forEach(link => {
     link.addEventListener("mouseenter", () => {
       sound.currentTime = 0;
@@ -101,6 +147,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
    
   </style>
+</head>
+    <!-- Font Awesome 6.5.0 (versión estable con soporte total para 'fas', 'far', 'fab') -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTTXrwE8n0z2C2FZpIh1oLz4hJxQ1S2vYp1XbVZKXqkqjvXQp4I8O6D+oUuT3Ue8D6U5yT1JfA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Fuente opcional (no afecta a los iconos) -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+
+  <!-- Tus estilos -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
   <style>
@@ -214,11 +275,7 @@ h2 {
 }
 
 /* PROJECTS */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
+
 
 .project-card {
   background: #222;
@@ -313,7 +370,7 @@ nav a {
   background-color: #0077B5; /* LinkedIn */
 }
 .social-float a:nth-child(3) {
-  background-color: #FF0000 /* Youtube */
+  background-color: #F57C00; /* Naranja Blogger real */
 }
 .social-float a:nth-child(2) {
   background-color: #6e6e6e ; /* Github */
@@ -481,7 +538,7 @@ nav {
 
 /* 🔹 Espacio entre el nav y la sección Sobre Mí */
 #sobre-mi {
-  margin-top: 300px !important; /* ajusta este valor a tu gusto */
+  margin-top: 100; /* ajusta este valor a tu gusto */
   padding-top: 0 !important;     /* opcional, para que no haya padding extra */
 }
 
@@ -621,8 +678,8 @@ header {
     }
 
     header p {
-      margin-top: 0.5rem;
-      font-size: 1.3rem;
+      margin-top: 1rem;
+      font-size: 1rem;
       font-family: 'Poppins', sans-serif;
       font-weight: 300;
       color: #b6b6b6	;
@@ -853,6 +910,19 @@ h1.titulo-principal {
       background: rgb(255,204, 0);
       color: #000;
     }
+
+  /* 🎨 Blogger (tono oficial) */
+.social-float a[href*="blogspot"] {
+  background-color: #FF5722; /* Naranja Blogger */
+  color: #fff;
+}
+
+.social-float a[href*="blogspot"]:hover {
+  background-color: #fff;
+  color: #FF5722;
+  transform: scale(1.15);
+}
+
   
   @font-face {
   font-family: 'Font Awesome 5 Brands';
@@ -1032,11 +1102,7 @@ button:hover {
 
 
 
-.grid-proyectos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 30px;
-}
+
   .terminal-heading {
   font-size: 1.5em;
   margin-bottom: 15px;
@@ -1104,7 +1170,7 @@ button:hover {
 
 
 
-.card:not(#sobre-mi .card):not(#habilidades .card):not(#certificaciones .card):not(#cursos .card):not(#seguridad .card):not(#contacto .card):hover {
+.card:not(#sobre-mi .card):not(#habilidades .card):not(#certificaciones .card):not(#cursos .card):not(#seguridad .card):not(#contacto .card):hover (#CV .card){
   transform: translateY(-10px);
 }
 
@@ -1224,19 +1290,19 @@ html, body {
 
 .terminal-heading {
   font-family: ;
-  color: rgb(255,204, 0);
+  color: rgb(255,255, 255);
   background-color: transparent;
   transition: none;
   display: inline-block;
 }
 
 .terminal-heading:hover {
-  color: rgb(255,204, 0);
-  transform: none;
+  color: rgb(255,255, 255);
+  transform: none; 
 }
 .terminal-heading {
   font-family: Fira Code;
-  color: rgb(255,204, 0);
+  color: rgb(255,255, 255);
   background-color: #0d0d0d;
   padding: 12px 20px;
   border-left: 4px solid rgb(0, 0, 0);
@@ -1406,25 +1472,35 @@ app.use(helmet.contentSecurityPolicy({
 
 .grid-proyectos {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 columnas flexibles */
-  gap: 2rem;
-  width: 100vw; /* Ocupa todo el ancho de la ventana */
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-
 @media (max-width: 1024px) {
   .grid-proyectos {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .grid-proyectos {
     grid-template-columns: 1fr;
   }
+}
+
+.contenedor-principal {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+
 
 @font-face {
   font-family: 'Font Awesome 5 Brands';
@@ -1442,14 +1518,129 @@ app.use(helmet.contentSecurityPolicy({
   font-display: swap;
 }
 
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .grid-proyectos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid-proyectos {
+    grid-template-columns: 1fr;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+.card-proyecto {
+  width: 100%;
+}
 
 
 
+
+
+
+.grid-habilidades {
+  display: grid;
+  grid-template-columns: 1fr; /* una sola columna */
+  gap: 0;                     /* sin espacio entre cards */
+  padding: 0;
+  margin: 0;
+}
+
+[class*="grid-"] {
+  gap: 0px; /* o el valor que prefieras */
+}
+
+section {
+  margin: 0;
+  padding: 0;
+}
+.sysadmin-badge {
+  display: inline-block;
+  background-color: #1f1f1f;
+  color: rgb(255, 204, 0);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 0 5px rgb(255, 204, 0);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  margin-top: 1rem;
+}
+
+/* Centrado del contenido dentro de la tarjeta */
+.hoja-de-ruta-card {
+  text-align: center;
+}
+
+
+
+
+.sysadmin-badge:hover {
+  background-color: #444;
+}
+
+
+.sysadmin-badge:hover {
+  color: rgb(255, 204, 0); /* amarillo encendido */
+  box-shadow: 0 0 12px rgb(255, 204, 0), 0 0 24px rgb(255, 204, 0);
+  transform: scale(1.05);
+}
+
+.nav-link {
+  position: relative;
+  color: #333;
+  text-decoration: none;
+  padding: 6px 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007BFF;
+}
+
+/* Tooltip personalizado */
+.nav-link::after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: -28px; /* aparece debajo del enlace */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #007BFF;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-link:hover::after {
+  opacity: 1;
+}
+
+    
   </style>
   
 
 </head>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
 
 
 </script>
@@ -1458,8 +1649,8 @@ app.use(helmet.contentSecurityPolicy({
 
 <body>
   <div class="language-switcher">
-    <a href="https://rafaelmperez.github.io">
-      <img src="https://rafaelmperez.github.io/esflags.png" alt="Bandera de españa" class="flag"> Español
+    <a href="/fr/index.html">
+      <img src="https://rafaelmperez.com/frflags.jpg" alt="Drapeau de la France" class="flag"> Français
     </a>
   </div>
 </body>
@@ -1470,19 +1661,14 @@ app.use(helmet.contentSecurityPolicy({
 <header class="encabezado">
   <div class="header-content" style="text-align: center;">
     <img 
-      src="https://rafaelmperez.github.io/assets/img/logo1.jpg" 
+      src="https://rafaelmperez.com/assets/img/bannerlinkedin.jpeg" 
       alt="Banner principal de Sysadmin en formación" 
       class="banner-header" 
       width="1000" 
       loading="eager" 
       fetchpriority="high">
       
-    <p class="animate__animated animate__fadeInDown" 
-       style="animation-duration: 2s; font-size: 1.5em; font-weight: bold;">
-      Administrateur systèmes junior | Spécialisé en cybersécurité
-    </p>
-  </div>
-</header>
+
 
 
 
@@ -1492,19 +1678,22 @@ app.use(helmet.contentSecurityPolicy({
 </head>
 <body>
 <nav>
-  <button class="play-btn" id="playPauseBtn" aria-label="Reproducir narración">▶</button>
-  <a href="#sobre-mi">À propos de moi</a>
-  <a href="#habilidades">Compétences</a>
-  <a href="#proyectos">Projets</a>
-  <a href="#certificaciones">Certifications</a>
-  <a href="#cv">CV</a>
-  <a href="#contacto">Contactez-moi</a>
+  <a href="#sobre-mi" class="nav-link" data-title="Haz clic en cada sección para deslizarte">Sobre mí</a>
+  <a href="#habilidades" class="nav-link" data-title="Haz clic en cada sección para deslizarte">Habilidades</a>
+  <a href="#proyectos" class="nav-link" data-title="Haz clic en cada sección para deslizarte">Proyectos</a>
+  <a href="#scripts" class="nav-link" data-title="Haz clic en cada sección para deslizarte">Scripts</a>
+  <a href="#certificaciones" class="nav-link" data-title="Haz clic en cada sección para deslizarte">Certificaciones</a>
+  <a href="#objetivos" class="nav-link" data-title="Haz clic en cada sección para deslizarte">CV</a>
+  <a href="#contacto" class="nav-link" data-title="Haz clic en cada sección para deslizarte">Contáctame</a>
 </nav>
 
+
+
+
 <!-- narración principal -->
-<audio id="narracion" src="https://rafaelmperez.github.io/fr/playfrancais.aac" preload="auto"></audio>
+<audio id="narracion" src="https://rafaelmperez.com/sounds/portafolioplay.aac" preload="auto"></audio>
 <!-- sonido corto del menú -->
-<audio id="menu-sound" src="https://rafaelmperez.github.io/sounds/clip.aac" preload="auto"></audio>
+<audio id="menu-sound" src="https://rafaelmperez.com/sounds/clip.aac" preload="auto"></audio>
 
 <script>
   const narracion = document.getElementById("narracion");
@@ -1550,10 +1739,10 @@ app.use(helmet.contentSecurityPolicy({
     </a>
        <a href="https://github.com/Rafaelmperez" title="GitHub" target="_blank" rel="noopener noreferrer">
       <i class="fab fa-github"></i>
-    </a>
-      <a href="https://www.youtube.com/@rafaelmpTech" title="YouTube" target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-youtube"></i>
-    </a>
+<a href="https://upgrademe.blog/" title="Blog" target="_blank" rel="noopener noreferrer">
+  <i class="fab fa-blogger-b"></i>
+</a>
+
  
     </a>
   </div>
@@ -1562,32 +1751,70 @@ app.use(helmet.contentSecurityPolicy({
 <section id="sobre-mi">
   <div class="card">
     <h2 class="terminal-heading">
-      <i class="fas fa-user-shield"></i> #À propos de moi
+      <i class="fas fa-user-shield"></i> >_Sobre mí
     </h2>
 
     
 
     <div class="imagen-sobre-mi">
    <img 
-  src="https://rafaelmperez.github.io/assets/img/sobremi.jpg" 
+  src="https://rafaelmperez.com/assets/img/sobremi2.jpg" 
   alt="Foto de Rafael M. Pérez" 
   fetchpriority="high">
     </div>
 
     
 
-    <div class="texte-sur-moi"> <p>Bonjour, je suis Rafael, étudiant en ASIR (Administration de Systèmes Informatiques et Réseaux), titulaire des certifications Cisco CCST en cybersécurité et de réseaux. Je me spécialise dans la protection des infrastructures IT, l’optimisation des serveurs et la détection de vulnérabilités. Je parle français (niveau C1), ce qui me permet de collaborer efficacement au sein d’équipes internationales.</p>
+   <div class="texto-sobre-mi">
+  <p>
+<p>
+  Hola, soy <strong>Rafael M. Pérez</strong>, estudiante de <strong>ASIR</strong> con especialización en 
+  <strong>ciberseguridad práctica</strong> y <strong>administración de sistemas seguros</strong>. 
+  Mi formación está respaldada por certificaciones de <strong>Cisco</strong> 
+  (CCST Cybersecurity, CCST Networking, Ethical Hacker) y el 
+  <strong>Google Cybersecurity Certificate</strong>, que avalan mis competencias en IT.
+</p>
 
-<p>Chaque projet que je développe constitue une pratique réelle pour progresser et apporter de la valeur. Je vous invite à explorer mes travaux dans ce <strong>portfolio</strong> et à me contacter si vous souhaitez collaborer.</p>
+<p>
+  Me dedico a <strong>endurecer sistemas</strong>, 
+  <strong>optimizar servidores Linux y Windows Server</strong> 
+  y <strong>prevenir vulnerabilidades</strong> aplicando estándares internacionales como 
+  <strong>OWASP</strong>, <strong>NIST</strong> y <strong>CIS Benchmarks</strong>. 
+  Además, hablo <strong>francés con fluidez</strong>, lo que me permite adaptarme en 
+  <strong>equipos internacionales.</strong>
+</p>
+
+<p>
+  En cada proyecto busco <strong>automatizar procesos y reforzar la seguridad sin comprometer la operatividad</strong>. 
+  Documentar, medir y validar resultados es parte esencial de mi metodología.  
+  Te invito a descubrir mis trabajos en este <strong>portafolio</strong> y explorar mis scripts en <strong>GitHub</strong>.  
+  <strong>Contáctame</strong> si compartes la visión de una tecnología más <strong>segura y confiable</strong>.
+</p>
+
+  </p>
+</div>
+
+
 
       <!-- 🎧 Reproductor de audio sin opción de descarga -->
       <div class="audio-presentacion">
-        <p><strong>🎧 Écouter la version audio :</strong></p>
+        <p><strong>Escuchar versión en audio:</strong></p>
         <audio controls controlsList="nodownload noplaybackrate">
-          <source src="https://rafaelmperez.github.io/fr/aproposdemoi.aac" type="audio/mpeg">
-           Votre navigateur ne prend pas en charge l’élément audio.
+          <source src="https://rafaelmperez.com/sounds/presentacion.aac" type="audio/mpeg">
+          Tu navegador no soporta el elemento de audio.
         </audio>
-      </div>
+
+   <a href="https://rafaelmperez.com/docs/CARTA_PRESENTACION.pdf" 
+   target="_blank" 
+   class="sysadmin-badge"> 
+  <strong>
+    <i class="fa-regular fa-file-pdf" style="color:#e63946;"></i> 
+    Carta de presentación completa (PDF)
+  </strong> 
+</a>
+
+
+
     </div>
   </div>
 </section>
@@ -1597,186 +1824,614 @@ app.use(helmet.contentSecurityPolicy({
 
 
    <section id="habilidades">
-<h2 class="terminal-heading">
-  <i class="fas fa-bolt"></i> competences.sh</h2>
+  <!-- Card envolvente -->
+  <div class="card">
 
-  <div class="grid-habilidades">
+    <!-- Terminal heading dentro de la card -->
+    <h2 class="terminal-heading">
+      <i class="fas fa-bolt"></i> habilidades.sh
+    </h2>
 
- <!-- Conteneur de texte --> <div class="card"> 
-    <h3><i class=></i></h3> <ul style="list-style:none; padding:0;"> <li><i class="fas fa-server">
-        </i> Administration des systèmes Windows et Linux</li> <li><i class="fas fa-shield-alt">
-            </i> Cybersécurité offensive et défensive</li> 
-            <li><i class="fas fa-terminal">
-                </i> Automatisation avec Ansible et Bash</li> 
-                <li><i class="fas fa-cloud"></i> Cloud : AWS, Azure</li> 
-                <li><i class="fas fa-chart-line"></i> Renforcement de la sécurité des serveurs</li> 
-                <li><i class="fas fa-laptop-code"></i> Intégration web adaptative</li> 
-                <li><i class="fas fa-language"></i> Langues : français niveau C1</li> 
-                </ul> 
-                </div>
+    <!-- Grid de habilidades con dos cards internas -->
+    <div class="grid-habilidades">
 
-    <!-- Contenedor de iconos -->
-    <div class="card">
-      <h3><i class=></i></h3>
-      <div class="habilidades-icons">
-        <img src="https://rafaelmperez.github.io/assets/img/visualstudiocode.jpg" alt="Visual Studio Code" title="Visual Studio Code">
-        <img src="https://rafaelmperez.github.io/assets/img/kalilinux.jpg" alt="Kali Linux" title="Kali Linux">
-        <img src="https://rafaelmperez.github.io/assets/img/linux.jpg" alt="Linux" title="Linux">
-        <img src="https://rafaelmperez.github.io/assets/img/windows.jpg" alt="Windows" title="Windows">
-        <img src="https://rafaelmperez.github.io/assets/img/python.jpg" alt="Python" title="Python">
-        <img src="https://rafaelmperez.github.io/assets/img/grafana.jpg" alt="Grafana" title="Grafana">
-        <img src="https://rafaelmperez.github.io/assets/img/ansible.jpg" alt="Ansible" title="Ansible">
-        <img src="https://rafaelmperez.github.io/assets/img/bash.jpg" alt="Bash" title="Bash">
-        <img src="https://rafaelmperez.github.io/assets/img/github.jpg" alt="GitHub" title="GitHub">
-      </div>
-    </div>
+<!-- Card 1: Lista de habilidades -->
+<div class="card">
+  <h3 style="font-size: 1em;"><i class="fas fa-tools"></i> Competencias técnicas</h3>
+  <ul style="list-style:none; padding:0;">
+    <li><i class="fas fa-server"></i> Administración de sistemas Linux y Windows</li>
+    <li><i class="fas fa-shield-alt"></i> Bastionado de sistemas, servidores y servicios web</li>
+    <li><i class="fas fa-bug"></i> Respuesta a incidentes y monitoreo activo</li>
+    <li><i class="fas fa-terminal"></i> Automatización con Bash y Ansible</li>
+    <li><i class="fas fa-search"></i> Auditoría técnica con Nikto, Nmap, OWASP ZAP... </li>
+    <li><i class="fas fa-cloud"></i> Infraestructura en la nube: gestión básica en AWS y Azure</li>
+    <li><i class="fas fa-laptop-code"></i> Maquetación web responsive y optimización SEO</li>
+    <li><i class="fas fa-language"></i> Idiomas: Francés C1</li>
+  </ul>
+</div>
 
-  </div> <!-- Cierra grid-habilidades -->
+
+<!-- CARD: Entornos & Herramientas (Badges estilo GitHub) -->
+<div class="card">
+  <h3 style="font-size: 1em;">
+    <i class="fas fa-tools"></i> Entornos & Herramientas
+  </h3>
+
+  <div class="habilidades-icons" style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center; align-items:center; padding-top:8px;">
+
+    <!-- Sistemas Operativos -->
+    <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Ubuntu" title="Ubuntu" />
+    <img src="https://img.shields.io/badge/Debian-A81D34?style=for-the-badge&logo=debian&logoColor=white" alt="Debian / Kali" title="Debian / Kali Linux" />
+    <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows" title="Windows Server / Windows 10" />
+
+    <!-- Lenguajes y scripting -->
+    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" title="Python" />
+    <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash" title="Bash" />
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" title="JavaScript" />
+
+    <!-- Automatización / Infraestructura -->
+    <img src="https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white" alt="Ansible" title="Ansible" />
+    <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" title="Docker" />
+    <img src="https://img.shields.io/badge/Vagrant-1563EA?style=for-the-badge&logo=vagrant&logoColor=white" alt="Vagrant" title="Vagrant" />
+
+    <!-- Herramientas de seguridad -->
+    <img src="https://img.shields.io/badge/Nmap-2E8B57?style=for-the-badge&logo=nmap&logoColor=white" alt="Nmap" title="Nmap" />
+    <img src="https://img.shields.io/badge/Metasploit-512BD4?style=for-the-badge&logo=metasploit&logoColor=white" alt="Metasploit" title="Metasploit Framework" />
+    <img src="https://img.shields.io/badge/Wireshark-005C9C?style=for-the-badge&logo=wireshark&logoColor=white" alt="Wireshark" title="Wireshark" />
+    <img src="https://img.shields.io/badge/Burp%20Suite-F78C6B?style=for-the-badge&logo=burpsuite&logoColor=white" alt="Burp Suite" title="Burp Suite" />
+    <img src="https://img.shields.io/badge/OWASP%20ZAP-FF7B00?style=for-the-badge&logo=owasp&logoColor=white" alt="OWASP ZAP" title="OWASP ZAP" />
+
+    <!-- Observabilidad / Monitoreo -->
+    <img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white" alt="Grafana" title="Grafana" />
+    <img src="https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white" alt="Prometheus" title="Prometheus / Node Exporter" />
+
+    <!-- Control de versiones y desarrollo -->
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" title="GitHub" />
+    <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" title="Git" />
+    <img src="https://img.shields.io/badge/VS%20Code-0078D7?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Visual Studio Code" title="Visual Studio Code" />
+
+    <!-- Cloud & Virtualización -->
+    <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS" title="AWS" />
+    <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" alt="Azure" title="Azure" />
+    <img src="https://img.shields.io/badge/VirtualBox-1A73E8?style=for-the-badge&logo=virtualbox&logoColor=white" alt="VirtualBox" title="VirtualBox" />
+
+    <!-- Bases de datos -->
+    <img src="https://img.shields.io/badge/MySQL-00618A?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" title="MySQL" />
+    <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" title="SQLite" />
+
+  </div>
+</div>
+
+<!-- CSS sugerido (pega en tu CSS global o dentro de <style>) -->
+<style>
+.habilidades-icons img {
+  height: 28px;
+  object-fit: contain;
+  margin: 4px 6px;
+  transition: transform .18s ease, filter .18s ease;
+  filter: grayscale(10%);
+}
+.habilidades-icons img:hover { transform: scale(1.06); filter: grayscale(0%); }
+</style>
+
+
+    </div> <!-- Fin grid-habilidades -->
+
+  </div> <!-- Fin card envolvente -->
+</section>
+
+
+    </div> <!-- Fin grid-habilidades -->
+
+  </div> <!-- Fin card envolvente -->
 </section>
 
 
 <!-- SECCIÓN ORIGINAL -->
 <section id="proyectos">
 <h2 class="terminal-heading">
-  <i class="fas fa-project-diagram"></i> ls -la ~/projets/
+  <i class="fas fa-project-diagram"></i> ls ~/proyectos/
 </h2>
   <div class="grid-proyectos">
-    
-<div class="card">
-  <img src="https://rafaelmperez.github.io/assets/img/proyectoweb.jpg" 
-       alt="Previsualización Portafolio Web" class="proyecto-img">
 
-<h3><i class="fas fa-laptop-code"></i> Portfolio technique central</h3>
+    <div class="card"> 
+  <img src="https://rafaelmperez.com/assets/img/resultadolynis.jpg" alt="Bastionado Ubuntu 24.04 LTS" style="width:100%; height:200px; object-fit:cover;">
 
-<div class="description-projet"> <p>Ce projet constitue mon portefeuille technique, conçu entièrement depuis zéro avec une approche fonctionnelle et évolutive. Plus qu’une vitrine, il s’agit d’un outil pratique permettant d’organiser, de documenter et de déployer des projets dans des environnements distribués.</p> </div>
+  <h3 style="font-size: 1em;"> <i class="fas fa-lock"></i> Bastionado completo de Ubuntu 24.04 LTS </h3>
 
-  <div class="audio-proyecto">
-    <p><strong>🎧 Version audio :</strong></p>
-    <audio controls controlsList="nodownload noplaybackrate">
-      <source src="https://rafaelmperez.github.io/fr/projetweb.aac" type="audio/mpeg">
-      Votre navigateur ne prend pas en charge l’élément audio.
-    </audio>
-  </div>
+  <strong> 
+    <span style="color:#E95420;">Kernel</span> | 
+    <span style="color:#007BFF;">PAM</span> | 
+    <span style="color:#28A745;">Auditd</span> | 
+    <span style="color:#6f42c1;">USBGuard</span> | 
+    <span style="color:#20c997;">Lynis</span> 
+  </strong>
+
+  <p> Este proyecto documenta el proceso completo de bastionado de un sistema Ubuntu 24.04 LTS, siguiendo estándares CIS, NIST y OWASP. Se aplicaron medidas defensivas en múltiples capas: kernel, autenticación, servicios, red, logging y control físico, sin comprometer la funcionalidad del sistema.
+
+  Se utilizó Lynis como herramienta de auditoría continua, logrando una mejora de seguridad de <strong>68 a 87 puntos</strong>. Cada fase está documentada con comandos, configuraciones y validaciones técnicas. </p>
+
+  <div class="audio-proyecto" style="margin-top: 8px;"> 
+    <p><strong>Versión en audio:</strong></p> 
+    <audio controls controlsList="nodownload noplaybackrate"> 
+      <source src="https://rafaelmperez.com/sounds/bastionamientoubuntu.aac" type="audio/mpeg"> 
+      Tu navegador no soporta el elemento de audio. 
+    </audio> 
+
+    <p> 
+      <a href="https://rafaelmperez.com/docs/Rafael_MPerez_Bastionado_Ubuntu24.04_Informe_Tecnico.pdf" target="_blank" class="sysadmin-badge"> 
+        <strong>Ver informe técnico PDF</strong> 
+      </a> 
+    </p>
+  </div> 
 </div>
 
-<div class="card">
-  <img src="https://rafaelmperez.github.io/assets/img/proyectoonion.jpg" 
-       alt="Previsualización Tor Hidden Service" class="proyecto-img">
 
-  <h3><i class="fas fa-user-secret"></i> Service caché Tor(.onion)</h3>
+    <div class="card">
+  <img src="https://rafaelmperez.com/assets/img/bastionamientoresultado.jpg" 
+       alt="Bastionamiento del sitio web" class="proyecto-img">
 
-  <div class="description-projet"> <p>Projet auto-hébergé et décentralisé de mon portfolio technique, accessible exclusivement via le réseau Tor. Déployé sur un Raspberry Pi 2, il privilégie la confidentialité, l’efficacité et la résilience, démontrant comment fournir des services web statiques dans des environnements contraints, tout en assurant sécurité et contrôle total de l’infrastructure. <a href="http://xwzrrbprgbg324sgzacioafol47j3smjwvatbfwys2cqqr6q4ridanyd.onion/" target="_blank" rel="noopener noreferrer">Lien .onion </a></p> </div>
+    <h3 style="font-size: 1em;"><i class="fas fa-lock"></i> Bastionamiento del sitio web</h3> 
+      
+      <strong>
+  <span style="color:#17A2B8;">Cloudflare</span> |
+  <span style="color:#6C757D;">Nikto</span> |
+  <span style="color:#28A745;">Nmap</span> |
+  <span style="color:#007BFF;">SSLyze</span> |
+  <span style="color:#FFA500;">Owasp Zap</span>
+</strong>
 
-   <a>
-    <strong>Projet en cours de développement. Bientôt disponible.</strong>
+        
+      
+
+  <div class="descripcion-proyecto">
+<p>Este proyecto consiste en el bastionamiento progresivo de mi sitio web, acompañado de auditorías periódicas para reforzar su seguridad. 
+
+He implementado cabeceras HTTP, políticas de permisos y configuraciones clave, mitigando diversos vectores de amenaza. 
+
+Utilizo herramientas como Nmap, Nikto y SSLyze para auditar y documentar cada fase del proceso. El resultado es una infraestructura más resiliente, que refleja mi compromiso constante con la ciberseguridad aplicada.</p>  </div>
+
+
+
+  <div class="audio-proyecto">
+    <p><strong>Versión en audio:</strong></p>
+    <audio controls controlsList="nodownload noplaybackrate">
+      <source src="https://rafaelmperez.com/sounds/bastionamiento.aac" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+
+
+              <p>
+  <a href="https://rafaelmperez.com/docs/Rafael_MPerez_BastionadoWeb_Informe_Tecnico.pdf" target="_blank" class="sysadmin-badge">
+   <strong>Ver informe técnico PDF</strong>
   </a>
-
-  <div class="audio-proyecto">
-    <p><strong>🎧 Version audio :</strong></p>
-    <audio controls controlsList="nodownload noplaybackrate">
-      <source src="https://rafaelmperez.github.io/fr/projettor.aac" type="audio/mpeg">
-      Votre navigateur ne prend pas en charge l’élément audio.
-    </audio>
+</p>
+    
   </div>
 </div>
 
 
-<div class="card">
-  <img src="https://rafaelmperez.github.io/assets/img/proyectoia.jpg" 
-       alt="Narrateur web à voix personnalisée" class="proyecto-img">
-
-<h3><i class="fas fa-volume-up"></i> Narrateur web à voix personnalisée</h3>
-
-<div class="description-projet"> <p>Projet inclusif intégrant des narrations générées par intelligence artificielle à partir de ma propre voix. Les textes du site web sont convertis en audio avec une intonation naturelle, ce qui améliore considérablement l’accessibilité, la présentation de la documentation technique et, en définitive, l’expérience utilisateur (UX) pour tous les profils.</p> </div>
-
-  <div class="audio-proyecto">
-    <p><strong>🎧 Version audio :</strong></p>
-    <audio controls controlsList="nodownload noplaybackrate">
-      <source src="https://rafaelmperez.github.io/fr/projetia.aac" type="audio/mpeg">
-      Votre navigateur ne prend pas en charge l’élément audio.
-    </audio>
-  </div>
-</div>
-
-</section>
-<!-- FIN SECCIÓN PROYECTOS -->
 
 
-<!-- 🚀 SECCIÓN RETOS/MICROPROYECTOS-->
-<section id="simulaciones">
-  <h2 class="terminal-heading">
-    <i class="fas fa-project-diagram"></i> ~/pratiques_techniques/
-  </h2>
+<!-- CARD NUEVO PROYECTO --> 
+    <div class="card"> 
+      <img src="https://rafaelmperez.com/assets/img/buenascard.jpg
+" alt="Buenas prácticas de bastionado Linux" style="width:100%; height:200px; object-fit:cover;">
 
-  <div class="grid-proyectos">
+<h3 style="font-size: 1em;"> <i class="fas fa-shield-alt"></i> Buenas prácticas de bastionado Linux </h3>
 
-    <!-- CARD 1 -->
-    <div class="card">
-      <img src="https://rafaelmperez.github.io/assets/img/Microproyecto1.jpg" alt="Implémentation d’un pare-feu avec UFW">
-      <strong>Ubuntu | Parrot | Bash | UFW | SSH Connect</strong>
-      <h3><i class="fas fa-shield-alt"></i> Implémentation d’un pare-feu avec UFW</h3>
-      <p>
-J’ai configuré et activé un pare-feu UFW sur un serveur Linux, en définissant des politiques par défaut restrictives et en autorisant un accès sécurisé via SSH. J’ai ensuite vérifié son bon fonctionnement, renforçant ainsi la sécurité du système grâce à une approche simple, efficace et professionnelle.      </p>
-      <p>
-        <a href="https://rafaelmperez.github.io/activacionufw.html" target="_blank">
-          <strong>🔍Cliquez pour voir le processus</strong>
-        </a>
-      </p>
-      <div class="audio-proyecto" style="margin-top: 8px;">
-        <p><strong>🎧 Version audio :</strong></p>
-        <audio controls controlsList="nodownload noplaybackrate">
-          <source src="https://rafaelmperez.github.io/fr/projetufw.aac" type="audio/mpeg">
-          Votre navigateur ne prend pas en charge l’élément audio.
-        </audio>
-      </div>
+<strong> 
+  <span style="color:#E95420;">SSH</span> | 
+  <span style="color:#007BFF;">UFW</span> | 
+  <span style="color:#28A745;">Auditd</span> | 
+  <span style="color:#6f42c1;">AIDE</span> | 
+  <span style="color:#20c997;">Lynis</span> </strong>
+
+<p> Este proyecto aplica un conjunto de buenas prácticas defensivas sobre un sistema Linux, con el objetivo de reducir su superficie de ataque de forma simple pero efectiva.
+
+Se han deshabilitado accesos remotos inseguros, reforzado el firewall con políticas restrictivas, activado auditoría de eventos y configurado herramientas de integridad y escaneo. Cada medida está documentada con comandos, justificación técnica y evidencia funcional.
+
+El resultado es un sistema más seguro, trazable y alineado con estándares profesionales de bastionado. </p>
+
+
+
+<div class="audio-proyecto" style="margin-top: 8px;"> 
+  <p><strong>Versión en audio:</strong></p> 
+  <audio controls controlsList="nodownload noplaybackrate"> <source src="https://rafaelmperez.com/sounds/buenaspracticas.aac" type="audio/mpeg"> 
+    Tu navegador no soporta el elemento de audio. 
+  </audio> 
+<p> 
+  <a href="https://rafaelmperez.com/buenaspracticas.html" target="_blank" class="sysadmin-badge"> 
+    <strong>Ver documentación técnica</strong> </a> 
+</p>
+  
+</div> 
     </div>
+    
 
-    <!-- CARD 2 -->
+    
+    <!-- CARD NUEVO PROYECTO -->
+<div class="card">
+  <img src="https://rafaelmperez.com/assets/img/geoip.jpg" 
+       alt="Nombre del proyecto" 
+       style="width:100%; height:200px; object-fit:cover;">
+
+  <h3 style="font-size: 1em;">
+    <i class="fas fa-shield-alt"></i> Firewall dinámico con GeoIP
+  </h3>
+
+<strong>
+  <span style="color:#E95420;">iptables</span> |
+  <span style="color:#007BFF;">GeoIP</span> |
+  <span style="color:#28A745;">Bash</span> |
+  <span style="color:#6f42c1;">SSH</span> |
+  <span style="color:#20c997;">Auth.log</span>
+</strong>
+
+
+  <p>
+  Este proyecto implementa un sistema defensivo automatizado que analiza los intentos fallidos de acceso SSH y bloquea IPs sospechosas según su país de origen.
+
+  Utiliza GeoIP para identificar conexiones no españolas y aplica reglas dinámicas con iptables. El script se ejecuta localmente, registra cada acción y permite visualizar los bloqueos en tiempo real.
+
+  El resultado es una capa de protección reactiva, ligera y documentable, alineada con buenas prácticas de ciberseguridad operativa.
+  </p>
+
+
+
+  <div class="audio-proyecto" style="margin-top: 8px;">
+    <p><strong>Versión en audio:</strong></p>
+    <audio controls controlsList="nodownload noplaybackrate">
+      <source src="https://rafaelmperez.com/sounds/geoip.aac" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+  <p>
+    <a href="https://rafaelmperez.com/proyectogeoip.html" 
+       target="_blank" 
+       class="sysadmin-badge">
+      <strong>Ver documentación técnica</strong>
+    </a>
+  </p>
+    
+  </div>
+</div>
+
+
+  
+
+   <!-- CARD 2 -->
     <div class="card">
-<img src="https://rafaelmperez.github.io/assets/img/proyectografana2.jpg" 
-     alt="Système de détection d'intrusions avec visualisation via Grafana" 
+<img src="https://rafaelmperez.com/assets/img/proyectografana2.jpg" 
+     alt="Sistema de Detección de Intrusos con Visualización en Grafana" 
      style="width:100%; height:200px; object-fit:cover;">
 
-      <strong>Ubuntu | Grafana | Suricata | Node Exporter | Fail2ban</strong>
-      <h3><i class="fas fa-chart-line"></i> Système de détection d'intrusions avec visualisation via Grafana</h3>
+
+<h3 style="font-size: 1em;"><i class="fas fa-chart-line"></i> Sistema de Detección de Intrusos con Visualización en Grafana</h3>
+      
+<strong>
+  <span style="color:#E95420;">Ubuntu</span> |
+  <span style="color:#F46800;">Grafana</span> |
+  <span style="color:#6C757D;">Suricata</span> |
+  <span style="color:#28A745;">Node Exporter</span> |
+  <span style="color:#007BFF;">Fail2ban</span>
+</strong>
+            
+      
+
       <p>
-J’ai mis en place un système de détection d’intrusions sur un serveur Linux permettant d’identifier les tentatives d’accès suspectes (telles que les attaques par force brute sur SSH, les scans de ports ou les comportements anormaux), et j’ai visualisé ces événements en temps réel à l’aide de tableaux de bord graphiques dans Grafana. L’objectif est de renforcer la sécurité du système grâce à une surveillance active et des alertes automatisées.      </p>
-      <p><strong>Microprojet en cours de développement. Bientôt disponible.</strong></p>
+        Implementé un sistema de detección de intrusos en un servidor Linux que permite identificar intentos de acceso sospechosos (como fuerza bruta por SSH, escaneos de puertos o actividad anómala) y visualicé estos eventos en tiempo real mediante paneles gráficos en Grafana. El objetivo es reforzar la seguridad del sistema mediante monitoreo activo y alertas automatizadas.
+      </p>
+      <p><strong>Microproyecto en desarrollo. Próximamente.</strong></p>
       <div class="audio-proyecto" style="margin-top: 8px;">
-        <p><strong>🎧 Version audio :</strong></p>
+        <p><strong>Versión en audio:</strong></p>
         <audio controls controlsList="nodownload noplaybackrate">
-          <source src="https://rafaelmperez.github.io/fr/projetgrafana.aac" type="audio/mpeg">
-          Votre navigateur ne prend pas en charge l’élément audio.
+          <source src="https://rafaelmperez.com/sounds/proyectografana.aac" type="audio/mpeg">
+          Tu navegador no soporta el elemento de audio.
         </audio>
       </div>
     </div>
+    
+<!-- CARD: Auditoría de Seguridad en Aplicaciones Móviles -->
+<div class="card">
+  <img src="https://rafaelmperez.com/assets/img/mobsf.jpg" 
+       alt="Auditoría de Seguridad en Aplicaciones Móviles" 
+       style="width:100%; height:200px; object-fit:cover;">
 
-    <!-- CARD 3 -->
+  <h3 style="font-size: 1em;"><i class="fas fa-mobile-alt"></i> Auditoría de Seguridad en Apps Móviles</h3>
+
+  <strong>
+    <span style="color:#6C757D;">MobSF</span> |
+    <span style="color:#DC3545;">Burp Suite</span> |
+    <span style="color:#28A745;">Android Studio</span> |
+    <span style="color:#007BFF;">Wireshark</span>
+  </strong>
+
+  <p>
+    Realicé un análisis completo de seguridad sobre aplicaciones móviles Android, combinando técnicas estáticas y dinámicas. Utilicé MobSF para extraer permisos, endpoints y vulnerabilidades sin ejecutar la app, y configuré un entorno con Android Studio y Genymotion para interceptar tráfico en tiempo real mediante Burp Suite y Wireshark. Además, documenté cada fase con capturas, logs y recomendaciones técnicas. El proyecto demuestra cómo auditar apps desde una perspectiva ofensiva y defensiva, en un entorno controlado y reproducible.
+  </p>
+
+  <p><strong>Proyecto en desarrollo. Próximamente.</strong></p>
+
+  <div class="audio-proyecto" style="margin-top: 8px;">
+    <p><strong>Versión en audio:</strong></p>
+    <audio controls controlsList="nodownload noplaybackrate">
+      <source src="" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+  </div>
+</div>
+
+
+  
+        
+
+
+
+
+        <!-- CARD 3 -->
       <div class="card">
-<img src="https://rafaelmperez.github.io/assets/img/proyectopentesting.jpg" 
+<img src="https://rafaelmperez.com/assets/img/proyectopentesting.jpg" 
      alt="Laboratorio de Pentesting Local con Máquinas Vulnerables" 
      style="width:100%; height:200px; object-fit:cover;">
         
-      <strong>VirtualBox | Kali Linux | Metasploitable | OWASP Juice Shop</strong>
-     
-      <h3><i class="fas fa-bug"></i> Laboratoire de pentesting local avec machines vulnérables</h3>
-      <p>
+<h3 style="font-size: 1em;"><i class="fas fa-bug"></i> Laboratorio de Pentesting Local con Máquinas Vulnerables</h3>
+        
+        
+        <strong>
+  <span style="color:#6C757D;">VirtualBox</span> |
+  <span style="color:#DC3545;">Kali Linux</span> |
+  <span style="color:#28A745;">Metasploitable</span> |
+  <span style="color:#007BFF;">OWASP</span>
+</strong>
+
 <p>
-J’ai conçu un environnement virtuel dédié aux tests d’intrusion, intégrant des machines volontairement vulnérables telles que Metasploitable et OWASP Juice Shop, déployées via VirtualBox aux côtés de Kali Linux. Des analyses réseau ont été réalisées à l’aide de Nmap, suivies d’exploitations basiques via Metasploit. Par ailleurs, des techniques de renforcement de la sécurité (hardening) ont été appliquées afin de durcir les systèmes ciblés.</p>
+  Diseñé un entorno virtual de pentesting utilizando máquinas vulnerables como Metasploitable y OWASP Juice Shop, desplegadas en VirtualBox junto con Kali Linux. Realicé escaneos de red con Nmap, explotaciones básicas con Metasploit y apliqué técnicas de hardening para reforzar la seguridad de los sistemas. Cada fase del laboratorio fue documentada, permitiendo una comprensión clara de los vectores de ataque y las medidas defensivas aplicadas en un entorno controlado y educativo.
+</p>
       </p>
-      <p><strong>Microprojet en cours de développement. Bientôt disponible.</strong></p>
+      <p><strong>Microproyecto en desarrollo. Próximamente.</strong></p>
       <div class="audio-proyecto" style="margin-top: 8px;">
-        <p><strong>🎧 Version audio :</strong></p>
+        <p><strong>Versión en audio:</strong></p>
         <audio controls controlsList="nodownload noplaybackrate">
-          <source src="https://rafaelmperez.github.io/fr/projetlaboratoire.aac" type="audio/mpeg">
-          Votre navigateur ne prend pas en charge l’élément audio.
+          <source src="" type="audio/mpeg">
+          Tu navegador no soporta el elemento de audio.
         </audio>
       </div>
     </div>
 
+
+      <!-- CARD IA LOCAL -->
+<div class="card">
+  <img src="https://rafaelmperez.com/assets/img/proyecto_pipeline1.jpg" 
+       alt="Desarrollo de Pipeline en Bash" 
+       style="width:100%; height:200px; object-fit:cover;">
+
+  <h3 style="font-size: 1em;"><i class="fas fa-robot"></i> Desarrollo de Pipeline en Bash</h3>
+    
+<strong>
+  <span style="color:#E95420;">Ubuntu</span> |
+  <span style="color:#28A745;">Bash</span> |
+  <span style="color:#6F42C1;">Gemma&nbsp;2B</span> |
+  <span style="color:#17A2B8;">IA&nbsp;Local</span> |
+  <span style="color:#FF9800;">Markdown</span> |
+  <span style="color:#795548;">Pandoc</span>
+</strong>
+
+  <p>
+Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado para registrar las sesiones en la terminal, explicar automáticamente los comandos ejecutados y generar informes técnicos reproducibles en PDF/DOCX. El sistema prioriza trazabilidad, eficiencia y privacidad, su integración con el modelo de lenguaje local Gemma 2B permite potenciar la generación de explicaciones técnicas sin conexión a la red y automatizar tareas repetitivas. Esta arquitectura es aplicable en auditorías, bastionado de sistemas y formación técnica.          <p>
+
+
+             
+  <div class="audio-proyecto" style="margin-top: 8px;">
+    <p><strong>Versión en audio:</strong></p>
+    <audio controls controlsList="nodownload noplaybackrate">
+      <source src="https://rafaelmperez.com/sounds/proyectopipeline.aac" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+
+
+  <a href="https://rafaelmperez.com/ialocal.html" target="_blank" class="sysadmin-badge">
+   <strong>Ver documentación técnica</strong>
+  </a>
+    
   </div>
+</div>
+
+    
+
+      </div>
 </section>
 <!-- FIN SECCIÓN RETOS/MICROPROYECTOS -->
+
+  <!-- SECCIÓN ORIGINAL -->
+<section id="scripts">
+<h2 class="terminal-heading">
+  <i class="fas fa-project-diagram"></i> ls ~/mis_scripts/
+</h2>
+  <div class="grid-proyectos">
+
+  <div class="card">
+  <img src="https://rafaelmperez.com/assets/img/report_snapshot.png" 
+       alt="Nmap Auto Scanner" 
+       style="width:100%; height:200px; object-fit:cover; border-radius:6px;">
+
+  <h3 style="font-size: 1em; margin-top: 10px;">
+    <i class="fas fa-bolt"></i> Nmap Auto Scanner
+  </h3>
+
+  <strong>
+    <span style="color:#3776AB;">Python</span> | 
+    <span style="color:#E95420;">Nmap</span> | 
+    <span style="color:#F0DB4F;">YAML</span> | 
+    <span style="color:#28A745;">Cron</span> | 
+    <span style="color:#6f42c1;">JSON/CSV</span>
+  </strong>
+
+  <p style="margin-top: 8px; text-align: justify;">
+    <strong>Nmap Auto Scanner</strong> automatiza escaneos de red en entornos Linux, 
+    genera reportes en <code>JSON</code> y <code>CSV</code>, y compara resultados entre ejecuciones
+    para detectar cambios, nuevos servicios o posibles amenazas. Ideal para auditorías 
+    periódicas, bastionado y tareas de <em>blue team</em>.
+  </p>
+
+  <p style="text-align: justify;">
+    Desarrollado en <strong>Python</strong> con integración de <code>python-nmap</code>, 
+    utiliza un archivo <code>config.yaml</code> para configurar objetivos, opciones y directorios 
+    de salida, además de soportar ejecución programada mediante <code>cron</code>.
+  </p>
+
+  <div style="margin-top: 10px;">
+    <a href="https://github.com/rafaelmperez/nmap-auto-scanner" 
+       target="_blank" 
+       class="sysadmin-badge"
+       style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+      <i class="fab fa-github"></i> Ver en GitHub
+    </a>
+
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://rafaelmperez.com/assets/img/scriptclonedvoice.png" 
+       alt="Python TTS — Cloned AI Voice" 
+       style="width:100%; height:200px; object-fit:cover; border-radius:6px;">
+
+  <h3 style="font-size: 1em; margin-top: 10px;">
+    <i class="fas fa-microphone"></i> Python TTS — Cloned AI Voice
+  </h3>
+
+  <strong>
+    <span style="color:#3776AB;">Python</span> | 
+    <span style="color:#FF6F00;">ElevenLabs API</span> | 
+    <span style="color:#00A67E;">OpenAI TTS</span> | 
+    <span style="color:#868E96;">dotenv</span> | 
+    <span style="color:#6f42c1;">CLI / Logging</span>
+  </strong>
+
+  <p style="margin-top: 8px; text-align: justify;">
+    Proyecto de <strong>text-to-speech (TTS)</strong> desarrollado en Python que convierte texto 
+    en voz usando tu <strong>voz clonada</strong> mediante <em>ElevenLabs</em> o 
+    <strong>voz neural realista</strong> de <em>OpenAI</em>. 
+    Diseñado como script CLI, permite integrar síntesis de voz en flujos de trabajo, 
+    automatizaciones o contenido multimedia.
+  </p>
+
+  <p style="text-align: justify;">
+    Soporta entrada por argumento, archivo o modo interactivo, configuración mediante 
+    <code>.env</code>, y salida de audio en <code>MP3/WAV</code>. 
+    Incluye sistema de logs y arquitectura extensible para añadir nuevos proveedores 
+    como Play.ht o VITS. Licenciado bajo <strong>MIT</strong>.
+  </p>
+
+  <div style="margin-top: 10px;">
+    <a href="https://github.com/rafaelmperez/python-tts-cloned-voice" 
+       target="_blank" 
+       class="sysadmin-badge"
+       style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+      <i class="fab fa-github"></i> Ver en GitHub
+    </a>
+
+  </div>
+</div>
+
+
+
+
+<!-- CARD NUEVO PROYECTO -->
+<div class="card">
+  <img src="https://rafaelmperez.com/assets/img/scriptgmail.png" 
+       alt="Gmail Auto-Responder" 
+       style="width:100%; height:200px; object-fit:cover; border-radius:6px;">
+
+  <h3 style="font-size: 1em; margin-top: 10px;">
+    <i class="fas fa-robot"></i> Gmail Auto-Responder
+  </h3>
+
+  <strong>
+    <span style="color:#3776AB;">Python</span> | 
+    <span style="color:#D44638;">Gmail API</span> | 
+    <span style="color:#00A67E;">OpenAI API</span> | 
+    <span style="color:#6C757D;">Systemd</span> | 
+    <span style="color:#28A745;">OAuth 2.0</span>
+  </strong>
+
+  <p style="margin-top: 8px; text-align: justify;">
+    Proyecto de <strong>automatización de respuestas en Gmail</strong> mediante Python y la 
+    <em>Gmail API</em>, diseñado para ejecutarse de forma autónoma como servicio 
+    <code>systemd</code>. Permite responder correos entrantes de manera automática, 
+    con opción de <strong>respuestas inteligentes generadas por IA (OpenAI)</strong>.
+  </p>
+
+  <p style="text-align: justify;">
+    Integra autenticación <strong>OAuth 2.0</strong>, gestión de logs detallada y control de 
+    duplicados para evitar bucles de respuesta. Su configuración se realiza mediante 
+    <code>.env</code>, con intervalos de verificación ajustables. 
+    Ideal para tareas de productividad, administración IT o flujos automatizados.
+  </p>
+
+  <div style="margin-top: 10px;">
+    <a href="https://github.com/rafaelmperez/gmail-auto-responder" 
+       target="_blank" 
+       class="sysadmin-badge"
+       style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+      <i class="fab fa-github"></i> Ver en GitHub
+    </a>
+    
+  </div>
+</div>
+
+    
+
+    
+<!-- CARD NUEVO PROYECTO -->
+<div class="card">
+  <img src="https://rafaelmperez.com/assets/img/youtubedownloader.png" 
+       alt="YouTube Batch Downloader" 
+       style="width:100%; height:200px; object-fit:cover; border-radius:6px;">
+
+  <h3 style="font-size: 1em; margin-top: 10px;">
+    <i class="fas fa-download"></i> YouTube Batch Downloader
+  </h3>
+
+  <strong>
+    <span style="color:#3776AB;">Python</span> | 
+    <span style="color:#FF0000;">YouTube</span> | 
+    <span style="color:#FFB400;">yt-dlp</span> | 
+    <span style="color:#28A745;">ffmpeg</span> | 
+    <span style="color:#6C757D;">CLI</span>
+  </strong>
+
+  <p style="margin-top: 8px; text-align: justify;">
+    Script en <strong>Python 3</strong> para descargar múltiples vídeos de YouTube 
+    en la mejor calidad disponible (video + audio) de forma interactiva desde la terminal. 
+    Desarrollado con <code>yt-dlp</code> y compatible con 
+    <strong>Windows, macOS y Linux</strong>.
+  </p>
+
+  <p style="text-align: justify;">
+    Permite introducir enlaces uno a uno, crear automáticamente la carpeta de destino 
+    <code>descargas_youtube/</code> y mostrar el progreso de descarga en tiempo real. 
+    Ideal para automatizar descargas en lote, entornos educativos o prácticas de 
+    <strong>automatización en Python</strong>.
+  </p>
+
+  <div style="margin-top: 10px;">
+    <a href="https://github.com/rafaelmperez/youtube_batch_downloader" 
+       target="_blank" 
+       class="sysadmin-badge"
+       style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+      <i class="fab fa-github"></i> Ver en GitHub
+    </a>
+
+  </div>
+</div>
+
+
+    
+
+      </div>
+</section>
+<!-- FIN SECCIÓN RETOS/MICROPROYECTOS -->
+
 
 
 
@@ -1784,7 +2439,7 @@ J’ai conçu un environnement virtuel dédié aux tests d’intrusion, intégra
   <!-- Primer card -->
   <div class="card">
     <h2 class="terminal-heading">
-      <i class="fas fa-certificate"></i> certifications.conf
+      <i class="fas fa-certificate"></i> certificaciones.conf
     </h2>
 
     <div class="certificaciones-container">
@@ -1797,33 +2452,19 @@ J’ai conçu un environnement virtuel dédié aux tests d’intrusion, intégra
            data-share-badge-host="https://www.credly.com"></div>
     </div>
 
- <p class="certificacion-descripcion">
-      Certifications <strong>CCST Cybersecurity et CCST Networking</strong> obtenues en juillet 2025. Ces accréditations valident des connaissances essentielles en sécurité informatique, réseaux, identification des menaces et application de bonnes pratiques dans des environnements professionnels.
-</p>
-</div>
+    <p class="certificacion-descripcion">
+      Certificaciones <strong>CCST Cybersecurity & CCST Networking</strong> obtenidas en julio de 2025. Estas acreditaciones avalan conocimientos esenciales en seguridad informática, redes, identificación de amenazas y aplicación de buenas prácticas en entornos profesionales.
+    </p>
 
-<!-- Deuxième carte dupliquée -->
-<div class="card">
-  <h2 class="terminal-heading">
-    <i class="fas fa-laptop-code"></i> cours_relevants.log
-  </h2>
-
-
-
-<section class="certifications">
-  <div class="certificacion-descripcion">
-<strong>IFCM026PO – Sécurité informatique et signature électronique</strong><br>
-Cours de 50 heures sur la signature électronique, les certificats numériques, l’authentification sécurisée et les mesures de protection de l’identité numérique dans les environnements télématiques. Inclut des aspects techniques et juridiques essentiels pour la sécurité des documents et des communications.
-</div>
-
-
-
-  <div class="certificacion-descripcion">
-    <strong>IFCT0087 – Cybersécurité de base</strong><br>
-Cours de 60 heures axé sur l’identification des menaces numériques, la protection des systèmes informatiques et l’application de bonnes pratiques en matière de sécurité. Comprend une formation sur les malwares, les réseaux sécurisés, la gestion des mots de passe et l’utilisation responsable des appareils connectés.
-</div>
+                  <p> 
+      <a href="https://rafaelmperez.com/docs/Diplomas_Publicos_final.pdf" target="_blank" class="sysadmin-badge"> 
+        <strong>Ver Diplomas PDF</strong> 
+      </a> 
+    </p>
+  </div>
 
 </section>
+
 
 
 
@@ -1890,6 +2531,18 @@ Cours de 60 heures axé sur l’identification des menaces numériques, la prote
   box-sizing: border-box;
 }
 
+      .certificaciones-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.certificaciones-container > div {
+  flex: 0 0 auto;
+}
+
 
   </style>
   <script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
@@ -1900,171 +2553,118 @@ Cours de 60 heures axé sur l’identification des menaces numériques, la prote
 </section>
 
 
+<section id="objetivos">
+  <div class="card hoja-de-ruta-card">
+    <h2 class="terminal-heading">
+      <i class="fas fa-route"></i> Curriculum.py
+    </h2>
 
-<section id="cv">
-  <h2 class="terminal-heading">
-    <i class="fas fa-file-alt"></i> $ cat curriculum.txt
-  </h2>
-  <div class="card small-card">
-    <p>
-      <i class="fas fa-file-pdf"></i>
-      <a href="https://drive.google.com/uc?export=download&id=..." 
-         class="download-button" 
-         target="_blank" 
-         rel="noopener noreferrer">
-          Consulter le CV au format PDF
-      </a>.
-    </p>
+    <a href="https://rafaelmperez.com/docs/CV_RafaelMPerez.pdf" 
+       class="sysadmin-badge" 
+       target="_blank" 
+       rel="noopener noreferrer">
+       <strong><i class="fas fa-file-pdf"></i> Ver CV en PDF</strong>
+    </a>
   </div>
 </section>
+
+
+
+
 
 
 
 <section id="contacto">
-<h2 class="terminal-heading">
-  <i class="fas fa-envelope"></i>  </i>ping > contact.log
 
-</h2>
-
-
-  <!-- Formulaire de contact -->
+  <!-- Card Contacto -->
   <div class="card">
-    <div class="contact-form">
-      <form action="https://api.web3forms.com/submit" method="POST">
-        <!-- Tu Access Key de Web3Forms -->
-        <input type="hidden" name="access_key" value="59463dca-91ec-41ee-ae46-c66f76606caf" />
+    <h2 class="terminal-heading">
+      <i class="fas fa-envelope"></i> ping > contacto.log
+    </h2>
 
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Prénom</label>
-            <input type="text" id="name" name="name" required>
-          </div>
+<p>
+  <strong>
+    Siempre estoy abierto a discutir nuevas oportunidades. No dudes en contactarme.
+  </strong>
+</p>
 
-          <div class="form-group">
-            <label for="email">E-mail de contact</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-        </div>
 
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-<label for="captcha">¿Combien font 2 + 3?</label>
-<input type="text" id="captcha" name="captcha" required>
-<button type="submit">Envoyer</button>
-      
-      </form>
-      
+    <section id="contacto" class="max-w-xl mx-auto my-12 p-6 bg-white rounded-lg shadow-md">
+  <form action="https://formspree.io/f/mdkwngad" method="POST" class="space-y-6">
+    
+    <div>
+      <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required
+             class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-yellow-400 focus:outline-none">
     </div>
-      <!-- Email -->
-  <div class="card">
-    <p><i class="fas fa-at"></i> Adresse e-mail de contact: 
-<a href="mailto:sysadminweb@proton.me">sysadminweb@proton.me</a>
-    </p>
-  </div>
-  </div>
+
+    <div>
+  <label for="email" class="block text-sm font-medium text-gray-700">Correo electrónico</label>
+      <input type="email" id="email" name="email" required
+             class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-yellow-400 focus:outline-none">
+    </div>
+
+    <div>
+      <label for="mensaje" class="block text-sm font-medium text-gray-700">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required
+                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-yellow-400 focus:outline-none"></textarea>
+    </div>
+
+    <!-- Cloudflare Turnstile CAPTCHA -->
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAAB2gSyBoa7kMyPVF"></div>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<div class="mt-8 text-center">
+  <a href="#" onclick="document.querySelector('form').submit();" class="sysadmin-badge inline-block">
+    <strong>Enviar mensaje</strong>
+    <i class="fa-solid fa-paper-plane ms-2"></i>
+  </a>
+</div>
+
+
+<!-- Separador visual opcional -->
+<div class="my-4 text-center text-gray-500 text-sm">
+  -o si lo prefieres-
+</div>
+
+<div class="text-center">
+  <a href="mailto:rmp.blueteam@proton.me" class="sysadmin-badge inline-flex items-center gap-2">
+    <i class="fa-solid fa-envelope"></i>
+    rmp.blueteam@proton.me
+  </a>
+</div>
+
+
+
+  </form>
+</section>
+
+
+ 
+
 </section>
 
 
 
-<section id="seguridad">
-  <h2 class="terminal-heading">
-  <i class="fas fa-project-diagram"></i>./status.sh
-</h2>
 
-
-  <div class="card">
-    <ul style="list-style:none; padding:0;">
-
-<li><i class="fas fa-lock"></i> Certificat SSL actif</li>
-<li><i class="fas fa-user-secret"></i> Protection contre les scripts malveillants</li>
-<li><i class="fas fa-user-ninja"></i> Serveur Tor caché protégé par Fail2ban</li>
-<li><i class="fas fa-fire"></i> Infrastructure sécurisée via un fournisseur fiable</li>
-<li><i class="fas fa-search"></i> Mises à jour régulières et vérification des dépendances</li>
-
-
-
-    </ul>
-    <!-- Badge SSL Labs – RafaelMPerez.github.io -->
-<a
-  href="https://www.ssllabs.com/ssltest/analyze.html?d=rafaelmperez.github.io&latest"
-  target="_blank"
-  rel="noopener nofollow"
-  aria-label="Ver informe de SSL Labs para rafaelmperez.github.io"
-  style="
-    --ssl-badge-bg: #0f172a;        /* fondo (modo claro) */
-    --ssl-badge-fg: #e2e8f0;        /* texto/icono (modo claro) */
-    --ssl-badge-accent: #16a34a;    /* borde/acento */
-    --ssl-badge-grade: #10b981;     /* cápsula de la nota */
-    display:inline-flex;align-items:center;gap:.6rem;
-    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji';
-    text-decoration:none;border:1px solid var(--ssl-badge-accent);
-    background:var(--ssl-badge-bg);color:var(--ssl-badge-fg);
-    padding:.5rem .75rem;border-radius:999px; box-shadow:0 4px 16px rgba(0,0,0,.12);
-  "
->
-  <!-- Candado SVG -->
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
-       style="flex:0 0 auto">
-    <path d="M17 8h-1V6a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2Zm-8-2a3 3 0 0 1 6 0v2H9V6Zm9 12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v8Z"/>
-  </svg>
-
-  <!-- Texto -->
-  <span style="line-height:1.1;display:flex;flex-direction:column;">
-    <strong style="font-size:.95rem;"><strong>Connexion sécurisée SSL</strong>
-<span style="font-size:.8rem;opacity:.9;">Analysée sur SSL Labs · cliquez pour voir le rapport</span>
-</span>
-  </span>
-
-  <!-- Etiqueta de nota -->
-  <span
-    style="
-      margin-left:.25rem; padding:.2rem .5rem; border-radius:999px;
-      background:var(--ssl-badge-grade); color:#052e16; font-weight:700; font-size:.85rem;
-      border:1px solid rgba(0,0,0,.08);
-    "
-    aria-hidden="true"
-  >A+</span>
-</a>
-
-<!-- Modo oscuro automático (opcional) -->
-<style>
-@media (prefers-color-scheme: dark) {
-  a[aria-label^="Ver informe de SSL Labs"]{
-    --ssl-badge-bg:#020617;
-    --ssl-badge-fg:#e5e7eb;
-    --ssl-badge-accent:#22c55e;
-    --ssl-badge-grade:#22c55e;
-  }
-}
-</style>
-
-
-  </div>
-  
-</section>
 
 <!-- Footer -->
 <footer>
-  <p>© 2025 Développé par Rafael M. Pérez. Design minimaliste créé de zéro avec une approche épurée et fonctionnelle.</p>
-  <br>
-  <p class="terminal-line">¡Merci de votre visite!</p>
+
+
+  </div>
+
+
+
+  <strong style="color: white;">
+    <p>© 2025 Rafael M. Pérez. Diseño minimalista con enfoque modular y escalable.</p>
+    <br>
+    <p class="terminal-line">¡Gracias por tu visita!</p>
+  </strong>
 </footer>
 
 
 
-
-
-<script>
-  document.querySelector("form").addEventListener("submit", function(e) {
-    const captcha = document.querySelector('input[name="captcha"]').value.trim();
-    if (captcha !== "5") {
-      e.preventDefault(); // Detiene el envío
-      alert("Respuesta incorrecta a la pregunta de seguridad.");
-    }
-  });
-</script>
 
 </body>
 <script type="text/javascript">
@@ -2076,30 +2676,4 @@ Cours de 60 heures axé sur l’identification des menaces numériques, la prote
   });
 </script>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
