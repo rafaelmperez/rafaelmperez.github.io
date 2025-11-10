@@ -1404,7 +1404,27 @@ a[href^="mailto:"] {
   font-weight: bold; /* Opcional: para que se vea más destacado */
   color: #000000;     /* Opcional: para que combine con tu estilo */
 }
-  
+
+  /* ==========================================
+   Ajustes visuales para la sección "Sobre mí"
+   ========================================== */
+#sobre-mi {
+  margin-bottom: 40px; /* separa del resto de secciones */
+}
+
+#sobre-mi .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* reduce el espacio vertical entre elementos */
+  padding: 20px;
+
+  /* Quita el marco del bloque Sobre mí */
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
 /* Imagen más compacta y centrada */
 .imagen-sobre-mi img {
   width: 180px;
@@ -1428,10 +1448,7 @@ a[href^="mailto:"] {
 #sobre-mi .sysadmin-badge {
   margin-top: 10px;
 }
-
-
-
-
+  
   
 #certificaciones .card:hover {
   transform: none !important;
@@ -1512,46 +1529,6 @@ app.use(helmet.contentSecurityPolicy({
   }
 }));
 
-.audio-presentacion {
-  margin-top: 20px;
-  background-color: #f5f5f5;
-  padding: 10px;
-  border-radius: 8px;
-  transform: scale(0.9); /* Escala visual del bloque */
-  transform-origin: top left; /* Mantiene la alineación */
-}
-
-.audio-presentacion p {
-  margin-bottom: 8px;
-  font-weight: bold;
-  font-size: 0.9em; /* Texto ligeramente más pequeño */
-}
-
-.audio-presentacion audio {
-  width: 100%; /* Mantiene el ancho relativo */
-  height: 28px; /* Opcional: ajusta la altura si el navegador lo permite */
-}
-
-
-.audio-proyecto {
-  margin-top: 15px;
-  background-color: #f9f9f9;
-  padding: 10px;
-  border-radius: 6px;
-  transform: scale(0.9); /* Escala todo el bloque */
-  transform-origin: top left; /* Mantiene la alineación */
-}
-
-.audio-proyecto p {
-  margin-bottom: 8px;
-  font-weight: bold;
-  font-size: 0.9em; /* Texto ligeramente más pequeño */
-}
-
-.audio-proyecto audio {
-  width: 100%; /* Mantiene el ancho relativo */
-  height: 28px; /* Opcional: ajusta la altura si el navegador lo permite */
-}
 
 
 .grid-proyectos {
@@ -2866,6 +2843,7 @@ section {
   });
 </script>
 </html>
+
 
 
 
