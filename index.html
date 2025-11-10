@@ -173,6 +173,72 @@
   <style>
     
   /* Todo tu CSS aquí... */
+/* ==========================================
+   🎯 Colores fijos para líneas de tecnologías
+   ========================================== */
+
+.techline span {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* Naranja (Kernel, SSH, Ubuntu, Nmap...) */
+.techline span[style*="#E95420"],
+.techline span[style*="#F46800"],
+.techline span[style*="#FF6F00"],
+.techline span[style*="#FF9800"],
+.techline span[style*="#FFB400"],
+.techline span[style*="#FF0000"] {
+  color: #E95420 !important;
+}
+
+/* Azul (PAM, Python, SSLyze, Wireshark, Fail2ban, etc.) */
+.techline span[style*="#007BFF"],
+.techline span[style*="#3776AB"] {
+  color: #007BFF !important;
+}
+
+/* Verde (Auditd, UFW, Node Exporter, OAuth, ffmpeg, etc.) */
+.techline span[style*="#28A745"],
+.techline span[style*="#00A67E"],
+.techline span[style*="#20c997"] {
+  color: #28A745 !important;
+}
+
+/* Gris / Plata (Systemd, Suricata, CLI, VirtualBox, etc.) */
+.techline span[style*="#6C757D"],
+.techline span[style*="#868E96"] {
+  color: #B0B0B0 !important;
+}
+
+/* Morado (USBGuard, AIDE, JSON, Gemma, etc.) */
+.techline span[style*="#6f42c1"],
+.techline span[style*="#6F42C1"] {
+  color: #B266FF !important;
+}
+
+/* Cian / Azul claro (Cloudflare, IA Local, etc.) */
+.techline span[style*="#17A2B8"],
+.techline span[style*="#20c997"] {
+  color: #17A2B8 !important;
+}
+
+/* Amarillo (YAML, Markdown, OWASP, etc.) */
+.techline span[style*="#F0DB4F"],
+.techline span[style*="#FFD700"] {
+  color: #FFD700 !important;
+}
+
+/* Rojo (Kali Linux, Burp Suite) */
+.techline span[style*="#DC3545"],
+.techline span[style*="#D44638"] {
+  color: #DC3545 !important;
+}
+
+/* Marrón (Pandoc, tonos tierra) */
+.techline span[style*="#795548"] {
+  color: #A66A4C !important;
+}
 
     
 @media (max-width: 768px) {
@@ -2105,7 +2171,6 @@ section {
 
   <h3 style="font-size: 1em;"> <i class="fas fa-lock"></i> Bastionado completo de Ubuntu 24.04 LTS </h3>
 
-  <strong>
     <strong class="techline"> 
     <span style="color:#E95420;">Kernel</span> | 
     <span style="color:#007BFF;">PAM</span> | 
@@ -2140,8 +2205,7 @@ section {
 
     <h3 style="font-size: 1em;"><i class="fas fa-lock"></i> Bastionamiento del sitio web</h3> 
       
-      <strong>
-        <strong class="techline"> 
+  <strong class="techline"> 
   <span style="color:#17A2B8;">Cloudflare</span> |
   <span style="color:#6C757D;">Nikto</span> |
   <span style="color:#28A745;">Nmap</span> |
@@ -2188,7 +2252,6 @@ Utilizo herramientas como Nmap, Nikto y SSLyze para auditar y documentar cada fa
 
 <h3 style="font-size: 1em;"> <i class="fas fa-shield-alt"></i> Buenas prácticas de bastionado Linux </h3>
 
-<strong> 
   <strong class="techline"> 
   <span style="color:#E95420;">SSH</span> | 
   <span style="color:#007BFF;">UFW</span> | 
@@ -2229,7 +2292,6 @@ El resultado es un sistema más seguro, trazable y alineado con estándares prof
     <i class="fas fa-shield-alt"></i> Firewall dinámico con GeoIP
   </h3>
 
-<strong>
   <strong class="techline"> 
   <span style="color:#E95420;">iptables</span> |
   <span style="color:#007BFF;">GeoIP</span> |
@@ -2278,7 +2340,6 @@ El resultado es un sistema más seguro, trazable y alineado con estándares prof
 
 <h3 style="font-size: 1em;"><i class="fas fa-chart-line"></i> Sistema de Detección de Intrusos con Visualización en Grafana</h3>
       
-<strong>
   <strong class="techline"> 
   <span style="color:#E95420;">Ubuntu</span> |
   <span style="color:#F46800;">Grafana</span> |
@@ -2310,7 +2371,6 @@ El resultado es un sistema más seguro, trazable y alineado con estándares prof
 
   <h3 style="font-size: 1em;"><i class="fas fa-mobile-alt"></i> Auditoría de Seguridad en Apps Móviles</h3>
 
-  <strong>
     <strong class="techline"> 
     <span style="color:#6C757D;">MobSF</span> |
     <span style="color:#DC3545;">Burp Suite</span> |
@@ -2349,8 +2409,8 @@ El resultado es un sistema más seguro, trazable y alineado con estándares prof
 <h3 style="font-size: 1em;"><i class="fas fa-bug"></i> Laboratorio de Pentesting Local con Máquinas Vulnerables</h3>
         
         
-        <strong>
-          <strong class="techline"> 
+ 
+  <strong class="techline"> 
   <span style="color:#6C757D;">VirtualBox</span> |
   <span style="color:#DC3545;">Kali Linux</span> |
   <span style="color:#28A745;">Metasploitable</span> |
@@ -2380,7 +2440,6 @@ El resultado es un sistema más seguro, trazable y alineado con estándares prof
 
   <h3 style="font-size: 1em;"><i class="fas fa-robot"></i> Desarrollo de Pipeline en Bash</h3>
     
-<strong>
   <strong class="techline"> 
   <span style="color:#E95420;">Ubuntu</span> |
   <span style="color:#28A745;">Bash</span> |
@@ -2432,7 +2491,6 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
     <i class="fas fa-bolt"></i> Nmap Auto Scanner
   </h3>
 
-  <strong>
     <strong class="techline"> 
     <span style="color:#3776AB;">Python</span> | 
     <span style="color:#E95420;">Nmap</span> | 
@@ -2474,7 +2532,6 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
     <i class="fas fa-microphone"></i> Python TTS — Cloned AI Voice
   </h3>
 
-  <strong>
     <strong class="techline"> 
     <span style="color:#3776AB;">Python</span> | 
     <span style="color:#FF6F00;">ElevenLabs API</span> | 
@@ -2522,7 +2579,6 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
     <i class="fas fa-robot"></i> Gmail Auto-Responder
   </h3>
 
-  <strong>
     <strong class="techline"> 
     <span style="color:#3776AB;">Python</span> | 
     <span style="color:#D44638;">Gmail API</span> | 
@@ -2569,7 +2625,6 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
     <i class="fas fa-download"></i> YouTube Batch Downloader
   </h3>
 
-  <strong>
     <strong class="techline"> 
     <span style="color:#3776AB;">Python</span> | 
     <span style="color:#FF0000;">YouTube</span> | 
@@ -2855,6 +2910,7 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
   });
 </script>
 </html>
+
 
 
 
