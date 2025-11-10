@@ -17,6 +17,7 @@
   <link rel="alternate" hreflang="es" href="https://rafaelmperez.com/index.html" />
   <link rel="alternate" hreflang="fr" href="https://rafaelmperez.com/fr/index.html" />
 </head>
+  
 
   <!-- En la cabecera, si no la tienes ya -->
 <script src="https://unpkg.com/lucide@latest"></script>
@@ -39,6 +40,7 @@
   body { font-family: 'Montserrat', sans-serif; }
   h1 { font-weight: 600; }
 </style>
+  
 
 
   <link rel="icon" href="favicon.png" type="image/x-icon">
@@ -65,6 +67,7 @@
 
 
 <head>
+  
   <!-- Font Awesome optimizado (solo una versión) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
   <noscript>
@@ -112,20 +115,8 @@
       });
     });
   });
-</script>
 
-</body>
-
-  
-  
-  <body>
-  <!-- Tu HTML aquí -->
-
-</body>
-
-
-<style>
-document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
   const sound = document.getElementById("menu-sound");
   const links = document.querySelectorAll("nav a");
 
@@ -144,6 +135,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+  
+function sanitizeInput(input) {
+  return input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+</script>
+  
+
+</body>
+
+  
+  
+  <body>
+  <!-- Tu HTML aquí -->
+
+</body>
+
+
+<style>
 
    
   </style>
@@ -165,7 +176,79 @@ document.addEventListener("DOMContentLoaded", () => {
 </head>
 
   <style>
+    
   /* Todo tu CSS aquí... */
+/* ==========================================
+   🎯 Colores fijos para líneas de tecnologías
+   ========================================== */
+
+.techline span {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* Naranja (Kernel, SSH, Ubuntu, Nmap...) */
+.techline span[style*="#E95420"],
+.techline span[style*="#F46800"],
+.techline span[style*="#FF6F00"],
+.techline span[style*="#FF9800"],
+.techline span[style*="#FFB400"],
+.techline span[style*="#FF0000"] {
+  color: #E95420 !important;
+}
+
+/* Azul (PAM, Python, SSLyze, Wireshark, Fail2ban, etc.) */
+.techline span[style*="#007BFF"],
+.techline span[style*="#3776AB"] {
+  color: #007BFF !important;
+}
+
+/* Verde (Auditd, UFW, Node Exporter, OAuth, ffmpeg, etc.) */
+.techline span[style*="#28A745"],
+.techline span[style*="#00A67E"],
+.techline span[style*="#20c997"] {
+  color: #28A745 !important;
+}
+
+/* Gris / Plata (Systemd, Suricata, CLI, VirtualBox, etc.) */
+.techline span[style*="#6C757D"],
+.techline span[style*="#868E96"] {
+  color: #B0B0B0 !important;
+}
+
+/* Morado (USBGuard, AIDE, JSON, Gemma, etc.) */
+.techline span[style*="#6f42c1"],
+.techline span[style*="#6F42C1"] {
+  color: #B266FF !important;
+}
+
+/* Naranja (Cloudflare, IA Local, etc.) */
+.techline span[style*="#17A2B8"],
+.techline span[style*="#F38020"],
+.techline span[style*="#FF9800"],
+.techline span[style*="#FFA500"] {
+  color: #F38020 !important;
+}
+
+
+/* Amarillo (YAML, Markdown, OWASP, etc.) */
+.techline span[style*="#F0DB4F"],
+.techline span[style*="#FFD700"] {
+  color: #FFD700 !important;
+}
+
+/* Rojo (Kali Linux, Burp Suite) */
+.techline span[style*="#DC3545"],
+.techline span[style*="#D44638"] {
+  color: #DC3545 !important;
+}
+
+/* Marrón (Pandoc, tonos tierra) */
+.techline span[style*="#795548"] {
+  color: #A66A4C !important;
+}
+
+    
 @media (max-width: 768px) {
   body {
     font-size: 16px;
@@ -549,40 +632,6 @@ body {
   max-width: 2000px;
 }
 
-section#sobre-mi {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-section#sobre-mi > *:first-child {
-  margin-top: 0 !important;
-}
-
-
-
-}
-
-.imagen-sobre-mi {
-  width: 250px; /* Puedes subirlo a 250px si quieres más presencia */
-  height: 320px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.imagen-sobre-mi img {
-  width: 80%;
-  height: auto;
-  object-fit: cover;
-}
-
-function sanitizeInput(input) {
-  return input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-}
 
 
 </style>
@@ -1326,29 +1375,74 @@ a[href^="mailto:"] {
   font-weight: bold; /* Opcional: para que se vea más destacado */
   color: #000000;     /* Opcional: para que combine con tu estilo */
 }
-#sobre-mi p {
-  margin-bottom: 2.5rem; /* Aumenta el espacio entre párrafos */
-  line-height: 1.8;       /* Mejora la legibilidad del texto */
-  font-size: 2.1rem;      /* Si aún no lo has ajustado, esto lo hace más cómodo de leer */
+/* ==========================================
+   🎯 Ajustes visuales para la sección "Sobre mí"
+   ========================================== */
+#sobre-mi {
+  margin-bottom: 40px; /* separa del resto de secciones */
 }
+
 #sobre-mi .card {
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* reduce el espacio vertical entre elementos */
+  padding: 20px;
+
+  /* Quita el marco del bloque Sobre mí */
+  background: none;
+  border: none;
+  box-shadow: none;
 }
 
-#sobre-mi .imagen-sobre-mi {
-  margin-bottom: 1.5rem;
+/* Quita márgenes innecesarios superiores */
+section#sobre-mi {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
 
+section#sobre-mi > *:first-child {
+  margin-top: 0 !important;
+}
+
+/* Imagen redonda y centrada */
+.imagen-sobre-mi {
+  width: 200px; /* tamaño visible del contenedor */
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 10px auto; /* centrado + espacio inferior */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen dentro del contenedor circular */
+.imagen-sobre-mi img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Texto ajustado */
 .texto-sobre-mi {
-  padding: 1rem 0;
-  max-width: 700px;
+  max-width: 800px;
+  line-height: 1.6;
   margin: 0 auto;
 }
 
-#sobre-mi .card:hover {
-  transform: none !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.texto-sobre-mi p {
+  margin-bottom: 10px;
 }
+
+/* Botón PDF más cerca del texto */
+#sobre-mi .sysadmin-badge {
+  margin-top: 10px;
+}
+
+
+  
 #certificaciones .card:hover {
   transform: none !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
@@ -1428,46 +1522,6 @@ app.use(helmet.contentSecurityPolicy({
   }
 }));
 
-.audio-presentacion {
-  margin-top: 20px;
-  background-color: #f5f5f5;
-  padding: 10px;
-  border-radius: 8px;
-  transform: scale(0.9); /* Escala visual del bloque */
-  transform-origin: top left; /* Mantiene la alineación */
-}
-
-.audio-presentacion p {
-  margin-bottom: 8px;
-  font-weight: bold;
-  font-size: 0.9em; /* Texto ligeramente más pequeño */
-}
-
-.audio-presentacion audio {
-  width: 100%; /* Mantiene el ancho relativo */
-  height: 28px; /* Opcional: ajusta la altura si el navegador lo permite */
-}
-
-
-.audio-proyecto {
-  margin-top: 15px;
-  background-color: #f9f9f9;
-  padding: 10px;
-  border-radius: 6px;
-  transform: scale(0.9); /* Escala todo el bloque */
-  transform-origin: top left; /* Mantiene la alineación */
-}
-
-.audio-proyecto p {
-  margin-bottom: 8px;
-  font-weight: bold;
-  font-size: 0.9em; /* Texto ligeramente más pequeño */
-}
-
-.audio-proyecto audio {
-  width: 100%; /* Mantiene el ancho relativo */
-  height: 28px; /* Opcional: ajusta la altura si el navegador lo permite */
-}
 
 
 .grid-proyectos {
@@ -1667,36 +1721,37 @@ section {
       border-radius: 2px;
     }
 
+ 
 
 
     <style>
-  /* Fondo general y colores base */
+<style>
+  /* Fondo general */
   body {
     background-color: #000 !important;
-    color: #d4af37 !important; /* dorado elegante */
+    color: #d4af37 !important; /* dorado base */
     font-family: "Poppins", sans-serif;
   }
 
-  /* Encabezado y barra de navegación */
+  /* Encabezado y navegación */
   header, .encabezado, .barra-superior, nav {
     background-color: #000 !important;
   }
 
-  /* Enlaces del menú */
   nav a {
-    color: #d4af37 !important;
+    color: #d4af37;
     text-decoration: none;
     padding: 10px 15px;
-    transition: color 0.3s, background-color 0.3s;
+    transition: all 0.3s ease;
   }
 
   nav a:hover {
-    color: #000 !important;
-    background-color: #d4af37 !important;
+    color: #000;
+    background-color: #d4af37;
     border-radius: 6px;
   }
 
-  /* Recuadros o secciones */
+  /* Secciones, tarjetas y recuadros */
   section, .card, .proyecto, .habilidad, .contenedor, .bloque {
     background-color: #000 !important;
     border: 1px solid #d4af37 !important;
@@ -1706,31 +1761,31 @@ section {
 
   /* Títulos */
   h1, h2, h3, h4, h5, h6 {
-    color: #ffd700 !important; /* tono más brillante para destacar títulos */
+    color: #ffd700 !important;
   }
 
-p, li, a, strong {
-  color: #d4af37;
-}
+  /* Párrafos, listas, enlaces, texto general */
+  p, li, a, strong, em, code {
+    color: #d4af37 !important;
+  }
 
-/* Solo aplica dorado a spans que no tengan color propio */
-span:not([style*="color"]) {
-  color: #d4af37;
-}
-
+  /*  Mantener color original de los spans con color inline */
+  span[style*="color:"] {
+    color: inherit !important;
+  }
 
   /* Botones */
   button, .btn, .play-btn {
-    background-color: #000 !important;
-    color: #d4af37 !important;
-    border: 1px solid #d4af37 !important;
+    background-color: #000;
+    color: #d4af37;
+    border: 1px solid #d4af37;
     border-radius: 6px;
     transition: all 0.3s ease;
   }
 
   button:hover, .btn:hover, .play-btn:hover {
-    background-color: #d4af37 !important;
-    color: #000 !important;
+    background-color: #d4af37;
+    color: #000;
   }
 
   /* Imagen del banner */
@@ -1739,16 +1794,65 @@ span:not([style*="color"]) {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
   }
-</style>
+
+  /* GitHub badge */
+  .sysadmin-badge {
+    background-color: #24292e !important;
+    color: #fff !important;
+    border: 1px solid #d4af37 !important;
+    transition: all 0.3s ease;
+  }
+
+  .sysadmin-badge:hover {
+    background-color: #d4af37 !important;
+    color: #000 !important;
+  }
+
+    @media (min-width: 1024px) {
+  html {
+    zoom: 0.9;
+  }
+}
+
+   /* ==========================================
+   🔧 Ajuste fino de los badges de herramientas
+   ========================================== */
+.habilidades-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2px; /* MUY poco espacio entre logos */
+  row-gap: 2px; /* también reduce el espacio entre filas */
+  padding-top: 4px;
+}
+
+/* Tamaño ligeramente mayor */
+.habilidades-icons img {
+  height: 38px;
+  margin: 0; /* elimina márgenes extra por si los hay */
+  transition: transform 0.2s ease;
+}
+
+/* Efecto hover suave */
+.habilidades-icons img:hover {
+  transform: scale(1.06);
+}
+
+ 
+
 
   </style>
 </head>
 
 <body>
-  <!-- 🔹 Contenedor del traductor (necesario para Google) -->
+  <!-- Aquí empieza tu contenido -->
+</body>
+</html>
+  <!-- Contenedor del traductor (necesario para Google) -->
   <div id="google_translate_element" style="display: none;"></div>
 
-  <!-- 🔹 Botón para traducir -->
+  <!-- Botón para traducir -->
   <div class="language-switcher">
     <a href="#" id="translate-fr">
       <img src="https://rafaelmperez.com/frflags.jpg" alt="Drapeau de la France" class="flag">
@@ -1756,7 +1860,7 @@ span:not([style*="color"]) {
     </a>
   </div>
 
-  <!-- 🔹 Script para activar la traducción -->
+  <!-- Script para activar la traducción -->
   <script type="text/javascript">
     // Inicializa el traductor de Google
     function googleTranslateElementInit() {
@@ -1867,7 +1971,7 @@ span:not([style*="color"]) {
 </script>
 
 
-  <!-- 👇 Aquí va el script, justo antes de cerrar body -->
+  <!-- Aquí va el script, justo antes de cerrar body -->
   <script src="script.js"></script>
 </body>
 </html>
@@ -1930,21 +2034,9 @@ span:not([style*="color"]) {
   Te invito a descubrir mis trabajos en este <strong>portafolio</strong> y explorar mis scripts en <strong>GitHub</strong>.  
   <strong>Contáctame</strong> si compartes la visión de una tecnología más <strong>segura y confiable</strong>.
 </p>
-
-  </p>
 </div>
 
-
-
-      <!-- 🎧 Reproductor de audio sin opción de descarga -->
-      <div class="audio-presentacion">
-        <p><strong>Escuchar versión en audio:</strong></p>
-        <audio controls controlsList="nodownload noplaybackrate">
-          <source src="https://rafaelmperez.com/sounds/presentacion.aac" type="audio/mpeg">
-          Tu navegador no soporta el elemento de audio.
-        </audio>
-
-   <a href="https://rafaelmperez.com/docs/CARTA_PRESENTACION.pdf" 
+<a href="https://rafaelmperez.com/docs/CARTA_PRESENTACION.pdf" 
    target="_blank" 
    class="sysadmin-badge"> 
   <strong>
@@ -1952,6 +2044,7 @@ span:not([style*="color"]) {
     Carta de presentación completa (PDF)
   </strong> 
 </a>
+
 
 
 
@@ -1997,7 +2090,7 @@ span:not([style*="color"]) {
     <i class="fas fa-tools"></i> Entornos & Herramientas
   </h3>
 
-  <div class="habilidades-icons" style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center; align-items:center; padding-top:8px;">
+<div class="habilidades-icons">
 
     <!-- Sistemas Operativos -->
     <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Ubuntu" title="Ubuntu" />
@@ -2039,19 +2132,22 @@ span:not([style*="color"]) {
     <img src="https://img.shields.io/badge/MySQL-00618A?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" title="MySQL" />
     <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" title="SQLite" />
 
+    <!-- Herramientas y Entornos Clave -->
+<img src="https://img.shields.io/badge/Proxmox-E57000?style=for-the-badge&logo=proxmox&logoColor=white" alt="Proxmox" title="Proxmox VE" />
+<img src="https://img.shields.io/badge/Terraform-623CE4?style=for-the-badge&logo=terraform&logoColor=white" alt="Terraform" title="Terraform" />
+<img src="https://img.shields.io/badge/Fail2Ban-000000?style=for-the-badge&logo=linux&logoColor=white" alt="Fail2Ban" title="Fail2Ban" />
+<img src="https://img.shields.io/badge/Lynis-0078D7?style=for-the-badge&logo=linux&logoColor=white" alt="Lynis" title="Lynis" />
+<img src="https://img.shields.io/badge/Zabbix-DC382D?style=for-the-badge&logo=zabbix&logoColor=white" alt="Zabbix" title="Zabbix" />
+<img src="https://img.shields.io/badge/OpenVAS-78C850?style=for-the-badge&logo=openvas&logoColor=white" alt="OpenVAS" title="OpenVAS / Greenbone" />
+
+
   </div>
 </div>
 
 <!-- CSS sugerido (pega en tu CSS global o dentro de <style>) -->
 <style>
-.habilidades-icons img {
-  height: 28px;
-  object-fit: contain;
-  margin: 4px 6px;
-  transition: transform .18s ease, filter .18s ease;
-  filter: grayscale(10%);
-}
-.habilidades-icons img:hover { transform: scale(1.06); filter: grayscale(0%); }
+
+
 </style>
 
 
@@ -2079,7 +2175,7 @@ span:not([style*="color"]) {
 
   <h3 style="font-size: 1em;"> <i class="fas fa-lock"></i> Bastionado completo de Ubuntu 24.04 LTS </h3>
 
-  <strong> 
+    <strong class="techline"> 
     <span style="color:#E95420;">Kernel</span> | 
     <span style="color:#007BFF;">PAM</span> | 
     <span style="color:#28A745;">Auditd</span> | 
@@ -2089,21 +2185,16 @@ span:not([style*="color"]) {
 
   <p> Este proyecto documenta el proceso completo de bastionado de un sistema Ubuntu 24.04 LTS, siguiendo estándares CIS, NIST y OWASP. Se aplicaron medidas defensivas en múltiples capas: kernel, autenticación, servicios, red, logging y control físico, sin comprometer la funcionalidad del sistema.
 
-  Se utilizó Lynis como herramienta de auditoría continua, logrando una mejora de seguridad de <strong>68 a 87 puntos</strong>. Cada fase está documentada con comandos, configuraciones y validaciones técnicas. </p>
+  Se utilizó Lynis como herramienta de auditoría continua, logrando una mejora de seguridad de <strong>68 a 87 puntos</strong>. Cada fase está documentada con comandos, configuraciones y validaciones técnicas. 
+  </p>
 
-  <div class="audio-proyecto" style="margin-top: 8px;"> 
-    <p><strong>Versión en audio:</strong></p> 
-    <audio controls controlsList="nodownload noplaybackrate"> 
-      <source src="https://rafaelmperez.com/sounds/bastionamientoubuntu.aac" type="audio/mpeg"> 
-      Tu navegador no soporta el elemento de audio. 
-    </audio> 
+
 
     <p> 
       <a href="https://rafaelmperez.com/docs/Rafael_MPerez_Bastionado_Ubuntu24.04_Informe_Tecnico.pdf" target="_blank" class="sysadmin-badge"> 
         <strong>Ver informe técnico PDF</strong> 
       </a> 
     </p>
-  </div> 
 </div>
 
 
@@ -2113,7 +2204,7 @@ span:not([style*="color"]) {
 
     <h3 style="font-size: 1em;"><i class="fas fa-lock"></i> Bastionamiento del sitio web</h3> 
       
-      <strong>
+  <strong class="techline"> 
   <span style="color:#17A2B8;">Cloudflare</span> |
   <span style="color:#6C757D;">Nikto</span> |
   <span style="color:#28A745;">Nmap</span> |
@@ -2125,27 +2216,22 @@ span:not([style*="color"]) {
       
 
   <div class="descripcion-proyecto">
-<p>Este proyecto consiste en el bastionamiento progresivo de mi sitio web, acompañado de auditorías periódicas para reforzar su seguridad. 
+<p>
+  Este proyecto consiste en el bastionamiento progresivo de mi sitio web, acompañado de auditorías periódicas para reforzar su seguridad. 
 
-He implementado cabeceras HTTP, políticas de permisos y configuraciones clave, mitigando diversos vectores de amenaza. 
+  He implementado cabeceras HTTP, políticas de permisos y configuraciones clave, mitigando diversos vectores de amenaza. 
 
-Utilizo herramientas como Nmap, Nikto y SSLyze para auditar y documentar cada fase del proceso. El resultado es una infraestructura más resiliente, que refleja mi compromiso constante con la ciberseguridad aplicada.</p>  </div>
+  Utilizo herramientas como Nmap, Nikto y SSLyze para auditar y documentar cada fase del proceso. El resultado es una infraestructura más resiliente, que refleja mi compromiso constante con la ciberseguridad aplicada.
+</p>
 
-
-
-  <div class="audio-proyecto">
-    <p><strong>Versión en audio:</strong></p>
-    <audio controls controlsList="nodownload noplaybackrate">
-      <source src="https://rafaelmperez.com/sounds/bastionamiento.aac" type="audio/mpeg">
-      Tu navegador no soporta el elemento de audio.
-    </audio>
-
-
-              <p>
-  <a href="https://rafaelmperez.com/docs/Rafael_MPerez_BastionadoWeb_Informe_Tecnico.pdf" target="_blank" class="sysadmin-badge">
-   <strong>Ver informe técnico PDF</strong>
+<p>
+  <a href="https://rafaelmperez.com/docs/Rafael_MPerez_BastionadoWeb_Informe_Tecnico.pdf" 
+     target="_blank" 
+     class="sysadmin-badge">
+    <strong>Ver informe técnico PDF</strong>
   </a>
 </p>
+
     
   </div>
 </div>
@@ -2160,33 +2246,30 @@ Utilizo herramientas como Nmap, Nikto y SSLyze para auditar y documentar cada fa
 
 <h3 style="font-size: 1em;"> <i class="fas fa-shield-alt"></i> Buenas prácticas de bastionado Linux </h3>
 
-<strong> 
+  <strong class="techline"> 
   <span style="color:#E95420;">SSH</span> | 
   <span style="color:#007BFF;">UFW</span> | 
   <span style="color:#28A745;">Auditd</span> | 
   <span style="color:#6f42c1;">AIDE</span> | 
   <span style="color:#20c997;">Lynis</span> </strong>
 
-<p> Este proyecto aplica un conjunto de buenas prácticas defensivas sobre un sistema Linux, con el objetivo de reducir su superficie de ataque de forma simple pero efectiva.
+<p>
+  Este proyecto aplica un conjunto de buenas prácticas defensivas sobre un sistema Linux, con el objetivo de reducir su superficie de ataque de forma simple pero efectiva.
 
-Se han deshabilitado accesos remotos inseguros, reforzado el firewall con políticas restrictivas, activado auditoría de eventos y configurado herramientas de integridad y escaneo. Cada medida está documentada con comandos, justificación técnica y evidencia funcional.
+  Se han deshabilitado accesos remotos inseguros, reforzado el firewall con políticas restrictivas, activado auditoría de eventos y configurado herramientas de integridad y escaneo. Cada medida está documentada con comandos, justificación técnica y evidencia funcional.
 
-El resultado es un sistema más seguro, trazable y alineado con estándares profesionales de bastionado. </p>
-
-
-
-<div class="audio-proyecto" style="margin-top: 8px;"> 
-  <p><strong>Versión en audio:</strong></p> 
-  <audio controls controlsList="nodownload noplaybackrate"> <source src="https://rafaelmperez.com/sounds/buenaspracticas.aac" type="audio/mpeg"> 
-    Tu navegador no soporta el elemento de audio. 
-  </audio> 
-<p> 
-  <a href="https://rafaelmperez.com/buenaspracticas.html" target="_blank" class="sysadmin-badge"> 
-    <strong>Ver documentación técnica</strong> </a> 
+  El resultado es un sistema más seguro, trazable y alineado con estándares profesionales de bastionado.
 </p>
-  
-</div> 
-    </div>
+
+<p>
+  <a href="https://rafaelmperez.com/buenaspracticas.html" 
+     target="_blank" 
+     class="sysadmin-badge"> 
+    <strong>Ver documentación técnica</strong>
+  </a>
+</p>
+</div>
+
     
 
     
@@ -2200,7 +2283,7 @@ El resultado es un sistema más seguro, trazable y alineado con estándares prof
     <i class="fas fa-shield-alt"></i> Firewall dinámico con GeoIP
   </h3>
 
-<strong>
+  <strong class="techline"> 
   <span style="color:#E95420;">iptables</span> |
   <span style="color:#007BFF;">GeoIP</span> |
   <span style="color:#28A745;">Bash</span> |
@@ -2209,35 +2292,23 @@ El resultado es un sistema más seguro, trazable y alineado con estándares prof
 </strong>
 
 
-  <p>
+<p>
   Este proyecto implementa un sistema defensivo automatizado que analiza los intentos fallidos de acceso SSH y bloquea IPs sospechosas según su país de origen.
 
   Utiliza GeoIP para identificar conexiones no españolas y aplica reglas dinámicas con iptables. El script se ejecuta localmente, registra cada acción y permite visualizar los bloqueos en tiempo real.
 
   El resultado es una capa de protección reactiva, ligera y documentable, alineada con buenas prácticas de ciberseguridad operativa.
-  </p>
+</p>
 
-
-
-  <div class="audio-proyecto" style="margin-top: 8px;">
-    <p><strong>Versión en audio:</strong></p>
-    <audio controls controlsList="nodownload noplaybackrate">
-      <source src="https://rafaelmperez.com/sounds/geoip.aac" type="audio/mpeg">
-      Tu navegador no soporta el elemento de audio.
-    </audio>
-  <p>
-    <a href="https://rafaelmperez.com/proyectogeoip.html" 
-       target="_blank" 
-       class="sysadmin-badge">
-      <strong>Ver documentación técnica</strong>
-    </a>
-  </p>
-    
-  </div>
+<p>
+  <a href="https://rafaelmperez.com/proyectogeoip.html" 
+     target="_blank" 
+     class="sysadmin-badge">
+    <strong>Ver documentación técnica</strong>
+  </a>
+</p>
 </div>
 
-
-  
 
    <!-- CARD 2 -->
     <div class="card">
@@ -2248,7 +2319,7 @@ El resultado es un sistema más seguro, trazable y alineado con estándares prof
 
 <h3 style="font-size: 1em;"><i class="fas fa-chart-line"></i> Sistema de Detección de Intrusos con Visualización en Grafana</h3>
       
-<strong>
+  <strong class="techline"> 
   <span style="color:#E95420;">Ubuntu</span> |
   <span style="color:#F46800;">Grafana</span> |
   <span style="color:#6C757D;">Suricata</span> |
@@ -2258,18 +2329,13 @@ El resultado es un sistema más seguro, trazable y alineado con estándares prof
             
       
 
-      <p>
-        Implementé un sistema de detección de intrusos en un servidor Linux que permite identificar intentos de acceso sospechosos (como fuerza bruta por SSH, escaneos de puertos o actividad anómala) y visualicé estos eventos en tiempo real mediante paneles gráficos en Grafana. El objetivo es reforzar la seguridad del sistema mediante monitoreo activo y alertas automatizadas.
-      </p>
-      <p><strong>Microproyecto en desarrollo. Próximamente.</strong></p>
-      <div class="audio-proyecto" style="margin-top: 8px;">
-        <p><strong>Versión en audio:</strong></p>
-        <audio controls controlsList="nodownload noplaybackrate">
-          <source src="https://rafaelmperez.com/sounds/proyectografana.aac" type="audio/mpeg">
-          Tu navegador no soporta el elemento de audio.
-        </audio>
-      </div>
-    </div>
+    <p>
+  Implementé un sistema de detección de intrusos en un servidor Linux que permite identificar intentos de acceso sospechosos (como fuerza bruta por SSH, escaneos de puertos o actividad anómala) y visualicé estos eventos en tiempo real mediante paneles gráficos en Grafana. El objetivo es reforzar la seguridad del sistema mediante monitoreo activo y alertas automatizadas.
+</p>
+
+<p><strong>Microproyecto en desarrollo. Próximamente.</strong></p>
+</div>
+
     
 <!-- CARD: Auditoría de Seguridad en Aplicaciones Móviles -->
 <div class="card">
@@ -2279,27 +2345,19 @@ El resultado es un sistema más seguro, trazable y alineado con estándares prof
 
   <h3 style="font-size: 1em;"><i class="fas fa-mobile-alt"></i> Auditoría de Seguridad en Apps Móviles</h3>
 
-  <strong>
+    <strong class="techline"> 
     <span style="color:#6C757D;">MobSF</span> |
     <span style="color:#DC3545;">Burp Suite</span> |
     <span style="color:#28A745;">Android Studio</span> |
     <span style="color:#007BFF;">Wireshark</span>
   </strong>
+<p>
+  Realicé un análisis completo de seguridad sobre aplicaciones móviles Android, combinando técnicas estáticas y dinámicas. Utilicé MobSF para extraer permisos, endpoints y vulnerabilidades sin ejecutar la app, y configuré un entorno con Android Studio y Genymotion para interceptar tráfico en tiempo real mediante Burp Suite y Wireshark. Además, documenté cada fase con capturas, logs y recomendaciones técnicas. El proyecto demuestra cómo auditar apps desde una perspectiva ofensiva y defensiva, en un entorno controlado y reproducible.
+</p>
 
-  <p>
-    Realicé un análisis completo de seguridad sobre aplicaciones móviles Android, combinando técnicas estáticas y dinámicas. Utilicé MobSF para extraer permisos, endpoints y vulnerabilidades sin ejecutar la app, y configuré un entorno con Android Studio y Genymotion para interceptar tráfico en tiempo real mediante Burp Suite y Wireshark. Además, documenté cada fase con capturas, logs y recomendaciones técnicas. El proyecto demuestra cómo auditar apps desde una perspectiva ofensiva y defensiva, en un entorno controlado y reproducible.
-  </p>
-
-  <p><strong>Proyecto en desarrollo. Próximamente.</strong></p>
-
-  <div class="audio-proyecto" style="margin-top: 8px;">
-    <p><strong>Versión en audio:</strong></p>
-    <audio controls controlsList="nodownload noplaybackrate">
-      <source src="" type="audio/mpeg">
-      Tu navegador no soporta el elemento de audio.
-    </audio>
-  </div>
+<p><strong>Proyecto en desarrollo. Próximamente.</strong></p>
 </div>
+
 
 
   
@@ -2317,7 +2375,8 @@ El resultado es un sistema más seguro, trazable y alineado con estándares prof
 <h3 style="font-size: 1em;"><i class="fas fa-bug"></i> Laboratorio de Pentesting Local con Máquinas Vulnerables</h3>
         
         
-        <strong>
+ 
+  <strong class="techline"> 
   <span style="color:#6C757D;">VirtualBox</span> |
   <span style="color:#DC3545;">Kali Linux</span> |
   <span style="color:#28A745;">Metasploitable</span> |
@@ -2329,13 +2388,7 @@ El resultado es un sistema más seguro, trazable y alineado con estándares prof
 </p>
       </p>
       <p><strong>Microproyecto en desarrollo. Próximamente.</strong></p>
-      <div class="audio-proyecto" style="margin-top: 8px;">
-        <p><strong>Versión en audio:</strong></p>
-        <audio controls controlsList="nodownload noplaybackrate">
-          <source src="" type="audio/mpeg">
-          Tu navegador no soporta el elemento de audio.
-        </audio>
-      </div>
+
     </div>
 
 
@@ -2347,7 +2400,7 @@ El resultado es un sistema más seguro, trazable y alineado con estándares prof
 
   <h3 style="font-size: 1em;"><i class="fas fa-robot"></i> Desarrollo de Pipeline en Bash</h3>
     
-<strong>
+  <strong class="techline"> 
   <span style="color:#E95420;">Ubuntu</span> |
   <span style="color:#28A745;">Bash</span> |
   <span style="color:#6F42C1;">Gemma&nbsp;2B</span> |
@@ -2356,25 +2409,19 @@ El resultado es un sistema más seguro, trazable y alineado con estándares prof
   <span style="color:#795548;">Pandoc</span>
 </strong>
 
-  <p>
-Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado para registrar las sesiones en la terminal, explicar automáticamente los comandos ejecutados y generar informes técnicos reproducibles en PDF/DOCX. El sistema prioriza trazabilidad, eficiencia y privacidad, su integración con el modelo de lenguaje local Gemma 2B permite potenciar la generación de explicaciones técnicas sin conexión a la red y automatizar tareas repetitivas. Esta arquitectura es aplicable en auditorías, bastionado de sistemas y formación técnica.          <p>
+<p>
+  Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado para registrar las sesiones en la terminal, explicar automáticamente los comandos ejecutados y generar informes técnicos reproducibles en PDF/DOCX. El sistema prioriza trazabilidad, eficiencia y privacidad, su integración con el modelo de lenguaje local Gemma 2B permite potenciar la generación de explicaciones técnicas sin conexión a la red y automatizar tareas repetitivas. Esta arquitectura es aplicable en auditorías, bastionado de sistemas y formación técnica.
+</p>
 
-
-             
-  <div class="audio-proyecto" style="margin-top: 8px;">
-    <p><strong>Versión en audio:</strong></p>
-    <audio controls controlsList="nodownload noplaybackrate">
-      <source src="https://rafaelmperez.com/sounds/proyectopipeline.aac" type="audio/mpeg">
-      Tu navegador no soporta el elemento de audio.
-    </audio>
-
-
-  <a href="https://rafaelmperez.com/ialocal.html" target="_blank" class="sysadmin-badge">
-   <strong>Ver documentación técnica</strong>
+<p>
+  <a href="https://rafaelmperez.com/ialocal.html" 
+     target="_blank" 
+     class="sysadmin-badge">
+    <strong>Ver documentación técnica</strong>
   </a>
-    
-  </div>
+</p>
 </div>
+
 
     
 
@@ -2398,7 +2445,7 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
     <i class="fas fa-bolt"></i> Nmap Auto Scanner
   </h3>
 
-  <strong>
+    <strong class="techline"> 
     <span style="color:#3776AB;">Python</span> | 
     <span style="color:#E95420;">Nmap</span> | 
     <span style="color:#F0DB4F;">YAML</span> | 
@@ -2439,7 +2486,7 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
     <i class="fas fa-microphone"></i> Python TTS — Cloned AI Voice
   </h3>
 
-  <strong>
+    <strong class="techline"> 
     <span style="color:#3776AB;">Python</span> | 
     <span style="color:#FF6F00;">ElevenLabs API</span> | 
     <span style="color:#00A67E;">OpenAI TTS</span> | 
@@ -2486,7 +2533,7 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
     <i class="fas fa-robot"></i> Gmail Auto-Responder
   </h3>
 
-  <strong>
+    <strong class="techline"> 
     <span style="color:#3776AB;">Python</span> | 
     <span style="color:#D44638;">Gmail API</span> | 
     <span style="color:#00A67E;">OpenAI API</span> | 
@@ -2532,7 +2579,7 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
     <i class="fas fa-download"></i> YouTube Batch Downloader
   </h3>
 
-  <strong>
+    <strong class="techline"> 
     <span style="color:#3776AB;">Python</span> | 
     <span style="color:#FF0000;">YouTube</span> | 
     <span style="color:#FFB400;">yt-dlp</span> | 
@@ -2684,6 +2731,7 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
 }
 
 
+
   </style>
   <script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
 
@@ -2816,6 +2864,43 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
   });
 </script>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
