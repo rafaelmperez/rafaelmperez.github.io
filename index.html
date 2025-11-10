@@ -2112,14 +2112,30 @@ section {
 
 <!-- CSS sugerido (pega en tu CSS global o dentro de <style>) -->
 <style>
-.habilidades-icons img {
-  height: 28px;
-  object-fit: contain;
-  margin: 4px 6px;
-  transition: transform .18s ease, filter .18s ease;
-  filter: grayscale(10%);
+/* ==========================================
+   🎨 Estilo para la sección de herramientas
+   ========================================== */
+.habilidades-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6px; /* Espacio reducido entre los badges */
+  padding-top: 8px;
 }
-.habilidades-icons img:hover { transform: scale(1.06); filter: grayscale(0%); }
+
+/* Ajuste del tamaño general de los badges */
+.habilidades-icons img {
+  height: 36px; /* Más grandes que el tamaño por defecto (~28px) */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto visual sutil al pasar el ratón */
+.habilidades-icons img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 6px rgba(255, 215, 0, 0.3); /* brillo dorado leve */
+}
+
 </style>
 
 
@@ -2836,6 +2852,7 @@ section {
   });
 </script>
 </html>
+
 
 
 
