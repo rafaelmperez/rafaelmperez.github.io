@@ -1832,24 +1832,27 @@ section {
     color: #000 !important;
   }
 
-/* 🎧 Recuadro de presentación en negro */
+/* 🎧 Recuadros de audio en proyectos y presentación */
+.audio-proyecto,
 .audio-presentacion {
-  background-color: #000;          /* Fondo negro */
-  border: 1px solid #d4af37;       /* Borde dorado */
-  border-radius: 10px;             /* Esquinas redondeadas */
-  padding: 15px 20px;              /* Espaciado interno */
-  margin-top: 20px;                /* Separación superior */
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.15); /* Brillo sutil dorado */
-  color: #d4af37;                  /* Texto dorado */
+  background-color: #000;                /* Fondo negro elegante */
+  border: 1px solid #d4af37;             /* Borde dorado */
+  border-radius: 10px;                   /* Esquinas redondeadas */
+  padding: 15px 20px;                    /* Espaciado interno */
+  margin-top: 20px;                      /* Separación superior */
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.15); /* Brillo dorado sutil */
+  color: #d4af37;                        /* Texto dorado */
 }
 
-/* Título y texto dentro */
+/* Títulos dentro del bloque de audio */
+.audio-proyecto p strong,
 .audio-presentacion p strong {
   color: #d4af37;
   font-weight: 600;
 }
 
-/* Personalización del reproductor */
+/* Reproductor en sí */
+.audio-proyecto audio,
 .audio-presentacion audio {
   width: 100%;
   border-radius: 6px;
@@ -1857,16 +1860,23 @@ section {
   background-color: #111;
 }
 
-/* Enlace del PDF */
+/* Enlace (botón) PDF o documentación */
+.audio-proyecto .sysadmin-badge,
 .audio-presentacion .sysadmin-badge {
   display: inline-block;
   margin-top: 10px;
   background-color: #24292e !important;
   color: #fff !important;
   border: 1px solid #d4af37 !important;
+  border-radius: 6px;
+  padding: 6px 12px;
+  text-decoration: none;
+  font-weight: bold;
   transition: all 0.3s ease;
 }
 
+/* Efecto hover dorado */
+.audio-proyecto .sysadmin-badge:hover,
 .audio-presentacion .sysadmin-badge:hover {
   background-color: #d4af37 !important;
   color: #000 !important;
@@ -2202,321 +2212,7 @@ section {
 </section>
 
 
-<!-- SECCIÓN ORIGINAL -->
-<section id="proyectos">
-<h2 class="terminal-heading">
-  <i class="fas fa-project-diagram"></i> ls ~/proyectos/
-</h2>
-  <div class="grid-proyectos">
 
-    <div class="card"> 
-  <img src="https://rafaelmperez.com/assets/img/resultadolynis.jpg" alt="Bastionado Ubuntu 24.04 LTS" style="width:100%; height:200px; object-fit:cover;">
-
-  <h3 style="font-size: 1em;"> <i class="fas fa-lock"></i> Bastionado completo de Ubuntu 24.04 LTS </h3>
-
-    <strong class="techline"> 
-    <span style="color:#E95420;">Kernel</span> | 
-    <span style="color:#007BFF;">PAM</span> | 
-    <span style="color:#28A745;">Auditd</span> | 
-    <span style="color:#6f42c1;">USBGuard</span> | 
-    <span style="color:#20c997;">Lynis</span> 
-  </strong>
-
-  <p> Este proyecto documenta el proceso completo de bastionado de un sistema Ubuntu 24.04 LTS, siguiendo estándares CIS, NIST y OWASP. Se aplicaron medidas defensivas en múltiples capas: kernel, autenticación, servicios, red, logging y control físico, sin comprometer la funcionalidad del sistema.
-
-  Se utilizó Lynis como herramienta de auditoría continua, logrando una mejora de seguridad de <strong>68 a 87 puntos</strong>. Cada fase está documentada con comandos, configuraciones y validaciones técnicas. </p>
-
-  <div class="audio-proyecto" style="margin-top: 8px;"> 
-    <p><strong>Versión en audio:</strong></p> 
-    <audio controls controlsList="nodownload noplaybackrate"> 
-      <source src="https://rafaelmperez.com/sounds/bastionamientoubuntu.aac" type="audio/mpeg"> 
-      Tu navegador no soporta el elemento de audio. 
-    </audio> 
-
-    <p> 
-      <a href="https://rafaelmperez.com/docs/Rafael_MPerez_Bastionado_Ubuntu24.04_Informe_Tecnico.pdf" target="_blank" class="sysadmin-badge"> 
-        <strong>Ver informe técnico PDF</strong> 
-      </a> 
-    </p>
-  </div> 
-</div>
-
-
-    <div class="card">
-  <img src="https://rafaelmperez.com/assets/img/bastionamientoresultado.jpg" 
-       alt="Bastionamiento del sitio web" class="proyecto-img">
-
-    <h3 style="font-size: 1em;"><i class="fas fa-lock"></i> Bastionamiento del sitio web</h3> 
-      
-  <strong class="techline"> 
-  <span style="color:#17A2B8;">Cloudflare</span> |
-  <span style="color:#6C757D;">Nikto</span> |
-  <span style="color:#28A745;">Nmap</span> |
-  <span style="color:#007BFF;">SSLyze</span> |
-  <span style="color:#FFA500;">Owasp Zap</span>
-</strong>
-
-        
-      
-
-  <div class="descripcion-proyecto">
-<p>Este proyecto consiste en el bastionamiento progresivo de mi sitio web, acompañado de auditorías periódicas para reforzar su seguridad. 
-
-He implementado cabeceras HTTP, políticas de permisos y configuraciones clave, mitigando diversos vectores de amenaza. 
-
-Utilizo herramientas como Nmap, Nikto y SSLyze para auditar y documentar cada fase del proceso. El resultado es una infraestructura más resiliente, que refleja mi compromiso constante con la ciberseguridad aplicada.</p>  </div>
-
-
-
-  <div class="audio-proyecto">
-    <p><strong>Versión en audio:</strong></p>
-    <audio controls controlsList="nodownload noplaybackrate">
-      <source src="https://rafaelmperez.com/sounds/bastionamiento.aac" type="audio/mpeg">
-      Tu navegador no soporta el elemento de audio.
-    </audio>
-
-
-              <p>
-  <a href="https://rafaelmperez.com/docs/Rafael_MPerez_BastionadoWeb_Informe_Tecnico.pdf" target="_blank" class="sysadmin-badge">
-   <strong>Ver informe técnico PDF</strong>
-  </a>
-</p>
-    
-  </div>
-</div>
-
-
-
-
-<!-- CARD NUEVO PROYECTO --> 
-    <div class="card"> 
-      <img src="https://rafaelmperez.com/assets/img/buenascard.jpg
-" alt="Buenas prácticas de bastionado Linux" style="width:100%; height:200px; object-fit:cover;">
-
-<h3 style="font-size: 1em;"> <i class="fas fa-shield-alt"></i> Buenas prácticas de bastionado Linux </h3>
-
-  <strong class="techline"> 
-  <span style="color:#E95420;">SSH</span> | 
-  <span style="color:#007BFF;">UFW</span> | 
-  <span style="color:#28A745;">Auditd</span> | 
-  <span style="color:#6f42c1;">AIDE</span> | 
-  <span style="color:#20c997;">Lynis</span> </strong>
-
-<p> Este proyecto aplica un conjunto de buenas prácticas defensivas sobre un sistema Linux, con el objetivo de reducir su superficie de ataque de forma simple pero efectiva.
-
-Se han deshabilitado accesos remotos inseguros, reforzado el firewall con políticas restrictivas, activado auditoría de eventos y configurado herramientas de integridad y escaneo. Cada medida está documentada con comandos, justificación técnica y evidencia funcional.
-
-El resultado es un sistema más seguro, trazable y alineado con estándares profesionales de bastionado. </p>
-
-
-
-<div class="audio-proyecto" style="margin-top: 8px;"> 
-  <p><strong>Versión en audio:</strong></p> 
-  <audio controls controlsList="nodownload noplaybackrate"> <source src="https://rafaelmperez.com/sounds/buenaspracticas.aac" type="audio/mpeg"> 
-    Tu navegador no soporta el elemento de audio. 
-  </audio> 
-<p> 
-  <a href="https://rafaelmperez.com/buenaspracticas.html" target="_blank" class="sysadmin-badge"> 
-    <strong>Ver documentación técnica</strong> </a> 
-</p>
-  
-</div> 
-    </div>
-    
-
-    
-    <!-- CARD NUEVO PROYECTO -->
-<div class="card">
-  <img src="https://rafaelmperez.com/assets/img/geoip.jpg" 
-       alt="Nombre del proyecto" 
-       style="width:100%; height:200px; object-fit:cover;">
-
-  <h3 style="font-size: 1em;">
-    <i class="fas fa-shield-alt"></i> Firewall dinámico con GeoIP
-  </h3>
-
-  <strong class="techline"> 
-  <span style="color:#E95420;">iptables</span> |
-  <span style="color:#007BFF;">GeoIP</span> |
-  <span style="color:#28A745;">Bash</span> |
-  <span style="color:#6f42c1;">SSH</span> |
-  <span style="color:#20c997;">Auth.log</span>
-</strong>
-
-
-  <p>
-  Este proyecto implementa un sistema defensivo automatizado que analiza los intentos fallidos de acceso SSH y bloquea IPs sospechosas según su país de origen.
-
-  Utiliza GeoIP para identificar conexiones no españolas y aplica reglas dinámicas con iptables. El script se ejecuta localmente, registra cada acción y permite visualizar los bloqueos en tiempo real.
-
-  El resultado es una capa de protección reactiva, ligera y documentable, alineada con buenas prácticas de ciberseguridad operativa.
-  </p>
-
-
-
-  <div class="audio-proyecto" style="margin-top: 8px;">
-    <p><strong>Versión en audio:</strong></p>
-    <audio controls controlsList="nodownload noplaybackrate">
-      <source src="https://rafaelmperez.com/sounds/geoip.aac" type="audio/mpeg">
-      Tu navegador no soporta el elemento de audio.
-    </audio>
-  <p>
-    <a href="https://rafaelmperez.com/proyectogeoip.html" 
-       target="_blank" 
-       class="sysadmin-badge">
-      <strong>Ver documentación técnica</strong>
-    </a>
-  </p>
-    
-  </div>
-</div>
-
-
-  
-
-   <!-- CARD 2 -->
-    <div class="card">
-<img src="https://rafaelmperez.com/assets/img/proyectografana2.jpg" 
-     alt="Sistema de Detección de Intrusos con Visualización en Grafana" 
-     style="width:100%; height:200px; object-fit:cover;">
-
-
-<h3 style="font-size: 1em;"><i class="fas fa-chart-line"></i> Sistema de Detección de Intrusos con Visualización en Grafana</h3>
-      
-  <strong class="techline"> 
-  <span style="color:#E95420;">Ubuntu</span> |
-  <span style="color:#F46800;">Grafana</span> |
-  <span style="color:#6C757D;">Suricata</span> |
-  <span style="color:#28A745;">Node Exporter</span> |
-  <span style="color:#007BFF;">Fail2ban</span>
-</strong>
-            
-      
-
-      <p>
-        Implementé un sistema de detección de intrusos en un servidor Linux que permite identificar intentos de acceso sospechosos (como fuerza bruta por SSH, escaneos de puertos o actividad anómala) y visualicé estos eventos en tiempo real mediante paneles gráficos en Grafana. El objetivo es reforzar la seguridad del sistema mediante monitoreo activo y alertas automatizadas.
-      </p>
-      <p><strong>Microproyecto en desarrollo. Próximamente.</strong></p>
-      <div class="audio-proyecto" style="margin-top: 8px;">
-        <p><strong>Versión en audio:</strong></p>
-        <audio controls controlsList="nodownload noplaybackrate">
-          <source src="https://rafaelmperez.com/sounds/proyectografana.aac" type="audio/mpeg">
-          Tu navegador no soporta el elemento de audio.
-        </audio>
-      </div>
-    </div>
-    
-<!-- CARD: Auditoría de Seguridad en Aplicaciones Móviles -->
-<div class="card">
-  <img src="https://rafaelmperez.com/assets/img/mobsf.jpg" 
-       alt="Auditoría de Seguridad en Aplicaciones Móviles" 
-       style="width:100%; height:200px; object-fit:cover;">
-
-  <h3 style="font-size: 1em;"><i class="fas fa-mobile-alt"></i> Auditoría de Seguridad en Apps Móviles</h3>
-
-    <strong class="techline"> 
-    <span style="color:#6C757D;">MobSF</span> |
-    <span style="color:#DC3545;">Burp Suite</span> |
-    <span style="color:#28A745;">Android Studio</span> |
-    <span style="color:#007BFF;">Wireshark</span>
-  </strong>
-
-  <p>
-    Realicé un análisis completo de seguridad sobre aplicaciones móviles Android, combinando técnicas estáticas y dinámicas. Utilicé MobSF para extraer permisos, endpoints y vulnerabilidades sin ejecutar la app, y configuré un entorno con Android Studio y Genymotion para interceptar tráfico en tiempo real mediante Burp Suite y Wireshark. Además, documenté cada fase con capturas, logs y recomendaciones técnicas. El proyecto demuestra cómo auditar apps desde una perspectiva ofensiva y defensiva, en un entorno controlado y reproducible.
-  </p>
-
-  <p><strong>Proyecto en desarrollo. Próximamente.</strong></p>
-
-  <div class="audio-proyecto" style="margin-top: 8px;">
-    <p><strong>Versión en audio:</strong></p>
-    <audio controls controlsList="nodownload noplaybackrate">
-      <source src="" type="audio/mpeg">
-      Tu navegador no soporta el elemento de audio.
-    </audio>
-  </div>
-</div>
-
-
-  
-        
-
-
-
-
-        <!-- CARD 3 -->
-      <div class="card">
-<img src="https://rafaelmperez.com/assets/img/proyectopentesting.jpg" 
-     alt="Laboratorio de Pentesting Local con Máquinas Vulnerables" 
-     style="width:100%; height:200px; object-fit:cover;">
-        
-<h3 style="font-size: 1em;"><i class="fas fa-bug"></i> Laboratorio de Pentesting Local con Máquinas Vulnerables</h3>
-        
-        
- 
-  <strong class="techline"> 
-  <span style="color:#6C757D;">VirtualBox</span> |
-  <span style="color:#DC3545;">Kali Linux</span> |
-  <span style="color:#28A745;">Metasploitable</span> |
-  <span style="color:#007BFF;">OWASP</span>
-</strong>
-
-<p>
-  Diseñé un entorno virtual de pentesting utilizando máquinas vulnerables como Metasploitable y OWASP Juice Shop, desplegadas en VirtualBox junto con Kali Linux. Realicé escaneos de red con Nmap, explotaciones básicas con Metasploit y apliqué técnicas de hardening para reforzar la seguridad de los sistemas. Cada fase del laboratorio fue documentada, permitiendo una comprensión clara de los vectores de ataque y las medidas defensivas aplicadas en un entorno controlado y educativo.
-</p>
-      </p>
-      <p><strong>Microproyecto en desarrollo. Próximamente.</strong></p>
-      <div class="audio-proyecto" style="margin-top: 8px;">
-        <p><strong>Versión en audio:</strong></p>
-        <audio controls controlsList="nodownload noplaybackrate">
-          <source src="" type="audio/mpeg">
-          Tu navegador no soporta el elemento de audio.
-        </audio>
-      </div>
-    </div>
-
-
-      <!-- CARD IA LOCAL -->
-<div class="card">
-  <img src="https://rafaelmperez.com/assets/img/proyecto_pipeline1.jpg" 
-       alt="Desarrollo de Pipeline en Bash" 
-       style="width:100%; height:200px; object-fit:cover;">
-
-  <h3 style="font-size: 1em;"><i class="fas fa-robot"></i> Desarrollo de Pipeline en Bash</h3>
-    
-  <strong class="techline"> 
-  <span style="color:#E95420;">Ubuntu</span> |
-  <span style="color:#28A745;">Bash</span> |
-  <span style="color:#6F42C1;">Gemma&nbsp;2B</span> |
-  <span style="color:#17A2B8;">IA&nbsp;Local</span> |
-  <span style="color:#FF9800;">Markdown</span> |
-  <span style="color:#795548;">Pandoc</span>
-</strong>
-
-  <p>
-Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado para registrar las sesiones en la terminal, explicar automáticamente los comandos ejecutados y generar informes técnicos reproducibles en PDF/DOCX. El sistema prioriza trazabilidad, eficiencia y privacidad, su integración con el modelo de lenguaje local Gemma 2B permite potenciar la generación de explicaciones técnicas sin conexión a la red y automatizar tareas repetitivas. Esta arquitectura es aplicable en auditorías, bastionado de sistemas y formación técnica.          <p>
-
-
-             
-  <div class="audio-proyecto" style="margin-top: 8px;">
-    <p><strong>Versión en audio:</strong></p>
-    <audio controls controlsList="nodownload noplaybackrate">
-      <source src="https://rafaelmperez.com/sounds/proyectopipeline.aac" type="audio/mpeg">
-      Tu navegador no soporta el elemento de audio.
-    </audio>
-
-
-  <a href="https://rafaelmperez.com/ialocal.html" target="_blank" class="sysadmin-badge">
-   <strong>Ver documentación técnica</strong>
-  </a>
-    
-  </div>
-</div>
-
-    
-
-      </div>
-</section>
-<!-- FIN SECCIÓN RETOS/MICROPROYECTOS -->
 
   <!-- SECCIÓN ORIGINAL -->
 <section id="scripts">
@@ -2953,6 +2649,7 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
   });
 </script>
 </html>
+
 
 
 
