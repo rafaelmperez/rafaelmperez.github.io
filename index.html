@@ -1709,10 +1709,15 @@ section {
     color: #ffd700 !important; /* tono más brillante para destacar títulos */
   }
 
-  /* Párrafos y textos */
-  p, li, span, a, strong {
-    color: #d4af37 !important;
-  }
+p, li, a, strong {
+  color: #d4af37;
+}
+
+/* Solo aplica dorado a spans que no tengan color propio */
+span:not([style*="color"]) {
+  color: #d4af37;
+}
+
 
   /* Botones */
   button, .btn, .play-btn {
@@ -2811,6 +2816,7 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
   });
 </script>
 </html>
+
 
 
 
