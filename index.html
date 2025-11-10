@@ -1769,7 +1769,7 @@ section {
     color: #d4af37 !important;
   }
 
-  /* 🔸 Mantener color original de los spans con color inline */
+  /*  Mantener color original de los spans con color inline */
   span[style*="color:"] {
     color: inherit !important;
   }
@@ -1814,29 +1814,31 @@ section {
   }
 }
 
-    /* ==========================================
-   🎨 Estilo para la sección de herramientas
+   /* ==========================================
+   🔧 Ajuste fino de los badges de herramientas
    ========================================== */
 .habilidades-icons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 3px; /* Espacio reducido entre los badges */
+  gap: 2px; /* MUY poco espacio entre logos */
+  row-gap: 2px; /* también reduce el espacio entre filas */
   padding-top: 4px;
 }
 
-/* Ajuste del tamaño general de los badges */
+/* Tamaño ligeramente mayor */
 .habilidades-icons img {
-  height: 32px; /* Más grandes que el tamaño por defecto (~28px) */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 38px;
+  margin: 0; /* elimina márgenes extra por si los hay */
+  transition: transform 0.2s ease;
 }
 
-/* Efecto visual sutil al pasar el ratón */
+/* Efecto hover suave */
 .habilidades-icons img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 6px rgba(255, 215, 0, 0.3); /* brillo dorado leve */
+  transform: scale(1.06);
 }
+
  
 
 
@@ -1847,10 +1849,10 @@ section {
   <!-- Aquí empieza tu contenido -->
 </body>
 </html>
-  <!-- 🔹 Contenedor del traductor (necesario para Google) -->
+  <!-- Contenedor del traductor (necesario para Google) -->
   <div id="google_translate_element" style="display: none;"></div>
 
-  <!-- 🔹 Botón para traducir -->
+  <!-- Botón para traducir -->
   <div class="language-switcher">
     <a href="#" id="translate-fr">
       <img src="https://rafaelmperez.com/frflags.jpg" alt="Drapeau de la France" class="flag">
@@ -1858,7 +1860,7 @@ section {
     </a>
   </div>
 
-  <!-- 🔹 Script para activar la traducción -->
+  <!-- Script para activar la traducción -->
   <script type="text/javascript">
     // Inicializa el traductor de Google
     function googleTranslateElementInit() {
@@ -1969,7 +1971,7 @@ section {
 </script>
 
 
-  <!-- 👇 Aquí va el script, justo antes de cerrar body -->
+  <!-- Aquí va el script, justo antes de cerrar body -->
   <script src="script.js"></script>
 </body>
 </html>
@@ -2088,7 +2090,7 @@ section {
     <i class="fas fa-tools"></i> Entornos & Herramientas
   </h3>
 
-  <div class="habilidades-icons" style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center; align-items:center; padding-top:8px;">
+<div class="habilidades-icons">
 
     <!-- Sistemas Operativos -->
     <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Ubuntu" title="Ubuntu" />
@@ -2853,6 +2855,7 @@ section {
   });
 </script>
 </html>
+
 
 
 
