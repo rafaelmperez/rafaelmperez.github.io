@@ -1688,8 +1688,8 @@ section {
 <!-- Contenedor invisible para Google -->
 <div id="google_translate_element" style="display: none;"></div>
 
-  <script type="text/javascript">
-  // Inicializa el traductor de Google
+<script type="text/javascript">
+  // Inicializa el traductor
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
       pageLanguage: 'es',
@@ -1699,29 +1699,40 @@ section {
   }
 
   // Cargar el script del traductor de Google
-  (function() {
-    var gt = document.createElement('script');
-    gt.type = 'text/javascript';
-    gt.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-    document.body.appendChild(gt);
-  })();
+  const gtScript = document.createElement('script');
+  gtScript.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  document.head.appendChild(gtScript);
 
-  // Espera a que Google Translate cargue, luego traduce al francés al hacer clic
+  // Función para esperar hasta que el iframe de Google esté disponible
+  function waitForTranslateFrame(callback) {
+    const check = setInterval(() => {
+      const frame = document.querySelector(".goog-te-menu-frame");
+      if (frame && frame.contentDocument) {
+        clearInterval(check);
+        callback(frame);
+      }
+    }, 500);
+  }
+
   document.addEventListener("DOMContentLoaded", function() {
     const frBtn = document.getElementById("translate-fr");
+
     frBtn.addEventListener("click", function(e) {
       e.preventDefault();
-      const frame = document.querySelector(".goog-te-menu-frame");
-      if (frame) {
+
+      waitForTranslateFrame((frame) => {
         const inner = frame.contentDocument || frame.contentWindow.document;
         const lang = inner.querySelector('a[href*="fr"]');
-        if (lang) lang.click(); // Traduce al francés
-      } else {
-        alert("Espere un momento... el traductor se está cargando.");
-      }
+        if (lang) {
+          lang.click();
+        } else {
+          alert("No se encontró el idioma francés en el traductor.");
+        }
+      });
     });
   });
 </script>
+
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -2744,6 +2755,7 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
   });
 </script>
 </html>
+
 
 
 
