@@ -1759,6 +1759,14 @@ strong span[style*="color:"] {
   color: unset !important;
 }
 
+    /* Regla específica SOLO para esta línea de tecnologías */
+.techline span:nth-of-type(1) { color: #E95420 !important; } /* Kernel */
+.techline span:nth-of-type(2) { color: #007BFF !important; } /* PAM */
+.techline span:nth-of-type(3) { color: #28A745 !important; } /* Auditd */
+.techline span:nth-of-type(4) { color: #6f42c1 !important; } /* USBGuard */
+.techline span:nth-of-type(5) { color: #20c997 !important; } /* Lynis */
+
+
 </style>
 
 </style>
@@ -2101,13 +2109,13 @@ strong span[style*="color:"] {
 
   <h3 style="font-size: 1em;"> <i class="fas fa-lock"></i> Bastionado completo de Ubuntu 24.04 LTS </h3>
 
-  <strong> 
-    <span style="color:#E95420;">Kernel</span> | 
-    <span style="color:#007BFF;">PAM</span> | 
-    <span style="color:#28A745;">Auditd</span> | 
-    <span style="color:#6f42c1;">USBGuard</span> | 
-    <span style="color:#20c997;">Lynis</span> 
-  </strong>
+<strong class="techline"> 
+  <span style="color:#E95420;">Kernel</span> | 
+  <span style="color:#007BFF;">PAM</span> | 
+  <span style="color:#28A745;">Auditd</span> | 
+  <span style="color:#6f42c1;">USBGuard</span> | 
+  <span style="color:#20c997;">Lynis</span> 
+</strong>
 
   <p> Este proyecto documenta el proceso completo de bastionado de un sistema Ubuntu 24.04 LTS, siguiendo estándares CIS, NIST y OWASP. Se aplicaron medidas defensivas en múltiples capas: kernel, autenticación, servicios, red, logging y control físico, sin comprometer la funcionalidad del sistema.
 
@@ -2838,6 +2846,7 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
   });
 </script>
 </html>
+
 
 
 
