@@ -1637,101 +1637,87 @@ section {
 }
 
     .language-switcher {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 9999;
-}
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
 
-.language-switcher a {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  text-decoration: none;
-  background-color: #222;
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 8px;
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  transition: background-color 0.3s;
-}
+    .language-switcher a {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      background-color: #222;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      transition: background-color 0.3s;
+    }
 
-.language-switcher a:hover {
-  background-color: #444;
-}
+    .language-switcher a:hover {
+      background-color: #444;
+    }
 
-.language-switcher .flag {
-  width: 20px;
-  height: 14px;
-  border-radius: 2px;
-}
-
-    
+    .language-switcher .flag {
+      width: 20px;
+      height: 14px;
+      border-radius: 2px;
+    }
   </style>
-  
-
 </head>
 
+<body>
+  <!-- 🔹 Contenedor del traductor (necesario para Google) -->
+  <div id="google_translate_element" style="display: none;"></div>
 
-</script>
-</head>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-
+  <!-- 🔹 Botón para traducir -->
   <div class="language-switcher">
-  <a href="#" id="translate-fr">
-    <img src="https://rafaelmperez.com/frflags.jpg" alt="Drapeau de la France" class="flag">
-    Français
-  </a>
-</div>
+    <a href="#" id="translate-fr">
+      <img src="https://rafaelmperez.com/frflags.jpg" alt="Drapeau de la France" class="flag">
+      Français
+    </a>
+  </div>
 
-<!-- Contenedor invisible para Google -->
-<div id="google_translate_element" style="display: none;"></div>
+  <!-- 🔹 Script para activar la traducción -->
+  <script type="text/javascript">
+    // Inicializa el traductor de Google
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'fr,en',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
 
-<script type="text/javascript">
-  // Inicializa el traductor
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'es',
-      includedLanguages: 'fr,en',
-      autoDisplay: false
-    }, 'google_translate_element');
-  }
+    // Cargar el script de Google Translate
+    const gtScript = document.createElement('script');
+    gtScript.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    document.head.appendChild(gtScript);
 
-  // Cargar el script del traductor de Google
-  const gtScript = document.createElement('script');
-  gtScript.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-  document.head.appendChild(gtScript);
+    // Cambiar idioma usando la cookie de Google Translate
+    function translateTo(lang) {
+      const domain = window.location.hostname.includes("github.io")
+        ? "github.io"
+        : window.location.hostname;
+      document.cookie = `googtrans=/es/${lang};domain=.${domain};path=/`;
+      location.reload();
+    }
 
-  // Función para esperar hasta que el iframe de Google esté disponible
-  function waitForTranslateFrame(callback) {
-    const check = setInterval(() => {
-      const frame = document.querySelector(".goog-te-menu-frame");
-      if (frame && frame.contentDocument) {
-        clearInterval(check);
-        callback(frame);
-      }
-    }, 500);
-  }
-
-  document.addEventListener("DOMContentLoaded", function() {
-    const frBtn = document.getElementById("translate-fr");
-
-    frBtn.addEventListener("click", function(e) {
-      e.preventDefault();
-
-      waitForTranslateFrame((frame) => {
-        const inner = frame.contentDocument || frame.contentWindow.document;
-        const lang = inner.querySelector('a[href*="fr"]');
-        if (lang) {
-          lang.click();
-        } else {
-          alert("No se encontró el idioma francés en el traductor.");
-        }
+    // Evento de clic en el botón
+    document.addEventListener("DOMContentLoaded", () => {
+      const frBtn = document.getElementById("translate-fr");
+      frBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        translateTo("fr");
       });
     });
-  });
-</script>
+  </script>
+</body>
+</html>
+
 
 
 
@@ -2755,6 +2741,7 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
   });
 </script>
 </html>
+
 
 
 
