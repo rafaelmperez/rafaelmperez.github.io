@@ -1404,28 +1404,41 @@ a[href^="mailto:"] {
   font-weight: bold; /* Opcional: para que se vea más destacado */
   color: #000000;     /* Opcional: para que combine con tu estilo */
 }
-#sobre-mi p {
-  margin-bottom: 2.5rem; /* Aumenta el espacio entre párrafos */
-  line-height: 1.8;       /* Mejora la legibilidad del texto */
-  font-size: 2.1rem;      /* Si aún no lo has ajustado, esto lo hace más cómodo de leer */
+   /* Ajustes visuales para la sección "Sobre mí" */
+#sobre-mi {
+  margin-bottom: 40px; /* separa del resto de secciones */
 }
+
 #sobre-mi .card {
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* reduce el espacio vertical entre elementos */
+  padding: 20px;
 }
 
-#sobre-mi .imagen-sobre-mi {
-  margin-bottom: 1.5rem;
+/* Imagen más compacta y centrada */
+.imagen-sobre-mi img {
+  width: 180px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px; /* menos espacio debajo de la imagen */
 }
 
+/* Texto más ajustado */
 .texto-sobre-mi {
-  padding: 1rem 0;
-  max-width: 700px;
+  max-width: 800px;
+  line-height: 1.6;
   margin: 0 auto;
 }
 
-#sobre-mi .card:hover {
-  transform: none !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.texto-sobre-mi p {
+  margin-bottom: 10px; /* menos separación entre párrafos */
+}
+
+/* Botón PDF más cerca del texto */
+#sobre-mi .sysadmin-badge {
+  margin-top: 10px;
 }
 #certificaciones .card:hover {
   transform: none !important;
@@ -1838,42 +1851,7 @@ section {
   }
 }
 
-    /* Ajustes visuales para la sección "Sobre mí" */
-#sobre-mi {
-  margin-bottom: 40px; /* separa del resto de secciones */
-}
-
-#sobre-mi .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px; /* reduce el espacio vertical entre elementos */
-  padding: 20px;
-}
-
-/* Imagen más compacta y centrada */
-.imagen-sobre-mi img {
-  width: 180px;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 10px; /* menos espacio debajo de la imagen */
-}
-
-/* Texto más ajustado */
-.texto-sobre-mi {
-  max-width: 800px;
-  line-height: 1.6;
-  margin: 0 auto;
-}
-
-.texto-sobre-mi p {
-  margin-bottom: 10px; /* menos separación entre párrafos */
-}
-
-/* Botón PDF más cerca del texto */
-#sobre-mi .sysadmin-badge {
-  margin-top: 10px;
-}
+ 
 
 
   </style>
@@ -2895,6 +2873,7 @@ section {
   });
 </script>
 </html>
+
 
 
 
