@@ -1670,33 +1670,33 @@ section {
 
 
     <style>
-  /* Fondo general y colores base */
+<style>
+  /* Fondo general */
   body {
     background-color: #000 !important;
-    color: #d4af37 !important; /* dorado elegante */
+    color: #d4af37 !important; /* dorado base */
     font-family: "Poppins", sans-serif;
   }
 
-  /* Encabezado y barra de navegación */
+  /* Encabezado y navegación */
   header, .encabezado, .barra-superior, nav {
     background-color: #000 !important;
   }
 
-  /* Enlaces del menú */
   nav a {
-    color: #d4af37 !important;
+    color: #d4af37;
     text-decoration: none;
     padding: 10px 15px;
-    transition: color 0.3s, background-color 0.3s;
+    transition: all 0.3s ease;
   }
 
   nav a:hover {
-    color: #000 !important;
-    background-color: #d4af37 !important;
+    color: #000;
+    background-color: #d4af37;
     border-radius: 6px;
   }
 
-  /* Recuadros o secciones */
+  /* Secciones, tarjetas y recuadros */
   section, .card, .proyecto, .habilidad, .contenedor, .bloque {
     background-color: #000 !important;
     border: 1px solid #d4af37 !important;
@@ -1706,31 +1706,31 @@ section {
 
   /* Títulos */
   h1, h2, h3, h4, h5, h6 {
-    color: #ffd700 !important; /* tono más brillante para destacar títulos */
+    color: #ffd700 !important;
   }
 
-p, li, a, strong {
-  color: #d4af37;
-}
+  /* Párrafos, listas, enlaces, texto general */
+  p, li, a, strong, em, code {
+    color: #d4af37 !important;
+  }
 
-/* Solo aplica dorado a spans que no tengan color propio */
-span:not([style*="color"]) {
-  color: #d4af37;
-}
-
+  /* 🔸 Mantener color original de los spans con color inline */
+  span[style*="color:"] {
+    color: inherit !important;
+  }
 
   /* Botones */
   button, .btn, .play-btn {
-    background-color: #000 !important;
-    color: #d4af37 !important;
-    border: 1px solid #d4af37 !important;
+    background-color: #000;
+    color: #d4af37;
+    border: 1px solid #d4af37;
     border-radius: 6px;
     transition: all 0.3s ease;
   }
 
   button:hover, .btn:hover, .play-btn:hover {
-    background-color: #d4af37 !important;
-    color: #000 !important;
+    background-color: #d4af37;
+    color: #000;
   }
 
   /* Imagen del banner */
@@ -1739,6 +1739,21 @@ span:not([style*="color"]) {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
   }
+
+  /* GitHub badge */
+  .sysadmin-badge {
+    background-color: #24292e !important;
+    color: #fff !important;
+    border: 1px solid #d4af37 !important;
+    transition: all 0.3s ease;
+  }
+
+  .sysadmin-badge:hover {
+    background-color: #d4af37 !important;
+    color: #000 !important;
+  }
+</style>
+
 </style>
 
   </style>
@@ -2816,6 +2831,7 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
   });
 </script>
 </html>
+
 
 
 
