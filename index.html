@@ -171,7 +171,57 @@
 </head>
 
   <style>
-    
+    <head>
+  ...
+  <style>
+    /* 🎧 Recuadros de audio en proyectos y presentación */
+    .audio-proyecto,
+    .audio-presentacion {
+      background-color: #000;
+      border: 1px solid #d4af37;
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin-top: 20px;
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+      color: #d4af37;
+    }
+
+    .audio-proyecto p strong,
+    .audio-presentacion p strong {
+      color: #d4af37;
+      font-weight: 600;
+    }
+
+    .audio-proyecto audio,
+    .audio-presentacion audio {
+      width: 100%;
+      border-radius: 6px;
+      margin-top: 8px;
+      background-color: #111;
+    }
+
+    .audio-proyecto .sysadmin-badge,
+    .audio-presentacion .sysadmin-badge {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #24292e !important;
+      color: #fff !important;
+      border: 1px solid #d4af37 !important;
+      border-radius: 6px;
+      padding: 6px 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .audio-proyecto .sysadmin-badge:hover,
+    .audio-presentacion .sysadmin-badge:hover {
+      background-color: #d4af37 !important;
+      color: #000 !important;
+    }
+  </style>
+</head>
+
   /* Todo tu CSS aquí... */
 /* ==========================================
    🎯 Colores fijos para líneas de tecnologías
@@ -2600,6 +2650,7 @@ section {
   });
 </script>
 </html>
+
 
 
 
