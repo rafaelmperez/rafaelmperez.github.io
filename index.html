@@ -1636,6 +1636,37 @@ section {
   opacity: 1;
 }
 
+    .language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.language-switcher a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  background-color: #222;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.language-switcher a:hover {
+  background-color: #444;
+}
+
+.language-switcher .flag {
+  width: 20px;
+  height: 14px;
+  border-radius: 2px;
+}
+
     
   </style>
   
@@ -1647,13 +1678,50 @@ section {
 </head>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
-<body>
   <div class="language-switcher">
-    <a href="/fr/index.html">
-      <img src="https://rafaelmperez.com/frflags.jpg" alt="Drapeau de la France" class="flag"> Français
-    </a>
-  </div>
-</body>
+  <a href="#" id="translate-fr">
+    <img src="https://rafaelmperez.com/frflags.jpg" alt="Drapeau de la France" class="flag">
+    Français
+  </a>
+</div>
+
+<!-- Contenedor invisible para Google -->
+<div id="google_translate_element" style="display: none;"></div>
+
+  <script type="text/javascript">
+  // Inicializa el traductor de Google
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'es',
+      includedLanguages: 'fr,en',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  // Cargar el script del traductor de Google
+  (function() {
+    var gt = document.createElement('script');
+    gt.type = 'text/javascript';
+    gt.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    document.body.appendChild(gt);
+  })();
+
+  // Espera a que Google Translate cargue, luego traduce al francés al hacer clic
+  document.addEventListener("DOMContentLoaded", function() {
+    const frBtn = document.getElementById("translate-fr");
+    frBtn.addEventListener("click", function(e) {
+      e.preventDefault();
+      const frame = document.querySelector(".goog-te-menu-frame");
+      if (frame) {
+        const inner = frame.contentDocument || frame.contentWindow.document;
+        const lang = inner.querySelector('a[href*="fr"]');
+        if (lang) lang.click(); // Traduce al francés
+      } else {
+        alert("Espere un momento... el traductor se está cargando.");
+      }
+    });
+  });
+</script>
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -2676,6 +2744,7 @@ Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado p
   });
 </script>
 </html>
+
 
 
 
