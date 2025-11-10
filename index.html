@@ -136,6 +136,11 @@
   });
 });
 
+
+  
+function sanitizeInput(input) {
+  return input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
 </script>
   
 
@@ -627,40 +632,6 @@ body {
   max-width: 2000px;
 }
 
-section#sobre-mi {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-section#sobre-mi > *:first-child {
-  margin-top: 0 !important;
-}
-
-
-
-}
-
-.imagen-sobre-mi {
-  width: 250px; /* Puedes subirlo a 250px si quieres más presencia */
-  height: 320px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.imagen-sobre-mi img {
-  width: 80%;
-  height: auto;
-  object-fit: cover;
-}
-
-function sanitizeInput(input) {
-  return input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-}
 
 
 </style>
@@ -1404,9 +1375,8 @@ a[href^="mailto:"] {
   font-weight: bold; /* Opcional: para que se vea más destacado */
   color: #000000;     /* Opcional: para que combine con tu estilo */
 }
-
-  /* ==========================================
-   Ajustes visuales para la sección "Sobre mí"
+/* ==========================================
+   🎯 Ajustes visuales para la sección "Sobre mí"
    ========================================== */
 #sobre-mi {
   margin-bottom: 40px; /* separa del resto de secciones */
@@ -1425,15 +1395,37 @@ a[href^="mailto:"] {
   box-shadow: none;
 }
 
-/* Imagen más compacta y centrada */
-.imagen-sobre-mi img {
-  width: 180px;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 10px; /* menos espacio debajo de la imagen */
+/* Quita márgenes innecesarios superiores */
+section#sobre-mi {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
 
-/* Texto más ajustado */
+section#sobre-mi > *:first-child {
+  margin-top: 0 !important;
+}
+
+/* Imagen redonda y centrada */
+.imagen-sobre-mi {
+  width: 250px; /* tamaño visible del contenedor */
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 10px auto; /* centrado + espacio inferior */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen dentro del contenedor circular */
+.imagen-sobre-mi img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Texto ajustado */
 .texto-sobre-mi {
   max-width: 800px;
   line-height: 1.6;
@@ -1441,14 +1433,15 @@ a[href^="mailto:"] {
 }
 
 .texto-sobre-mi p {
-  margin-bottom: 10px; /* menos separación entre párrafos */
+  margin-bottom: 10px;
 }
 
 /* Botón PDF más cerca del texto */
 #sobre-mi .sysadmin-badge {
   margin-top: 10px;
 }
-  
+
+
   
 #certificaciones .card:hover {
   transform: none !important;
@@ -2843,6 +2836,7 @@ section {
   });
 </script>
 </html>
+
 
 
 
