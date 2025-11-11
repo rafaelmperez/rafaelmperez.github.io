@@ -1883,6 +1883,47 @@ section {
   margin-right: auto;
 }
 
+/* ==========================================
+   ✨ Tooltip dorado integrado en el menú
+   ========================================== */
+.nav-link {
+  position: relative;
+  color: #d4af37; /* dorado base */
+  text-decoration: none;
+  padding: 6px 10px;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: #fff; /* blanco suave al pasar el cursor */
+}
+
+/* Tooltip personalizado estilo hacker-tech */
+.nav-link::after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: -30px; /* aparece justo debajo del enlace */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9); /* fondo negro translúcido */
+  color: #ffd700; /* texto dorado brillante */
+  padding: 6px 10px;
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+  text-shadow: 0 0 6px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.25);
+}
+
+.nav-link:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-3px); /* pequeño efecto de flotación */
+}
 
 
   </style>
@@ -2925,6 +2966,7 @@ section {
   });
 </script>
 </html>
+
 
 
 
