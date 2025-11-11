@@ -2053,6 +2053,63 @@ nav a:hover {
   }
 }
 
+    /* ==========================================
+   💫 Efecto dorado animado en el teléfono
+   ========================================== */
+.phone-container {
+  position: relative;
+  background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+  border: 2px solid rgba(212, 175, 55, 0.6);
+  border-radius: 40px;
+  padding: 30px 30px;
+  box-shadow:
+    0 0 15px rgba(212, 175, 55, 0.25),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+  width: 440px;
+  max-width: 95%;
+  overflow: hidden;
+  transition: box-shadow 0.5s ease;
+}
+
+/* ✨ Brillo dorado móvil */
+.phone-container::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(255, 215, 0, 0.05) 60deg,
+    rgba(255, 215, 0, 0.2) 120deg,
+    transparent 180deg
+  );
+  animation: reflejo-dorado 6s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+/* 🔹 Activa el reflejo al pasar el cursor */
+.phone-container:hover::after {
+  opacity: 1;
+}
+
+/* 💫 Animación continua del reflejo */
+@keyframes reflejo-dorado {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Mantiene el contenido encima del reflejo */
+.phone-screen {
+  position: relative;
+  z-index: 2;
+}
+
 
   </style>
 </head>
@@ -3064,6 +3121,7 @@ nav a:hover {
   });
 </script>
 </html>
+
 
 
 
