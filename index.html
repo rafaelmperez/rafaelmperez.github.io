@@ -1396,7 +1396,6 @@ a[href^="mailto:"] {
 }
 
 /* Quita márgenes innecesarios superiores */
-/* ==== SECCIÓN SOBRE MÍ ==== */
 section#sobre-mi {
   margin-top: 0 !important;
   padding-top: 0 !important;
@@ -1406,7 +1405,7 @@ section#sobre-mi > *:first-child {
   margin-top: 0 !important;
 }
 
-/* Imagen redonda, centrada y con brillo dorado sutil */
+/* Imagen redonda, centrada, con borde y brillo dorado */
 .imagen-sobre-mi {
   width: 200px;
   height: 200px;
@@ -1415,10 +1414,44 @@ section#sobre-mi > *:first-child {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px auto;
-  box-shadow: 0 0 25px rgba(255, 215, 0, 0.25);
-  border: 2px s
+  margin: 15px auto 20px auto;
+  border: 2px solid rgba(255, 215, 0, 0.6); /* borde dorado */
+  box-shadow: 
+    0 0 10px rgba(255, 215, 0, 0.4),  /* halo dorado */
+    0 0 25px rgba(255, 215, 0, 0.2);  /* brillo suave */
+  transition: box-shadow 0.3s ease;
+}
 
+/* Efecto hover: más brillo dorado al pasar el cursor */
+.imagen-sobre-mi:hover {
+  box-shadow: 
+    0 0 15px rgba(255, 215, 0, 0.5),
+    0 0 35px rgba(255, 215, 0, 0.3);
+}
+
+/* Imagen dentro del contenedor circular */
+.imagen-sobre-mi img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Texto ajustado */
+.texto-sobre-mi {
+  max-width: 800px;
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+.texto-sobre-mi p {
+  margin-bottom: 10px;
+}
+
+/* Botón PDF más cerca del texto */
+#sobre-mi .sysadmin-badge {
+  margin-top: 10px;
+}
 
 
   
@@ -1818,30 +1851,7 @@ section {
   transform: scale(1.06);
 }
 
- .sysadmin-badge {
-  background-color: #24292e;
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  margin-top: 10px;
-  border: 1px solid rgba(255, 215, 0, 0.3);
-  transition: all 0.3s ease;
-}
-
-.sysadmin-badge:hover {
-  background-color: #000;
-  color: #ffd700;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-}
-
-.sysadmin-badge i {
-  color: #e63946;
-  margin-right: 6px;
-}
-
+ 
 
 
   </style>
@@ -1996,51 +2006,56 @@ section {
 
 <section id="sobre-mi">
   <div class="card">
-    <h2 class="terminal-heading dark">
+    <h2 class="terminal-heading">
       <i class="fas fa-user-shield"></i> >_Sobre mí
     </h2>
 
+    
+
     <div class="imagen-sobre-mi">
-      <img 
-        src="https://rafaelmperez.com/assets/img/sobremi2.jpg" 
-        alt="Foto de Rafael M. Pérez" 
-        fetchpriority="high">
+   <img 
+  src="https://rafaelmperez.com/assets/img/sobremi2.jpg" 
+  alt="Foto de Rafael M. Pérez" 
+  fetchpriority="high">
     </div>
 
-    <div class="texto-sobre-mi">
-      <p>
-        Hola, soy <strong>Rafael M. Pérez</strong>, estudiante de <strong>ASIR</strong> con especialización en 
-        <strong>ciberseguridad práctica</strong> y <strong>administración de sistemas seguros</strong>. 
-        Mi formación está respaldada por certificaciones de <strong>Cisco</strong> 
-        (CCST Cybersecurity, CCST Networking, Ethical Hacker) y el 
-        <strong>Google Cybersecurity Certificate</strong>, que avalan mis competencias en IT.
-      </p>
+    
 
-      <p>
-        Me dedico a <strong>endurecer sistemas</strong>, 
-        <strong>optimizar servidores Linux y Windows Server</strong> 
-        y <strong>prevenir vulnerabilidades</strong> aplicando estándares internacionales como 
-        <strong>OWASP</strong>, <strong>NIST</strong> y <strong>CIS Benchmarks</strong>. 
-        Además, hablo <strong>francés con fluidez</strong>, lo que me permite adaptarme en 
-        <strong>equipos internacionales.</strong>
-      </p>
+   <div class="texto-sobre-mi">
+  <p>
+<p>
+  Hola, soy <strong>Rafael M. Pérez</strong>, estudiante de <strong>ASIR</strong> con especialización en 
+  <strong>ciberseguridad práctica</strong> y <strong>administración de sistemas seguros</strong>. 
+  Mi formación está respaldada por certificaciones de <strong>Cisco</strong> 
+  (CCST Cybersecurity, CCST Networking, Ethical Hacker) y el 
+  <strong>Google Cybersecurity Certificate</strong>, que avalan mis competencias en IT.
+</p>
 
-      <p>
-        En cada proyecto busco <strong>automatizar procesos y reforzar la seguridad sin comprometer la operatividad</strong>. 
-        Documentar, medir y validar resultados es parte esencial de mi metodología.  
-        Te invito a descubrir mis trabajos en este <strong>portafolio</strong> y explorar mis scripts en <strong>GitHub</strong>.  
-        <strong>Contáctame</strong> si compartes la visión de una tecnología más <strong>segura y confiable</strong>.
-      </p>
-    </div>
+<p>
+  Me dedico a <strong>endurecer sistemas</strong>, 
+  <strong>optimizar servidores Linux y Windows Server</strong> 
+  y <strong>prevenir vulnerabilidades</strong> aplicando estándares internacionales como 
+  <strong>OWASP</strong>, <strong>NIST</strong> y <strong>CIS Benchmarks</strong>. 
+  Además, hablo <strong>francés con fluidez</strong>, lo que me permite adaptarme en 
+  <strong>equipos internacionales.</strong>
+</p>
 
-    <a href="https://rafaelmperez.com/docs/CARTA_PRESENTACION.pdf" 
-       target="_blank" 
-       class="sysadmin-badge">
-      <i class="fa-regular fa-file-pdf"></i> Carta de presentación PDF
-    </a>
-  </div>
-</section>
+<p>
+  En cada proyecto busco <strong>automatizar procesos y reforzar la seguridad sin comprometer la operatividad</strong>. 
+  Documentar, medir y validar resultados es parte esencial de mi metodología.  
+  Te invito a descubrir mis trabajos en este <strong>portafolio</strong> y explorar mis scripts en <strong>GitHub</strong>.  
+  <strong>Contáctame</strong> si compartes la visión de una tecnología más <strong>segura y confiable</strong>.
+</p>
+</div>
 
+
+</a><a href="https://rafaelmperez.com/docs/CARTA_PRESENTACION.pdf" 
+   target="_blank" 
+   class="sysadmin-badge"
+   style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold; border:1px solid #d4af37; transition:all 0.3s ease;">
+  <i class="fa-regular fa-file-pdf" style="color:#e63946; margin-right:6px;"></i>
+  Carta de presentación PDF
+</a>
 
 
 
@@ -2744,22 +2759,28 @@ section {
 
 <script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
 
+</section>
 
-  <section id="objetivos">
+
+<section id="objetivos">
   <div class="card hoja-de-ruta-card">
-    <h2 class="terminal-heading dark">
+    <h2 class="terminal-heading">
       <i class="fas fa-route"></i> Curriculum.py
     </h2>
+<a href="https://rafaelmperez.com/docs/CV_RafaelMPerez.pdf" 
+   class="sysadmin-badge" 
+   target="_blank" 
+   rel="noopener noreferrer"
+   style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+  <i class="fas fa-file-pdf" style="color:#e63946;"></i> Ver CV en PDF
+</a>
 
-    <a href="https://rafaelmperez.com/docs/CV_RafaelMPerez.pdf" 
-       class="sysadmin-badge"
-       target="_blank" 
-       rel="noopener noreferrer"
-       style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
-      <i class="fas fa-file-pdf" style="color:#e63946;"></i> Ver CV en PDF
-    </a>
   </div>
 </section>
+
+
+
+
 
 
 
@@ -2873,9 +2894,6 @@ section {
   });
 </script>
 </html>
-
-
-
 
 
 
