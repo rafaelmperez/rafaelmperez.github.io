@@ -1962,6 +1962,98 @@ nav a:hover {
 }
 
 
+    /* ==========================================
+   📱 Estilo teléfono para la sección de contacto
+   ========================================== */
+#contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem auto;
+}
+
+.phone-container {
+  background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+  border: 2px solid rgba(212, 175, 55, 0.6); /* borde dorado */
+  border-radius: 40px;
+  padding: 25px 20px;
+  box-shadow:
+    0 0 15px rgba(212, 175, 55, 0.2),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+  width: 360px;
+  max-width: 90%;
+  position: relative;
+}
+
+/* 🔸 Cámara y altavoz del "teléfono" */
+.phone-container::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 6px;
+  background: #222;
+  border-radius: 3px;
+  box-shadow: inset 0 0 3px rgba(255,255,255,0.1);
+}
+
+/* "Pantalla" (el formulario) */
+.phone-screen {
+  background: #000;
+  border-radius: 25px;
+  padding: 20px;
+  color: #ffd700;
+  box-shadow: inset 0 0 15px rgba(255, 215, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.phone-screen label {
+  color: #ffd700;
+}
+
+.phone-screen input,
+.phone-screen textarea {
+  width: 100%;
+  background: #111;
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.phone-screen input:focus,
+.phone-screen textarea:focus {
+  outline: none;
+  border-color: #ffd700;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+/* Botón de envío */
+.phone-screen .sysadmin-badge {
+  background-color: #24292e;
+  border: 1px solid #d4af37;
+  color: white;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.phone-screen .sysadmin-badge:hover {
+  background-color: #d4af37;
+  color: #000;
+}
+
+/* 📱 Responsive */
+@media (max-width: 480px) {
+  .phone-container {
+    width: 90%;
+    padding: 15px;
+  }
+}
+
+
   </style>
 </head>
 
@@ -2893,76 +2985,46 @@ nav a:hover {
 
 
 <section id="contacto">
+  <div class="phone-container">
+    <div class="phone-screen">
 
-  <!-- Card Contacto -->
-  <div class="card">
-    <h2 class="terminal-heading">
-      <i class="fas fa-envelope"></i> ping > contacto.log
-    </h2>
+      <h2 class="terminal-heading">
+        <i class="fas fa-envelope"></i> ping > contacto.log
+      </h2>
 
-<p>
-  <strong>
-    Siempre estoy abierto a discutir nuevas oportunidades. No dudes en contactarme.
-  </strong>
-</p>
+      <p><strong>Siempre estoy abierto a discutir nuevas oportunidades. No dudes en contactarme.</strong></p>
 
+      <form action="https://formspree.io/f/mdkwngad" method="POST">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
 
-    <section id="contacto" class="max-w-xl mx-auto my-12 p-6 bg-white rounded-lg shadow-md">
-  <form action="https://formspree.io/f/mdkwngad" method="POST" class="space-y-6">
-    
-    <div>
-      <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
-      <input type="text" id="nombre" name="nombre" required
-             class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-yellow-400 focus:outline-none">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <!-- Cloudflare CAPTCHA -->
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAB2gSyBoa7kMyPVF"></div>
+        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+        <div style="text-align:center;">
+          <a href="#" onclick="document.querySelector('form').submit();" class="sysadmin-badge">
+            <strong>Enviar mensaje</strong> <i class="fa-solid fa-paper-plane ms-2"></i>
+          </a>
+        </div>
+      </form>
+
+      <div class="my-4 text-center text-sm text-gray-400">- o si lo prefieres -</div>
+
+      <div class="text-center">
+        <a href="mailto:rmp.blueteam@proton.me" class="sysadmin-badge">
+          <i class="fa-solid fa-envelope"></i> rmp.blueteam@proton.me
+        </a>
+      </div>
+
     </div>
-
-    <div>
-  <label for="email" class="block text-sm font-medium text-gray-700">Correo electrónico</label>
-      <input type="email" id="email" name="email" required
-             class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-yellow-400 focus:outline-none">
-    </div>
-
-    <div>
-      <label for="mensaje" class="block text-sm font-medium text-gray-700">Mensaje</label>
-      <textarea id="mensaje" name="mensaje" rows="5" required
-                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-yellow-400 focus:outline-none"></textarea>
-    </div>
-
-    <!-- Cloudflare Turnstile CAPTCHA -->
-    <div class="cf-turnstile" data-sitekey="0x4AAAAAAB2gSyBoa7kMyPVF"></div>
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-
-<div class="mt-8 text-center">
-  <a href="#" 
-     onclick="document.querySelector('form').submit();" 
-     class="sysadmin-badge inline-block"
-     style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
-    <strong>Enviar mensaje</strong>
-    <i class="fa-solid fa-paper-plane ms-2"></i>
-  </a>
-</div>
-
-
-
-<!-- Separador visual opcional -->
-<div class="my-4 text-center text-gray-500 text-sm">
-  -o si lo prefieres-
-</div>
-
-<div class="text-center">
-  <a href="mailto:rmp.blueteam@proton.me" 
-     class="sysadmin-badge inline-flex items-center gap-2"
-     style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
-    <i class="fa-solid fa-envelope"></i>
-    rmp.blueteam@proton.me
-  </a>
-</div>
-
-</div>
-
-
-
-  </form>
+  </div>
 </section>
 
 
@@ -3002,6 +3064,7 @@ nav a:hover {
   });
 </script>
 </html>
+
 
 
 
