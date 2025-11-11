@@ -1943,19 +1943,24 @@ nav a:hover {
 }
 
 
-    /* ==========================================
-   ⚙️ Tamaño mejorado para los iconos de herramientas
+/* ==========================================
+   ⚙️ Tamaño equilibrado para los iconos de herramientas
    ========================================== */
 .habilidades-icons img {
-  height: 48px !important; /* antes 38px */
+  height: 42px !important; /* antes 38px, ahora un poco mayor */
   width: auto !important;
   margin: 2px;
-  transition: transform 0.25s ease;
+  transition: transform 0.2s ease;
 }
 
 .habilidades-icons img:hover {
-  transform: scale(1.08);
+  transform: scale(1.05); /* efecto muy leve */
 }
+
+.habilidades-icons {
+  row-gap: 4px; /* espacio suave entre filas */
+}
+
 
   </style>
 </head>
@@ -2997,6 +3002,7 @@ nav a:hover {
   });
 </script>
 </html>
+
 
 
 
