@@ -1839,7 +1839,33 @@ section {
   transform: scale(1.06);
 }
 
- 
+ .card {
+  background-color: #000;
+  border: 1px solid #ffcc00;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 12px rgba(255, 204, 0, 0.15);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Share Tech Mono', monospace; /* tipografía estilo tech */
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #b8860b, #ffd700, #b8860b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-header i {
+  color: #ffd700;
+  font-size: 1.3em;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
 
 
   </style>
@@ -2085,11 +2111,13 @@ section {
 </div>
 
 
-<!-- CARD: Entornos & Herramientas (Badges estilo GitHub) -->
 <div class="card">
-  <h3 style="font-size: 1em;">
-    <i class="fas fa-tools"></i> Entornos & Herramientas
-  </h3>
+  <div class="card-header">
+    <i class="fas fa-terminal"></i>
+    <h3>Entornos & Herramientas</h3>
+  </div>
+</div>
+
 
 <div class="habilidades-icons">
 
@@ -2882,6 +2910,7 @@ section {
   });
 </script>
 </html>
+
 
 
 
