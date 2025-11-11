@@ -1396,6 +1396,7 @@ a[href^="mailto:"] {
 }
 
 /* Quita márgenes innecesarios superiores */
+/* ==== SECCIÓN SOBRE MÍ ==== */
 section#sobre-mi {
   margin-top: 0 !important;
   padding-top: 0 !important;
@@ -1405,17 +1406,18 @@ section#sobre-mi > *:first-child {
   margin-top: 0 !important;
 }
 
-/* Imagen redonda y centrada */
+/* Imagen redonda, centrada y con brillo dorado sutil */
 .imagen-sobre-mi {
-  width: 200px; /* tamaño visible del contenedor */
+  width: 200px;
   height: 200px;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto 10px auto; /* centrado + espacio inferior */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 15px auto 20px auto;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+  border: 2px solid rgba(255, 215, 0, 0.4);
 }
 
 /* Imagen dentro del contenedor circular */
@@ -1425,16 +1427,29 @@ section#sobre-mi > *:first-child {
   object-fit: cover;
 }
 
-/* Texto ajustado */
+/* Texto ajustado y legible en fondo oscuro */
 .texto-sobre-mi {
   max-width: 800px;
   line-height: 1.6;
   margin: 0 auto;
+  color: #ddd; /* texto gris claro para mejor contraste */
 }
 
 .texto-sobre-mi p {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
+
+/* Links dentro del texto (por si los usas) */
+.texto-sobre-mi a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.texto-sobre-mi a:hover {
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
 
 /* Botón PDF más cerca del texto */
 #sobre-mi .sysadmin-badge {
@@ -2017,56 +2032,51 @@ section {
 
 <section id="sobre-mi">
   <div class="card">
-    <h2 class="terminal-heading">
+    <h2 class="terminal-heading dark">
       <i class="fas fa-user-shield"></i> >_Sobre mí
     </h2>
 
-    
-
     <div class="imagen-sobre-mi">
-   <img 
-  src="https://rafaelmperez.com/assets/img/sobremi2.jpg" 
-  alt="Foto de Rafael M. Pérez" 
-  fetchpriority="high">
+      <img 
+        src="https://rafaelmperez.com/assets/img/sobremi2.jpg" 
+        alt="Foto de Rafael M. Pérez" 
+        fetchpriority="high">
     </div>
 
-    
+    <div class="texto-sobre-mi">
+      <p>
+        Hola, soy <strong>Rafael M. Pérez</strong>, estudiante de <strong>ASIR</strong> con especialización en 
+        <strong>ciberseguridad práctica</strong> y <strong>administración de sistemas seguros</strong>. 
+        Mi formación está respaldada por certificaciones de <strong>Cisco</strong> 
+        (CCST Cybersecurity, CCST Networking, Ethical Hacker) y el 
+        <strong>Google Cybersecurity Certificate</strong>, que avalan mis competencias en IT.
+      </p>
 
-   <div class="texto-sobre-mi">
-  <p>
-<p>
-  Hola, soy <strong>Rafael M. Pérez</strong>, estudiante de <strong>ASIR</strong> con especialización en 
-  <strong>ciberseguridad práctica</strong> y <strong>administración de sistemas seguros</strong>. 
-  Mi formación está respaldada por certificaciones de <strong>Cisco</strong> 
-  (CCST Cybersecurity, CCST Networking, Ethical Hacker) y el 
-  <strong>Google Cybersecurity Certificate</strong>, que avalan mis competencias en IT.
-</p>
+      <p>
+        Me dedico a <strong>endurecer sistemas</strong>, 
+        <strong>optimizar servidores Linux y Windows Server</strong> 
+        y <strong>prevenir vulnerabilidades</strong> aplicando estándares internacionales como 
+        <strong>OWASP</strong>, <strong>NIST</strong> y <strong>CIS Benchmarks</strong>. 
+        Además, hablo <strong>francés con fluidez</strong>, lo que me permite adaptarme en 
+        <strong>equipos internacionales.</strong>
+      </p>
 
-<p>
-  Me dedico a <strong>endurecer sistemas</strong>, 
-  <strong>optimizar servidores Linux y Windows Server</strong> 
-  y <strong>prevenir vulnerabilidades</strong> aplicando estándares internacionales como 
-  <strong>OWASP</strong>, <strong>NIST</strong> y <strong>CIS Benchmarks</strong>. 
-  Además, hablo <strong>francés con fluidez</strong>, lo que me permite adaptarme en 
-  <strong>equipos internacionales.</strong>
-</p>
+      <p>
+        En cada proyecto busco <strong>automatizar procesos y reforzar la seguridad sin comprometer la operatividad</strong>. 
+        Documentar, medir y validar resultados es parte esencial de mi metodología.  
+        Te invito a descubrir mis trabajos en este <strong>portafolio</strong> y explorar mis scripts en <strong>GitHub</strong>.  
+        <strong>Contáctame</strong> si compartes la visión de una tecnología más <strong>segura y confiable</strong>.
+      </p>
+    </div>
 
-<p>
-  En cada proyecto busco <strong>automatizar procesos y reforzar la seguridad sin comprometer la operatividad</strong>. 
-  Documentar, medir y validar resultados es parte esencial de mi metodología.  
-  Te invito a descubrir mis trabajos en este <strong>portafolio</strong> y explorar mis scripts en <strong>GitHub</strong>.  
-  <strong>Contáctame</strong> si compartes la visión de una tecnología más <strong>segura y confiable</strong>.
-</p>
-</div>
+    <a href="https://rafaelmperez.com/docs/CARTA_PRESENTACION.pdf" 
+       target="_blank" 
+       class="sysadmin-badge">
+      <i class="fa-regular fa-file-pdf"></i> Carta de presentación PDF
+    </a>
+  </div>
+</section>
 
-
-</a><a href="https://rafaelmperez.com/docs/CARTA_PRESENTACION.pdf" 
-   target="_blank" 
-   class="sysadmin-badge"
-   style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold; border:1px solid #d4af37; transition:all 0.3s ease;">
-  <i class="fa-regular fa-file-pdf" style="color:#e63946; margin-right:6px;"></i>
-  Carta de presentación PDF
-</a>
 
 
 
@@ -2899,6 +2909,7 @@ section {
   });
 </script>
 </html>
+
 
 
 
