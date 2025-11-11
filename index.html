@@ -1925,6 +1925,22 @@ section {
   transform: translateX(-50%) translateY(-3px); /* pequeño efecto de flotación */
 }
 
+/* ==========================================
+   ✨ Contraste del menú al pasar el cursor
+   ========================================== */
+nav a {
+  color: #d4af37; /* dorado base */
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #d4af37; /* fondo dorado */
+  color: #000000 !important; /* texto negro para contraste */
+}
 
   </style>
 </head>
@@ -2966,6 +2982,7 @@ section {
   });
 </script>
 </html>
+
 
 
 
