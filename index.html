@@ -571,16 +571,29 @@ footer a {
     transform: none;
     justify-content: center;
   }
-.banner-header {
-  width: 100%;
-  max-width: 400px;!important /* Reducido para que la imagen sea más pequeña */
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  image-rendering: crisp-edges;
+/* ==== CENTRADO Y ESTILO DEL BANNER PRINCIPAL ==== */
+.header-content {
+  text-align: center; /* centra todo el contenido dentro del header */
 }
+
+.banner-header {
+  display: block;
+  margin: 0 auto; /* centra la imagen horizontalmente */
+  max-width: 1000px; /* evita que se expanda demasiado */
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 215, 0, 0.3); /* borde dorado sutil */
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.15); /* halo dorado suave */
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover (brillo suave dorado) */
+.banner-header:hover {
+  box-shadow: 0 0 35px rgba(255, 215, 0, 0.3);
+  border-color: rgba(255, 215, 0, 0.6);
+}
+
 
 @media screen and (max-width: 768px) {
   .banner-header {
@@ -2897,6 +2910,7 @@ section {
   });
 </script>
 </html>
+
 
 
 
