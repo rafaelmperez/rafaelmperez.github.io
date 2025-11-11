@@ -1337,11 +1337,13 @@ html, body {
   transform: scale(1.05);
 }
 
-/* Aplica el estilo dark a TODAS las cabeceras terminal-heading */
+/* ==== CABECERAS TERMINAL (VERSIÓN OSCURA CENTRADA) ==== */
 .terminal-heading {
   display: flex;
+  justify-content: center;     /* centra el contenido horizontalmente */
   align-items: center;
   gap: 10px;
+  text-align: center;          /* asegura que el texto esté centrado */
   font-family: 'Share Tech Mono', monospace;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1353,7 +1355,7 @@ html, body {
     0 0 20px rgba(255, 215, 0, 0.3);
   border-bottom: 1px solid rgba(255, 215, 0, 0.3);
   padding-bottom: 6px;
-  margin: 0 0 12px 0;
+  margin: 0 0 16px 0;
 }
 
 /* Iconos dorados */
@@ -1364,6 +1366,7 @@ html, body {
     0 0 6px rgba(255, 255, 255, 0.7),
     0 0 12px rgba(255, 215, 0, 0.5);
 }
+
 
 }
 html, body {
@@ -2894,6 +2897,7 @@ section {
   });
 </script>
 </html>
+
 
 
 
