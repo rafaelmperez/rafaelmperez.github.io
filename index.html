@@ -1839,7 +1839,30 @@ section {
   transform: scale(1.06);
 }
 
- 
+ .sysadmin-badge {
+  background-color: #24292e;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.sysadmin-badge:hover {
+  background-color: #000;
+  color: #ffd700;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.sysadmin-badge i {
+  color: #e63946;
+  margin-right: 6px;
+}
+
 
 
   </style>
@@ -2747,28 +2770,22 @@ section {
 
 <script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
 
-</section>
 
-
-<section id="objetivos">
+  <section id="objetivos">
   <div class="card hoja-de-ruta-card">
-    <h2 class="terminal-heading">
+    <h2 class="terminal-heading dark">
       <i class="fas fa-route"></i> Curriculum.py
     </h2>
-<a href="https://rafaelmperez.com/docs/CV_RafaelMPerez.pdf" 
-   class="sysadmin-badge" 
-   target="_blank" 
-   rel="noopener noreferrer"
-   style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
-  <i class="fas fa-file-pdf" style="color:#e63946;"></i> Ver CV en PDF
-</a>
 
+    <a href="https://rafaelmperez.com/docs/CV_RafaelMPerez.pdf" 
+       class="sysadmin-badge"
+       target="_blank" 
+       rel="noopener noreferrer"
+       style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+      <i class="fas fa-file-pdf" style="color:#e63946;"></i> Ver CV en PDF
+    </a>
   </div>
 </section>
-
-
-
-
 
 
 
@@ -2882,6 +2899,7 @@ section {
   });
 </script>
 </html>
+
 
 
 
