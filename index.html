@@ -1866,7 +1866,41 @@ section {
   text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
 }
 
+---------------------------------------
+version oscura
+---------------------------------------
+    .card {
+  background-color: #000;
+  border: 1px solid #ffcc00;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 12px rgba(255, 204, 0, 0.15);
+}
 
+.card-header.dark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  text-shadow:
+    0 0 5px rgba(255, 255, 255, 0.6),
+    0 0 10px rgba(255, 215, 0, 0.4),
+    0 0 20px rgba(255, 215, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+  padding-bottom: 4px;
+}
+
+.card-header.dark i {
+  color: #ffd700;
+  font-size: 1.3em;
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.7),
+    0 0 12px rgba(255, 215, 0, 0.5);
+}
 
   </style>
 </head>
@@ -2020,9 +2054,12 @@ section {
 
 <section id="sobre-mi">
   <div class="card">
-    <h2 class="terminal-heading">
+    <h2 class="terminal-heading dark">
       <i class="fas fa-user-shield"></i> >_Sobre mí
     </h2>
+  </div>
+</section>
+
 
     
 
@@ -2910,6 +2947,7 @@ section {
   });
 </script>
 </html>
+
 
 
 
