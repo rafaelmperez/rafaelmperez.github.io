@@ -563,20 +563,25 @@ footer a {
     0 0 30px rgba(255,215,0,0.2);
 }
 
-/* 🔸 Ajustes individuales opcionales */
-.social-float a[href*="linkedin"] {
-  background-color: #0a0a0a;
-}
-.social-float a[href*="github"] {
-  background-color: #1a1a1a;
-}
+/* 🔸 Colores base uniformes */
+.social-float a[href*="linkedin"],
+.social-float a[href*="github"],
 .social-float a[href*="blogspot"] {
-  background-color: #1a0f00; /* tono marrón oscuro-dorado */
-  color: #ffcc33;
+  background-color: #0a0a0a; /* igual para los tres */
+  color: #fff;
+  transition: all 0.3s ease;
 }
+
+/* 🔸 Hover unificado */
+.social-float a[href*="linkedin"]:hover,
+.social-float a[href*="github"]:hover,
 .social-float a[href*="blogspot"]:hover {
-  background-color: #d4af37;
+  background-color: #d4af37; /* dorado brillante */
   color: #000;
+  transform: scale(1.15);
+  box-shadow:
+    0 0 15px rgba(255,215,0,0.4),
+    0 0 30px rgba(255,215,0,0.2);
 }
 
 
@@ -3246,6 +3251,7 @@ header {
   });
 </script>
 </html>
+
 
 
 
