@@ -2154,11 +2154,10 @@ body {
 
  /* 🌍 Selector de idioma fijo arriba a la derecha */
 .language-switcher {
-  all: unset; /* 🚫 elimina todas las reglas previas del selector */
-  position: fixed !important;
+  all: unset;
+  position: absolute !important;  /* ahora se mueve con el contenido */
   top: 15px !important;
   right: 20px !important;
-  z-index: 9999 !important;
   display: flex !important;
   align-items: center !important;
   gap: 8px !important;
@@ -2167,6 +2166,7 @@ body {
   border-radius: 8px !important;
   box-shadow: 0 0 10px rgba(255, 204, 0, 0.3) !important;
 }
+
 
 .language-switcher a {
   color: rgb(255, 204, 0) !important;
@@ -3202,6 +3202,7 @@ body {
   });
 </script>
 </html>
+
 
 
 
