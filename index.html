@@ -2302,9 +2302,8 @@ header {
 }
 
 
-
 /* ==========================================
-   🟡 NAV COMPACTO Y HORIZONTAL (OPTIMIZADO)
+   🟡 NAVBAR SIEMPRE HORIZONTAL + COMPACTO
    ========================================== */
 
 nav {
@@ -2312,45 +2311,56 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; /* permite varias filas horizontales */
-  padding: 0.5rem;
-  gap: 0.4rem; /* menos separación */
-  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+  flex-wrap: wrap; /* permite segunda fila horizontal */
+  gap: 0.4rem; /* separación entre enlaces */
+  padding: 0.4rem 0.6rem;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.25);
 }
 
+/* Enlaces del menú */
 nav a {
   color: #d4af37;
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.75rem; /* 🔸 más pequeño */
-  padding: 4px 6px; /* 🔸 botones compactos */
-  border-radius: 5px;
+  font-size: 0.8rem; /* más pequeño */
+  padding: 4px 7px;
   border: 1px solid rgba(212,175,55,0.35);
-  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 6px;
+  background-color: rgba(0,0,0,0.6);
   transition: all 0.3s ease;
+  white-space: nowrap; /* evita que se dividan en varias líneas */
 }
 
 nav a:hover {
   background-color: #d4af37;
   color: #000;
-  box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+  box-shadow: 0 0 8px rgba(255,215,0,0.3);
 }
 
-/* 🔹 En pantallas pequeñas: aún más compacto */
+/* 🔹 En pantallas pequeñas: mantener horizontal y aún más compacto */
 @media (max-width: 768px) {
   nav {
-    flex-direction: row;
+    flex-direction: row; /* 👈 fuerza distribución horizontal */
     justify-content: center;
     flex-wrap: wrap;
-    gap: 0.3rem;
+    gap: 0.25rem;
     padding: 0.3rem;
   }
 
   nav a {
-    font-size: 0.7rem; /* 🔸 aún más pequeño en móvil */
+    font-size: 0.7rem;  /* texto más pequeño en móvil */
     padding: 3px 5px;
     border-radius: 4px;
   }
+}
+
+/* 🔹 En pantallas muy pequeñas (por ejemplo, 360px) */
+@media (max-width: 400px) {
+  nav a {
+    font-size: 0.65rem;
+    padding: 2px 4px;
+  }
+}
 }
 
 
@@ -3376,6 +3386,7 @@ nav a:hover {
   });
 </script>
 </html>
+
 
 
 
