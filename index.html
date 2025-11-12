@@ -2150,17 +2150,17 @@ nav a:hover {
   display: none !important;
 }
 
-    /* ==========================================
-   👁️ Fondo dinámico (negro → gris carbón)
+ /* ==========================================
+   👁️ Fondo dinámico visible (negro → gris metálico)
    ========================================== */
 body {
-  background: linear-gradient(135deg, #000000, #111, #1a1a1a);
-  background-size: 400% 400%;
-  animation: bgShift 20s ease-in-out infinite;
-  color: #d4af37; /* texto dorado existente */
+  background: linear-gradient(135deg, #000000, #0d0d0d, #1a1a1a, #222);
+  background-size: 300% 300%;
+  animation: bgShift 25s ease-in-out infinite;
+  color: #d4af37; /* mantiene texto dorado */
 }
 
-/* Animación suave del gradiente */
+/* Movimiento suave del gradiente */
 @keyframes bgShift {
   0%   { background-position: 0% 50%; }
   50%  { background-position: 100% 50%; }
@@ -3178,6 +3178,7 @@ body {
   });
 </script>
 </html>
+
 
 
 
