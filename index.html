@@ -2151,49 +2151,37 @@ body {
   text-transform: none !important;
 }
 
-/* 🌍 Selector de idioma con estilo elegante y fijo en el header */
 .language-switcher {
-  position: absolute !important;   /* 🔹 Se mueve con el contenido, no fijo */
-  top: 20px !important;
-  right: 20px !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-  background-color: rgba(0, 0, 0, 0.8) !important;
-  padding: 8px 12px !important;
-  border-radius: 8px !important;
-  box-shadow: 0 0 10px rgba(255, 204, 0, 0.4) !important;
-  z-index: 99999 !important;
+  position: absolute; /* 👈 cambia 'fixed' por 'absolute' */
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
 }
 
-/* Estilo del enlace */
 .language-switcher a {
-  color: rgb(255, 204, 0) !important;
-  text-decoration: none !important;
-  font-weight: bold !important;
-  font-family: 'Montserrat', sans-serif !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 6px !important;
-  font-size: 0.95rem !important;
-  transition: color 0.3s ease !important;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  background-color: #222;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  transition: background-color 0.3s;
 }
 
 .language-switcher a:hover {
-  color: #fff !important;
+  background-color: #444;
 }
 
-/* Bandera */
 .language-switcher .flag {
-  width: 22px !important;
-  height: 16px !important;
-  border-radius: 2px !important;
-  transition: transform 0.2s ease !important;
+  width: 20px;
+  height: 14px;
+  border-radius: 2px;
 }
 
-.language-switcher .flag:hover {
-  transform: scale(1.1);
-}
 
 
 
@@ -3202,6 +3190,7 @@ body {
   });
 </script>
 </html>
+
 
 
 
