@@ -448,19 +448,6 @@ nav a {
   font-weight: bold;
 }
 
-
-.social-float a:nth-child(1) {
-  background-color: #0077B5; /* LinkedIn */
-}
-.social-float a:nth-child(3) {
-  background-color: #F57C00; /* Naranja Blogger real */
-}
-.social-float a:nth-child(2) {
-  background-color: #6e6e6e ; /* Github */
-}
-
-
-
 footer {
   width: 100%;          /* 100% del ancho de la ventana */
   margin: 0;             /* quita márgenes que lo puedan achicar */
@@ -2363,6 +2350,34 @@ header {
   width: 130px !important;
   height: 130px !important;
 
+
+
+  /* ==========================================
+   📱 Ajuste del botón de idioma en móvil
+   ========================================== */
+@media (max-width: 768px) {
+  .language-switcher {
+    position: fixed !important;   /* 🔹 se mantiene arriba al hacer scroll */
+    top: 10px !important;
+    right: 10px !important;
+    z-index: 10000 !important;    /* 🔹 encima de todo */
+  }
+
+  .language-switcher a {
+    padding: 4px 8px !important;
+    font-size: 0.8rem !important;
+    gap: 4px !important;
+    border-radius: 6px !important;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+  }
+
+  .language-switcher .flag {
+    width: 16px !important;
+    height: 12px !important;
+  }
+}
+
+
   </style>
 </head>
 
@@ -3383,6 +3398,7 @@ header {
   });
 </script>
 </html>
+
 
 
 
