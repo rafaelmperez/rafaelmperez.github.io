@@ -2237,48 +2237,50 @@ body {
 }
 
 
-    /* 🌍 Selector de idioma fijo (arriba a la derecha) */
+ /* 🌍 Selector de idioma fijo arriba a la derecha */
 .language-switcher {
-  position: fixed;
-  top: 15px;            /* distancia desde arriba */
-  right: 20px;          /* distancia desde el borde derecho */
-  z-index: 9999;        /* siempre encima de todo */
+  position: fixed !important;  /* fuerza el comportamiento fijo */
+  top: 15px;
+  right: 20px;
+  z-index: 9999;
   display: flex;
-  gap: 8px;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.7); /* fondo translúcido elegante */
-  padding: 6px 10px;
-  border-radius: 8px;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 8px 12px;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
   transition: background-color 0.3s ease;
-}
-
-.language-switcher:hover {
-  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .language-switcher a {
   display: flex;
   align-items: center;
-  gap: 5px;
-  text-decoration: none;
+  gap: 6px;
   color: rgb(255, 204, 0);
+  text-decoration: none;
+  font-weight: bold;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
   font-size: 0.95rem;
-  transition: transform 0.2s, color 0.3s;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .language-switcher a:hover {
-  transform: scale(1.05);
   color: #fff;
+  transform: scale(1.05);
 }
 
 .language-switcher .flag {
   width: 20px;
   height: 14px;
   border-radius: 2px;
+  transition: transform 0.2s;
 }
+
+.language-switcher .flag:hover {
+  transform: scale(1.1);
+}
+
 
 
   </style>
@@ -3286,6 +3288,7 @@ body {
   });
 </script>
 </html>
+
 
 
 
