@@ -930,20 +930,30 @@ h1.titulo-principal {
 }
 
 /* Estilo base — idéntico para todas las redes */
+/* 🔹 Iconos sociales — versión unificada dorada */
+.barra-superior .social-float {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 10px; /* mismo espaciado */
+}
+
 .social-float a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  font-size: 22px;
-  background-color: #111;               /* negro suave */
-  color: #d4af37;                       /* dorado metálico */
+  background-color: #111; /* fondo negro suave */
+  color: #d4af37;         /* dorado metálico */
+  text-align: center;
+  line-height: 48px;
+  font-size: 24px;
   border: 1px solid rgba(212,175,55,0.4);
   box-shadow: 0 0 10px rgba(212,175,55,0.15);
-  text-decoration: none;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 /* ✨ Hover dorado brillante */
@@ -957,21 +967,14 @@ h1.titulo-principal {
     0 0 30px rgba(255,215,0,0.2);
 }
 
-/* 🔸 Personalización mínima (mantienen coherencia) */
+/* 🔸 Mantiene mismo estilo para los tres enlaces */
 .social-float a[href*="linkedin"],
 .social-float a[href*="github"],
 .social-float a[href*="blogspot"] {
-  background-color: #111; /* todos con el mismo fondo */
+  background-color: #111; /* mismo fondo */
   color: #d4af37;
 }
 
-/* Igual hover para todos */
-.social-float a[href*="linkedin"]:hover,
-.social-float a[href*="github"]:hover,
-.social-float a[href*="blogspot"]:hover {
-  background-color: #d4af37;
-  color: #000;
-}
 
 
   
@@ -3290,6 +3293,7 @@ header {
   });
 </script>
 </html>
+
 
 
 
