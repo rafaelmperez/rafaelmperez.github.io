@@ -2128,6 +2128,11 @@ nav a:hover {
 @keyframes blink {
   50% { opacity: 0; }
 }
+    
+/* 🚫 Quita el cursor tipo terminal solo en la sección de contacto */
+#contacto .terminal-heading::after {
+  display: none !important;
+}
 
 
   </style>
@@ -3140,6 +3145,7 @@ nav a:hover {
   });
 </script>
 </html>
+
 
 
 
