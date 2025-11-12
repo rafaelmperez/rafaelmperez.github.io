@@ -2207,14 +2207,17 @@ body {
 .terminal-heading::after {
   content: "";
   display: inline-block;
-  width: 0.6em;
+  width: 0.58em;
   height: 1em;
   background-color: #ffffff !important;
   animation: blink-block 1.1s steps(1, start) infinite;
   position: relative;
   top: 2px;
-  margin-left: -0.05em; /* 👈 elimina el hueco entre texto y cursor */
+  margin-left: -0.18em; /* 👈 más negativo: elimina totalmente el espacio */
+  transform: translateY(1px); /* ajusta verticalmente al baseline */
+  vertical-align: baseline;
 }
+
 
 /* Parpadeo tipo terminal */
 @keyframes blink-block {
@@ -3244,6 +3247,7 @@ body {
   });
 </script>
 </html>
+
 
 
 
