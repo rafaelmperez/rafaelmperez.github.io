@@ -2238,56 +2238,87 @@ body {
 }
 
 /* ==========================================
-   🧠 Sección de habilidades a ancho completo
+   🧠 HABILIDADES — Versión horizontal y fija
    ========================================== */
 #habilidades {
-  width: 100vw;              /* ocupa todo el ancho de la ventana */
-  margin: 0;                 /* elimina márgenes automáticos */
-  padding: 3rem 0;           /* padding vertical únicamente */
-  background: rgba(0, 0, 0, 0.6); /* fondo negro translúcido para integrarse */
-  border-top: 1px solid rgba(255, 215, 0, 0.15);
-  border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+  width: 100vw;                          /* ocupa todo el ancho */
+  margin: 0;
+  padding: 2.5rem 0;
+  background: #0a0a0a;                   /* fondo estático */
+  border-top: 1px solid rgba(255, 215, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+  overflow-x: auto;                      /* permite scroll horizontal si hay muchas */
+  overflow-y: hidden;
+  white-space: nowrap;                   /* 🔹 fuerza disposición horizontal */
+  scroll-behavior: smooth;
+  text-align: center;
 }
 
-/* 🔹 Si usas contenedor interno */
+/* Contenedor de habilidades en línea */
 #habilidades .grid-habilidades {
-  width: 100%;
-  max-width: none;           /* elimina límites de ancho */
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5rem;
-  justify-items: center;
+  display: inline-flex;                  /* 🔹 los elementos se alinean en fila */
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: max-content;                    /* ancho se adapta al contenido */
   padding: 0 2rem;
   box-sizing: border-box;
 }
 
-/* 🔸 Tarjetas dentro (sin márgenes restrictivos) */
+/* Tarjeta individual (cada habilidad) */
 #habilidades .card {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #111;
-  border: 1px solid rgba(255, 215, 0, 0.25);
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.05);
   border-radius: 10px;
-  padding: 1.5rem;
+  padding: 1rem 1.5rem;
   color: #ffd700;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 120px;
 }
 
 #habilidades .card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
 }
 
-/* 🧩 Iconos */
+/* Iconos */
 #habilidades .habilidades-icons img {
-  width: 64px;
+  width: 40px;                           /* 🔹 más pequeño */
   height: auto;
-  transition: transform 0.3s ease;
+  margin-bottom: 10px;
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 #habilidades .habilidades-icons img:hover {
   transform: scale(1.15);
+  opacity: 1;
 }
+
+/* Texto debajo de los iconos */
+#habilidades h3 {
+  margin: 0.4rem 0 0;
+  color: #d4af37;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.9rem;
+}
+
+/* Scrollbar dorada opcional (desktop) */
+#habilidades::-webkit-scrollbar {
+  height: 8px;
+}
+#habilidades::-webkit-scrollbar-thumb {
+  background: rgba(255, 215, 0, 0.4);
+  border-radius: 4px;
+}
+#habilidades::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 215, 0, 0.6);
+}
+
 
 
 
@@ -3296,6 +3327,7 @@ body {
   });
 </script>
 </html>
+
 
 
 
