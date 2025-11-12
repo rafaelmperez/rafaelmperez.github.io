@@ -2151,10 +2151,9 @@ body {
   text-transform: none !important;
 }
 
-
-/* 🌍 Forzar visibilidad y posición del selector de idioma */
+/* 🌍 Selector de idioma con estilo elegante y fijo en el header */
 .language-switcher {
-  position: absolute !important;
+  position: absolute !important;   /* 🔹 Se mueve con el contenido, no fijo */
   top: 20px !important;
   right: 20px !important;
   display: flex !important;
@@ -2164,9 +2163,10 @@ body {
   padding: 8px 12px !important;
   border-radius: 8px !important;
   box-shadow: 0 0 10px rgba(255, 204, 0, 0.4) !important;
-  z-index: 99999 !important; /* 🔥 que quede por encima de todo */
+  z-index: 99999 !important;
 }
 
+/* Estilo del enlace */
 .language-switcher a {
   color: rgb(255, 204, 0) !important;
   text-decoration: none !important;
@@ -2176,17 +2176,19 @@ body {
   align-items: center !important;
   gap: 6px !important;
   font-size: 0.95rem !important;
+  transition: color 0.3s ease !important;
 }
 
 .language-switcher a:hover {
   color: #fff !important;
 }
 
+/* Bandera */
 .language-switcher .flag {
   width: 22px !important;
   height: 16px !important;
   border-radius: 2px !important;
-  transition: transform 0.2s !important;
+  transition: transform 0.2s ease !important;
 }
 
 .language-switcher .flag:hover {
@@ -3200,6 +3202,7 @@ body {
   });
 </script>
 </html>
+
 
 
 
