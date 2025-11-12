@@ -2167,6 +2167,33 @@ body {
   100% { background-position: 0% 50%; }
 }
 
+    /* ==========================================
+   💡 Glow respirante para títulos .terminal-heading
+   ========================================== */
+.terminal-heading {
+  color: #ffd700;
+  text-shadow:
+    0 0 4px rgba(255, 215, 0, 0.3),
+    0 0 8px rgba(255, 215, 0, 0.2),
+    0 0 12px rgba(255, 215, 0, 0.1);
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow:
+      0 0 4px rgba(255, 215, 0, 0.3),
+      0 0 8px rgba(255, 215, 0, 0.2),
+      0 0 12px rgba(255, 215, 0, 0.1);
+  }
+  50% {
+    text-shadow:
+      0 0 6px rgba(255, 215, 0, 0.6),
+      0 0 12px rgba(255, 215, 0, 0.4),
+      0 0 20px rgba(255, 215, 0, 0.3);
+  }
+}
+
 
   </style>
 </head>
@@ -3178,6 +3205,7 @@ body {
   });
 </script>
 </html>
+
 
 
 
