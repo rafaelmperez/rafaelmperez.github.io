@@ -2301,6 +2301,44 @@ header {
     0 0 35px rgba(255,215,0,0.2);
 }
 
+/* ==========================================
+   📱 NAVBAR OPTIMIZADO PARA MÓVIL Y TABLET
+   ========================================== */
+
+/* 🔸 Estilo base del menú (desktop) */
+nav {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 1.5rem;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+nav a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem; /* más equilibrado */
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #d4af37;
+  color: #000;
+}
+
+/* 🔹 Responsive para tablets */
+@media (max-width: 1024px) {
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding:
 
 
   </style>
@@ -3323,6 +3361,7 @@ header {
   });
 </script>
 </html>
+
 
 
 
