@@ -2167,67 +2167,63 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-    /* ==========================================
-   💻 Títulos estilo terminal real (blancos con glow sutil)
+/* ==========================================
+   ⚪ Estilo final tipo terminal realista (blanco puro)
    ========================================== */
 .terminal-heading {
-  color: #ffffff; /* Blanco puro */
+  color: #f8f8f8 !important; /* fuerza blanco puro */
   text-shadow:
-    0 0 6px rgba(255, 255, 255, 0.4),
-    0 0 12px rgba(255, 255, 255, 0.2),
-    0 0 24px rgba(255, 255, 255, 0.1);
-  animation: glowPulseWhite 6s ease-in-out infinite;
-  display: inline-flex;
+    0 0 4px rgba(255, 255, 255, 0.4),
+    0 0 10px rgba(180, 220, 255, 0.25),
+    0 0 20px rgba(180, 220, 255, 0.15) !important;
+  animation: glowPulseWhite 6s ease-in-out infinite !important;
+  display: inline-flex !important;
   align-items: baseline;
   justify-content: center;
   gap: 8px;
   font-family: 'Share Tech Mono', monospace;
   letter-spacing: 1px;
   text-align: center;
-  font-weight: 500;
+  border: none !important;
 }
 
-/* ✨ Efecto de respiración suave */
+/* ✨ Glow respirante frío */
 @keyframes glowPulseWhite {
   0%, 100% {
     text-shadow:
-      0 0 6px rgba(255, 255, 255, 0.4),
-      0 0 12px rgba(255, 255, 255, 0.2),
-      0 0 24px rgba(255, 255, 255, 0.1);
+      0 0 4px rgba(255, 255, 255, 0.4),
+      0 0 10px rgba(180, 220, 255, 0.25),
+      0 0 20px rgba(180, 220, 255, 0.15);
   }
   50% {
     text-shadow:
-      0 0 10px rgba(255, 255, 255, 0.7),
-      0 0 20px rgba(255, 255, 255, 0.4),
-      0 0 35px rgba(255, 255, 255, 0.2);
+      0 0 6px rgba(255, 255, 255, 0.6),
+      0 0 12px rgba(200, 230, 255, 0.3),
+      0 0 24px rgba(200, 230, 255, 0.2);
   }
 }
 
-/* ▒ Bloque parpadeante estilo terminal */
+/* ▊ Cursor tipo bloque blanco */
 .terminal-heading::after {
   content: "";
   display: inline-block;
   width: 0.55em;
   height: 1em;
-  background-color: #ffffff; /* Cursor blanco */
-  margin-left: 3px;
+  background-color: #ffffff !important;
+  margin-left: 2px;
   animation: blink-block 1.1s steps(1, start) infinite;
   position: relative;
   top: 2px;
 }
 
-/* 🔁 Parpadeo realista */
 @keyframes blink-block {
-  50% {
-    opacity: 0;
-  }
+  50% { opacity: 0; }
 }
 
-/* 🚫 Sin cursor en la sección de contacto */
+/* 🚫 Quita el cursor solo en contacto */
 #contacto .terminal-heading::after {
   display: none !important;
 }
-
 
   </style>
 </head>
@@ -3239,6 +3235,7 @@ body {
   });
 </script>
 </html>
+
 
 
 
