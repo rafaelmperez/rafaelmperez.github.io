@@ -729,39 +729,33 @@ header {
       z-index: 1;
     }
 
-    nav {
+/* ==== NAVBAR ==== */
+nav {
+  background: #000;
   display: flex;
-  align-items: center; /* para alinear el botón con los links */
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  background: #000000;
   padding: 1rem;
-  width: 100%;
+  gap: 1.5rem;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
 }
 
 nav a {
-  position: relative;
-  color: rgb(255,204,0);
+  color: #d4af37;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
-nav a::after {
-  content: '';
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background-color: rgb(255,204,0);
-  transition: width 0.3s ease;
+nav a:hover {
+  background-color: #d4af37;
+  color: #000;
 }
 
-nav a:hover::after {
-  width: 100%;
-}
 
 /* Botón Play */
 .play-btn {
@@ -3208,6 +3202,7 @@ body {
   });
 </script>
 </html>
+
 
 
 
