@@ -2367,30 +2367,30 @@ nav a:hover {
 }
 
 /* ==========================================
-   📱 VERSIÓN MÓVIL OPTIMIZADA (compacta, fluida y sin bugs)
+   📱 VERSIÓN MÓVIL OPTIMIZADA (FORZADA CON !important)
    ========================================== */
 
 @media (max-width: 768px) {
   /* 🌍 Estructura general */
   html, body {
     overflow-x: hidden !important;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
   }
 
   /* 🔹 Encabezado más compacto */
   header {
-    padding: 3.5rem 1rem 2rem;
+    padding: 3.5rem 1rem 2rem !important;
   }
 
   header h1 {
-    font-size: 2rem;
+    font-size: 2rem !important;
   }
 
   header p {
-    font-size: 0.9rem;
-    color: #cfcfcf;
+    font-size: 0.9rem !important;
+    color: #cfcfcf !important;
   }
 
   /* 🟡 Navbar horizontal compacto */
@@ -2408,7 +2408,7 @@ nav a:hover {
     padding: 3px 6px !important;
     border-radius: 5px !important;
     white-space: nowrap !important;
-    border: 1px solid rgba(212,175,55,0.3);
+    border: 1px solid rgba(212,175,55,0.3) !important;
   }
 
   /* 🧩 Espaciado entre secciones */
@@ -2445,8 +2445,8 @@ nav a:hover {
   /* 🧠 Texto adaptado */
   .texto-sobre-mi {
     font-size: 0.9rem !important;
-    line-height: 1.5;
-    padding: 0 10px;
+    line-height: 1.5 !important;
+    padding: 0 10px !important;
   }
 
   /* 🎓 Proyectos y certificaciones en una sola columna */
@@ -2465,14 +2465,14 @@ nav a:hover {
 
   .phone-screen {
     padding: 15px !important;
-    font-size: 0.9rem;
+    font-size: 0.9rem !important;
   }
 
   /* 💬 Footer */
   footer {
     padding: 1rem 0.5rem !important;
-    font-size: 0.8rem;
-    line-height: 1.4;
+    font-size: 0.8rem !important;
+    line-height: 1.4 !important;
   }
 
   /* 🚫 Elimina animaciones pesadas */
@@ -2491,7 +2491,7 @@ nav a:hover {
   }
 
   header h1 {
-    font-size: 1.8rem;
+    font-size: 1.8rem !important;
   }
 
   .cv-mockup img {
@@ -3521,6 +3521,7 @@ nav a:hover {
   });
 </script>
 </html>
+
 
 
 
