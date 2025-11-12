@@ -916,23 +916,59 @@ h1.titulo-principal {
       text-decoration: none;
     }
 
-    .social-float a:hover {
-      transform: scale(1.15);
-      background: rgb(255,204, 0);
-      color: #000;
-    }
+/* === ICONOS FLOTANTES DE REDES SOCIALES === */
+.social-float a {
+  width: 45px;
+  height: 45px;
+  background: #111; /* Fondo negro suave (no total) */
+  color: #d4af37;   /* Dorado metálico */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  border: 1px solid rgba(212, 175, 55, 0.4); /* Borde dorado sutil */
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.15); /* Halo dorado tenue */
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
 
-  /* 🎨 Blogger (tono oficial) */
+/* ✨ Hover integrado con efecto dorado brillante */
+.social-float a:hover {
+  transform: scale(1.12);
+  background: #d4af37; /* Dorado brillante */
+  color: #000;          /* Contraste negro */
+  border-color: #ffd700;
+  box-shadow:
+    0 0 15px rgba(255, 215, 0, 0.4),
+    0 0 30px rgba(255, 215, 0, 0.2);
+}
+
+/* 🟦 LinkedIn — tono dorado frío */
+.social-float a[href*="linkedin"] {
+  background: #0a0a0a;
+  color: #d4af37;
+}
+
+/* ⚙️ GitHub — gris oscuro elegante */
+.social-float a[href*="github"] {
+  background: #1b1b1b;
+  color: #d4af37;
+}
+
+/* 🟧 Blogger — tono dorado cálido integrado */
 .social-float a[href*="blogspot"] {
-  background-color: #FF5722; /* Naranja Blogger */
-  color: #fff;
+  background-color: #1a0f00; /* marrón oscuro-dorado */
+  color: #ffcc33;
 }
 
+/* Hover Blogger ligeramente más brillante */
 .social-float a[href*="blogspot"]:hover {
-  background-color: #fff;
-  color: #FF5722;
-  transform: scale(1.15);
+  background-color: #d4af37;
+  color: #000;
+  transform: scale(1.12);
 }
+
 
   
   @font-face {
@@ -3279,6 +3315,7 @@ header {
   });
 </script>
 </html>
+
 
 
 
