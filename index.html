@@ -1820,12 +1820,38 @@ section {
 }
 
 
-/* ✅ Centrado exacto del banner sin alterar el diseño */
+/* ==== HEADER / BANNER ==== */
+header {
+  background: #000;
+  text-align: center;
+  padding: 3rem 1rem;
+  position: relative;
+}
+
+/* 🖼️ Imagen principal (banner) */
 .banner-header {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 215, 0, 0.5);
+  box-shadow:
+    0 0 20px rgba(255, 215, 0, 0.3),
+    0 0 40px rgba(255, 215, 0, 0.1);
+  background-color: #000;
+  transition: box-shadow 0.5s ease, border-color 0.5s ease;
 }
+
+/* ✨ Brillo dorado al pasar el cursor */
+.banner-header:hover {
+  box-shadow:
+    0 0 35px rgba(255, 215, 0, 0.4),
+    0 0 60px rgba(255, 215, 0, 0.2);
+  border-color: rgba(255, 215, 0, 0.7);
+}
+
 
 /* ==========================================
    ✨ Tooltip dorado integrado en el menú
@@ -3219,6 +3245,7 @@ body {
   });
 </script>
 </html>
+
 
 
 
