@@ -1820,38 +1820,12 @@ section {
 }
 
 
-/* ==== HEADER / BANNER ==== */
-header {
-  background: #000;
-  text-align: center;
-  padding: 3rem 1rem;
-  position: relative;
-}
-
-/* 🖼️ Imagen principal (banner) */
+/* ✅ Centrado exacto del banner sin alterar el diseño */
 .banner-header {
   display: block;
-  margin: 0 auto;
-  max-width: 1000px;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  border: 2px solid rgba(255, 215, 0, 0.5);
-  box-shadow:
-    0 0 20px rgba(255, 215, 0, 0.3),
-    0 0 40px rgba(255, 215, 0, 0.1);
-  background-color: #000;
-  transition: box-shadow 0.5s ease, border-color 0.5s ease;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-/* ✨ Brillo dorado al pasar el cursor */
-.banner-header:hover {
-  box-shadow:
-    0 0 35px rgba(255, 215, 0, 0.4),
-    0 0 60px rgba(255, 215, 0, 0.2);
-  border-color: rgba(255, 215, 0, 0.7);
-}
-
 
 /* ==========================================
    ✨ Tooltip dorado integrado en el menú
@@ -2237,75 +2211,7 @@ body {
   border-radius: 2px;
 }
 
-/* ==========================================
-   🧠 HABILIDADES — Fija, horizontal y estética
-   ========================================== */
-#habilidades {
-  width: 100vw;                          /* ocupa todo el ancho */
-  margin: 0;
-  padding: 2.5rem 0;
-  background: #0a0a0a;                   /* fondo estático */
-  border-top: 1px solid rgba(255, 215, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 215, 0, 0.1);
-  overflow: hidden;                      /* ❌ sin scroll horizontal ni vertical */
-  text-align: center;
-}
 
-/* Contenedor de habilidades centrado */
-#habilidades .grid-habilidades {
-  display: flex;                         /* disposición horizontal */
-  justify-content: center;               /* centrado horizontal */
-  align-items: center;
-  flex-wrap: wrap;                       /* 🔹 permite varias filas si no caben */
-  gap: 2rem;
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 2rem;
-  box-sizing: border-box;
-}
-
-/* Tarjeta individual (cada habilidad) */
-#habilidades .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #111;
-  border: 1px solid rgba(255, 215, 0, 0.2);
-  box-shadow: 0 0 8px rgba(255, 215, 0, 0.05);
-  border-radius: 10px;
-  padding: 1rem 1.5rem;
-  color: #ffd700;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  min-width: 120px;
-}
-
-#habilidades .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
-}
-
-/* Iconos */
-#habilidades .habilidades-icons img {
-  width: 40px;                           /* 🔹 tamaño limpio y fijo */
-  height: auto;
-  margin-bottom: 10px;
-  opacity: 0.9;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-#habilidades .habilidades-icons img:hover {
-  transform: scale(1.15);
-  opacity: 1;
-}
-
-/* Texto debajo de los iconos */
-#habilidades h3 {
-  margin: 0.4rem 0 0;
-  color: #d4af37;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 0.9rem;
-}
 
 
   </style>
@@ -3313,11 +3219,6 @@ body {
   });
 </script>
 </html>
-
-
-
-
-
 
 
 
