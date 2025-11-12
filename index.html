@@ -2316,11 +2316,6 @@ header {
     padding: 0.8rem 0.5rem !important;
   }
 
-  nav a {
-    font-size: 0.9rem !important;
-    padding: 6px 8px !important;
-  }
-}
 
 @media (max-width: 768px) {
   nav {
@@ -2331,17 +2326,23 @@ header {
     padding: 0.8rem 0 !important;
   }
 
-  nav a {
-    display: block !important;
-    font-size: 0.85rem !important;
-    padding: 8px 12px !important;
-    width: 80% !important;
-    text-align: center !important;
-    border: 1px solid rgba(212, 175, 55, 0.3) !important;
-    border-radius: 8px !important;
-    background-color: rgba(0, 0, 0, 0.6) !important;
+ /* 🟡 Navbar horizontal compacto */
+  nav {
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 0.3rem !important;
+    padding: 0.3rem 0.2rem !important;
   }
 
+  nav a {
+    font-size: 0.72rem !important;
+    padding: 3px 6px !important;
+    border-radius: 5px !important;
+    white-space: nowrap !important;
+    border: 1px solid rgba(212,175,55,0.3) !important;
+  }
   nav a:hover {
     background-color: #d4af37 !important;
     color: #000 !important;
@@ -2357,6 +2358,11 @@ header {
   }
 }
 
+  /* 👤 Imagen “sobre mí” más pequeña */
+  .imagen-sobre-mi {
+    width: 130px !important;
+    height: 130px !important;
+  }
 
 
   </style>
@@ -3379,6 +3385,7 @@ header {
   });
 </script>
 </html>
+
 
 
 
