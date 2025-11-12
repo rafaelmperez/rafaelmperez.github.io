@@ -1799,12 +1799,42 @@ section {
     color: #000;
   }
 
-  /* Imagen del banner */
+/* ==== BANNER PRINCIPAL INTEGRADO ==== */
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 2rem;
+  background: #000;
+}
+
+.banner-header {
+  display: block;
+  margin: 0 auto;
+  max-width: 950px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  box-shadow:
+    0 0 15px rgba(255, 215, 0, 0.15),
+    0 0 30px rgba(255, 215, 0, 0.1);
+  background-color: #000;
+  transition: box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.banner-header:hover {
+  box-shadow: 0 0 35px rgba(255, 215, 0, 0.3);
+  border-color: rgba(255, 215, 0, 0.6);
+}
+
+@media (max-width: 768px) {
   .banner-header {
-    border: 2px solid #d4af37;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    max-width: 90%;
   }
+}
 
   /* GitHub badge */
   .sysadmin-badge {
@@ -3244,6 +3274,7 @@ body {
   });
 </script>
 </html>
+
 
 
 
