@@ -2305,40 +2305,58 @@ header {
    📱 NAVBAR OPTIMIZADO PARA MÓVIL Y TABLET
    ========================================== */
 
-/* 🔸 Estilo base del menú (desktop) */
-nav {
-  background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 1rem;
-  gap: 1.5rem;
-  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
-}
-
-nav a {
-  color: #d4af37;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem; /* más equilibrado */
-  padding: 6px 10px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-nav a:hover {
-  background-color: #d4af37;
-  color: #000;
-}
-
-/* 🔹 Responsive para tablets */
+/* ==========================================
+   📱 REVISIÓN FINAL DEL MENÚ (100% EFECTIVA)
+   ========================================== */
 @media (max-width: 1024px) {
   nav {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding:
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 0.8rem !important;
+    padding: 0.8rem 0.5rem !important;
+  }
+
+  nav a {
+    font-size: 0.9rem !important;
+    padding: 6px 8px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.6rem !important;
+    padding: 0.8rem 0 !important;
+  }
+
+  nav a {
+    display: block !important;
+    font-size: 0.85rem !important;
+    padding: 8px 12px !important;
+    width: 80% !important;
+    text-align: center !important;
+    border: 1px solid rgba(212, 175, 55, 0.3) !important;
+    border-radius: 8px !important;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+  }
+
+  nav a:hover {
+    background-color: #d4af37 !important;
+    color: #000 !important;
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.3) !important;
+  }
+}
+
+@media (max-width: 420px) {
+  nav a {
+    font-size: 0.8rem !important;
+    padding: 6px 10px !important;
+    width: 90% !important;
+  }
+}
+
 
 
   </style>
@@ -3361,6 +3379,7 @@ nav a:hover {
   });
 </script>
 </html>
+
 
 
 
