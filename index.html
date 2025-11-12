@@ -2222,46 +2222,45 @@ body {
 
 
  /* 🌍 Selector de idioma fijo arriba a la derecha */
-/* 🌍 Selector de idioma fijo arriba a la derecha */
 .language-switcher {
+  all: unset; /* 🚫 elimina todas las reglas previas del selector */
   position: fixed !important;
-  top: 15px;
-  right: 20px;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 6px 10px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
-  transition: background-color 0.3s ease;
+  top: 15px !important;
+  right: 20px !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  padding: 6px 10px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.3) !important;
 }
 
 .language-switcher a {
-  color: rgb(255,204,0);
-  text-decoration: none;
-  font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  gap: 5px;
+  color: rgb(255, 204, 0) !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 0.95rem !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
 }
 
 .language-switcher a:hover {
-  color: #fff;
+  color: #fff !important;
 }
 
 .language-switcher .flag {
-  width: 20px;
-  height: 14px;
-  border-radius: 2px;
-  transition: transform 0.2s;
+  width: 20px !important;
+  height: 14px !important;
+  border-radius: 2px !important;
+  transition: transform 0.2s !important;
 }
 
 .language-switcher .flag:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) !important;
 }
 
 
@@ -3272,6 +3271,7 @@ body {
   });
 </script>
 </html>
+
 
 
 
