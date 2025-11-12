@@ -2245,35 +2245,54 @@ header {
 }
 
 
+/* === Sección CV (Terminal integrada, elegante y compacta) === */
 .cv-card {
   text-align: center;
-  padding: 2rem;
-  background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
-  border: 2px solid rgba(212,175,55,0.6);
-  border-radius: 14px;
-  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
   margin: 50px auto;
+  max-width: 400px;
+
+  /* Fondo y borde dorado coherente */
+  background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+  border: 2px solid rgba(212, 175, 55, 0.6);
+  border-radius: 12px;
   box-shadow:
-    0 0 18px rgba(212,175,55,0.25),
-    inset 0 0 20px rgba(255,255,255,0.05);
+    0 0 15px rgba(212, 175, 55, 0.25),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+/* 🧾 Línea tipo terminal (narrativa técnica) */
+.terminal-line {
+  font-family: 'Fira Code', monospace;
+  color: #a5a5a5;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  opacity: 0.85;
 }
 
 /* 📄 Imagen del CV */
 .cv-mockup img {
   width: 100%;
-  max-width: 360px; /* Tamaño ideal en escritorio */
+  max-width: 320px; /* 🔸 un poco más pequeña que antes */
   height: auto;
   border-radius: 10px;
-  border: 1px solid rgba(255, 215, 0, 0.4);
-  box-shadow: 0 0 25px rgba(255, 215, 0, 0.15);
-  margin: 1.2rem auto 1.5rem;
+  border: 1px solid rgba(255, 215, 0, 0.35);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.12);
+  margin: 1rem auto 1.4rem;
   display: block;
 }
 
-/* ✅ Ajuste responsivo para móviles */
+/* 📱 Responsive */
 @media (max-width: 768px) {
-  .cv-mockup img {
+  .cv-card {
     max-width: 90%;
+  }
+  .cv-mockup img {
+    max-width: 85%;
   }
 }
 
@@ -3215,19 +3234,28 @@ header {
 
 <section id="objetivos">
   <div class="card hoja-de-ruta-card cv-card">
+
     <h2 class="terminal-heading">
       <i class="fas fa-route"></i> ~/curriculum.py
     </h2>
 
+    <!-- Línea narrativa tipo terminal -->
+    <p class="terminal-line">
+      $ cat CV_RafaelMPerez.pdf > /usr/local/share/docs/
+    </p>
+
     <div class="cv-mockup">
-      <img src="https://rafaelmperez.com/assets/img/cv_image.jpg" 
+      <img src="https://rafaelmperez.com/img/cv_image.jpg" 
            alt="Vista del CV de Rafael M. Pérez">
     </div>
 
     <a href="https://rafaelmperez.com/docs/CV_RafaelMPerez.pdf" 
-       class="sysadmin-badge" target="_blank" rel="noopener noreferrer">
+       class="sysadmin-badge" 
+       target="_blank" 
+       rel="noopener noreferrer">
       <i class="fas fa-file-pdf"></i> Ver CV en PDF
     </a>
+
   </div>
 </section>
 
@@ -3315,6 +3343,7 @@ header {
   });
 </script>
 </html>
+
 
 
 
