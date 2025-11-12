@@ -2152,44 +2152,41 @@ body {
 }
 
 
-/* 🌍 Selector de idioma arriba a la derecha dentro del layout */
-body {
-  position: relative;
-}
-
+/* 🌍 Forzar visibilidad y posición del selector de idioma */
 .language-switcher {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 6px 10px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
+  position: absolute !important;
+  top: 20px !important;
+  right: 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  padding: 8px 12px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.4) !important;
+  z-index: 99999 !important; /* 🔥 que quede por encima de todo */
 }
 
 .language-switcher a {
-  color: rgb(255, 204, 0);
-  text-decoration: none;
-  font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  gap: 5px;
+  color: rgb(255, 204, 0) !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  font-family: 'Montserrat', sans-serif !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 0.95rem !important;
 }
 
 .language-switcher a:hover {
-  color: #fff;
+  color: #fff !important;
 }
 
 .language-switcher .flag {
-  width: 20px;
-  height: 14px;
-  border-radius: 2px;
-  transition: transform 0.2s;
+  width: 22px !important;
+  height: 16px !important;
+  border-radius: 2px !important;
+  transition: transform 0.2s !important;
 }
 
 .language-switcher .flag:hover {
@@ -3203,6 +3200,7 @@ body {
   });
 </script>
 </html>
+
 
 
 
