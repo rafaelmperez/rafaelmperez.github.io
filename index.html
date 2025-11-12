@@ -2245,55 +2245,38 @@ header {
 }
 
 
-    /* === CV Section Integrada con Estilo Dorado === */
 .cv-card {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 30px;
-  margin: 40px auto;
-  max-width: 420px;
-
-  /* 🔸 Fondo y borde dorado */
+  padding: 2rem;
   background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
-  border: 2px solid rgba(212, 175, 55, 0.6);
-  border-radius: 12px;
+  border: 2px solid rgba(212,175,55,0.6);
+  border-radius: 14px;
+  max-width: 440px;
+  margin: 50px auto;
   box-shadow:
-    0 0 15px rgba(212, 175, 55, 0.25),
-    inset 0 0 20px rgba(255, 255, 255, 0.05);
-
-  transition: box-shadow 0.4s ease, border-color 0.4s ease;
+    0 0 18px rgba(212,175,55,0.25),
+    inset 0 0 20px rgba(255,255,255,0.05);
 }
 
-/* 💫 Efecto brillo dorado al pasar el cursor */
-.cv-card:hover {
-  border-color: #ffd700;
-  box-shadow:
-    0 0 25px rgba(255,215,0,0.4),
-    inset 0 0 25px rgba(255,255,255,0.08);
+/* 📄 Imagen del CV */
+.cv-mockup img {
+  width: 100%;
+  max-width: 360px; /* Tamaño ideal en escritorio */
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.15);
+  margin: 1.2rem auto 1.5rem;
+  display: block;
 }
 
-/* 📄 Miniatura del CV */
-.cv-preview {
-  width: 220px;
-  border-radius: 8px;
-  border: 1px solid rgba(255,215,0,0.5);
-  box-shadow:
-    0 0 12px rgba(255,215,0,0.25),
-    0 0 25px rgba(255,215,0,0.15);
-  margin-bottom: 16px;
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+/* ✅ Ajuste responsivo para móviles */
+@media (max-width: 768px) {
+  .cv-mockup img {
+    max-width: 90%;
+  }
 }
 
-/* 💡 Sutil realce al pasar el cursor por la imagen */
-.cv-preview:hover {
-  border-color: #ffd700;
-  box-shadow:
-    0 0 20px rgba(255,215,0,0.4),
-    0 0 40px rgba(255,215,0,0.2);
-}
 
 /* 🔹 Botón coherente con la paleta del sitio */
 .sysadmin-badge {
@@ -3236,18 +3219,18 @@ header {
       <i class="fas fa-route"></i> ~/curriculum.py
     </h2>
 
-    <img src="https://rafaelmperez.com/assets/img/cv_image.jpg" 
-         alt="Vista previa del CV de Rafael M. Pérez"
-         class="cv-preview">
+    <div class="cv-mockup">
+      <img src="https://rafaelmperez.com/img/cv_image.jpg" 
+           alt="Vista del CV de Rafael M. Pérez">
+    </div>
 
     <a href="https://rafaelmperez.com/docs/CV_RafaelMPerez.pdf" 
-       class="sysadmin-badge" 
-       target="_blank" 
-       rel="noopener noreferrer">
-      <i class="fas fa-file-pdf" style="color:#e63946; margin-right:6px;"></i> Ver CV en PDF
+       class="sysadmin-badge" target="_blank" rel="noopener noreferrer">
+      <i class="fas fa-file-pdf"></i> Ver CV en PDF
     </a>
   </div>
 </section>
+
 
 
 
@@ -3332,6 +3315,7 @@ header {
   });
 </script>
 </html>
+
 
 
 
