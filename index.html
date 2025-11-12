@@ -572,29 +572,42 @@ footer a {
     justify-content: center;
   }
 /* ==== CENTRADO Y ESTILO DEL BANNER PRINCIPAL ==== */
+/* ==== BANNER PRINCIPAL REFINADO ==== */
 .header-content {
   display: flex;
-  justify-content: center;  /* centra horizontalmente */
-  align-items: center;      /* centra verticalmente */
-  flex-direction: column;   /* apila elementos si hay más dentro */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  width: 100%;
+  padding-top: 2rem;
+  background: #000;
 }
 
 .banner-header {
   display: block;
-  margin: 0 auto; /* centra la imagen horizontalmente */
-  max-width: 1000px; /* ancho máximo del banner */
+  margin: 0 auto;
+  max-width: 950px;
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 215, 0, 0.4); /* borde dorado sutil */
+  border-radius: 10px;
+  border: 1px solid rgba(255, 215, 0, 0.4);
   box-shadow:
-    0 0 10px rgba(255, 215, 0, 0.15),
-    0 0 25px rgba(255, 215, 0, 0.08); /* halo fijo muy suave */
-  background-color: #000; /* integración con fondo negro */
+    0 0 15px rgba(255, 215, 0, 0.15),
+    0 0 30px rgba(255, 215, 0, 0.1);
+  background-color: #000;
+  transition: box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
+.banner-header:hover {
+  box-shadow: 0 0 35px rgba(255, 215, 0, 0.3);
+  border-color: rgba(255, 215, 0, 0.6);
+}
+
+@media (max-width: 768px) {
+  .banner-header {
+    max-width: 90%;
+  }
+}
 
 /* Efecto hover (brillo suave dorado) */
 .banner-header:hover {
@@ -3231,6 +3244,7 @@ body {
   });
 </script>
 </html>
+
 
 
 
