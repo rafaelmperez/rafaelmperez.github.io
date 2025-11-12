@@ -894,44 +894,58 @@ h1.titulo-principal {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
-.social-float {
-  position: fixed;
+/* 🔹 Iconos sociales integrados con diseño dorado */
+.barra-superior .social-float {
+  position: absolute;
+  right: 20px;
   top: 50%;
-  right: 10px;
   transform: translateY(-50%);
-  z-index: 1000;
+  display: flex;
+  gap: 10px;
 }
 
-    .social-float a {
-      width: 45px;
-      height: 45px;
-      background: #000;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      font-size: 1.4rem;
-      transition: 0.3s;
-      text-decoration: none;
-    }
-
-    .social-float a:hover {
-      transform: scale(1.15);
-      background: rgb(255,204, 0);
-      color: #000;
-    }
-
-  /* 🎨 Blogger (tono oficial) */
-.social-float a[href*="blogspot"] {
-  background-color: #FF5722; /* Naranja Blogger */
-  color: #fff;
+/* Iconos base */
+.social-float a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 22px;
+  color: #d4af37;                     /* Dorado metálico */
+  background-color: #111;             /* Negro suave */
+  border: 1px solid rgba(212,175,55,0.4);
+  box-shadow: 0 0 10px rgba(212,175,55,0.15);
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-.social-float a[href*="blogspot"]:hover {
-  background-color: #fff;
-  color: #FF5722;
+/* Hover: efecto dorado brillante */
+.social-float a:hover {
   transform: scale(1.15);
+  background-color: #d4af37;
+  color: #000;
+  border-color: #ffd700;
+  box-shadow:
+    0 0 15px rgba(255,215,0,0.4),
+    0 0 30px rgba(255,215,0,0.2);
+}
+
+/* 🔸 Ajustes individuales opcionales */
+.social-float a[href*="linkedin"] {
+  background-color: #0a0a0a;
+}
+.social-float a[href*="github"] {
+  background-color: #1a1a1a;
+}
+.social-float a[href*="blogspot"] {
+  background-color: #1a0f00; /* tono marrón oscuro-dorado */
+  color: #ffcc33;
+}
+.social-float a[href*="blogspot"]:hover {
+  background-color: #d4af37;
+  color: #000;
 }
 
   
@@ -3250,6 +3264,7 @@ header {
   });
 </script>
 </html>
+
 
 
 
