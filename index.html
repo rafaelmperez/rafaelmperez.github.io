@@ -2303,70 +2303,6 @@ header {
 
 
 /* ==========================================
-   🟡 NAVBAR SIEMPRE HORIZONTAL + COMPACTO
-   ========================================== */
-
-nav {
-  background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; /* permite segunda fila horizontal */
-  gap: 0.4rem; /* separación entre enlaces */
-  padding: 0.4rem 0.6rem;
-  border-bottom: 1px solid rgba(255, 215, 0, 0.25);
-}
-
-/* Enlaces del menú */
-nav a {
-  color: #d4af37;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.8rem; /* más pequeño */
-  padding: 4px 7px;
-  border: 1px solid rgba(212,175,55,0.35);
-  border-radius: 6px;
-  background-color: rgba(0,0,0,0.6);
-  transition: all 0.3s ease;
-  white-space: nowrap; /* evita que se dividan en varias líneas */
-}
-
-nav a:hover {
-  background-color: #d4af37;
-  color: #000;
-  box-shadow: 0 0 8px rgba(255,215,0,0.3);
-}
-
-/* 🔹 En pantallas pequeñas: mantener horizontal y aún más compacto */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: row !important; /* 🔒 evita que se sobreescriba */
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 0.4rem !important;
-    padding: 0.5rem 0.3rem !important;
-  }
-
-  nav a {
-    font-size: 0.75rem !important;
-    padding: 3px 6px !important;
-    border-radius: 5px !important;
-    white-space: nowrap !important;
-  }
-
-}
-
-/* 🔹 En pantallas muy pequeñas (por ejemplo, 360px) */
-@media (max-width: 400px) {
-  nav a {
-    font-size: 0.65rem;
-    padding: 2px 4px;
-  }
-}
-}
-
-/* ==========================================
    📱 VERSIÓN MÓVIL OPTIMIZADA (FORZADA CON !important)
    ========================================== */
 
@@ -3521,6 +3457,7 @@ nav a:hover {
   });
 </script>
 </html>
+
 
 
 
