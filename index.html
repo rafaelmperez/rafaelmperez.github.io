@@ -2215,14 +2215,6 @@ header {
   transition: box-shadow 0.5s ease, border-color 0.5s ease;
 }
 
-/* ✨ Brillo dorado al pasar el cursor */
-.banner-header:hover {
-  box-shadow:
-    0 0 35px rgba(255, 215, 0, 0.4),
-    0 0 60px rgba(255, 215, 0, 0.2);
-  border-color: rgba(255, 215, 0, 0.7);
-}
-
 
 /* === Sección CV (Terminal integrada, elegante y compacta) === */
 .cv-card {
@@ -2301,59 +2293,137 @@ header {
     0 0 35px rgba(255,215,0,0.2);
 }
 
-/* ==========================================
-   📱 NAVBAR OPTIMIZADO PARA MÓVIL Y TABLET
-   ========================================== */
 
 /* ==========================================
-   📱 REVISIÓN FINAL DEL MENÚ (100% EFECTIVA)
+   📱 VERSIÓN MÓVIL OPTIMIZADA (FORZADA CON !important)
    ========================================== */
-@media (max-width: 1024px) {
-  nav {
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    gap: 0.8rem !important;
-    padding: 0.8rem 0.5rem !important;
-  }
-
-  nav a {
-    font-size: 0.9rem !important;
-    padding: 6px 8px !important;
-  }
-}
 
 @media (max-width: 768px) {
+  /* 🌍 Estructura general */
+  html, body {
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  /* 🔹 Encabezado más compacto */
+  header {
+    padding: 3.5rem 1rem 2rem !important;
+  }
+
+  header h1 {
+    font-size: 2rem !important;
+  }
+
+  header p {
+    font-size: 0.9rem !important;
+    color: #cfcfcf !important;
+  }
+
+  /* 🟡 Navbar horizontal compacto */
   nav {
-    flex-direction: column !important;
-    align-items: center !important;
+    flex-direction: row !important;
     justify-content: center !important;
-    gap: 0.6rem !important;
-    padding: 0.8rem 0 !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 0.3rem !important;
+    padding: 0.3rem 0.2rem !important;
   }
 
   nav a {
-    display: block !important;
-    font-size: 0.85rem !important;
-    padding: 8px 12px !important;
-    width: 80% !important;
-    text-align: center !important;
-    border: 1px solid rgba(212, 175, 55, 0.3) !important;
-    border-radius: 8px !important;
-    background-color: rgba(0, 0, 0, 0.6) !important;
+    font-size: 0.72rem !important;
+    padding: 3px 6px !important;
+    border-radius: 5px !important;
+    white-space: nowrap !important;
+    border: 1px solid rgba(212,175,55,0.3) !important;
   }
 
-  nav a:hover {
-    background-color: #d4af37 !important;
-    color: #000 !important;
-    box-shadow: 0 0 12px rgba(255, 215, 0, 0.3) !important;
+  /* 🧩 Espaciado entre secciones */
+  section {
+    margin: 1rem auto !important;
+    padding: 0.5rem 0.5rem !important;
+  }
+
+  /* 💬 Cards más pequeñas y centradas */
+  .card {
+    max-width: 100% !important;
+    padding: 12px !important;
+    font-size: 0.9rem !important;
+    margin: 0.5rem auto !important;
+  }
+
+  /* 🧾 CV mockup más pequeño */
+  .cv-mockup img {
+    max-width: 80% !important;
+    margin: 0.5rem auto !important;
+  }
+
+  .sysadmin-badge {
+    font-size: 0.8rem !important;
+    padding: 8px 14px !important;
+  }
+
+  /* 👤 Imagen “sobre mí” más pequeña */
+  .imagen-sobre-mi {
+    width: 130px !important;
+    height: 130px !important;
+  }
+
+  /* 🧠 Texto adaptado */
+  .texto-sobre-mi {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+    padding: 0 10px !important;
+  }
+
+  /* 🎓 Proyectos y certificaciones en una sola columna */
+  .grid-proyectos,
+  .grid-habilidades {
+    grid-template-columns: 1fr !important;
+    gap: 0.8rem !important;
+  }
+
+  /* 📱 Teléfono (formulario) adaptado */
+  .phone-container {
+    width: 95% !important;
+    padding: 15px !important;
+    border-radius: 30px !important;
+  }
+
+  .phone-screen {
+    padding: 15px !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* 💬 Footer */
+  footer {
+    padding: 1rem 0.5rem !important;
+    font-size: 0.8rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* 🚫 Elimina animaciones pesadas */
+  .banner-header:hover,
+  .sysadmin-badge:hover,
+  .social-float a:hover {
+    transform: none !important;
+    box-shadow: none !important;
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 400px) {
   nav a {
-    font-size: 0.8rem !important;
-    padding: 6px 10px !important;
-    width: 90% !important;
+    font-size: 0.65rem !important;
+    padding: 2px 4px !important;
+  }
+
+  header h1 {
+    font-size: 1.8rem !important;
+  }
+
+  .cv-mockup img {
+    max-width: 75% !important;
   }
 }
 
@@ -3379,6 +3449,7 @@ header {
   });
 </script>
 </html>
+
 
 
 
