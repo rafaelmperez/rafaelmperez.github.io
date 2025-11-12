@@ -675,14 +675,6 @@ body {
   line-height: 1.7;
   box-sizing: border-box;
 }
-       .language-switcher {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      z-index: 1000;
-      font-weight: bold;
-      font-size: 0.95rem;
-    }
 
     .language-switcher a {
       color: #ddd;
@@ -694,15 +686,7 @@ body {
     .language-switcher a:hover {
       color: rgb(255,204, 0);
     }
-.language-switcher {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 1000;
-  font-weight: bold;
-  font-size: 0.95rem;
-  margin-bottom: 2rem; /* ← Esta línea crea espacio debajo */
-}
+
 
 
 .language-switcher a {
@@ -2238,36 +2222,35 @@ body {
 
 
  /* 🌍 Selector de idioma fijo arriba a la derecha */
+/* 🌍 Selector de idioma fijo arriba a la derecha */
 .language-switcher {
-  position: fixed !important;  /* fuerza el comportamiento fijo */
+  position: fixed !important;
   top: 15px;
   right: 20px;
   z-index: 9999;
   display: flex;
   align-items: center;
-  gap: 10px;
-  background-color: rgba(0, 0, 0, 0.75);
-  padding: 8px 12px;
-  border-radius: 10px;
+  gap: 8px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 6px 10px;
+  border-radius: 8px;
   box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
   transition: background-color 0.3s ease;
 }
 
 .language-switcher a {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: rgb(255, 204, 0);
+  color: rgb(255,204,0);
   text-decoration: none;
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.95rem;
-  transition: color 0.3s, transform 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .language-switcher a:hover {
   color: #fff;
-  transform: scale(1.05);
 }
 
 .language-switcher .flag {
@@ -2280,6 +2263,7 @@ body {
 .language-switcher .flag:hover {
   transform: scale(1.1);
 }
+
 
 
 
@@ -3288,6 +3272,7 @@ body {
   });
 </script>
 </html>
+
 
 
 
