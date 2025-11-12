@@ -2203,24 +2203,25 @@ body {
   }
 }
 
-/* ▊ Cursor tipo bloque blanco */
+/* 🔹 Cursor tipo bloque (Ubuntu terminal realista, pegado al texto) */
 .terminal-heading::after {
   content: "";
   display: inline-block;
-  width: 0.55em;
+  width: 0.6em;
   height: 1em;
   background-color: #ffffff !important;
-  margin-left: 2px;
   animation: blink-block 1.1s steps(1, start) infinite;
   position: relative;
   top: 2px;
+  margin-left: -0.05em; /* 👈 elimina el hueco entre texto y cursor */
 }
 
+/* Parpadeo tipo terminal */
 @keyframes blink-block {
   50% { opacity: 0; }
 }
 
-/* 🚫 Quita el cursor solo en contacto */
+/* 🚫 Ocultar cursor en la sección de contacto (móvil simulado) */
 #contacto .terminal-heading::after {
   display: none !important;
 }
@@ -3243,6 +3244,7 @@ body {
   });
 </script>
 </html>
+
 
 
 
