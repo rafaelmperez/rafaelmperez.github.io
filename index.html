@@ -1210,12 +1210,30 @@ button:hover {
 }
 
 
-html, body {
+/* ==== BASE Y FONDO OPTIMIZADO ==== */
+* {
   margin: 0;
   padding: 0;
-  width: 100%;
-  overflow-x: visible;
+  box-sizing: border-box;
 }
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background: linear-gradient(135deg, #000, #0d0d0d, #1a1a1a);
+  background-size: 400% 400%;
+  animation: bgShift 30s ease-in-out infinite;
+  font-family: 'Poppins', sans-serif;
+  color: #d4af37;
+}
+
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 
 
 
@@ -3190,6 +3208,7 @@ body {
   });
 </script>
 </html>
+
 
 
 
