@@ -2150,6 +2150,23 @@ nav a:hover {
   display: none !important;
 }
 
+    /* ==========================================
+   👁️ Fondo dinámico (negro → gris carbón)
+   ========================================== */
+body {
+  background: linear-gradient(135deg, #000000, #111, #1a1a1a);
+  background-size: 400% 400%;
+  animation: bgShift 20s ease-in-out infinite;
+  color: #d4af37; /* texto dorado existente */
+}
+
+/* Animación suave del gradiente */
+@keyframes bgShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 
   </style>
 </head>
@@ -3161,6 +3178,7 @@ nav a:hover {
   });
 </script>
 </html>
+
 
 
 
