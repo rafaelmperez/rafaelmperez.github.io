@@ -2340,18 +2340,21 @@ nav a:hover {
 /* 🔹 En pantallas pequeñas: mantener horizontal y aún más compacto */
 @media (max-width: 768px) {
   nav {
-    flex-direction: row; /* 👈 fuerza distribución horizontal */
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.25rem;
-    padding: 0.3rem;
+    flex-direction: row !important; /* 🔒 evita que se sobreescriba */
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.4rem !important;
+    padding: 0.5rem 0.3rem !important;
   }
 
   nav a {
-    font-size: 0.7rem;  /* texto más pequeño en móvil */
-    padding: 3px 5px;
-    border-radius: 4px;
+    font-size: 0.75rem !important;
+    padding: 3px 6px !important;
+    border-radius: 5px !important;
+    white-space: nowrap !important;
   }
+
 }
 
 /* 🔹 En pantallas muy pequeñas (por ejemplo, 360px) */
@@ -3386,6 +3389,7 @@ nav a:hover {
   });
 </script>
 </html>
+
 
 
 
