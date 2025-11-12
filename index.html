@@ -919,46 +919,60 @@ h1.titulo-principal {
     @keyframes spin {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
-    }
-.social-float {
-  position: fixed;
+/* 🔹 Iconos sociales integrados y uniformes */
+.barra-superior .social-float {
+  position: absolute;
+  right: 20px;
   top: 50%;
-  right: 10px;
   transform: translateY(-50%);
-  z-index: 1000;
+  display: flex;
+  gap: 10px;
 }
 
-    .social-float a {
-      width: 45px;
-      height: 45px;
-      background: #000;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      font-size: 1.4rem;
-      transition: 0.3s;
-      text-decoration: none;
-    }
-
-    .social-float a:hover {
-      transform: scale(1.15);
-      background: rgb(255,204, 0);
-      color: #000;
-    }
-
-  /* 🎨 Blogger (tono oficial) */
-.social-float a[href*="blogspot"] {
-  background-color: #FF5722; /* Naranja Blogger */
-  color: #fff;
+/* Estilo base — idéntico para todas las redes */
+.social-float a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 22px;
+  background-color: #111;               /* negro suave */
+  color: #d4af37;                       /* dorado metálico */
+  border: 1px solid rgba(212,175,55,0.4);
+  box-shadow: 0 0 10px rgba(212,175,55,0.15);
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.social-float a[href*="blogspot"]:hover {
-  background-color: #fff;
-  color: #FF5722;
+/* ✨ Hover dorado brillante */
+.social-float a:hover {
   transform: scale(1.15);
+  background-color: #d4af37;
+  color: #000;
+  border-color: #ffd700;
+  box-shadow:
+    0 0 15px rgba(255,215,0,0.4),
+    0 0 30px rgba(255,215,0,0.2);
 }
+
+/* 🔸 Personalización mínima (mantienen coherencia) */
+.social-float a[href*="linkedin"],
+.social-float a[href*="github"],
+.social-float a[href*="blogspot"] {
+  background-color: #111; /* todos con el mismo fondo */
+  color: #d4af37;
+}
+
+/* Igual hover para todos */
+.social-float a[href*="linkedin"]:hover,
+.social-float a[href*="github"]:hover,
+.social-float a[href*="blogspot"]:hover {
+  background-color: #d4af37;
+  color: #000;
+}
+
 
   
   @font-face {
@@ -3276,6 +3290,7 @@ header {
   });
 </script>
 </html>
+
 
 
 
