@@ -2112,22 +2112,32 @@ nav a:hover {
 
 
 /* ==========================================
-   ⚫ Cursor tipo terminal (pegado al texto)
+   ⚫ Cursor tipo terminal (pegado al texto real)
    ========================================== */
+.terminal-heading {
+  display: inline-flex;
+  align-items: baseline; /* mantiene la línea del texto */
+  gap: 0; /* elimina separación entre icono, texto y cursor */
+}
+
+.terminal-heading i {
+  margin-right: 8px; /* ajusta la separación del icono */
+}
+
 .terminal-heading::after {
   content: "_"; /* símbolo del cursor */
   color: #ffd700; /* dorado metálico */
   font-weight: bold;
   animation: blink 1.1s infinite step-start;
-  opacity: 1;
-  display: inline-block;
-  transform: translateY(2px); /* ligera alineación vertical */
+  display: inline;
+  position: relative;
+  top: 1px; /* ligera alineación con el texto */
 }
 
-/* Parpadeo tipo terminal */
 @keyframes blink {
   50% { opacity: 0; }
 }
+
     
 /* 🚫 Quita el cursor tipo terminal solo en la sección de contacto */
 #contacto .terminal-heading::after {
@@ -3145,6 +3155,7 @@ nav a:hover {
   });
 </script>
 </html>
+
 
 
 
