@@ -1317,36 +1317,53 @@ html, body {
   transform: scale(1.05);
 }
 
-/* ==== CABECERAS TERMINAL (VERSIÓN OSCURA CENTRADA) ==== */
+/* ==== TERMINAL HEADING ==== */
 .terminal-heading {
   display: flex;
-  justify-content: center;     /* centra el contenido horizontalmente */
-  align-items: center;
-  gap: 10px;
-  text-align: center;          /* asegura que el texto esté centrado */
+  justify-content: center;
+  align-items: baseline;
+  gap: 8px;
   font-family: 'Share Tech Mono', monospace;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   color: #fff;
   text-shadow:
-    0 0 5px rgba(255, 255, 255, 0.6),
-    0 0 10px rgba(255, 215, 0, 0.4),
-    0 0 20px rgba(255, 215, 0, 0.3);
-  border-bottom: 1px solid rgba(255, 215, 0, 0.3);
-  padding-bottom: 6px;
-  margin: 0 0 16px 0;
+    0 0 4px rgba(255, 255, 255, 0.4),
+    0 0 10px rgba(180, 220, 255, 0.25),
+    0 0 20px rgba(180, 220, 255, 0.15);
+  animation: glowPulseWhite 6s ease-in-out infinite;
 }
 
-/* Iconos dorados */
-.terminal-heading i {
-  color: #ffd700;
-  font-size: 1.3em;
-  text-shadow:
-    0 0 6px rgba(255, 255, 255, 0.7),
-    0 0 12px rgba(255, 215, 0, 0.5);
+@keyframes glowPulseWhite {
+  0%, 100% {
+    text-shadow:
+      0 0 4px rgba(255, 255, 255, 0.4),
+      0 0 10px rgba(180, 220, 255, 0.25);
+  }
+  50% {
+    text-shadow:
+      0 0 6px rgba(255, 255, 255, 0.6),
+      0 0 12px rgba(200, 230, 255, 0.3);
+  }
 }
 
+.terminal-heading::after {
+  content: "";
+  display: inline-block;
+  width: 0.55em;
+  height: 1em;
+  background-color: #fff;
+  margin-left: -0.15em;
+  animation: blink-block 1.1s steps(1, start) infinite;
+  transform: translateY(2px);
+}
+
+@keyframes blink-block {
+  50% { opacity: 0; }
+}
+
+#contacto .terminal-heading::after {
+  display: none !important;
+}
 
 }
 html, body {
@@ -3202,6 +3219,7 @@ body {
   });
 </script>
 </html>
+
 
 
 
