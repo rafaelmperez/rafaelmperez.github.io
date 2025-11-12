@@ -2237,6 +2237,57 @@ body {
   border-radius: 2px;
 }
 
+/* ==========================================
+   🧠 Sección de habilidades a ancho completo
+   ========================================== */
+#habilidades {
+  width: 100vw;              /* ocupa todo el ancho de la ventana */
+  margin: 0;                 /* elimina márgenes automáticos */
+  padding: 3rem 0;           /* padding vertical únicamente */
+  background: rgba(0, 0, 0, 0.6); /* fondo negro translúcido para integrarse */
+  border-top: 1px solid rgba(255, 215, 0, 0.15);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+}
+
+/* 🔹 Si usas contenedor interno */
+#habilidades .grid-habilidades {
+  width: 100%;
+  max-width: none;           /* elimina límites de ancho */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+/* 🔸 Tarjetas dentro (sin márgenes restrictivos) */
+#habilidades .card {
+  width: 100%;
+  background: #111;
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
+  border-radius: 10px;
+  padding: 1.5rem;
+  color: #ffd700;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#habilidades .card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+/* 🧩 Iconos */
+#habilidades .habilidades-icons img {
+  width: 64px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+#habilidades .habilidades-icons img:hover {
+  transform: scale(1.15);
+}
 
 
 
@@ -3245,6 +3296,7 @@ body {
   });
 </script>
 </html>
+
 
 
 
