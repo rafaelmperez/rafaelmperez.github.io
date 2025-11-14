@@ -327,14 +327,6 @@ a<!DOCTYPE html>
   }
 }
 
-  .header-flex {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;  /* ASCII a la izquierda, texto a la derecha */
-    align-items: flex-start;         /* alinear arriba */
-    margin-bottom: 5px;
-}
-
   
 </style>
 </head>
@@ -442,26 +434,19 @@ const bar = document.getElementById("progress-bar");
 
 function insertTop() {
 
-  // CONTENEDOR FLEXIBLE
-  const headerContainer = document.createElement("div");
-  headerContainer.classList.add("header-flex");
-
   // ASCII PRINCIPAL
   const ascii = document.createElement("pre");
   ascii.classList.add("ascii");
   ascii.textContent = asciiLogo;
 
-  // SUBTÍTULO DORADO
+  // SUBTÍTULO DEBAJO DEL ASCII
   const subtitle = document.createElement("div");
   subtitle.classList.add("subtitle");
   subtitle.textContent = subtitleText;
 
-  // Añadir ASCII y subtítulo al contenedor flex
-  headerContainer.appendChild(ascii);
-  headerContainer.appendChild(subtitle);
-
-  // Insertarlo en la parte superior
-  topBlock.appendChild(headerContainer);
+  // Insertar en orden, uno debajo del otro
+  topBlock.appendChild(ascii);
+  topBlock.appendChild(subtitle);
 
   // ASCII DE RUIDO
   const noiseAscii = document.createElement("pre");
@@ -469,6 +454,7 @@ function insertTop() {
   noiseAscii.textContent = noiseBlock;
   topBlock.appendChild(noiseAscii);
 }
+
 
 let index = 0;
   
