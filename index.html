@@ -297,6 +297,22 @@
   }
 }
 
+  /* ===== Reducir SOLO el ASCII dorado (el logo grande) en móvil ===== */
+@media (max-width: 768px) {
+  #top-block pre.ascii:not(.ascii-noise) {
+    font-size: 6.2px !important;
+    line-height: 1.02 !important;
+    transform: scale(0.85);
+    transform-origin: top center;
+  }
+
+  /* Ruido reducido también */
+  .ascii-noise {
+    font-size: 4px !important;
+    line-height: 0.8 !important;
+  }
+}
+
   
 </style>
 </head>
