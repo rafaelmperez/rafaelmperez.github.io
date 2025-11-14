@@ -18,6 +18,19 @@
     position: relative;
   }
 
+  /* === MARCO TERMINAL DORADO PREMIUM === */
+  #screen-frame {
+    position: absolute;
+    inset: 25px;
+    border: 2px solid #f0c674;
+    border-radius: 10px;
+    box-shadow:
+      0 0 6px #f0c67455,
+      0 0 10px #f0c67433 inset;
+    pointer-events: none;
+    z-index: 2000;
+  }
+
   /* === SCANLINES CRT ELEGANTES === */
   body::before {
     content: "";
@@ -35,43 +48,55 @@
     opacity: .25;
   }
 
+  /* CONTENEDOR PRINCIPAL */
+  #top-block {
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    text-align: center;
+    z-index: 20;
+  }
+
   #terminal {
-    text-align: center;  /* ya lo tienes */
-    width: 100%;         /* asegura centrado */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* <-- CENTRADO REAL */
     white-space: pre;
     font-size: 1.15rem;
     line-height: 1.18;
     opacity: 0;
     transform: scale(0.96);
     transition: opacity .25s ease, transform .25s ease;
-    text-align: center;
+    text-align: left;
     position: relative;
     z-index: 10;
+    margin-top: 180px; /* ALEJA COMANDOS DEL ASCII */
   }
 
-  
-  /* ==== ASCII DORADO PREMIUM + GLOW === */
-.ascii {
+  /* ==== ASCII DORADO PREMIUM === */
+  .ascii {
     color: #f0c674;
     display: inline-block;
-    margin-bottom: 20px;
-    text-shadow: 0 0 3px #f0c67455, 0 0 6px #f0c67455;
+    margin-bottom: 10px;
+    font-family: monospace;
+    font-size: 14px;
+    text-shadow:
+      0 0 3px #f0c67455,
+      0 0 6px #f0c67455;
     animation: asciiGlow 3s ease-in-out infinite;
-
-    /* --- CLAVE PARA CENTRAR ASCII --- */
-    font-family: monospace;      /* obligatorio para ASCII */
-    font-size: 14px;             /* ajusta según pantalla */
-    line-height: 1.1;
-}
-
+  }
 
   @keyframes asciiGlow {
     0%   { text-shadow: 0 0 2px #f0c67455; }
     50%  { text-shadow: 0 0 8px #f0c674aa; }
     100% { text-shadow: 0 0 2px #f0c67455; }
+  }
+
+  /* SUBTÍTULO */
+  .subtitle {
+    color: #f0c674;
+    font-size: 0.9rem;
+    opacity: 0.85;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    font-family: monospace;
   }
 
   /* ============================== FLASH IBM ============================== */
@@ -97,7 +122,7 @@
     opacity: 0;
     transition: opacity .9s ease-in-out;
     pointer-events: none;
-    z-index: 1000;
+    z-index: 3000;
   }
 
   /* Cursor final */
@@ -114,22 +139,15 @@
     50% { opacity: 0; }
   }
 
-  .subtitle {
-    color: #f0c674;
-    font-size: 0.9rem;
-    margin-top: -10px;
-    margin-bottom: 25px;
-    opacity: 0.85;
-    font-family: monospace;
-    letter-spacing: 1px;
-}
-
-
 </style>
 </head>
 
 <body>
+
+<div id="screen-frame"></div>
 <div id="fade"></div>
+
+<div id="top-block"></div>
 <div id="terminal"></div>
 
 <audio id="key" src="https://rafaelmperez.com/sounds/clip.aac" preload="auto"></audio>
@@ -137,21 +155,19 @@
 <script>
 /* ========================================
            ASCII LOGO
-   ======================================== */
+======================================== */
 
 const asciiLogo = `
-#             ##     #######    ##     #######  ####     ##   ##  ######   #######  ######   #######  #######             ####    #####   ##   ## #
-#            ####     ##   #   ####     ##   #   ##      ### ###   ##  ##   ##   #   ##  ##   ##   #  #   ##             ##  ##  ##   ##  ### ### #
-#  ######   ##  ##    ## #    ##  ##    ## #     ##      #######   ##  ##   ## #     ##  ##   ## #       ##             ##       ##   ##  ####### #
-#   ##  ##  ##  ##    ####    ##  ##    ####     ##      #######   #####    ####     #####    ####      ##              ##       ##   ##  ####### #
-#   ##      ######    ## #    ######    ## #     ##   #  ## # ##   ##       ## #     ## ##    ## #     ##               ##       ##   ##  ## # ## #
-#   ##      ##  ##    ##      ##  ##    ##   #   ##  ##  ##   ##   ##       ##   #   ##  ##   ##   #  ##    #    ##      ##  ##  ##   ##  ##   ## #
-#  ####     ##  ##   ####     ##  ##   #######  #######  ##   ##  ####     #######  #### ##  #######  #######    ##       ####    #####   ##   ## #
-
-
+ ######                                                                                                                           
+ #     #   ##   ######   ##   ###### #      #    # #####  ###### #####  ###### ######      ####   ####  #    # 
+ #     #  #  #  #       #  #  #      #      ##  ## #    # #      #    # #          #      #    # #    # ##  ## 
+ ######  #    # #####  #    # #####  #      # ## # #    # #####  #    # #####     #       #      #    # # ## # 
+ #   #   ###### #      ###### #      #      #    # #####  #      #####  #        #        #      #    # #    # 
+ #    #  #    # #      #    # #      #      #    # #      #      #   #  #       #     ### #    # #    # #    # 
+ #     # #    # #      #    # ###### ###### #    # #      ###### #    # ###### ###### ###  ####   ####  #    # 
 `;
 
-/* COMANDOS NIVEL SISTEMA REAL */
+/* COMANDOS DE SISTEMA REAL */
 const commands = [
   "[BOOT] Inicializando entorno seguro...",
   "[OK]    Cargando módulos principales...",
@@ -161,6 +177,7 @@ const commands = [
   "[ACCESS] accediendo a rafaelmperez.com"
 ];
 
+const top = document.getElementById("top-block");
 const terminal = document.getElementById("terminal");
 const key = document.getElementById("key");
 
@@ -172,15 +189,38 @@ function playKey() {
 
 let index = 0;
 
+/* INICIO */
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+
+    terminal.style.opacity = "1";
+    terminal.style.transform = "scale(1)";
+    terminal.style.animation = "ibmFlash 0.40s ease, crtScan 4s infinite";
+
+    /* ======= INSERTAR ASCII ======= */
+    const asciiBlock = document.createElement("pre");
+    asciiBlock.classList.add("ascii");
+    asciiBlock.textContent = asciiLogo;
+    top.appendChild(asciiBlock);
+
+    /* ======= SUBTÍTULO ======= */
+    const subtitle = document.createElement("div");
+    subtitle.classList.add("subtitle");
+    subtitle.textContent = "by codebyRalph";
+    top.appendChild(subtitle);
+
+    /* Después, escribir comandos */
+    setTimeout(writeCommands, 350);
+
+  }, 200);
+});
+
 function writeCommands() {
   if (index >= commands.length) return showCursorAndExit();
 
   const line = document.createElement("div");
   line.textContent = commands[index];
-  line.style.textAlign = "left";
   line.style.marginLeft = "10px";
-  line.style.color = "#ffffff";
-
   playKey();
   terminal.appendChild(line);
 
@@ -188,11 +228,9 @@ function writeCommands() {
   setTimeout(writeCommands, 260);
 }
 
-/* Cursor final */
 function showCursorAndExit() {
   const cursorLine = document.createElement("div");
   cursorLine.innerHTML = "$<span class='cursor'></span>";
-  cursorLine.style.textAlign = "left";
   cursorLine.style.marginLeft = "10px";
   terminal.appendChild(cursorLine);
 
@@ -203,34 +241,6 @@ function showCursorAndExit() {
     }, 900);
   }, 800);
 }
-
-/* INICIO */
-document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => {
-
-    terminal.style.opacity = "1";
-    terminal.style.transform = "scale(1)";
-    terminal.style.animation = "ibmFlash 0.40s ease, crtScan 4s infinite";
-
-    /* Crear ASCII */
-    const asciiBlock = document.createElement("pre");
-    asciiBlock.classList.add("ascii");
-    asciiBlock.textContent = asciiLogo;
-
-    terminal.appendChild(asciiBlock);
-    
-    /* Crear subtítulo */
-const subtitle = document.createElement("div");
-subtitle.classList.add("subtitle");
-subtitle.textContent = "by codebyRalph";
-
-terminal.appendChild(subtitle);
-
-
-    setTimeout(writeCommands, 350);
-
-  }, 200);
-});
 </script>
 
 </body>
