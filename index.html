@@ -442,27 +442,34 @@ const bar = document.getElementById("progress-bar");
 
 function insertTop() {
 
-const headerContainer = document.createElement("div");
-headerContainer.classList.add("header-flex");
+  // CONTENEDOR FLEXIBLE
+  const headerContainer = document.createElement("div");
+  headerContainer.classList.add("header-flex");
 
-const subtitle = document.createElement("div");
-subtitle.classList.add("subtitle");
-subtitle.textContent = subtitleText;
+  // ASCII PRINCIPAL
+  const ascii = document.createElement("pre");
+  ascii.classList.add("ascii");
+  ascii.textContent = asciiLogo;
 
-headerContainer.appendChild(ascii);
-headerContainer.appendChild(subtitle);
+  // SUBTÍTULO DORADO
+  const subtitle = document.createElement("div");
+  subtitle.classList.add("subtitle");
+  subtitle.textContent = subtitleText;
 
-topBlock.appendChild(headerContainer);
+  // Añadir ASCII y subtítulo al contenedor flex
+  headerContainer.appendChild(ascii);
+  headerContainer.appendChild(subtitle);
 
-const noiseAscii = document.createElement("pre");
-noiseAscii.classList.add("ascii-noise");
-noiseAscii.textContent = noiseBlock;
-topBlock.appendChild(noiseAscii);
+  // Insertarlo en la parte superior
+  topBlock.appendChild(headerContainer);
 
+  // ASCII DE RUIDO
   const noiseAscii = document.createElement("pre");
-noiseAscii.classList.add("ascii-noise");
-noiseAscii.textContent = noiseBlock;
-topBlock.appendChild(noiseAscii);
+  noiseAscii.classList.add("ascii-noise");
+  noiseAscii.textContent = noiseBlock;
+  topBlock.appendChild(noiseAscii);
+}
+
 
 }
 
