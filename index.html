@@ -373,12 +373,6 @@ const terminal = document.getElementById("terminal");
 const key = document.getElementById("key");
 const bar = document.getElementById("progress-bar");
 
-/* Sonido */
-function playKey() {
-  key.currentTime = 0;
-  key.volume = 0.1;
-  key.play().catch(() => {});
-}
 
 function insertTop() {
   const ascii = document.createElement("pre");
