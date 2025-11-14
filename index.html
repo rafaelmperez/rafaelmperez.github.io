@@ -56,6 +56,13 @@
     animation: emf 6s infinite linear;
   }
 
+<div id="window-controls">
+  <div class="ctrl min" title="Minimizar"></div>
+  <div class="ctrl max" title="Restaurar"></div>
+  <div class="ctrl close" title="Cerrar"></div>
+</div>
+
+
   #wrapper {
     position: relative;
     width: 100%;
@@ -349,6 +356,94 @@
   }
 }
 
+/* === ULTRA PREMIUM — CONTROLES DE VENTANA ESTILO TERMINAL DORADO === */
+#window-controls {
+  position: absolute;
+  top: 14px;
+  right: 22px;
+  display: flex;
+  gap: 14px;
+  z-index: 3000;
+  user-select: none;
+}
+
+/* BASE DE CADA ICONO */
+#window-controls .ctrl {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  /* borde retro dorado */
+  border: 1px solid #f0c674cc;
+  border-radius: 3px;
+
+  /* fondo translúcido tipo vidrio ámbar */
+  background: rgba(20, 18, 10, 0.45);
+
+  /* glow elegante */
+  box-shadow:
+    0 0 4px #f0c67455,
+    inset 0 0 6px #f0c67422;
+
+  transition: 0.18s ease-in-out;
+}
+
+/* ====================== ICONOS PIXELADOS PREMIUM ====================== */
+
+/* Minimize: línea dorada */
+#window-controls .min::before {
+  content: "";
+  width: 10px;
+  height: 2px;
+  background: #f0c674;
+  display: block;
+  filter: drop-shadow(0 0 3px #f0c674aa);
+}
+
+/* Maximize: cuadrado dorado */
+#window-controls .max::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border: 2px solid #f0c674;
+  display: block;
+  filter: drop-shadow(0 0 3px #f0c674aa);
+}
+
+/* Close: X pixelada dorada */
+#window-controls .close::before {
+  content: "×";
+  font-family: monospace;
+  font-size: 14px;
+  color: #f0c674;
+  display: block;
+  line-height: 0;
+  filter: drop-shadow(0 0 3px #f0c674aa);
+}
+
+/* ======================= EFECTOS HOVER PREMIUM ======================= */
+#window-controls .ctrl:hover {
+  background: rgba(50, 40, 10, 0.75);
+  box-shadow:
+    0 0 8px #f0c674aa,
+    inset 0 0 8px #f0c67455;
+  transform: translateY(-1px);
+}
+
+/* ========================== MOBILE FRIENDLY ========================== */
+@media(max-width: 768px){
+  #window-controls {
+    top: 10px;
+    right: 14px;
+    transform: scale(0.85);
+  }
+}
+
+
+
   
 </style>
 </head>
@@ -436,6 +531,24 @@ const commands = [
   `<span class="msg">Conectando…</span> <span class="ok">acceso concedido</span> <span class="ok">✔</span>`
 ];
 
+// Minimizar → baja la opacidad como una terminal minimizada
+document.querySelector(".min").onclick = () => {
+  document.getElementById("wrapper").style.opacity = "0.25";
+};
+
+// Restaurar → vuelve a su estado original
+document.querySelector(".max").onclick = () => {
+  document.getElementById("wrapper").style.opacity = "1";
+};
+
+// Cerrar → efecto fade-out premium + redirección
+document.querySelector(".close").onclick = () => {
+  const fade = document.getElementById("fade");
+  fade.style.opacity = "1";
+  setTimeout(() => {
+    window.location.href = "https://rafaelmperez.com";
+  }, 800);
+};
 
 
 
