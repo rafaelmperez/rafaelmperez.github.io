@@ -178,15 +178,25 @@
     z-index: 1000;
   }
 
-  #progress-bar {
-    width: 0%;
-    height: 6px;
-    background: linear-gradient(90deg, #f0c674, #f7e49c);
-    box-shadow: 0 0 8px #f0c674aa;
-    border-radius: 10px;
-    margin: 12px 0;
-    transition: width .45s ease;
-  }
+#progress-bar {
+  width: 0%;
+  height: 6px;
+  background: linear-gradient(90deg, #f0c674, #f7e49c);
+  box-shadow: 0 0 8px #f0c674aa;
+  border-radius: 10px;
+  margin: 12px 0;
+  transition: width .45s ease;
+
+  /* NUEVO: para el % dentro de la barra */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  font-size: 0.75rem;
+  font-family: 'Share Tech Mono', monospace;
+  color: #000; /* que contraste sobre el dorado */
+}
+
 
   #top-block {
   margin-top: -90px;
@@ -386,25 +396,17 @@ const asciiLogo = String.raw`
 ..#%%%&%%&&%%%&&&&%%%&&&&&&&&&&&&&&%&@@@&&&&&&&&&&&&&&&&&&&%%&&&&&@&&@@&@@@&&&&&
 .(#%&%%%%&&&%%&&&%%%&&&&&&&&&&&&&%@@&@@&&&&&&&&&&&&&&&&&&&&&&%&&&@&&&&@@@&&&&&&&
 `;
-
 const commands = [
   `<span class="prompt">guest@rafaelmperez.com</span><span class="path">:~$</span> <span class="cmd">boot</span>`,
   `<span class="ok">[OK]</span> <span class="msg">Sistema seguro inicializado</span>`,
 
-
   `<span class="prompt">guest@rafaelmperez.com</span><span class="path">:~$</span> <span class="cmd">syscheck</span> <span class="flag">--integrity</span>`,
   `<span class="ok">[OK]</span> <span class="msg">Integridad del sistema verificada</span>`,
 
-  ``,
-
   `<span class="prompt">guest@rafaelmperez.com</span><span class="path">:~$</span> <span class="cmd">access</span>`,
-  `<span class="msg">Conectando…</span> <span class="ok">acceso concedido</span> <span class="ok">✔</span>`,
-
-  ``,
-
-  `<span class="prompt">guest@rafaelmperez.com</span><span class="path">:~$</span> <span class="cmd">navigating</span>`,
-  `<span class="msg">Accediendo a rafaelmperez.com…</span>`
+  `<span class="msg">Conectando…</span> <span class="ok">acceso concedido</span> <span class="ok">✔</span>`
 ];
+
 
 
 
@@ -446,13 +448,11 @@ function writeCommands() {
 
   terminal.appendChild(line);
 
-  // progreso dinámico REAL
-  const progress = Math.floor((index / (commands.length - 1)) * 100);
+  // progreso dinámico REAL con porcentaje dentro de la barra
+  const progress = Math.floor(((index + 1) / commands.length) * 100);
   bar.style.width = progress + "%";
+  bar.textContent = progress + "%";
 
-  index++;
-  setTimeout(writeCommands, 460);
-}
 
 
 function showCursorAndExit() {
