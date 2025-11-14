@@ -436,6 +436,56 @@
   }
 }
 
+/* === TOP 1 — CURVATURA CRT REAL (APLICADA AL WRAPPER) === */
+#wrapper {
+  perspective: 1400px;
+}
+
+#wrapper > * {
+  transform: rotateX(1.8deg) rotateY(-0.8deg);
+  transform-style: preserve-3d;
+}
+/* === TOP 2 — PHOSPHOR GLOW (BRILLO DEL FÓSFORO) === */
+#terminal, #top-block {
+  filter: drop-shadow(0 0 1.8px #f0c67455)
+          drop-shadow(0 0 3px #f0c67433);
+}
+/* === TOP 3 — GLASS HIGHLIGHT (REFLEJO DE VIDRIO DIAGONAL) === */
+#screen-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    rgba(255,255,255,0.06) 0%,
+    rgba(255,255,255,0.01) 45%,
+    rgba(255,255,255,0) 60%,
+    rgba(255,255,255,0.12) 100%
+  );
+  pointer-events: none;
+  z-index: 3000;
+  mix-blend-mode: soft-light;
+  opacity: 0.35;
+}
+/* === TOP 4 — SCANLINES DINÁMICOS PREMIUM === */
+body::before {
+  animation: scanMove 9s linear infinite;
+}
+
+@keyframes scanMove {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(1.5px); }
+}
+/* === TOP 5 — GLOW DEL MARCO (RESPIRACIÓN DORADA) === */
+#screen-frame {
+  animation: framePulse 4s ease-in-out infinite;
+}
+
+@keyframes framePulse {
+  0%   { box-shadow: 0 0 18px #f0c67444, inset 0 0 14px #f0c67422; }
+  50%  { box-shadow: 0 0 28px #f0c67488, inset 0 0 18px #f0c67444; }
+  100% { box-shadow: 0 0 18px #f0c67444, inset 0 0 14px #f0c67422; }
+}
 
 
   
