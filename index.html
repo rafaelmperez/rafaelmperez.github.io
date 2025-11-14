@@ -18,7 +18,6 @@
     position: relative;
   }
 
-  /* === SCANLINES CRT ELEGANTES === */
   body::before {
     content: "";
     position: fixed;
@@ -35,7 +34,6 @@
     opacity: .25;
   }
 
-  /* RUIDO ANALÓGICO */
   #noise {
     position: fixed;
     inset: 0;
@@ -46,7 +44,6 @@
     z-index: 998;
   }
 
-  /* DISTORSIÓN EMF SUAVE */
   @keyframes emf {
     0%   { transform: translate(0px, 0px); }
     40%  { transform: translate(0.6px, 0px); }
@@ -58,7 +55,6 @@
     animation: emf 6s infinite linear;
   }
 
-  /* CONTENEDOR CENTRAL */
   #wrapper {
     position: relative;
     width: 100%;
@@ -69,7 +65,6 @@
     z-index: 10;
   }
 
-  /* MARCO DORADO HUD */
   #screen-frame {
     position: absolute;
     inset: 20px;
@@ -88,7 +83,6 @@
     margin-bottom: 10px;
   }
 
-  /* ASCII DORADO */
   .ascii {
     color: #f0c674;
     text-shadow:
@@ -128,7 +122,6 @@
     margin-top: 18px;
   }
 
-  /* FLASH IBM */
   @keyframes ibmFlash {
     0%   { opacity: 0; filter: brightness(1.4) blur(1px); }
     20%  { opacity: 1; filter: brightness(2.8) blur(0px); }
@@ -137,7 +130,6 @@
     100% { opacity: 1; filter: brightness(1); }
   }
 
-  /* CURSOR */
   .cursor {
     display: inline-block;
     width: 10px;
@@ -151,7 +143,6 @@
     50% { opacity: 0; }
   }
 
-  /* FADE OUT */
   #fade {
     position: fixed;
     inset: 0;
@@ -162,7 +153,6 @@
     z-index: 1000;
   }
 
-  /* === BARRA SLIM HUD DORADA === */
   #progress-bar {
     width: 0%;
     height: 6px;
@@ -173,91 +163,26 @@
     transition: width .45s ease;
   }
 
-  /* ================================
-      RESPONSIVE (PANTALLAS PEQUEÑAS)
-   ================================ */
+  /* RESPONSIVE */
+  @media (max-width: 980px) {
+    #wrapper { max-width: 90%; }
+    .ascii { font-size: 11.5px; line-height: 1.05; }
+    #terminal { font-size: 0.95rem; }
+  }
 
-@media (max-width: 980px) {
-  #wrapper {
-    max-width: 90%;
+  @media (max-width: 740px) {
+    #wrapper { max-width: 95%; }
+    .ascii { font-size: 10px; }
+    #terminal { font-size: 0.85rem; }
+    #screen-frame { inset: 10px; }
+    #progress-bar { height: 4px; }
   }
-  .ascii {
-    font-size: 11.5px;
-    line-height: 1.05;
-  }
-  #terminal {
-    font-size: 0.95rem;
-    line-height: 1.18rem;
-    max-width: 95%;
-  }
-  #progress-bar {
-    height: 5px;
-  }
-}
 
-@media (max-width: 740px) {
-  #wrapper {
-    max-width: 95%;
+  @media (max-width: 520px) {
+    .ascii { font-size: 8.5px; }
+    #terminal { font-size: 0.78rem; }
+    #screen-frame { inset: 6px; border-width: 1px; }
   }
-  .ascii {
-    font-size: 10px;
-    line-height: 1.02;
-  }
-  .subtitle {
-    font-size: 0.85rem;
-  }
-  #terminal {
-    font-size: 0.85rem;
-    line-height: 1.15;
-  }
-  #progress-bar {
-    height: 4px;
-  }
-  #screen-frame {
-    inset: 10px;
-  }
-}
-
-@media (max-width: 520px) {
-  .ascii {
-    font-size: 8.5px;
-    line-height: 1.0;
-  }
-  #terminal {
-    font-size: 0.78rem;
-    line-height: 1.12;
-  }
-  .subtitle {
-    margin-top: 5px;
-    font-size: 0.75rem;
-  }
-  #progress-bar {
-    height: 3px;
-  }
-  #screen-frame {
-    inset: 6px;
-    border-width: 1px;
-  }
-}
-
-@media (max-width: 400px) {
-  .ascii {
-    font-size: 7.6px;
-    line-height: 1.0;
-  }
-  #terminal {
-    font-size: 0.72rem;
-    line-height: 1.05;
-  }
-  #progress-bar {
-    height: 3px;
-  }
-  .cursor {
-    width: 6px;
-    height: 14px;
-  }
-}
-
 
 </style>
 </head>
@@ -272,7 +197,6 @@
 
   <div id="top-block"></div>
 
-  <!-- BARRA HUD -->
   <div id="progress-bar"></div>
 
   <div id="terminal"></div>
@@ -283,25 +207,18 @@
 
 <script>
 
-/* ===============================
-            ASCII LOGO
-   =============================== */
-
-const asciiLogo = `
-               __               _                                                                     
-              / _|             | |                                                                    
- _ __   __ _ | |_   __ _   ___ | | _ __ ___   _ __    ___  _ __   ___  ____     ___   ___   _ __ ___  
-| '__| / _` ||  _| / _` | / _ \| || '_ ` _ \ | '_ \  / _ \| '__| / _ \|_  /    / __| / _ \ | '_ ` _ \ 
-| |   | (_| || |  | (_| ||  __/| || | | | | || |_) ||  __/| |   |  __/ / /  _ | (__ | (_) || | | | | |
-|_|    \__,_||_|   \__,_| \___||_||_| |_| |_|| .__/  \___||_|    \___|/___|(_) \___| \___/ |_| |_| |_|
-                                             | |                                                      
+/* =========== ASCII PROTEGIDO =========== */
+const asciiLogo = String.raw`
+ ######                                                                                                                           
+ #     #   ##   ######   ##   ###### #      #    # #####  ###### #####  ###### ######      ####   ####  #    # 
+ #     #  #  #  #       #  #  #      #      ##  ## #    # #      #    # #          #      #    # #    # ##  ## 
+ ######  #    # #####  #    # #####  #      # ## # #    # #####  #    # #####     #       #      #    # # ## # 
+ #   #   ###### #      ###### #      #      #    # #####  #      #####  #        #        #      #    # #    # 
+ #    #  #    # #      #    # #      #      #    # #      #      #   #  #       #     ### #    # #    # #    # 
+ #     # #    # #      #    # ###### ###### #    # #      ###### #    # ###### ###### ###  ####   ####  #    # 
 `;
 
 const subtitleText = "by codebyRalph";
-
-/* ===============================
-            COMANDOS
-   =============================== */
 
 const commands = [
   "[BOOT] Inicializando entorno seguro...",
@@ -312,7 +229,6 @@ const commands = [
   "[ACCESS] accediendo a rafaelmperez.com"
 ];
 
-/* Porcentaje sincronizado */
 const progressMap = [20, 45, 68, 85, 100];
 
 const topBlock = document.getElementById("top-block");
@@ -320,15 +236,12 @@ const terminal = document.getElementById("terminal");
 const key = document.getElementById("key");
 const bar = document.getElementById("progress-bar");
 
+/* Sonido */
 function playKey() {
   key.currentTime = 0;
   key.volume = 0.1;
   key.play().catch(() => {});
 }
-
-/* ===============================
-      ASCII + SUBTÍTULO
-   =============================== */
 
 function insertTop() {
   const ascii = document.createElement("pre");
@@ -343,10 +256,6 @@ function insertTop() {
   topBlock.appendChild(subtitle);
 }
 
-/* ===============================
-      COMANDOS + PROGRESO
-   =============================== */
-
 let index = 0;
 
 function writeCommands() {
@@ -357,16 +266,11 @@ function writeCommands() {
   playKey();
   terminal.appendChild(line);
 
-  /* Actualizar barra */
   bar.style.width = progressMap[index] + "%";
 
   index++;
   setTimeout(writeCommands, 460);
 }
-
-/* ===============================
-            CURSOR FINAL
-   =============================== */
 
 function showCursorAndExit() {
   const cursorLine = document.createElement("div");
@@ -381,12 +285,7 @@ function showCursorAndExit() {
   }, 1200);
 }
 
-/* ===============================
-              INICIO
-   =============================== */
-
 document.addEventListener("DOMContentLoaded", () => {
-
   insertTop();
 
   setTimeout(() => {
@@ -397,7 +296,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(writeCommands, 400);
 
   }, 250);
-
 });
 </script>
 
