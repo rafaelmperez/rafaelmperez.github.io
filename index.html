@@ -179,12 +179,12 @@
   }
 
 #progress-bar {
-  width: 0%;
-  height: 8px;
-  background: #332a10; /* fondo oscuro para que el dorado destaque */
+  width: 100%;
+  height: 10px;
+  background: #1a1508; /* ahora SÍ contrasta con el negro */
   border: 1px solid #f0c67488;
   border-radius: 10px;
-  margin: 12px 0;
+  margin: 12px auto 20px auto;
   position: relative;
   overflow: hidden;
 }
@@ -198,14 +198,17 @@
   color: #f0c674;
   font-size: 0.75rem;
   pointer-events: none;
+  z-index: 3;
 }
 
 #progress-fill {
   height: 100%;
   width: 0%;
   background: linear-gradient(90deg, #f0c674, #f7e49c);
-  box-shadow: 0 0 6px #f0c674aa;
+  box-shadow: 0 0 10px #f0c674aa;
   transition: width .45s ease;
+  position: relative;
+  z-index: 2;
 }
 
 
