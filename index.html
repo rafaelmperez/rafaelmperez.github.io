@@ -564,6 +564,12 @@ body::before {
     margin: 0 auto;
   }
 }
+@media (max-width: 768px) {
+  #progress-bar {
+    transform: scale(1.2);
+    width: 90%;
+  }
+}
 
   
 </style>
@@ -586,9 +592,7 @@ body::before {
 
       <div id="top-block"></div>
 
-      <div id="progress-bar" data-progress="0">
-        <div id="progress-fill"></div>
-      </div>
+      <div id="progress-bar"></div>
 
       <div id="terminal"></div>
 
