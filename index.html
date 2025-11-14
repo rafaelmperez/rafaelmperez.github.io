@@ -220,16 +220,32 @@ const asciiLogo = String.raw`
 
 `;
 
-const subtitleText = "by codebyRalph";
+const subtitleText = "by codebyRalph V1.0";
 
 const commands = [
-  "[BOOT] Inicializando entorno seguro...",
-  "[OK]   Cargando módulos principales...",
-  "[OK]   Verificando integridad del sistema...",
-  "[OK]   Servicios operativos.",
+  "guest@rafaelmperez.com:~$ boot",
+  "[OK] Sistema seguro inicializado",
+
+  "guest@rafaelmperez.com:~$ modules --load",
+  "[OK] Módulos principales cargados",
+
+  "guest@rafaelmperez.com:~$ syscheck --integrity",
+  "[OK] Integridad del sistema verificada",
+
+  "guest@rafaelmperez.com:~$ services --status",
+  "[OK] Todos los servicios están operativos",
+
   "",
-  "[ACCESS] accediendo a rafaelmperez.com"
+
+  "guest@rafaelmperez.com:~$ access",
+  "Conectando… acceso concedido ✔",
+
+  "",
+
+  "guest@rafaelmperez.com:~$ navigating",
+  "Accediendo a rafaelmperez.com…"
 ];
+
 
 const progressMap = [20, 45, 68, 85, 100];
 
