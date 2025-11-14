@@ -90,29 +90,34 @@
     white-space: pre;
     display: inline-block;
 
-    /* El truco mágico del color realista */
+    /* Gradiente dorado real */
     background: linear-gradient(
         90deg,
-        #00e5ff,  /* cyan */
-        #0095ff,  /* azul */
-        #7f00ff,  /* violeta */
-        #d400ff,  /* fucsia */
-        #ff6a00,  /* naranja */
-        #ffcc00,  /* amarillo */
-        #00ff66   /* verde */
+        #f0c674,
+        #ffd57c,
+        #e7b95c,
+        #f4d98a,
+        #cfa24a
     );
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
+    /* Brillo y relieve */
     text-shadow:
-      0 0 4px rgba(0,0,0,0.6),
-      0 0 6px rgba(0,0,0,0.35);
+      0 0 4px rgba(240,198,116,0.4),
+      0 0 8px rgba(240,198,116,0.25),
+      0 0 12px rgba(240,198,116,0.18);
+
+    animation: goldPulse 3.8s ease-in-out infinite;
 }
 
-  .ascii {
-    animation: rainbowShift 6s ease-in-out infinite;
+@keyframes goldPulse {
+    0%   { filter: brightness(1) }
+    50%  { filter: brightness(1.35) }
+    100% { filter: brightness(1) }
 }
+
 
 @keyframes rainbowShift {
     0%   { filter: hue-rotate(0deg); }
