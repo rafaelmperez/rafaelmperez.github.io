@@ -83,18 +83,43 @@
     margin-bottom: 10px;
   }
 
-  .ascii {
-    color: #f0c674;
-    text-shadow:
-      0 0 4px #f0c67455,
-      0 0 10px #f0c67455;
-    animation: asciiGlow 3s ease-in-out infinite;
+.ascii {
     font-family: monospace;
     font-size: 13.6px;
     line-height: 1.10;
     white-space: pre;
     display: inline-block;
-  }
+
+    /* El truco mágico del color realista */
+    background: linear-gradient(
+        90deg,
+        #00e5ff,  /* cyan */
+        #0095ff,  /* azul */
+        #7f00ff,  /* violeta */
+        #d400ff,  /* fucsia */
+        #ff6a00,  /* naranja */
+        #ffcc00,  /* amarillo */
+        #00ff66   /* verde */
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+      0 0 4px rgba(0,0,0,0.6),
+      0 0 6px rgba(0,0,0,0.35);
+}
+
+  .ascii {
+    animation: rainbowShift 6s ease-in-out infinite;
+}
+
+@keyframes rainbowShift {
+    0%   { filter: hue-rotate(0deg); }
+    50%  { filter: hue-rotate(25deg); }
+    100% { filter: hue-rotate(0deg); }
+}
+
 
   @keyframes asciiGlow {
     0%   { text-shadow: 0 0 3px #f0c67455; }
