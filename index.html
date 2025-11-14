@@ -278,6 +278,34 @@
   }
 }
 
+  /* === Colores REALISTAS de terminal === */
+
+.prompt {
+    color: #68d7ff;          /* cyan */
+    font-weight: 600;
+}
+
+.path {
+    color: #7aa2f7;          /* azul claro */
+}
+
+.cmd {
+    color: #9cff9c;          /* verde comando */
+}
+
+.flag {
+    color: #ffe27a;          /* amarillo flags */
+}
+
+.ok {
+    color: #00ff66;          /* verde OK real */
+    font-weight: bold;
+}
+
+.msg {
+    color: #e6e6e6;          /* gris suave */
+}
+
 
 </style>
 </head>
@@ -318,27 +346,27 @@ const asciiLogo = String.raw`
 const subtitleText = "by codebyRalph V1.0";
 
 const commands = [
-  "guest@rafaelmperez.com:~$ boot",
-  "[OK] Sistema seguro inicializado",
+  `<span class="prompt">guest@rafaelmperez.com</span>:<span class="path">~$</span> <span class="cmd">boot</span>`,
+  `<span class="ok">[OK]</span> <span class="msg">Sistema seguro inicializado</span>`,
 
-  "guest@rafaelmperez.com:~$ modules --load",
-  "[OK] Módulos principales cargados",
+  `<span class="prompt">guest@rafaelmperez.com</span>:<span class="path">~$</span> <span class="cmd">modules</span> <span class="flag">--load</span>`,
+  `<span class="ok">[OK]</span> <span class="msg">Módulos principales cargados</span>`,
 
-  "guest@rafaelmperez.com:~$ syscheck --integrity",
-  "[OK] Integridad del sistema verificada",
+  `<span class="prompt">guest@rafaelmperez.com</span>:<span class="path">~$</span> <span class="cmd">syscheck</span> <span class="flag">--integrity</span>`,
+  `<span class="ok">[OK]</span> <span class="msg">Integridad del sistema verificada</span>`,
 
-  "guest@rafaelmperez.com:~$ services --status",
-  "[OK] Todos los servicios están operativos",
+  `<span class="prompt">guest@rafaelmperez.com</span>:<span class="path">~$</span> <span class="cmd">services</span> <span class="flag">--status</span>`,
+  `<span class="ok">[OK]</span> <span class="msg">Todos los servicios están operativos</span>`,
 
-  "",
+  ``,
 
-  "guest@rafaelmperez.com:~$ access",
-  "Conectando… acceso concedido ✔",
+  `<span class="prompt">guest@rafaelmperez.com</span>:<span class="path">~$</span> <span class="cmd">access</span>`,
+  `<span class="msg">Conectando…</span> <span class="ok">acceso concedido ✔</span>`,
 
-  "",
+  ``,
 
-  "guest@rafaelmperez.com:~$ navigating",
-  "Accediendo a rafaelmperez.com…"
+  `<span class="prompt">guest@rafaelmperez.com</span>:<span class="path">~$</span> <span class="cmd">navigating</span>`,
+  `<span class="msg">Accediendo a rafaelmperez.com…</span>`
 ];
 
 
