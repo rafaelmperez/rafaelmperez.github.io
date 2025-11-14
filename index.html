@@ -35,7 +35,30 @@
     opacity: .25;
   }
 
-  /* === CONTENEDOR CENTRAL === */
+  /* RUIDO ANALÓGICO */
+  #noise {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.04;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4XmP4z8DwHwAFgwJ/lD1yfQAAAABJRU5ErkJggg==");
+    mix-blend-mode: screen;
+    z-index: 998;
+  }
+
+  /* DISTORSIÓN EMF SUAVE */
+  @keyframes emf {
+    0%   { transform: translate(0px, 0px); }
+    40%  { transform: translate(0.6px, 0px); }
+    60%  { transform: translate(-0.4px, 0px); }
+    80%  { transform: translate(0.2px, 0px); }
+    100% { transform: translate(0px, 0px); }
+  }
+  body {
+    animation: emf 6s infinite linear;
+  }
+
+  /* CONTENEDOR CENTRAL */
   #wrapper {
     position: relative;
     width: 100%;
@@ -46,17 +69,31 @@
     z-index: 10;
   }
 
+  /* MARCO DORADO HUD */
+  #screen-frame {
+    position: absolute;
+    inset: 20px;
+    border: 2px solid #f0c674;
+    border-radius: 8px;
+    box-shadow:
+        0 0 18px #f0c67455,
+        inset 0 0 14px #f0c67433,
+        0 0 45px #f0c67422;
+    pointer-events: none;
+    z-index: 2000;
+  }
+
   #top-block {
     text-align: center;
     margin-bottom: 10px;
   }
 
-  /* === ASCII DORADO === */
+  /* ASCII DORADO */
   .ascii {
     color: #f0c674;
     text-shadow:
-      0 0 3px #f0c67455,
-      0 0 7px #f0c67455;
+      0 0 4px #f0c67455,
+      0 0 10px #f0c67455;
     animation: asciiGlow 3s ease-in-out infinite;
     font-family: monospace;
     font-size: 13.6px;
@@ -67,7 +104,7 @@
 
   @keyframes asciiGlow {
     0%   { text-shadow: 0 0 3px #f0c67455; }
-    50%  { text-shadow: 0 0 10px #f0c674aa; }
+    50%  { text-shadow: 0 0 12px #f0c674aa; }
     100% { text-shadow: 0 0 3px #f0c67455; }
   }
 
@@ -78,7 +115,6 @@
     opacity: 0.85;
   }
 
-  /* === ZONA DE TEXTO CENTRAL === */
   #terminal {
     white-space: pre-wrap;
     font-size: 1.05rem;
@@ -89,10 +125,10 @@
     text-align: left;
     width: 100%;
     max-width: 750px;
-    margin-top: 10px;
+    margin-top: 18px;
   }
 
-  /* === FLASH IBM === */
+  /* FLASH IBM */
   @keyframes ibmFlash {
     0%   { opacity: 0; filter: brightness(1.4) blur(1px); }
     20%  { opacity: 1; filter: brightness(2.8) blur(0px); }
@@ -101,13 +137,7 @@
     100% { opacity: 1; filter: brightness(1); }
   }
 
-  /* === EFECTO CRT BREATHING === */
-  @keyframes crtScan {
-    0%,100% { opacity: 0.97; }
-    50%     { opacity: 1; }
-  }
-
-  /* === CURSOR == */
+  /* CURSOR */
   .cursor {
     display: inline-block;
     width: 10px;
@@ -121,7 +151,7 @@
     50% { opacity: 0; }
   }
 
-  /* === FADE OUT === */
+  /* FADE OUT */
   #fade {
     position: fixed;
     inset: 0;
@@ -132,17 +162,15 @@
     z-index: 1000;
   }
 
-  /* === MARCO TIPO TERMINAL === */
-  #screen-frame {
-    position: absolute;
-    inset: 20px;
-    border: 2px solid #f0c674;
-    border-radius: 8px;
-    box-shadow:
-        0 0 8px #f0c67455,
-        0 0 14px #f0c67433 inset;
-    pointer-events: none;
-    z-index: 2000;
+  /* === BARRA SLIM HUD DORADA === */
+  #progress-bar {
+    width: 0%;
+    height: 6px;
+    background: linear-gradient(90deg, #f0c674, #f7e49c);
+    box-shadow: 0 0 8px #f0c674aa;
+    border-radius: 10px;
+    margin: 12px 0;
+    transition: width .45s ease;
   }
 
 </style>
@@ -150,12 +178,16 @@
 
 <body>
 
+<div id="noise"></div>
 <div id="screen-frame"></div>
 <div id="fade"></div>
 
 <div id="wrapper">
 
   <div id="top-block"></div>
+
+  <!-- BARRA HUD -->
+  <div id="progress-bar"></div>
 
   <div id="terminal"></div>
 
@@ -182,7 +214,7 @@ const asciiLogo = `
 const subtitleText = "by codebyRalph";
 
 /* ===============================
-            LÍNEAS DE CARGA
+            COMANDOS
    =============================== */
 
 const commands = [
@@ -194,9 +226,13 @@ const commands = [
   "[ACCESS] accediendo a rafaelmperez.com"
 ];
 
+/* Porcentaje sincronizado */
+const progressMap = [20, 45, 68, 85, 100];
+
 const topBlock = document.getElementById("top-block");
 const terminal = document.getElementById("terminal");
 const key = document.getElementById("key");
+const bar = document.getElementById("progress-bar");
 
 function playKey() {
   key.currentTime = 0;
@@ -205,7 +241,7 @@ function playKey() {
 }
 
 /* ===============================
-      INSERTAR ASCII Y SUBTÍTULO
+      ASCII + SUBTÍTULO
    =============================== */
 
 function insertTop() {
@@ -222,7 +258,7 @@ function insertTop() {
 }
 
 /* ===============================
-           MOSTRAR COMANDOS
+      COMANDOS + PROGRESO
    =============================== */
 
 let index = 0;
@@ -233,11 +269,13 @@ function writeCommands() {
   const line = document.createElement("div");
   line.textContent = commands[index];
   playKey();
-
   terminal.appendChild(line);
 
+  /* Actualizar barra */
+  bar.style.width = progressMap[index] + "%";
+
   index++;
-  setTimeout(writeCommands, 260);
+  setTimeout(writeCommands, 460);
 }
 
 /* ===============================
@@ -253,8 +291,8 @@ function showCursorAndExit() {
     document.getElementById("fade").style.opacity = "1";
     setTimeout(() => {
       window.location.href = "https://rafaelmperez.com/home.html";
-    }, 900);
-  }, 900);
+    }, 950);
+  }, 1200);
 }
 
 /* ===============================
@@ -268,7 +306,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     terminal.style.opacity = "1";
     terminal.style.transform = "scale(1)";
-    terminal.style.animation = "ibmFlash 0.40s ease, crtScan 4s infinite";
+    terminal.style.animation = "ibmFlash 0.40s ease";
 
     setTimeout(writeCommands, 400);
 
