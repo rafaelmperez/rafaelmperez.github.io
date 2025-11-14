@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Loading...</title>
+<title>Inicializando…</title>
 
 <style>
   body {
@@ -14,75 +14,52 @@
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden;
   }
 
   .terminal-typing {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     white-space: pre;
     overflow: hidden;
     border-right: 3px solid #ffd700;
     padding: 20px;
     animation: blinkCursor 0.8s steps(1) infinite;
+    max-width: 90%;
   }
 
   @keyframes blinkCursor {
     50% { border-color: transparent; }
   }
-</style>
 
+  /* Fade-out elegante */
+  #fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+  }
+</style>
 </head>
 <body>
 
+<div id="fade"></div>
 <h2 id="terminal-writer" class="terminal-typing"></h2>
 
+<!-- Sonido suave de tecleo -->
+<audio id="key-sound" src="https://rafaelmperez.com/sounds/clip.aac" preload="auto"></audio>
+
 <script>
-// =============================
-// LÍNEAS QUE SE VAN ESCRIBIENDO
-// =============================
-const lines = [
-  "$ inicializando_portafolio.sh",
-  "$ cargando módulos de seguridad...",
-  "$ verificando integridad del sistema...",
-  "$ acceso concedido ✔"
-];
+// =====================================================
+// CONFIG
+// =====================================================
+const destinationURL = "https://rafaelmperez.com/home.html"; 
+const typingSpeedMin = 15;   // más rápido
+const typingSpeedMax = 35;   // velocidad variable estilo humano
+const lineDelay = 120;       // micro pausa entre líneas
 
-const element = document.getElementById("terminal-writer");
-let lineIndex = 0;
-let charIndex = 0;
-
-const typingSpeed = 55;   // velocidad de escritura
-const lineDelay = 600;    // pausa entre líneas
-
-function typeLine() {
-  const currentLine = lines[lineIndex];
-
-  if (charIndex < currentLine.length) {
-    element.textContent += currentLine.charAt(charIndex);
-    charIndex++;
-    setTimeout(typeLine, typingSpeed);
-
-  } else {
-    lineIndex++;
-    charIndex = 0;
-
-    if (lineIndex < lines.length) {
-      element.textContent += "\n";
-      setTimeout(typeLine, lineDelay);
-    }
-  }
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  typeLine();
-
-  // ============================
-  // AUTO REDIRECCIÓN A LOS 5 s
-  // ============================
-  setTimeout(() => {
-    window.location.href = "home.html"; // <-- cambia tu destino aquí
-  }, 5000);
-});
-</script>
-
-</body>
-</html>
+// ==============================
