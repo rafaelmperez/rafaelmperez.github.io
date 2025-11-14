@@ -205,13 +205,22 @@
   }
 }
 
-/* Móviles comunes */
-@media (max-width: 740px) {
-  .ascii {
-    font-size: 8.5px;
-    line-height: 1.05;
+@media (max-width: 768px) {
+  body {
+    height: calc(var(--vh));
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  #wrapper {
+    margin-top: 0 !important;
+    transform: scale(0.92); /* ajusta si quieres verlo más grande */
   }
 }
+
 
 
 
@@ -257,20 +266,6 @@
     /* color gris metálico */
     color: #b7b7b7;
 }
-:root {
-  --vh: 100vh;
-}
-
-@media (max-width: 768px) {
-  :root {
-    --vh: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
-  }
-
-  body {
-    height: calc(var(--vh));
-  }
-}
-
   
 </style>
 </head>
