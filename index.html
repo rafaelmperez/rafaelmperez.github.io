@@ -62,4 +62,78 @@ const typingSpeedMin = 15;   // más rápido
 const typingSpeedMax = 35;   // velocidad variable estilo humano
 const lineDelay = 120;       // micro pausa entre líneas
 
-// ==============================
+// =====================================================
+// MENSAJES PROFESIONALES + HACKER
+// =====================================================
+const lines = [
+  "$ boot-sequence --start",
+  "> Cargando módulos de seguridad…",
+  "> Verificando integridad del sistema…",
+  "> Analizando superficie de ataque…",
+  "> Inicializando entorno de trabajo…",
+  "> Acceso autorizado ✔",
+  "",
+  "$ redirigiendo a rafaelmperez.com"
+];
+
+const element = document.getElementById("terminal-writer");
+const audio = document.getElementById("key-sound");
+
+let lineIndex = 0;
+let charIndex = 0;
+
+// =====================================================
+// EFECTO DE ESCRITURA PROFESIONAL
+// =====================================================
+function typeLine() {
+  const currentLine = lines[lineIndex];
+
+  if (charIndex < currentLine.length) {
+    element.textContent += currentLine.charAt(charIndex);
+
+    // sonido suave tipo terminal
+    audio.currentTime = 0;
+    audio.volume = 0.15;
+    audio.play().catch(()=>{});
+
+    charIndex++;
+
+    const randomSpeed = Math.floor(Math.random() * (typingSpeedMax - typingSpeedMin)) + typingSpeedMin;
+    setTimeout(typeLine, randomSpeed);
+
+  } else {
+    lineIndex++;
+    charIndex = 0;
+
+    if (lineIndex < lines.length) {
+      element.textContent += "\n";
+      setTimeout(typeLine, lineDelay);
+    } else {
+      // FIN DEL TEXTO → FADE OUT → REDIRECCIÓN
+      startFadeOut();
+    }
+  }
+}
+
+// =====================================================
+// FADE OUT PROFESIONAL + ENTRADA A LA WEB
+// =====================================================
+function startFadeOut() {
+  const fadeLayer = document.getElementById("fade");
+  fadeLayer.style.opacity = "1";
+
+  setTimeout(() => {
+    window.location.href = destinationURL;
+  }, 1000);
+}
+
+// =====================================================
+// INICIO
+// =====================================================
+document.addEventListener("DOMContentLoaded", () => {
+  typeLine();
+});
+</script>
+
+</body>
+</html>
