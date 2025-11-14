@@ -131,13 +131,16 @@
     50%  { text-shadow: 0 0 12px #f0c674aa; }
     100% { text-shadow: 0 0 3px #f0c67455; }
   }
-
-  .subtitle {
+.subtitle {
     margin-top: 8px;
     font-size: 1rem;
     color: #e6e6e6;
     opacity: 0.85;
-  }
+    text-align: right;   /* 👈 fuerza alineación derecha */
+    width: 100%;         /* 👈 permite que se pegue al borde derecho */
+    padding-right: 8px;  /* 👈 separación elegante del borde */
+}
+
 
   #terminal {
     white-space: pre-wrap;
