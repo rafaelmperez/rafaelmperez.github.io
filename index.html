@@ -438,20 +438,23 @@ function insertTop() {
 
 
 let index = 0;
-  
-function writeCommands() {
+
+  function writeCommands() {
   if (index >= commands.length) return showCursorAndExit();
 
   const line = document.createElement("div");
   line.innerHTML = commands[index];
-
-
   terminal.appendChild(line);
 
   // progreso dinámico REAL con porcentaje dentro de la barra
   const progress = Math.floor(((index + 1) / commands.length) * 100);
   bar.style.width = progress + "%";
   bar.textContent = progress + "%";
+
+  index++;
+  setTimeout(writeCommands, 460);
+}
+
 
 
 
