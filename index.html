@@ -36,6 +36,11 @@
   }
 
   #terminal {
+    text-align: center;  /* ya lo tienes */
+    width: 100%;         /* asegura centrado */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* <-- CENTRADO REAL */
     white-space: pre;
     font-size: 1.15rem;
     line-height: 1.18;
@@ -47,16 +52,21 @@
     z-index: 10;
   }
 
+  
   /* ==== ASCII DORADO PREMIUM + GLOW === */
-  .ascii {
+.ascii {
     color: #f0c674;
     display: inline-block;
     margin-bottom: 20px;
-    text-shadow:
-      0 0 3px #f0c67455,
-      0 0 6px #f0c67455;
+    text-shadow: 0 0 3px #f0c67455, 0 0 6px #f0c67455;
     animation: asciiGlow 3s ease-in-out infinite;
-  }
+
+    /* --- CLAVE PARA CENTRAR ASCII --- */
+    font-family: monospace;      /* obligatorio para ASCII */
+    font-size: 14px;             /* ajusta según pantalla */
+    line-height: 1.1;
+}
+
 
   @keyframes asciiGlow {
     0%   { text-shadow: 0 0 2px #f0c67455; }
