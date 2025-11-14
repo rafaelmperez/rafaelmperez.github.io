@@ -522,6 +522,49 @@ body::before {
   transform: scale(0.92) !important;
 }
 
+  @media (max-width: 768px) {
+
+  /* Curvatura mucho más suave en móvil */
+  #crt #wrapper {
+    transform: rotateX(0.6deg) rotateY(-0.4deg) scale(0.82) !important;
+    transform-origin: top center;
+  }
+
+  /* Ajustamos el contenedor CRT sin romper nada */
+  #crt {
+    perspective: 900px;
+  }
+}
+@media (max-width: 768px) {
+
+  /* Contenedor del ASCII ajustado */
+  #top-block {
+    transform: scale(0.72);
+    transform-origin: top center;
+    margin-top: -20px !important;
+    margin-bottom: -10px !important;
+  }
+
+  /* ASCII dorado principal */
+  #top-block pre.ascii:not(.ascii-noise) {
+    font-size: 5px !important;
+    line-height: 0.85 !important;
+  }
+
+  /* ASCII de ruido */
+  .ascii-noise {
+    font-size: 3.5px !important;
+  }
+}
+@media (max-width: 768px) {
+  #terminal {
+    font-size: 0.78rem !important;
+    line-height: 1.05rem !important;
+    max-width: 92%;
+    margin: 0 auto;
+  }
+}
+
   
 </style>
 </head>
