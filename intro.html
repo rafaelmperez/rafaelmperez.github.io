@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Loading...</title>
+
+<style>
+  body {
+    background: #000;
+    color: #ffd700;
+    font-family: 'Share Tech Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .terminal-typing {
+    font-size: 1.6rem;
+    white-space: pre;
+    overflow: hidden;
+    border-right: 3px solid #ffd700;
+    padding: 20px;
+    animation: blinkCursor 0.8s steps(1) infinite;
+  }
+
+  @keyframes blinkCursor {
+    50% { border-color: transparent; }
+  }
+</style>
+
+</head>
+<body>
+
+<h2 id="terminal-writer" class="terminal-typing"></h2>
+
+<script>
+// =============================
+// LÍNEAS QUE SE VAN ESCRIBIENDO
+// =============================
+const lines = [
+  "$ inicializando_portafolio.sh",
+  "$ cargando módulos de seguridad...",
+  "$ verificando integridad del sistema...",
+  "$ acceso concedido ✔"
+];
+
+const element = document.getElementById("terminal-writer");
+let lineIndex = 0;
+let charIndex = 0;
+
+const typingSpeed = 55;   // velocidad de escritura
+const lineDelay = 600;    // pausa entre líneas
+
+function typeLine() {
+  const currentLine = lines[lineIndex];
+
+  if (charIndex < currentLine.length) {
+    element.textContent += currentLine.charAt(charIndex);
+    charIndex++;
+    setTimeout(typeLine, typingSpeed);
+
+  } else {
+    lineIndex++;
+    charIndex = 0;
+
+    if (lineIndex < lines.length) {
+      element.textContent += "\n";
+      setTimeout(typeLine, lineDelay);
+    }
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  typeLine();
+
+  // ============================
+  // AUTO REDIRECCIÓN A LOS 5 s
+  // ============================
+  setTimeout(() => {
+    window.location.href = "index.html"; // <-- cambia tu destino aquí
+  }, 5000);
+});
+</script>
+
+</body>
+</html>
