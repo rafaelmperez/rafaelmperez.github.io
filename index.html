@@ -212,12 +212,6 @@
   z-index: 2;
 }
 
-
-
-  #top-block {
-  margin-top: -90px;
-}
-
 #wrapper {
   margin-top: -30px;
 }
@@ -319,8 +313,9 @@
   }
 
   #top-block {
-    margin-top: -40px !important; /* ajusta según te guste */
-  }
+  margin-top: -20px; /* balance ideal con la curvatura */
+}
+
 }
 
   /* ===== Reducir SOLO el ASCII dorado (el logo grande) en móvil ===== */
@@ -501,6 +496,25 @@ body::before {
   transform: rotateX(1.8deg) rotateY(-0.8deg);
   transform-style: preserve-3d;
 }
+/* Contenedor externo que aplica perspectiva sin alterar posiciones internas */
+#crt {
+  perspective: 1400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* El wrapper recibe solo la curvatura, no el scale */
+#crt #wrapper {
+  transform: rotateX(1.8deg) rotateY(-0.8deg);
+  transform-style: preserve-3d;
+}
+
+/* El wrapper mantiene su scale sin afectar a la perspectiva */
+#wrapper {
+  transform: scale(0.92) !important;
+}
 
   
 </style>
@@ -516,7 +530,12 @@ body::before {
 <div id="noise"></div>
 <div id="screen-frame"></div>
 <div id="fade"></div>
-  
+ 
+  <div id="crt">
+  <div id="wrapper">
+  </div>
+</div>
+
 
 <div id="crt-container">
   <div id="wrapper">
