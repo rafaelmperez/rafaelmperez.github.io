@@ -173,6 +173,92 @@
     transition: width .45s ease;
   }
 
+  /* ================================
+      RESPONSIVE (PANTALLAS PEQUEÑAS)
+   ================================ */
+
+@media (max-width: 980px) {
+  #wrapper {
+    max-width: 90%;
+  }
+  .ascii {
+    font-size: 11.5px;
+    line-height: 1.05;
+  }
+  #terminal {
+    font-size: 0.95rem;
+    line-height: 1.18rem;
+    max-width: 95%;
+  }
+  #progress-bar {
+    height: 5px;
+  }
+}
+
+@media (max-width: 740px) {
+  #wrapper {
+    max-width: 95%;
+  }
+  .ascii {
+    font-size: 10px;
+    line-height: 1.02;
+  }
+  .subtitle {
+    font-size: 0.85rem;
+  }
+  #terminal {
+    font-size: 0.85rem;
+    line-height: 1.15;
+  }
+  #progress-bar {
+    height: 4px;
+  }
+  #screen-frame {
+    inset: 10px;
+  }
+}
+
+@media (max-width: 520px) {
+  .ascii {
+    font-size: 8.5px;
+    line-height: 1.0;
+  }
+  #terminal {
+    font-size: 0.78rem;
+    line-height: 1.12;
+  }
+  .subtitle {
+    margin-top: 5px;
+    font-size: 0.75rem;
+  }
+  #progress-bar {
+    height: 3px;
+  }
+  #screen-frame {
+    inset: 6px;
+    border-width: 1px;
+  }
+}
+
+@media (max-width: 400px) {
+  .ascii {
+    font-size: 7.6px;
+    line-height: 1.0;
+  }
+  #terminal {
+    font-size: 0.72rem;
+    line-height: 1.05;
+  }
+  #progress-bar {
+    height: 3px;
+  }
+  .cursor {
+    width: 6px;
+    height: 14px;
+  }
+}
+
+
 </style>
 </head>
 
