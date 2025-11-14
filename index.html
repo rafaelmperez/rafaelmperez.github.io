@@ -257,6 +257,19 @@
     /* color gris metálico */
     color: #b7b7b7;
 }
+:root {
+  --vh: 100vh;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --vh: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  }
+
+  body {
+    height: calc(var(--vh));
+  }
+}
 
   
 </style>
