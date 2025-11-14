@@ -18,19 +18,6 @@
     position: relative;
   }
 
-  /* === MARCO TERMINAL DORADO PREMIUM === */
-  #screen-frame {
-    position: absolute;
-    inset: 25px;
-    border: 2px solid #f0c674;
-    border-radius: 10px;
-    box-shadow:
-      0 0 6px #f0c67455,
-      0 0 10px #f0c67433 inset;
-    pointer-events: none;
-    z-index: 2000;
-  }
-
   /* === SCANLINES CRT ELEGANTES === */
   body::before {
     content: "";
@@ -48,58 +35,64 @@
     opacity: .25;
   }
 
-  /* CONTENEDOR PRINCIPAL */
-  #top-block {
-    position: absolute;
-    top: 45px;
-    width: 100%;
-    text-align: center;
-    z-index: 20;
-  }
-
-  #terminal {
-    white-space: pre;
-    font-size: 1.15rem;
-    line-height: 1.18;
-    opacity: 0;
-    transform: scale(0.96);
-    transition: opacity .25s ease, transform .25s ease;
-    text-align: left;
+  /* === CONTENEDOR CENTRAL === */
+  #wrapper {
     position: relative;
+    width: 100%;
+    max-width: 1150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     z-index: 10;
-    margin-top: 180px; /* ALEJA COMANDOS DEL ASCII */
   }
 
-  /* ==== ASCII DORADO PREMIUM === */
+  #top-block {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  /* === ASCII DORADO === */
   .ascii {
     color: #f0c674;
-    display: inline-block;
-    margin-bottom: 10px;
-    font-family: monospace;
-    font-size: 14px;
     text-shadow:
       0 0 3px #f0c67455,
-      0 0 6px #f0c67455;
+      0 0 7px #f0c67455;
     animation: asciiGlow 3s ease-in-out infinite;
+    font-family: monospace;
+    font-size: 13.6px;
+    line-height: 1.10;
+    white-space: pre;
+    display: inline-block;
   }
 
   @keyframes asciiGlow {
-    0%   { text-shadow: 0 0 2px #f0c67455; }
-    50%  { text-shadow: 0 0 8px #f0c674aa; }
-    100% { text-shadow: 0 0 2px #f0c67455; }
+    0%   { text-shadow: 0 0 3px #f0c67455; }
+    50%  { text-shadow: 0 0 10px #f0c674aa; }
+    100% { text-shadow: 0 0 3px #f0c67455; }
   }
 
-  /* SUBTÍTULO */
   .subtitle {
-    color: #f0c674;
-    font-size: 0.9rem;
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #e6e6e6;
     opacity: 0.85;
-    margin-bottom: 25px;
-    letter-spacing: 1px;
-    font-family: monospace;
   }
 
-  /* ============================== FLASH IBM ============================== */
+  /* === ZONA DE TEXTO CENTRAL === */
+  #terminal {
+    white-space: pre-wrap;
+    font-size: 1.05rem;
+    line-height: 1.28rem;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity .25s ease, transform .25s ease;
+    text-align: left;
+    width: 100%;
+    max-width: 750px;
+    margin-top: 10px;
+  }
+
+  /* === FLASH IBM === */
   @keyframes ibmFlash {
     0%   { opacity: 0; filter: brightness(1.4) blur(1px); }
     20%  { opacity: 1; filter: brightness(2.8) blur(0px); }
@@ -108,13 +101,27 @@
     100% { opacity: 1; filter: brightness(1); }
   }
 
-  /* ====== CRT breathing effect ====== */
+  /* === EFECTO CRT BREATHING === */
   @keyframes crtScan {
     0%,100% { opacity: 0.97; }
     50%     { opacity: 1; }
   }
 
-  /* ======================== Fade final ======================== */
+  /* === CURSOR == */
+  .cursor {
+    display: inline-block;
+    width: 10px;
+    height: 18px;
+    background: #fff;
+    margin-left: 6px;
+    animation: blinkCursor .8s steps(1) infinite;
+  }
+
+  @keyframes blinkCursor {
+    50% { opacity: 0; }
+  }
+
+  /* === FADE OUT === */
   #fade {
     position: fixed;
     inset: 0;
@@ -122,21 +129,20 @@
     opacity: 0;
     transition: opacity .9s ease-in-out;
     pointer-events: none;
-    z-index: 3000;
+    z-index: 1000;
   }
 
-  /* Cursor final */
-  .cursor {
-    display: inline-block;
-    width: 8px;
-    height: 15px;
-    background: #fff;
-    margin-left: 5px;
-    animation: blinkCursor .8s steps(1) infinite;
-  }
-
-  @keyframes blinkCursor {
-    50% { opacity: 0; }
+  /* === MARCO TIPO TERMINAL === */
+  #screen-frame {
+    position: absolute;
+    inset: 20px;
+    border: 2px solid #f0c674;
+    border-radius: 8px;
+    box-shadow:
+        0 0 8px #f0c67455,
+        0 0 14px #f0c67433 inset;
+    pointer-events: none;
+    z-index: 2000;
   }
 
 </style>
@@ -147,15 +153,21 @@
 <div id="screen-frame"></div>
 <div id="fade"></div>
 
-<div id="top-block"></div>
-<div id="terminal"></div>
+<div id="wrapper">
+
+  <div id="top-block"></div>
+
+  <div id="terminal"></div>
+
+</div>
 
 <audio id="key" src="https://rafaelmperez.com/sounds/clip.aac" preload="auto"></audio>
 
 <script>
-/* ========================================
-           ASCII LOGO
-======================================== */
+
+/* ===============================
+            ASCII LOGO
+   =============================== */
 
 const asciiLogo = `
  ######                                                                                                                           
@@ -167,71 +179,74 @@ const asciiLogo = `
  #     # #    # #      #    # ###### ###### #    # #      ###### #    # ###### ###### ###  ####   ####  #    # 
 `;
 
-/* COMANDOS DE SISTEMA REAL */
+const subtitleText = "by codebyRalph";
+
+/* ===============================
+            LÍNEAS DE CARGA
+   =============================== */
+
 const commands = [
   "[BOOT] Inicializando entorno seguro...",
-  "[OK]    Cargando módulos principales...",
-  "[OK]    Verificando integridad del sistema...",
-  "[OK]    Servicios operativos.",
+  "[OK]   Cargando módulos principales...",
+  "[OK]   Verificando integridad del sistema...",
+  "[OK]   Servicios operativos.",
   "",
   "[ACCESS] accediendo a rafaelmperez.com"
 ];
 
-const top = document.getElementById("top-block");
+const topBlock = document.getElementById("top-block");
 const terminal = document.getElementById("terminal");
 const key = document.getElementById("key");
 
 function playKey() {
   key.currentTime = 0;
-  key.volume = 0.12;
+  key.volume = 0.1;
   key.play().catch(() => {});
 }
 
+/* ===============================
+      INSERTAR ASCII Y SUBTÍTULO
+   =============================== */
+
+function insertTop() {
+  const ascii = document.createElement("pre");
+  ascii.classList.add("ascii");
+  ascii.textContent = asciiLogo;
+
+  const subtitle = document.createElement("div");
+  subtitle.classList.add("subtitle");
+  subtitle.textContent = subtitleText;
+
+  topBlock.appendChild(ascii);
+  topBlock.appendChild(subtitle);
+}
+
+/* ===============================
+           MOSTRAR COMANDOS
+   =============================== */
+
 let index = 0;
-
-/* INICIO */
-document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => {
-
-    terminal.style.opacity = "1";
-    terminal.style.transform = "scale(1)";
-    terminal.style.animation = "ibmFlash 0.40s ease, crtScan 4s infinite";
-
-    /* ======= INSERTAR ASCII ======= */
-    const asciiBlock = document.createElement("pre");
-    asciiBlock.classList.add("ascii");
-    asciiBlock.textContent = asciiLogo;
-    top.appendChild(asciiBlock);
-
-    /* ======= SUBTÍTULO ======= */
-    const subtitle = document.createElement("div");
-    subtitle.classList.add("subtitle");
-    subtitle.textContent = "by codebyRalph";
-    top.appendChild(subtitle);
-
-    /* Después, escribir comandos */
-    setTimeout(writeCommands, 350);
-
-  }, 200);
-});
 
 function writeCommands() {
   if (index >= commands.length) return showCursorAndExit();
 
   const line = document.createElement("div");
   line.textContent = commands[index];
-  line.style.marginLeft = "10px";
   playKey();
+
   terminal.appendChild(line);
 
   index++;
   setTimeout(writeCommands, 260);
 }
 
+/* ===============================
+            CURSOR FINAL
+   =============================== */
+
 function showCursorAndExit() {
   const cursorLine = document.createElement("div");
   cursorLine.innerHTML = "$<span class='cursor'></span>";
-  cursorLine.style.marginLeft = "10px";
   terminal.appendChild(cursorLine);
 
   setTimeout(() => {
@@ -239,8 +254,27 @@ function showCursorAndExit() {
     setTimeout(() => {
       window.location.href = "https://rafaelmperez.com/home.html";
     }, 900);
-  }, 800);
+  }, 900);
 }
+
+/* ===============================
+              INICIO
+   =============================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  insertTop();
+
+  setTimeout(() => {
+    terminal.style.opacity = "1";
+    terminal.style.transform = "scale(1)";
+    terminal.style.animation = "ibmFlash 0.40s ease, crtScan 4s infinite";
+
+    setTimeout(writeCommands, 400);
+
+  }, 250);
+
+});
 </script>
 
 </body>
