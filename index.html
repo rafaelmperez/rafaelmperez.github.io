@@ -402,7 +402,8 @@ function writeCommands() {
   if (index >= commands.length) return showCursorAndExit();
 
   const line = document.createElement("div");
-  line.textContent = commands[index];
+  line.innerHTML = commands[index];
+
   playKey();
   terminal.appendChild(line);
 
