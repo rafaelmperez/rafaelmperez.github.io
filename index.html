@@ -180,22 +180,34 @@
 
 #progress-bar {
   width: 0%;
-  height: 6px;
-  background: linear-gradient(90deg, #f0c674, #f7e49c);
-  box-shadow: 0 0 8px #f0c674aa;
+  height: 8px;
+  background: #332a10; /* fondo oscuro para que el dorado destaque */
+  border: 1px solid #f0c67488;
   border-radius: 10px;
   margin: 12px 0;
-  transition: width .45s ease;
-
-  /* NUEVO: para el % dentro de la barra */
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 8px;
-  font-size: 0.75rem;
-  font-family: 'Share Tech Mono', monospace;
-  color: #000; /* que contraste sobre el dorado */
+  position: relative;
+  overflow: hidden;
 }
+
+#progress-bar::before {
+  content: attr(data-progress) "%";
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #f0c674;
+  font-size: 0.75rem;
+  pointer-events: none;
+}
+
+#progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #f0c674, #f7e49c);
+  box-shadow: 0 0 6px #f0c674aa;
+  transition: width .45s ease;
+}
+
 
 
   #top-block {
@@ -337,7 +349,10 @@
 
   <div id="top-block"></div>
 
-  <div id="progress-bar"></div>
+  <div id="progress-bar" data-progress="0">
+  <div id="progress-fill"></div>
+</div>
+
 
   <div id="terminal"></div>
 
@@ -448,8 +463,10 @@ let index = 0;
 
   // progreso dinámico REAL con porcentaje dentro de la barra
   const progress = Math.floor(((index + 1) / commands.length) * 100);
-  bar.style.width = progress + "%";
-  bar.textContent = progress + "%";
+const fill = document.getElementById("progress-fill");
+document.getElementById("progress-bar").setAttribute("data-progress", progress);
+fill.style.width = progress + "%";
+
 
   index++;
   setTimeout(writeCommands, 460);
