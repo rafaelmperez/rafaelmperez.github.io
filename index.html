@@ -359,6 +359,7 @@ const asciiLogo = String.raw`
  ## ##    ## ###   ##       ## ###   ##       ##      ##   ##   ## ##    ##       ## ##    ##       ##              ##       ##   ##  ##   ##
  ##  ##   ##  ##   ##       ##  ##   ##  ##   ##  ##  ##   ##   ##       ##  ##   ##  ##   ##  ##  ##  ##   ### #   ##   ##  ##   ##  ##   ##
 #### ##  ###  ##  ####     ###  ##  ### ###  ### ###  ##   ##  ####     ### ###  #### ##  ### ###  # ####   ### #    ## ##    ## ##   ##   ##
+                                                                                                                     by codebyRalph V1.0
                                                                                                           
 
 `;
@@ -396,9 +397,6 @@ const asciiLogo = String.raw`
 ..#%%%&%%&&%%%&&&&%%%&&&&&&&&&&&&&&%&@@@&&&&&&&&&&&&&&&&&&&%%&&&&&@&&@@&@@@&&&&&
 .(#%&%%%%&&&%%&&&%%%&&&&&&&&&&&&&%@@&@@&&&&&&&&&&&&&&&&&&&&&&%&&&@&&&&@@@&&&&&&&
 `;
-
-
-const subtitleText = "by codebyRalph V1.0";
 
 const commands = [
   `<span class="prompt">guest@rafaelmperez.com</span><span class="path">:~$</span> <span class="cmd">boot</span>`,
@@ -439,14 +437,9 @@ function insertTop() {
   ascii.classList.add("ascii");
   ascii.textContent = asciiLogo;
 
-  // SUBTÍTULO DEBAJO DEL ASCII
-  const subtitle = document.createElement("div");
-  subtitle.classList.add("subtitle");
-  subtitle.textContent = subtitleText;
 
   // Insertar en orden, uno debajo del otro
   topBlock.appendChild(ascii);
-  topBlock.appendChild(subtitle);
 
   // ASCII DE RUIDO
   const noiseAscii = document.createElement("pre");
