@@ -17,85 +17,135 @@
     overflow: hidden;
   }
 
-  .terminal-typing {
-    font-size: 1.35rem;
+  #terminal {
+    font-size: 1.4rem;
     white-space: pre-wrap;
-    border-right: 3px solid #ffd700;
-    animation: blinkCursor .8s steps(1) infinite;
-    max-width: 92%;
-    padding: 18px;
+    text-align: left;
+    line-height: 1.4;
+    opacity: 0;
+    transform: scale(0.97);
+    transition: opacity 0.4s ease, transform 0.4s ease;
   }
 
-  @keyframes blinkCursor { 50% { border-color: transparent; } }
+  /* Cursor del tipo profesional */
+  .cursor {
+    display: inline-block;
+    width: 10px;
+    height: 18px;
+    background: #ffd700;
+    margin-left: 4px;
+    animation: blink 0.8s steps(1) infinite;
+    vertical-align: middle;
+  }
 
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
+  /* Glitch suave */
+  @keyframes glitch {
+    0%, 100% { text-shadow: none; }
+    50% { text-shadow: 1px 0px #ffd70055; }
+  }
+
+  /* Fade-out */
   #fade {
     position: fixed;
     inset: 0;
     background: #000;
     opacity: 0;
-    transition: opacity .75s ease;
+    transition: opacity .8s ease-in-out;
     pointer-events: none;
   }
 </style>
 </head>
+
 <body>
-
 <div id="fade"></div>
-<h2 id="terminal" class="terminal-typing"></h2>
-
+<div id="terminal"></div>
 <audio id="key" src="https://rafaelmperez.com/sounds/clip.aac" preload="auto"></audio>
 
 <script>
-const t = document.getElementById("terminal");
-const key = document.getElementById("key");
+/* ================================
+      CONFIGURACIÓN
+   ================================ */
 
-const lines = [
-  "$ boot-sequence --start",
-  "> Cargando módulos de seguridad…",
-  "> Verificando integridad del sistema…",
-  "> Analizando superficie de ataque…",
-  "> Inicializando entorno de operaciones…",
-  "> Acceso autorizado ✔",
+const asciiLogo = [
+  "[ rafaelmperez.com ]",
+  "       system initialized",
+  "        powered by codebyraphael",
+];
+
+const commands = [
+  "$ inicializando_portafolio.sh",
+  "$ cargando módulos de seguridad...",
+  "$ verificando integridad del entorno...",
+  "$ estableciendo parámetros de operación...",
+  "$ acceso concedido ✔",
   "",
   "$ redirigiendo a rafaelmperez.com"
 ];
 
-let i = 0, j = 0;
+const terminal = document.getElementById("terminal");
+const key = document.getElementById("key");
+let lineIndex = 0;
 
-function type() {
-  const line = lines[i];
-
-  if (j < line.length) {
-    t.textContent += line[j++];
-    playKey();
-    return setTimeout(type, rand(10, 26)); // velocidad mejor optimizada
-  }
-
-  if (++i < lines.length) {
-    t.textContent += "\n";
-    j = 0;
-    return setTimeout(type, 120);
-  }
-
-  fadeOut();
+function playKey() {
+  key.currentTime = 0;
+  key.volume = 0.12;
+  key.play().catch(() => {});
 }
+
+/* ================================
+      ESCRITURA POR LÍNEAS (TOP)
+   ================================ */
+
+function writeLines(lines, callback) {
+  if (lineIndex >= lines.length) {
+    lineIndex = 0;
+    return callback();
+  }
+
+  const text = lines[lineIndex];
+  terminal.innerHTML += text + "\n";
+  playKey();
+
+  lineIndex++;
+
+  setTimeout(() => writeLines(lines, callback), 320);
+}
+
+/* ================================
+      FADE OUT FINAL
+   ================================ */
 
 function fadeOut() {
   document.getElementById("fade").style.opacity = "1";
   setTimeout(() => {
-    location.href = "https://rafaelmperez.com/home.html";
-  }, 750);
+    window.location.href = "https://rafaelmperez.com/home.html";
+  }, 900);
 }
 
-function playKey() {
-  key.currentTime = 0;
-  key.volume = 0.11;
-  key.play().catch(()=>{});
-}
+/* ================================
+         INICIO DE LA INTRO
+   ================================ */
 
-const rand = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    terminal.style.opacity = "1";
+    terminal.style.transform = "scale(1)";
+    terminal.style.animation = "glitch 0.25s ease";
 
-document.addEventListener("DOMContentLoaded", type);
+    writeLines(asciiLogo, () => {
+      setTimeout(() => {
+        writeLines(commands, () => {
+          setTimeout(fadeOut, 400);
+        });
+      }, 350);
+    });
+
+  }, 200);
+});
 </script>
 
 </body>
