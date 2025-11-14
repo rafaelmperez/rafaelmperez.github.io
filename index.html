@@ -443,8 +443,27 @@ function insertTop() {
   subtitle.classList.add("subtitle");
   subtitle.textContent = subtitleText;
 
-  topBlock.appendChild(ascii);
-  topBlock.appendChild(subtitle);
+const headerContainer = document.createElement("div");
+headerContainer.classList.add("header-flex");
+
+const ascii = document.createElement("pre");
+ascii.classList.add("ascii");
+ascii.textContent = asciiLogo;
+
+const subtitle = document.createElement("div");
+subtitle.classList.add("subtitle");
+subtitle.textContent = subtitleText;
+
+headerContainer.appendChild(ascii);
+headerContainer.appendChild(subtitle);
+
+topBlock.appendChild(headerContainer);
+
+const noiseAscii = document.createElement("pre");
+noiseAscii.classList.add("ascii-noise");
+noiseAscii.textContent = noiseBlock;
+topBlock.appendChild(noiseAscii);
+
   const noiseAscii = document.createElement("pre");
 noiseAscii.classList.add("ascii-noise");
 noiseAscii.textContent = noiseBlock;
