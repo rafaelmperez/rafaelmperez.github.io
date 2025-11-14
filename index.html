@@ -394,7 +394,7 @@ function insertTop() {
 }
 
 let index = 0;
-
+  
 function writeCommands() {
   if (index >= commands.length) return showCursorAndExit();
 
@@ -404,11 +404,14 @@ function writeCommands() {
   playKey();
   terminal.appendChild(line);
 
-  bar.style.width = progressMap[index] + "%";
+  // progreso dinámico REAL
+  const progress = Math.floor((index / (commands.length - 1)) * 100);
+  bar.style.width = progress + "%";
 
   index++;
   setTimeout(writeCommands, 460);
 }
+
 
 function showCursorAndExit() {
   const cursorLine = document.createElement("div");
