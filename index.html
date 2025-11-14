@@ -197,23 +197,7 @@
 }
 
 
-  /* Tablets */
-@media (max-width: 980px) {
-  .ascii {
-    font-size: 11px;
-    line-height: 1.05;
-  }
-}
 
-@media (max-width: 768px) {
-  body {
-    height: calc(var(--vh));
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-  }
 
   #wrapper {
     margin-top: 0 !important;
@@ -266,6 +250,36 @@
     /* color gris metálico */
     color: #b7b7b7;
 }
+
+
+  /* ===== Ajuste perfecto para móviles ===== */
+@media (max-width: 768px) {
+
+  /* Reducimos todo el contenido */
+  #wrapper {
+    transform: scale(0.72); /* AJUSTA ESTE VALOR HASTA QUE TE GUSTE */
+    transform-origin: top center;
+    margin-top: -40px;
+  }
+
+  /* El cuerpo ocupa toda la pantalla real */
+  body {
+    height: 100dvh;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .ascii {
+    font-size: 8px !important;
+    line-height: 1.05 !important;
+  }
+
+  #terminal {
+    font-size: 0.80rem !important;
+    line-height: 1.05rem !important;
+  }
+}
+
   
 </style>
 </head>
