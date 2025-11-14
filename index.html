@@ -272,74 +272,7 @@
 }
 
 
-  /* ===== Ajuste perfecto para móviles ===== */
-@media (max-width: 768px) {
 
-  /* Reducimos todo el contenido */
-  #wrapper {
-    transform: scale(0.72); /* AJUSTA ESTE VALOR HASTA QUE TE GUSTE */
-    transform-origin: top center;
-    margin-top: -40px;
-  }
-
-  /* El cuerpo ocupa toda la pantalla real */
-  body {
-    height: 100dvh;
-    overflow: hidden;
-    padding: 0;
-  }
-
-  .ascii {
-    font-size: 8px !important;
-    line-height: 1.05 !important;
-  }
-
-  #terminal {
-    font-size: 0.80rem !important;
-    line-height: 1.05rem !important;
-  }
-}
-
-  /* ===== ASCII más pequeño SOLO en móvil ===== */
-@media (max-width: 768px) {
-  .ascii {
-    font-size: 7px !important;
-    line-height: 1.05 !important;
-  }
-
-  .ascii-noise {
-    font-size: 4px !important;
-    line-height: 0.95 !important;
-  }
-
-#top-block {
-  margin-top: -12px !important;
-}
-
-
-}
-
-  /* ===== Reducir SOLO el ASCII dorado (el logo grande) en móvil ===== */
-@media (max-width: 768px) {
-  #top-block pre.ascii:not(.ascii-noise) {
-    font-size: 5.5px !important;
-    line-height: 0.75 !important;
-    transform: scale(0.85);
-    transform-origin: top center;
-  }
-
-  /* Ruido reducido también */
-  .ascii-noise {
-    font-size: 4px !important;
-    line-height: 0.8 !important;
-  }
-}
-/* === ARREGLA VISIBILIDAD DE LA BARRA EN MÓVIL === */
-@media (max-width: 768px) {
-  #progress-bar {
-    margin-top: 10px !important;
-    transform: scale(1.1); /* se ve más clara */
-  }
 
   #wrapper {
     margin-top: 0 !important; /* evita que barra quede fuera */
@@ -556,18 +489,66 @@ body::before {
     font-size: 3.5px !important;
   }
 }
+/* ==========================
+   MODO MÓVIL — PERFECT MATCH
+   ========================== */
 @media (max-width: 768px) {
-  #terminal {
-    font-size: 0.78rem !important;
-    line-height: 1.05rem !important;
-    max-width: 92%;
-    margin: 0 auto;
+
+  /* ESCALA GENERAL — reduce TODO uniformemente */
+  #wrapper {
+    transform: scale(0.68) !important;
+    transform-origin: top center !important;
+    margin-top: -50px !important;
   }
-}
-@media (max-width: 768px) {
+
+  /* ASCII */
+  #top-block {
+    transform: scale(0.70);
+    transform-origin: top center;
+    margin-top: -25px !important;
+    margin-bottom: -20px !important;
+  }
+  #top-block pre.ascii:not(.ascii-noise) {
+    font-size: 5px !important;
+    line-height: 0.85 !important;
+  }
+  .ascii-noise {
+    font-size: 3.5px !important;
+    line-height: 0.8 !important;
+  }
+
+  /* TERMINAL — tamaño más pequeño */
+  #terminal {
+    font-size: 0.65rem !important;
+    line-height: 0.92rem !important;
+    max-width: 88% !important;
+    margin: 0 auto !important;
+  }
+
+  /* BARRA DE CARGA */
   #progress-bar {
-    transform: scale(1.2);
-    width: 90%;
+    width: 85% !important;
+    transform: scale(0.85) !important;
+    margin-top: 5px !important;
+    margin-bottom: 12px !important;
+  }
+  #progress-bar::before {
+    font-size: 0.55rem !important;
+    right: 4px !important;
+  }
+
+  /* ICONOS DE VENTANA */
+  #window-controls {
+    transform: scale(0.75) !important;
+    top: 6px !important;
+    right: 10px !important;
+  }
+
+  /* Curvatura CRT suavizada */
+  #crt #wrapper {
+    transform:
+      rotateX(0.4deg) rotateY(-0.2deg)
+      scale(0.68) !important;
   }
 }
 
