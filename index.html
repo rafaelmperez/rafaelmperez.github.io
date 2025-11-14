@@ -114,6 +114,17 @@
     50% { opacity: 0; }
   }
 
+  .subtitle {
+    color: #f0c674;
+    font-size: 0.9rem;
+    margin-top: -10px;
+    margin-bottom: 25px;
+    opacity: 0.85;
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+
+
 </style>
 </head>
 
@@ -207,6 +218,14 @@ document.addEventListener("DOMContentLoaded", () => {
     asciiBlock.textContent = asciiLogo;
 
     terminal.appendChild(asciiBlock);
+    
+    /* Crear subtítulo */
+const subtitle = document.createElement("div");
+subtitle.classList.add("subtitle");
+subtitle.textContent = "by codebyRalph";
+
+terminal.appendChild(subtitle);
+
 
     setTimeout(writeCommands, 350);
 
