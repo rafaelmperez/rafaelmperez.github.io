@@ -777,7 +777,7 @@ fill.style.width = progress + "%";
 
 function showCursorAndExit() {
   const cursorLine = document.createElement("div");
-  cursorLine.innerHTML = "<span class='cursor'></span>";
+  cursorLine.innerHTML = `<span class="msg">Iniciando interfaz…</span>`;
   terminal.appendChild(cursorLine);
 
   setTimeout(() => {
