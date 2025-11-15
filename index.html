@@ -855,23 +855,21 @@ const terminal = document.getElementById("terminal");
 const bar = document.getElementById("progress-bar");
 
 function insertTop() {
-  // 1) Mostrar tu ASCII glitch (cara)
+  // 1) Mostrar tu ASCII dorado con glitch temporal
   const glitch = document.createElement("pre");
   glitch.classList.add("ascii", "ascii-glitch");
-  glitch.textContent = asciiGlitch;
+  glitch.textContent = asciiLogo;     // ⭐ primero tu cara
   topBlock.appendChild(glitch);
 
-  // 2) Tras 650ms cambiarlo por el logo dorado real
+  // 2) Tras 650ms cambiarlo por el ASCII hacker
   setTimeout(() => {
-    topBlock.innerHTML = ""; // vaciar contenedor
+    topBlock.innerHTML = ""; 
 
-    // Logo dorado
     const ascii = document.createElement("pre");
     ascii.classList.add("ascii");
-    ascii.textContent = asciiLogo;
+    ascii.textContent = asciiGlitch;  // ⭐ luego hacker
     topBlock.appendChild(ascii);
 
-    // Ruido ascii
     const noiseAscii = document.createElement("pre");
     noiseAscii.classList.add("ascii", "ascii-noise");
     noiseAscii.textContent = noiseBlock;
