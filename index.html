@@ -553,6 +553,12 @@ body::before {
   
 </style>
 </head>
+  
+  <audio id="boot-sound" preload="auto">
+  <source src="boot.mp3" type="audio/mpeg">
+</audio>
+
+  
 
 <body>
   <div id="window-controls">
@@ -731,7 +737,17 @@ function showCursorAndExit() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Sonido de inicio
+  const bootSound = document.getElementById("boot-sound");
+  setTimeout(() => {
+    bootSound.volume = 0.70;
+    bootSound.play().catch(()=>{});
+  }, 80);
+
   insertTop();
+
+  const terminal = document.getElementById("terminal");
+
 
   setTimeout(() => {
     terminal.style.opacity = "1";
