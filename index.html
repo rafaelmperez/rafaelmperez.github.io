@@ -741,14 +741,30 @@ function showCursorAndExit() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Sonido de inicio
   const bootSound = document.getElementById("boot-sound");
+
+  // Detectar si carga bien o da error
+  bootSound.onerror = () => {
+    console.error("❌ ERROR: No se pudo cargar boot.mp3");
+  };
+
+  bootSound.onloadeddata = () => {
+    console.log("✔ Audio cargado correctamente");
+  };
+
+  // Reproducir tras un pequeño delay
   setTimeout(() => {
     bootSound.volume = 0.70;
-    bootSound.play().catch(()=>{});
+    bootSound.play().catch((err) => {
+      console.warn("⚠ Error al intentar reproducir:", err);
+    });
   }, 80);
 
   insertTop();
+});
+
+
+  
 
 
   setTimeout(() => {
