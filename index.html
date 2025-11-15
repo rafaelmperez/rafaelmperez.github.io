@@ -590,6 +590,11 @@ body::before {
 
 
 <script>
+document.addEventListener("click", () => {
+  const bootSound = document.getElementById("boot-sound");
+  bootSound.volume = 0.70;
+  bootSound.play().catch(()=>{});
+}, { once: true });
 
 
   
