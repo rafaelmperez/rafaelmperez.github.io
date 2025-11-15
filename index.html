@@ -554,6 +554,8 @@ body::before {
 </style>
 </head>
   
+  <button id="audio-unlock" style="position:absolute; inset:0; opacity:0; z-index:5000;"></button>
+
   <audio id="boot-sound" preload="auto">
   <source src="boot.mp3" type="audio/mpeg">
 </audio>
@@ -760,9 +762,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, 80);
 
-  insertTop();
-});
+    const bootSound = document.getElementById("boot-sound");
+  const unlock = document.getElementById("audio-unlock");
 
+  unlock.addEventListener("click", () => {
+    bootSound.volume = 0.7;
+    bootSound.play().catch(err => console.error(err));
+    unlock.remove(); 
+  });
+
+  // Simular clic automático
+  setTimeout(() => {
+    unlock.click();
+  }, 80);
+
+  insertTop();
+  ...
+});
 
   
 
