@@ -626,36 +626,6 @@ body::before {
   100% { opacity: 1; filter: brightness(1); }
 }
 
-/* === GOLDEN SIGNAL BOOT EFFECT — PREMIUM =================================== */
-
-.ascii.boot-effect {
-  animation:
-    asciiFlash 0.35s ease-out,
-    asciiShift 0.25s ease-out 0.30s,
-    asciiRefocus 0.30s ease-out 0.55s;
-}
-
-/* Destello dorado inicial */
-@keyframes asciiFlash {
-  0%   { filter: brightness(3) blur(1px); opacity: 0; }
-  40%  { filter: brightness(2) blur(0px); opacity: 1; }
-  100% { filter: brightness(1.1); }
-}
-
-/* Micro glitch lateral */
-@keyframes asciiShift {
-  0%   { transform: translateX(0); }
-  20%  { transform: translateX(2px); }
-  40%  { transform: translateX(-2px); }
-  60%  { transform: translateX(1px); }
-  100% { transform: translateX(0); }
-}
-
-/* Reenfoque premium */
-@keyframes asciiRefocus {
-  0%   { filter: brightness(1.4) contrast(1.2); }
-  100% { filter: brightness(1) contrast(1); }
-}
 
   
 </style>
@@ -792,7 +762,7 @@ function insertTop() {
 
   // ASCII PRINCIPAL
   const ascii = document.createElement("pre");
-  ascii.classList.add("ascii", "boot-effect");
+  ascii.classList.add("ascii");
   ascii.textContent = asciiLogo;
 
 
