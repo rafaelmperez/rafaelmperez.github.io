@@ -856,7 +856,8 @@ const asciiLogo = String.raw`
                              .                                                                                            .                
                                                                                                                                             
 `;
-
+const asciiRalph = asciiLogo; // tu foto ASCII real, dorada
+const asciiHacker = asciiGlitch; // el ASCII nuevo (hacker)
 const commands = [
   `<span class="msg">▶ Inicializando núcleo de seguridad…</span>`,
   `<span class="msg">▶ Verificando arquitectura del sistema…</span>`,
@@ -897,7 +898,7 @@ function insertTop() {
   // 1) Mostrar tu ASCII glitch (cara)
   const glitch = document.createElement("pre");
   glitch.classList.add("ascii", "ascii-glitch");
-  glitch.textContent = asciiGlitch;
+glitch.textContent = asciiRalph;
   topBlock.appendChild(glitch);
 
   // 2) Tras 650ms cambiarlo por el logo dorado real
@@ -907,7 +908,7 @@ function insertTop() {
     // Logo dorado
     const ascii = document.createElement("pre");
     ascii.classList.add("ascii");
-    ascii.textContent = asciiLogo;
+   ascii.textContent = asciiHacker;
     topBlock.appendChild(ascii);
 
     // Ruido ascii
