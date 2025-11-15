@@ -625,14 +625,17 @@ body::before {
   
 </style>
 </head>
-  
-  <audio id="boot-sound" preload="auto">
+
+<body>
+<button id="audio-unlock" 
+        style="position:absolute; inset:0; opacity:0; z-index:9999; border:none; background:none;">
+</button>
+
+<audio id="boot-sound" preload="auto">
   <source src="https://rafaelmperez.com/sounds/bootup.mp3" type="audio/mpeg">
 </audio>
 
   
-
-<body>
   <div id="window-controls">
   <div class="ctrl min" title="Minimizar"></div>
   <div class="ctrl max" title="Restaurar"></div>
@@ -827,6 +830,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }, 250);
 });
+
+/* ======================
+   🔊 UNLOCK AUDIO (Chrome, Firefox, iOS)
+   ====================== */
+document.getElementById("audio-unlock").addEventListener("click", () => {
+    const audio = document.getElementById("boot-sound");
+
+    audio.volume = 0.70;
+
+    audio.play().then(() => {
+        console.log("✔ Audio desbloqueado y reproduciendo");
+    }).catch(err => {
+        console.warn("⚠ No se pudo reproducir inmediatamente:", err);
+    });
+
+    // Retirar el overlay invisible para no interferir con la página
+    document.getElementById("audio-unlock").remove();
+}, { once: true });
+
+/* Reproducción automática si el navegador lo permite */
+document.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById("boot-sound");
+
+    audio.onloadeddata = () => console.log("✔ Audio cargado");
+    audio.onerror = () => console.error("❌ Error cargando audio");
+
+    setTimeout(() => {
+        audio.volume = 0.70;
+        audio.play().catch(() => {
+            console.log("🟡 Autoplay bloqueado, esperando clic del usuario");
+        });
+    }, 100);
+});
+
+  
 </script>
 
 </body>
