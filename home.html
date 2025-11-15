@@ -2434,6 +2434,102 @@ header {
   z-index: 1;
 }
 
+/* ===============================
+   🔥 VITRINA PREMIUM PARA CREDLY
+   =============================== */
+
+.vitrina-card {
+  padding: 30px;
+  border: 1px solid rgba(212,175,55,0.35);
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+}
+
+/* Contenedor general */
+.vitrina-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+/* Cada ítem */
+.vitrina-item {
+  text-align: center;
+  width: 220px;
+}
+
+/* Contenedor cristal/holograma */
+.vitrina-glass {
+  position: relative;
+  width: 220px;
+  height: 280px;
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(255, 215, 0, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  backdrop-filter: blur(4px);
+  box-shadow:
+    0 0 18px rgba(255, 215, 0, 0.15),
+    inset 0 0 20px rgba(255, 215, 0, 0.15);
+  overflow: hidden;
+  transition: transform .35s ease, box-shadow .4s ease;
+}
+
+/* Luz holográfica */
+.vitrina-glass::after {
+  content: "";
+  position: absolute;
+  top: -120%;
+  left: -120%;
+  width: 300%;
+  height: 300%;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    rgba(255, 215, 0, 0.14),
+    transparent 85%
+  );
+  animation: holograma 7s linear infinite;
+  opacity: 0;
+  transition: opacity .6s ease;
+}
+
+@keyframes holograma {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Hover */
+.vitrina-glass:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 25px rgba(255, 215, 0, 0.35),
+    0 0 45px rgba(255, 215, 0, 0.18),
+    inset 0 0 30px rgba(255, 215, 0, 0.25);
+}
+
+.vitrina-glass:hover::after {
+  opacity: 1;
+}
+
+/* Nombre del badge */
+.vitrina-titulo {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-family: 'Fira Code', monospace;
+  color: #ffd700;
+}
+
+/* Botón PDF centrado */
+.vitrina-boton-pdf {
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+  
   </style>
 </head>
 
@@ -3221,37 +3317,53 @@ header {
 
 
 <section id="certificaciones">
-  <!-- Primer card -->
-  <div class="card">
+  <div class="card vitrina-card">
+
     <h2 class="terminal-heading">
       <i class="fas fa-certificate"></i> ~/certificaciones.py
     </h2>
 
-    <div class="certificaciones-container">
-      <div data-iframe-width="150" data-iframe-height="270" 
-           data-share-badge-id="dad4ad76-045d-4df9-b408-907234ae2168" 
-           data-share-badge-host="https://www.credly.com"></div>
+    <div class="vitrina-container">
 
-      <div data-iframe-width="150" data-iframe-height="270" 
-           data-share-badge-id="6ae1a6bb-5ef6-4dcb-97e3-965c7ebc4947" 
-           data-share-badge-host="https://www.credly.com"></div>
+      <!-- Badge 1 -->
+      <div class="vitrina-item">
+        <div class="vitrina-glass">
+          <div data-iframe-width="150" data-iframe-height="270"
+               data-share-badge-id="dad4ad76-045d-4df9-b408-907234ae2168"
+               data-share-badge-host="https://www.credly.com"></div>
+        </div>
+        <p class="vitrina-titulo">CCST Cybersecurity</p>
+      </div>
+
+      <!-- Badge 2 -->
+      <div class="vitrina-item">
+        <div class="vitrina-glass">
+          <div data-iframe-width="150" data-iframe-height="270"
+               data-share-badge-id="6ae1a6bb-5ef6-4dcb-97e3-965c7ebc4947"
+               data-share-badge-host="https://www.credly.com"></div>
+        </div>
+        <p class="vitrina-titulo">CCST Networking</p>
+      </div>
+
     </div>
 
     <p class="certificacion-descripcion">
-      Certificaciones <strong>CCST Cybersecurity & CCST Networking</strong> obtenidas en julio de 2025. Estas acreditaciones avalan conocimientos esenciales en seguridad informática, redes, identificación de amenazas y aplicación de buenas prácticas en entornos profesionales.
+      Certificaciones <strong>CCST Cybersecurity & CCST Networking</strong> obtenidas en julio de 2025.
+      Estas acreditaciones avalan conocimientos esenciales en seguridad informática, redes, identificación de amenazas y aplicación de buenas prácticas en entornos profesionales.
     </p>
-<p> 
-  <a href="https://rafaelmperez.com/docs/Diplomas_Publicos_final.pdf" 
-     target="_blank" 
-     class="sysadmin-badge"
-     style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
-    Ver Diplomas PDF
-  </a> 
-</p>
+
+    <!-- Botón PDF reposicionado elegantemente -->
+    <div class="vitrina-boton-pdf">
+      <a href="https://rafaelmperez.com/docs/Diplomas_Publicos_final.pdf"
+         target="_blank"
+         class="sysadmin-badge">
+        Ver Diplomas PDF
+      </a>
+    </div>
 
   </div>
-
 </section>
+
 
 
 
@@ -3454,6 +3566,7 @@ header {
   });
 </script>
 </html>
+
 
 
 
