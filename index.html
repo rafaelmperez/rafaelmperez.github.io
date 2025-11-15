@@ -550,6 +550,33 @@ body::before {
     }
 }
 
+  .msg, .ok {
+  display: block;
+  opacity: 0;
+  transform: translateX(-4px) translateY(1px) scale(0.98);
+  animation: lineEnter 0.55s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  will-change: opacity, transform, filter;
+}
+
+@keyframes lineEnter {
+  0% {
+    opacity: 0;
+    filter: blur(2px) brightness(0.4);
+    transform: translateX(-6px) translateY(2px) scale(0.96);
+  }
+  40% {
+    opacity: 1;
+    filter: blur(0.5px) brightness(1.55);
+    transform: translateX(-2px) translateY(0px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px) brightness(1);
+    transform: translateX(0) translateY(0) scale(1);
+  }
+}
+
+
   
 </style>
 </head>
@@ -642,14 +669,11 @@ const asciiLogo = String.raw`
 .(#%&%%%%&&&%%&&&%%%&&&&&&&&&&&&&%@@&@@&&&&&&&&&&&&&&&&&&&&&&%&&&@&&&&@@@&&&&&&&
 `;
 const commands = [
-  `<span class="prompt">guest@rafaelmperez.com</span><span class="path">:~$</span> <span class="cmd">boot</span>`,
-  `<span class="ok">[OK]</span> <span class="msg">Sistema seguro inicializado</span>`,
-
-  `<span class="prompt">guest@rafaelmperez.com</span><span class="path">:~$</span> <span class="cmd">syscheck</span> <span class="flag">--integrity</span>`,
-  `<span class="ok">[OK]</span> <span class="msg">Integridad del sistema verificada</span>`,
-
-  `<span class="prompt">guest@rafaelmperez.com</span><span class="path">:~$</span> <span class="cmd">access</span>`,
-  `<span class="msg">Acceso concedido...</span> <span class="ok">Conectado</span> <span class="ok">✔</span>`
+  `<span class="msg">▶ Inicializando núcleo de seguridad…</span>`,
+  `<span class="msg">▶ Verificando arquitectura del sistema…</span>`,
+  `<span class="msg">▶ Activando módulos críticos…</span>`,
+  `<span class="msg">▶ Desplegando interfaz operativa…</span>`,
+  `<span class="ok">✔ Sistema operativo avanzado listo.</span>`
 ];
 
 // Minimizar → baja la opacidad como una terminal minimizada
