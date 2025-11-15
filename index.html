@@ -549,8 +549,7 @@ body::before {
         text-align: center !important;
     }
 }
-
-  .msg, .ok {
+.msg, .ok {
   display: block;
   opacity: 0;
   transform: translateX(-4px) translateY(1px) scale(0.98);
@@ -558,23 +557,52 @@ body::before {
   will-change: opacity, transform, filter;
 }
 
+/* —— MOBILE VERSION ——————————————————————— */
+@media (max-width: 768px) {
+  .msg, .ok {
+    transform: translateX(-2px) translateY(1px) scale(0.985);
+    animation: lineEnterMobile 0.48s cubic-bezier(0.25, 0.60, 0.35, 1) forwards;
+  }
+}
+
+/* —— DESKTOP ANIMATION ————————————————————— */
 @keyframes lineEnter {
   0% {
     opacity: 0;
-    filter: blur(2px) brightness(0.4);
+    filter: blur(1.8px) brightness(0.45);
     transform: translateX(-6px) translateY(2px) scale(0.96);
   }
   40% {
     opacity: 1;
-    filter: blur(0.5px) brightness(1.55);
-    transform: translateX(-2px) translateY(0px) scale(1.01);
+    filter: blur(0.4px) brightness(1.45);
+    transform: translateX(-2px) translateY(0) scale(1.01);
   }
   100% {
     opacity: 1;
-    filter: blur(0px) brightness(1);
+    filter: blur(0) brightness(1);
     transform: translateX(0) translateY(0) scale(1);
   }
 }
+
+/* —— MOBILE ANIMATION ————————————————————— */
+@keyframes lineEnterMobile {
+  0% {
+    opacity: 0;
+    filter: blur(1px) brightness(0.55);
+    transform: translateX(-4px) translateY(1px) scale(0.97);
+  }
+  40% {
+    opacity: 1;
+    filter: blur(0.2px) brightness(1.35);
+    transform: translateX(-1px) translateY(0) scale(1.005);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0) brightness(1);
+    transform: translateX(0) translateY(0) scale(1);
+  }
+}
+
 
 
   
