@@ -815,17 +815,6 @@ function showCursorAndExit() {
 }
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Sonido de inicio
-  const bootSound = document.getElementById("boot-sound");
-  setTimeout(() => {
-    bootSound.volume = 0.70;
-    bootSound.play().catch(()=>{});
-  }, 80);
-
-  insertTop();
-
-
   setTimeout(() => {
     terminal.style.opacity = "1";
     terminal.style.transform = "scale(1)";
@@ -836,37 +825,46 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 250);
 });
 /* ======================
-   🔊 UNLOCK AUDIO (Chrome, Firefox, iOS)
+   🔊 UNLOCK + AUTOPLAY SEGURO
    ====================== */
-document.getElementById("audio-unlock").addEventListener("click", () => {
-    const audio = document.getElementById("boot-sound");
-
-    audio.volume = 0.70;
-
-    audio.play().then(() => {
-        console.log("✔ Audio desbloqueado y reproduciendo");
-    }).catch(err => {
-        console.warn("⚠ No se pudo reproducir inmediatamente:", err);
-    });
-
-    // Retirar el overlay invisible para no interferir con la página
-    document.getElementById("audio-unlock").remove();
-}, { once: true });
-
-/* Reproducción automática si el navegador lo permite */
 document.addEventListener("DOMContentLoaded", () => {
+
     const audio = document.getElementById("boot-sound");
 
+    /* Logs */
     audio.onloadeddata = () => console.log("✔ Audio cargado");
     audio.onerror = () => console.error("❌ Error cargando audio");
 
+    /* Intento autoplay */
     setTimeout(() => {
         audio.volume = 0.70;
         audio.play().catch(() => {
-            console.log("🟡 Autoplay bloqueado, esperando clic del usuario");
+            console.log("🟡 Autoplay bloqueado — esperando interacción");
         });
-    }, 100);
+    }, 120);
+
+    /* Sistema de desbloqueo */
+    const unlock = document.getElementById("audio-unlock");
+    unlock.addEventListener("click", () => {
+        audio.volume = 0.70;
+        audio.play().then(() => {
+            console.log("✔ Audio desbloqueado");
+        });
+        unlock.remove();  // quita la capa invisible
+    }, { once: true });
+
+    /* INICIA TU ANIMACIÓN */
+    insertTop();
+
+    setTimeout(() => {
+        terminal.style.opacity = "1";
+        terminal.style.transform = "scale(1)";
+        terminal.style.animation = "ibmFlash 0.40s ease";
+
+        setTimeout(writeCommands, 400);
+    }, 250);
 });
+
 
   
 </script>
