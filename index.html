@@ -554,8 +554,6 @@ body::before {
 </style>
 </head>
   
-  <button id="audio-unlock" style="position:absolute; inset:0; opacity:0; z-index:5000;"></button>
-
   <audio id="boot-sound" preload="auto">
   <source src="boot.mp3" type="audio/mpeg">
 </audio>
@@ -592,11 +590,6 @@ body::before {
 
 
 <script>
-document.addEventListener("click", () => {
-  const bootSound = document.getElementById("boot-sound");
-  bootSound.volume = 0.70;
-  bootSound.play().catch(()=>{});
-}, { once: true });
 
 
   
@@ -743,44 +736,14 @@ function showCursorAndExit() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Sonido de inicio
   const bootSound = document.getElementById("boot-sound");
-
-  // Detectar si carga bien o da error
-  bootSound.onerror = () => {
-    console.error("❌ ERROR: No se pudo cargar boot.mp3");
-  };
-
-  bootSound.onloadeddata = () => {
-    console.log("✔ Audio cargado correctamente");
-  };
-
-  // Reproducir tras un pequeño delay
   setTimeout(() => {
     bootSound.volume = 0.70;
-    bootSound.play().catch((err) => {
-      console.warn("⚠ Error al intentar reproducir:", err);
-    });
-  }, 80);
-
-    const bootSound = document.getElementById("boot-sound");
-  const unlock = document.getElementById("audio-unlock");
-
-  unlock.addEventListener("click", () => {
-    bootSound.volume = 0.7;
-    bootSound.play().catch(err => console.error(err));
-    unlock.remove(); 
-  });
-
-  // Simular clic automático
-  setTimeout(() => {
-    unlock.click();
+    bootSound.play().catch(()=>{});
   }, 80);
 
   insertTop();
-  ...
-});
-
-  
 
 
   setTimeout(() => {
