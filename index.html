@@ -858,6 +858,8 @@ function insertTop() {
   // 1) Mostrar tu ASCII dorado con glitch temporal
   const glitch = document.createElement("pre");
   glitch.classList.add("ascii", "ascii-glitch");
+glitch.style.fontSize = "13.6px";
+glitch.style.lineHeight = "1.10";
   glitch.textContent = asciiLogo;     // ⭐ primero tu cara
   topBlock.appendChild(glitch);
 
@@ -867,6 +869,8 @@ function insertTop() {
 
     const ascii = document.createElement("pre");
     ascii.classList.add("ascii");
+ascii.style.fontSize = "13.6px";
+ascii.style.lineHeight = "1.10";
     ascii.textContent = asciiGlitch;  // ⭐ luego hacker
     topBlock.appendChild(ascii);
 
