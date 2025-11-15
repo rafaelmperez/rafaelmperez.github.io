@@ -2589,6 +2589,29 @@ header {
   text-align: center;
 }
 
+/* ==========================================
+   🟩 ZONA AISLADA PARA LA VITRINA HOLOGRÁFICA
+   ========================================== */
+
+.zona-holografica * {
+  all: unset !important;
+  all: revert !important;
+}
+
+/* Reactiva solo lo necesario dentro */
+.zona-holografica {
+  all: revert !important;
+  display: block !important;
+}
+
+/* Activa tus estilos reales */
+.zona-holografica .ultimate-holo,
+.zona-holografica .vitrina-container,
+.zona-holografica .vitrina-glass,
+.zona-holografica .holo-3d,
+.zona-holografica .holo-scan {
+  all: revert !important;
+}
 
   
   </style>
@@ -3546,6 +3569,7 @@ header {
   });
 </script>
 </html>
+
 
 
 
