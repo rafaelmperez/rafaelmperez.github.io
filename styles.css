@@ -1,3 +1,8 @@
+ /* Todo tu CSS aquí... */
+  /* ==========================================
+   🔥 NAV + BARRA SUPERIOR + ICONOS PREMIUM
+   ========================================== */
+
 .barra-superior {
   width: 100%;
   display: flex;
@@ -96,11 +101,6 @@
 }
 
 
-  /* Encabezado y navegación */
-  header, .encabezado, .barra-superior, nav {
-    background-color: #000 !important;
-  }
-
   /* Secciones, tarjetas y recuadros */
   section, .card, .proyecto, .habilidad, .contenedor, .bloque {
     background-color: #000 !important;
@@ -120,11 +120,6 @@
   }
 
 
-    @media (min-width: 1024px) {
-  html {
-    zoom: 0.9;
-  }
-}
 
 /* ==========================================
    🟧 Cursor tipo bloque (estilo Ubuntu Terminal)
@@ -301,13 +296,6 @@
   box-sizing: border-box;
 }
 
-/* GLOBAL */
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 footer {
   width: 100%;          /* 100% del ancho de la ventana */
   margin: 0;             /* quita márgenes que lo puedan achicar */
@@ -362,15 +350,6 @@ footer a {
   padding-top: 0 !important;     /* opcional, para que no haya padding extra */
 }
 
-
-
-</style>
-
-
-
-</head>
-
-  <style>
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;500&display=swap');
 
 
@@ -476,9 +455,7 @@ h1.titulo-principal {
   text-align: center;
   min-height: 40vh;
 }
-* {
-  box-sizing: border-box;
-}
+
 .certificacion-descripcion {
   color: #000000; /* negro */
 }
