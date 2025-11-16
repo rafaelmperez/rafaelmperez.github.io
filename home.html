@@ -16,40 +16,6 @@
     <!-- Indicamos que hay una versión en francés -->
   <link rel="alternate" hreflang="es" href="https://rafaelmperez.com/index.html" />
   <link rel="alternate" hreflang="fr" href="https://rafaelmperez.com/fr/index.html" />
-
-  <!-- Font Awesome optimizado (solo una versión) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
-  <noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  </noscript>
-
-
-
-  <!-- Google Fonts con preload y carga no bloqueante -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" as="style" onload="this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap">
-  </noscript>
-
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" as="style" onload="this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap">
-  </noscript>
-
-
-      <!-- Font Awesome 6.5.0 (versión estable con soporte total para 'fas', 'far', 'fab') -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-Fo3rlrZj/k7ujTTXrwE8n0z2C2FZpIh1oLz4hJxQ1S2vYp1XbVZKXqkqjvXQp4I8O6D+oUuT3Ue8D6U5yT1JfA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"/>
-
-  <!-- Fuente opcional (no afecta a los iconos) -->
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
-
-  <!-- Tus estilos -->
-  <link rel="stylesheet" href="style.css" />
 </head>
   
 
@@ -65,7 +31,16 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   integrity="sha512-Fo3rlrZj/k7ujTTXrwE8n0z2C2FZpIh1oLz4hJxQ1S2vYp1XbVZKXqkqjvXQp4I8O6D+oUuT3Ue8D6U5yT1JfA=="
   crossorigin="anonymous"
-  referrerpolicy="no-referrer"/>
+  referrerpolicy="no-referrer"
+/>
+
+
+<style>
+  /* Ejemplo de CSS crítico */
+  body { font-family: 'Montserrat', sans-serif; }
+  h1 { font-weight: 600; }
+</style>
+  
 
 
   <link rel="icon" href="favicon.png" type="image/x-icon">
@@ -90,57 +65,48 @@
   <meta name="twitter:description" content="Portafolio en ciberseguridad, administración de sistemas y proyectos IT." />
   <meta name="twitter:image" content="https://rafaelmperez.com/assets/img/vistapreliminar.jpg" />
 
+
+<head>
   
+  <!-- Font Awesome optimizado (solo una versión) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </noscript>
+
+
+
+  <!-- Google Fonts con preload y carga no bloqueante -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap">
+  </noscript>
+
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap">
+  </noscript>
+</head>
 <meta name="google-site-verification" content="uumuF7y73hfuDoXFjUW66ETAXtE-WjolU9Pv0aWhCyo" />
 
-
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1T24E1NDR"></script>
   <script>
-
-      <!-- Script para activar la traducción -->
-  <script type="text/javascript">
-    // Inicializa el traductor de Google
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'es',
-        includedLanguages: 'fr,en',
-        autoDisplay: false
-      }, 'google_translate_element');
-    }
-
-    // Cargar el script de Google Translate
-    const gtScript = document.createElement('script');
-    gtScript.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-    document.head.appendChild(gtScript);
-
-    // Cambiar idioma usando la cookie de Google Translate
-    function translateTo(lang) {
-      const domain = window.location.hostname.includes("github.io")
-        ? "github.io"
-        : window.location.hostname;
-      document.cookie = `googtrans=/es/${lang};domain=.${domain};path=/`;
-      location.reload();
-    }
-
-    // Evento de clic en el botón
-    document.addEventListener("DOMContentLoaded", () => {
-      const frBtn = document.getElementById("translate-fr");
-      frBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        translateTo("fr");
-      });
-    });
-
-    
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-J1T24E1NDR');
+  </script>
 
+  <!-- ... contenido de tu página ... -->
 
-
-    
 <!-- sonido corto del menú -->
 <audio id="menu-sound" src="https://rafaelmperez.com/sounds/clip.aac" preload="auto"></audio>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const sound = document.getElementById("menu-sound");
+    const badges = document.querySelectorAll(".sysadmin-badge");
 
     badges.forEach(badge => {
       badge.addEventListener("mouseenter", () => {
@@ -175,7 +141,14 @@
 function sanitizeInput(input) {
   return input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
+</script>
 
+
+  <body>
+  <!-- Tu HTML aquí -->
+<div id="particles-bg"></div>
+
+<script>
 document.addEventListener("DOMContentLoaded", () => {
 
   const particlesContainer = document.getElementById("particles-bg");
@@ -223,17 +196,37 @@ document.addEventListener("DOMContentLoaded", () => {
     particlesContainer.appendChild(p);
   }
 });
-
-        <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1T24E1NDR">
 </script>
 
-  
+</body>
+
+
+<style>
+
+   
+  </style>
+</head>
+    <!-- Font Awesome 6.5.0 (versión estable con soporte total para 'fas', 'far', 'fab') -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTTXrwE8n0z2C2FZpIh1oLz4hJxQ1S2vYp1XbVZKXqkqjvXQp4I8O6D+oUuT3Ue8D6U5yT1JfA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Fuente opcional (no afecta a los iconos) -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+
+  <!-- Tus estilos -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
   <style>
     
   /* Todo tu CSS aquí... */
 /* ==========================================
-   🎯 Colores fijos para líneas de tecnologías
+   Colores fijos para líneas de tecnologías
    ========================================== */
 
 .techline span {
@@ -312,7 +305,6 @@ document.addEventListener("DOMContentLoaded", () => {
     display: block;
   }
 }
-
 
 .container {
   display: flex;
@@ -527,7 +519,7 @@ footer a {
     transform: none;
     justify-content: center; /* Centramos los iconos */
   }
-}
+
 /* 🔹 Barra superior */
 .barra-superior {
   position: relative;
@@ -715,6 +707,17 @@ body {
   min-width: 320px;
   max-width: 2000px;
 }
+
+
+
+</style>
+
+
+
+</head>
+
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;500&display=swap');
 
 body {
   margin: 0;
@@ -1199,14 +1202,6 @@ button:hover {
     padding: 12px;
     font-size: 16px;
   }
-}
-
-
-
-
-.card:not(#sobre-mi .card):not(#habilidades .card):not(#certificaciones .card):not(#cursos .card):not(#seguridad .card):not(#contacto .card):hover (#CV .card){
-  transform: translateY(-10px);
-}
 
 
 /* 🔹 Activar el movimiento SOLO en las tarjetas de la sección "Proyectos" */
@@ -1391,7 +1386,7 @@ html, body {
 }
 html, body {
   max-width: 100%;
-  overflow-x: hidden; !important
+  overflow-x: hidden;
 }
 img {
   max-width: 100%;
@@ -1404,9 +1399,8 @@ a[href^="mailto:"] {
   font-weight: bold; /* Opcional: para que se vea más destacado */
   color: #000000;     /* Opcional: para que combine con tu estilo */
 }
-/* ==========================================
-   🎯 Ajustes visuales para la sección "Sobre mí"
-   ========================================== */
+
+
 #sobre-mi {
   margin-bottom: 40px; /* separa del resto de secciones */
 }
@@ -1550,6 +1544,9 @@ section#sobre-mi > *:first-child {
   pointer-events: none;
 }
 
+
+
+
 .grid-proyectos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1575,6 +1572,12 @@ section#sobre-mi > *:first-child {
   margin: 0;
   padding: 0;
 }
+
+
+
+
+
+
 
 @font-face {
   font-family: 'Font Awesome 5 Brands';
@@ -1622,6 +1625,11 @@ section#sobre-mi > *:first-child {
   width: 100%;
 }
 
+
+
+
+
+
 .grid-habilidades {
   display: grid;
   grid-template-columns: 1fr; /* una sola columna */
@@ -1656,6 +1664,8 @@ section {
 .hoja-de-ruta-card {
   text-align: center;
 }
+
+
 
 
 .sysadmin-badge:hover {
@@ -1703,6 +1713,7 @@ section {
   opacity: 1;
 }
  
+
   /* Fondo general */
   body {
     background-color: #000 !important;
@@ -2396,78 +2407,12 @@ header {
   z-index: 1;
 }
 
-
-    .badge-wrapper iframe {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .badge-wrapper:hover iframe {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  }
-
-    .badge-wrapper {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.badge-wrapper:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-    .certificaciones-container {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-    }
-
-
-    .certificaciones-container iframe {
-      max-width: 150px;
-      max-height: 270px;
-      border: none;
-      display: block;
-    }
-
-    .certificacion-descripcion {
-      margin-top: 20px;
-      text-align: center;
-      font-size: 1rem;
-      color: #555;
-      line-height: 1.6;
-    }
-
-   .small-card {
-  max-width: 450px;
-  width: 100%;
-  margin: 0 auto; /* 🔥 Esto la centra horizontalmente */
-  padding: 16px;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  box-sizing: border-box;
-}
-
-      .certificaciones-container {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 10px;
-  overflow-x: auto;
-  padding: 10px 0;
-}
-
-.certificaciones-container > div {
-  flex: 0 0 auto;
-}
-
-
   </style>
+</head>
 
-
-
+<body>
+  <!-- Contenedor del traductor (necesario para Google) -->
+  <div id="google_translate_element" style="display: none;"></div>
 
   <!-- Botón para traducir -->
   <div class="language-switcher">
@@ -2476,11 +2421,43 @@ header {
       Français
     </a>
   </div>
+</body>
+</html>
 
 
+  <!-- Script para activar la traducción -->
+  <script type="text/javascript">
+    // Inicializa el traductor de Google
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'fr,en',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
 
+    // Cargar el script de Google Translate
+    const gtScript = document.createElement('script');
+    gtScript.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    document.head.appendChild(gtScript);
 
+    // Cambiar idioma usando la cookie de Google Translate
+    function translateTo(lang) {
+      const domain = window.location.hostname.includes("github.io")
+        ? "github.io"
+        : window.location.hostname;
+      document.cookie = `googtrans=/es/${lang};domain=.${domain};path=/`;
+      location.reload();
+    }
 
+    // Evento de clic en el botón
+    document.addEventListener("DOMContentLoaded", () => {
+      const frBtn = document.getElementById("translate-fr");
+      frBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        translateTo("fr");
+      });
+    });
   </script>
 </body>
 </html>
@@ -3247,12 +3224,96 @@ header {
 
   </div>
 
+</section>
+
+
+
+
+
+<!-- Script de Credly -->
+<script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+
+
+<style>
+  .badge-wrapper iframe {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .badge-wrapper:hover iframe {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+</style>
+
+
+  <style>
+    .badge-wrapper {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.badge-wrapper:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+    .certificaciones-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .certificaciones-container iframe {
+      max-width: 150px;
+      max-height: 270px;
+      border: none;
+      display: block;
+    }
+
+    .certificacion-descripcion {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+   .small-card {
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto; /* 🔥 Esto la centra horizontalmente */
+  padding: 16px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+}
+
+      .certificaciones-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.certificaciones-container > div {
+  flex: 0 0 auto;
+}
+
+
+
+  </style>
+  <script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+
+
+<script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
 
 </section>
 
-  
-<!-- Script de Credly -->
-<script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
 
 <section id="objetivos">
   <div class="card hoja-de-ruta-card cv-card">
@@ -3260,6 +3321,12 @@ header {
     <h2 class="terminal-heading">
       <i class="fas fa-route"></i> ~/curriculum.pdf
     </h2>
+
+    <!-- Línea narrativa tipo terminal -->
+    <p class="terminal-line">
+     $ xdg-open CV_RafaelMPerez.pdf
+
+    </p>
 
     <div class="cv-mockup">
       <img src="https://rafaelmperez.com/assets/img/cv_image.jpg" 
@@ -3360,13 +3427,6 @@ header {
   });
 </script>
 </html>
-
-
-
-
-
-
-
 
 
 
