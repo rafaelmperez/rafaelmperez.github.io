@@ -1,232 +1,158 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  
-<meta name="referrer" content="no-referrer">
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
 
+  <!-- Seguridad -->
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
 
-
-
+  <!-- Configuración general -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
   <meta name="description" content="Portafolio de Rafael M. Pérez, administrador de sistemas en formación y en proceso de especializarme en ciberseguridad. Experiencia en gestión de servidores, seguridad informática y soporte técnico.">
+
   <title>Portafolio | Rafael M. Pérez - Administrador de Sistemas | Seguridad, Bastionado & Respuesta a Incidentes</title>
 
-    <!-- Indicamos que hay una versión en francés -->
-  <link rel="alternate" hreflang="es" href="https://rafaelmperez.com/index.html" />
-  <link rel="alternate" hreflang="fr" href="https://rafaelmperez.com/fr/index.html" />
-</head>
-  
+  <!-- Versiones alternativas (ES / FR) -->
+  <link rel="alternate" hreflang="es" href="https://rafaelmperez.com/index.html">
+  <link rel="alternate" hreflang="fr" href="https://rafaelmperez.com/fr/index.html">
 
-  <!-- En la cabecera, si no la tienes ya -->
-<script src="https://unpkg.com/lucide@latest"></script>
-
-<!-- Inicializa los iconos -->
-<script>lucide.createIcons();</script>
-
-
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  integrity="sha512-Fo3rlrZj/k7ujTTXrwE8n0z2C2FZpIh1oLz4hJxQ1S2vYp1XbVZKXqkqjvXQp4I8O6D+oUuT3Ue8D6U5yT1JfA=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
-
-
-<style>
-  /* Ejemplo de CSS crítico */
-  body { font-family: 'Montserrat', sans-serif; }
-  h1 { font-weight: 600; }
-</style>
-  
-
-
+  <!-- Icono -->
   <link rel="icon" href="favicon.png" type="image/x-icon">
 
-   <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Rafael M. Pérez - Administrador de Sistemas | Ciberseguridad" />
-  <meta property="og:description" content="Portafolio en ciberseguridad, administración de sistemas y proyectos IT." />
-  <meta property="og:image" content="https://rafaelmperez.com/assets/img/vistapreliminar.jpg" />
-  <meta property="og:url" content="https://rafaelmperez.com/" />
-  <meta property="og:locale" content="es_ES" />
-  <meta property="og:image" content="https://rafaelmperez.com/assets/img/vistapreliminar.jpg" />
-  <meta property="og:image:type" content="image/webp" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <!-- Font Awesome (solo una versión optimizada) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        media="print"
+        onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </noscript>
 
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded", () => lucide.createIcons());</script>
 
-  
+  <!-- Google Fonts optimizadas -->
+  <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
+        as="style"
+        onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap">
+  </noscript>
+
+  <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+        as="style"
+        onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap">
+  </noscript>
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rafael M. Pérez - Administrador de Sistemas | Ciberseguridad">
+  <meta property="og:description" content="Portafolio en ciberseguridad, administración de sistemas y proyectos IT.">
+  <meta property="og:image" content="https://rafaelmperez.com/assets/img/vistapreliminar.jpg">
+  <meta property="og:url" content="https://rafaelmperez.com/">
+  <meta property="og:locale" content="es_ES">
+
   <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Rafael M. Pérez - Administrador de Sistemas | Ciberseguridad" />
-  <meta name="twitter:description" content="Portafolio en ciberseguridad, administración de sistemas y proyectos IT." />
-  <meta name="twitter:image" content="https://rafaelmperez.com/assets/img/vistapreliminar.jpg" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rafael M. Pérez - Administrador de Sistemas | Ciberseguridad">
+  <meta name="twitter:description" content="Portafolio en ciberseguridad, administración de sistemas y proyectos IT.">
+  <meta name="twitter:image" content="https://rafaelmperez.com/assets/img/vistapreliminar.jpg">
 
+  <!-- Google Search Console -->
+  <meta name="google-site-verification" content="uumuF7y73hfuDoXFjUW66ETAXtE-WjolU9Pv0aWhCyo">
 
-<head>
-  
-  <!-- Font Awesome optimizado (solo una versión) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
-  <noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  </noscript>
-
-
-
-  <!-- Google Fonts con preload y carga no bloqueante -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" as="style" onload="this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap">
-  </noscript>
-
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" as="style" onload="this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap">
-  </noscript>
-</head>
-<meta name="google-site-verification" content="uumuF7y73hfuDoXFjUW66ETAXtE-WjolU9Pv0aWhCyo" />
-
-    <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1T24E1NDR"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-J1T24E1NDR');
+    function gtag(){ dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-J1T24E1NDR");
   </script>
 
-  <!-- ... contenido de tu página ... -->
-
-<!-- sonido corto del menú -->
-<audio id="menu-sound" src="https://rafaelmperez.com/sounds/clip.aac" preload="auto"></audio>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const sound = document.getElementById("menu-sound");
-    const badges = document.querySelectorAll(".sysadmin-badge");
-
-    badges.forEach(badge => {
-      badge.addEventListener("mouseenter", () => {
-        sound.currentTime = 0;
-        sound.play();
-      });
-    });
-  });
-
-  document.addEventListener("DOMContentLoaded", () => {
-  const sound = document.getElementById("menu-sound");
-  const links = document.querySelectorAll("nav a");
-
-  // Desbloquear sonido tras la primera interacción
-  document.body.addEventListener("click", () => {
-    sound.play().catch(() => {});
-    sound.pause();
-    sound.currentTime = 0;
-  }, { once: true });
-
-  // Reproducir sonido al pasar el ratón por encima
-  links.forEach(link => {
-    link.addEventListener("mouseenter", () => {
-      sound.currentTime = 0;
-      sound.play().catch(() => {}); // Reproduce el sonido y maneja posibles errores
-    });
-  });
-});
-
-
-  
-function sanitizeInput(input) {
-  return input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-}
-</script>
-
-
-  <body>
-  <!-- Tu HTML aquí -->
-<div id="particles-bg"></div>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  const particlesContainer = document.getElementById("particles-bg");
-  const numParticles = window.innerWidth < 768 ? 10 : 20;
-
-  for (let i = 0; i < numParticles; i++) {
-    const p = document.createElement("div");
-    p.classList.add("particle");
-
-    p.style.left = Math.random() * 100 + "vw";
-    p.style.top = Math.random() * 100 + "vh";
-
-    p.style.width = "6px";
-    p.style.height = "6px";
-    p.style.borderRadius = "50%";
-    p.style.position = "absolute";
-    p.style.background = "rgba(255, 215, 0, 1)";
-    p.style.boxShadow = "0 0 14px rgba(255, 215, 0, 1)";
-
-    // Movimiento suave
-    const move = () => {
-      const newX = Math.random() * 100 + "vw";
-      const newY = Math.random() * 100 + "vh";
-      const duration = (Math.random() * 8 + 4) * 1000;
-
-      p.animate(
-        [
-          { left: p.style.left, top: p.style.top },
-          { left: newX, top: newY }
-        ],
-        {
-          duration: duration,
-          fill: "forwards",
-          easing: "ease-in-out"
-        }
-      );
-
-      p.style.left = newX;
-      p.style.top = newY;
-
-      setTimeout(move, duration);
-    };
-
-    move();
-    particlesContainer.appendChild(p);
-  }
-});
-</script>
-
-</body>
-
-
-<style>
-
-   
-  </style>
 </head>
-    <!-- Font Awesome 6.5.0 (versión estable con soporte total para 'fas', 'far', 'fab') -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-Fo3rlrZj/k7ujTTXrwE8n0z2C2FZpIh1oLz4hJxQ1S2vYp1XbVZKXqkqjvXQp4I8O6D+oUuT3Ue8D6U5yT1JfA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
 
-  <!-- Fuente opcional (no afecta a los iconos) -->
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
 
-  <!-- Tus estilos -->
-  <link rel="stylesheet" href="style.css" />
-</head>
+<body>
+
+  <!-- Contenedor para partículas -->
+  <div id="particles-bg"></div>
+
+  <script>
+    // Sanitizar entradas
+    function sanitizeInput(input) {
+      return input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+
+    // Partículas animadas
+    document.addEventListener("DOMContentLoaded", () => {
+      const particlesContainer = document.getElementById("particles-bg");
+      const numParticles = window.innerWidth < 768 ? 10 : 20;
+
+      for (let i = 0; i < numParticles; i++) {
+        const p = document.createElement("div");
+        p.classList.add("particle");
+
+        p.style.left = Math.random() * 100 + "vw";
+        p.style.top = Math.random() * 100 + "vh";
+
+        p.style.width = "6px";
+        p.style.height = "6px";
+        p.style.borderRadius = "50%";
+        p.style.position = "absolute";
+        p.style.background = "rgba(255, 215, 0, 1)";
+        p.style.boxShadow = "0 0 14px rgba(255, 215, 0, 1)";
+
+        // Movimiento suave
+        const move = () => {
+          const newX = Math.random() * 100 + "vw";
+          const newY = Math.random() * 100 + "vh";
+          const duration = (Math.random() * 8 + 4) * 1000;
+
+          p.animate(
+            [
+              { left: p.style.left, top: p.style.top },
+              { left: newX, top: newY }
+            ],
+            {
+              duration: duration,
+              fill: "forwards",
+              easing: "ease-in-out"
+            }
+          );
+
+          p.style.left = newX;
+          p.style.top = newY;
+
+          setTimeout(move, duration);
+        };
+
+        move();
+        particlesContainer.appendChild(p);
+      }
+    });
+  </script>
+
 
   <style>
     
   /* Todo tu CSS aquí... */
 /* ==========================================
-   Colores fijos para líneas de tecnologías
+   🎯 Colores fijos para líneas de tecnologías
    ========================================== */
 
 .techline span {
@@ -305,6 +231,15 @@ document.addEventListener("DOMContentLoaded", () => {
     display: block;
   }
 }
+
+/* Teléfonos pequeños */
+@media (max-width: 480px) { ... }
+
+/* Tablets en vertical */
+@media (min-width: 481px) and (max-width: 768px) { ... }
+
+/* Tablets en horizontal y pantallas medianas */
+@media (min-width: 769px) and (max-width: 1024px) { ... }
 
 .container {
   display: flex;
@@ -519,7 +454,7 @@ footer a {
     transform: none;
     justify-content: center; /* Centramos los iconos */
   }
-
+}
 /* 🔹 Barra superior */
 .barra-superior {
   position: relative;
@@ -1202,6 +1137,14 @@ button:hover {
     padding: 12px;
     font-size: 16px;
   }
+}
+
+
+
+
+.card:not(#sobre-mi .card):not(#habilidades .card):not(#certificaciones .card):not(#cursos .card):not(#seguridad .card):not(#contacto .card):hover (#CV .card){
+  transform: translateY(-10px);
+}
 
 
 /* 🔹 Activar el movimiento SOLO en las tarjetas de la sección "Proyectos" */
@@ -1386,7 +1329,7 @@ html, body {
 }
 html, body {
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden; !important
 }
 img {
   max-width: 100%;
@@ -1399,8 +1342,9 @@ a[href^="mailto:"] {
   font-weight: bold; /* Opcional: para que se vea más destacado */
   color: #000000;     /* Opcional: para que combine con tu estilo */
 }
-
-
+/* ==========================================
+   🎯 Ajustes visuales para la sección "Sobre mí"
+   ========================================== */
 #sobre-mi {
   margin-bottom: 40px; /* separa del resto de secciones */
 }
@@ -1543,8 +1487,6 @@ section#sobre-mi > *:first-child {
   transition: opacity 0.4s ease;
   pointer-events: none;
 }
-
-
 
 
 .grid-proyectos {
