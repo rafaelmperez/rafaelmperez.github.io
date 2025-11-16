@@ -16,6 +16,40 @@
     <!-- Indicamos que hay una versión en francés -->
   <link rel="alternate" hreflang="es" href="https://rafaelmperez.com/index.html" />
   <link rel="alternate" hreflang="fr" href="https://rafaelmperez.com/fr/index.html" />
+
+  <!-- Font Awesome optimizado (solo una versión) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </noscript>
+
+
+
+  <!-- Google Fonts con preload y carga no bloqueante -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap">
+  </noscript>
+
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap">
+  </noscript>
+
+
+      <!-- Font Awesome 6.5.0 (versión estable con soporte total para 'fas', 'far', 'fab') -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTTXrwE8n0z2C2FZpIh1oLz4hJxQ1S2vYp1XbVZKXqkqjvXQp4I8O6D+oUuT3Ue8D6U5yT1JfA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"/>
+
+  <!-- Fuente opcional (no afecta a los iconos) -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+
+  <!-- Tus estilos -->
+  <link rel="stylesheet" href="style.css" />
 </head>
   
 
@@ -31,16 +65,7 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   integrity="sha512-Fo3rlrZj/k7ujTTXrwE8n0z2C2FZpIh1oLz4hJxQ1S2vYp1XbVZKXqkqjvXQp4I8O6D+oUuT3Ue8D6U5yT1JfA=="
   crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
-
-
-<style>
-  /* Ejemplo de CSS crítico */
-  body { font-family: 'Montserrat', sans-serif; }
-  h1 { font-weight: 600; }
-</style>
-  
+  referrerpolicy="no-referrer"/>
 
 
   <link rel="icon" href="favicon.png" type="image/x-icon">
@@ -65,28 +90,7 @@
   <meta name="twitter:description" content="Portafolio en ciberseguridad, administración de sistemas y proyectos IT." />
   <meta name="twitter:image" content="https://rafaelmperez.com/assets/img/vistapreliminar.jpg" />
 
-
-<head>
   
-  <!-- Font Awesome optimizado (solo una versión) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
-  <noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  </noscript>
-
-
-
-  <!-- Google Fonts con preload y carga no bloqueante -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" as="style" onload="this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap">
-  </noscript>
-
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" as="style" onload="this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap">
-  </noscript>
-</head>
 <meta name="google-site-verification" content="uumuF7y73hfuDoXFjUW66ETAXtE-WjolU9Pv0aWhCyo" />
 
     <!-- Google tag (gtag.js) -->
@@ -96,14 +100,12 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-J1T24E1NDR');
-  </script>
 
-  <!-- ... contenido de tu página ... -->
 
 <!-- sonido corto del menú -->
 <audio id="menu-sound" src="https://rafaelmperez.com/sounds/clip.aac" preload="auto"></audio>
 
-<script>
+
   document.addEventListener("DOMContentLoaded", function () {
     const sound = document.getElementById("menu-sound");
     const badges = document.querySelectorAll(".sysadmin-badge");
@@ -141,14 +143,7 @@
 function sanitizeInput(input) {
   return input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
-</script>
 
-
-  <body>
-  <!-- Tu HTML aquí -->
-<div id="particles-bg"></div>
-
-<script>
 document.addEventListener("DOMContentLoaded", () => {
 
   const particlesContainer = document.getElementById("particles-bg");
@@ -198,30 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-</body>
-
-
-<style>
-
-   
-  </style>
-</head>
-    <!-- Font Awesome 6.5.0 (versión estable con soporte total para 'fas', 'far', 'fab') -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-Fo3rlrZj/k7ujTTXrwE8n0z2C2FZpIh1oLz4hJxQ1S2vYp1XbVZKXqkqjvXQp4I8O6D+oUuT3Ue8D6U5yT1JfA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-
-  <!-- Fuente opcional (no afecta a los iconos) -->
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
-
-  <!-- Tus estilos -->
-  <link rel="stylesheet" href="style.css" />
-</head>
-
+  
   <style>
     
   /* Todo tu CSS aquí... */
@@ -3431,6 +3403,7 @@ header {
   });
 </script>
 </html>
+
 
 
 
