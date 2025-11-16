@@ -306,6 +306,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 }
 
+/* Teléfonos pequeños */
+@media (max-width: 480px) { ... }
+
+/* Tablets en vertical */
+@media (min-width: 481px) and (max-width: 768px) { ... }
+
+/* Tablets en horizontal y pantallas medianas */
+@media (min-width: 769px) and (max-width: 1024px) { ... }
 
 .container {
   display: flex;
@@ -709,6 +717,15 @@ body {
   max-width: 2000px;
 }
 
+
+
+</style>
+
+
+
+</head>
+
+  <style>
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;500&display=swap');
 
 body {
@@ -1543,6 +1560,15 @@ section#sobre-mi > *:first-child {
   opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: none;
+}
+const helmet = require('helmet');
+app.use(helmet.contentSecurityPolicy({
+  directives: {
+    defaultSrc: ["'self'"],
+    scriptSrc: ["'self'"]
+  }
+}));
+
 
 
 .grid-proyectos {
@@ -1747,12 +1773,6 @@ section {
     color: #d4af37 !important;
     box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
   }
-
-    #certificaciones .card {
-  all: unset !important;
-  display: block !important;
-}
-
 
   /* Títulos */
   h1, h2, h3, h4, h5, h6 {
@@ -2413,199 +2433,6 @@ header {
   pointer-events: none;
   z-index: 1;
 }
-
-/* ============================================================
-   🔥 NIVEL 10 — VITRINA HOLOGRÁFICA ÉLITE
-   Efectos: cristal 3D + parallax + escaneo láser + holo-glow
-   ============================================================ */
-
-/* Contenedor principal con entrada holográfica */
-.ultimate-holo {
-  position: relative;
-  animation: holoSpawn 1.8s ease-out;
-}
-
-@keyframes holoSpawn {
-  0% {
-    opacity: 0;
-    transform: scale(0.85);
-    filter: blur(12px);
-    box-shadow: none;
-  }
-  50% {
-    opacity: 0.6;
-    transform: scale(1.02);
-    filter: blur(3px);
-  }
-  100% {
-    opacity: 1;
-    filter: none;
-    transform: scale(1);
-  }
-}
-
-/* Contenedor */
-.vitrina-container {
-  display: flex;
-  gap: 45px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 40px 0;
-}
-
-/* ============================================================
-   🔸 CRISTAL 3D CON PROFUNDIDAD
-   ============================================================ */
-.holo-3d {
-  transform-style: preserve-3d;
-  transition: transform .35s ease;
-}
-
-.holo-3d:hover {
-  transform: perspective(900px) rotateX(6deg) rotateY(-6deg) scale(1.06);
-}
-
-/* ============================================================
-   🔸 LA VITRINA GLASS ULTRA PREMIUM
-   ============================================================ */
-.vitrina-glass {
-  position: relative;
-  width: 240px;
-  height: 300px;
-  border-radius: 14px;
-  padding: 12px;
-  background: rgba(255, 215, 0, 0.05);
-  border: 1px solid rgba(255, 215, 0, 0.2);
-  backdrop-filter: blur(6px);
-  overflow: hidden;
-  transition: all .4s ease;
-  box-shadow:
-    0 0 12px rgba(255, 215, 0, 0.15),
-    inset 0 0 20px rgba(255, 215, 0, 0.15);
-}
-
-/* ============================================================
-   ✨ EFECTO DE BRILLO ORBITAL DORADO
-   ============================================================ */
-.vitrina-glass::after {
-  content: "";
-  position: absolute;
-  top: -130%;
-  left: -130%;
-  width: 300%;
-  height: 300%;
-  background: conic-gradient(
-    from 0deg,
-    transparent,
-    rgba(255, 215, 0, 0.15),
-    transparent 70%
-  );
-  animation: oroOrbital 7s linear infinite;
-  opacity: 0;
-  transition: opacity .6s ease;
-}
-
-@keyframes oroOrbital {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Hover → activa reflejo */
-.vitrina-glass:hover::after {
-  opacity: 1;
-}
-
-/* ============================================================
-   🟧 SCAN LÁSER VERTICAL (ESTILO HACKER)
-   ============================================================ */
-.holo-scan::before {
-  content: "";
-  position: absolute;
-  top: -200%;
-  left: 0;
-  width: 100%;
-  height: 60%;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(255,255,255,0.35),
-    transparent
-  );
-  animation: scanDown 4s ease-in-out infinite;
-  pointer-events: none;
-  opacity: 0.15;
-}
-
-@keyframes scanDown {
-  0% { top: -200%; }
-  50% { top: 150%; }
-  100% { top: -200%; }
-}
-
-/* ============================================================
-   🌟 GLOW INTELIGENTE (áurea dorada al hover)
-   ============================================================ */
-.vitrina-glass:hover {
-  box-shadow:
-    0 0 22px rgba(255, 215, 0, 0.35),
-    0 0 55px rgba(255, 215, 0, 0.18),
-    inset 0 0 30px rgba(255, 215, 0, 0.25);
-  border-color: rgba(255, 215, 0, 0.45);
-}
-
-/* Títulos */
-.vitrina-titulo {
-  margin-top: 12px;
-  font-size: 1rem;
-  color: #ffd700;
-  font-family: 'Fira Code', monospace;
-  letter-spacing: 1px;
-  text-shadow: 0 0 8px rgba(255,215,0,0.35);
-}
-
-/* Botón PDF */
-.vitrina-boton-pdf {
-  margin-top: 25px;
-  text-align: center;
-}
-
-/* ==========================================
-   🟩 ZONA AISLADA PARA LA VITRINA HOLOGRÁFICA
-   ========================================== */
-
-
-/* Activa tus estilos reales */
-.zona-holografica .ultimate-holo,
-.zona-holografica .vitrina-container,
-.zona-holografica .vitrina-glass,
-.zona-holografica .holo-3d,
-.zona-holografica .holo-scan {
-  all: revert !important;
-}
-
-  /* 🚨 FIX DEFINITIVO PARA HABILITAR EL HOLOGRAMA */
-#certificaciones .card {
-  all: unset !important;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 auto !important;
-  width: auto !important;
-  display: block !important;
-}
-
-  /* 🚨 FIX REAL — Libera COMPLETAMENTE la zona de certificaciones */
-section#certificaciones {
-  all: unset !important;
-  display: block !important;
-  background: transparent !important;
-  border: none !important;
-  padding: 0 !important;
-  margin: 0 auto !important;
-}
-
-
 
   </style>
 </head>
@@ -3391,52 +3218,119 @@ section#certificaciones {
 <!-- FIN SECCIÓN RETOS/MICROPROYECTOS -->
 
 
-<section id="certificaciones" class="zona-holografica">
-  <div class="card vitrina-card ultimate-holo">
 
+
+<section id="certificaciones">
+  <!-- Primer card -->
+  <div class="card">
     <h2 class="terminal-heading">
       <i class="fas fa-certificate"></i> ~/certificaciones.py
     </h2>
 
-    <div class="vitrina-container">
+    <div class="certificaciones-container">
+      <div data-iframe-width="150" data-iframe-height="270" 
+           data-share-badge-id="dad4ad76-045d-4df9-b408-907234ae2168" 
+           data-share-badge-host="https://www.credly.com"></div>
 
-      <!-- Badge 1 -->
-      <div class="vitrina-item holo-3d">
-        <div class="vitrina-glass holo-scan">
-          <div data-iframe-width="150" data-iframe-height="270"
-               data-share-badge-id="dad4ad76-045d-4df9-b408-907234ae2168"
-               data-share-badge-host="https://www.credly.com"></div>
-        </div>
-        <p class="vitrina-titulo">CCST Cybersecurity</p>
-      </div>
-
-      <!-- Badge 2 -->
-      <div class="vitrina-item holo-3d">
-        <div class="vitrina-glass holo-scan">
-          <div data-iframe-width="150" data-iframe-height="270"
-               data-share-badge-id="6ae1a6bb-5ef6-4dcb-97e3-965c7ebc4947"
-               data-share-badge-host="https://www.credly.com"></div>
-        </div>
-        <p class="vitrina-titulo">CCST Networking</p>
-      </div>
-
+      <div data-iframe-width="150" data-iframe-height="270" 
+           data-share-badge-id="6ae1a6bb-5ef6-4dcb-97e3-965c7ebc4947" 
+           data-share-badge-host="https://www.credly.com"></div>
     </div>
 
     <p class="certificacion-descripcion">
-      Certificaciones <strong>CCST Cybersecurity & CCST Networking</strong> obtenidas en julio de 2025.
-      Estas acreditaciones avalan conocimientos esenciales en seguridad informática, redes, identificación de amenazas y aplicación de buenas prácticas en entornos profesionales.
+      Certificaciones <strong>CCST Cybersecurity & CCST Networking</strong> obtenidas en julio de 2025. Estas acreditaciones avalan conocimientos esenciales en seguridad informática, redes, identificación de amenazas y aplicación de buenas prácticas en entornos profesionales.
     </p>
-
-    <div class="vitrina-boton-pdf">
-      <a href="https://rafaelmperez.com/docs/Diplomas_Publicos_final.pdf"
-         target="_blank"
-         class="sysadmin-badge">
-        Ver Diplomas PDF
-      </a>
-    </div>
+<p> 
+  <a href="https://rafaelmperez.com/docs/Diplomas_Publicos_final.pdf" 
+     target="_blank" 
+     class="sysadmin-badge"
+     style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+    Ver Diplomas PDF
+  </a> 
+</p>
 
   </div>
+
 </section>
+
+
+
+
+
+<!-- Script de Credly -->
+<script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+
+
+<style>
+  .badge-wrapper iframe {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .badge-wrapper:hover iframe {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+</style>
+
+
+  <style>
+    .badge-wrapper {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.badge-wrapper:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+    .certificaciones-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .certificaciones-container iframe {
+      max-width: 150px;
+      max-height: 270px;
+      border: none;
+      display: block;
+    }
+
+    .certificacion-descripcion {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+   .small-card {
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto; /* 🔥 Esto la centra horizontalmente */
+  padding: 16px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+}
+
+      .certificaciones-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.certificaciones-container > div {
+  flex: 0 0 auto;
+}
+
 
 
   </style>
@@ -3560,16 +3454,6 @@ section#certificaciones {
   });
 </script>
 </html>
-
-
-
-
-
-
-
-
-
-
 
 
 
