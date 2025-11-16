@@ -1531,15 +1531,6 @@ section#sobre-mi > *:first-child {
   transition: opacity 0.4s ease;
   pointer-events: none;
 }
-const helmet = require('helmet');
-app.use(helmet.contentSecurityPolicy({
-  directives: {
-    defaultSrc: ["'self'"],
-    scriptSrc: ["'self'"]
-  }
-}));
-
-
 
 .grid-proyectos {
   display: grid;
@@ -1566,12 +1557,6 @@ app.use(helmet.contentSecurityPolicy({
   margin: 0;
   padding: 0;
 }
-
-
-
-
-
-
 
 @font-face {
   font-family: 'Font Awesome 5 Brands';
@@ -1619,11 +1604,6 @@ app.use(helmet.contentSecurityPolicy({
   width: 100%;
 }
 
-
-
-
-
-
 .grid-habilidades {
   display: grid;
   grid-template-columns: 1fr; /* una sola columna */
@@ -1658,8 +1638,6 @@ section {
 .hoja-de-ruta-card {
   text-align: center;
 }
-
-
 
 
 .sysadmin-badge:hover {
@@ -1707,10 +1685,6 @@ section {
   opacity: 1;
 }
  
-
-
-    <style>
-<style>
   /* Fondo general */
   body {
     background-color: #000 !important;
@@ -2473,7 +2447,6 @@ header {
 
 
   </style>
-</head>
 
 <body>
   <!-- Contenedor del traductor (necesario para Google) -->
@@ -3401,6 +3374,7 @@ header {
   });
 </script>
 </html>
+
 
 
 
