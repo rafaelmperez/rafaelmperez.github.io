@@ -108,11 +108,6 @@
 <!-- sonido corto del menú -->
 <audio id="menu-sound" src="https://rafaelmperez.com/sounds/clip.aac" preload="auto"></audio>
 
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const sound = document.getElementById("menu-sound");
-    const badges = document.querySelectorAll(".sysadmin-badge");
-
     badges.forEach(badge => {
       badge.addEventListener("mouseenter", () => {
         sound.currentTime = 0;
@@ -3374,6 +3369,7 @@ header {
   });
 </script>
 </html>
+
 
 
 
