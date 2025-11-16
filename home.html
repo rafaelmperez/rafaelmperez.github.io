@@ -86,66 +86,77 @@
 
 </head>
 
-
 <body>
 
-  <!-- Contenedor para partículas -->
-  <div id="particles-bg"></div>
+ <!-- narración principal -->
+<audio id="narracion" src="https://rafaelmperez.com/sounds/portafolioplay.aac" preload="auto"></audio>
 
-  <script>
-    // Sanitizar entradas
-    function sanitizeInput(input) {
-      return input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+<!-- sonido corto del menú -->
+<audio id="menu-sound" src="https://rafaelmperez.com/sounds/clip.aac" preload="auto"></audio>
+
+<script>
+  const narracion = document.getElementById("narracion");
+  const playBtn   = document.getElementById("playPauseBtn");
+  const menuSound = document.getElementById("menu-sound");
+
+  playBtn.addEventListener("click", () => {
+    if (narracion.paused) {
+      narracion.play();
+      playBtn.textContent = "⏸";
+    } else {
+      narracion.pause();
+      playBtn.textContent = "▶";
     }
+  });
 
-    // Partículas animadas
-    document.addEventListener("DOMContentLoaded", () => {
-      const particlesContainer = document.getElementById("particles-bg");
-      const numParticles = window.innerWidth < 768 ? 10 : 20;
+  narracion.addEventListener("ended", () => {
+    playBtn.textContent = "▶";
+  });
 
-      for (let i = 0; i < numParticles; i++) {
-        const p = document.createElement("div");
-        p.classList.add("particle");
-
-        p.style.left = Math.random() * 100 + "vw";
-        p.style.top = Math.random() * 100 + "vh";
-
-        p.style.width = "6px";
-        p.style.height = "6px";
-        p.style.borderRadius = "50%";
-        p.style.position = "absolute";
-        p.style.background = "rgba(255, 215, 0, 1)";
-        p.style.boxShadow = "0 0 14px rgba(255, 215, 0, 1)";
-
-        // Movimiento suave
-        const move = () => {
-          const newX = Math.random() * 100 + "vw";
-          const newY = Math.random() * 100 + "vh";
-          const duration = (Math.random() * 8 + 4) * 1000;
-
-          p.animate(
-            [
-              { left: p.style.left, top: p.style.top },
-              { left: newX, top: newY }
-            ],
-            {
-              duration: duration,
-              fill: "forwards",
-              easing: "ease-in-out"
-            }
-          );
-
-          p.style.left = newX;
-          p.style.top = newY;
-
-          setTimeout(move, duration);
-        };
-
-        move();
-        particlesContainer.appendChild(p);
-      }
+  const enlaces = document.querySelectorAll("nav a, .play-btn");
+  enlaces.forEach(enlace => {
+    enlace.addEventListener("mouseenter", () => {
+      const sonido = menuSound.cloneNode(true);
+      sonido.play();
     });
-  </script>
+  });
+</script>
+
+<script src="script.js"></script>
+
+
+ <header class="encabezado">
+  <div class="header-content" style="text-align: center;">
+    <img 
+      src="https://rafaelmperez.com/assets/img/bannerlinkedin.jpeg"
+      alt="Banner principal"
+      class="banner-header"
+      width="1000"
+      loading="eager"
+      fetchpriority="high">
+  </div>
+</header>
+
+<!-- 🔥 Barra superior justo debajo del header -->
+<div class="barra-superior">
+  <nav>
+    <a href="#sobre-mi" class="nav-link" data-title="Sobre mí ↓">Sobre mí</a>
+    <a href="#habilidades" class="nav-link" data-title="Habilidades ↓">Habilidades</a>
+    <a href="#proyectos" class="nav-link" data-title="Proyectos ↓">Proyectos</a>
+    <a href="#scripts" class="nav-link" data-title="Scripts ↓">Scripts</a>
+    <a href="#certificaciones" class="nav-link" data-title="Certificaciones ↓">Certificaciones</a>
+    <a href="#objetivos" class="nav-link" data-title="CV ↓">CV</a>
+    <a href="#contacto" class="nav-link" data-title="Contáctame ↓">Contáctame</a>
+  </nav>
+
+  <!-- 🔥 ICONOS SOCIALES DENTRO DE LA BARRA SUPERIOR -->
+  <div class="social-float">
+    <a href="https://www.linkedin.com/in/rafaelmperez/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://github.com/Rafaelmperez" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://upgrademe.blog/" target="_blank"><i class="fab fa-blogger-b"></i></a>
+  </div>
+</div>
+
 
 
   <style>
@@ -231,15 +242,6 @@
     display: block;
   }
 }
-
-/* Teléfonos pequeños */
-@media (max-width: 480px) { ... }
-
-/* Tablets en vertical */
-@media (min-width: 481px) and (max-width: 768px) { ... }
-
-/* Tablets en horizontal y pantallas medianas */
-@media (min-width: 769px) and (max-width: 1024px) { ... }
 
 .container {
   display: flex;
@@ -394,24 +396,6 @@ footer {
   margin-bottom: 35px !important; /* ajusta según lo necesites */
 }
 
-  
-.barra-superior {
-  position: relative;
-  display: flex;
-  justify-content: center;  /* ahora el menú queda centrado */
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #0a0a0a;
-}
-
-.barra-superior .social-float {
-  position: absolute;
-  right: 20px;    
-  top: 50%;
-  transform: translateY(-50%); /* centrado vertical con el menú */
-  display: flex;
-  gap: 10px;
-}
 
 
 nav a {
@@ -437,37 +421,16 @@ footer a {
   text-decoration: none;
 }
 
-/* 📱 Responsive: menú centrado y redes debajo en pantallas pequeñas */
-@media (max-width: 768px) {
-  .menu {
-    display: block;
-  }
-}
 
 
-  .barra-superior nav {
-    margin-bottom: 0px;
-  }
-
-  .barra-superior .social-float {
-    position: static;   /* Quitamos posición absoluta */
-    transform: none;
-    justify-content: center; /* Centramos los iconos */
-  }
-}
-/* 🔹 Barra superior */
-.barra-superior {
-  position: relative;
+nav {
   display: flex;
-  justify-content: center;  /* Menú centrado */
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #0a0a0a;
+  gap: 20px;
 }
 
-.barra-superior nav {
-  text-align: center;
-}
+
+
+
 
 .menu {
   list-style: none;
@@ -485,65 +448,6 @@ footer a {
 .menu li a:hover {
   color: #ffcc00;
 }
-/* 🔹 Iconos sociales integrados con diseño dorado */
-.barra-superior .social-float {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  gap: 10px;
-}
-
-/* Iconos base */
-.social-float a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  font-size: 22px;
-  color: #d4af37;                     /* Dorado metálico */
-  background-color: #111;             /* Negro suave */
-  border: 1px solid rgba(212,175,55,0.4);
-  box-shadow: 0 0 10px rgba(212,175,55,0.15);
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-/* Hover: efecto dorado brillante */
-.social-float a:hover {
-  transform: scale(1.15);
-  background-color: #d4af37;
-  color: #000;
-  border-color: #ffd700;
-  box-shadow:
-    0 0 15px rgba(255,215,0,0.4),
-    0 0 30px rgba(255,215,0,0.2);
-}
-
-/* 🔸 Colores base uniformes */
-.social-float a[href*="linkedin"],
-.social-float a[href*="github"],
-.social-float a[href*="blogspot"] {
-  background-color: #0a0a0a; /* igual para los tres */
-  color: #fff;
-  transition: all 0.3s ease;
-}
-
-/* 🔸 Hover unificado */
-.social-float a[href*="linkedin"]:hover,
-.social-float a[href*="github"]:hover,
-.social-float a[href*="blogspot"]:hover {
-  background-color: #d4af37; /* dorado brillante */
-  color: #000;
-  transform: scale(1.15);
-  box-shadow:
-    0 0 15px rgba(255,215,0,0.4),
-    0 0 30px rgba(255,215,0,0.2);
-}
-
 
 /* 📱 Responsive */
 @media (max-width: 768px) {
@@ -2349,22 +2253,57 @@ header {
   z-index: 1;
 }
 
+
+/* Barra superior justo debajo del header */
+.barra-superior {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* nav izquierda, iconos derecha */
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #000;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.25); /* detalle premium */
+}
+
+/* Nav normal */
+.barra-superior nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* Social icons horizontal */
+.social-float {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+/* Iconos */
+.social-float a {
+  background-color: #0a0a0a;
+  color: #fff;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+/* Hover dorado */
+.social-float a:hover {
+  background-color: #d4af37;
+  color: #000;
+  transform: scale(1.15);
+  box-shadow:
+    0 0 12px rgba(255,215,0,0.4),
+    0 0 24px rgba(255,215,0,0.2);
+}
+
   </style>
-</head>
 
-<body>
-  <!-- Contenedor del traductor (necesario para Google) -->
-  <div id="google_translate_element" style="display: none;"></div>
-
-  <!-- Botón para traducir -->
-  <div class="language-switcher">
-    <a href="#" id="translate-fr">
-      <img src="https://rafaelmperez.com/frflags.jpg" alt="Drapeau de la France" class="flag">
-      Français
-    </a>
-  </div>
-</body>
-</html>
 
 
   <!-- Script para activar la traducción -->
@@ -2401,98 +2340,13 @@ header {
       });
     });
   </script>
-</body>
-</html>
-
-
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-<header class="encabezado">
-  <div class="header-content" style="text-align: center;">
-    <img 
-      src="https://rafaelmperez.com/assets/img/bannerlinkedin.jpeg" 
-      alt="Banner principal de Sysadmin en formación" 
-      class="banner-header" 
-      width="1000" 
-      loading="eager" 
-      fetchpriority="high">
-      
-
-
-
-
-
-<div class="barra-superior">
-  
-</head>
-<body>
-<nav>
-  <a href="#sobre-mi" class="nav-link" data-title="Sobre mí ↓">Sobre mí</a>
-  <a href="#habilidades" class="nav-link" data-title="Habilidades ↓">Habilidades</a>
-  <a href="#proyectos" class="nav-link" data-title="Proyectos ↓">Proyectos</a>
-  <a href="#scripts" class="nav-link" data-title="Scripts ↓">Scripts</a>
-  <a href="#certificaciones" class="nav-link" data-title="Certificaciones ↓">Certificaciones</a>
-  <a href="#objetivos" class="nav-link" data-title="CV ↓">CV</a>
-  <a href="#contacto" class="nav-link" data-title="Contáctame ↓">Contáctame</a>
-</nav>
-
-
-
-
-<!-- narración principal -->
-<audio id="narracion" src="https://rafaelmperez.com/sounds/portafolioplay.aac" preload="auto"></audio>
-<!-- sonido corto del menú -->
-<audio id="menu-sound" src="https://rafaelmperez.com/sounds/clip.aac" preload="auto"></audio>
-
-<script>
-  const narracion = document.getElementById("narracion");
-  const playBtn = document.getElementById("playPauseBtn");
-  const menuSound = document.getElementById("menu-sound");
-
-  // Botón Play/Pause de la narración
-  playBtn.addEventListener("click", () => {
-    if (narracion.paused) {
-      narracion.play();
-      playBtn.textContent = "⏸";
-    } else {
-      narracion.pause();
-      playBtn.textContent = "▶";
-    }
-  });
-
-  narracion.addEventListener("ended", () => {
-    playBtn.textContent = "▶";
-  });
-
-  // Reproducir sonido al pasar por los enlaces del menú
-  const enlaces = document.querySelectorAll("nav a, .play-btn");
-  enlaces.forEach(enlace => {
-    enlace.addEventListener("mouseenter", () => {
-      // clona el sonido para que suene cada vez aunque se solape
-      const sonido = menuSound.cloneNode(true);
-      sonido.play();
-    });
-  });
-</script>
-
 
   <!-- Aquí va el script, justo antes de cerrar body -->
   <script src="script.js"></script>
-</body>
-</html>
-
-
-  <div class="social-float">
-    <a href="https://www.linkedin.com/in/rafaelmperez/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-linkedin-in"></i>
-    </a>
-       <a href="https://github.com/Rafaelmperez" title="GitHub" target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-github"></i>
-<a href="https://upgrademe.blog/" title="Blog" target="_blank" rel="noopener noreferrer">
-  <i class="fab fa-blogger-b"></i>
-</a>
 
  
     </a>
@@ -3176,79 +3030,6 @@ header {
 <script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
 
 
-<style>
-  .badge-wrapper iframe {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .badge-wrapper:hover iframe {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  }
-</style>
-
-
-  <style>
-    .badge-wrapper {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.badge-wrapper:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-    .certificaciones-container {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-    }
-
-
-    .certificaciones-container iframe {
-      max-width: 150px;
-      max-height: 270px;
-      border: none;
-      display: block;
-    }
-
-    .certificacion-descripcion {
-      margin-top: 20px;
-      text-align: center;
-      font-size: 1rem;
-      color: #555;
-      line-height: 1.6;
-    }
-
-   .small-card {
-  max-width: 450px;
-  width: 100%;
-  margin: 0 auto; /* 🔥 Esto la centra horizontalmente */
-  padding: 16px;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  box-sizing: border-box;
-}
-
-      .certificaciones-container {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 10px;
-  overflow-x: auto;
-  padding: 10px 0;
-}
-
-.certificaciones-container > div {
-  flex: 0 0 auto;
-}
-
-
-
-  </style>
   <script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
 
 
@@ -3331,23 +3112,14 @@ header {
 
     </div>
   </div>
+
+
 </section>
 
 
 
-</section>
 
-
-
-
-
-<!-- Footer -->
 <footer>
-
-
-  </div>
-
-
 
   <strong style="color: white;">
     <p>© 2025 Rafael M. Pérez. Página Web en desarrollo.</p>
@@ -3355,19 +3127,7 @@ header {
     <p class="terminal-line">¡Gracias por tu visita!</p>
   </strong>
 </footer>
-
-
-
-
 </body>
-<script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function() {
-    var script = document.createElement("script");
-    script.src = "https://cdn.credly.com/assets/utilities/embed.js";
-    script.type = "text/javascript";
-    document.body.appendChild(script);
-  });
-</script>
 </html>
 
 
