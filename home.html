@@ -2415,6 +2415,150 @@ header {
   z-index: 1;
 }
 
+  /* =====================================================
+   🟩 VITRINA HOLOGRÁFICA PRO — PREMIUM EDITION
+   Limpia, compatible y optimizada para tu web
+   ===================================================== */
+
+.certificaciones-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+/* Entrada elegante */
+.ultimate-holo {
+  animation: holoSpawn 1.2s ease-out;
+}
+
+@keyframes holoSpawn {
+  0% { opacity: 0; transform: translateY(15px) scale(0.9); filter: blur(12px); }
+  50% { opacity: .7; transform: scale(1.05); filter: blur(4px); }
+  100% { opacity: 1; transform: scale(1); filter: none; }
+}
+
+/* Caja cristal premium */
+.vitrina-glass {
+  position: relative;
+  width: 200px;
+  padding: 15px;
+  border-radius: 16px;
+  background: rgba(255, 215, 0, 0.07);
+  border: 1px solid rgba(255, 215, 0, 0.28);
+  backdrop-filter: blur(7px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow:
+    0 0 20px rgba(255, 215, 0, 0.18),
+    inset 0 0 30px rgba(255, 215, 0, 0.18);
+  transition: all 0.45s ease, transform 0.45s ease;
+}
+
+/* Hover premium */
+.vitrina-glass:hover {
+  transform: scale(1.07);
+  box-shadow:
+    0 0 35px rgba(255, 215, 0, 0.45),
+    0 0 75px rgba(255, 215, 0, 0.22),
+    inset 0 0 45px rgba(255, 215, 0, 0.32);
+  border-color: rgba(255, 215, 0, 0.55);
+}
+
+/* Efecto 3D profesional */
+.holo-3d {
+  transform-style: preserve-3d;
+}
+
+.holo-3d:hover {
+  transform: perspective(900px) rotateX(6deg) rotateY(-6deg) scale(1.08);
+}
+
+/* Escaneo láser */
+.holo-scan::before {
+  content: "";
+  position: absolute;
+  top: -200%;
+  left: 0;
+  width: 100%;
+  height: 55%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255,255,255,0.35),
+    transparent
+  );
+  animation: scanDown 4s ease-in-out infinite;
+  opacity: 0.15;
+}
+
+@keyframes scanDown {
+  0% { top: -200%; }
+  50% { top: 150%; }
+  100% { top: -200%; }
+}
+
+/* Título de cada certificación */
+.vitrina-titulo {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: #ffd700;
+  text-shadow: 0 0 8px rgba(255,215,0,0.35);
+  font-family: 'Fira Code', monospace;
+  letter-spacing: 1px;
+}
+
+/* Botón PDF centrado */
+.pdf-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pdf-premium {
+  font-size: 1rem !important;
+  padding: 10px 20px !important;
+  border-radius: 10px !important;
+  background: #111 !important;
+  border: 1px solid #d4af37 !important;
+  box-shadow: 0 0 12px rgba(255,215,0,0.25);
+}
+
+.pdf-premium:hover {
+  background: #d4af37 !important;
+  color: #000 !important;
+  box-shadow:
+    0 0 20px rgba(255,215,0,0.5),
+    0 0 40px rgba(255,215,0,0.25);
+}
+
+/* Descripción */
+.descripcion-cert {
+  text-align: center;
+  max-width: 700px;
+  margin: 20px auto;
+  color: #d4af37;
+  font-size: 1rem;
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+  .vitrina-glass {
+    width: 160px;
+    transform: none !important;
+  }
+  .vitrina-glass:hover {
+    transform: none !important;
+  }
+}
+
+
   </style>
 </head>
 
@@ -3192,125 +3336,49 @@ header {
 
 
 <section id="certificaciones">
-  <!-- Primer card -->
-  <div class="card">
-    <h2 class="terminal-heading">
-      <i class="fas fa-certificate"></i> ~/certificaciones.py
-    </h2>
 
-    <div class="certificaciones-container">
-      <div data-iframe-width="150" data-iframe-height="270" 
-           data-share-badge-id="dad4ad76-045d-4df9-b408-907234ae2168" 
-           data-share-badge-host="https://www.credly.com"></div>
+  <h2 class="terminal-heading">
+    <i class="fas fa-certificate"></i> ~/certificaciones.py
+  </h2>
 
-      <div data-iframe-width="150" data-iframe-height="270" 
-           data-share-badge-id="6ae1a6bb-5ef6-4dcb-97e3-965c7ebc4947" 
-           data-share-badge-host="https://www.credly.com"></div>
+  <div class="certificaciones-container ultimate-holo">
+
+    <!-- Badge 1 -->
+    <div class="vitrina-glass holo-3d holo-scan vitrina-premium">
+      <div class="badge-wrapper"
+           data-iframe-width="150" data-iframe-height="270"
+           data-share-badge-id="dad4ad76-045d-4df9-b408-907234ae2168"
+           data-share-badge-host="https://www.credly.com">
+      </div>
+      <div class="vitrina-titulo">CCST Cybersecurity</div>
     </div>
 
-    <p class="certificacion-descripcion">
-      Certificaciones <strong>CCST Cybersecurity & CCST Networking</strong> obtenidas en julio de 2025. Estas acreditaciones avalan conocimientos esenciales en seguridad informática, redes, identificación de amenazas y aplicación de buenas prácticas en entornos profesionales.
-    </p>
-<p> 
-  <a href="https://rafaelmperez.com/docs/Diplomas_Publicos_final.pdf" 
-     target="_blank" 
-     class="sysadmin-badge"
-     style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
-    Ver Diplomas PDF
-  </a> 
-</p>
+    <!-- Badge 2 -->
+    <div class="vitrina-glass holo-3d holo-scan vitrina-premium">
+      <div class="badge-wrapper"
+           data-iframe-width="150" data-iframe-height="270"
+           data-share-badge-id="6ae1a6bb-5ef6-4dcb-97e3-965c7ebc4947"
+           data-share-badge-host="https://www.credly.com">
+      </div>
+      <div class="vitrina-titulo">CCST Networking</div>
+    </div>
 
   </div>
 
-</section>
+  <p class="descripcion-cert">
+    Certificaciones <strong>CCST Cybersecurity & CCST Networking</strong> (julio 2025).
+    Respaldan competencias reales en redes, seguridad, amenazas y prácticas profesionales.
+  </p>
 
-
-
-
-
-<!-- Script de Credly -->
-<script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
-
-
-<style>
-  .badge-wrapper iframe {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .badge-wrapper:hover iframe {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  }
-</style>
-
-
-  <style>
-    .badge-wrapper {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.badge-wrapper:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-    .certificaciones-container {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-    }
-
-
-    .certificaciones-container iframe {
-      max-width: 150px;
-      max-height: 270px;
-      border: none;
-      display: block;
-    }
-
-    .certificacion-descripcion {
-      margin-top: 20px;
-      text-align: center;
-      font-size: 1rem;
-      color: #555;
-      line-height: 1.6;
-    }
-
-   .small-card {
-  max-width: 450px;
-  width: 100%;
-  margin: 0 auto; /* 🔥 Esto la centra horizontalmente */
-  padding: 16px;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  box-sizing: border-box;
-}
-
-      .certificaciones-container {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 10px;
-  overflow-x: auto;
-  padding: 10px 0;
-}
-
-.certificaciones-container > div {
-  flex: 0 0 auto;
-}
-
-
-
-  </style>
-  <script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
-
-
-<script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+  <div class="pdf-center">
+    <a href="https://rafaelmperez.com/docs/Diplomas_Publicos_final.pdf"
+       target="_blank" class="sysadmin-badge pdf-premium">
+      Ver Diplomas PDF
+    </a>
+  </div>
 
 </section>
+      <script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
 
 
 <section id="objetivos">
@@ -3425,6 +3493,7 @@ header {
   });
 </script>
 </html>
+
 
 
 
