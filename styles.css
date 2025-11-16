@@ -1,6 +1,7 @@
 
 
 Colores fijos para líneas de tecnologías
+
 .techline span {
   font-weight: 600;
   letter-spacing: 0.3px;
@@ -382,15 +383,6 @@ body {
   max-width: 2000px;
 }
 
-
-
-</style>
-
-
-
-</head>
-
-  <style>
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;500&display=swap');
 
 body {
