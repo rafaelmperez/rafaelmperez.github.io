@@ -96,6 +96,40 @@
 
   <script>
 
+      <!-- Script para activar la traducción -->
+  <script type="text/javascript">
+    // Inicializa el traductor de Google
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'fr,en',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+
+    // Cargar el script de Google Translate
+    const gtScript = document.createElement('script');
+    gtScript.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    document.head.appendChild(gtScript);
+
+    // Cambiar idioma usando la cookie de Google Translate
+    function translateTo(lang) {
+      const domain = window.location.hostname.includes("github.io")
+        ? "github.io"
+        : window.location.hostname;
+      document.cookie = `googtrans=/es/${lang};domain=.${domain};path=/`;
+      location.reload();
+    }
+
+    // Evento de clic en el botón
+    document.addEventListener("DOMContentLoaded", () => {
+      const frBtn = document.getElementById("translate-fr");
+      frBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        translateTo("fr");
+      });
+    });
+
     
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -681,17 +715,6 @@ body {
   min-width: 320px;
   max-width: 2000px;
 }
-
-
-
-</style>
-
-
-
-</head>
-
-  <style>
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;500&display=swap');
 
 body {
   margin: 0;
@@ -2443,9 +2466,8 @@ header {
 
   </style>
 
-<body>
-  <!-- Contenedor del traductor (necesario para Google) -->
-  <div id="google_translate_element" style="display: none;"></div>
+
+
 
   <!-- Botón para traducir -->
   <div class="language-switcher">
@@ -2454,43 +2476,11 @@ header {
       Français
     </a>
   </div>
-</body>
-</html>
 
 
-  <!-- Script para activar la traducción -->
-  <script type="text/javascript">
-    // Inicializa el traductor de Google
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'es',
-        includedLanguages: 'fr,en',
-        autoDisplay: false
-      }, 'google_translate_element');
-    }
 
-    // Cargar el script de Google Translate
-    const gtScript = document.createElement('script');
-    gtScript.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-    document.head.appendChild(gtScript);
 
-    // Cambiar idioma usando la cookie de Google Translate
-    function translateTo(lang) {
-      const domain = window.location.hostname.includes("github.io")
-        ? "github.io"
-        : window.location.hostname;
-      document.cookie = `googtrans=/es/${lang};domain=.${domain};path=/`;
-      location.reload();
-    }
 
-    // Evento de clic en el botón
-    document.addEventListener("DOMContentLoaded", () => {
-      const frBtn = document.getElementById("translate-fr");
-      frBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        translateTo("fr");
-      });
-    });
   </script>
 </body>
 </html>
@@ -3257,11 +3247,12 @@ header {
 
   </div>
 
-<!-- Script de Credly -->
-<script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
 
 </section>
 
+  
+<!-- Script de Credly -->
+<script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
 
 <section id="objetivos">
   <div class="card hoja-de-ruta-card cv-card">
@@ -3369,6 +3360,7 @@ header {
   });
 </script>
 </html>
+
 
 
 
