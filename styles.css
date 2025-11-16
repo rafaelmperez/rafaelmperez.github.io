@@ -1,4 +1,82 @@
  /* Todo tu CSS aquí... */
+  /* ==========================================
+   🔥 NAV + BARRA SUPERIOR + ICONOS PREMIUM
+   ========================================== */
+
+.barra-superior {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;   /* menú izq — iconos der */
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #000;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.25);
+  margin-top: 0;
+  position: relative;
+  z-index: 10;
+}
+
+/* ===== MENU ===== */
+.barra-superior nav {
+  display: flex;
+  gap: 20px;
+}
+
+.barra-superior nav a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.barra-superior nav a:hover {
+  background-color: #d4af37;
+  color: #000;
+}
+
+/* ===== ICONOS SOCIALES PREMIUM ===== */
+.social-float {
+  display: flex;
+  gap: 14px;
+}
+
+.social-float a {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  width: 46px;              /* 👈 iconos más grandes */
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;          /* 👈 tamaño del ícono */
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 215, 0, 0.25);
+}
+
+.social-float a:hover {
+  background-color: #d4af37;
+  color: #000;
+  transform: scale(1.15);
+  box-shadow:
+    0 0 12px rgba(255,215,0,0.4),
+    0 0 24px rgba(255,215,0,0.2);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .barra-superior {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .barra-superior nav {
+    justify-content: center;
+  }
+}
+
 /* ==========================================
    🎯 Colores fijos para líneas de tecnologías
    ========================================== */
@@ -69,16 +147,7 @@
   color: #A66A4C !important;
 }
 
-    
-@media (max-width: 768px) {
-  body {
-    font-size: 16px;
-    padding: 10px;
-  }
-  .menu {
-    display: block;
-  }
-}
+
 
 .container {
   display: flex;
@@ -115,133 +184,6 @@
   flex-wrap: wrap;
 }
 
-
-
-/* HEADER */
-header {
-  background: #000;
-  color: yellow;
-  padding: 1.5rem 0;
-  text-align: center;
-}
-
-header h1 {
-  margin-bottom: .5rem;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-nav ul li {
-  margin: 0 .8rem;
-}
-
-nav ul li a {
-  color: yellow;
-  text-decoration: none;
-  transition: color .3s;
-}
-
-nav ul li a:hover {
-  color: white;
-}
-
-/* SECTIONS */
-section {
-  margin: 2rem 0;
-}
-
-h2 {
-  margin-bottom: 1rem;
-  color: yellow;
-  text-align: center;
-}
-
-/* SKILLS */
-.skills {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1rem;
-  text-align: center;
-}
-
-/* PROJECTS */
-
-
-.project-card {
-  background: #222;
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: center;
-  transition: transform .3s;
-}
-
-.project-card:hover {
-  transform: scale(1.05);
-}
-
-.project-card img {
-  max-width: 100%;
-  border-radius: 6px;
-  margin-bottom: .5rem;
-}
-
-/* FORM */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: .8rem;
-}
-
-input, textarea, button {
-  padding: .7rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-textarea {
-  resize: vertical;
-}
-
-button {
-  background: yellow;
-  color: #000;
-  cursor: pointer;
-  transition: background .3s;
-}
-
-button:hover {
-  background: #ffd700;
-}
-
-/* FOOTER */
-footer {
-  background: #000;
-  color: #aaa;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
-/* 🔹 Espacio entre la última sección y el footer */
-#seguridad {
-  margin-bottom: 35px !important; /* ajusta según lo necesites */
-}
-
-
-
-nav a {
-  margin-right: 15px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
 footer {
   width: 100%;          /* 100% del ancho de la ventana */
   margin: 0;             /* quita márgenes que lo puedan achicar */
@@ -258,50 +200,6 @@ footer a {
   text-decoration: none;
 }
 
-
-
-nav {
-  display: flex;
-  gap: 20px;
-}
-
-
-
-
-
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.menu li a {
-  text-decoration: none;
-  color: #f5f5f5;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.menu li a:hover {
-  color: #ffcc00;
-}
-
-/* 📱 Responsive */
-@media (max-width: 768px) {
-  .barra-superior {
-    flex-direction: column; /* Menú arriba, iconos debajo */
-    align-items: center;
-  }
-
-  .barra-superior nav {
-    margin-bottom: 60px;
-  }
-
-  .barra-superior .social-float {
-    position: static;   /* Quitamos absolute */
-    transform: none;
-    justify-content: center;
-  }
 /* ==== CENTRADO Y ESTILO DEL BANNER PRINCIPAL ==== */
 .header-content {
   display: flex;
@@ -362,13 +260,6 @@ nav {
     font-size: 1.1em;
     padding: 0 10px;
   }
-}
-
-
-
-nav {
-  margin-top: 0;
-  padding-top: 0;
 }
 
 /* 🔹 Espacio entre el nav y la sección Sobre Mí */
@@ -460,49 +351,6 @@ header {
       z-index: 1;
     }
 
-/* ==== NAVBAR ==== */
-nav {
-  background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 1rem;
-  gap: 1.5rem;
-  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
-}
-
-nav a {
-  color: #d4af37;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.05rem;
-  padding: 6px 10px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-nav a:hover {
-  background-color: #d4af37;
-  color: #000;
-}
-
-
-/* Botón Play */
-.play-btn {
-  background: none;
-  border: none;
-  color: rgb(255,204,0);
-  font-size: 1.4rem;
-  cursor: pointer;
-  transition: transform 0.2s ease, color 0.3s ease;
-  padding: 0;
-}
-
-.play-btn:hover {
-  transform: scale(1.2);
-  color: rgb(255,204,0);
-}
 
 @media (max-width: 768px) {
   header {
@@ -538,47 +386,6 @@ h1.titulo-principal {
   font-size: 2.5rem;
 }
 
-
-
-    .card {
-      background: #fdfdfd;
-      border: 1px solid #ccc;
-      padding: 15px !important;
-      border-radius: 12px;
-      margin-bottom: 1rem !important;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      font-size: 1.05rem;
-    }
-
-    /* Reducir márgenes y paddings solo en Proyectos y Certificaciones */
-#proyectos,
-#certificaciones {
-  margin-top: 5px !important;    /* margen superior reducido */
-  margin-bottom: 5px !important; /* margen inferior reducido */
-  padding: 5px !important;       /* padding interno reducido */
-}
-
-/* Si quieres reducir también los espacios entre cards */
-#proyectos .card,
-#certificaciones .card {
-  margin-bottom: 5px !important; /* menos espacio entre tarjetas */
-  padding: 15px !important;       /* menos padding dentro de las tarjetas */
-}
-
-    .youtube-box {
-      background: #000;
-      color: rgb(255,204, 0);
-      font-size: 1.8rem;
-      font-weight: bold;
-      padding: 2rem 3rem;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(255,255,255,0.2);
-      text-align: center;
-      font-family: 'Roboto Slab', serif;
-      animation: pulse 2s infinite;
-      margin: 2rem auto;
-      max-width: 700px;
-    }
 
     @keyframes pulse {
       0% { transform: scale(1); box-shadow: 0 0 20px rgba(255,255,255,0.3); }
@@ -673,16 +480,6 @@ h3 {
 
   #construction {
     margin-top: 110px; /* espacio arriba de la sección de construcción */
-  }
-
-    .contact-form {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 25px;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    font-family: Arial, sans-serif;
   }
 
   .form-group label {
@@ -958,12 +755,6 @@ html, body {
   flex-wrap: wrap;
 }
 
-/* Estilo para pantallas pequeñas */
-@media (max-width: 768px) {
-  .grid-habilidades {
-    flex-direction: column;
-  }
-
   .card {
     width: 100%;
   }
@@ -979,61 +770,6 @@ html, body {
   transition: none; /* eliminamos cualquier animación */
 }
 
-/* Contenedor de iconos */
-.habilidades-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
-}
-
-.habilidades-icons img {
-  width: 60px;
-  height: auto;
-  transition: transform 0.3s; /* solo los iconos se animan */
-}
-
-.habilidades-icons img:hover {
-  transform: scale(1.2);
-}
-
-
-/* Evita que los contenedores de habilidades se muevan */
-.grid-habilidades .card:hover {
-  transform: none;
-}
-
-/* 🔹 Contacto: desactivar hover en el contenedor */
-.contact-form:hover {
-  transform: none;
-}
-
-/* 🔹 Solo el botón tiene animación */
-.contact-form button {
-  transition: background-color none, transform none;
-}
-
-.contact-form button:hover {
-  background-color: #003255;
-  transform: scale(1.05);
-}
-
-/* ==== TERMINAL HEADING ==== */
-.terminal-heading {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  gap: 8px;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.5rem;
-  color: #fff;
-  text-shadow:
-    0 0 4px rgba(255, 255, 255, 0.4),
-    0 0 10px rgba(180, 220, 255, 0.25),
-    0 0 20px rgba(180, 220, 255, 0.15);
-  animation: glowPulseWhite 6s ease-in-out infinite;
-}
 
 @keyframes glowPulseWhite {
   0%, 100% {
@@ -1362,39 +1098,7 @@ section {
   transform: scale(1.05);
 }
 
-.nav-link {
-  position: relative;
-  color: #333;
-  text-decoration: none;
-  padding: 6px 10px;
-  transition: color 0.3s ease;
-}
 
-.nav-link:hover {
-  color: #007BFF;
-}
-
-/* Tooltip personalizado */
-.nav-link::after {
-  content: attr(data-title);
-  position: absolute;
-  bottom: -28px; /* aparece debajo del enlace */
-  left: 50%;
-  transform: translateX(-50%);
-  background: #007BFF;
-  color: #fff;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  white-space: nowrap;
-}
-
-.nav-link:hover::after {
-  opacity: 1;
-}
  
 
   /* Fondo general */
@@ -1407,19 +1111,6 @@ section {
   /* Encabezado y navegación */
   header, .encabezado, .barra-superior, nav {
     background-color: #000 !important;
-  }
-
-  nav a {
-    color: #d4af37;
-    text-decoration: none;
-    padding: 10px 15px;
-    transition: all 0.3s ease;
-  }
-
-  nav a:hover {
-    color: #000;
-    background-color: #d4af37;
-    border-radius: 6px;
   }
 
   /* Secciones, tarjetas y recuadros */
@@ -2102,18 +1793,6 @@ header {
   border-bottom: 1px solid rgba(255, 215, 0, 0.25); /* detalle premium */
 }
 
-/* Nav normal */
-.barra-superior nav {
-  display: flex;
-  gap: 20px;
-}
-
-/* Social icons horizontal */
-.social-float {
-  display: flex;
-  flex-direction: row;
-  gap: 12px;
-}
 
 /* Iconos */
 .social-float a {
@@ -2150,19 +1829,4 @@ header {
   margin-top: 0 !important;        /* 👈 asegura que no se separe del header */
   position: relative;              /* 👈 evita que se monte sobre el header */
   z-index: 10;
-}
-
-/* Nav horizontal */
-.barra-superior nav {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
-/* Iconos redes */
-.social-float {
-  display: flex;
-  flex-direction: row;
-  gap: 12px;
-  position: relative;  /* 👈 evita que se reposicione accidentalmente */
 }
