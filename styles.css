@@ -101,6 +101,111 @@
 }
 
 
+  /* Encabezado y navegación */
+  header, .encabezado, .barra-superior, nav {
+    background-color: #000 !important;
+  }
+
+  /* Secciones, tarjetas y recuadros */
+  section, .card, .proyecto, .habilidad, .contenedor, .bloque {
+    background-color: #000 !important;
+    border: 1px solid #d4af37 !important;
+    color: #d4af37 !important;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+  }
+
+  /* Títulos */
+  h1, h2, h3, h4, h5, h6 {
+    color: #ffd700 !important;
+  }
+
+  /* Párrafos, listas, enlaces, texto general */
+  p, li, a, strong, em, code {
+    color: #d4af37 !important;
+  }
+
+
+    @media (min-width: 1024px) {
+  html {
+    zoom: 0.9;
+  }
+}
+
+/* ==========================================
+   🟧 Cursor tipo bloque (estilo Ubuntu Terminal)
+   ========================================== */
+
+.terminal-heading i {
+  margin-right: 8px;
+}
+
+
+/* Parpadeo on/off */
+@keyframes blink-block {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ==========================================
+   ⚪ Estilo final tipo terminal realista (blanco puro)
+   ========================================== */
+.terminal-heading {
+  color: #f8f8f8 !important; /* fuerza blanco puro */
+  text-shadow:
+    0 0 4px rgba(255, 255, 255, 0.4),
+    0 0 10px rgba(180, 220, 255, 0.25),
+    0 0 20px rgba(180, 220, 255, 0.15) !important;
+  animation: glowPulseWhite 6s ease-in-out infinite !important;
+  display: inline-flex !important;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Share Tech Mono', monospace;
+  letter-spacing: 1px;
+  text-align: center;
+  border: none !important;
+}
+
+/* ✨ Glow respirante frío */
+@keyframes glowPulseWhite {
+  0%, 100% {
+    text-shadow:
+      0 0 4px rgba(255, 255, 255, 0.4),
+      0 0 10px rgba(180, 220, 255, 0.25),
+      0 0 20px rgba(180, 220, 255, 0.15);
+  }
+  50% {
+    text-shadow:
+      0 0 6px rgba(255, 255, 255, 0.6),
+      0 0 12px rgba(200, 230, 255, 0.3),
+      0 0 24px rgba(200, 230, 255, 0.2);
+  }
+}
+
+/* 🔹 Cursor tipo bloque (Ubuntu terminal realista, pegado al texto) */
+.terminal-heading::after {
+  content: "";
+  display: inline-block;
+  width: 0.58em;
+  height: 1em;
+  background-color: #ffffff !important;
+  animation: blink-block 1.1s steps(1, start) infinite;
+  position: relative;
+  top: 2px;
+  margin-left: -0.18em; /* 👈 más negativo: elimina totalmente el espacio */
+  transform: translateY(1px); /* ajusta verticalmente al baseline */
+  vertical-align: baseline;
+}
+
+
+
+/* 🚫 Ocultar cursor en la sección de contacto (móvil simulado) */
+#contacto .terminal-heading::after {
+  display: none !important;
+}
+
+
 /* ==========================================
    🎯 Colores fijos para líneas de tecnologías
    ========================================== */
@@ -233,16 +338,6 @@ footer a {
   text-align: center;
   width: 100%;
 }
-
-
-
-@media screen and (max-width: 768px) {
-  .banner-header {
-    max-width: 90%; /* Se adapta mejor en móviles, puedes ajustarlo si quieres */
-  }
-}
-
-
 
 
 
@@ -585,15 +680,6 @@ button:hover {
 }
 
 
-
-
-
-  .terminal-heading {
-  font-size: 1.5em;
-  margin-bottom: 15px;
-  color: #00ffcc; /* Estilo tipo terminal */
-}
-
 .certificacion-descripcion {
   margin-bottom: 20px;
   line-height: 1.6;
@@ -623,12 +709,6 @@ button:hover {
   }
 }
 /* Responsive: en móvil apilan verticalmente */
-@media (max-width: 768px) {
-  .grid-habilidades {
-    grid-template-columns: 1fr;
-  }
-}
-/* Responsive: se apilan en móvil */
 @media (max-width: 768px) {
   .grid-habilidades {
     grid-template-columns: 1fr;
@@ -677,25 +757,6 @@ button:hover {
   margin-bottom: 1.5rem; /* separar párrafos */
 }
 
-
-/* ==== BASE Y FONDO OPTIMIZADO ==== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  background: linear-gradient(135deg, #000, #0d0d0d, #1a1a1a);
-  background-size: 400% 400%;
-  animation: bgShift 30s ease-in-out infinite;
-  font-family: 'Poppins', sans-serif;
-  color: #d4af37;
-}
-
 @keyframes bgShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -713,23 +774,6 @@ html, body {
   align-items: center;
 }
 
-.habilidades-icons img {
-  width: 60px;
-  height: auto;
-  transition: transform 0.3s;
-}
-
-.habilidades-icons img:hover {
-  transform: scale(1.2);
-}
-
-
-.grid-habilidades {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
   .card {
     width: 100%;
   }
@@ -745,15 +789,6 @@ html, body {
   transition: none; /* eliminamos cualquier animación */
 }
 
-
-
-@keyframes blink-block {
-  50% { opacity: 0; }
-}
-
-#contacto .terminal-heading::after {
-  display: none !important;
-}
 
 }
 img {
@@ -872,21 +907,6 @@ section#sobre-mi > *:first-child {
 
 
 
-
-.habilidades-icons img {
-  width: 60px;          /* tamaño fijo de los iconos */
-  height: auto;
-  margin: 0.9rem;       /* separación entre ellos */
-  transition: none !important; /* desactiva cualquier transición */
-  transform: none !important;  /* desactiva escalado o rotación */
-  animation: none !important;  /* desactiva animaciones */
-  cursor: default;      /* el cursor no cambia al pasar el mouse */
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 .sobre-mi {
   position: relative;
   display: inline-block;
@@ -914,15 +934,6 @@ section#sobre-mi > *:first-child {
 }
 
 
-.grid-proyectos {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 @media (max-width: 1024px) {
   .grid-proyectos {
     grid-template-columns: repeat(2, 1fr);
@@ -939,11 +950,6 @@ section#sobre-mi > *:first-child {
   margin: 0;
   padding: 0;
 }
-
-
-
-
-
 
 
 @font-face {
@@ -992,19 +998,6 @@ section#sobre-mi > *:first-child {
   width: 100%;
 }
 
-
-
-
-
-
-.grid-habilidades {
-  display: grid;
-  grid-template-columns: 1fr; /* una sola columna */
-  gap: 0;                     /* sin espacio entre cards */
-  padding: 0;
-  margin: 0;
-}
-
 [class*="grid-"] {
   gap: 0px; /* o el valor que prefieras */
 }
@@ -1013,19 +1006,7 @@ section {
   margin: 0;
   padding: 0;
 }
-.sysadmin-badge {
-  display: inline-block;
-  background-color: #1f1f1f;
-  color: rgb(255, 204, 0);
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 0.95rem;
-  padding: 10px 16px;
-  border-radius: 6px;
-  text-decoration: none;
-  box-shadow: 0 0 5px rgb(255, 204, 0);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-  margin-top: 1rem;
-}
+
 
 /* Centrado del contenido dentro de la tarjeta */
 .hoja-de-ruta-card {
@@ -1044,90 +1025,6 @@ section {
   color: rgb(255, 204, 0); /* amarillo encendido */
   box-shadow: 0 0 12px rgb(255, 204, 0), 0 0 24px rgb(255, 204, 0);
   transform: scale(1.05);
-}
-
-
- 
-
-  /* Fondo general */
-  body {
-    background-color: #000 !important;
-    color: #d4af37 !important; /* dorado base */
-    font-family: "Poppins", sans-serif;
-  }
-
-  /* Encabezado y navegación */
-  header, .encabezado, .barra-superior, nav {
-    background-color: #000 !important;
-  }
-
-  /* Secciones, tarjetas y recuadros */
-  section, .card, .proyecto, .habilidad, .contenedor, .bloque {
-    background-color: #000 !important;
-    border: 1px solid #d4af37 !important;
-    color: #d4af37 !important;
-    box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
-  }
-
-  /* Títulos */
-  h1, h2, h3, h4, h5, h6 {
-    color: #ffd700 !important;
-  }
-
-  /* Párrafos, listas, enlaces, texto general */
-  p, li, a, strong, em, code {
-    color: #d4af37 !important;
-  }
-
-  /*  Mantener color original de los spans con color inline */
-  span[style*="color:"] {
-    color: inherit !important;
-  }
-
-  /* Botones */
-  button, .btn, .play-btn {
-    background-color: #000;
-    color: #d4af37;
-    border: 1px solid #d4af37;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-  }
-
-  button:hover, .btn:hover, .play-btn:hover {
-    background-color: #d4af37;
-    color: #000;
-  }
-
-
-
-  /* GitHub badge */
-  .sysadmin-badge {
-    background-color: #24292e !important;
-    color: #fff !important;
-    border: 1px solid #d4af37 !important;
-    transition: all 0.3s ease;
-  }
-
-  .sysadmin-badge:hover {
-    background-color: #d4af37 !important;
-    color: #000 !important;
-  }
-
-    @media (min-width: 1024px) {
-  html {
-    zoom: 0.9;
-  }
-}
-
- 
-
-
-
-/* ✅ Centrado exacto del banner sin alterar el diseño */
-.banner-header {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* ==========================================
@@ -1172,33 +1069,11 @@ section {
   transform: translateX(-50%) translateY(-3px); /* pequeño efecto de flotación */
 }
 
-/* ==========================================
-   ✨ Contraste del menú al pasar el cursor
-   ========================================== */
-nav a {
-  color: #d4af37; /* dorado base */
-  text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  font-weight: bold;
-}
-
-nav a:hover {
-  background-color: #d4af37; /* fondo dorado */
-  color: #000000 !important; /* texto negro para contraste */
-}
 
 
 /* ==========================================
    ⚙️ Tamaño equilibrado para los iconos de herramientas
    ========================================== */
-.habilidades-icons img {
-  height: 28px !important; /* antes 38px, ahora un poco mayor */
-  width: auto !important;
-  margin: 1px;
-  transition: transform 0.2s ease;
-}
 
 .habilidades-icons img:hover {
   transform: scale(1.05); /* efecto muy leve */
@@ -1220,18 +1095,6 @@ nav a:hover {
   margin: 3rem auto;
 }
 
-.phone-container {
-  background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
-  border: 2px solid rgba(212, 175, 55, 0.6); /* borde dorado */
-  border-radius: 40px;
-  padding: 25px 20px;
-  box-shadow:
-    0 0 15px rgba(212, 175, 55, 0.2),
-    inset 0 0 20px rgba(255, 255, 255, 0.05);
-  width: 850px;
-  max-width: 95%;
-  position: relative;
-}
 
 /* 🔸 Cámara y altavoz del "teléfono" */
 .phone-container::before {
@@ -1359,12 +1222,6 @@ nav a:hover {
 }
 
 
-    
-/* 🚫 Quita el cursor tipo terminal solo en la sección de contacto */
-#contacto .terminal-heading::after {
-  display: none !important;
-}
-
  /* ==========================================
    👁️ Fondo dinámico visible (negro → gris metálico)
    ========================================== */
@@ -1380,36 +1237,6 @@ body {
   0%   { background-position: 0% 50%; }
   50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-}
-
-
-
-/* ✨ Glow respirante frío */
-@keyframes glowPulseWhite {
-  0%, 100% {
-    text-shadow:
-      0 0 4px rgba(255, 255, 255, 0.4),
-      0 0 10px rgba(180, 220, 255, 0.25),
-      0 0 20px rgba(180, 220, 255, 0.15);
-  }
-  50% {
-    text-shadow:
-      0 0 6px rgba(255, 255, 255, 0.6),
-      0 0 12px rgba(200, 230, 255, 0.3),
-      0 0 24px rgba(200, 230, 255, 0.2);
-  }
-}
-
-
-
-/* Parpadeo tipo terminal */
-@keyframes blink-block {
-  50% { opacity: 0; }
-}
-
-/* 🚫 Ocultar cursor en la sección de contacto (móvil simulado) */
-#contacto .terminal-heading::after {
-  display: none !important;
 }
 
 
