@@ -1,7 +1,4 @@
-
-
-Colores fijos para líneas de tecnologías
-
+/* Colores fijos para líneas de tecnologías */
 .techline span {
   font-weight: 600;
   letter-spacing: 0.3px;
