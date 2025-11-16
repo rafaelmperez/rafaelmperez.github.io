@@ -1,1619 +1,1636 @@
-.barra-superior {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;   /* menú izq — iconos der */
-  align-items: center;
-  padding: 12px 20px;
-  background-color: #000;
-  border-bottom: 1px solid rgba(255, 215, 0, 0.25);
-  margin-top: 0;
-  position: relative;
-  z-index: 10;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
 
-/* ===== MENU ===== */
-.barra-superior nav {
-  display: flex;
-  gap: 20px;
-}
+  <!-- Seguridad -->
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
 
-.barra-superior nav a {
-  color: #d4af37;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 10px 15px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
+  <!-- Configuración general -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.barra-superior nav a:hover {
-  background-color: #d4af37;
-  color: #000;
-}
+  <!-- SEO -->
+  <meta name="description" content="Portafolio de Rafael M. Pérez, administrador de sistemas en formación y en proceso de especializarme en ciberseguridad. Experiencia en gestión de servidores, seguridad informática y soporte técnico.">
 
-/* ===== ICONOS SOCIALES PREMIUM ===== */
-.social-float {
-  display: flex;
-  gap: 14px;
-}
+  <title>Portafolio | Rafael M. Pérez - Administrador de Sistemas | Seguridad, Bastionado & Respuesta a Incidentes</title>
 
-.social-float a {
-  background-color: #0a0a0a;
-  color: #ffffff;
-  width: 46px;              /* 👈 iconos más grandes */
-  height: 46px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;          /* 👈 tamaño del ícono */
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 215, 0, 0.25);
-}
+  <!-- Versiones alternativas (ES / FR) -->
+  <link rel="alternate" hreflang="es" href="https://rafaelmperez.com/index.html">
+  <link rel="alternate" hreflang="fr" href="https://rafaelmperez.com/fr/index.html">
 
-.social-float a:hover {
-  background-color: #d4af37;
-  color: #000;
-  transform: scale(1.15);
-  box-shadow:
-    0 0 12px rgba(255,215,0,0.4),
-    0 0 24px rgba(255,215,0,0.2);
-}
+  <!-- Icono -->
+  <link rel="icon" href="favicon.png" type="image/x-icon">
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .barra-superior {
-    flex-direction: column;
-    gap: 10px;
-  }
+  <!-- Font Awesome (solo una versión optimizada) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        media="print"
+        onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </noscript>
 
-  .barra-superior nav {
-    justify-content: center;
-  }
-}
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded", () => lucide.createIcons());</script>
 
+  <!-- Google Fonts optimizadas -->
+  <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
+        as="style"
+        onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap">
+  </noscript>
 
-.banner-header {
-  display: block;
-  margin: 0 auto;
-  max-width: 1000px;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  border: 2px solid rgba(255, 215, 0, 0.5);
-  box-shadow:
-    0 0 20px rgba(255, 215, 0, 0.3),
-    0 0 40px rgba(255, 215, 0, 0.1);
-  background-color: #000;
-  transition: box-shadow 0.5s ease, border-color 0.5s ease;
-}
+  <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+        as="style"
+        onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap">
+  </noscript>
 
-.banner-header:hover {
-  box-shadow:
-    0 0 35px rgba(255, 215, 0, 0.4),
-    0 0 60px rgba(255, 215, 0, 0.2);
-  border-color: rgba(255, 215, 0, 0.7);
-}
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="style.css">
 
+  <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rafael M. Pérez - Administrador de Sistemas | Ciberseguridad">
+  <meta property="og:description" content="Portafolio en ciberseguridad, administración de sistemas y proyectos IT.">
+  <meta property="og:image" content="https://rafaelmperez.com/assets/img/vistapreliminar.jpg">
+  <meta property="og:url" content="https://rafaelmperez.com/">
+  <meta property="og:locale" content="es_ES">
 
-/* ==========================================
-   🎯 Colores fijos para líneas de tecnologías
-   ========================================== */
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rafael M. Pérez - Administrador de Sistemas | Ciberseguridad">
+  <meta name="twitter:description" content="Portafolio en ciberseguridad, administración de sistemas y proyectos IT.">
+  <meta name="twitter:image" content="https://rafaelmperez.com/assets/img/vistapreliminar.jpg">
 
-.techline span {
-  font-weight: 600;
-  letter-spacing: 0.3px;
-}
+  <!-- Google Search Console -->
+  <meta name="google-site-verification" content="uumuF7y73hfuDoXFjUW66ETAXtE-WjolU9Pv0aWhCyo">
 
-/* Naranja (Kernel, SSH, Ubuntu, Nmap...) */
-.techline span[style*="#E95420"],
-.techline span[style*="#F46800"],
-.techline span[style*="#FF6F00"],
-.techline span[style*="#FF9800"],
-.techline span[style*="#FFB400"],
-.techline span[style*="#FF0000"] {
-  color: #E95420 !important;
-}
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1T24E1NDR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-J1T24E1NDR");
+  </script>
 
-/* Azul (PAM, Python, SSLyze, Wireshark, Fail2ban, etc.) */
-.techline span[style*="#007BFF"],
-.techline span[style*="#3776AB"] {
-  color: #007BFF !important;
-}
+</head>
 
-/* Verde (Auditd, UFW, Node Exporter, OAuth, ffmpeg, etc.) */
-.techline span[style*="#28A745"],
-.techline span[style*="#00A67E"],
-.techline span[style*="#20c997"] {
-  color: #28A745 !important;
-}
+<body>
 
-/* Gris / Plata (Systemd, Suricata, CLI, VirtualBox, etc.) */
-.techline span[style*="#6C757D"],
-.techline span[style*="#868E96"] {
-  color: #B0B0B0 !important;
-}
+  <!-- narración principal -->
+<audio id="narracion" src="https://rafaelmperez.com/sounds/portafolioplay.aac" preload="auto"></audio>
+<!-- sonido corto del menú -->
+<audio id="menu-sound" src="https://rafaelmperez.com/sounds/clip.aac" preload="auto"></audio>
 
-/* Morado (USBGuard, AIDE, JSON, Gemma, etc.) */
-.techline span[style*="#6f42c1"],
-.techline span[style*="#6F42C1"] {
-  color: #B266FF !important;
-}
+  <!-- Contenedor del traductor (necesario para Google) -->
+  <div id="google_translate_element" style="display: none;"></div>
 
-/* Naranja (Cloudflare, IA Local, etc.) */
-.techline span[style*="#17A2B8"],
-.techline span[style*="#F38020"],
-.techline span[style*="#FF9800"],
-.techline span[style*="#FFA500"] {
-  color: #F38020 !important;
-}
+  <!-- Botón para traducir -->
+  <div class="language-switcher">
+    <a href="#" id="translate-fr">
+      <img src="https://rafaelmperez.com/frflags.jpg" alt="Drapeau de la France" class="flag">
+      Français
+    </a>
+  </div>
 
+  <!-- Contenedor para partículas -->
+  <div id="particles-bg"></div>
 
-/* Amarillo (YAML, Markdown, OWASP, etc.) */
-.techline span[style*="#F0DB4F"],
-.techline span[style*="#FFD700"] {
-  color: #FFD700 !important;
-}
+  <script>
+    // Sanitizar entradas
+    function sanitizeInput(input) {
+      return input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
 
-/* Rojo (Kali Linux, Burp Suite) */
-.techline span[style*="#DC3545"],
-.techline span[style*="#D44638"] {
-  color: #DC3545 !important;
-}
+    // Partículas animadas
+    document.addEventListener("DOMContentLoaded", () => {
+      const particlesContainer = document.getElementById("particles-bg");
+      const numParticles = window.innerWidth < 768 ? 10 : 20;
 
-/* Marrón (Pandoc, tonos tierra) */
-.techline span[style*="#795548"] {
-  color: #A66A4C !important;
-}
+      for (let i = 0; i < numParticles; i++) {
+        const p = document.createElement("div");
+        p.classList.add("particle");
+
+        p.style.left = Math.random() * 100 + "vw";
+        p.style.top = Math.random() * 100 + "vh";
+
+        p.style.width = "6px";
+        p.style.height = "6px";
+        p.style.borderRadius = "50%";
+        p.style.position = "absolute";
+        p.style.background = "rgba(255, 215, 0, 1)";
+        p.style.boxShadow = "0 0 14px rgba(255, 215, 0, 1)";
+
+        // Movimiento suave
+        const move = () => {
+          const newX = Math.random() * 100 + "vw";
+          const newY = Math.random() * 100 + "vh";
+          const duration = (Math.random() * 8 + 4) * 1000;
+
+          p.animate(
+            [
+              { left: p.style.left, top: p.style.top },
+              { left: newX, top: newY }
+            ],
+            {
+              duration: duration,
+              fill: "forwards",
+              easing: "ease-in-out"
+            }
+          );
+
+          p.style.left = newX;
+          p.style.top = newY;
+
+          setTimeout(move, duration);
+        };
+
+        move();
+        particlesContainer.appendChild(p);
+      }
+    });
 
 
+      const narracion = document.getElementById("narracion");
+  const playBtn = document.getElementById("playPauseBtn");
+  const menuSound = document.getElementById("menu-sound");
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-}
+  // Botón Play/Pause de la narración
+  playBtn.addEventListener("click", () => {
+    if (narracion.paused) {
+      narracion.play();
+      playBtn.textContent = "⏸";
+    } else {
+      narracion.pause();
+      playBtn.textContent = "▶";
+    }
+  });
 
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-@media (max-width: 768px) {
-  .desktop-only {
-    display: none;
-  }
-}
+  narracion.addEventListener("ended", () => {
+    playBtn.textContent = "▶";
+  });
 
-
-  /* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* GLOBAL */
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-footer {
-  width: 100%;          /* 100% del ancho de la ventana */
-  margin: 0;             /* quita márgenes que lo puedan achicar */
-  padding: 1rem;
-  background: #000;      /* negro */
-  color: rgb(255,204, 0);
-  font-size: 0.9rem;
-  text-align: center;
-  box-sizing: border-box;
-}
-footer a {
-  color: rgb(255,204, 0);
-  margin: 0 0.5rem;
-  text-decoration: none;
-}
-
-/* ==== CENTRADO Y ESTILO DEL BANNER PRINCIPAL ==== */
-.header-content {
-  display: flex;
-  justify-content: center;  /* centra horizontalmente */
-  align-items: center;      /* centra verticalmente */
-  flex-direction: column;   /* apila elementos si hay más dentro */
-  text-align: center;
-  width: 100%;
-}
+  // Reproducir sonido al pasar por los enlaces del menú
+  const enlaces = document.querySelectorAll("nav a, .play-btn");
+  enlaces.forEach(enlace => {
+    enlace.addEventListener("mouseenter", () => {
+      // clona el sonido para que suene cada vez aunque se solape
+      const sonido = menuSound.cloneNode(true);
+      sonido.play();
+    });
+  });
 
 
+  <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function() {
+    var script = document.createElement("script");
+    script.src = "https://cdn.credly.com/assets/utilities/embed.js";
+    script.type = "text/javascript";
+    document.body.appendChild(script);
+  });
+  </script>
 
-@media screen and (max-width: 768px) {
-  .banner-header {
-    max-width: 90%; /* Se adapta mejor en móviles, puedes ajustarlo si quieres */
-  }
-}
+ <header class="encabezado">
+  <div class="header-content" style="text-align: center;">
+    <img 
+      src="https://rafaelmperez.com/assets/img/bannerlinkedin.jpeg"
+      alt="Banner principal"
+      class="banner-header"
+      width="1000"
+      loading="eager"
+      fetchpriority="high">
+  </div>
+</header>
+
+<!-- 🔥 BARRA SUPERIOR DEBAJO DEL HEADER -->
+<div class="barra-superior">
+
+  <nav>
+    <a href="#sobre-mi" class="nav-link">Sobre mí</a>
+    <a href="#habilidades" class="nav-link">Habilidades</a>
+    <a href="#proyectos" class="nav-link">Proyectos</a>
+    <a href="#scripts" class="nav-link">Scripts</a>
+    <a href="#certificaciones" class="nav-link">Certificaciones</a>
+    <a href="#objetivos" class="nav-link">CV</a>
+    <a href="#contacto" class="nav-link">Contáctame</a>
+  </nav>
+
+  <div class="social-float">
+    <a href="https://www.linkedin.com/in/rafaelmperez/" target="_blank">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="https://github.com/Rafaelmperez" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://upgrademe.blog/" target="_blank">
+      <i class="fab fa-blogger-b"></i>
+    </a>
+  </div>
+
+</div>
+
+
+  <!-- Script para activar la traducción -->
+  <script type="text/javascript">
+    // Inicializa el traductor de Google
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'fr,en',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+
+    // Cargar el script de Google Translate
+    const gtScript = document.createElement('script');
+    gtScript.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    document.head.appendChild(gtScript);
+
+    // Cambiar idioma usando la cookie de Google Translate
+    function translateTo(lang) {
+      const domain = window.location.hostname.includes("github.io")
+        ? "github.io"
+        : window.location.hostname;
+      document.cookie = `googtrans=/es/${lang};domain=.${domain};path=/`;
+      location.reload();
+    }
+
+    // Evento de clic en el botón
+    document.addEventListener("DOMContentLoaded", () => {
+      const frBtn = document.getElementById("translate-fr");
+      frBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        translateTo("fr");
+      });
+    });
+  </script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+  <!-- Aquí va el script, justo antes de cerrar body -->
+  <script src="script.js"></script>
+</body>
+</html>
+
+ 
+    </a>
+  </div>
+</div>
+
+<section id="sobre-mi">
+  <div class="card">
+    <h2 class="terminal-heading">
+      <i class="fas fa-user-shield"></i> ~/sobre-mi
+    </h2>
+
+    
+
+    <div class="imagen-sobre-mi">
+   <img 
+  src="https://rafaelmperez.com/assets/img/sobremi2.jpg" 
+  alt="Foto de Rafael M. Pérez" 
+  fetchpriority="high">
+    </div>
+
+    
+
+   <div class="texto-sobre-mi">
+  <p>
+<p>
+  Hola, soy <strong>Rafael M. Pérez</strong>, estudiante de <strong>ASIR</strong> con especialización en 
+  <strong>ciberseguridad práctica</strong> y <strong>administración de sistemas seguros</strong>. 
+  Mi formación está respaldada por certificaciones de <strong>Cisco</strong> 
+  (CCST Cybersecurity, CCST Networking, Ethical Hacker) y el 
+  <strong>Google Cybersecurity Certificate</strong>, que avalan mis competencias en IT.
+</p>
+
+<p>
+  Me dedico a <strong>endurecer sistemas</strong>, 
+  <strong>optimizar servidores Linux y Windows Server</strong> 
+  y <strong>prevenir vulnerabilidades</strong> aplicando estándares internacionales como 
+  <strong>OWASP</strong>, <strong>NIST</strong> y <strong>CIS Benchmarks</strong>. 
+  Además, hablo <strong>francés con fluidez</strong>, lo que me permite adaptarme en 
+  <strong>equipos internacionales.</strong>
+</p>
+
+<p>
+  En cada proyecto busco <strong>automatizar procesos y reforzar la seguridad sin comprometer la operatividad</strong>. 
+  Documentar, medir y validar resultados es parte esencial de mi metodología.  
+  Te invito a descubrir mis trabajos en este <strong>portafolio</strong> y explorar mis scripts en <strong>GitHub</strong>.  
+  <strong>Contáctame</strong> si compartes la visión de una tecnología más <strong>segura y confiable</strong>.
+</p>
+</div>
+
+
+</a><a href="https://rafaelmperez.com/docs/CARTA_PRESENTACION.pdf" 
+   target="_blank" 
+   class="sysadmin-badge"
+   style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold; border:1px solid #d4af37; transition:all 0.3s ease;">
+  <i class="fa-regular fa-file-pdf" style="color:#e63946; margin-right:6px;"></i>
+  Carta de presentación PDF
+</a>
 
 
 
 
 
-/* Texto debajo del banner */
-.banner-text {
-  margin-top: 1px;
-  font-size: 1.4em;
-  font-weight: bold;
-  color: #333;
-}
+    </div>
+  </div>
+</section>
 
-/* 📱 Responsive para pantallas pequeñas */
-@media screen and (max-width: 768px) {
-  .banner-header {
-    max-width: 70%; /* Se adapta mejor en móviles */
-  }
 
-  .banner-text {
-    font-size: 1.1em;
-    padding: 0 10px;
-  }
-}
 
-/* 🔹 Espacio entre el nav y la sección Sobre Mí */
-#sobre-mi {
-  margin-top: 100; /* ajusta este valor a tu gusto */
-  padding-top: 0 !important;     /* opcional, para que no haya padding extra */
-}
 
+
+   <section id="habilidades">
+  <!-- Card envolvente -->
+  <div class="card">
+
+    <!-- Terminal heading dentro de la card -->
+    <h2 class="terminal-heading">
+      <i class="fas fa-bolt"></i> ~/habilidades.sh
+    </h2>
+
+    <!-- Grid de habilidades con dos cards internas -->
+    <div class="grid-habilidades">
+
+<!-- Card 1: Lista de habilidades -->
+<div class="card">
+  <h3 style="font-size: 1em;"><i class="fas fa-tools"></i> Competencias técnicas</h3>
+  <ul style="list-style:none; padding:0;">
+    <li><i class="fas fa-server"></i> Administración de sistemas Linux y Windows</li>
+    <li><i class="fas fa-shield-alt"></i> Bastionado de sistemas, servidores y servicios web</li>
+    <li><i class="fas fa-bug"></i> Respuesta a incidentes y monitoreo activo</li>
+    <li><i class="fas fa-terminal"></i> Automatización con Bash, Ansible y Python</li>
+    <li><i class="fas fa-search"></i> Auditoría técnica con Nikto, Nmap, OWASP ZAP... </li>
+    <li><i class="fas fa-cloud"></i> Infraestructura en la nube: gestión básica en AWS y Azure</li>
+    <li><i class="fas fa-laptop-code"></i> Maquetación web responsive y optimización SEO</li>
+    <li><i class="fas fa-language"></i> Idiomas: Francés C1</li>
+  </ul>
+</div>
+
+
+<!-- CARD: Entornos & Herramientas (Badges estilo GitHub) -->
+<div class="card">
+  <h3 style="font-size: 1em;">
+    <i class="fas fa-tools"></i> Entornos & Herramientas
+  </h3>
+
+<div class="habilidades-icons">
+
+    <!-- Sistemas Operativos -->
+    <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Ubuntu" title="Ubuntu" />
+    <img src="https://img.shields.io/badge/Debian-A81D34?style=for-the-badge&logo=debian&logoColor=white" alt="Debian / Kali" title="Debian / Kali Linux" />
+    <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows" title="Windows Server / Windows 10" />
+
+    <!-- Lenguajes y scripting -->
+    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" title="Python" />
+    <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash" title="Bash" />
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" title="JavaScript" />
+
+    <!-- Automatización / Infraestructura -->
+    <img src="https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white" alt="Ansible" title="Ansible" />
+    <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" title="Docker" />
+    <img src="https://img.shields.io/badge/Vagrant-1563EA?style=for-the-badge&logo=vagrant&logoColor=white" alt="Vagrant" title="Vagrant" />
+
+    <!-- Herramientas de seguridad -->
+    <img src="https://img.shields.io/badge/Nmap-2E8B57?style=for-the-badge&logo=nmap&logoColor=white" alt="Nmap" title="Nmap" />
+    <img src="https://img.shields.io/badge/Metasploit-512BD4?style=for-the-badge&logo=metasploit&logoColor=white" alt="Metasploit" title="Metasploit Framework" />
+    <img src="https://img.shields.io/badge/Wireshark-005C9C?style=for-the-badge&logo=wireshark&logoColor=white" alt="Wireshark" title="Wireshark" />
+    <img src="https://img.shields.io/badge/Burp%20Suite-F78C6B?style=for-the-badge&logo=burpsuite&logoColor=white" alt="Burp Suite" title="Burp Suite" />
+    <img src="https://img.shields.io/badge/OWASP%20ZAP-FF7B00?style=for-the-badge&logo=owasp&logoColor=white" alt="OWASP ZAP" title="OWASP ZAP" />
+
+    <!-- Observabilidad / Monitoreo -->
+    <img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white" alt="Grafana" title="Grafana" />
+    <img src="https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white" alt="Prometheus" title="Prometheus / Node Exporter" />
+
+    <!-- Control de versiones y desarrollo -->
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" title="GitHub" />
+    <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" title="Git" />
+    <img src="https://img.shields.io/badge/VS%20Code-0078D7?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Visual Studio Code" title="Visual Studio Code" />
+
+    <!-- Cloud & Virtualización -->
+    <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS" title="AWS" />
+    <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" alt="Azure" title="Azure" />
+    <img src="https://img.shields.io/badge/VirtualBox-1A73E8?style=for-the-badge&logo=virtualbox&logoColor=white" alt="VirtualBox" title="VirtualBox" />
+
+    <!-- Bases de datos -->
+    <img src="https://img.shields.io/badge/MySQL-00618A?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" title="MySQL" />
+    <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" title="SQLite" />
+
+    <!-- Herramientas y Entornos Clave -->
+<img src="https://img.shields.io/badge/Proxmox-E57000?style=for-the-badge&logo=proxmox&logoColor=white" alt="Proxmox" title="Proxmox VE" />
+<img src="https://img.shields.io/badge/Terraform-623CE4?style=for-the-badge&logo=terraform&logoColor=white" alt="Terraform" title="Terraform" />
+<img src="https://img.shields.io/badge/Fail2Ban-000000?style=for-the-badge&logo=linux&logoColor=white" alt="Fail2Ban" title="Fail2Ban" />
+<img src="https://img.shields.io/badge/Lynis-0078D7?style=for-the-badge&logo=linux&logoColor=white" alt="Lynis" title="Lynis" />
+<img src="https://img.shields.io/badge/Zabbix-DC382D?style=for-the-badge&logo=zabbix&logoColor=white" alt="Zabbix" title="Zabbix" />
+<img src="https://img.shields.io/badge/OpenVAS-78C850?style=for-the-badge&logo=openvas&logoColor=white" alt="OpenVAS" title="OpenVAS / Greenbone" />
+
+
+  </div>
+</div>
+
+<!-- CSS sugerido (pega en tu CSS global o dentro de <style>) -->
+<style>
 
 
 </style>
 
 
-
-</head>
-
-  <style>
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;500&display=swap');
-
-
-header {
-  position: relative;
-  background: #000;
-  color: rgb(177, 135, 0);
-  text-align: center;
-  padding: 7.1rem 1rem;
-  overflow: hidden;
-}
-
-
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-    }
-
-    header p {
-      margin-top: 1rem;
-      font-size: 1rem;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 300;
-      color: #b6b6b6	;
-    }
-
-    .matrix {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: repeating-linear-gradient(
-        to bottom,
-        rgba(255,255,255,0.02) 0,
-        rgba(255,255,255,0.02) 2px,
-        transparent 2px,
-        transparent 4px
-      );
-      animation: fall 5s linear infinite;
-      z-index: 0;
-    }
-
-    @keyframes fall {
-      from { background-position: 0 -200px; }
-      to { background-position: 0 0; }
-    }
-
-    header h1, header p {
-      position: relative;
-      z-index: 1;
-    }
-
-
-@media (max-width: 768px) {
-  header {
-    padding: 4rem 1rem; /* menos alto en móviles */
-  }
-
-  header nav {
-    flex-direction: column;
-    gap: 1rem;
-  }
-}
-
-
-section {
-  max-width: none;
-  margin: 1rem auto !important;
-  padding: 1rem 1rem;
-  text-align: center;
-
-
-
-h2 {
-  font-size: 2.2rem;
-  color: #463e3e;
-}
-
-
-
-h1.titulo-principal {
-  margin-top: 4rem; /* Añade espacio arriba del título */
-  margin-bottom: 2rem;
-  color: rgb(255,204, 0) !important;
-  font-size: 2.5rem;
-}
-
-
-    @keyframes pulse {
-      0% { transform: scale(1); box-shadow: 0 0 20px rgba(255,255,255,0.3); }
-      50% { transform: scale(1.05); box-shadow: 0 0 40px rgba(255,255,255,0.6); }
-      100% { transform: scale(1); box-shadow: 0 0 20px rgba(255,255,255,0.3); }
-    }
-
-   .construction {
-  display: flex;
-  flex-direction: column;
-  align-items: center;   /* Centra horizontal */
-  justify-content: center; /* Centra vertical */
-  text-align: center;
-  min-height: 40vh;
-}
-* {
-  box-sizing: border-box;
-}
-.certificacion-descripcion {
-  color: #000000; /* negro */
-}
-
-
-    .gear {
-      width: 80px;
-      height: 80px;
-      border: 8px solid #bfa14a;
-      border-radius: 50%;
-      border-top: 8px solid transparent;
-      border-right: 8px solid transparent;
-      animation: spin 2s linear infinite;
-    }
-
-    .construccion h2 {
-      color: #bfa14a;
-      margin-top: 1rem;
-    }
-
-    .construccion p {
-      color: #100e09;
-    }
-
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-  
-  @font-face {
-  font-family: 'Font Awesome 5 Brands';
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-brands-400.woff2') format('woff2');
-  font-display: swap;
-}
-
-
-    h2 {
-  font-family: 'Fira Code', monospace;
-  font-size: 1.7rem; /* ligeramente más grande */
-  color: #000000;
-  margin-bottom: 1rem;
-  text-shadow: none; /* sin difuminado */
-}
-
-h3 {
-  font-family: 'VT323', monospace;
-  font-size: 1.8rem;
-  color: #000000;
-}
-
-
-
-  @media (max-width: 768px) {
-      header h1 { font-size: 2.2rem; }
-      header p { font-size: 1rem; }
-      .social-float { flex-direction: row; bottom: 15px; right: 15px; }
-    }
-
-  /* 👇 Nuevo espacio entre formulario y construcción */
-  .contact-form {
-    margin-bottom: 110px; /* espacio debajo del formulario */
-  }
-
-  #construction {
-    margin-top: 110px; /* espacio arriba de la sección de construcción */
-  }
-
-  .form-group label {
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #444;
-  }
-
-  .form-group input,
-  .form-group textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
-  }
-
-  .form-group textarea {
-    resize: vertical;
-  }
-
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 2rem;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.contact-form h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: #333;
-}
-
-.form-row {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.form-group {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-}
-
-label {
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-  color: #555;
-}
-
-input, textarea {
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  resize: vertical;
-}
-
-textarea {
-  min-height: 150px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-button {
-  background-color: #000305;
-  color: rgb(255,204, 0);
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #005fa3;
-}
-
-  button:hover {
-    background: #005fcc;
-  }
-
-
-  .encabezado {
-  padding-bottom: 0;
-}
-
-.header-content p {
-  margin-top: 20px; /* o menos, según lo que se vea mejor */
-}
-
-.barra-superior {
-  margin-top: 0px; /* o incluso 0 si quieres que esté pegado */
-}
-
-.header-content p {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-}
-
-.terminal-title {
-  font-family: 'VT323', monospace;
-  font-size: 5rem;
-  color: #57605c;
-  margin-bottom: 0.5rem;
-}
-.proyecto-img {
-  width: 100%;         /* Ocupa todo el ancho de la tarjeta */
-  max-height: 200px;   /* Ajusta altura según prefieras */
-  object-fit: cover;   /* Recorta la imagen si es necesario */
-  border-radius: 8px;  /* Bordes redondeados */
-  margin-bottom: 15px; /* Separación con el título */
-  display: block;
-}
-
-#proyectos {
-  padding: 40px;
-  background-color: #fdfdfd;
-  border-radius: 12px;
-  max-width: 1600px;  /* Más ancho que antes */
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-
-
-
-
-  .terminal-heading {
-  font-size: 1.5em;
-  margin-bottom: 15px;
-  color: #00ffcc; /* Estilo tipo terminal */
-}
-
-.certificacion-descripcion {
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.card {
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-  width: 100%;
-  max-width: 1000px;
-  margin: 20px auto;
-  box-sizing: border-box;
-}
-
-
-/* Estilos específicos para pantallas pequeñas */
-@media (max-width: 480px) {
-  .form-row {
-    display: block;       /* Apila los campos verticalmente */
-  }
-  @media (max-width: 768px) {
-  .grid-proyectos {
-    grid-template-columns: 1fr;
-  }
-}
-/* Responsive: en móvil apilan verticalmente */
-@media (max-width: 768px) {
-  .grid-habilidades {
-    grid-template-columns: 1fr;
-  }
-}
-/* Responsive: se apilan en móvil */
-@media (max-width: 768px) {
-  .grid-habilidades {
-    grid-template-columns: 1fr;
-  }
-}
-
-  .form-group {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-
-  input, textarea {
-    width: 100%;
-    font-size: 16px;
-  }
-
-  button {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-  }
-}
-
-
-
-
-.card:not(#sobre-mi .card):not(#habilidades .card):not(#certificaciones .card):not(#cursos .card):not(#seguridad .card):not(#contacto .card):hover (#CV .card){
-  transform: translateY(-10px);
-}
-
-
-/* 🔹 Activar el movimiento SOLO en las tarjetas de la sección "Proyectos" */
-#proyectos .card:hover {
-  transform: none; 
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Efecto de "elevación" para destacarse */
-}
-.card h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #222;
-}
-.card p { 
-  font-size: 16px;  /* más grande y fácil de leer */
-  color: #000000;
-  line-height: 1.8; /* más espacio entre líneas */
-  margin-bottom: 1.5rem; /* separar párrafos */
-}
-
-
-/* ==== BASE Y FONDO OPTIMIZADO ==== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  background: linear-gradient(135deg, #000, #0d0d0d, #1a1a1a);
-  background-size: 400% 400%;
-  animation: bgShift 30s ease-in-out infinite;
-  font-family: 'Poppins', sans-serif;
-  color: #d4af37;
-}
-
-@keyframes bgShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-
-
-
-.habilidades-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
-}
-
-.habilidades-icons img {
-  width: 60px;
-  height: auto;
-  transition: transform 0.3s;
-}
-
-.habilidades-icons img:hover {
-  transform: scale(1.2);
-}
-
-
-.grid-habilidades {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-  .card {
-    width: 100%;
-  }
-}
-
-
-/* Cards: sin movimiento al pasar el cursor */
-.grid-habilidades .card {
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: none; /* eliminamos cualquier animación */
-}
-
-
-
-@keyframes blink-block {
-  50% { opacity: 0; }
-}
-
-#contacto .terminal-heading::after {
-  display: none !important;
-}
-
-}
-img {
-  max-width: 100%;
-  height: auto; 
-  display: block;
-}
-
-a[href^="mailto:"] {
-  font-size: 1.1rem; /* Ajusta el tamaño según lo que necesites */
-  font-weight: bold; /* Opcional: para que se vea más destacado */
-  color: #000000;     /* Opcional: para que combine con tu estilo */
-}
-/* ==========================================
-   🎯 Ajustes visuales para la sección "Sobre mí"
-   ========================================== */
-#sobre-mi {
-  margin-bottom: 40px; /* separa del resto de secciones */
-}
-
-#sobre-mi .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px; /* reduce el espacio vertical entre elementos */
-  padding: 20px;
-
-  /* Quita el marco del bloque Sobre mí */
-  background: none;
-  border: none;
-  box-shadow: none;
-}
-
-/* Quita márgenes innecesarios superiores */
-section#sobre-mi {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-section#sobre-mi > *:first-child {
-  margin-top: 0 !important;
-}
-
-/* Imagen redonda, centrada, con borde y brillo dorado */
-.imagen-sobre-mi {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 15px auto 20px auto;
-  border: 2px solid rgba(255, 215, 0, 0.6); /* borde dorado */
-  box-shadow: 
-    0 0 10px rgba(255, 215, 0, 0.4),  /* halo dorado */
-    0 0 25px rgba(255, 215, 0, 0.2);  /* brillo suave */
-  transition: box-shadow 0.3s ease;
-}
-
-
-/* Imagen dentro del contenedor circular */
-.imagen-sobre-mi img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-/* Texto ajustado */
-.texto-sobre-mi {
-  max-width: 800px;
-  line-height: 1.6;
-  margin: 0 auto;
-}
-
-.texto-sobre-mi p {
-  margin-bottom: 10px;
-}
-
-/* Botón PDF más cerca del texto */
-#sobre-mi .sysadmin-badge {
-  margin-top: 10px;
-}
-
-
-  
-#certificaciones .card:hover {
-  transform: none !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
-}
-#contacto .card {
-  max-width: 400px;       /* Ajusta según lo que consideres "más chica" */
-  width: 100%;
-  margin: 0 auto;         /* Centra la tarjeta */
-  padding: 1rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
-  transition: none !important;
-  transform: none !important;
-  box-sizing: border-box;
-}
-
-#contacto .card:hover {
-  transition: none !important;
-  transform: none !important;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important; /* misma sombra en hover */
-}
-
-#cv .card {
-  max-width: 300px; /* Ajusta este valor según el ancho deseado */
-  margin: 0 auto; /* Centra la tarjeta horizontalmente */
-  padding: 1.5rem; /* Ajusta el padding para que sea más compacto */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Mantiene la sombra consistente */
-  border-radius: 8px; /* Mantiene los bordes redondeados */
-}
-
-
-
-
-.habilidades-icons img {
-  width: 60px;          /* tamaño fijo de los iconos */
-  height: auto;
-  margin: 0.9rem;       /* separación entre ellos */
-  transition: none !important; /* desactiva cualquier transición */
-  transform: none !important;  /* desactiva escalado o rotación */
-  animation: none !important;  /* desactiva animaciones */
-  cursor: default;      /* el cursor no cambia al pasar el mouse */
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.sobre-mi {
-  position: relative;
-  display: inline-block;
-}
-
-.foto {
-  width: 200px;
-  border-radius: 50%;
-}
-
-.mensaje {
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #222;
-  color: #fff;
-  padding: 8px 12px;
-  border-radius: 12px;
-  font-family: sans-serif;
-  font-size: 14px;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  pointer-events: none;
-}
-
-
-.grid-proyectos {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-@media (max-width: 1024px) {
-  .grid-proyectos {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 640px) {
-  .grid-proyectos {
-    grid-template-columns: 1fr;
-  }
-}
-
-.contenedor-principal {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-
-
-
-
-
-
-@font-face {
-  font-family: 'Font Awesome 5 Brands';
-  font-style: normal;
-  font-weight: 400;
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-brands-400.woff2') format('woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Font Awesome 5 Free';
-  font-style: normal;
-  font-weight: 900;
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-solid-900.woff2') format('woff2');
-  font-display: swap;
-}
-
-.grid-proyectos {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  box-sizing: border-box;
-}
-
-@media (max-width: 1024px) {
-  .grid-proyectos {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .grid-proyectos {
-    grid-template-columns: 1fr;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-}
-
-.card-proyecto {
-  width: 100%;
-}
-
-
-
-
-
-
-.grid-habilidades {
-  display: grid;
-  grid-template-columns: 1fr; /* una sola columna */
-  gap: 0;                     /* sin espacio entre cards */
-  padding: 0;
-  margin: 0;
-}
-
-[class*="grid-"] {
-  gap: 0px; /* o el valor que prefieras */
-}
-
-section {
-  margin: 0;
-  padding: 0;
-}
-.sysadmin-badge {
-  display: inline-block;
-  background-color: #1f1f1f;
-  color: rgb(255, 204, 0);
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 0.95rem;
-  padding: 10px 16px;
-  border-radius: 6px;
-  text-decoration: none;
-  box-shadow: 0 0 5px rgb(255, 204, 0);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-  margin-top: 1rem;
-}
-
-/* Centrado del contenido dentro de la tarjeta */
-.hoja-de-ruta-card {
-  text-align: center;
-}
-
-
-
-
-.sysadmin-badge:hover {
-  background-color: #444;
-}
-
-
-.sysadmin-badge:hover {
-  color: rgb(255, 204, 0); /* amarillo encendido */
-  box-shadow: 0 0 12px rgb(255, 204, 0), 0 0 24px rgb(255, 204, 0);
-  transform: scale(1.05);
-}
-
-
- 
-
-  /* Fondo general */
-  body {
-    background-color: #000 !important;
-    color: #d4af37 !important; /* dorado base */
-    font-family: "Poppins", sans-serif;
-  }
-
-  /* Encabezado y navegación */
-  header, .encabezado, .barra-superior, nav {
-    background-color: #000 !important;
-  }
-
-  /* Secciones, tarjetas y recuadros */
-  section, .card, .proyecto, .habilidad, .contenedor, .bloque {
-    background-color: #000 !important;
-    border: 1px solid #d4af37 !important;
-    color: #d4af37 !important;
-    box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
-  }
-
-  /* Títulos */
-  h1, h2, h3, h4, h5, h6 {
-    color: #ffd700 !important;
-  }
-
-  /* Párrafos, listas, enlaces, texto general */
-  p, li, a, strong, em, code {
-    color: #d4af37 !important;
-  }
-
-  /*  Mantener color original de los spans con color inline */
-  span[style*="color:"] {
-    color: inherit !important;
-  }
-
-  /* Botones */
-  button, .btn, .play-btn {
-    background-color: #000;
-    color: #d4af37;
-    border: 1px solid #d4af37;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-  }
-
-  button:hover, .btn:hover, .play-btn:hover {
-    background-color: #d4af37;
-    color: #000;
-  }
-
-
-
-  /* GitHub badge */
-  .sysadmin-badge {
-    background-color: #24292e !important;
-    color: #fff !important;
-    border: 1px solid #d4af37 !important;
-    transition: all 0.3s ease;
-  }
-
-  .sysadmin-badge:hover {
-    background-color: #d4af37 !important;
-    color: #000 !important;
-  }
-
-    @media (min-width: 1024px) {
-  html {
-    zoom: 0.9;
-  }
-}
-
- 
-
-
-
-/* ✅ Centrado exacto del banner sin alterar el diseño */
-.banner-header {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ==========================================
-   ✨ Tooltip dorado integrado en el menú
-   ========================================== */
-.nav-link {
-  position: relative;
-  color: #d4af37; /* dorado base */
-  text-decoration: none;
-  padding: 6px 10px;
-  transition: color 0.3s ease;
-  font-weight: bold;
-}
-
-.nav-link:hover {
-  color: #fff; /* blanco suave al pasar el cursor */
-}
-
-/* Tooltip personalizado estilo hacker-tech */
-.nav-link::after {
-  content: attr(data-title);
-  position: absolute;
-  bottom: -30px; /* aparece justo debajo del enlace */
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.9); /* fondo negro translúcido */
-  color: #ffd700; /* texto dorado brillante */
-  padding: 6px 10px;
-  border: 1px solid rgba(255, 215, 0, 0.4);
-  border-radius: 6px;
-  font-size: 0.8rem;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  white-space: nowrap;
-  text-shadow: 0 0 6px rgba(255, 215, 0, 0.4);
-  box-shadow: 0 0 8px rgba(255, 215, 0, 0.25);
-}
-
-.nav-link:hover::after {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-3px); /* pequeño efecto de flotación */
-}
-
-/* ==========================================
-   ✨ Contraste del menú al pasar el cursor
-   ========================================== */
-nav a {
-  color: #d4af37; /* dorado base */
-  text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  font-weight: bold;
-}
-
-nav a:hover {
-  background-color: #d4af37; /* fondo dorado */
-  color: #000000 !important; /* texto negro para contraste */
-}
-
-
-/* ==========================================
-   ⚙️ Tamaño equilibrado para los iconos de herramientas
-   ========================================== */
-.habilidades-icons img {
-  height: 28px !important; /* antes 38px, ahora un poco mayor */
-  width: auto !important;
-  margin: 1px;
-  transition: transform 0.2s ease;
-}
-
-.habilidades-icons img:hover {
-  transform: scale(1.05); /* efecto muy leve */
-}
-
-.habilidades-icons {
-  row-gap: 1px; /* espacio suave entre filas */
-}
-
-
-
-    /* ==========================================
-   📱 Estilo teléfono para la sección de contacto
-   ========================================== */
-#contacto {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 3rem auto;
-}
-
-.phone-container {
-  background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
-  border: 2px solid rgba(212, 175, 55, 0.6); /* borde dorado */
-  border-radius: 40px;
-  padding: 25px 20px;
-  box-shadow:
-    0 0 15px rgba(212, 175, 55, 0.2),
-    inset 0 0 20px rgba(255, 255, 255, 0.05);
-  width: 850px;
-  max-width: 95%;
-  position: relative;
-}
-
-/* 🔸 Cámara y altavoz del "teléfono" */
-.phone-container::before {
-  content: "";
-  position: absolute;
-  top: 14px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 6px;
-  background: #222;
-  border-radius: 3px;
-  box-shadow: inset 0 0 3px rgba(255,255,255,0.1);
-}
-
-/* "Pantalla" (el formulario) */
-.phone-screen {
-  background: #000;
-  border-radius: 25px;
-  padding: 20px;
-  color: #ffd700;
-  box-shadow: inset 0 0 15px rgba(255, 215, 0, 0.1);
-  font-family: 'Poppins', sans-serif;
-}
-
-.phone-screen label {
-  color: #ffd700;
-}
-
-.phone-screen input,
-.phone-screen textarea {
-  width: 100%;
-  background: #111;
-  border: 1px solid rgba(255, 215, 0, 0.4);
-  color: #fff;
-  padding: 10px;
-  border-radius: 8px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.phone-screen input:focus,
-.phone-screen textarea:focus {
-  outline: none;
-  border-color: #ffd700;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
-}
-
-/* Botón de envío */
-.phone-screen .sysadmin-badge {
-  background-color: #24292e;
-  border: 1px solid #d4af37;
-  color: white;
-  display: inline-block;
-  margin-top: 10px;
-}
-
-.phone-screen .sysadmin-badge:hover {
-  background-color: #d4af37;
-  color: #000;
-}
-
-/* 📱 Responsive */
-@media (max-width: 480px) {
-  .phone-container {
-    width: 90%;
-    padding: 15px;
-  }
-}
-
-    /* ==========================================
-   💫 Efecto dorado animado en el teléfono
-   ========================================== */
-.phone-container {
-  position: relative;
-  background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
-  border: 2px solid rgba(212, 175, 55, 0.6);
-  border-radius: 40px;
-  padding: 30px 30px;
-  box-shadow:
-    0 0 15px rgba(212, 175, 55, 0.25),
-    inset 0 0 20px rgba(255, 255, 255, 0.05);
-  width: 440px;
-  max-width: 95%;
-  overflow: hidden;
-  transition: box-shadow 0.5s ease;
-}
-
-/* ✨ Brillo dorado móvil */
-.phone-container::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(
-    from 0deg,
-    transparent 0deg,
-    rgba(255, 215, 0, 0.05) 60deg,
-    rgba(255, 215, 0, 0.2) 120deg,
-    transparent 180deg
-  );
-  animation: reflejo-dorado 6s linear infinite;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-/* 🔹 Activa el reflejo al pasar el cursor */
-.phone-container:hover::after {
-  opacity: 1;
-}
-
-/* 💫 Animación continua del reflejo */
-@keyframes reflejo-dorado {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Mantiene el contenido encima del reflejo */
-.phone-screen {
-  position: relative;
-  z-index: 2;
-}
+    </div> <!-- Fin grid-habilidades -->
+
+  </div> <!-- Fin card envolvente -->
+</section>
+
+
+<!-- SECCIÓN ORIGINAL -->
+<section id="proyectos">
+<h2 class="terminal-heading">
+  <i class="fas fa-project-diagram"></i> ls ~/proyectos/
+</h2>
+  <div class="grid-proyectos">
+
+    <div class="card"> 
+  <img src="https://rafaelmperez.com/assets/img/resultadolynis.jpg" alt="Bastionado Ubuntu 24.04 LTS" style="width:100%; height:200px; object-fit:cover;">
+
+  <h3 style="font-size: 1em;"> <i class="fas fa-lock"></i> Bastionado completo de Ubuntu 24.04 LTS </h3>
+
+    <strong class="techline"> 
+    <span style="color:#E95420;">Kernel</span> | 
+    <span style="color:#007BFF;">PAM</span> | 
+    <span style="color:#28A745;">Auditd</span> | 
+    <span style="color:#6f42c1;">USBGuard</span> | 
+    <span style="color:#20c997;">Lynis</span> 
+  </strong>
+
+  <p> Este proyecto documenta el proceso completo de bastionado de un sistema Ubuntu 24.04 LTS, siguiendo estándares CIS, NIST y OWASP. Se aplicaron medidas defensivas en múltiples capas: kernel, autenticación, servicios, red, logging y control físico, sin comprometer la funcionalidad del sistema.
+
+  Se utilizó Lynis como herramienta de auditoría continua, logrando una mejora de seguridad de <strong>68 a 87 puntos</strong>. Cada fase está documentada con comandos, configuraciones y validaciones técnicas. 
+  </p>
+
+
+<a href="https://rafaelmperez.com/docs/Rafael_MPerez_Bastionado_Ubuntu24.04_Informe_Tecnico.pdf"
+   target="_blank"
+   class="sysadmin-badge"
+   style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+  Informe técnico PDF
+</a>
+
+</p>
+
+    
+  </div>
+
+    <div class="card">
+  <img src="https://rafaelmperez.com/assets/img/bastionamientoresultado.jpg" 
+       alt="Bastionamiento del sitio web" class="proyecto-img">
+
+    <h3 style="font-size: 1em;"><i class="fas fa-lock"></i> Bastionamiento del sitio web</h3> 
+      
+  <strong class="techline"> 
+  <span style="color:#17A2B8;">Cloudflare</span> |
+  <span style="color:#6C757D;">Nikto</span> |
+  <span style="color:#28A745;">Nmap</span> |
+  <span style="color:#007BFF;">SSLyze</span> |
+  <span style="color:#FFA500;">Owasp Zap</span>
+</strong>
+
+        
+      
+
+  <div class="descripcion-proyecto">
+<p>
+  Este proyecto consiste en el bastionamiento progresivo de mi sitio web, acompañado de auditorías periódicas para reforzar su seguridad. 
+
+  He implementado cabeceras HTTP, políticas de permisos y configuraciones clave, mitigando diversos vectores de amenaza. 
+
+  Utilizo herramientas como Nmap, Nikto y SSLyze para auditar y documentar cada fase del proceso. El resultado es una infraestructura más resiliente, que refleja mi compromiso constante con la ciberseguridad aplicada.
+</p>
+
+<p>
+  <a href="https://rafaelmperez.com/docs/Rafael_MPerez_BastionadoWeb_Informe_Tecnico.pdf" 
+     target="_blank" 
+     class="sysadmin-badge"
+     style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+    Ver informe técnico PDF
+  </a>
+</p>
 
 
     
-/* 🚫 Quita el cursor tipo terminal solo en la sección de contacto */
-#contacto .terminal-heading::after {
-  display: none !important;
-}
-
- /* ==========================================
-   👁️ Fondo dinámico visible (negro → gris metálico)
-   ========================================== */
-body {
-  background: linear-gradient(135deg, #000000, #0d0d0d, #1a1a1a, #222);
-  background-size: 300% 300%;
-  animation: bgShift 25s ease-in-out infinite;
-  color: #d4af37; /* mantiene texto dorado */
-}
-
-/* Movimiento suave del gradiente */
-@keyframes bgShift {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+  </div>
+</div>
 
 
 
-/* ✨ Glow respirante frío */
-@keyframes glowPulseWhite {
-  0%, 100% {
-    text-shadow:
-      0 0 4px rgba(255, 255, 255, 0.4),
-      0 0 10px rgba(180, 220, 255, 0.25),
-      0 0 20px rgba(180, 220, 255, 0.15);
+
+<!-- CARD NUEVO PROYECTO --> 
+    <div class="card"> 
+      <img src="https://rafaelmperez.com/assets/img/buenascard.jpg
+" alt="Buenas prácticas de bastionado Linux" style="width:100%; height:200px; object-fit:cover;">
+
+<h3 style="font-size: 1em;"> <i class="fas fa-shield-alt"></i> Buenas prácticas de bastionado Linux </h3>
+
+  <strong class="techline"> 
+  <span style="color:#E95420;">SSH</span> | 
+  <span style="color:#007BFF;">UFW</span> | 
+  <span style="color:#28A745;">Auditd</span> | 
+  <span style="color:#6f42c1;">AIDE</span> | 
+  <span style="color:#20c997;">Lynis</span> </strong>
+
+<p>
+  Este proyecto aplica un conjunto de buenas prácticas defensivas sobre un sistema Linux, con el objetivo de reducir su superficie de ataque de forma simple pero efectiva.
+
+  Se han deshabilitado accesos remotos inseguros, reforzado el firewall con políticas restrictivas, activado auditoría de eventos y configurado herramientas de integridad y escaneo. Cada medida está documentada con comandos, justificación técnica y evidencia funcional.
+
+  El resultado es un sistema más seguro, trazable y alineado con estándares profesionales de bastionado.
+</p>
+
+<p>
+  <a href="https://rafaelmperez.com/buenaspracticas.html" 
+     target="_blank" 
+     class="sysadmin-badge"
+     style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+    Ver documentación técnica
+  </a>
+</p>
+
+</div>
+
+    
+
+    
+    <!-- CARD NUEVO PROYECTO -->
+<div class="card">
+  <img src="https://rafaelmperez.com/assets/img/geoip.jpg" 
+       alt="Nombre del proyecto" 
+       style="width:100%; height:200px; object-fit:cover;">
+
+  <h3 style="font-size: 1em;">
+    <i class="fas fa-shield-alt"></i> Firewall dinámico con GeoIP
+  </h3>
+
+  <strong class="techline"> 
+  <span style="color:#E95420;">iptables</span> |
+  <span style="color:#007BFF;">GeoIP</span> |
+  <span style="color:#28A745;">Bash</span> |
+  <span style="color:#6f42c1;">SSH</span> |
+  <span style="color:#20c997;">Auth.log</span>
+</strong>
+
+
+<p>
+  Este proyecto implementa un sistema defensivo automatizado que analiza los intentos fallidos de acceso SSH y bloquea IPs sospechosas según su país de origen.
+
+  Utiliza GeoIP para identificar conexiones no españolas y aplica reglas dinámicas con iptables. El script se ejecuta localmente, registra cada acción y permite visualizar los bloqueos en tiempo real.
+
+  El resultado es una capa de protección reactiva, ligera y documentable, alineada con buenas prácticas de ciberseguridad operativa.
+</p>
+
+<p>
+  <a href="https://rafaelmperez.com/proyectogeoip.html" 
+     target="_blank" 
+     class="sysadmin-badge"
+     style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+    Ver documentación técnica
+  </a>
+</p>
+
+</div>
+
+
+   <!-- CARD 2 -->
+    <div class="card">
+<img src="https://rafaelmperez.com/assets/img/proyectografana2.jpg" 
+     alt="Sistema de Detección de Intrusos con Visualización en Grafana" 
+     style="width:100%; height:200px; object-fit:cover;">
+
+
+<h3 style="font-size: 1em;"><i class="fas fa-chart-line"></i> Sistema de Detección de Intrusos con Visualización en Grafana</h3>
+      
+  <strong class="techline"> 
+  <span style="color:#E95420;">Ubuntu</span> |
+  <span style="color:#F46800;">Grafana</span> |
+  <span style="color:#6C757D;">Suricata</span> |
+  <span style="color:#28A745;">Node Exporter</span> |
+  <span style="color:#007BFF;">Fail2ban</span>
+</strong>
+            
+      
+
+    <p>
+  Implementé un sistema de detección de intrusos en un servidor Linux que permite identificar intentos de acceso sospechosos (como fuerza bruta por SSH, escaneos de puertos o actividad anómala) y visualicé estos eventos en tiempo real mediante paneles gráficos en Grafana. El objetivo es reforzar la seguridad del sistema mediante monitoreo activo y alertas automatizadas.
+</p>
+
+<p><strong>Microproyecto en desarrollo. Próximamente.</strong></p>
+</div>
+
+    
+<!-- CARD: Auditoría de Seguridad en Aplicaciones Móviles -->
+<div class="card">
+  <img src="https://rafaelmperez.com/assets/img/mobsf.jpg" 
+       alt="Auditoría de Seguridad en Aplicaciones Móviles" 
+       style="width:100%; height:200px; object-fit:cover;">
+
+  <h3 style="font-size: 1em;"><i class="fas fa-mobile-alt"></i> Auditoría de Seguridad en Apps Móviles</h3>
+
+    <strong class="techline"> 
+    <span style="color:#6C757D;">MobSF</span> |
+    <span style="color:#DC3545;">Burp Suite</span> |
+    <span style="color:#28A745;">Android Studio</span> |
+    <span style="color:#007BFF;">Wireshark</span>
+  </strong>
+<p>
+  Realicé un análisis completo de seguridad sobre aplicaciones móviles Android, combinando técnicas estáticas y dinámicas. Utilicé MobSF para extraer permisos, endpoints y vulnerabilidades sin ejecutar la app, y configuré un entorno con Android Studio y Genymotion para interceptar tráfico en tiempo real mediante Burp Suite y Wireshark. Además, documenté cada fase con capturas, logs y recomendaciones técnicas. El proyecto demuestra cómo auditar apps desde una perspectiva ofensiva y defensiva, en un entorno controlado y reproducible.
+</p>
+
+<p><strong>Proyecto en desarrollo. Próximamente.</strong></p>
+</div>
+
+
+
+  
+        
+
+
+
+
+        <!-- CARD 3 -->
+      <div class="card">
+<img src="https://rafaelmperez.com/assets/img/proyectopentesting.jpg" 
+     alt="Laboratorio de Pentesting Local con Máquinas Vulnerables" 
+     style="width:100%; height:200px; object-fit:cover;">
+        
+<h3 style="font-size: 1em;"><i class="fas fa-bug"></i> Laboratorio de Pentesting Local con Máquinas Vulnerables</h3>
+        
+        
+ 
+  <strong class="techline"> 
+  <span style="color:#6C757D;">VirtualBox</span> |
+  <span style="color:#DC3545;">Kali Linux</span> |
+  <span style="color:#28A745;">Metasploitable</span> |
+  <span style="color:#007BFF;">OWASP</span>
+</strong>
+
+<p>
+  Diseñé un entorno virtual de pentesting utilizando máquinas vulnerables como Metasploitable y OWASP Juice Shop, desplegadas en VirtualBox junto con Kali Linux. Realicé escaneos de red con Nmap, explotaciones básicas con Metasploit y apliqué técnicas de hardening para reforzar la seguridad de los sistemas. Cada fase del laboratorio fue documentada, permitiendo una comprensión clara de los vectores de ataque y las medidas defensivas aplicadas en un entorno controlado y educativo.
+</p>
+      </p>
+      <p><strong>Microproyecto en desarrollo. Próximamente.</strong></p>
+
+    </div>
+
+
+      <!-- CARD IA LOCAL -->
+<div class="card">
+  <img src="https://rafaelmperez.com/assets/img/proyecto_pipeline1.jpg" 
+       alt="Desarrollo de Pipeline en Bash" 
+       style="width:100%; height:200px; object-fit:cover;">
+
+  <h3 style="font-size: 1em;"><i class="fas fa-robot"></i> Desarrollo de Pipeline en Bash</h3>
+    
+  <strong class="techline"> 
+  <span style="color:#E95420;">Ubuntu</span> |
+  <span style="color:#28A745;">Bash</span> |
+  <span style="color:#6F42C1;">Gemma&nbsp;2B</span> |
+  <span style="color:#17A2B8;">IA&nbsp;Local</span> |
+  <span style="color:#FF9800;">Markdown</span> |
+  <span style="color:#795548;">Pandoc</span>
+</strong>
+
+<p>
+  Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado para registrar las sesiones en la terminal, explicar automáticamente los comandos ejecutados y generar informes técnicos reproducibles en PDF/DOCX. El sistema prioriza trazabilidad, eficiencia y privacidad, su integración con el modelo de lenguaje local Gemma 2B permite potenciar la generación de explicaciones técnicas sin conexión a la red y automatizar tareas repetitivas. Esta arquitectura es aplicable en auditorías, bastionado de sistemas y formación técnica.
+</p>
+
+<p>
+  <a href="https://rafaelmperez.com/ialocal.html" 
+     target="_blank" 
+     class="sysadmin-badge"
+     style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+    Ver documentación técnica
+  </a>
+</p>
+
+</div>
+
+
+    
+
+      </div>
+</section>
+<!-- FIN SECCIÓN RETOS/MICROPROYECTOS -->
+
+  <!-- SECCIÓN ORIGINAL -->
+<section id="scripts">
+<h2 class="terminal-heading">
+  <i class="fas fa-project-diagram"></i> ls ~/scripts/
+</h2>
+  <div class="grid-proyectos">
+
+  <div class="card">
+  <img src="https://rafaelmperez.com/assets/img/report_snapshot.png" 
+       alt="Nmap Auto Scanner" 
+       style="width:100%; height:200px; object-fit:cover; border-radius:6px;">
+
+  <h3 style="font-size: 1em; margin-top: 10px;">
+    <i class="fas fa-bolt"></i> Nmap Auto Scanner
+  </h3>
+
+    <strong class="techline"> 
+    <span style="color:#3776AB;">Python</span> | 
+    <span style="color:#E95420;">Nmap</span> | 
+    <span style="color:#F0DB4F;">YAML</span> | 
+    <span style="color:#28A745;">Cron</span> | 
+    <span style="color:#6f42c1;">JSON/CSV</span>
+  </strong>
+
+  <p style="margin-top: 8px; text-align: justify;">
+    <strong>Nmap Auto Scanner</strong> automatiza escaneos de red en entornos Linux, 
+    genera reportes en <code>JSON</code> y <code>CSV</code>, y compara resultados entre ejecuciones
+    para detectar cambios, nuevos servicios o posibles amenazas. Ideal para auditorías 
+    periódicas, bastionado y tareas de <em>blue team</em>.
+  </p>
+
+  <p style="text-align: justify;">
+    Desarrollado en <strong>Python</strong> con integración de <code>python-nmap</code>, 
+    utiliza un archivo <code>config.yaml</code> para configurar objetivos, opciones y directorios 
+    de salida, además de soportar ejecución programada mediante <code>cron</code>.
+  </p>
+
+  <div style="margin-top: 10px;">
+    <a href="https://github.com/rafaelmperez/nmap-auto-scanner" 
+       target="_blank" 
+       class="sysadmin-badge"
+       style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+      <i class="fab fa-github"></i> Ver en GitHub
+    </a>
+
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://rafaelmperez.com/assets/img/scriptclonedvoice.png" 
+       alt="Python TTS — Cloned AI Voice" 
+       style="width:100%; height:200px; object-fit:cover; border-radius:6px;">
+
+  <h3 style="font-size: 1em; margin-top: 10px;">
+    <i class="fas fa-microphone"></i> Python TTS — Cloned AI Voice
+  </h3>
+
+    <strong class="techline"> 
+    <span style="color:#3776AB;">Python</span> | 
+    <span style="color:#FF6F00;">ElevenLabs API</span> | 
+    <span style="color:#00A67E;">OpenAI TTS</span> | 
+    <span style="color:#868E96;">dotenv</span> | 
+    <span style="color:#6f42c1;">CLI / Logging</span>
+  </strong>
+
+  <p style="margin-top: 8px; text-align: justify;">
+    Proyecto de <strong>text-to-speech (TTS)</strong> desarrollado en Python que convierte texto 
+    en voz usando tu <strong>voz clonada</strong> mediante <em>ElevenLabs</em> o 
+    <strong>voz neural realista</strong> de <em>OpenAI</em>. 
+    Diseñado como script CLI, permite integrar síntesis de voz en flujos de trabajo, 
+    automatizaciones o contenido multimedia.
+  </p>
+
+  <p style="text-align: justify;">
+    Soporta entrada por argumento, archivo o modo interactivo, configuración mediante 
+    <code>.env</code>, y salida de audio en <code>MP3/WAV</code>. 
+    Incluye sistema de logs y arquitectura extensible para añadir nuevos proveedores 
+    como Play.ht o VITS. Licenciado bajo <strong>MIT</strong>.
+  </p>
+
+  <div style="margin-top: 10px;">
+    <a href="https://github.com/rafaelmperez/python-tts-cloned-voice" 
+       target="_blank" 
+       class="sysadmin-badge"
+       style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+      <i class="fab fa-github"></i> Ver en GitHub
+    </a>
+
+  </div>
+</div>
+
+
+
+
+<!-- CARD NUEVO PROYECTO -->
+<div class="card">
+  <img src="https://rafaelmperez.com/assets/img/scriptgmail.png" 
+       alt="Gmail Auto-Responder" 
+       style="width:100%; height:200px; object-fit:cover; border-radius:6px;">
+
+  <h3 style="font-size: 1em; margin-top: 10px;">
+    <i class="fas fa-robot"></i> Gmail Auto-Responder
+  </h3>
+
+    <strong class="techline"> 
+    <span style="color:#3776AB;">Python</span> | 
+    <span style="color:#D44638;">Gmail API</span> | 
+    <span style="color:#00A67E;">OpenAI API</span> | 
+    <span style="color:#6C757D;">Systemd</span> | 
+    <span style="color:#28A745;">OAuth 2.0</span>
+  </strong>
+
+  <p style="margin-top: 8px; text-align: justify;">
+    Proyecto de <strong>automatización de respuestas en Gmail</strong> mediante Python y la 
+    <em>Gmail API</em>, diseñado para ejecutarse de forma autónoma como servicio 
+    <code>systemd</code>. Permite responder correos entrantes de manera automática, 
+    con opción de <strong>respuestas inteligentes generadas por IA (OpenAI)</strong>.
+  </p>
+
+  <p style="text-align: justify;">
+    Integra autenticación <strong>OAuth 2.0</strong>, gestión de logs detallada y control de 
+    duplicados para evitar bucles de respuesta. Su configuración se realiza mediante 
+    <code>.env</code>, con intervalos de verificación ajustables. 
+    Ideal para tareas de productividad, administración IT o flujos automatizados.
+  </p>
+
+  <div style="margin-top: 10px;">
+    <a href="https://github.com/rafaelmperez/gmail-auto-responder" 
+       target="_blank" 
+       class="sysadmin-badge"
+       style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+      <i class="fab fa-github"></i> Ver en GitHub
+    </a>
+    
+  </div>
+</div>
+
+    
+
+    
+<!-- CARD NUEVO PROYECTO -->
+<div class="card">
+  <img src="https://rafaelmperez.com/assets/img/youtubedownloader.png" 
+       alt="YouTube Batch Downloader" 
+       style="width:100%; height:200px; object-fit:cover; border-radius:6px;">
+
+  <h3 style="font-size: 1em; margin-top: 10px;">
+    <i class="fas fa-download"></i> YouTube Batch Downloader
+  </h3>
+
+    <strong class="techline"> 
+    <span style="color:#3776AB;">Python</span> | 
+    <span style="color:#FF0000;">YouTube</span> | 
+    <span style="color:#FFB400;">yt-dlp</span> | 
+    <span style="color:#28A745;">ffmpeg</span> | 
+    <span style="color:#6C757D;">CLI</span>
+  </strong>
+
+  <p style="margin-top: 8px; text-align: justify;">
+    Script en <strong>Python 3</strong> para descargar múltiples vídeos de YouTube 
+    en la mejor calidad disponible (video + audio) de forma interactiva desde la terminal. 
+    Desarrollado con <code>yt-dlp</code> y compatible con 
+    <strong>Windows, macOS y Linux</strong>.
+  </p>
+
+  <p style="text-align: justify;">
+    Permite introducir enlaces uno a uno, crear automáticamente la carpeta de destino 
+    <code>descargas_youtube/</code> y mostrar el progreso de descarga en tiempo real. 
+    Ideal para automatizar descargas en lote, entornos educativos o prácticas de 
+    <strong>automatización en Python</strong>.
+  </p>
+
+  <div style="margin-top: 10px;">
+    <a href="https://github.com/rafaelmperez/youtube_batch_downloader" 
+       target="_blank" 
+       class="sysadmin-badge"
+       style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+      <i class="fab fa-github"></i> Ver en GitHub
+    </a>
+
+  </div>
+</div>
+
+
+    
+
+      </div>
+</section>
+<!-- FIN SECCIÓN RETOS/MICROPROYECTOS -->
+
+
+
+
+<section id="certificaciones">
+  <!-- Primer card -->
+  <div class="card">
+    <h2 class="terminal-heading">
+      <i class="fas fa-certificate"></i> ~/certificaciones.py
+    </h2>
+
+    <div class="certificaciones-container">
+      <div data-iframe-width="150" data-iframe-height="270" 
+           data-share-badge-id="dad4ad76-045d-4df9-b408-907234ae2168" 
+           data-share-badge-host="https://www.credly.com"></div>
+
+      <div data-iframe-width="150" data-iframe-height="270" 
+           data-share-badge-id="6ae1a6bb-5ef6-4dcb-97e3-965c7ebc4947" 
+           data-share-badge-host="https://www.credly.com"></div>
+    </div>
+
+    <p class="certificacion-descripcion">
+      Certificaciones <strong>CCST Cybersecurity & CCST Networking</strong> obtenidas en julio de 2025. Estas acreditaciones avalan conocimientos esenciales en seguridad informática, redes, identificación de amenazas y aplicación de buenas prácticas en entornos profesionales.
+    </p>
+<p> 
+  <a href="https://rafaelmperez.com/docs/Diplomas_Publicos_final.pdf" 
+     target="_blank" 
+     class="sysadmin-badge"
+     style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+    Ver Diplomas PDF
+  </a> 
+</p>
+
+  </div>
+
+</section>
+
+
+
+
+
+<!-- Script de Credly -->
+<script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+
+
+<style>
+  .badge-wrapper iframe {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  50% {
-    text-shadow:
-      0 0 6px rgba(255, 255, 255, 0.6),
-      0 0 12px rgba(200, 230, 255, 0.3),
-      0 0 24px rgba(200, 230, 255, 0.2);
+
+  .badge-wrapper:hover iframe {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   }
+</style>
+
+
+  <style>
+    .badge-wrapper {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-
-/* Parpadeo tipo terminal */
-@keyframes blink-block {
-  50% { opacity: 0; }
+.badge-wrapper:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* 🚫 Ocultar cursor en la sección de contacto (móvil simulado) */
-#contacto .terminal-heading::after {
-  display: none !important;
-}
+    .certificaciones-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
 
 
-.language-switcher {
-  position: absolute; /* 👈 cambia 'fixed' por 'absolute' */
-  top: 20px;
-  right: 20px;
-  z-index: 9999;
-}
+    .certificaciones-container iframe {
+      max-width: 150px;
+      max-height: 270px;
+      border: none;
+      display: block;
+    }
 
-.language-switcher a {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  text-decoration: none;
-  background-color: #222;
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 8px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  transition: background-color 0.3s;
-}
+    .certificacion-descripcion {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+    }
 
-.language-switcher a:hover {
-  background-color: #444;
-}
-
-.language-switcher .flag {
-  width: 20px;
-  height: 14px;
-  border-radius: 2px;
-}
-
-
-
-/* === Sección CV (Terminal integrada, elegante y compacta) === */
-.cv-card {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 28px;
-  margin: 50px auto;
-  max-width: 400px;
-
-  /* Fondo y borde dorado coherente */
-  background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
-  border: 2px solid rgba(212, 175, 55, 0.6);
-  border-radius: 12px;
-  box-shadow:
-    0 0 15px rgba(212, 175, 55, 0.25),
-    inset 0 0 20px rgba(255, 255, 255, 0.05);
-}
-
-/* 🧾 Línea tipo terminal (narrativa técnica) */
-.terminal-line {
-  font-family: 'Fira Code', monospace;
-  color: #a5a5a5;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-  opacity: 0.85;
-}
-
-/* 📄 Imagen del CV */
-.cv-mockup img {
+   .small-card {
+  max-width: 450px;
   width: 100%;
-  max-width: 320px; /* 🔸 un poco más pequeña que antes */
-  height: auto;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 215, 0, 0.35);
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.12);
-  margin: 1rem auto 1.4rem;
-  display: block;
+  margin: 0 auto; /* 🔥 Esto la centra horizontalmente */
+  padding: 16px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
 }
 
-/* 📱 Responsive */
-@media (max-width: 768px) {
-  .cv-card {
-    max-width: 90%;
-  }
-  .cv-mockup img {
-    max-width: 85%;
-  }
+      .certificaciones-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.certificaciones-container > div {
+  flex: 0 0 auto;
 }
 
 
-/* 🔹 Botón coherente con la paleta del sitio */
-.sysadmin-badge {
-  display: inline-block;
-  background-color: #000;
-  color: #ffd700;
-  border: 1px solid #d4af37;
-  border-radius: 8px;
-  text-decoration: none;
-  font-family: 'Courier New', monospace;
-  font-weight: bold;
-  padding: 10px 18px;
-  transition: all 0.3s ease;
-  box-shadow:
-    0 0 10px rgba(212,175,55,0.25),
-    inset 0 0 8px rgba(212,175,55,0.15);
-}
 
-.sysadmin-badge:hover {
-  background-color: #d4af37;
-  color: #000;
-  box-shadow:
-    0 0 15px rgba(255,215,0,0.4),
-    0 0 35px rgba(255,215,0,0.2);
-}
+  </style>
+  <script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
 
-/* ==========================================
-   📱 NAVBAR OPTIMIZADO PARA MÓVIL Y TABLET
-   ========================================== */
-/* 🔹 Hasta 1024px (tablets horizontales y portátiles pequeños) */
-@media (max-width: 1024px) {
-  nav {
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 0.8rem !important;
-    padding: 0.8rem 0.5rem !important;
-  }
 
-  nav a {
-    font-size: 0.9rem !important;
-    padding: 6px 8px !important;
-    white-space: nowrap !important;
-  }
-}
+<script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
 
-/* 🔹 Hasta 768px (móviles y tablets verticales) */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: row !important;  /* ✅ mantiene horizontal */
-    flex-wrap: wrap !important;      /* ✅ permite saltar a segunda línea */
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 0.3rem !important;
-    padding: 0.4rem 0.2rem !important;
-  }
+</section>
 
-  nav a {
-    font-size: 0.72rem !important;
-    padding: 3px 6px !important;
-    border-radius: 5px !important;
-    white-space: nowrap !important;
-    border: 1px solid rgba(212,175,55,0.3) !important;
-    color: #d4af37 !important; /* ✅ conserva dorado */
-    background-color: transparent !important; /* ✅ sin fondo */
-  }
 
-  nav a:hover {
-    background-color: #d4af37 !important;
-    color: #000 !important;
-    box-shadow: 0 0 12px rgba(255,215,0,0.3) !important;
-  }
-}
+<section id="objetivos">
+  <div class="card hoja-de-ruta-card cv-card">
 
-/* 🔹 Hasta 420px (móviles pequeños) */
-@media (max-width: 420px) {
-  nav a {
-    font-size: 0.65rem !important;
-    padding: 2px 4px !important;
-  }
-}
+    <h2 class="terminal-heading">
+      <i class="fas fa-route"></i> ~/curriculum.pdf
+    </h2>
 
-/* 👤 Imagen “sobre mí” más pequeña */
-.imagen-sobre-mi {
-  width: 130px !important;
-  height: 130px !important;
+    <!-- Línea narrativa tipo terminal -->
+    <p class="terminal-line">
+     $ xdg-open CV_RafaelMPerez.pdf
+
+    </p>
+
+    <div class="cv-mockup">
+      <img src="https://rafaelmperez.com/assets/img/cv_image.jpg" 
+           alt="Vista del CV de Rafael M. Pérez">
+    </div>
+
+    <a href="https://rafaelmperez.com/docs/CV_RafaelMPerez.pdf" 
+       class="sysadmin-badge" 
+       target="_blank" 
+       rel="noopener noreferrer">
+      <i class="fas fa-file-pdf"></i> Ver CV en PDF
+    </a>
+
+  </div>
+</section>
 
 
 
-  /* ==========================================
-   📱 Ajuste del botón de idioma en móvil
-   ========================================== */
-@media (max-width: 768px) {
-  .language-switcher {
-    position: fixed !important;   /* 🔹 se mantiene arriba al hacer scroll */
-    top: 10px !important;
-    right: 10px !important;
-    z-index: 10000 !important;    /* 🔹 encima de todo */
-  }
 
-  .language-switcher a {
-    padding: 4px 8px !important;
-    font-size: 0.8rem !important;
-    gap: 4px !important;
-    border-radius: 6px !important;
-    background-color: rgba(0, 0, 0, 0.8) !important;
-  }
 
-  .language-switcher .flag {
-    width: 16px !important;
-    height: 12px !important;
-  }
-}
 
-#particles-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
+
+<section id="contacto">
+  <div class="phone-container">
+    <div class="phone-screen">
+
+<h2 class="terminal-heading">
+  <i class="fas fa-envelope"></i> Contacto
+      </h2>
+
+
+      <form action="https://formspree.io/f/mdkwngad" method="POST">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <!-- Cloudflare CAPTCHA -->
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAB2gSyBoa7kMyPVF"></div>
+        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+        <div style="text-align:center;">
+          <a href="#" onclick="document.querySelector('form').submit();" class="sysadmin-badge">
+            <strong>Enviar mensaje</strong> <i class="fa-solid fa-paper-plane ms-2"></i>
+          </a>
+        </div>
+      </form>
+
+      <div class="my-4 text-center text-sm text-gray-400">- o si lo prefieres -</div>
+
+      <div class="text-center">
+        <a href="mailto:rmp.blueteam@proton.me" class="sysadmin-badge">
+          <i class="fa-solid fa-envelope"></i> rmp.blueteam@proton.me
+        </a>
+      </div>
+
+
+</section>
+
+
+
+
+<footer>
+
+  <strong style="color: white;">
+    <p>© 2025 Rafael M. Pérez. Página Web en desarrollo.</p>
+    <br>
+    <p class="terminal-line">¡Gracias por tu visita!</p>
+  </strong>
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
