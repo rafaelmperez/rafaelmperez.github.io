@@ -284,13 +284,6 @@
 }
 
 
-  /* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 footer {
   width: 100%;          /* 100% del ancho de la ventana */
   margin: 0;             /* quita márgenes que lo puedan achicar */
@@ -418,14 +411,6 @@ section {
   margin: 1rem auto !important;
   padding: 1rem 1rem;
   text-align: center;
-
-
-
-h2 {
-  font-size: 2.2rem;
-  color: #463e3e;
-}
-
 
 
 h1.titulo-principal {
