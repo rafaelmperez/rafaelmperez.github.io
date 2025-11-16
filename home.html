@@ -22,6 +22,12 @@
   <!-- Icono -->
   <link rel="icon" href="favicon.png" type="image/x-icon">
 
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
   <!-- Font Awesome (solo una versión optimizada) -->
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -253,17 +259,19 @@
   top: 0;
   z-index: 50;
   width: 100%;
-  display: flex;
-  flex-direction: column; /* <--- necesario para centrar */
-  justify-content: center;
+
+  /* === CAMBIO IMPORTANTE === */
+  display: grid;
+  grid-template-columns: 1fr auto; /* nav centrado | iconos derecha */
   align-items: center;
-  gap: 10px;
 
   padding: 10px 24px;
+
   border-bottom: 1px solid rgba(255, 215, 0, 0.22);
   background: rgba(0, 0, 0, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+
   box-shadow:
     0 8px 18px rgba(0, 0, 0, 0.7),
     0 0 18px rgba(255, 215, 0, 0.08);
@@ -276,6 +284,30 @@
     background: #000000;
   }
 }
+
+.sysadmin-badge,
+.habilidad,
+.bloque {
+  font-family: 'Rajdhani', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+}
+
+.sysadmin-badge,
+.habilidad,
+.bloque,
+code {
+  font-family: 'Rajdhani', sans-serif;
+}
+
 
 /* ===== MENU ===== */
 
@@ -353,6 +385,11 @@
   box-shadow: 0 0 8px rgba(255, 215, 0, 0.25);
 }
 
+
+body, p, li, a {
+  font-family: 'Inter', sans-serif;
+}
+
 .barra-superior .nav-link:hover::after {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
@@ -362,7 +399,7 @@
 
 .social-float {
   display: flex;
-  align-items: center;
+  justify-content: flex-end;
   gap: 12px;
 }
 
@@ -473,6 +510,10 @@
     0 0 35px rgba(255, 215, 0, 0.4),
     0 0 60px rgba(255, 215, 0, 0.2);
   border-color: rgba(255, 215, 0, 0.7);
+}
+
+.banner-header {
+  margin: 0 auto 4px auto; /* menos espacio debajo del banner */
 }
 
 
@@ -1061,6 +1102,9 @@ button:hover {
   }
 }
 
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
 
 
 
@@ -1088,6 +1132,10 @@ button:hover {
 }
 
 
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+}
 
 
 .habilidades-icons {
@@ -1114,7 +1162,6 @@ button:hover {
 }
 
 
-}
 img {
   max-width: 100%;
   height: auto; 
