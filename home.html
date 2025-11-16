@@ -88,6 +88,45 @@
 
 <body>
 
+
+    <!-- Script para activar la traducción -->
+  <script type="text/javascript">
+    // Inicializa el traductor de Google
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'fr,en',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+
+    // Cargar el script de Google Translate
+    const gtScript = document.createElement('script');
+    gtScript.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    document.head.appendChild(gtScript);
+
+    // Cambiar idioma usando la cookie de Google Translate
+    function translateTo(lang) {
+      const domain = window.location.hostname.includes("github.io")
+        ? "github.io"
+        : window.location.hostname;
+      document.cookie = `googtrans=/es/${lang};domain=.${domain};path=/`;
+      location.reload();
+    }
+
+    // Evento de clic en el botón
+    document.addEventListener("DOMContentLoaded", () => {
+      const frBtn = document.getElementById("translate-fr");
+      frBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        translateTo("fr");
+      });
+    });
+  </script>
+
+  <!-- Aquí va el script, justo antes de cerrar body -->
+  <script src="script.js"></script>
+
  <!-- narración principal -->
 <audio id="narracion" src="https://rafaelmperez.com/sounds/portafolioplay.aac" preload="auto"></audio>
 
@@ -2306,53 +2345,6 @@ header {
 
 
 
-  <!-- Script para activar la traducción -->
-  <script type="text/javascript">
-    // Inicializa el traductor de Google
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'es',
-        includedLanguages: 'fr,en',
-        autoDisplay: false
-      }, 'google_translate_element');
-    }
-
-    // Cargar el script de Google Translate
-    const gtScript = document.createElement('script');
-    gtScript.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-    document.head.appendChild(gtScript);
-
-    // Cambiar idioma usando la cookie de Google Translate
-    function translateTo(lang) {
-      const domain = window.location.hostname.includes("github.io")
-        ? "github.io"
-        : window.location.hostname;
-      document.cookie = `googtrans=/es/${lang};domain=.${domain};path=/`;
-      location.reload();
-    }
-
-    // Evento de clic en el botón
-    document.addEventListener("DOMContentLoaded", () => {
-      const frBtn = document.getElementById("translate-fr");
-      frBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        translateTo("fr");
-      });
-    });
-  </script>
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
-
-  <!-- Aquí va el script, justo antes de cerrar body -->
-  <script src="script.js"></script>
-
- 
-    </a>
-  </div>
-</div>
-
 <section id="sobre-mi">
   <div class="card">
     <h2 class="terminal-heading">
@@ -2407,13 +2399,9 @@ header {
 </a>
 
 
-
-
-
     </div>
   </div>
 </section>
-
 
 
 
