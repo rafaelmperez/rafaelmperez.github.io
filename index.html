@@ -1,10 +1,16 @@
-<!DOCTYPE html>
+¡<!DOCTYPE html>
 <html lang="es">
 <head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta charset="UTF-8">
 <title>Inicializando…</title>
 
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+
 <style>
+
+  
   body {
     background: #000;
     color: #fff;
@@ -55,6 +61,7 @@
     animation: emf 6s infinite linear;
   }
 
+
   #wrapper {
     position: relative;
     width: 100%;
@@ -83,18 +90,48 @@
     margin-bottom: 10px;
   }
 
-  .ascii {
-    color: #f0c674;
-    text-shadow:
-      0 0 4px #f0c67455,
-      0 0 10px #f0c67455;
-    animation: asciiGlow 3s ease-in-out infinite;
+.ascii {
     font-family: monospace;
     font-size: 13.6px;
     line-height: 1.10;
     white-space: pre;
     display: inline-block;
-  }
+
+    /* Gradiente dorado real */
+    background: linear-gradient(
+        90deg,
+        #f0c674,
+        #ffd57c,
+        #e7b95c,
+        #f4d98a,
+        #cfa24a
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Brillo y relieve */
+    text-shadow:
+      0 0 4px rgba(240,198,116,0.4),
+      0 0 8px rgba(240,198,116,0.25),
+      0 0 12px rgba(240,198,116,0.18);
+
+    animation: goldPulse 3.8s ease-in-out infinite;
+}
+
+@keyframes goldPulse {
+    0%   { filter: brightness(1) }
+    50%  { filter: brightness(1.35) }
+    100% { filter: brightness(1) }
+}
+
+
+@keyframes rainbowShift {
+    0%   { filter: hue-rotate(0deg); }
+    50%  { filter: hue-rotate(25deg); }
+    100% { filter: hue-rotate(0deg); }
+}
+
 
   @keyframes asciiGlow {
     0%   { text-shadow: 0 0 3px #f0c67455; }
@@ -102,12 +139,6 @@
     100% { text-shadow: 0 0 3px #f0c67455; }
   }
 
-  .subtitle {
-    margin-top: 8px;
-    font-size: 1rem;
-    color: #e6e6e6;
-    opacity: 0.85;
-  }
 
   #terminal {
     white-space: pre-wrap;
@@ -153,210 +184,681 @@
     z-index: 1000;
   }
 
-  #progress-bar {
-    width: 0%;
-    height: 6px;
-    background: linear-gradient(90deg, #f0c674, #f7e49c);
-    box-shadow: 0 0 8px #f0c674aa;
-    border-radius: 10px;
-    margin: 12px 0;
-    transition: width .45s ease;
-  }
+#progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #1a1508; /* ahora SÍ contrasta con el negro */
+  border: 1px solid #f0c67488;
+  border-radius: 10px;
+  margin: 12px auto 20px auto;
+  position: relative;
+  overflow: hidden;
+}
 
-  /* RESPONSIVE */
-  @media (max-width: 980px) {
-    #wrapper { max-width: 90%; }
-    .ascii { font-size: 11.5px; line-height: 1.05; }
-    #terminal { font-size: 0.95rem; }
-  }
+#progress-bar::before {
+  content: attr(data-progress) "%";
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #f0c674;
+  font-size: 0.75rem;
+  pointer-events: none;
+  z-index: 3;
+}
 
-  @media (max-width: 740px) {
-    #wrapper { max-width: 95%; }
-    .ascii { font-size: 10px; }
-    #terminal { font-size: 0.85rem; }
-    #screen-frame { inset: 10px; }
-    #progress-bar { height: 4px; }
-  }
-
-  @media (max-width: 520px) {
-    .ascii { font-size: 8.5px; }
-    #terminal { font-size: 0.78rem; }
-    #screen-frame { inset: 6px; border-width: 1px; }
-  }
-
-  #top-block {
-  margin-top: -90px;
+#progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #f0c674, #f7e49c);
+  box-shadow: 0 0 10px #f0c674aa;
+  transition: width .45s ease;
+  position: relative;
+  z-index: 2;
 }
 
 #wrapper {
   margin-top: -30px;
 }
 
-
-  /* Tablets */
-@media (max-width: 980px) {
-  .ascii {
-    font-size: 11px;
-    line-height: 1.05;
-  }
+#wrapper {
+  margin-top: 0 !important;
+  transform: scale(0.92);
 }
 
-/* Móviles comunes */
-@media (max-width: 740px) {
-  .ascii {
-    font-size: 8.5px;
-    line-height: 1.05;
-  }
+
+
+
+ .prompt {
+    color: #68d7ff;   /* cyan */
+    font-weight: 600;
 }
 
-/* Móviles pequeños */
-@media (max-width: 520px) {
-  .ascii {
-    font-size: 7px;
-    line-height: 1.00;
-  }
+.path {
+    color: #7aa2f7;   /* azul claro */
 }
 
-/* Móviles MUY pequeños (iPhone SE, Android mini) */
-@media (max-width: 390px) {
-  .ascii {
+.cmd {
+    color: #9cff9c;   /* verde comando */
+}
+
+.flag {
+    color: #ffe27a;   /* amarillo */
+}
+
+.ok {
+    color: #00ff66;   /* verde OK */
+    font-weight: bold;
+}
+
+.msg {
+    color: #e6e6e6;   /* gris/blanco suave */
+}
+
+.ascii-noise {
+    font-family: monospace;
     font-size: 6px;
     line-height: 0.95;
-  }
+    white-space: pre;
+    opacity: 0.55;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    text-align: center;
+
+    /* efecto glitch suave */
+    filter: contrast(1.2) brightness(1.1);
+
+    /* color gris metálico */
+    color: #b7b7b7;
 }
 
 
+/* === ULTRA PREMIUM — CONTROLES DE VENTANA ESTILO TERMINAL DORADO === */
+#window-controls {
+  position: absolute;
+  top: 14px;
+  right: 22px;
+  display: flex;
+  gap: 14px;
+  z-index: 3000;
+  user-select: none;
+}
+
+/* BASE DE CADA ICONO */
+#window-controls .ctrl {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  /* borde retro dorado */
+  border: 1px solid #f0c674cc;
+  border-radius: 3px;
+
+  /* fondo translúcido tipo vidrio ámbar */
+  background: rgba(20, 18, 10, 0.45);
+
+  /* glow elegante */
+  box-shadow:
+    0 0 4px #f0c67455,
+    inset 0 0 6px #f0c67422;
+
+  transition: 0.18s ease-in-out;
+}
+
+/* ====================== ICONOS PIXELADOS PREMIUM ====================== */
+
+/* Minimize: línea dorada */
+#window-controls .min::before {
+  content: "";
+  width: 10px;
+  height: 2px;
+  background: #f0c674;
+  display: block;
+  filter: drop-shadow(0 0 3px #f0c674aa);
+}
+
+/* Maximize: cuadrado dorado */
+#window-controls .max::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border: 2px solid #f0c674;
+  display: block;
+  filter: drop-shadow(0 0 3px #f0c674aa);
+}
+
+/* Close: X pixelada dorada */
+#window-controls .close::before {
+  content: "×";
+  font-family: monospace;
+  font-size: 14px;
+  color: #f0c674;
+  display: block;
+  line-height: 0;
+  filter: drop-shadow(0 0 3px #f0c674aa);
+}
+
+/* ======================= EFECTOS HOVER PREMIUM ======================= */
+#window-controls .ctrl:hover {
+  background: rgba(50, 40, 10, 0.75);
+  box-shadow:
+    0 0 8px #f0c674aa,
+    inset 0 0 8px #f0c67455;
+  transform: translateY(-1px);
+}
+
+/* ========================== MOBILE FRIENDLY ========================== */
+@media(max-width: 768px){
+  #window-controls {
+    top: 10px;
+    right: 14px;
+    transform: scale(0.85);
+  }
+}
+
+/* === TOP 1 — CURVATURA CRT REAL (APLICADA AL WRAPPER) === */
+#wrapper {
+  perspective: 1400px;
+}
+
+#crt {
+  perspective: 1400px;
+}
+
+#crt-inner {
+  transform: rotateX(1.8deg) rotateY(-0.8deg);
+  transform-style: preserve-3d;
+}
+
+/* === TOP 2 — PHOSPHOR GLOW (BRILLO DEL FÓSFORO) === */
+#terminal, #top-block {
+  filter: drop-shadow(0 0 1.8px #f0c67455)
+          drop-shadow(0 0 3px #f0c67433);
+}
+/* === TOP 3 — GLASS HIGHLIGHT (REFLEJO DE VIDRIO DIAGONAL) === */
+#screen-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    rgba(255,255,255,0.06) 0%,
+    rgba(255,255,255,0.01) 45%,
+    rgba(255,255,255,0) 60%,
+    rgba(255,255,255,0.12) 100%
+  );
+  pointer-events: none;
+  z-index: 3000;
+  mix-blend-mode: soft-light;
+  opacity: 0.35;
+}
+/* === TOP 4 — SCANLINES DINÁMICOS PREMIUM === */
+body::before {
+  animation: scanMove 9s linear infinite;
+}
+
+@keyframes scanMove {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(1.5px); }
+}
+/* === TOP 5 — GLOW DEL MARCO (RESPIRACIÓN DORADA) === */
+#screen-frame {
+  animation: framePulse 4s ease-in-out infinite;
+}
+
+@keyframes framePulse {
+  0%   { box-shadow: 0 0 18px #f0c67444, inset 0 0 14px #f0c67422; }
+  50%  { box-shadow: 0 0 28px #f0c67488, inset 0 0 18px #f0c67444; }
+  100% { box-shadow: 0 0 18px #f0c67444, inset 0 0 14px #f0c67422; }
+}
+
+/* --- Contenedor externo que aplica la perspectiva sin romper el scale del wrapper --- */
+#crt-container {
+  perspective: 1400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- El wrapper recibe la curvatura CRT sin verse afectado por el scale --- */
+#crt-container #wrapper {
+  transform: rotateX(1.8deg) rotateY(-0.8deg);
+  transform-style: preserve-3d;
+}
+/* Contenedor externo que aplica perspectiva sin alterar posiciones internas */
+#crt {
+  perspective: 1400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* El wrapper recibe solo la curvatura, no el scale */
+#crt #wrapper {
+  transform: rotateX(1.8deg) rotateY(-0.8deg);
+  transform-style: preserve-3d;
+}
+
+/* El wrapper mantiene su scale sin afectar a la perspectiva */
+#wrapper {
+  transform: scale(0.92) !important;
+}
+
+  @media (max-width: 768px) {
+
+  /* Curvatura mucho más suave en móvil */
+  #crt #wrapper {
+    transform: rotateX(0.6deg) rotateY(-0.4deg) scale(0.82) !important;
+    transform-origin: top center;
+  }
+
+  /* Ajustamos el contenedor CRT sin romper nada */
+  #crt {
+    perspective: 900px;
+  }
+}
+@media (max-width: 768px) {
+
+  /* Contenedor del ASCII ajustado */
+  #top-block {
+    transform: scale(0.72);
+    transform-origin: top center;
+    margin-top: -20px !important;
+    margin-bottom: -10px !important;
+  }
+
+  /* ASCII dorado principal */
+  #top-block pre.ascii:not(.ascii-noise) {
+    font-size: 5px !important;
+    line-height: 0.85 !important;
+  }
+
+  /* ASCII de ruido */
+  .ascii-noise {
+    font-size: 3.5px !important;
+  }
+}
+/* ==========================
+   MODO MÓVIL — PERFECT MATCH
+   ========================== */
+@media (max-width: 768px) {
+
+  /* ESCALA GENERAL — reduce TODO uniformemente */
+  #wrapper {
+    transform: scale(0.68) !important;
+    transform-origin: top center !important;
+    margin-top: -50px !important;
+  }
+
+  /* ASCII */
+  #top-block {
+    transform: scale(0.70);
+    transform-origin: top center;
+    margin-top: -25px !important;
+    margin-bottom: -20px !important;
+  }
+  #top-block pre.ascii:not(.ascii-noise) {
+    font-size: 5px !important;
+    line-height: 0.85 !important;
+  }
+  .ascii-noise {
+    font-size: 3.5px !important;
+    line-height: 0.8 !important;
+  }
+
+  /* TERMINAL — tamaño más pequeño */
+  #terminal {
+    font-size: 0.65rem !important;
+    line-height: 0.92rem !important;
+    max-width: 88% !important;
+    margin: 0 auto !important;
+  }
+
+  /* BARRA DE CARGA */
+  #progress-bar {
+    width: 85% !important;
+    transform: scale(0.85) !important;
+    margin-top: 5px !important;
+    margin-bottom: 12px !important;
+  }
+  #progress-bar::before {
+    font-size: 0.55rem !important;
+    right: 4px !important;
+  }
+
+  /* ICONOS DE VENTANA */
+  #window-controls {
+    transform: scale(0.75) !important;
+    top: 6px !important;
+    right: 10px !important;
+  }
+
+  /* Curvatura CRT suavizada */
+  #crt #wrapper {
+    transform:
+      rotateX(0.4deg) rotateY(-0.2deg)
+      scale(0.68) !important;
+  }
+}
+@media (max-width: 768px) {
+    #terminal {
+        text-align: center !important;
+        max-width: 92% !important;
+    }
+    #terminal div {
+        text-align: center !important;
+    }
+}
+.msg, .ok {
+  display: block;
+  opacity: 0;
+  transform: translateX(-4px) translateY(1px) scale(0.98);
+  animation: lineEnter 0.55s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  will-change: opacity, transform, filter;
+}
+
+/* —— MOBILE VERSION ——————————————————————— */
+@media (max-width: 768px) {
+  .msg, .ok {
+    transform: translateX(-2px) translateY(1px) scale(0.985);
+    animation: lineEnterMobile 0.48s cubic-bezier(0.25, 0.60, 0.35, 1) forwards;
+  }
+}
+
+/* —— DESKTOP ANIMATION ————————————————————— */
+@keyframes lineEnter {
+  0% {
+    opacity: 0;
+    filter: blur(1.8px) brightness(0.45);
+    transform: translateX(-6px) translateY(2px) scale(0.96);
+  }
+  40% {
+    opacity: 1;
+    filter: blur(0.4px) brightness(1.45);
+    transform: translateX(-2px) translateY(0) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0) brightness(1);
+    transform: translateX(0) translateY(0) scale(1);
+  }
+}
+
+/* —— MOBILE ANIMATION ————————————————————— */
+@keyframes lineEnterMobile {
+  0% {
+    opacity: 0;
+    filter: blur(1px) brightness(0.55);
+    transform: translateX(-4px) translateY(1px) scale(0.97);
+  }
+  40% {
+    opacity: 1;
+    filter: blur(0.2px) brightness(1.35);
+    transform: translateX(-1px) translateY(0) scale(1.005);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0) brightness(1);
+    transform: translateX(0) translateY(0) scale(1);
+  }
+}
+
+.final-boot {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 1.05rem;
+  color: #00ff66;
+  opacity: 0;
+  animation: finalAppear 0.6s ease-out forwards;
+  text-shadow:
+      0 0 6px rgba(0,255,102,0.6),
+      0 0 12px rgba(0,255,102,0.25);
+}
+
+@keyframes finalAppear {
+  0%   { opacity: 0; filter: blur(2px) brightness(0.6); }
+  60%  { opacity: 1; filter: blur(0) brightness(1.7); }
+  100% { opacity: 1; filter: brightness(1); }
+}
+
+
+  
 </style>
 </head>
 
 <body>
+<button id="audio-unlock" 
+        style="position:absolute; inset:0; opacity:0; z-index:9999; border:none; background:none;">
+</button>
+
+<audio id="boot-sound" preload="auto">
+  <source src="https://rafaelmperez.com/sounds/bootup.mp3" type="audio/mpeg">
+</audio>
+
+  
+  <div id="window-controls">
+  <div class="ctrl min" title="Minimizar"></div>
+  <div class="ctrl max" title="Restaurar"></div>
+  <div class="ctrl close" title="Cerrar"></div>
+</div>
 
 <div id="noise"></div>
 <div id="screen-frame"></div>
 <div id="fade"></div>
+ 
+<div id="crt">
+  <div id="crt-inner">
+    <div id="wrapper">
 
-<div id="wrapper">
+      <div id="top-block"></div>
 
-  <div id="top-block"></div>
-
-  <div id="progress-bar"></div>
-
-  <div id="terminal"></div>
-
+     <div id="progress-bar">
+  <div id="progress-fill"></div>
 </div>
 
-<audio id="key" src="https://rafaelmperez.com/sounds/clip.aac" preload="auto"></audio>
+
+      <div id="terminal"></div>
+
+    </div>
+  </div>
+</div>
+
 
 <script>
 
-/* =========== ASCII PROTEGIDO =========== */
+
+  
+  
+  /* =========== ASCII PROTEGIDO =========== */
 const asciiLogo = String.raw`
-### ##     ##     ### ###    ##     ### ###  ####     ##   ##  ### ##   ### ###  ### ##   ### ###  ### ##            ## ##    ## ##   ##   ##
- ##  ##     ##     ##  ##     ##     ##  ##   ##       ## ##    ##  ##   ##  ##   ##  ##   ##  ##  ##  ##            ##   ##  ##   ##   ## ##
- ##  ##   ## ##    ##       ## ##    ##       ##      # ### #   ##  ##   ##       ##  ##   ##         ##             ##       ##   ##  # ### #
- ## ##    ##  ##   ## ##    ##  ##   ## ##    ##      ## # ##   ##  ##   ## ##    ## ##    ## ##     ##              ##       ##   ##  ## # ##
- ## ##    ## ###   ##       ## ###   ##       ##      ##   ##   ## ##    ##       ## ##    ##       ##               ##       ##   ##  ##   ##
- ##  ##   ##  ##   ##       ##  ##   ##  ##   ##  ##  ##   ##   ##       ##  ##   ##  ##   ##  ##  ##  ##   ### #    ##   ##  ##   ##  ##   ##
-#### ##  ###  ##  ####     ###  ##  ### ###  ### ###  ##   ##  ####     ### ###  #### ##  ### ###  # ####   ### #     ## ##    ## ##   ##   ##
+### ##     ##     ### ###    ##     ### ###  ####     ##   ##  ### ##   ### ###  ### ##   ### ###  ### ##          ## ##    ## ##   ##   ##
+ ##  ##   ####     ##  ##   ####     ##  ##   ##      ### ###   ##  ##   ##  ##   ##  ##   ##  ##  ##  ##         ##   ##  ##   ##  ### ###
+ ##  ##   ## ##    ##       ## ##    ##       ##      #######   ##  ##   ##       ##  ##   ##         ##          ##       ##   ##  #######
+ ## ##    ##  ##   ## ##    ##  ##   ## ##    ##      ## # ##   ##  ##   ## ##    ## ##    ## ##     ##           ##       ##   ##  ## # ##
+ ## ##    ## ###   ##       ## ###   ##       ##      ##   ##   ## ##    ##       ## ##    ##       ##            ##       ##   ##  ##   ##
+ ##  ##   ##  ##   ##       ##  ##   ##  ##   ##  ##  ##   ##   ##       ##  ##   ##  ##   ##  ##  ##  ##   ###   ##   ##  ##   ##  ##   ##
+#### ### ###  ##  ####     ###  ##  ### ###  ### ###  ##   ##  ####     ### ###  ###  ###  ### ### ######   ###    ## ##    ## ##   ##   ##
+                              ──  P O R T A F O L I O   T É C N I C O  ──                                                                                                                     
+                                                                                                                     by codebyRalph V1.0
                                                                                                           
-
 `;
-
-const subtitleText = "by codebyRalph V1.0";
-
+  const noiseBlock = String.raw`
+,**********/////////////////////////////////(((//(///(((///////((/((((((///////*
+***********/////////////////////////////////(((((((//(((((((((/((((((////////*/*
+,,,********////////////////////,.               **//((((((((((((((/////////////*
+,*,*********//////////(/////.                    .  .((((((((((((///////////////
+**,*********/////////////,             .               (((((((((((//////////////
+************////////////.        .       .. ...,..      /(((((((((////////////**
+******/*/****///////////     .,,,,,,,,*//(((#(((#((/,..  /((((((((////////////**
+****************///////*  **//((((###%%%%%%%%%%#####(,,...((((((((((/////////***
+****************///*//// .*////(####%%%%%%%%%%%%###(//,,,.(((((((((//////////***
+,,*,,*,,********/*//*///..**//(((###%%%%%%%#%#######//**,,(((((//////////*///***
+,,*****************/////..**/((####%%%%%%%%%%%%%###((//**((((((/////////********
+,*,**,,***********//////..*...,..,*(#####((**,,*/**/((**,((((((////////***//****
+,,,,,,,,,*********////***.****..(,*,,(#%#/*/,,#,//(#((*(%##(//////////////****//
+,,,,,,,,,,,*********///.*,*///(((((**/##((((/(#######(((#%((/////////***//******
+,,,,,,,,,***********///*,*/((((#((//*(######%#####%##((%%##///////**************
+,,,,,,,,,,,,,*********//*,*//(###(**/#%%##(#%%%%%%###(/#%##///////**************
+,,,,,,,,,,,,*********////***/((##/,,./(#*/(%%#%%%####(/%##///**//***************
+,,,,,,,,,,,,****,*****////,*//((//***/**((((((####(#((///////*******************
+.,,,,,,,,,,,,,*,*************////*///(##((#(//((#((((((//////*******************
+...,,,,,,,,,,,,,,,************//(//((############(#(/#(///*********************,
+..,,,,,,,,,,,,,,,,,,,,,*******,,*/((((((####((((((((##(&******************,,,,,,
+...,,,,,,,,,,,,,,,,,,,***,*****,**//(######((((//((###&&&&/***********,,,,,,,,,,
+....,,,,,,,,,,,,,,,,,,,**,,((.*,,,**/(((/((((*(((####@@&&@&&&&********,,,,,,,,,,
+.....,,,,,,,,,,,,,,,,,###((%#********,***/(((((####%@@@&&@@&&&&&%%***,,,,,,,,,,,
+...,,,,..,,,,,,,*##&&%%#((%&%(.*//***/(######(##((@@@@@@@@&&@@@&&&&&%%%,,,,,,,,,
+.........,,#%%%%#%&&%###(%&&&&.*//(////(((####/*&@@@@@@@@@&&&&&@&&&&&&&&&%%,,,,,
+.....,,%%#%%%%%&&&&%%##(%/(&&&&*//((((((((((//&@@@@@@@@@@@@&&&@&&&&&&@&&&&&%%%,,
+.....#%%%%%%%&&&&&&&%#(&#((((%@&&/*(((((//#&&&##(#@@@@@@&&&&%&&&&%&&&&&&&&@&&&&%
+....%%%%%&%&&%&&&&&&%%%&%%%%%###@@%(##//&@@&&&&%%#((@@@&@@&&%&&&&&&&&&&&&&&&@&@&
+...#%%&%%&&&&%&&&&&&%%&&&&%%&&&%%#%&(/*%@&&&&&&&&&&&&&&&&&&%%&&&&%&&&&@&&&@@&&&&
+..#%%%&%%&&%%%&&&&%%%&&&&&&&&&&&&&&%&@@@&&&&&&&&&&&&&&&&&&&%%&&&&&@&&@@&@@@&&&&&
+.(#%&%%%%&&&%%&&&%%%&&&&&&&&&&&&&%@@&@@&&&&&&&&&&&&&&&&&&&&&&%&&&@&&&&@@@&&&&&&&
+`;
 const commands = [
-  "guest@rafaelmperez.com:~$ boot",
-  "[OK] Sistema seguro inicializado",
-
-  "guest@rafaelmperez.com:~$ modules --load",
-  "[OK] Módulos principales cargados",
-
-  "guest@rafaelmperez.com:~$ syscheck --integrity",
-  "[OK] Integridad del sistema verificada",
-
-  "guest@rafaelmperez.com:~$ services --status",
-  "[OK] Todos los servicios están operativos",
-
-  "",
-
-  "guest@rafaelmperez.com:~$ access",
-  "Conectando… acceso concedido ✔",
-
-  "",
-
-  "guest@rafaelmperez.com:~$ navigating",
-  "Accediendo a rafaelmperez.com…"
+  `<span class="msg">▶ Inicializando núcleo de seguridad…</span>`,
+  `<span class="msg">▶ Verificando arquitectura del sistema…</span>`,
+  `<span class="msg">▶ Activando módulos críticos…</span>`,
+  `<span class="msg">▶ Desplegando interfaz operativa…</span>`,
+  `<span class="ok">✔ Sistema operativo avanzado listo.</span>`
 ];
+
+
+// Minimizar → baja la opacidad como una terminal minimizada
+document.querySelector(".min").onclick = () => {
+  document.getElementById("wrapper").style.opacity = "0.25";
+};
+
+// Restaurar → vuelve a su estado original
+document.querySelector(".max").onclick = () => {
+  document.getElementById("wrapper").style.opacity = "1";
+};
+
+// Cerrar → efecto fade-out premium + redirección
+document.querySelector(".close").onclick = () => {
+  const fade = document.getElementById("fade");
+  fade.style.opacity = "1";
+  setTimeout(() => {
+    window.location.href = "https://rafaelmperez.com";
+  }, 800);
+};
+
 
 
 const progressMap = [20, 45, 68, 85, 100];
 
 const topBlock = document.getElementById("top-block");
 const terminal = document.getElementById("terminal");
-const key = document.getElementById("key");
 const bar = document.getElementById("progress-bar");
 
-/* Sonido */
-function playKey() {
-  key.currentTime = 0;
-  key.volume = 0.1;
-  key.play().catch(() => {});
-}
 
 function insertTop() {
+
+  // ASCII PRINCIPAL
   const ascii = document.createElement("pre");
   ascii.classList.add("ascii");
   ascii.textContent = asciiLogo;
 
-  const subtitle = document.createElement("div");
-  subtitle.classList.add("subtitle");
-  subtitle.textContent = subtitleText;
 
+  // Insertar en orden, uno debajo del otro
   topBlock.appendChild(ascii);
-  topBlock.appendChild(subtitle);
+
+  // ASCII DE RUIDO
+  const noiseAscii = document.createElement("pre");
+  noiseAscii.classList.add("ascii", "ascii-noise");
+  noiseAscii.textContent = noiseBlock;
+  topBlock.appendChild(noiseAscii);
 }
+
 
 let index = 0;
 
-function writeCommands() {
+  function writeCommands() {
   if (index >= commands.length) return showCursorAndExit();
 
   const line = document.createElement("div");
-  line.textContent = commands[index];
-  playKey();
+  line.innerHTML = commands[index];
   terminal.appendChild(line);
 
-  bar.style.width = progressMap[index] + "%";
+  // progreso dinámico REAL con porcentaje dentro de la barra
+  const progress = Math.floor(((index + 1) / commands.length) * 100);
+const fill = document.getElementById("progress-fill");
+document.getElementById("progress-bar").setAttribute("data-progress", progress);
+fill.style.width = progress + "%";
+
 
   index++;
   setTimeout(writeCommands, 460);
 }
 
+
+
+
 function showCursorAndExit() {
-  const cursorLine = document.createElement("div");
-  cursorLine.innerHTML = "$<span class='cursor'></span>";
-  terminal.appendChild(cursorLine);
+  const finalMsg = document.createElement("div");
+  finalMsg.classList.add("final-boot");
+  finalMsg.innerHTML = `<span class="ok">✔ Iniciando interfaz…</span>`;
+  terminal.appendChild(finalMsg);
 
   setTimeout(() => {
     document.getElementById("fade").style.opacity = "1";
     setTimeout(() => {
       window.location.href = "https://rafaelmperez.com/home.html";
-    }, 950);
-  }, 1200);
+    }, 900);
+  }, 700);
 }
 
+
+/* ======================
+   🔊 UNLOCK + AUTOPLAY SEGURO
+   ====================== */
 document.addEventListener("DOMContentLoaded", () => {
-  insertTop();
 
-  setTimeout(() => {
-    terminal.style.opacity = "1";
-    terminal.style.transform = "scale(1)";
-    terminal.style.animation = "ibmFlash 0.40s ease";
+    const audio = document.getElementById("boot-sound");
 
-    setTimeout(writeCommands, 400);
+    /* Logs */
+    audio.onloadeddata = () => console.log("✔ Audio cargado");
+    audio.onerror = () => console.error("❌ Error cargando audio");
 
-  }, 250);
+    /* Intento autoplay */
+    setTimeout(() => {
+        audio.volume = 0.70;
+        audio.play().catch(() => {
+            console.log("🟡 Autoplay bloqueado — esperando interacción");
+        });
+    }, 120);
+
+    /* Sistema de desbloqueo */
+    const unlock = document.getElementById("audio-unlock");
+    unlock.addEventListener("click", () => {
+        audio.volume = 0.70;
+        audio.play().then(() => {
+            console.log("✔ Audio desbloqueado");
+        });
+        unlock.remove();  // quita la capa invisible
+    }, { once: true });
+
+    /* INICIA TU ANIMACIÓN */
+    insertTop();
+
+    setTimeout(() => {
+        terminal.style.opacity = "1";
+        terminal.style.transform = "scale(1)";
+        terminal.style.animation = "ibmFlash 0.40s ease";
+
+        setTimeout(writeCommands, 400);
+    }, 250);
 });
+
+
+
+  
 </script>
 
 </body>
