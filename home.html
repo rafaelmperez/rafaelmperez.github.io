@@ -110,62 +110,12 @@
     </a>
   </div>
 
-  <!-- Contenedor para partículas -->
-  <div id="particles-bg"></div>
 
   <script>
     // Sanitizar entradas
     function sanitizeInput(input) {
       return input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
     }
-
-    // Partículas animadas
-    document.addEventListener("DOMContentLoaded", () => {
-      const particlesContainer = document.getElementById("particles-bg");
-      const numParticles = window.innerWidth < 768 ? 10 : 20;
-
-      for (let i = 0; i < numParticles; i++) {
-        const p = document.createElement("div");
-        p.classList.add("particle");
-
-        p.style.left = Math.random() * 100 + "vw";
-        p.style.top = Math.random() * 100 + "vh";
-
-        p.style.width = "6px";
-        p.style.height = "6px";
-        p.style.borderRadius = "50%";
-        p.style.position = "absolute";
-        p.style.background = "rgba(255, 215, 0, 1)";
-        p.style.boxShadow = "0 0 14px rgba(255, 215, 0, 1)";
-
-        // Movimiento suave
-        const move = () => {
-          const newX = Math.random() * 100 + "vw";
-          const newY = Math.random() * 100 + "vh";
-          const duration = (Math.random() * 8 + 4) * 1000;
-
-          p.animate(
-            [
-              { left: p.style.left, top: p.style.top },
-              { left: newX, top: newY }
-            ],
-            {
-              duration: duration,
-              fill: "forwards",
-              easing: "ease-in-out"
-            }
-          );
-
-          p.style.left = newX;
-          p.style.top = newY;
-
-          setTimeout(move, duration);
-        };
-
-        move();
-        particlesContainer.appendChild(p);
-      }
-    });
 
 
       const narracion = document.getElementById("narracion");
