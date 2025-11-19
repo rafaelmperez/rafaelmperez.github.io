@@ -431,6 +431,26 @@ code {
   width: 85%;
 }
 
+    /* --------------------------------------------------
+   📌 Restaurar NAV FIJO como antes (stick + premium)
+   -------------------------------------------------- */
+
+.barra-superior {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9998;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* 🔧 Para que el resto de la página no quede tapado */
+header {
+  margin-top: 100px !important;
+}
+
+
 
 body, p, li, a {
   font-family: 'Inter', sans-serif;
@@ -2706,6 +2726,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
 
 
 
