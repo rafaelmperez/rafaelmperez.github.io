@@ -235,6 +235,47 @@ nav {
   }
 }
 
+    /* -------------------------------------------
+   NAV NORMAL (al cargar la página)
+-------------------------------------------- */
+.barra-superior {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  padding: 16px 0; /* altura normal */
+  transition: padding 0.25s ease, background 0.25s ease;
+}
+
+/* Contenedor interno del nav */
+.barra-superior nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* -------------------------------------------
+   NAV REDUCIDA (cuando bajas scroll)
+-------------------------------------------- */
+.barra-superior.shrink {
+  padding: 6px 0 !important; /* NAV más estrecha */
+  background: rgba(0, 0, 0, 0.92);  /* más sólida para mejorar lectura */
+  border-bottom: 1px solid rgba(255,215,0,0.3);
+}
+
+/* Reducir tamaño del texto del menú */
+.barra-superior.shrink .nav-link {
+  font-size: 0.82rem !important;
+  padding: 4px 8px !important;
+}
+
+/* Iconos sociales al mismo nivel sin moverse */
+.barra-superior.shrink .social-icons img {
+  width: 20px !important;
+  height: 20px !important;
+}
+
 
 /* ================================================
    📱 MÓVILES Y TABLETS – MENÚ ADAPTATIVO
@@ -2724,8 +2765,21 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+      <script>
+document.addEventListener("scroll", function() {
+    const barra = document.querySelector(".barra-superior");
+    if (window.scrollY > 50) {
+        barra.classList.add("shrink");
+    } else {
+        barra.classList.remove("shrink");
+    }
+});
+</script>
+
+
 </body>
 </html>
+
 
 
 
