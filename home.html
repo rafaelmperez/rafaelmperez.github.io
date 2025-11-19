@@ -235,43 +235,42 @@ nav {
   }
 }
 
-    /* -------------------------------------------
-   NAV NORMAL (al cargar la página)
--------------------------------------------- */
+/* ------------------------------------------------------
+   NAV NORMAL (posición natural)
+------------------------------------------------------ */
 .barra-superior {
-  position: fixed;
+  position: relative; /* NO es fixed al inicio */
+  width: 100%;
+  padding: 16px 0;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,215,0,0.25);
+  transition: all 0.25s ease;
+}
+
+/* ------------------------------------------------------
+   NAV PEGADO ARRIBA (cuando llega al tope)
+------------------------------------------------------ */
+.barra-superior.sticky {
+  position: fixed !important;
   top: 0;
   left: 0;
   width: 100%;
+  padding: 6px 0;            /* se hace más estrecho */
+  background: rgba(0,0,0,0.92);
+  border-bottom: 1px solid rgba(255,215,0,0.35);
   z-index: 9999;
-  padding: 16px 0; /* altura normal */
-  transition: padding 0.25s ease, background 0.25s ease;
 }
 
-/* Contenedor interno del nav */
-.barra-superior nav {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-/* -------------------------------------------
-   NAV REDUCIDA (cuando bajas scroll)
--------------------------------------------- */
-.barra-superior.shrink {
-  padding: 6px 0 !important; /* NAV más estrecha */
-  background: rgba(0, 0, 0, 0.92);  /* más sólida para mejorar lectura */
-  border-bottom: 1px solid rgba(255,215,0,0.3);
-}
-
-/* Reducir tamaño del texto del menú */
-.barra-superior.shrink .nav-link {
+/* Ajustar tamaño del menú cuando está fijo */
+.barra-superior.sticky .nav-link {
   font-size: 0.82rem !important;
   padding: 4px 8px !important;
 }
 
-/* Iconos sociales al mismo nivel sin moverse */
-.barra-superior.shrink .social-icons img {
+/* Iconos sociales más pequeños, alineados */
+.barra-superior.sticky .social-icons img {
   width: 20px !important;
   height: 20px !important;
 }
@@ -471,26 +470,6 @@ code {
 .barra-superior .nav-link:hover::after {
   width: 85%;
 }
-
-    /* --------------------------------------------------
-   📌 Restaurar NAV FIJO como antes (stick + premium)
-   -------------------------------------------------- */
-
-.barra-superior {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9998;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-}
-
-/* 🔧 Para que el resto de la página no quede tapado */
-header {
-  margin-top: 100px !important;
-}
-
 
 
 body, p, li, a {
@@ -2765,7 +2744,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-      <script>
+<script>
 document.addEventListener("scroll", function() {
     const barra = document.querySelector(".barra-superior");
     if (window.scrollY > 50) {
@@ -2779,8 +2758,6 @@ document.addEventListener("scroll", function() {
 
 </body>
 </html>
-
-
 
 
 
