@@ -207,14 +207,17 @@
    🔥 NAV PREMIUM OSCURO DORADO
    ================================ */
 
-.barra-superior {
-  background: rgba(0, 0, 0, 0.85);      /* Fondo negro profesional */
-  backdrop-filter: blur(6px);           /* Efecto elegante */
-  -webkit-backdrop-filter: blur(6px);   /* Safari */
-  border-bottom: 1px solid rgba(255,215,0,0.25);  /* Sutil borde dorado */
-  padding: 12px 0;
+   .barra-superior {
+  position: relative;
   width: 100%;
+  padding: 16px 0;
+  background: rgba(0,0,0,0.92); /* ← negro real */
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,215,0,0.25);
+  transition: all 0.25s ease;
+  z-index: 100;
 }
+
 
 /* NAV interno */
 .barra-superior nav {
@@ -224,29 +227,6 @@
 /* Quitamos cualquier fondo gris heredado */
 nav {
   background: transparent !important;
-}
-
-
-@media (max-width: 768px) {
-  .barra-superior {
-    background: rgba(0,0,0,0.92) !important;
-    border-bottom: 1px solid rgba(255,215,0,0.35);
-    padding: 10px 0;
-  }
-}
-
-/* ------------------------------------------------------
-   NAV NORMAL (posición natural)
------------------------------------------------------- */
-.barra-superior {
-  position: relative; /* NO es fixed al inicio */
-  width: 100%;
-  padding: 16px 0;
-  background: rgba(0,0,0,0.75);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(255,215,0,0.25);
-  transition: all 0.25s ease;
 }
 
 /* ------------------------------------------------------
@@ -1847,6 +1827,48 @@ body {
   }
 }
 
+
+/* ------------------------------------------------------
+   ⭐ NAV: posición natural (debajo del banner)
+------------------------------------------------------ */
+.barra-superior {
+  position: relative;
+  width: 100%;
+  padding: 16px 0;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,215,0,0.25);
+  transition: all 0.25s ease;
+  z-index: 100;
+}
+
+/* ------------------------------------------------------
+   ⭐ NAV: se vuelve fija cuando llega arriba
+------------------------------------------------------ */
+.barra-superior.sticky {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 6px 0; /* NAV más baja */
+  background: rgba(0,0,0,0.92);
+  z-index: 9999;
+}
+
+/* Reducir texto al hacerse sticky */
+.barra-superior.sticky .nav-link {
+  font-size: 0.82rem !important;
+  padding: 4px 8px !important;
+}
+
+/* Iconos sociales alineados */
+.barra-superior.sticky .social-float a {
+  width: 32px !important;
+  height: 32px !important;
+  font-size: 0.75rem !important;
+}
+
+
   </style>
 
 
@@ -2744,14 +2766,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+
 <script>
-document.addEventListener("scroll", function() {
+document.addEventListener("DOMContentLoaded", () => {
     const barra = document.querySelector(".barra-superior");
-    if (window.scrollY > 50) {
-        barra.classList.add("shrink");
-    } else {
-        barra.classList.remove("shrink");
-    }
+    const offsetTop = barra.offsetTop;
+
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset >= offsetTop) {
+            barra.classList.add("sticky");
+        } else {
+            barra.classList.remove("sticky");
+        }
+    });
 });
 </script>
 
