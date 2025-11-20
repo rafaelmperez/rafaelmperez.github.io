@@ -625,6 +625,7 @@ body, p, li, a {
   letter-spacing: 1px;
   text-align: center;
   border: none !important;
+  font-size: 1.8rem !important;
 }
 
 /* ✨ Glow respirante frío */
@@ -663,6 +664,11 @@ body, p, li, a {
 /* 🚫 Ocultar cursor en la sección de contacto (móvil simulado) */
 #contacto .terminal-heading::after {
   display: none !important;
+}
+@media (max-width: 600px) {
+  .terminal-heading {
+    font-size: 1.6rem !important;
+  }
 }
 
 
