@@ -232,16 +232,6 @@ nav {
 /* ------------------------------------------------------
    NAV PEGADO ARRIBA (cuando llega al tope)
 ------------------------------------------------------ */
-.barra-superior.sticky {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 6px 0;            /* se hace más estrecho */
-  background: rgba(0,0,0,0.92);
-  border-bottom: 1px solid rgba(255,215,0,0.35);
-  z-index: 9999;
-}
 
 /* Ajustar tamaño del menú cuando está fijo */
 .barra-superior.sticky .nav-link {
@@ -255,45 +245,6 @@ nav {
   height: 20px !important;
 }
 
-
-/* ================================================
-   📱 MÓVILES Y TABLETS – MENÚ ADAPTATIVO
-   ================================================ */
-@media (max-width: 900px) {
-  .barra-superior nav {
-    width: 100%;
-    padding: 8px 0;
-    gap: 6px 10px;
-  }
-
-  .barra-superior .nav-link {
-    font-size: 0.85rem;
-    padding: 5px 10px;
-  }
-}
-
-@media (max-width: 600px) {
-  .barra-superior nav {
-    gap: 5px 8px;
-    padding: 6px 2px;
-  }
-
-  .barra-superior .nav-link {
-    font-size: 0.75rem;
-    padding: 4px 8px;
-  }
-}
-
-@media (max-width: 400px) {
-  .barra-superior nav {
-    gap: 4px 6px;
-  }
-
-  .barra-superior .nav-link {
-    font-size: 0.68rem;
-    padding: 3px 6px;
-  }
-}
 
 
 /* Fallback si el navegador no soporta blur */
@@ -529,48 +480,51 @@ body, p, li, a {
 }
 
 
-/* ======== BANNER PRINCIPAL OPTIMIZADO ======== */
+/* ======================================
+   ⭐ BANNER — Optimización Profesional Móvil
+   ====================================== */
 
 .banner-header {
   display: block;
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
-  height: auto;
   border-radius: 12px;
   border: 2px solid rgba(255, 215, 0, 0.5);
   box-shadow:
     0 0 20px rgba(255, 215, 0, 0.3),
     0 0 40px rgba(255, 215, 0, 0.1);
-  transition: box-shadow 0.5s ease, border-color 0.5s ease;
+  transition: box-shadow 0.4s ease;
 }
 
-/* 📱 Tablets */
+/* Tablets horizontales y laptops pequeñas */
 @media (max-width: 1024px) {
   .banner-header {
     max-width: 95%;
   }
 }
 
-/* 📱 Tablets pequeñas */
+/* Tablets verticales y móviles grandes */
 @media (max-width: 768px) {
   .banner-header {
     max-width: 100%;
     border-width: 2px;
+    border-radius: 10px;
   }
 }
 
-/* 📱 Móviles */
+/* Móviles */
 @media (max-width: 480px) {
   .banner-header {
     max-width: 100%;
     border-width: 2px;
     border-radius: 10px;
     box-shadow:
-      0 0 25px rgba(255, 215, 0, 0.4),
-      0 0 55px rgba(255, 215, 0, 0.2);
+      0 0 28px rgba(255, 215, 0, 0.45),
+      0 0 55px rgba(255, 215, 0, 0.25); /* Glow extra elegante */
   }
 }
+
 
 
 .banner-header:hover {
