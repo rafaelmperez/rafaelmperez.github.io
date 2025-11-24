@@ -433,23 +433,24 @@ code {
   color: #fff;
 }
 
-/* “Sub-brillo” inferior (línea luminosa que aparece al hover) */
-.barra-superior .nav-link::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -3px;
-  transform: translateX(-50%);
-  width: 0%;
-  height: 2px;
-  background: linear-gradient(90deg, #b8860b, #ffd700, #b8860b);
-  border-radius: 20px;
-  transition: width 260ms ease;
+/* ⭐ Borde dorado completo al hover */
+.barra-superior .nav-link {
+  border: 1px solid transparent;
+  transition: all .2s ease;
 }
 
-.barra-superior .nav-link:hover::after {
-  width: 85%;
+.barra-superior .nav-link:hover {
+  border-color: rgba(255,215,0,0.9);
+  box-shadow:
+    0 0 10px rgba(255,215,0,0.35),
+    0 0 20px rgba(255,215,0,0.2);
 }
+
+/* Eliminamos la línea */
+.barra-superior .nav-link::after {
+  display: none !important;
+}
+
 
 
 body, p, li, a {
