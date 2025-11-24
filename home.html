@@ -529,11 +529,13 @@ body, p, li, a {
 }
 
 
+/* ======== BANNER PRINCIPAL OPTIMIZADO ======== */
+
 .banner-header {
   display: block;
   margin: 0 auto;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   height: auto;
   border-radius: 12px;
   border: 2px solid rgba(255, 215, 0, 0.5);
@@ -543,20 +545,32 @@ body, p, li, a {
   transition: box-shadow 0.5s ease, border-color 0.5s ease;
 }
 
-@media (max-width: 768px) {
+/* 📱 Tablets */
+@media (max-width: 1024px) {
   .banner-header {
     max-width: 95%;
   }
 }
 
-@media (max-width: 480px) {
+/* 📱 Tablets pequeñas */
+@media (max-width: 768px) {
   .banner-header {
-    max-width: 98%;
-    border-width: 1px;
-    border-radius: 10px;
+    max-width: 100%;
+    border-width: 2px;
   }
 }
 
+/* 📱 Móviles */
+@media (max-width: 480px) {
+  .banner-header {
+    max-width: 100%;
+    border-width: 2px;
+    border-radius: 10px;
+    box-shadow:
+      0 0 25px rgba(255, 215, 0, 0.4),
+      0 0 55px rgba(255, 215, 0, 0.2);
+  }
+}
 
 
 .banner-header:hover {
@@ -565,11 +579,6 @@ body, p, li, a {
     0 0 60px rgba(255, 215, 0, 0.2);
   border-color: rgba(255, 215, 0, 0.7);
 }
-
-.banner-header {
-  margin: 0 auto 1px auto; /* menos espacio debajo del banner */
-}
-
 
   /* Secciones, tarjetas y recuadros */
   section, .card, .proyecto, .habilidad, .contenedor, .bloque {
@@ -792,27 +801,6 @@ footer a {
   width: 100%;
 }
 
-
-
-/* Texto debajo del banner */
-.banner-text {
-  margin-top: 1px;
-  font-size: 1.4em;
-  font-weight: bold;
-  color: #333;
-}
-
-/* 📱 Responsive para pantallas pequeñas */
-@media screen and (max-width: 768px) {
-  .banner-header {
-    max-width: 70%; /* Se adapta mejor en móviles */
-  }
-
-  .banner-text {
-    font-size: 1.1em;
-    padding: 0 10px;
-  }
-}
 
 /* 🔹 Espacio entre el nav y la sección Sobre Mí */
 #sobre-mi {
