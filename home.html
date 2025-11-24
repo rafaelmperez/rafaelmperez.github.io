@@ -168,6 +168,9 @@
   </div>
 </header>
 
+<!-- ⭐ Línea premium entre banner y menú -->
+<div class="divisor-banner-nav"></div>
+
 <!-- 🔥 BARRA SUPERIOR DEBAJO DEL HEADER -->
 <div class="barra-superior">
 
@@ -2102,6 +2105,40 @@ html body nav .nav-link {
   font-weight: 700 !important;
   letter-spacing: 0.8px !important;
   text-transform: uppercase !important;
+}
+
+
+/* ==========================================
+   ✨ Línea divisoria premium entre Banner → NAV
+   ========================================== */
+
+.divisor-banner-nav {
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    rgba(255,215,0,0) 0%,
+    rgba(255,215,0,0.6) 50%,
+    rgba(255,215,0,0) 100%
+  );
+  box-shadow:
+    0 1px 3px rgba(0,0,0,0.6),
+    0 -1px 3px rgba(255,215,0,0.15);
+  margin: -6px 0 8px 0; /* se ajusta para quedar pegado y elegante */
+}
+
+/* Móviles pequeños: más sutil */
+@media (max-width: 480px) {
+  .divisor-banner-nav {
+    height: 2px;
+    margin: -4px 0 6px 0;
+    background: linear-gradient(
+      to right,
+      rgba(255,215,0,0) 0%,
+      rgba(255,215,0,0.5) 50%,
+      rgba(255,215,0,0) 100%
+    );
+  }
 }
 
 
