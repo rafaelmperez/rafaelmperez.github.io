@@ -633,12 +633,6 @@ body, p, li, a {
     color: #ffd700 !important;
   }
 
-  /* Párrafos, listas, enlaces, texto general */
-  p, li, a, strong, em, code {
-    color: #d4af37 !important;
-  }
-
-
 
 /* ==========================================
    🟧 Cursor tipo bloque (estilo Ubuntu Terminal)
@@ -947,7 +941,7 @@ h1.titulo-principal {
 }
 
 .certificacion-descripcion {
-  color: #000000; /* negro */
+  color: #d4af37;
 }
 
 
@@ -1205,10 +1199,17 @@ body {
 }
 .card p { 
   font-size: 16px;  /* más grande y fácil de leer */
-  color: #000000;
   line-height: 1.8; /* más espacio entre líneas */
   margin-bottom: 1.5rem; /* separar párrafos */
 }
+
+#proyectos .card p,
+#scripts .card p,
+#certificaciones .card p 
+{
+  color: #d4af37 !important;
+}
+
 
 @keyframes bgShift {
   0% { background-position: 0% 50%; }
@@ -1319,11 +1320,14 @@ section#sobre-mi > *:first-child {
   max-width: 800px;
   line-height: 1.6;
   margin: 0 auto;
+  color: #d4af37 !important;   /* ← color dorado general */
 }
 
 .texto-sobre-mi p {
   margin-bottom: 10px;
+  color: #d4af37 !important;   /* ← asegura dorado también en los párrafos */
 }
+
 
 /* Botón PDF más cerca del texto */
 #sobre-mi .sysadmin-badge {
@@ -1930,7 +1934,6 @@ body {
       margin-top: 20px;
       text-align: center;
       font-size: 1rem;
-      color: #555;
       line-height: 1.6;
     }
 
@@ -2156,6 +2159,121 @@ html body nav .nav-link {
   }
 }
 
+:root {
+  /* Fondos */
+  --bg-main: #020617;        /* fondo global (casi negro, azul marino muy oscuro) */
+  --bg-surface: #050816;     /* tarjetas y secciones */
+  --bg-elevated: #0b1120;    /* elementos destacados */
+
+  /* Dorados */
+  --accent-gold: #f5d36b;           /* dorado principal */
+  --accent-gold-strong: #facc15;    /* dorado muy vivo para hover/destacados */
+  --accent-gold-soft: #d4af37;      /* dorado “clásico” (el que ya usabas) */
+
+  /* Texto */
+  --text-main: #f9fafb;     /* texto principal casi blanco */
+  --text-soft: #e5e7eb;     /* texto normal en párrafos */
+  --text-muted: #9ca3af;    /* texto secundario / notas */
+
+  /* Bordes y sombras */
+  --border-subtle: rgba(148, 163, 184, 0.45);
+  --border-strong: rgba(245, 211, 107, 0.65);
+  --shadow-soft: 0 0 18px rgba(245, 211, 107, 0.18);
+}
+/* ==========================================
+   🎨 PALETA UNIFICADA (OVERRIDES DE COLOR)
+   ========================================== */
+
+/* Fondo global y color base de texto */
+body {
+  background: radial-gradient(circle at top, #020617 0%, #020617 30%, #050816 60%, #020617 100%);
+  color: var(--text-soft);
+}
+
+/* Secciones y tarjetas: mismas bases */
+section,
+.card,
+.proyecto,
+.habilidad,
+.contenedor,
+.bloque {
+  background-color: var(--bg-surface) !important;
+  border: 1px solid var(--border-subtle) !important;
+  box-shadow: var(--shadow-soft);
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--accent-gold-strong) !important;
+}
+
+/* Enlaces dentro del contenido */
+section a {
+  color: var(--accent-gold) !important;
+}
+
+section a:hover {
+  color: var(--accent-gold-strong) !important;
+}
+
+/* Navbar */
+.barra-superior {
+  background: rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid rgba(245, 211, 107, 0.45);
+}
+
+.barra-superior .nav-link {
+  color: var(--accent-gold) !important;
+  border-color: transparent;
+}
+
+.barra-superior .nav-link:hover,
+.barra-superior .nav-link.is-active {
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-soft));
+  color: #000 !important;
+  border-color: var(--accent-gold-strong);
+}
+
+/* Iconos sociales */
+.social-float a {
+  background: rgba(10, 10, 10, 0.95);
+  color: var(--accent-gold) !important;
+  border-color: rgba(245, 211, 107, 0.5);
+}
+
+.social-float a:hover {
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-soft));
+  color: #000 !important;
+}
+
+/* Botones tipo sysadmin-badge */
+.sysadmin-badge {
+  background-color: #050816;
+  color: var(--accent-gold) !important;
+  border: 1px solid var(--border-strong);
+}
+
+.sysadmin-badge:hover {
+  background-color: var(--accent-gold-strong);
+  color: #000 !important;
+}
+
+/* Terminal heading: mantener blanco pero integrado */
+.terminal-heading {
+  color: var(--text-main) !important;
+}
+
+
+/* Títulos dentro de estas secciones */
+#sobre-mi h2, #sobre-mi h3,
+#proyectos h2, #proyectos h3,
+#scripts h2, #scripts h3 {
+  color: #ffd700 !important;     /* dorado intenso */
+}
+.card p { 
+  color: #d4af37;
+}
+h2 { color: #d4af37!important; }
 
   </style>
 
