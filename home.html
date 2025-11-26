@@ -471,11 +471,6 @@ code {
 }
 
 
-
-body, p, li, a {
-  font-family: 'Inter', sans-serif;
-}
-
 .barra-superior .nav-link:hover::after {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
@@ -1442,6 +1437,7 @@ section {
   padding: 6px 10px;
   transition: color 0.3s ease;
   font-weight: bold;
+ font-family: 'Orbitron', sans-serif !important;
 }
 
 .nav-link:hover {
@@ -2097,15 +2093,7 @@ color: #d4af37;   /* dorado */
   }
 }
 
-/* === NAV — FORZAR TIPOGRAFÍA DEFINITIVA === */
-body header .barra-superior nav .nav-link,
-body .barra-superior nav .nav-link,
-html body nav .nav-link {
-  font-family: 'Rajdhani', sans-serif !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.8px !important;
-  text-transform: uppercase !important;
-}
+
 
 /* 📌 Reducir tamaño del banner solo en PC */
 @media (min-width: 1024px) {
