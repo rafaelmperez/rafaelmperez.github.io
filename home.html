@@ -181,17 +181,28 @@
     <a href="#contacto" class="nav-link">Contáctame</a>
   </nav>
 
-  <div class="social-float">
-    <a href="https://www.linkedin.com/in/rafaelmperez/" target="_blank">
+<div class="social-float">
+    <a class="tooltip" href="https://www.linkedin.com/in/rafaelmperez/" target="_blank">
       <i class="fab fa-linkedin-in"></i>
+      <span class="tooltip-text">LinkedIn</span>
     </a>
-    <a href="https://github.com/Rafaelmperez" target="_blank">
+
+    <a class="tooltip" href="https://github.com/Rafaelmperez" target="_blank">
       <i class="fab fa-github"></i>
+      <span class="tooltip-text">GitHub</span>
     </a>
-    <a href="https://upgrademe.blog/" target="_blank">
+
+    <a class="tooltip" href="https://upgrademe.blog/" target="_blank">
       <i class="fab fa-blogger-b"></i>
+      <span class="tooltip-text">Blog personal</span>
     </a>
-  </div>
+
+    <a class="tooltip" href="https://www.credly.com/users/rafael-moreno-perez/badges#credly" target="_blank">
+      <i class="fas fa-certificate"></i>
+      <span class="tooltip-text">Credly Insignias</span>
+    </a>
+</div>
+
 
 </div>
 
@@ -201,7 +212,35 @@
 
 
   <style>
-    
+.social-float a {
+  position: relative;
+  overflow: visible !important;   /* ← CAMBIAR ESTO */
+  ...
+}
+
+
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 125%;          /* Coloca el tooltip encima */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.social-float a:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
   /* Todo tu CSS aquí... */
 /* ================================
    🔥 NAV PREMIUM OSCURO DORADO
