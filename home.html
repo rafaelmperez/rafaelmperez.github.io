@@ -1099,17 +1099,6 @@ button:hover {
   line-height: 1.6;
 }
 
-.card {
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-  width: 100%;
-  max-width: 1000px;
-  margin: 20px auto;
-  box-sizing: border-box;
-}
 
 
 /* Estilos específicos para pantallas pequeñas */
@@ -1173,6 +1162,53 @@ body {
 #certificaciones .card p 
 {
   color: #d4af37 !important;
+}
+/* ================================
+   🟦 CARDS PROYECTOS / SCRIPTS PREMIUM
+   ================================ */
+
+.card {
+  background: #000          
+  border: 1px solid rgba(245, 211, 107, 0.35) !important;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow:
+    0 0 15px rgba(245, 211, 107, 0.12),
+    inset 0 0 10px rgba(255, 255, 255, 0.03);
+  transition: all .25s ease !important;
+  color: #d4af37 !important;
+}
+
+/* Hover leve, serio, no kitsch */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 0 22px rgba(245, 211, 107, 0.22),
+    inset 0 0 14px rgba(255, 255, 255, 0.06);
+}
+
+/* Títulos */
+.card h3 {
+  color: #e9d27e !important;
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  text-shadow: 0 0 8px rgba(245, 211, 107, 0.3);
+}
+
+/* Textos */
+.card p {
+  color: #c9b678 !important;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Imagenes */
+.card img {
+  border-radius: 10px;
+  border: 1px solid rgba(245,211,107,0.25);
+  box-shadow:
+    0 0 12px rgba(245, 211, 107, 0.12),
+    inset 0 0 8px rgba(255, 255, 255, 0.05);
 }
 
 
@@ -2186,6 +2222,33 @@ section a:hover {
   color: #d4af37;
 }
 h2 { color: #c5a54a !important; }
+
+
+/* ================================
+   🎨 TECHLINE PREMIUM BLACK & GOLD
+   ================================ */
+.techline span {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
+
+/* Oro satinado (kernel, ssh, ubuntu) */
+.techline span:nth-child(1) { color: #c5a54a !important; }
+
+/* Azul acero premium (python, PAM, Wireshark, GeoIP) */
+.techline span:nth-child(2) { color: #8899aa !important; }
+
+/* Verde oliva grisáceo (audit, ufw, monitoring) */
+.techline span:nth-child(3) { color: #7da37c !important; }
+
+/* Lila apagado premium (aide, usbguard, IA local) */
+.techline span:nth-child(4) { color: #9f8ac2 !important; }
+
+/* Gris dorado (suricata, auth.log, herramientas varias) */
+.techline span:nth-child(5) { 
+  color: #bfbfbf !important; 
+}
 
   </style>
 
