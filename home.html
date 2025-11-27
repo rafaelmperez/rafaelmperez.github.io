@@ -1188,14 +1188,44 @@ h1, h2, h3 {
   letter-spacing: 1px;
 }
 
+/* === BADGES PREMIUM BLACK & GOLD — ESTÁTICOS Y CENTRADOS === */
 
 .habilidades-icons {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
+  gap: 14px;
+  justify-content: center;    /* centrado perfecto */
+  padding: 15px 0;
 }
+
+/* Badges premium estáticos */
+.habilidades-icons img {
+  height: 28px;               /* tamaño elegante */
+  border-radius: 10px;
+
+  background: rgba(255, 215, 0, 0.10);
+  border: 1px solid rgba(255, 215, 0, 0.20);
+
+  padding: 4px 8px;
+
+  box-shadow:
+    0 0 12px rgba(255, 215, 0, 0.12),
+    0 0 18px rgba(255, 215, 0, 0.06);
+
+  transition: all 0.25s ease; /* suavidad sin movimiento */
+}
+
+/* Hover premium suave, sin moverse */
+.habilidades-icons img:hover {
+  background: rgba(255, 215, 0, 0.10) !important;
+  border-color: rgba(255, 215, 0, 0.20) !important;
+  box-shadow:
+    0 0 12px rgba(255, 215, 0, 0.12) !important,
+    0 0 18px rgba(255, 215, 0, 0.06) !important;
+  transform: none !important;
+}
+
+
 
   .card {
     width: 100%;
@@ -2087,8 +2117,7 @@ section,
 
 /* Títulos */
 h1, h2, h3, h4, h5, h6 {
-  color: var(--accent-gold-strong) !important;
-}
+--accent-gold-strong: #c5a54a;}
 
 /* Enlaces dentro del contenido */
 section a {
@@ -2156,8 +2185,7 @@ section a:hover {
 .card p { 
   color: #d4af37;
 }
-h2 { color: #d4af37!important; }
-
+h2 { color: #c5a54a !important; }
 
   </style>
 
@@ -2306,56 +2334,55 @@ h2 { color: #d4af37!important; }
 <div class="habilidades-icons">
 
     <!-- Sistemas Operativos -->
-    <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Ubuntu" title="Ubuntu" />
-    <img src="https://img.shields.io/badge/Debian-A81D34?style=for-the-badge&logo=debian&logoColor=white" alt="Debian / Kali" title="Debian / Kali Linux" />
-    <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows" title="Windows Server / Windows 10" />
+    <img src="https://img.shields.io/badge/Ubuntu-000000?style=flat-square&logo=ubuntu&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="Ubuntu" />
+    <img src="https://img.shields.io/badge/Debian-000000?style=flat-square&logo=debian&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="Debian" />
+    <img src="https://img.shields.io/badge/Windows-000000?style=flat-square&logo=windows&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="Windows" />
 
     <!-- Lenguajes y scripting -->
-    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" title="Python" />
-    <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash" title="Bash" />
-    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" title="JavaScript" />
+    <img src="https://img.shields.io/badge/Python-000000?style=flat-square&logo=python&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="Python" />
+    <img src="https://img.shields.io/badge/Bash-000000?style=flat-square&logo=gnubash&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="Bash" />
+    <img src="https://img.shields.io/badge/JavaScript-000000?style=flat-square&logo=javascript&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="JavaScript" />
 
     <!-- Automatización / Infraestructura -->
-    <img src="https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white" alt="Ansible" title="Ansible" />
-    <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" title="Docker" />
-    <img src="https://img.shields.io/badge/Vagrant-1563EA?style=for-the-badge&logo=vagrant&logoColor=white" alt="Vagrant" title="Vagrant" />
+    <img src="https://img.shields.io/badge/Ansible-000000?style=flat-square&logo=ansible&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="Ansible" />
+    <img src="https://img.shields.io/badge/Docker-000000?style=flat-square&logo=docker&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="Docker" />
+    <img src="https://img.shields.io/badge/Vagrant-000000?style=flat-square&logo=vagrant&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="Vagrant" />
 
     <!-- Herramientas de seguridad -->
-    <img src="https://img.shields.io/badge/Nmap-2E8B57?style=for-the-badge&logo=nmap&logoColor=white" alt="Nmap" title="Nmap" />
-    <img src="https://img.shields.io/badge/Metasploit-512BD4?style=for-the-badge&logo=metasploit&logoColor=white" alt="Metasploit" title="Metasploit Framework" />
-    <img src="https://img.shields.io/badge/Wireshark-005C9C?style=for-the-badge&logo=wireshark&logoColor=white" alt="Wireshark" title="Wireshark" />
-    <img src="https://img.shields.io/badge/Burp%20Suite-F78C6B?style=for-the-badge&logo=burpsuite&logoColor=white" alt="Burp Suite" title="Burp Suite" />
-    <img src="https://img.shields.io/badge/OWASP%20ZAP-FF7B00?style=for-the-badge&logo=owasp&logoColor=white" alt="OWASP ZAP" title="OWASP ZAP" />
+    <img src="https://img.shields.io/badge/Nmap-000000?style=flat-square&logo=nmap&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="Nmap" />
+    <img src="https://img.shields.io/badge/Metasploit-000000?style=flat-square&logo=metasploit&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="Metasploit" />
+    <img src="https://img.shields.io/badge/Wireshark-000000?style=flat-square&logo=wireshark&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="Wireshark" />
+    <img src="https://img.shields.io/badge/Burp%20Suite-000000?style=flat-square&logo=burpsuite&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="Burp Suite" />
+    <img src="https://img.shields.io/badge/OWASP%20ZAP-000000?style=flat-square&logo=owasp&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="OWASP ZAP" />
 
     <!-- Observabilidad / Monitoreo -->
-    <img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white" alt="Grafana" title="Grafana" />
-    <img src="https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white" alt="Prometheus" title="Prometheus / Node Exporter" />
+    <img src="https://img.shields.io/badge/Grafana-000000?style=flat-square&logo=grafana&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="Grafana" />
+    <img src="https://img.shields.io/badge/Prometheus-000000?style=flat-square&logo=prometheus&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="Prometheus" />
 
-    <!-- Control de versiones y desarrollo -->
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" title="GitHub" />
-    <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" title="Git" />
-    <img src="https://img.shields.io/badge/VS%20Code-0078D7?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Visual Studio Code" title="Visual Studio Code" />
+    <!-- Control de versiones -->
+    <img src="https://img.shields.io/badge/GitHub-000000?style=flat-square&logo=github&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="GitHub" />
+    <img src="https://img.shields.io/badge/Git-000000?style=flat-square&logo=git&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="Git" />
+    <img src="https://img.shields.io/badge/VS%20Code-000000?style=flat-square&logo=visualstudiocode&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="VS Code" />
 
     <!-- Cloud & Virtualización -->
-    <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS" title="AWS" />
-    <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" alt="Azure" title="Azure" />
-    <img src="https://img.shields.io/badge/VirtualBox-1A73E8?style=for-the-badge&logo=virtualbox&logoColor=white" alt="VirtualBox" title="VirtualBox" />
+    <img src="https://img.shields.io/badge/AWS-000000?style=flat-square&logo=amazonaws&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="AWS" />
+    <img src="https://img.shields.io/badge/Azure-000000?style=flat-square&logo=microsoftazure&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="Azure" />
+    <img src="https://img.shields.io/badge/VirtualBox-000000?style=flat-square&logo=virtualbox&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="VirtualBox" />
 
     <!-- Bases de datos -->
-    <img src="https://img.shields.io/badge/MySQL-00618A?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" title="MySQL" />
-    <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" title="SQLite" />
+    <img src="https://img.shields.io/badge/MySQL-000000?style=flat-square&logo=mysql&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="MySQL" />
+    <img src="https://img.shields.io/badge/SQLite-000000?style=flat-square&logo=sqlite&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="SQLite" />
 
     <!-- Herramientas y Entornos Clave -->
-<img src="https://img.shields.io/badge/Proxmox-E57000?style=for-the-badge&logo=proxmox&logoColor=white" alt="Proxmox" title="Proxmox VE" />
-<img src="https://img.shields.io/badge/Terraform-623CE4?style=for-the-badge&logo=terraform&logoColor=white" alt="Terraform" title="Terraform" />
-<img src="https://img.shields.io/badge/Fail2Ban-000000?style=for-the-badge&logo=linux&logoColor=white" alt="Fail2Ban" title="Fail2Ban" />
-<img src="https://img.shields.io/badge/Lynis-0078D7?style=for-the-badge&logo=linux&logoColor=white" alt="Lynis" title="Lynis" />
-<img src="https://img.shields.io/badge/Zabbix-DC382D?style=for-the-badge&logo=zabbix&logoColor=white" alt="Zabbix" title="Zabbix" />
-<img src="https://img.shields.io/badge/OpenVAS-78C850?style=for-the-badge&logo=openvas&logoColor=white" alt="OpenVAS" title="OpenVAS / Greenbone" />
+    <img src="https://img.shields.io/badge/Proxmox-000000?style=flat-square&logo=proxmox&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="Proxmox" />
+    <img src="https://img.shields.io/badge/Terraform-000000?style=flat-square&logo=terraform&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="Terraform" />
+    <img src="https://img.shields.io/badge/Fail2Ban-000000?style=flat-square&logo=linux&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="Fail2Ban" />
+    <img src="https://img.shields.io/badge/Lynis-000000?style=flat-square&logo=linux&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="Lynis" />
+    <img src="https://img.shields.io/badge/Zabbix-000000?style=flat-square&logo=zabbix&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="Zabbix" />
+    <img src="https://img.shields.io/badge/OpenVAS-000000?style=flat-square&logo=openvas&color=D4AF37&labelColor=000000&logoColor=F5D36B" alt="OpenVAS" />
 
-
-  </div>
 </div>
+
 
 </section>
 
