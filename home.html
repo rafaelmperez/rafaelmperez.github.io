@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 <head>
 
@@ -94,11 +94,6 @@
 
 <body>
 
-  <!-- narración principal -->
-<audio id="narracion" src="https://rafaelmperez.com/sounds/portafolioplay.aac" preload="auto"></audio>
-<!-- sonido corto del menú -->
-<audio id="menu-sound" src="https://rafaelmperez.com/sounds/clip.aac" preload="auto"></audio>
-
   <!-- Contenedor del traductor (necesario para Google) -->
   <div id="google_translate_element" style="display: none;"></div>
 
@@ -177,21 +172,32 @@
     <a href="#proyectos" class="nav-link">Proyectos</a>
     <a href="#scripts" class="nav-link">Scripts</a>
     <a href="#certificaciones" class="nav-link">Certificaciones</a>
-    <a href="#objetivos" class="nav-link">CV</a>
+    <a href="#cv" class="nav-link">CV</a>
     <a href="#contacto" class="nav-link">Contáctame</a>
   </nav>
 
-  <div class="social-float">
-    <a href="https://www.linkedin.com/in/rafaelmperez/" target="_blank">
+<div class="social-float">
+    <a class="tooltip" href="https://www.linkedin.com/in/rafaelmperez/" target="_blank">
       <i class="fab fa-linkedin-in"></i>
+      <span class="tooltip-text">LinkedIn</span>
     </a>
-    <a href="https://github.com/Rafaelmperez" target="_blank">
+
+    <a class="tooltip" href="https://github.com/Rafaelmperez" target="_blank">
       <i class="fab fa-github"></i>
+      <span class="tooltip-text">GitHub</span>
     </a>
-    <a href="https://upgrademe.blog/" target="_blank">
+
+    <a class="tooltip" href="https://upgrademe.blog/" target="_blank">
       <i class="fab fa-blogger-b"></i>
+      <span class="tooltip-text">Blog personal</span>
     </a>
-  </div>
+
+    <a class="tooltip" href="https://www.credly.com/users/rafael-moreno-perez/badges#credly" target="_blank">
+      <i class="fas fa-certificate"></i>
+      <span class="tooltip-text">Credly Insignias</span>
+    </a>
+</div>
+
 
 </div>
 
@@ -201,7 +207,35 @@
 
 
   <style>
-    
+.social-float a {
+  position: relative;
+  overflow: visible !important;   /* ← CAMBIAR ESTO */
+  ...
+}
+
+
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 125%;          /* Coloca el tooltip encima */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.social-float a:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
   /* Todo tu CSS aquí... */
 /* ================================
    🔥 NAV PREMIUM OSCURO DORADO
@@ -245,7 +279,7 @@ nav {
 
 /* Ajustar tamaño del menú cuando está fijo */
 .barra-superior.sticky .nav-link {
-  font-size: 0.82rem !important;
+  font-size: 1.3rem;
   padding: 4px 8px !important;
 }
 
@@ -265,11 +299,6 @@ nav {
     padding: 8px 0;
     gap: 6px 10px;
   }
-
-  .barra-superior .nav-link {
-    font-size: 0.85rem;
-    padding: 5px 10px;
-  }
 }
 
 @media (max-width: 600px) {
@@ -277,21 +306,11 @@ nav {
     gap: 5px 8px;
     padding: 6px 2px;
   }
-
-  .barra-superior .nav-link {
-    font-size: 0.75rem;
-    padding: 4px 8px;
-  }
 }
 
 @media (max-width: 400px) {
   .barra-superior nav {
     gap: 4px 6px;
-  }
-
-  .barra-superior .nav-link {
-    font-size: 0.68rem;
-    padding: 3px 6px;
   }
 }
 
@@ -345,7 +364,7 @@ code {
   justify-content: center;
   padding: 8px 12px;
   border-radius: 7px;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   font-weight: 600;
   text-decoration: none;
   letter-spacing: 0.02em;
@@ -411,7 +430,7 @@ code {
   position: relative;
   display: inline-block;
   padding: 8px 14px;
-  font-size: 0.92rem;
+  font-size: 1.2rem;
   font-weight: 600;
   text-decoration: none;
   color: #d4af37;
@@ -433,28 +452,24 @@ code {
   color: #fff;
 }
 
-/* “Sub-brillo” inferior (línea luminosa que aparece al hover) */
+/* ⭐ Borde dorado completo al hover */
+.barra-superior .nav-link {
+  border: 1px solid transparent;
+  transition: all .2s ease;
+}
+
+.barra-superior .nav-link:hover {
+  border-color: rgba(255,215,0,0.9);
+  box-shadow:
+    0 0 10px rgba(255,215,0,0.35),
+    0 0 20px rgba(255,215,0,0.2);
+}
+
+/* Eliminamos la línea */
 .barra-superior .nav-link::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -3px;
-  transform: translateX(-50%);
-  width: 0%;
-  height: 2px;
-  background: linear-gradient(90deg, #b8860b, #ffd700, #b8860b);
-  border-radius: 20px;
-  transition: width 260ms ease;
+  display: none !important;
 }
 
-.barra-superior .nav-link:hover::after {
-  width: 85%;
-}
-
-
-body, p, li, a {
-  font-family: 'Inter', sans-serif;
-}
 
 .barra-superior .nav-link:hover::after {
   opacity: 1;
@@ -529,45 +544,51 @@ body, p, li, a {
 }
 
 
+/* ======== BANNER PRINCIPAL OPTIMIZADO ======== */
+
 .banner-header {
   display: block;
   margin: 0 auto;
   width: 100%;
-  max-width: 1100px;
+  max-width: 900px;
   height: auto;
   border-radius: 12px;
-  border: 2px solid rgba(255, 215, 0, 0.5);
-  box-shadow:
-    0 0 20px rgba(255, 215, 0, 0.3),
-    0 0 40px rgba(255, 215, 0, 0.1);
-  transition: box-shadow 0.5s ease, border-color 0.5s ease;
+  border: none !important;
+  box-shadow: none !important;
 }
 
-@media (max-width: 768px) {
+
+/* 📱 Tablets */
+@media (max-width: 1024px) {
   .banner-header {
     max-width: 95%;
   }
 }
 
+/* 📱 Tablets pequeñas */
+@media (max-width: 768px) {
+  .banner-header {
+    max-width: 100%;
+    border-width: 2px;
+  }
+}
+
+/* 📱 Móviles */
 @media (max-width: 480px) {
   .banner-header {
-    max-width: 98%;
-    border-width: 1px;
+    max-width: 100%;
+    border-width: 2px;
     border-radius: 10px;
+    box-shadow:
+      0 0 25px rgba(255, 215, 0, 0.4),
+      0 0 55px rgba(255, 215, 0, 0.2);
   }
 }
 
 
-
 .banner-header:hover {
-  box-shadow:
-    0 0 35px rgba(255, 215, 0, 0.4),
-    0 0 60px rgba(255, 215, 0, 0.2);
-  border-color: rgba(255, 215, 0, 0.7);
-}
-
-.banner-header {
-  margin: 0 auto 1px auto; /* menos espacio debajo del banner */
+  box-shadow: none !important;
+  border-color: transparent !important;
 }
 
 
@@ -583,12 +604,6 @@ body, p, li, a {
   h1, h2, h3, h4, h5, h6 {
     color: #ffd700 !important;
   }
-
-  /* Párrafos, listas, enlaces, texto general */
-  p, li, a, strong, em, code {
-    color: #d4af37 !important;
-  }
-
 
 
 /* ==========================================
@@ -792,34 +807,6 @@ footer a {
   width: 100%;
 }
 
-
-
-/* Texto debajo del banner */
-.banner-text {
-  margin-top: 1px;
-  font-size: 1.4em;
-  font-weight: bold;
-  color: #333;
-}
-
-/* 📱 Responsive para pantallas pequeñas */
-@media screen and (max-width: 768px) {
-  .banner-header {
-    max-width: 70%; /* Se adapta mejor en móviles */
-  }
-
-  .banner-text {
-    font-size: 1.1em;
-    padding: 0 10px;
-  }
-}
-
-/* 🔹 Espacio entre el nav y la sección Sobre Mí */
-#sobre-mi {
-  margin-top: 100; /* ajusta este valor a tu gusto */
-  padding-top: 0 !important;     /* opcional, para que no haya padding extra */
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;500&display=swap');
 
 
@@ -919,7 +906,7 @@ h1.titulo-principal {
 }
 
 .certificacion-descripcion {
-  color: #000000; /* negro */
+  color: #d4af37;
 }
 
 
@@ -1177,10 +1164,17 @@ body {
 }
 .card p { 
   font-size: 16px;  /* más grande y fácil de leer */
-  color: #000000;
   line-height: 1.8; /* más espacio entre líneas */
   margin-bottom: 1.5rem; /* separar párrafos */
 }
+
+#proyectos .card p,
+#scripts .card p,
+#certificaciones .card p 
+{
+  color: #d4af37 !important;
+}
+
 
 @keyframes bgShift {
   0% { background-position: 0% 50%; }
@@ -1291,11 +1285,14 @@ section#sobre-mi > *:first-child {
   max-width: 800px;
   line-height: 1.6;
   margin: 0 auto;
+  color: #d4af37 !important;   /* ← color dorado general */
 }
 
 .texto-sobre-mi p {
   margin-bottom: 10px;
+  color: #d4af37 !important;   /* ← asegura dorado también en los párrafos */
 }
+
 
 /* Botón PDF más cerca del texto */
 #sobre-mi .sysadmin-badge {
@@ -1326,7 +1323,7 @@ section#sobre-mi > *:first-child {
 }
 
 #cv .card {
-  max-width: 300px; /* Ajusta este valor según el ancho deseado */
+  max-width: 600px; /* Ajusta este valor según el ancho deseado */
   margin: 0 auto; /* Centra la tarjeta horizontalmente */
   padding: 1.5rem; /* Ajusta el padding para que sea más compacto */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Mantiene la sombra consistente */
@@ -1430,6 +1427,7 @@ section {
   padding: 6px 10px;
   transition: color 0.3s ease;
   font-weight: bold;
+ font-family: 'Orbitron', sans-serif !important;
 }
 
 .nav-link:hover {
@@ -1647,7 +1645,7 @@ body {
   gap: 6px;
   text-decoration: none;
   background-color: #222;
-  color: #fff;
+color: #d4af37;   /* dorado */
   padding: 6px 12px;
   border-radius: 8px;
   font-family: "Montserrat", sans-serif;
@@ -1818,19 +1816,6 @@ body {
     right: 10px !important;
     z-index: 10000 !important;    /* 🔹 encima de todo */
   }
-
-  .language-switcher a {
-    padding: 4px 8px !important;
-    font-size: 0.8rem !important;
-    gap: 4px !important;
-    border-radius: 6px !important;
-    background-color: rgba(0, 0, 0, 0.8) !important;
-  }
-
-  .language-switcher .flag {
-    width: 16px !important;
-    height: 12px !important;
-  }
 }
 
 
@@ -1859,12 +1844,6 @@ body {
   padding: 6px 0; /* NAV más baja */
   background: rgba(0,0,0,0.92);
   z-index: 9999;
-}
-
-/* Reducir texto al hacerse sticky */
-.barra-superior.sticky .nav-link {
-  font-size: 0.82rem !important;
-  padding: 4px 8px !important;
 }
 
 /* Iconos sociales alineados */
@@ -1902,7 +1881,6 @@ body {
       margin-top: 20px;
       text-align: center;
       font-size: 1rem;
-      color: #555;
       line-height: 1.6;
     }
 
@@ -1929,10 +1907,6 @@ body {
 .certificaciones-container > div {
   flex: 0 0 auto;
 }
-
-  .badge-wrapper iframe {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
 
   .badge-wrapper:hover iframe {
     transform: translateY(-8px);
@@ -2054,6 +2028,137 @@ body {
   }
 }
 
+
+/* 📌 Reducir tamaño del banner solo en PC */
+@media (min-width: 750px) {
+  .banner-header {
+    max-width: 750px !important;   /* antes 1200px */
+    border-width: 2px !important;
+  }
+
+  .header-content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+:root {
+  /* Fondos */
+  --bg-main: #020617;        /* fondo global (casi negro, azul marino muy oscuro) */
+  --bg-surface: #050816;     /* tarjetas y secciones */
+  --bg-elevated: #0b1120;    /* elementos destacados */
+
+  /* Dorados */
+  --accent-gold: #f5d36b;           /* dorado principal */
+  --accent-gold-strong: #facc15;    /* dorado muy vivo para hover/destacados */
+  --accent-gold-soft: #d4af37;      /* dorado “clásico” (el que ya usabas) */
+
+  /* Texto */
+  --text-main: #f9fafb;     /* texto principal casi blanco */
+  --text-soft: #e5e7eb;     /* texto normal en párrafos */
+  --text-muted: #9ca3af;    /* texto secundario / notas */
+
+  /* Bordes y sombras */
+  --border-subtle: rgba(148, 163, 184, 0.45);
+  --border-strong: rgba(245, 211, 107, 0.65);
+  --shadow-soft: 0 0 18px rgba(245, 211, 107, 0.18);
+}
+/* ==========================================
+   🎨 PALETA UNIFICADA (OVERRIDES DE COLOR)
+   ========================================== */
+
+/* Fondo global y color base de texto */
+body {
+  background: radial-gradient(circle at top, #020617 0%, #020617 30%, #050816 60%, #020617 100%);
+  color: var(--text-soft);
+}
+
+/* Secciones y tarjetas: mismas bases */
+section,
+.card,
+.proyecto,
+.habilidad,
+.contenedor,
+.bloque {
+  background-color: var(--bg-surface) !important;
+  border: 1px solid var(--border-subtle) !important;
+  box-shadow: var(--shadow-soft);
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--accent-gold-strong) !important;
+}
+
+/* Enlaces dentro del contenido */
+section a {
+  color: var(--accent-gold) !important;
+}
+
+section a:hover {
+  color: var(--accent-gold-strong) !important;
+}
+
+/* Navbar */
+.barra-superior {
+  background: rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid rgba(245, 211, 107, 0.45);
+}
+
+.barra-superior .nav-link {
+  color: var(--accent-gold) !important;
+  border-color: transparent;
+}
+
+.barra-superior .nav-link:hover,
+.barra-superior .nav-link.is-active {
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-soft));
+  color: #000 !important;
+  border-color: var(--accent-gold-strong);
+}
+
+/* Iconos sociales */
+.social-float a {
+  background: rgba(10, 10, 10, 0.95);
+  color: var(--accent-gold) !important;
+  border-color: rgba(245, 211, 107, 0.5);
+}
+
+.social-float a:hover {
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-soft));
+  color: #000 !important;
+}
+
+/* Botones tipo sysadmin-badge */
+.sysadmin-badge {
+  background-color: #050816;
+  color: var(--accent-gold) !important;
+  border: 1px solid var(--border-strong);
+}
+
+.sysadmin-badge:hover {
+  background-color: var(--accent-gold-strong);
+  color: #000 !important;
+}
+
+/* Terminal heading: mantener blanco pero integrado */
+.terminal-heading {
+  color: var(--text-main) !important;
+}
+
+
+/* Títulos dentro de estas secciones */
+#sobre-mi h2, #sobre-mi h3,
+#proyectos h2, #proyectos h3,
+#scripts h2, #scripts h3 {
+  color: #ffd700 !important;     /* dorado intenso */
+}
+.card p { 
+  color: #d4af37;
+}
+h2 { color: #d4af37!important; }
+
+
   </style>
 
 
@@ -2099,8 +2204,7 @@ body {
 
   <!-- Aquí va el script, justo antes de cerrar body -->
   <script src="script.js"></script>
-</body>
-</html>
+
 
 <section id="sobre-mi">
   <div class="card">
@@ -2122,28 +2226,26 @@ body {
    <div class="texto-sobre-mi">
   <p>
 <p>
-  Hola, soy <strong>Rafael M. Pérez</strong>, estudiante de <strong>ASIR</strong> con especialización en 
-  <strong>ciberseguridad práctica</strong> y <strong>administración de sistemas seguros</strong>. 
-  Mi formación está respaldada por certificaciones de <strong>Cisco</strong> 
-  (CCST Cybersecurity, CCST Networking, Ethical Hacker) y el 
-  <strong>Google Cybersecurity Certificate</strong>, que avalan mis competencias en IT.
+  Hola, soy <strong>Rafael M. Pérez</strong>, estudiante de <strong>ASIR</strong> especializado en 
+  <strong>ciberseguridad práctica</strong> y <strong>administración de sistemas</strong>. 
+  Cuento con certificaciones de <strong>Cisco</strong> y el 
+  <strong>Google Cybersecurity Certificate</strong>, que respaldan mis competencias en IT y seguridad.
 </p>
 
 <p>
-  Me dedico a <strong>endurecer sistemas</strong>, 
-  <strong>optimizar servidores Linux y Windows Server</strong> 
-  y <strong>prevenir vulnerabilidades</strong> aplicando estándares internacionales como 
-  <strong>OWASP</strong>, <strong>NIST</strong> y <strong>CIS Benchmarks</strong>. 
-  Además, hablo <strong>francés con fluidez</strong>, lo que me permite adaptarme en 
-  <strong>equipos internacionales.</strong>
+  Me centro en <strong>bastionar sistemas</strong>, 
+  <strong>optimizar servidores Linux/Windows</strong> y 
+  <strong>reducir vulnerabilidades</strong> aplicando estándares como 
+  <strong>OWASP</strong>, <strong>NIST</strong> y <strong>CIS</strong>. 
+  Hablo <strong>francés con fluidez</strong>, lo que me permite colaborar en equipos internacionales.
 </p>
 
 <p>
-  En cada proyecto busco <strong>automatizar procesos y reforzar la seguridad sin comprometer la operatividad</strong>. 
-  Documentar, medir y validar resultados es parte esencial de mi metodología.  
-  Te invito a descubrir mis trabajos en este <strong>portafolio</strong> y explorar mis scripts en <strong>GitHub</strong>.  
-  <strong>Contáctame</strong> si compartes la visión de una tecnología más <strong>segura y confiable</strong>.
+  Trabajo con un enfoque práctico: <strong>automatización</strong>, 
+  <strong>documentación técnica</strong> y <strong>validación de resultados</strong>.  
+  Te invito a explorar mi <strong>portafolio</strong> y mis proyectos en <strong>GitHub</strong>.
 </p>
+
 </div>
 
 
@@ -2255,16 +2357,6 @@ body {
   </div>
 </div>
 
-<!-- CSS sugerido (pega en tu CSS global o dentro de <style>) -->
-<style>
-
-
-</style>
-
-
-    </div> <!-- Fin grid-habilidades -->
-
-  </div> <!-- Fin card envolvente -->
 </section>
 
 
@@ -2735,9 +2827,6 @@ body {
 </section>
 <!-- FIN SECCIÓN RETOS/MICROPROYECTOS -->
 
-
-
-
 <section id="certificaciones">
   <div class="certificaciones-vitrina">
 
@@ -2746,45 +2835,57 @@ body {
     </h2>
 
     <div class="vitrina-badges">
-      <div class="badge-wrapper" 
-           data-iframe-width="150" 
-           data-iframe-height="270" 
-           data-share-badge-id="dad4ad76-045d-4df9-b408-907234ae2168" 
-           data-share-badge-host="https://www.credly.com"></div>
 
-      <div class="badge-wrapper" 
-           data-iframe-width="150" 
-           data-iframe-height="270" 
-           data-share-badge-id="6ae1a6bb-5ef6-4dcb-97e3-965c7ebc4947" 
-           data-share-badge-host="https://www.credly.com"></div>
+      <!-- Nueva insignia — mayor importancia -->
+      <div class="badge-wrapper"
+           data-iframe-width="150"
+           data-iframe-height="270"
+           data-share-badge-id="357c2799-90a8-41c6-808e-5e979a958c7d"
+           data-share-badge-host="https://www.credly.com">
+      </div>
+
+      <!-- CCST Cybersecurity -->
+      <div class="badge-wrapper"
+           data-iframe-width="150"
+           data-iframe-height="270"
+           data-share-badge-id="dad4ad76-045d-4df9-b408-907234ae2168"
+           data-share-badge-host="https://www.credly.com">
+      </div>
+
+      <!-- CCST Networking -->
+      <div class="badge-wrapper"
+           data-iframe-width="150"
+           data-iframe-height="270"
+           data-share-badge-id="6ae1a6bb-5ef6-4dcb-97e3-965c7ebc4947"
+           data-share-badge-host="https://www.credly.com">
+      </div>
+
     </div>
 
     <p class="certificacion-descripcion">
-      Certificaciones <strong>CCST Cybersecurity & CCST Networking</strong> obtenidas en julio de 2025...
+      Las certificaciones obtenidas validan competencias clave en ciberseguridad, redes y análisis de amenazas, garantizando la capacidad para aplicar buenas prácticas y medidas defensivas en entornos profesionales. Cada insignia representa progreso continuo en mi trayectoria hacia un perfil altamente especializado en seguridad informática.
     </p>
+
+    <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+  </div>
+
+
 
     <a href="https://rafaelmperez.com/docs/Diplomas_Publicos_final.pdf"
        target="_blank"
        class="sysadmin-badge descargar-diplomas">
       Ver Diplomas PDF
     </a>
-  </div>
-</section>
+   </section>
 
 
 <!-- Script de Credly -->
 <script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
 
-
-  <script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
-
-
-<script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
-
 </section>
 
 
-<section id="objetivos">
+<section id="cv">
   <div class="card hoja-de-ruta-card cv-card">
 
     <h2 class="terminal-heading">
@@ -2857,13 +2958,18 @@ body {
 
 
 <footer>
+  <strong style="color: white; text-align:center; display:block;">
+    <p style="margin:0;">
+      © 2025 Rafael M. Pérez | Portafolio Técnico.<br>
+      Desarrollado desde cero con enfoque en rendimiento y seguridad.
+    </p>
 
-  <strong style="color: white;">
-    <p>© 2025 Rafael M. Pérez. Página Web en desarrollo.</p>
-    <br>
-    <p class="terminal-line">¡Gracias por tu visita!</p>
+    <p class="terminal-line" style="margin-top:10px;">
+      ¡Gracias por tu visita!
+    </p>
   </strong>
 </footer>
+
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
@@ -2890,6 +2996,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
+
+
+
+
+
 
 
 
