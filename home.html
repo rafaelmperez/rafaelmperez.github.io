@@ -807,13 +807,6 @@ footer a {
   width: 100%;
 }
 
-
-/* 🔹 Espacio entre el nav y la sección Sobre Mí */
-#sobre-mi {
-  margin-top: 100; /* ajusta este valor a tu gusto */
-  padding-top: 0 !important;     /* opcional, para que no haya padding extra */
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;500&display=swap');
 
 
@@ -2034,62 +2027,6 @@ color: #d4af37;   /* dorado */
     gap: 12px;
   }
 }
-
-/* ==========================================
-   📱 OPTIMIZACIÓN DEL ESPACIO BANNER → NAV
-   ========================================== */
-
-/* Tablets y móviles ( ≤ 1024px ) */
-@media (max-width: 1024px) {
-
-  /* Reduce margen del header */
-  .header-content {
-    margin-bottom: 4px !important;   /* antes era muy grande */
-  }
-
-  /* Ajuste visual del banner */
-  .banner-header {
-    margin-bottom: 2px !important;
-    border-width: 1.5px !important;
-  }
-
-  /* Compactar NAV */
-  .barra-superior {
-    padding: 8px 0 !important;  /* antes 16px */
-  }
-}
-
-/* Móviles medianos ( ≤ 768px ) */
-@media (max-width: 768px) {
-  .header-content {
-    margin-bottom: 2px !important;
-  }
-
-  .banner-header {
-    margin-bottom: 0 !important;
-  }
-
-  .barra-superior {
-    padding: 6px 0 !important;
-  }
-}
-
-/* Móviles pequeños ( ≤ 480px ) */
-@media (max-width: 480px) {
-  .header-content {
-    margin-bottom: 0 !important;
-  }
-
-  .banner-header {
-    border-width: 1px !important;
-    margin-bottom: -2px !important; /* efecto premium, queda pegado sin romper */
-  }
-
-  .barra-superior {
-    padding: 4px 0 !important;
-  }
-}
-
 
 
 /* 📌 Reducir tamaño del banner solo en PC */
