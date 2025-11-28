@@ -207,11 +207,11 @@
 
 
   <style>
+
 .social-float a {
   position: relative;
   overflow: visible !important;   /* ← CAMBIAR ESTO */
-  ...
-}
+  }
 
 
 .tooltip-text {
@@ -844,7 +844,7 @@ section {
   margin: 1rem auto !important;
   padding: 1rem 1rem;
   text-align: center;
-
+  }
 
 h1.titulo-principal {
   margin-top: 4rem; /* Añade espacio arriba del título */
@@ -1049,10 +1049,12 @@ button:hover {
 }
 
 #proyectos {
-  padding: 40px;
   background-color: #fdfdfd;
   border-radius: 12px;
-  max-width: 1600px;  /* Más ancho que antes */
+
+  max-width: 100%;   /* 🔥 CRÍTICO */
+  width: 100%;       /* 🔥 CRÍTICO */
+
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -1132,7 +1134,7 @@ body {
    ================================ */
 
 .card {
-  background: #000          
+  background: #000;          
   border: 1px solid rgba(245, 211, 107, 0.35) !important;
   border-radius: 12px;
   padding: 20px;
@@ -1145,7 +1147,7 @@ body {
 
 /* Hover leve, serio, no kitsch */
 .card:hover {
-  transform: translateY(-4px);
+  transform: none; 
   box-shadow:
     0 0 22px rgba(245, 211, 107, 0.22),
     inset 0 0 14px rgba(255, 255, 255, 0.06);
@@ -1230,7 +1232,6 @@ h1, h2, h3 {
   .card {
     width: 100%;
   }
-}
 
 
 /* Cards: sin movimiento al pasar el cursor */
@@ -1372,12 +1373,6 @@ section#sobre-mi > *:first-child {
   }
 }
 
-.contenedor-principal {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 
 @font-face {
   font-family: 'Font Awesome 5 Brands';
@@ -1416,15 +1411,6 @@ section#sobre-mi > *:first-child {
 
 .card-proyecto {
   width: 100%;
-}
-
-[class*="grid-"] {
-  gap: 0px; /* o el valor que prefieras */
-}
-
-section {
-  margin: 0;
-  padding: 0;
 }
 
 
@@ -2104,7 +2090,6 @@ body {
 }
 
 /* Secciones y tarjetas: mismas bases */
-section,
 .card,
 .proyecto,
 .habilidad,
@@ -2262,7 +2247,6 @@ h2 { color: #c5a54a !important; }
 
 
 <section id="sobre-mi">
-  <div class="card">
     <h2 class="terminal-heading">
       <i class="fas fa-user-shield"></i> ~/sobre-mi
     </h2>
@@ -2322,11 +2306,8 @@ h2 { color: #c5a54a !important; }
 
 
 
-
-
    <section id="habilidades">
   <!-- Card envolvente -->
-  <div class="card">
 
     <!-- Terminal heading dentro de la card -->
     <h2 class="terminal-heading">
