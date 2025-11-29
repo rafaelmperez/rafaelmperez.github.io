@@ -728,7 +728,15 @@ code {
   transform: translateY(-2px);
 }
 
+/* ❌ Eliminar movimiento en hover para las tecnologías */
+.techline span {
+  transition: none !important;
+}
 
+.techline span:hover {
+  transform: none !important;
+  box-shadow: none !important; /* opcional, si NO quieres glow */
+}
 
 .container {
   display: flex;
@@ -3052,6 +3060,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
 
 
 
