@@ -561,7 +561,8 @@ code {
 /* 📱 Tablets */
 @media (max-width: 1024px) {
   .banner-header {
-    max-width: 100%;   /* ← antes 95%, ahora ocupa más */
+    max-width: 100%;
+    transform: scale(1.05);   /* ← un 5% más grande */
   }
 }
 
@@ -569,22 +570,24 @@ code {
 @media (max-width: 768px) {
   .banner-header {
     max-width: 100%;
-    width: 100%;       /* ← asegura ancho completo */
+    width: 100%;
+    transform: scale(1.08);   /* ← un 8% más grande */
     border-width: 2px;
-    margin: 0 auto;    /* ← centra perfectamente */
+    margin: 0 auto;
   }
 }
 
 /* 📱 Móviles */
 @media (max-width: 480px) {
   .banner-header {
-    max-width: 100%;
-    width: 100%;       /* ← asegura que no reduzca tamaño */
+    max-width: 110%;          /* ← 10% más ancho */
+    width: 110%;
+    transform: scale(1.12);   /* ← un 12% más grande */
     border-width: 2px;
-    border-radius: 8px; /* ← un poco más pequeño para que parezca más grande */
+    border-radius: 8px;
     box-shadow:
-      0 0 28px rgba(255, 215, 0, 0.35),   /* ← un poco más suave */
-      0 0 60px rgba(255, 215, 0, 0.18);
+      0 0 32px rgba(255, 215, 0, 0.35),
+      0 0 70px rgba(255, 215, 0, 0.18);
   }
 }
 
@@ -3050,6 +3053,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
 
 
 
