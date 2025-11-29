@@ -561,7 +561,7 @@ code {
 /* 📱 Tablets */
 @media (max-width: 1024px) {
   .banner-header {
-    max-width: 95%;
+    max-width: 100%;   /* ← antes 95%, ahora ocupa más */
   }
 }
 
@@ -569,7 +569,9 @@ code {
 @media (max-width: 768px) {
   .banner-header {
     max-width: 100%;
+    width: 100%;       /* ← asegura ancho completo */
     border-width: 2px;
+    margin: 0 auto;    /* ← centra perfectamente */
   }
 }
 
@@ -577,13 +579,15 @@ code {
 @media (max-width: 480px) {
   .banner-header {
     max-width: 100%;
+    width: 100%;       /* ← asegura que no reduzca tamaño */
     border-width: 2px;
-    border-radius: 10px;
+    border-radius: 8px; /* ← un poco más pequeño para que parezca más grande */
     box-shadow:
-      0 0 25px rgba(255, 215, 0, 0.4),
-      0 0 55px rgba(255, 215, 0, 0.2);
+      0 0 28px rgba(255, 215, 0, 0.35),   /* ← un poco más suave */
+      0 0 60px rgba(255, 215, 0, 0.18);
   }
 }
+
 
 
 .banner-header:hover {
@@ -3046,6 +3050,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
 
 
 
