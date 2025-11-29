@@ -1232,6 +1232,7 @@ h1, h2, h3 {
   .card {
     width: 100%;
   }
+}
 
 
 /* Cards: sin movimiento al pasar el cursor */
@@ -1522,13 +1523,13 @@ section#sobre-mi > *:first-child {
   background: #000;
   border-radius: 25px;
   padding: 20px;
-  color: #ffd700;
+  color: #d4af37;
   box-shadow: inset 0 0 15px rgba(255, 215, 0, 0.1);
   font-family: 'Poppins', sans-serif;
 }
 
 .phone-screen label {
-  color: #ffd700;
+  color: #d4af37;
 }
 
 .phone-screen input,
@@ -1545,7 +1546,7 @@ section#sobre-mi > *:first-child {
 .phone-screen input:focus,
 .phone-screen textarea:focus {
   outline: none;
-  border-color: #ffd700;
+  border-color: #d4af37;
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
 }
 
@@ -1737,7 +1738,7 @@ color: #d4af37;   /* dorado */
 .sysadmin-badge {
   display: inline-block;
   background-color: #000;
-  color: #ffd700;
+  color: #d4af37;
   border: 1px solid #d4af37;
   border-radius: 8px;
   text-decoration: none;
@@ -2090,6 +2091,7 @@ body {
 }
 
 /* Secciones y tarjetas: mismas bases */
+section,
 .card,
 .proyecto,
 .habilidad,
@@ -2165,7 +2167,7 @@ section a:hover {
 #sobre-mi h2, #sobre-mi h3,
 #proyectos h2, #proyectos h3,
 #scripts h2, #scripts h3 {
-  color: #ffd700 !important;     /* dorado intenso */
+  color: #d4af37 !important;     /* dorado intenso */
 }
 .card p { 
   color: #d4af37;
@@ -2198,6 +2200,18 @@ h2 { color: #c5a54a !important; }
 .techline span:nth-child(5) { 
   color: #bfbfbf !important; 
 }
+
+
+/* 🔒 Arregla que las cards internas sobresalgan */
+.card .card {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
 
   </style>
 
@@ -2247,6 +2261,7 @@ h2 { color: #c5a54a !important; }
 
 
 <section id="sobre-mi">
+  <div class="card">
     <h2 class="terminal-heading">
       <i class="fas fa-user-shield"></i> ~/sobre-mi
     </h2>
