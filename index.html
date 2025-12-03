@@ -15,6 +15,10 @@
 
   <title>Portafolio | Rafael M. Pérez - Administrador de Sistemas | Seguridad, Bastionado & Respuesta a Incidentes</title>
 
+  <!-- Versiones alternativas (ES / FR) -->
+  <link rel="alternate" hreflang="es" href="https://rafaelmperez.com/index.html">
+  <link rel="alternate" hreflang="fr" href="https://rafaelmperez.com/fr/index.html">
+
   <!-- Icono -->
   <link rel="icon" href="favicon.png" type="image/x-icon">
 
@@ -164,7 +168,7 @@
 
   <nav>
     <a href="#sobre-mi" class="nav-link">Sobre mí</a>
-   <a href="#certificaciones" class="nav-link">Certificaciones</a>
+    <a href="#certificaciones" class="nav-link">Certificaciones</a>
     <a href="#habilidades" class="nav-link">Habilidades</a>
     <a href="#proyectos" class="nav-link">Proyectos</a>
     <a href="#scripts" class="nav-link">Scripts</a>
@@ -2223,6 +2227,29 @@ h2 { color: #c5a54a !important; }
   overflow-x: hidden !important;
 }
 
+.vitrina-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.badge-wrapper {
+  transition: transform .25s ease, filter .25s ease;
+}
+
+.badge-wrapper:hover {
+  transform: scale(1.07);
+  filter: drop-shadow(0 0 8px #f0c674aa);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .vitrina-badges {
+    gap: 16px;
+  }
+}
 
   </style>
 
@@ -2317,7 +2344,7 @@ h2 { color: #c5a54a !important; }
    target="_blank" 
    class="sysadmin-badge"
    style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold; border:1px solid #d4af37; transition:all 0.3s ease;">
-  <i class="fa-regular fa-file-pdf" style="color:#e63946; margin-right:6px;"></i>
+  <i class="fa-regular fa-file-pdf" style="color:#ffffff; margin-right:6px;"></i>
   Carta de presentación PDF
 </a>
 
@@ -2335,7 +2362,7 @@ h2 { color: #c5a54a !important; }
 
     <div class="vitrina-badges">
 
-      <!-- Nueva insignia — mayor importancia -->
+      <!-- Google Cybersecurity -->
       <div class="badge-wrapper"
            data-iframe-width="150"
            data-iframe-height="270"
@@ -2343,7 +2370,7 @@ h2 { color: #c5a54a !important; }
            data-share-badge-host="https://www.credly.com">
       </div>
 
-      <!-- CCST Cybersecurity -->
+      <!-- Cisco CCST Cybersecurity -->
       <div class="badge-wrapper"
            data-iframe-width="150"
            data-iframe-height="270"
@@ -2351,7 +2378,7 @@ h2 { color: #c5a54a !important; }
            data-share-badge-host="https://www.credly.com">
       </div>
 
-      <!-- CCST Networking -->
+      <!-- Cisco CCST Networking -->
       <div class="badge-wrapper"
            data-iframe-width="150"
            data-iframe-height="270"
@@ -2359,30 +2386,34 @@ h2 { color: #c5a54a !important; }
            data-share-badge-host="https://www.credly.com">
       </div>
 
+      <!-- Extra badge añadido -->
       <div class="badge-wrapper"
-     data-iframe-width="150"
-     data-iframe-height="270"
-     data-share-badge-id="a4726f31-8f90-4ce5-96bb-c72d3a65e692"
-     data-share-badge-host="https://www.credly.com">
-</div>
+           data-iframe-width="150"
+           data-iframe-height="270"
+           data-share-badge-id="a4726f31-8f90-4ce5-96bb-c72d3a65e692"
+           data-share-badge-host="https://www.credly.com">
+      </div>
 
     </div>
 
     <p class="certificacion-descripcion">
-      Las certificaciones obtenidas validan competencias clave en ciberseguridad, redes y análisis de amenazas, garantizando la capacidad para aplicar buenas prácticas y medidas defensivas en entornos profesionales. Cada insignia representa progreso continuo en mi trayectoria hacia un perfil altamente especializado en seguridad informática.
+      Estas certificaciones avalan mi formación en ciberseguridad, redes y análisis defensivo, demostrando una base sólida en prácticas modernas de protección, detección de amenazas y administración de infraestructuras seguras.
     </p>
 
-    <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+<a href="https://rafaelmperez.com/docs/Diplomas_Publicos_final.pdf" 
+   target="_blank" 
+   class="sysadmin-badge"
+   style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold; border:1px solid #d4af37; transition:all 0.3s ease;">
+  <i class="fa-regular fa-file-pdf" style="color:#ffffff; margin-right:6px;"></i>
+  Ver Diplomas PDF
+</a>
+
+
+    <!-- Script Credly (solo una vez y optimizado) -->
+    <script async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
   </div>
+</section>
 
-
-
-    <a href="https://rafaelmperez.com/docs/Diplomas_Publicos_final.pdf"
-       target="_blank"
-       class="sysadmin-badge descargar-diplomas">
-      Ver Diplomas PDF
-    </a>
-   </section>
 
 
 
@@ -3062,7 +3093,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
-
 
 
 
