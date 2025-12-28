@@ -2251,6 +2251,53 @@ h2 { color: #c5a54a !important; }
   }
 }
 
+/* ================================
+   👨‍🏫 Docencia / Mentoría — jerarquía visual (black & gold)
+   ================================ */
+
+#docencia-mentoria .docencia-intro {
+  color: var(--text-soft);                /* blanco suave */
+  max-width: 860px;
+  margin: 0 auto 1rem auto;
+  line-height: 1.65;
+}
+
+#docencia-mentoria .docencia-list {
+  max-width: 860px;
+  margin: 0.8rem auto 0 auto;
+  padding-left: 1.2rem;
+  text-align: left;                       /* mejora legibilidad */
+}
+
+#docencia-mentoria .docencia-list li {
+  color: var(--text-muted);               /* gris profesional */
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+#docencia-mentoria .docencia-label {
+  color: var(--accent-gold);              /* tu dorado principal */
+  font-weight: 700;
+}
+
+#docencia-mentoria .docencia-list li::marker {
+  color: rgba(245, 211, 107, 0.75);       /* dorado suave */
+}
+
+#docencia-mentoria .docencia-outro {
+  color: var(--text-soft);
+  max-width: 860px;
+  margin: 1rem auto 0 auto;
+  line-height: 1.65;
+  opacity: 0.95;
+}
+
+#docencia-mentoria .docencia-outro strong {
+  color: var(--accent-gold-strong);       /* dorado más vivo para énfasis */
+}
+
+
+
   </style>
 
 
@@ -2432,40 +2479,37 @@ h2 { color: #c5a54a !important; }
     <i class="fas fa-chalkboard-teacher"></i> ~/docencia-mentoria.md
   </h2>
 
-  <p>
+  <p class="docencia-intro">
     Esta sección recoge mi labor como <strong>formador y mentor técnico</strong>,
-    orientada a transferir conocimiento práctico en sistemas y ciberseguridad
-    a perfiles en proceso de especialización o mejora de empleabilidad.
+    orientada a transferir conocimiento práctico en sistemas y ciberseguridad a perfiles
+    en proceso de especialización o mejora de empleabilidad.
   </p>
 
-  <ul>
-      <strong>Fundación GoodJobs - Programa #IMPACT (2025):</strong>
-      seleccionado como formador para impartir contenidos de sistemas,
-      automatización y ciberseguridad defensiva.
+  <ul class="docencia-list">
+    <li>
+      <span class="docencia-label">Fundación GoodJobs — Programa IMPACT (2025):</span>
+      seleccionado como formador para impartir contenidos de sistemas, automatización y ciberseguridad defensiva.
     </li>
     <li>
-      <strong>Metodología aplicada:</strong>
-      enseñanza basada en escenarios reales, reducción de superficie de ataque,
-      toma de decisiones técnicas y validación de resultados.
+      <span class="docencia-label">Metodología aplicada:</span>
+      enseñanza basada en escenarios reales, reducción de superficie de ataque, toma de decisiones técnicas y validación de resultados.
     </li>
     <li>
-      <strong>Acompañamiento técnico:</strong>
-      apoyo individualizado, resolución de dudas, revisión de prácticas y guía
-      en la construcción de criterio técnico.
+      <span class="docencia-label">Acompañamiento técnico:</span>
+      apoyo individualizado, resolución de dudas, revisión de prácticas y guía en la construcción de criterio técnico.
     </li>
     <li>
-      <strong>Enfoque humano:</strong>
-      desarrollo de confianza técnica, gestión del error como aprendizaje y
-      fortalecimiento del pensamiento crítico en entornos operativos.
+      <span class="docencia-label">Enfoque humano:</span>
+      desarrollo de confianza técnica, gestión del error como aprendizaje y fortalecimiento del pensamiento crítico en entornos operativos.
     </li>
   </ul>
 
-  <p>
+  <p class="docencia-outro">
     La docencia es una extensión natural de mi trabajo técnico:
-    <strong>compartir criterio, elevar estándares y facilitar el acceso a
-    oportunidades reales</strong> mediante formación aplicada y defendible.
+    <strong>compartir criterio</strong>, elevar estándares y facilitar el acceso a oportunidades reales mediante formación aplicada y defendible.
   </p>
 </section>
+
 
 
 
@@ -3055,6 +3099,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
 
 
 
