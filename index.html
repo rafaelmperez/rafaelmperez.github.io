@@ -105,53 +105,6 @@
     </a>
   </div>
 
-
-  <script>
-    // Sanitizar entradas
-    function sanitizeInput(input) {
-      return input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    }
-
-
-      const narracion = document.getElementById("narracion");
-  const playBtn = document.getElementById("playPauseBtn");
-  const menuSound = document.getElementById("menu-sound");
-
-  // Botón Play/Pause de la narración
-  playBtn.addEventListener("click", () => {
-    if (narracion.paused) {
-      narracion.play();
-      playBtn.textContent = "⏸";
-    } else {
-      narracion.pause();
-      playBtn.textContent = "▶";
-    }
-  });
-
-
-  // Reproducir sonido al pasar por los enlaces del menú
-  const enlaces = document.querySelectorAll("nav a, .play-btn");
-  enlaces.forEach(enlace => {
-    enlace.addEventListener("mouseenter", () => {
-      // clona el sonido para que suene cada vez aunque se solape
-      const sonido = menuSound.cloneNode(true);
-      sonido.play();
-    });
-  });
-  </script>  
-
-
-  <script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function() {
-    var script = document.createElement("script");
-    script.src = "https://cdn.credly.com/assets/utilities/embed.js";
-    script.type = "text/javascript";
-    document.body.appendChild(script);
-  });
-
-</script>
-
-
  <header class="encabezado">
   <div class="header-content" style="text-align: center;">
     <img 
@@ -1119,7 +1072,7 @@ section:hover::after {
   border: 1px solid var(--border-tech);
   box-shadow: var(--shadow-tech-sm);
   transition: all var(--transition-smooth);
-  background: #ffffff !important; /* Fondo blanco para Credly */
+  background: #f7eeee !important; /* Fondo blanco para Credly */
 }
 
 .vitrina-badges iframe:hover,
