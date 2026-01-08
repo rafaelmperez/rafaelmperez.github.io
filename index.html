@@ -803,88 +803,6 @@ section::before {
     0 0 100px rgba(59,130,246,0.3);
 }
 
-/* ===== TELÉFONO CONTACTO ELITE ===== */
-.phone-container {
-  position: relative;
-  background: rgba(15,20,25,0.8);
-  backdrop-filter: blur(16px);
-  border: 2px solid var(--border-tech);
-  border-radius: 32px;
-  padding: 2.5rem 2rem;
-  box-shadow: 
-    var(--shadow-tech),
-    0 0 60px rgba(59,130,246,0.15);
-  width: 480px;
-  max-width: 95%;
-  overflow: hidden;
-}
-
-.phone-container::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(
-    from 0deg,
-    transparent 0deg,
-    rgba(59,130,246,0.1) 60deg,
-    rgba(139,92,246,0.1) 120deg,
-    transparent 180deg
-  );
-  animation: rotate-glow 8s linear infinite;
-  opacity: 0;
-  transition: opacity 0.6s ease;
-}
-
-@keyframes rotate-glow {
-  to { transform: rotate(360deg); }
-}
-
-.phone-container:hover::before {
-  opacity: 1;
-}
-
-.phone-screen {
-  position: relative;
-  z-index: 2;
-  background: rgba(20,25,38,0.6);
-  backdrop-filter: blur(10px);
-  border-radius: 24px;
-  padding: 2rem;
-  border: 1px solid var(--border-tech);
-}
-
-.phone-screen label {
-  color: var(--text-secondary);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  display: block;
-}
-
-.phone-screen input,
-.phone-screen textarea {
-  width: 100%;
-  background: rgba(10,14,26,0.6);
-  border: 1px solid var(--border-tech);
-  color: var(--text-primary);
-  padding: 0.875rem;
-  border-radius: 10px;
-  font-family: inherit;
-  font-size: 0.95rem;
-  margin-bottom: 1.25rem;
-  transition: all 0.3s ease;
-}
-
-.phone-screen input:focus,
-.phone-screen textarea:focus {
-  outline: none;
-  border-color: var(--cyan-accent);
-  background: rgba(20,25,38,0.8);
-  box-shadow: 0 0 20px rgba(59,130,246,0.2);
-}
-
 /* ===== GRIDS ELITE ===== */
 .grid-proyectos {
   display: grid;
@@ -1117,7 +1035,88 @@ footer a:hover {
   transform: translateY(-2px);
 }
 
+/* ===== FORMULARIO CONTACTO OPTIMIZADO ===== */
+.form-group {
+  margin-bottom: 1.25rem;
+}
 
+#contacto .phone-screen label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+#contacto .phone-screen input,
+#contacto .phone-screen textarea {
+  width: 100%;
+  background: rgba(10,14,26,0.6);
+  border: 1px solid var(--border-tech);
+  color: var(--text-primary);
+  padding: 0.875rem;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+#contacto .phone-screen input:focus,
+#contacto .phone-screen textarea:focus {
+  outline: none;
+  border-color: var(--cyan-accent);
+  background: rgba(20,25,38,0.8);
+  box-shadow: 0 0 20px rgba(59,130,246,0.2);
+}
+
+#contacto .phone-screen textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+#contacto .phone-screen button.sysadmin-badge {
+  width: 100%;
+  margin-top: 1rem;
+  cursor: pointer;
+  border: none;
+}
+
+#contacto .divider {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0 1.5rem 0;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+#contacto .divider::before,
+#contacto .divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--border-tech);
+}
+
+#contacto .divider span {
+  padding: 0 1rem;
+  font-family: 'Fira Code', monospace;
+}
+
+#contacto .email-link {
+  text-align: center;
+}
+
+#contacto .email-link .sysadmin-badge {
+  background: rgba(59,130,246,0.1);
+  border-color: var(--border-tech);
+  color: var(--cyan-accent) !important;
+  width: 100%;
+}
+
+#contacto .email-link .sysadmin-badge:hover {
+  background: rgba(59,130,246,0.2);
+  border-color: var(--cyan-accent);
+  color: var(--text-primary) !important;
+}
 
   </style>
 
@@ -1792,45 +1791,55 @@ footer a:hover {
 
 
 <section id="contacto">
+  <h2 class="terminal-heading">
+    <i class="fas fa-envelope"></i> Contacto
+  </h2>
+
   <div class="phone-container">
     <div class="phone-screen">
-
-<h2 class="terminal-heading">
-  <i class="fas fa-envelope"></i> Contacto
-      </h2>
-
-
-      <form action="https://formspree.io/f/mdkwngad" method="POST">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" required>
-
-        <label for="email">Correo electrónico</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-
-        <!-- Cloudflare CAPTCHA -->
-        <div class="cf-turnstile" data-sitekey="0x4AAAAAAB2gSyBoa7kMyPVF"></div>
-        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-
-        <div style="text-align:center;">
-          <a href="#" onclick="document.querySelector('form').submit();" class="sysadmin-badge">
-            <strong>Enviar mensaje</strong> <i class="fa-solid fa-paper-plane ms-2"></i>
-          </a>
+      <form id="contactForm" action="https://formspree.io/f/mdkwngad" method="POST">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required>
         </div>
+
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" required></textarea>
+        </div>
+
+        <button type="submit" class="sysadmin-badge">
+          <strong>Enviar mensaje</strong>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
       </form>
 
-      <div class="my-4 text-center text-sm text-gray-400">- o si lo prefieres -</div>
-
-      <div class="text-center">
-        <a href="mailto:rmp.blueteam@proton.me" class="sysadmin-badge">
-          <i class="fa-solid fa-envelope"></i> rmp.blueteam@proton.me
-        </a>
+      <div class="divider">
+        <span>- o si lo prefieres -</span>
       </div>
 
-
+      <div class="email-link">
+        <a href="mailto:rmp.blueteam@proton.me" class="sysadmin-badge email-badge">
+          <i class="fa-solid fa-envelope"></i>
+          rmp.blueteam@proton.me
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  const submitBtn = this.querySelector('button[type="submit"]');
+  submitBtn.innerHTML = '<strong>Enviando...</strong> <i class="fa-solid fa-spinner fa-spin"></i>';
+  submitBtn.disabled = true;
+});
+</script>
 
 
 
