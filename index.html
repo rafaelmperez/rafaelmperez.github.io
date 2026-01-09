@@ -1,6 +1,7 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 <head>
+
   <!-- Seguridad -->
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -10,41 +11,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO -->
-  <meta name="description" content="Rafael M. Pérez - Portfolio profesional de Ciberseguridad Defensiva, Administración de Sistemas y Gestión del Riesgo Digital. Blue Team, Hardening, Respuesta a Incidentes.">
-  <meta name="keywords" content="ciberseguridad, blue team, hardening, sistemas linux, administrador sistemas, seguridad informática, respuesta incidentes">
-  <meta name="author" content="Rafael M. Pérez">
-  
-  <title>Rafael M. Pérez | Ciberseguridad Defensiva & Administración de Sistemas</title>
+  <meta name="description" content="Portafolio de Rafael M. Pérez, administrador de sistemas en formación y en proceso de especializarme en ciberseguridad. Experiencia en gestión de servidores, seguridad informática y soporte técnico.">
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://rafaelmperez.com/">
+  <title>Portafolio | Rafael M. Pérez - Administrador de Sistemas | Seguridad, Bastionado & Respuesta a Incidentes</title>
 
   <!-- Versiones alternativas (ES / FR) -->
   <link rel="alternate" hreflang="es" href="https://rafaelmperez.com/index.html">
   <link rel="alternate" hreflang="fr" href="https://rafaelmperez.com/fr/index.html">
-  <link rel="alternate" hreflang="x-default" href="https://rafaelmperez.com/index.html">
 
   <!-- Icono -->
-  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="icon" href="favicon.png" type="image/x-icon">
 
-  <!-- Font Awesome (carga diferida) -->
-  <link rel="preload" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
-        as="style"
-        onload="this.rel='stylesheet'">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- Font Awesome (solo una versión optimizada) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        media="print"
+        onload="this.media='all'">
   <noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </noscript>
 
-  <!-- Google Fonts optimizadas: Solo 2 familias -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" 
-        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=IBM+Plex+Sans:wght@400;600;700&display=swap" 
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded", () => lucide.createIcons());</script>
+
+  <!-- Google Fonts optimizadas -->
+  <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
         as="style"
         onload="this.rel='stylesheet'">
   <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=IBM+Plex+Sans:wght@400;600;700&display=swap">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap">
+  </noscript>
+
+  <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+        as="style"
+        onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap">
   </noscript>
 
   <!-- CSS principal -->
@@ -52,81 +66,22 @@
 
   <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Rafael M. Pérez - Ciberseguridad Defensiva & Sistemas">
-  <meta property="og:description" content="Portfolio profesional en ciberseguridad defensiva, administración de sistemas y gestión del riesgo digital.">
+  <meta property="og:title" content="Rafael M. Pérez - Administrador de Sistemas | Ciberseguridad">
+  <meta property="og:description" content="Portafolio en ciberseguridad, administración de sistemas y proyectos IT.">
   <meta property="og:image" content="https://rafaelmperez.com/assets/img/vistapreliminar.jpg">
   <meta property="og:url" content="https://rafaelmperez.com/">
   <meta property="og:locale" content="es_ES">
-  <meta property="og:site_name" content="Rafael M. Pérez Portfolio">
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Rafael M. Pérez - Ciberseguridad Defensiva & Sistemas">
-  <meta name="twitter:description" content="Portfolio profesional en ciberseguridad defensiva, administración de sistemas y gestión del riesgo digital.">
+  <meta name="twitter:title" content="Rafael M. Pérez - Administrador de Sistemas | Ciberseguridad">
+  <meta name="twitter:description" content="Portafolio en ciberseguridad, administración de sistemas y proyectos IT.">
   <meta name="twitter:image" content="https://rafaelmperez.com/assets/img/vistapreliminar.jpg">
 
   <!-- Google Search Console -->
   <meta name="google-site-verification" content="uumuF7y73hfuDoXFjUW66ETAXtE-WjolU9Pv0aWhCyo">
 
-  <!-- Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Rafael M. Pérez",
-    "alternateName": "codebyRalph",
-    "url": "https://rafaelmperez.com",
-    "image": "https://rafaelmperez.com/assets/img/sobremi2.jpg",
-    "sameAs": [
-      "https://www.linkedin.com/in/rafaelmperez/",
-      "https://github.com/Rafaelmperez"
-    ],
-    "jobTitle": "Especialista en Ciberseguridad Defensiva",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Profesional Independiente"
-    },
-    "knowsAbout": [
-      "Ciberseguridad",
-      "Administración de Sistemas",
-      "Blue Team",
-      "Hardening de Sistemas",
-      "Respuesta a Incidentes",
-      "Linux",
-      "Windows",
-      "Gestión del Riesgo Digital"
-    ],
-    "knowsLanguage": [
-      {
-        "@type": "Language",
-        "name": "Español",
-        "alternateName": "es"
-      },
-      {
-        "@type": "Language",
-        "name": "Francés",
-        "alternateName": "fr"
-      }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Rafael M. Pérez - Portfolio",
-    "url": "https://rafaelmperez.com",
-    "description": "Portfolio profesional de ciberseguridad defensiva y administración de sistemas",
-    "author": {
-      "@type": "Person",
-      "name": "Rafael M. Pérez"
-    },
-    "inLanguage": "es"
-  }
-  </script>
-
-  <!-- Google Analytics (async no bloqueante) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1T24E1NDR"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -134,834 +89,1634 @@
     gtag("js", new Date());
     gtag("config", "G-J1T24E1NDR");
   </script>
+
 </head>
 
 <body>
-  <!-- Skip to main content (accesibilidad) -->
-  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-  <!-- Google Translate (hidden, carga diferida) -->
-  <div id="google_translate_element" style="display: none;" aria-hidden="true"></div>
+  <!-- Contenedor del traductor (necesario para Google) -->
+  <div id="google_translate_element" style="display: none;"></div>
 
-  <!-- Botón traductor (fixed) -->
-  <div class="language-switcher" role="complementary" aria-label="Selector de idioma">
-    <a href="#" id="translate-fr" aria-label="Traducir a francés">
-      <img src="https://rafaelmperez.com/frflags.jpg" alt="" class="flag" width="24" height="16">
+  <!-- Botón para traducir -->
+  <div class="language-switcher">
+    <a href="#" id="translate-fr">
+      <img src="https://rafaelmperez.com/frflags.jpg" alt="Drapeau de la France" class="flag">
       Français
     </a>
   </div>
 
-  <!-- Header -->
-  <header class="encabezado" role="banner">
-    <div class="header-content">
-      <img 
-        src="https://rafaelmperez.com/assets/img/bannerlinkedin.jpg"
-        alt="Rafael M. Pérez - Banner profesional de ciberseguridad"
-        class="banner-header"
-        width="700"
-        height="350"
-        loading="eager"
-        fetchpriority="high">
-    </div>
-  </header>
+ <header class="encabezado">
+  <div class="header-content" style="text-align: center;">
+    <img 
+      src="https://rafaelmperez.com/assets/img/bannerlinkedin.jpg"
+      alt="Banner principal"
+      class="banner-header"
+      loading="eager"
+      fetchpriority="high">
+  </div>
+</header>
 
-  <!-- Navbar sticky -->
-  <nav class="barra-superior" role="navigation" aria-label="Navegación principal">
-    <div class="nav-wrapper">
-      <a href="#sobre-mi" class="nav-link">Sobre mí</a>
-      <a href="#certificaciones" class="nav-link">Certificaciones</a>
-      <a href="#habilidades" class="nav-link">Habilidades</a>
-      <a href="#proyectos" class="nav-link">Proyectos</a>
-      <a href="#scripts" class="nav-link">Scripts</a>
-      <a href="#cv" class="nav-link">CV</a>
-      <a href="#contacto" class="nav-link">Contacto</a>
-    </div>
+<!-- 🔥 BARRA SUPERIOR DEBAJO DEL HEADER -->
+<div class="barra-superior">
 
-    <div class="social-float" role="complementary" aria-label="Redes sociales">
-      <a href="https://www.linkedin.com/in/rafaelmperez/" 
-         target="_blank" 
-         rel="noopener noreferrer"
-         class="tooltip" 
-         aria-label="LinkedIn">
-        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-        <span class="tooltip-text">LinkedIn</span>
-      </a>
-
-      <a href="https://github.com/Rafaelmperez" 
-         target="_blank" 
-         rel="noopener noreferrer"
-         class="tooltip" 
-         aria-label="GitHub">
-        <i class="fab fa-github" aria-hidden="true"></i>
-        <span class="tooltip-text">GitHub</span>
-      </a>
-
-      <a href="https://www.upgrademe.blog/" 
-         target="_blank" 
-         rel="noopener noreferrer"
-         class="tooltip" 
-         aria-label="Blog Técnico">
-        <i class="fab fa-blogger-b" aria-hidden="true"></i>
-        <span class="tooltip-text">Blog</span>
-      </a>
-    </div>
+  <nav>
+    <a href="#sobre-mi" class="nav-link">Sobre mí</a>
+    <a href="#certificaciones" class="nav-link">Certificaciones</a>
+    <a href="#habilidades" class="nav-link">Habilidades</a>
+    <a href="#proyectos" class="nav-link">Proyectos</a>
+    <a href="#scripts" class="nav-link">Scripts</a>
+    <a href="#cv" class="nav-link">CV</a>
+    <a href="#contacto" class="nav-link">Contacto</a>
   </nav>
 
-  <!-- Main content -->
-  <main id="main-content">
-    
-    <!-- Hero Section -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-content">
-        <h1 id="hero-title" class="hero-title">
-          <span class="hero-prefix">$ whoami</span>
-          Rafael M. Pérez
-        </h1>
-        <p class="hero-subtitle">
-          Ciberseguridad Defensiva · Blue Team · Hardening · Gestión del Riesgo Digital
-        </p>
-        <div class="hero-cta">
-          <a href="https://rafaelmperez.com/docs/CV_RafaelMPerez.pdf" 
-             class="cta-primary" 
-             target="_blank"
-             rel="noopener noreferrer">
-            <i class="fas fa-file-pdf" aria-hidden="true"></i>
-            Descargar CV
-          </a>
-          <a href="#proyectos" class="cta-secondary">
-            <i class="fas fa-code" aria-hidden="true"></i>
-            Ver Proyectos
-          </a>
-        </div>
-      </div>
-    </section>
+<div class="social-float">
+    <a class="tooltip" href="https://www.linkedin.com/in/rafaelmperez/" target="_blank">
+      <i class="fab fa-linkedin-in"></i>
+      <span class="tooltip-text">LinkedIn</span>
+    </a>
 
-    <!-- Sobre mí -->
-    <section id="sobre-mi" aria-labelledby="sobre-mi-title">
-      <h2 id="sobre-mi-title" class="terminal-heading">
-        <i class="fas fa-user-shield" aria-hidden="true"></i> 
-        ~/sobre-mi
-      </h2>
+    <a class="tooltip" href="https://github.com/Rafaelmperez" target="_blank">
+      <i class="fab fa-github"></i>
+      <span class="tooltip-text">GitHub</span>
+    </a>
 
-      <div class="imagen-sobre-mi">
-        <img 
-          src="https://rafaelmperez.com/assets/img/sobremi2.jpg" 
-          alt="Fotografía profesional de Rafael M. Pérez" 
-          width="160"
-          height="160"
-          loading="lazy">
-      </div>
+    <a class="tooltip" href="https://acosodigitalzero.com/blog.html" target="_blank">
+      <i class="fab fa-blogger-b"></i>
+      <span class="tooltip-text">Blog Técnico</span>
+    </a>
+</div>
 
-      <div class="texto-sobre-mi">
-        <p>
-          Hola, soy <strong>Rafael M. Pérez</strong>. 
-          Perfil técnico orientado a <strong>sistemas y ciberseguridad defensiva</strong>, 
-          con foco en la <strong>gestión del riesgo digital</strong>, la <strong>reducción de superficie de ataque</strong> 
-          y la <strong>toma de decisiones técnicas</strong> en entornos reales.
-        </p>
 
-        <p>
-          Trabajo en el <strong>diseño, operación y hardening de sistemas Linux y Windows</strong>, 
-          priorizando <strong>criterio técnico</strong>, <strong>automatización defensiva</strong> 
-          y <strong>documentación defendible</strong> frente a soluciones teóricas.
-        </p>
+</div>
 
-        <p>
-          Formación en <strong>ASIR</strong> y certificaciones en <strong>IT y ciberseguridad</strong> 
-          (Cisco, Google Cybersecurity Certificate), aplicadas junto a estándares como 
-          <strong>OWASP</strong>, <strong>NIST</strong> y <strong>CIS</strong>.  
-          Mentalidad orientada a <strong>impacto real</strong>, mejora continua y validación de resultados.
-        </p>
 
-        <p>
-          Hablo <strong>francés con fluidez</strong> y colaboro en entornos técnicos internacionales.  
-          Además, mantengo un 
-          <a href="https://www.upgrademe.blog/" 
-             class="terminal-link" 
-             target="_blank" 
-             rel="noopener noreferrer">
-            <strong>blog</strong>
-          </a> 
-          donde analizo <strong>riesgo digital</strong>, <strong>ciberseguridad defensiva</strong> y 
-          <strong>factor humano</strong> desde una perspectiva técnica y operativa.
-        </p>
 
-        <a href="https://rafaelmperez.com/docs/CARTA_PRESENTACION.pdf" 
-           target="_blank" 
-           rel="noopener noreferrer"
-           class="sysadmin-badge">
-          <i class="fa-regular fa-file-pdf" aria-hidden="true"></i>
-          Carta de presentación PDF
-        </a>
-      </div>
-    </section>
+     
 
-    <!-- Docencia -->
-    <section id="docencia-mentoria" aria-labelledby="docencia-title">
-      <h2 id="docencia-title" class="terminal-heading">
-        <i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> 
-        ~/docencia.txt
-      </h2>
 
-      <p class="docencia-intro">
-        Esta sección recoge mi labor como <strong>formador y mentor técnico</strong>,
-        orientada a transferir conocimiento práctico en sistemas y ciberseguridad a perfiles
-        en proceso de especialización o mejora de empleabilidad.
-      </p>
+  <style>
 
-      <ul class="docencia-list">
-        <li>
-          <span class="docencia-label">Fundación GoodJobs — Programa IMPACT (2025):</span>
-          seleccionado como formador para impartir contenidos de sistemas, automatización y ciberseguridad defensiva.
-        </li>
-        <li>
-          <span class="docencia-label">Metodología aplicada:</span>
-          enseñanza basada en escenarios reales, reducción de superficie de ataque, toma de decisiones técnicas y validación de resultados.
-        </li>
-        <li>
-          <span class="docencia-label">Acompañamiento técnico:</span>
-          apoyo individualizado, resolución de dudas, revisión de prácticas y guía en la construcción de criterio técnico.
-        </li>
-        <li>
-          <span class="docencia-label">Enfoque humano:</span>
-          desarrollo de confianza técnica, gestión del error como aprendizaje y fortalecimiento del pensamiento crítico en entornos operativos.
-        </li>
-      </ul>
+/* ==========================================
+   🎯 PORTFOLIO RAFAEL - CSS ULTRA ELITE
+   Arquitectura premium | Performance optimizado
+   ========================================== */
 
-      <p class="docencia-outro">
-        La docencia es una extensión natural de mi trabajo técnico:
-        <strong>compartir criterio</strong>, elevar estándares y facilitar el acceso a oportunidades reales mediante formación aplicada y defendible.
-      </p>
-    </section>
-
-    <!-- Certificaciones -->
-    <section id="certificaciones" aria-labelledby="certificaciones-title">
-      <div class="certificaciones-vitrina">
-        <h2 id="certificaciones-title" class="terminal-heading">
-          <i class="fas fa-certificate" aria-hidden="true"></i> 
-          certificaciones.py
-        </h2>
-
-        <div class="vitrina-badges">
-          <div class="badge-wrapper"
-               data-iframe-width="150"
-               data-iframe-height="270"
-               data-share-badge-id="357c2799-90a8-41c6-808e-5e979a958c7d"
-               data-share-badge-host="https://www.credly.com">
-          </div>
-
-          <div class="badge-wrapper"
-               data-iframe-width="150"
-               data-iframe-height="270"
-               data-share-badge-id="dad4ad76-045d-4df9-b408-907234ae2168"
-               data-share-badge-host="https://www.credly.com">
-          </div>
-
-          <div class="badge-wrapper"
-               data-iframe-width="150"
-               data-iframe-height="270"
-               data-share-badge-id="6ae1a6bb-5ef6-4dcb-97e3-965c7ebc4947"
-               data-share-badge-host="https://www.credly.com">
-          </div>
-
-          <div class="badge-wrapper"
-               data-iframe-width="150"
-               data-iframe-height="270"
-               data-share-badge-id="a4726f31-8f90-4ce5-96bb-c72d3a65e692"
-               data-share-badge-host="https://www.credly.com">
-          </div>
-        </div>
-
-        <p class="certificacion-descripcion">
-          Estas certificaciones avalan mi formación en ciberseguridad, redes y análisis defensivo, demostrando una base sólida en prácticas modernas de protección, detección de amenazas y administración de infraestructuras seguras.
-        </p>
-
-        <a href="https://rafaelmperez.com/docs/Diplomas_Publicos_final.pdf" 
-           target="_blank" 
-           rel="noopener noreferrer"
-           class="sysadmin-badge">
-          <i class="fa-regular fa-file-pdf" aria-hidden="true"></i>
-          Ver Diplomas PDF
-        </a>
-      </div>
-    </section>
-
-    <!-- Habilidades -->
-    <section id="habilidades" aria-labelledby="habilidades-title">
-      <h2 id="habilidades-title" class="terminal-heading">
-        <i class="fas fa-bolt" aria-hidden="true"></i> 
-        ~/habilidades.sh
-      </h2>
-
-      <div class="grid-habilidades">
-        <div class="card">
-          <h3>
-            <i class="fas fa-bolt" aria-hidden="true"></i> 
-            Responsabilidades técnicas
-          </h3>
-          <ul>
-            <li>
-              <i class="fas fa-server" aria-hidden="true"></i>
-              Diseño, administración y hardening de sistemas Linux y Windows
-            </li>
-            <li>
-              <i class="fas fa-shield-alt" aria-hidden="true"></i>
-              Reducción de superficie de ataque y control de deriva de configuración
-            </li>
-            <li>
-              <i class="fas fa-eye" aria-hidden="true"></i>
-              Monitorización activa, detección de anomalías y análisis de eventos
-            </li>
-            <li>
-              <i class="fas fa-bug" aria-hidden="true"></i>
-              Respuesta a incidentes con foco en contención, impacto y continuidad
-            </li>
-            <li>
-              <i class="fas fa-terminal" aria-hidden="true"></i>
-              Automatización defensiva para auditoría, control y reporting técnico
-            </li>
-            <li>
-              <i class="fas fa-user-shield" aria-hidden="true"></i>
-              Gestión del riesgo humano en entornos técnicos y operativos
-            </li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>
-            <i class="fas fa-layer-group" aria-hidden="true"></i> 
-            Tecnologías & Entornos
-          </h3>
-          <ul>
-            <li><i class="fas fa-desktop" aria-hidden="true"></i> <strong>Sistemas:</strong> Linux (Ubuntu, Debian), Windows</li>
-            <li><i class="fas fa-terminal" aria-hidden="true"></i> <strong>Automatización:</strong> Bash, Python, Ansible</li>
-            <li><i class="fas fa-eye" aria-hidden="true"></i> <strong>Observabilidad:</strong> Grafana, Prometheus, Wireshark</li>
-            <li><i class="fas fa-shield-alt" aria-hidden="true"></i> <strong>Defensiva:</strong> Nmap, Nikto, OWASP ZAP <span class="text-muted">(validación)</span></li>
-            <li><i class="fas fa-cubes" aria-hidden="true"></i> <strong>Infra:</strong> Proxmox, Docker, Vagrant, VirtualBox</li>
-            <li><i class="fas fa-code-branch" aria-hidden="true"></i> <strong>Control:</strong> Git, GitHub, VS Code</li>
-            <li><i class="fas fa-cloud" aria-hidden="true"></i> <strong>Cloud:</strong> AWS / Azure <span class="text-muted">(básico)</span></li>
-            <li><i class="fas fa-language" aria-hidden="true"></i> <strong>Idioma:</strong> Francés C1</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Proyectos -->
-    <section id="proyectos" aria-labelledby="proyectos-title">
-      <h2 id="proyectos-title" class="terminal-heading">
-        <i class="fas fa-project-diagram" aria-hidden="true"></i> 
-        ls ~/proyectos/
-      </h2>
-      
-      <div class="grid-proyectos">
-        <article class="card">
-          <img src="https://rafaelmperez.com/assets/img/resultadolynis.jpg" 
-               alt="Captura de resultados de auditoría Lynis mostrando score 87" 
-               width="400"
-               height="200"
-               loading="lazy">
-
-          <h3>
-            <i class="fas fa-lock" aria-hidden="true"></i> 
-            Bastionado completo de Ubuntu 24.04 LTS
-          </h3>
-
-          <div class="techline"> 
-            <span>Kernel</span>
-            <span>PAM</span>
-            <span>Auditd</span>
-            <span>USBGuard</span>
-            <span>Lynis</span>
-          </div>
-
-          <p>
-            Este proyecto documenta el proceso completo de bastionado de un sistema Ubuntu 24.04 LTS, siguiendo estándares CIS, NIST y OWASP. Se aplicaron medidas defensivas en múltiples capas: kernel, autenticación, servicios, red, logging y control físico, sin comprometer la funcionalidad del sistema.
-          </p>
-
-          <p>
-            Se utilizó Lynis como herramienta de auditoría continua, logrando una mejora de seguridad de <strong>68 a 87 puntos</strong>. Cada fase está documentada con comandos, configuraciones y validaciones técnicas.
-          </p>
-
-          <a href="https://rafaelmperez.com/docs/Rafael_MPerez_Bastionado_Ubuntu24.04_Informe_Tecnico.pdf"
-             target="_blank"
-             rel="noopener noreferrer"
-             class="sysadmin-badge">
-            <i class="fa-regular fa-file-pdf" aria-hidden="true"></i>
-            Informe técnico PDF
-          </a>
-        </article>
-
-        <article class="card">
-          <img src="https://rafaelmperez.com/assets/img/geoip.jpg" 
-               alt="Visualización de firewall dinámico con GeoIP" 
-               width="400"
-               height="200"
-               loading="lazy">
-
-          <h3>
-            <i class="fas fa-shield-alt" aria-hidden="true"></i> 
-            Firewall dinámico con GeoIP
-          </h3>
-
-          <div class="techline">
-            <span>iptables</span>
-            <span>GeoIP</span>
-            <span>Bash</span>
-            <span>SSH</span>
-            <span>Auth.log</span>
-          </div>
-
-          <p>
-            Este proyecto implementa un sistema defensivo automatizado que analiza los intentos fallidos de acceso SSH y bloquea IPs sospechosas según su país de origen.
-          </p>
-
-          <p>
-            Utiliza GeoIP para identificar conexiones no españolas y aplica reglas dinámicas con iptables. El script se ejecuta localmente, registra cada acción y permite visualizar los bloqueos en tiempo real.
-          </p>
-
-          <p>
-            El resultado es una capa de protección reactiva, ligera y documentable, alineada con buenas prácticas de ciberseguridad operativa.
-          </p>
-
-          <a href="https://rafaelmperez.com/proyectogeoip.html" 
-             target="_blank" 
-             rel="noopener noreferrer"
-             class="sysadmin-badge">
-            <i class="fas fa-book" aria-hidden="true"></i>
-            Ver documentación técnica
-          </a>
-        </article>
-
-        <article class="card">
-          <img 
-            src="https://rafaelmperez.com/assets/img/proyectografana2.jpg" 
-            alt="Dashboard de Grafana con métricas de seguridad" 
-            width="400"
-            height="200"
-            loading="lazy">
-
-          <h3>
-            <i class="fas fa-shield-alt" aria-hidden="true"></i> 
-            H-SHIELD — Responsabilidad defensiva en entorno PYME
-          </h3>
-              
-          <div class="techline">
-            <span>Ubuntu Server</span>
-            <span>Hardening</span>
-            <span>Observabilidad</span>
-            <span>Detección</span>
-            <span>Respuesta a incidentes</span>
-          </div>
-
-          <p>
-            Proyecto central del portfolio orientado a <strong>simular la responsabilidad real de ciberseguridad</strong> 
-            en una <strong>PYME</strong>.  
-            El foco no está en desplegar herramientas, sino en <strong>diseñar decisiones defensivas</strong>: 
-            reducir superficie de ataque, establecer un <strong>baseline seguro</strong>, 
-            detectar desviaciones relevantes y <strong>responder a incidentes</strong> con criterio.
-          </p>
-
-          <p>
-            Incluye <strong>hardening de sistemas Linux</strong>, 
-            <strong>monitorización y detección basada en anomalías</strong>, 
-            análisis de eventos, respuesta proporcional y 
-            <strong>gestión del riesgo humano</strong> en entornos operativos.
-          </p>
-
-          <p>
-            Este proyecto está diseñado para ser <strong>defendible en entrevista técnica</strong> 
-            y funcionar como <strong>sustituto de experiencia junior</strong>, 
-            priorizando impacto real frente a complejidad innecesaria.
-          </p>
-        </article>
-
-        <article class="card">
-          <img src="https://rafaelmperez.com/assets/img/proyecto_pipeline1.jpg" 
-               alt="Pipeline de trazabilidad en terminal con IA local" 
-               width="400"
-               height="200"
-               loading="lazy">
-
-          <h3>
-            <i class="fas fa-robot" aria-hidden="true"></i> 
-            Pipeline Bash de trazabilidad y reporting
-          </h3>
-          
-          <div class="techline">
-            <span>Ubuntu</span>
-            <span>Bash</span>
-            <span>Gemma 2B</span>
-            <span>IA Local</span>
-            <span>Markdown</span>
-            <span>Pandoc</span>
-          </div>
-
-          <p>
-            Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado para registrar las sesiones en la terminal, explicar automáticamente los comandos ejecutados y generar informes técnicos reproducibles en PDF/DOCX. El sistema prioriza trazabilidad, eficiencia y privacidad, su integración con el modelo de lenguaje local Gemma 2B permite potenciar la generación de explicaciones técnicas sin conexión a la red y automatizar tareas repetitivas. Esta arquitectura es aplicable en auditorías, bastionado de sistemas y formación técnica.
-          </p>
-
-          <a href="https://rafaelmperez.com/ialocal.html" 
-             target="_blank" 
-             rel="noopener noreferrer"
-             class="sysadmin-badge">
-            <i class="fas fa-book" aria-hidden="true"></i>
-            Ver documentación técnica
-          </a>
-        </article>
-      </div>
-    </section>
-
-    <!-- Scripts -->
-    <section id="scripts" aria-labelledby="scripts-title">
-      <h2 id="scripts-title" class="terminal-heading">
-        <i class="fas fa-code" aria-hidden="true"></i> 
-        ls ~/scripts/
-      </h2>
-      
-      <div class="grid-proyectos">
-        <article class="card">
-          <img src="https://rafaelmperez.com/assets/img/report_snapshot.png" 
-               alt="Reporte de escaneo Nmap automatizado" 
-               width="400"
-               height="200"
-               loading="lazy">
-
-          <h3>
-            <i class="fas fa-bolt" aria-hidden="true"></i> 
-            Nmap Auto Scanner
-          </h3>
-
-          <div class="techline">
-            <span>Python</span>
-            <span>Nmap</span>
-            <span>YAML</span>
-            <span>Cron</span>
-            <span>JSON/CSV</span>
-          </div>
-
-          <p>
-            <strong>Nmap Auto Scanner</strong> automatiza escaneos de red en entornos Linux, 
-            genera reportes en <code>JSON</code> y <code>CSV</code>, y compara resultados entre ejecuciones
-            para detectar cambios, nuevos servicios o posibles amenazas. Ideal para auditorías 
-            periódicas, bastionado y tareas de <em>blue team</em>.
-          </p>
-
-          <p>
-            Desarrollado en <strong>Python</strong> con integración de <code>python-nmap</code>, 
-            utiliza un archivo <code>config.yaml</code> para configurar objetivos, opciones y directorios 
-            de salida, además de soportar ejecución programada mediante <code>cron</code>.
-          </p>
-
-          <a href="https://github.com/rafaelmperez/nmap-auto-scanner" 
-             target="_blank" 
-             rel="noopener noreferrer"
-             class="sysadmin-badge">
-            <i class="fab fa-github" aria-hidden="true"></i> 
-            Ver en GitHub
-          </a>
-        </article>
-
-        <article class="card">
-          <img src="https://rafaelmperez.com/assets/img/scriptclonedvoice.png" 
-               alt="Script de síntesis de voz clonada con IA" 
-               width="400"
-               height="200"
-               loading="lazy">
-
-          <h3>
-            <i class="fas fa-microphone" aria-hidden="true"></i> 
-            Python TTS — Cloned AI Voice
-          </h3>
-
-          <div class="techline">
-            <span>Python</span>
-            <span>ElevenLabs API</span>
-            <span>OpenAI TTS</span>
-            <span>dotenv</span>
-            <span>CLI / Logging</span>
-          </div>
-
-          <p>
-            Proyecto de <strong>text-to-speech (TTS)</strong> desarrollado en Python que convierte texto 
-            en voz usando tu <strong>voz clonada</strong> mediante <em>ElevenLabs</em> o 
-            <strong>voz neural realista</strong> de <em>OpenAI</em>. 
-            Diseñado como script CLI, permite integrar síntesis de voz en flujos de trabajo, 
-            automatizaciones o contenido multimedia.
-          </p>
-
-          <p>
-            Soporta entrada por argumento, archivo o modo interactivo, configuración mediante 
-            <code>.env</code>, y salida de audio en <code>MP3/WAV</code>. 
-            Incluye sistema de logs y arquitectura extensible para añadir nuevos proveedores 
-            como Play.ht o VITS. Licenciado bajo <strong>MIT</strong>.
-          </p>
-
-          <a href="https://github.com/rafaelmperez/python-tts-cloned-voice" 
-             target="_blank" 
-             rel="noopener noreferrer"
-             class="sysadmin-badge">
-            <i class="fab fa-github" aria-hidden="true"></i> 
-            Ver en GitHub
-          </a>
-        </article>
-
-        <article class="card">
-          <img src="https://rafaelmperez.com/assets/img/scriptgmail.png" 
-               alt="Automatización de respuestas Gmail con IA" 
-               width="400"
-               height="200"
-               loading="lazy">
-
-          <h3>
-            <i class="fas fa-robot" aria-hidden="true"></i> 
-            Gmail Auto-Responder
-          </h3>
-
-          <div class="techline">
-            <span>Python</span>
-            <span>Gmail API</span>
-            <span>OpenAI API</span>
-            <span>Systemd</span>
-            <span>OAuth 2.0</span>
-          </div>
-
-          <p>
-            Proyecto de <strong>automatización de respuestas en Gmail</strong> mediante Python y la 
-            <em>Gmail API</em>, diseñado para ejecutarse de forma autónoma como servicio 
-            <code>systemd</code>. Permite responder correos entrantes de manera automática, 
-            con opción de <strong>respuestas inteligentes generadas por IA (OpenAI)</strong>.
-          </p>
-
-          <p>
-            Integra autenticación <strong>OAuth 2.0</strong>, gestión de logs detallada y control de 
-            duplicados para evitar bucles de respuesta. Su configuración se realiza mediante 
-            <code>.env</code>, con intervalos de verificación ajustables. 
-            Ideal para tareas de productividad, administración IT o flujos automatizados.
-          </p>
-
-          <a href="https://github.com/rafaelmperez/gmail-auto-responder" 
-             target="_blank" 
-             rel="noopener noreferrer"
-             class="sysadmin-badge">
-            <i class="fab fa-github" aria-hidden="true"></i> 
-            Ver en GitHub
-          </a>
-        </article>
-      </div>
-    </section>
-
-    <!-- Criterio profesional -->
-    <section id="criterio-profesional" aria-labelledby="criterio-title">
-      <h2 id="criterio-title" class="terminal-heading">
-        <i class="fas fa-brain" aria-hidden="true"></i> 
-        ~/criterio-tecnico.md
-      </h2>
-
-      <p>
-        Este portfolio está diseñado para reflejar <strong>criterio técnico aplicado</strong>,
-        no para enumerar herramientas ni maximizar cobertura superficial.
-      </p>
-
-      <ul>
-        <li>
-          <strong>Arquitectura y decisiones:</strong>
-          análisis de elecciones de diseño, compromisos asumidos y exclusiones conscientes
-          bajo restricciones reales.
-        </li>
-        <li>
-          <strong>Detección y respuesta:</strong>
-          identificación de señales relevantes, gestión del ruido y priorización operativa.
-        </li>
-        <li>
-          <strong>Factor humano:</strong>
-          evaluación de errores operativos, abuso de privilegios y riesgo organizativo
-          sin enfoques punitivos.
-        </li>
-        <li>
-          <strong>Gestión de incidentes:</strong>
-          contención, evaluación de impacto real y aprendizaje post-incidente.
-        </li>
-        <li>
-          <strong>Exposición y riesgo digital:</strong>
-          análisis de cómo la visibilidad pública y profesional amplifica el riesgo humano
-          y operativo, y cómo abordarlo desde un enfoque preventivo y no sensacionalista.
-        </li>
-      </ul>
-
-      <p>
-        El objetivo no es demostrar exhaustividad, sino
-        <strong>criterio defendible bajo restricciones reales</strong>,
-        priorizando impacto, riesgo y sostenibilidad frente a complejidad innecesaria.
-      </p>
-    </section>
-
-    <!-- CV -->
-    <section id="cv" aria-labelledby="cv-title">
-      <h2 id="cv-title" class="terminal-heading">
-        <i class="fas fa-file-code" aria-hidden="true"></i> 
-        $ ~/curriculum.pdf
-      </h2>
-
-      <div class="cv-container">
-        <div class="cv-visual">
-          <i class="fas fa-file-pdf document-icon" aria-hidden="true"></i>
-          <div class="document-info">
-            <h3>Curriculum Vitae</h3>
-            <p>Documento técnico completo con experiencia, formación y certificaciones verificables</p>
-          </div>
-          <div class="cv-stats">
-            <div class="stat-item">
-              <i class="fas fa-language" aria-hidden="true"></i>
-              <span>Francés C1</span>
-            </div>
-            <div class="stat-item">
-              <i class="fas fa-certificate" aria-hidden="true"></i>
-              <span>4+ Certificaciones</span>
-            </div>
-            <div class="stat-item">
-              <i class="fas fa-shield-alt" aria-hidden="true"></i>
-              <span>Ciberseguridad</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="cv-content">
-          <div class="cv-feature">
-            <i class="fas fa-user-shield cv-feature-icon" aria-hidden="true"></i>
-            <div>
-              <h4>Perfil Técnico</h4>
-              <p>Administración de sistemas y ciberseguridad defensiva con foco en gestión del riesgo digital</p>
-            </div>
-          </div>
-
-          <div class="cv-feature">
-            <i class="fas fa-server cv-feature-icon" aria-hidden="true"></i>
-            <div>
-              <h4>Experiencia Operativa</h4>
-              <p>Diseño, hardening y operación de sistemas Linux/Windows en entornos reales</p>
-            </div>
-          </div>
-
-          <div class="cv-feature">
-            <i class="fas fa-graduation-cap cv-feature-icon" aria-hidden="true"></i>
-            <div>
-              <h4>Formación Verificable</h4>
-              <p>ASIR + Certificaciones (Google Cybersecurity, Cisco CCST) con validación técnica</p>
-            </div>
-          </div>
-
-          <div class="cv-feature">
-            <i class="fas fa-chart-line cv-feature-icon" aria-hidden="true"></i>
-            <div>
-              <h4>Mejora Continua</h4>
-              <p>Enfoque en impacto real, automatización defensiva y documentación defendible</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cv-download-wrapper">
-        <a href="https://rafaelmperez.com/docs/CV_RafaelMPerez.pdf" 
-           class="sysadmin-badge cv-download-btn" 
-           target="_blank" 
-           rel="noopener noreferrer">
-          <i class="fas fa-file-pdf" aria-hidden="true"></i> 
-          <strong>Descargar CV</strong>
-          <span class="file-size">PDF • 2.4 MB</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contacto" aria-labelledby="contacto-title">
-      <h2 id="contacto-title" class="terminal-heading">
-        <i class="fas fa-envelope" aria-hidden="true"></i> 
-        Contacto
-      </h2>
-
-      <div class="phone-container">
-        <div class="phone-screen">
-          <form id="contactForm" 
-                action="https://formspree.io/f/mdkwngad" 
-                method="POST"
-                aria-label="Formulario de contacto">
-            <div class="form-group">
-              <label for="nombre">Nombre</label>
-              <input type="text" 
-                     id="nombre" 
-                     name="nombre" 
-                     required
-                     autocomplete="name"
-                     aria-required="true">
-            </div>
-
-            <div class="form-group">
-              <label for="email">Correo electrónico</label>
-              <input type="email" 
-                     id="email" 
-                     name="email" 
-                     required
-                     autocomplete="email"
-                     aria-required="true">
-            </div>
-
-            <div class="form-group">
-              <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" 
-                        name="mensaje" 
-                        required
-                        aria-required="true"></textarea>
-            </div>
-
-            <button type="submit" class="sysadmin-badge">
-              <strong>Enviar mensaje</strong>
-              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
-            </button>
-          </form>
-
-          <div class="divider" role="separator">
-            <span>- o si lo prefieres -</span>
-          </div>
-
-          <div class="email-link">
-            <a href="mailto:rmp.blueteam@proton.me" class="sysadmin-badge email-badge">
-              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-              rmp.blueteam@proton.me
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer role="contentinfo">
-    <p>
-      © 2026 Rafael M. Pérez<br>
-      Sistemas · Ciberseguridad · Gestión del riesgo digital
-    </p>
-    <p class="terminal-line">
-      ¡Gracias por tu visita!
-    </p>
-  </footer>
-
-  <!-- Back to top button -->
-  <button id="backToTop" 
-          class="back-to-top" 
-          aria-label="Volver arriba"
-          title="Volver arriba">
-    <i class="fas fa-chevron-up" aria-hidden="true"></i>
-  </button>
-
-  <!-- Scripts -->
-  <script src="script.js"></script>
+/* ===== VARIABLES ÉLITE MEJORADAS ===== */
+:root {
+  /* Fondos con profundidad */
+  --bg-body: #0a0e1a;
+  --bg-section: #0f1419;
+  --bg-card: #141b26;
+  --bg-card-hover: #1a2332;
+  --bg-accent: #1e293b;
+  --bg-overlay: rgba(10, 14, 26, 0.95);
   
-  <!-- Credly badges (async, no bloqueante) -->
-  <script async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+  /* Paleta dorada premium */
+  --gold-primary: #d4af37;
+  --gold-bright: #f5d36b;
+  --gold-soft: #c4a127;
+  --gold-dark: #b8941f;
+  
+  /* Acentos tech avanzados */
+  --cyan-accent: #06b6d4;
+  --blue-accent: #3b82f6;
+  --purple-accent: #8b5cf6;
+  --teal-accent: #14b8a6;
+  
+  /* Textos con jerarquía */
+  --text-primary: #f8fafc;
+  --text-secondary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-subtle: #64748b;
+  --text-dark: #475569;
+  
+  /* Bordes premium con opacidad */
+  --border-gold: rgba(212, 175, 55, 0.35);
+  --border-tech: rgba(59, 130, 246, 0.25);
+  --border-subtle: rgba(148, 163, 184, 0.15);
+  
+  /* Sistema de sombras escalable */
+  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.18);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.22);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.28);
+  --shadow-gold-sm: 0 2px 12px rgba(212, 175, 55, 0.15);
+  --shadow-gold-md: 0 4px 24px rgba(212, 175, 55, 0.2);
+  --shadow-gold-lg: 0 8px 32px rgba(212, 175, 55, 0.25);
+  --shadow-tech-sm: 0 2px 12px rgba(59, 130, 246, 0.15);
+  --shadow-tech-md: 0 4px 20px rgba(59, 130, 246, 0.2);
+  --shadow-tech-lg: 0 8px 32px rgba(59, 130, 246, 0.25);
+  
+  /* Gradientes premium */
+  --gradient-gold: linear-gradient(135deg, var(--gold-bright) 0%, var(--gold-primary) 100%);
+  --gradient-tech: linear-gradient(135deg, var(--cyan-accent) 0%, var(--blue-accent) 100%);
+  --gradient-dark: linear-gradient(180deg, var(--bg-section) 0%, var(--bg-card) 100%);
+  --gradient-glow: radial-gradient(circle at center, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+  
+  /* Transiciones suaves */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+  /* Espaciado consistente */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  
+  /* Radios de borde */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+}
 
-  <!-- Google Translate (carga diferida) -->
-  <script>
+/* ===== RESET AVANZADO ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--bg-body);
+  color: var(--text-secondary);
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Fondo dinámico con múltiples capas */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(20, 184, 166, 0.05) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+  animation: ambientMove 20s ease-in-out infinite alternate;
+}
+
+@keyframes ambientMove {
+  0% { opacity: 0.5; transform: scale(1); }
+  100% { opacity: 0.7; transform: scale(1.05); }
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== TIPOGRAFÍA OPTIMIZADA ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--space-md);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h1, h2.terminal-heading {
+  color: var(--text-primary) !important;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+}
+
+h2 {
+  font-family: 'Fira Code', monospace;
+  font-size: clamp(1.5rem, 3.5vw, 1.875rem);
+  color: var(--gold-bright);
+}
+
+h3 {
+  color: var(--gold-bright) !important;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 600;
+}
+
+p, li {
+  color: var(--text-secondary) !important;
+  line-height: 1.8;
+  font-size: clamp(0.9375rem, 1.5vw, 1.0625rem);
+}
+
+strong {
+  color: var(--gold-primary) !important;
+  font-weight: 600;
+}
+
+/* ===== HEADER ULTRA PREMIUM ===== */
+header {
+  position: relative;
+  background: var(--bg-overlay);
+  backdrop-filter: blur(12px) saturate(180%);
+  text-align: center;
+  padding: var(--space-2xl) var(--space-md);
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-tech);
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gradient-tech);
+  opacity: 0.6;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== BANNER ÉLITE CON EFECTOS ===== */
+.banner-header {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--border-tech);
+  box-shadow: 
+    var(--shadow-tech-md),
+    0 0 60px rgba(59, 130, 246, 0.15);
+  transition: all var(--transition-slow);
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-header::before {
+  content: "";
+  position: absolute;
+  inset: -100%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(59, 130, 246, 0.3) 90deg,
+    transparent 180deg
+  );
+  animation: bannerRotate 4s linear infinite;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+@keyframes bannerRotate {
+  to { transform: rotate(360deg); }
+}
+
+.banner-header:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 
+    var(--shadow-tech-lg),
+    0 0 80px rgba(59, 130, 246, 0.25);
+  border-color: var(--cyan-accent);
+}
+
+.banner-header:hover::before {
+  opacity: 1;
+}
+
+/* ===== NAVBAR ULTRA ÉLITE ===== */
+.barra-superior {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: var(--space-md) 0;
+  background: var(--bg-overlay);
+  backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid var(--border-tech);
+  transition: all var(--transition-base);
+  z-index: 100;
+  box-shadow: var(--shadow-md);
+}
+
+.barra-superior::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--gradient-tech);
+  opacity: 0.5;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+.barra-superior nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  color: var(--text-secondary) !important;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all var(--transition-base);
+  font-family: 'Orbitron', sans-serif !important;
+  overflow: hidden;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-md);
+  padding: 1px;
+  background: var(--gradient-tech);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-tech);
+  transition: all var(--transition-smooth);
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px var(--cyan-accent);
+}
+
+.nav-link:hover {
+  color: var(--cyan-accent) !important;
+  background: rgba(59, 130, 246, 0.1);
+  transform: translateY(-3px);
+}
+
+.nav-link:hover::before {
+  opacity: 1;
+}
+
+.nav-link:hover::after {
+  width: 80%;
+}
+
+/* ===== ICONOS SOCIALES ULTRA PREMIUM ===== */
+.social-float {
+  display: flex;
+  margin-right: var(--space-lg);
+  justify-content: flex-end;
+  gap: var(--space-md);
+}
+
+.social-float a {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: rgba(20, 25, 38, 0.7);
+  backdrop-filter: blur(12px);
+  color: var(--text-secondary) !important;
+  border: 1px solid var(--border-tech);
+  transition: all var(--transition-smooth);
+  overflow: visible;
+}
+
+.social-float a::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: calc(var(--radius-md) + 2px);
+  padding: 1px;
+  background: var(--gradient-tech);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.social-float a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-md);
+  background: var(--gradient-glow);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.social-float a:hover {
+  transform: translateY(-5px) scale(1.08) rotate(5deg);
+  background: rgba(59, 130, 246, 0.2);
+  color: var(--cyan-accent) !important;
+  box-shadow: var(--shadow-tech-lg);
+}
+
+.social-float a:hover::before {
+  opacity: 1;
+}
+
+.social-float a:hover::after {
+  opacity: 1;
+}
+
+.social-float a i {
+  position: relative;
+  z-index: 1;
+  font-size: 1.125rem;
+}
+
+/* Tooltips ultra premium */
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: var(--bg-overlay);
+  backdrop-filter: blur(12px);
+  color: var(--text-primary);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  border: 1px solid var(--border-tech);
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-base);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: rgba(15, 20, 25, 0.95);
+}
+
+.social-float a:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ===== SECCIONES ULTRA PREMIUM ===== */
+section {
+  background: var(--gradient-dark) !important;
+  border: 1px solid var(--border-tech) !important;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  max-width: 1400px;
+  margin: var(--space-2xl) auto !important;
+  padding: var(--space-2xl) var(--space-xl);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-tech);
+  opacity: 0.4;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+}
+
+section::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: var(--gradient-glow);
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+  pointer-events: none;
+}
+
+section:hover::after {
+  opacity: 0.3;
+}
+
+/* ===== TARJETAS ULTRA ÉLITE ===== */
+.card {
+  background: rgba(20, 27, 38, 0.7) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-tech) !important;
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-smooth);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  padding: 1px;
+  background: var(--gradient-tech);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: var(--gradient-glow);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  pointer-events: none;
+}
+
+.card:hover {
+  background: rgba(26, 35, 50, 0.85) !important;
+  border-color: var(--cyan-accent) !important;
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 
+    var(--shadow-tech-lg),
+    0 20px 60px rgba(59, 130, 246, 0.25);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:hover::after {
+  opacity: 0.5;
+}
+
+.card h3 {
+  color: var(--gold-bright) !important;
+  margin-bottom: var(--space-md);
+  font-size: clamp(1.0625rem, 2vw, 1.375rem);
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.card p {
+  color: var(--text-secondary) !important;
+  line-height: 1.9;
+  font-size: clamp(0.9375rem, 1.5vw, 1.0625rem);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-lg);
+  border: 1px solid var(--border-tech);
+  transition: all var(--transition-slow);
+  filter: brightness(0.9);
+}
+
+.card:hover img {
+  transform: scale(1.03) translateY(-4px);
+  box-shadow: var(--shadow-tech-md);
+  filter: brightness(1);
+}
+
+/* Cards anidadas sin efectos */
+.card .card {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: var(--space-md);
+  transform: none !important;
+}
+
+.card .card:hover {
+  background: transparent !important;
+}
+
+/* ===== BOTONES ULTRA PREMIUM ===== */
+.sysadmin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: rgba(20, 25, 38, 0.85);
+  backdrop-filter: blur(12px);
+  color: var(--gold-primary) !important;
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-family: 'Fira Code', monospace;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  padding: 0.8rem 1.75rem;
+  transition: all var(--transition-smooth);
+  box-shadow: var(--shadow-gold-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.sysadmin-badge::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-gold);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.sysadmin-badge::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(212, 175, 55, 0.3) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.sysadmin-badge:hover {
+  color: #000 !important;
+  border-color: var(--gold-bright);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: var(--shadow-gold-lg);
+}
+
+.sysadmin-badge:hover::before {
+  opacity: 1;
+}
+
+.sysadmin-badge:hover::after {
+  opacity: 1;
+}
+
+.sysadmin-badge:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+.sysadmin-badge > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== TERMINAL HEADING ULTRA ÉLITE ===== */
+.terminal-heading {
+  color: var(--text-primary) !important;
+  text-shadow:
+    0 0 30px rgba(59, 130, 246, 0.5),
+    0 0 60px rgba(59, 130, 246, 0.3);
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  font-family: 'Fira Code', monospace;
+  letter-spacing: 1px;
+  font-size: clamp(1.5rem, 4vw, 2.25rem) !important;
+  padding: var(--space-md) var(--space-xl);
+  border-radius: var(--radius-md);
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid var(--border-tech);
+  margin-bottom: var(--space-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.terminal-heading::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-glow);
+  opacity: 0.3;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.4; }
+}
+
+.terminal-heading i {
+  color: var(--cyan-accent);
+  margin-right: var(--space-sm);
+  filter: drop-shadow(0 0 10px rgba(6, 182, 212, 0.5));
+  position: relative;
+  z-index: 1;
+}
+
+.terminal-heading::after {
+  content: "";
+  display: inline-block;
+  width: 0.7em;
+  height: 1.1em;
+  background-color: var(--cyan-accent) !important;
+  animation: blink-elite 1.2s steps(2) infinite;
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--cyan-accent);
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes blink-elite {
+  50% { opacity: 0; }
+}
+
+#contacto .terminal-heading::after {
+  display: none !important;
+}
+
+/* ===== BADGES TECH MEJORADOS ===== */
+.techline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin: var(--space-md) 0;
+}
+
+.techline span {
+  display: inline-block;
+  padding: 0.5rem 1.1rem;
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-tech);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary) !important;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.3px;
+  font-family: 'Rajdhani', sans-serif;
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.techline span::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-tech);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.techline span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--cyan-accent);
+  transition: width var(--transition-base);
+  box-shadow: 0 0 8px var(--cyan-accent);
+}
+
+.techline span:hover {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: var(--cyan-accent);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: var(--shadow-tech-sm);
+  color: var(--cyan-accent) !important;
+}
+
+.techline span:hover::after {
+  width: 100%;
+}
+
+/* ===== IMAGEN SOBRE MÍ ULTRA ÉLITE ===== */
+.imagen-sobre-mi {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: var(--space-xl) auto;
+  border: 4px solid var(--cyan-accent);
+  box-shadow: 
+    0 0 50px rgba(59, 130, 246, 0.5),
+    0 0 100px rgba(59, 130, 246, 0.3);
+  position: relative;
+  transition: all var(--transition-slow);
+}
+
+.imagen-sobre-mi::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    var(--cyan-accent),
+    var(--blue-accent),
+    var(--purple-accent),
+    var(--cyan-accent)
+  );
+  animation: rotate-border 4s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rotate-border {
+  to { transform: rotate(360deg); }
+}
+
+.imagen-sobre-mi::after {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.imagen-sobre-mi img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: brightness(0.95);
+  transition: filter var(--transition-base);
+}
+
+.imagen-sobre-mi:hover {
+  transform: scale(1.08);
+  box-shadow: 
+    0 0 70px rgba(59, 130, 246, 0.7),
+    0 0 120px rgba(59, 130, 246, 0.4);
+}
+
+.imagen-sobre-mi:hover::after {
+  opacity: 1;
+}
+
+.imagen-sobre-mi:hover img {
+  filter: brightness(1);
+}
+
+/* ===== GRIDS OPTIMIZADOS ===== */
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-xl);
+  width: 100%;
+  padding: 0 var(--space-md);
+}
+
+.grid-habilidades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-xl);
+}
+
+/* ===== CERTIFICACIONES ULTRA ÉLITE ===== */
+.certificaciones-vitrina {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--space-2xl);
+  text-align: center;
+  background: rgba(15, 20, 25, 0.7);
+  backdrop-filter: blur(20px);
+  border: 2px solid var(--border-tech);
+  border-radius: var(--radius-xl);
+  box-shadow: 
+    var(--shadow-tech-md),
+    0 0 80px rgba(59, 130, 246, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.certificaciones-vitrina::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 30% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  animation: floatBackground 10s ease-in-out infinite;
+}
+
+/* ===== FONDO BLANCO PARA BADGES CREDLY ===== */
+.vitrina-badges iframe,
+.badge-wrapper iframe {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-tech);
+  box-shadow: var(--shadow-tech-sm);
+  transition: all var(--transition-smooth);
+  background: #f7eeee !important; /* Fondo blanco para Credly */
+}
+
+.vitrina-badges iframe:hover,
+.badge-wrapper iframe:hover {
+  transform: translateY(-10px) scale(1.05) rotate(2deg);
+  box-shadow: 
+    var(--shadow-tech-lg),
+    0 20px 60px rgba(59, 130, 246, 0.35);
+  border-color: var(--cyan-accent);
+}
+
+@keyframes floatBackground {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.02); }
+}
+
+.vitrina-badges {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xl);
+  margin: var(--space-xl) 0;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.vitrina-badges iframe {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-tech);
+  box-shadow: var(--shadow-tech-sm);
+  transition: all var(--transition-smooth);
+  background: rgba(20, 25, 38, 0.5);
+}
+
+.vitrina-badges iframe:hover {
+  transform: translateY(-10px) scale(1.05) rotate(2deg);
+  box-shadow: 
+    var(--shadow-tech-lg),
+    0 20px 60px rgba(59, 130, 246, 0.35);
+  border-color: var(--cyan-accent);
+}
+
+/* ===== FOOTER ULTRA PREMIUM ===== */
+footer {
+  width: 100%;
+  margin: 0;
+  padding: var(--space-2xl) var(--space-md);
+  background: linear-gradient(180deg, var(--bg-body), rgba(10, 14, 26, 0.98));
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  text-align: center;
+  border-top: 1px solid var(--border-tech);
+  position: relative;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-tech);
+  opacity: 0.5;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}
+
+footer a {
+  color: var(--cyan-accent);
+  margin: 0 var(--space-md);
+  text-decoration: none;
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+footer a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold-bright);
+  transition: width var(--transition-base);
+}
+
+footer a:hover {
+  color: var(--gold-bright);
+  text-shadow: 0 0 10px rgba(245, 211, 107, 0.5);
+}
+
+footer a:hover::after {
+  width: 100%;
+}
+
+/* ===== FORMULARIO CONTACTO ULTRA ÉLITE ===== */
+.form-group {
+  margin-bottom: var(--space-lg);
+}
+
+#contacto .phone-screen label {
+  display: block;
+  margin-bottom: var(--space-sm);
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  text-align: left;
+}
+
+#contacto .phone-screen input,
+#contacto .phone-screen textarea {
+  width: 100%;
+  background: rgba(10, 14, 26, 0.7);
+  border: 1px solid var(--border-tech);
+  color: var(--text-primary);
+  padding: 0.9rem;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 0.9375rem;
+  transition: all var(--transition-base);
+}
+
+#contacto .phone-screen input:focus,
+#contacto .phone-screen textarea:focus {
+  outline: none;
+  border-color: var(--cyan-accent);
+  background: rgba(20, 25, 38, 0.9);
+  box-shadow: 
+    0 0 0 3px rgba(59, 130, 246, 0.1),
+    0 0 25px rgba(59, 130, 246, 0.25);
+  transform: translateY(-2px);
+}
+
+#contacto .phone-screen textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+#contacto .phone-screen button.sysadmin-badge {
+  width: 100%;
+  margin-top: var(--space-md);
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+#contacto .divider {
+  display: flex;
+  align-items: center;
+  margin: var(--space-xl) 0;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+#contacto .divider::before,
+#contacto .divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--border-tech);
+}
+
+#contacto .divider span {
+  padding: 0 var(--space-md);
+  font-family: 'Fira Code', monospace;
+}
+
+#contacto .email-link {
+  text-align: center;
+}
+
+#contacto .email-link .sysadmin-badge {
+  background: rgba(59, 130, 246, 0.12);
+  border-color: var(--border-tech);
+  color: var(--cyan-accent) !important;
+  width: 100%;
+}
+
+#contacto .email-link .sysadmin-badge:hover {
+  background: rgba(59, 130, 246, 0.25);
+  border-color: var(--cyan-accent);
+  color: var(--text-primary) !important;
+}
+
+/* ===== CV SECTION ULTRA PREMIUM ===== */
+#cv .cv-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+  margin-bottom: var(--space-2xl);
+}
+
+#cv .cv-visual {
+  position: relative;
+  background: rgba(20, 25, 38, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-tech);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 450px;
+  overflow: hidden;
+  transition: all var(--transition-slow);
+}
+
+#cv .cv-visual::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: var(--radius-lg);
+  padding: 1px;
+  background: var(--gradient-tech);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+#cv .cv-visual:hover::before {
+  opacity: 1;
+}
+
+#cv .cv-visual:hover {
+  background: rgba(26, 35, 50, 0.8);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-tech-lg);
+}
+
+#cv .document-icon {
+  font-size: 7rem;
+  color: var(--gold-primary);
+  margin-bottom: var(--space-lg);
+  text-shadow: 
+    0 0 50px rgba(212, 175, 55, 0.5),
+    0 0 100px rgba(212, 175, 55, 0.3);
+  animation: float-cv 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.4));
+}
+
+@keyframes float-cv {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-15px) scale(1.08); }
+}
+
+#cv .document-info {
+  text-align: center;
+  margin-top: var(--space-md);
+}
+
+#cv .document-info h3 {
+  color: var(--gold-bright) !important;
+  font-size: 1.625rem;
+  margin-bottom: var(--space-md);
+  font-family: 'Fira Code', monospace;
+  font-weight: 600;
+}
+
+#cv .document-info p {
+  color: var(--text-muted) !important;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+#cv .cv-stats {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#cv .stat-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid var(--border-tech);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  color: var(--text-secondary) !important;
+  transition: all var(--transition-base);
+  font-weight: 500;
+}
+
+#cv .stat-item:hover {
+  background: rgba(59, 130, 246, 0.25);
+  border-color: var(--cyan-accent);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-tech-sm);
+}
+
+#cv .stat-item i {
+  color: var(--cyan-accent);
+  filter: drop-shadow(0 0 5px rgba(6, 182, 212, 0.5));
+}
+
+#cv .cv-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+#cv .cv-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: rgba(20, 25, 38, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-tech);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+#cv .cv-feature::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 0;
+  background: var(--gradient-tech);
+  transition: height var(--transition-base);
+  box-shadow: 0 0 10px var(--cyan-accent);
+}
+
+#cv .cv-feature:hover {
+  background: rgba(26, 35, 50, 0.7);
+  border-color: var(--cyan-accent);
+  transform: translateX(10px);
+  box-shadow: var(--shadow-tech-md);
+}
+
+#cv .cv-feature:hover::before {
+  height: 100%;
+}
+
+#cv .cv-feature-icon {
+  font-size: 1.875rem;
+  color: var(--cyan-accent);
+  min-width: 45px;
+  text-align: center;
+  margin-top: var(--space-xs);
+  filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.5));
+}
+
+#cv .cv-feature h4 {
+  color: var(--gold-bright) !important;
+  font-size: 1.125rem;
+  margin-bottom: var(--space-sm);
+  font-weight: 600;
+  font-family: 'Fira Code', monospace;
+}
+
+#cv .cv-feature p {
+  color: var(--text-secondary) !important;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+#cv .cv-download-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-md);
+}
+
+#cv .cv-download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: 1.1rem 2.25rem;
+  min-width: 340px;
+  position: relative;
+}
+
+#cv .cv-download-btn .file-size {
+  margin-left: auto;
+  font-size: 0.75rem;
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+/* ===== LANGUAGE SWITCHER ÉLITE ===== */
+.language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  opacity: 0;
+  animation: fadeInSwitcher 0.6s ease 0.3s forwards;
+}
+
+@keyframes fadeInSwitcher {
+  to { opacity: 1; }
+}
+
+.language-switcher a {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  text-decoration: none;
+  background: var(--bg-overlay);
+  backdrop-filter: blur(12px);
+  color: var(--text-secondary);
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-tech);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.language-switcher a:hover {
+  background: rgba(59, 130, 246, 0.18);
+  border-color: var(--cyan-accent);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-tech-sm);
+}
+
+.language-switcher a img.flag {
+  width: 24px;
+  height: auto;
+  border-radius: 3px;
+}
+
+/* ===== SCROLLBAR ULTRA ÉLITE ===== */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-body);
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--cyan-accent), var(--blue-accent));
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--bg-body);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--blue-accent), var(--purple-accent));
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+}
+
+/* ===== RESPONSIVE ULTRA OPTIMIZADO ===== */
+@media (max-width: 1024px) {
+  :root {
+    --space-2xl: 2.5rem;
+    --space-xl: 1.75rem;
+  }
+  
+  .grid-proyectos {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+  }
+  
+  .banner-header {
+    max-width: 90%;
+  }
+  
+  section {
+    padding: var(--space-xl) var(--space-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --space-2xl: 2rem;
+    --space-xl: 1.5rem;
+  }
+  
+  .terminal-heading {
+    font-size: 1.5rem !important;
+    padding: var(--space-md) var(--space-lg);
+  }
+  
+  .grid-proyectos,
+  .grid-habilidades {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  section {
+    padding: var(--space-xl) var(--space-lg);
+    margin: var(--space-lg) auto !important;
+  }
+  
+  .nav-link {
+    font-size: 0.875rem !important;
+    padding: 0.55rem 1rem !important;
+  }
+  
+  .social-float {
+    margin-right: var(--space-md);
+    gap: var(--space-sm);
+  }
+  
+  .social-float a {
+    width: 44px;
+    height: 44px;
+  }
+  
+  #cv .cv-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+  
+  #cv .cv-visual {
+    min-height: 380px;
+    padding: var(--space-xl) var(--space-lg);
+  }
+  
+  #cv .document-icon {
+    font-size: 6rem;
+  }
+  
+  .barra-superior {
+    padding: var(--space-sm) 0;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --space-2xl: 1.5rem;
+    --space-xl: 1.25rem;
+  }
+  
+  .banner-header {
+    border-radius: var(--radius-md);
+    max-width: 95%;
+  }
+  
+  .imagen-sobre-mi {
+    width: 140px;
+    height: 140px;
+  }
+  
+  h2.terminal-heading {
+    font-size: 1.25rem !important;
+    gap: var(--space-sm);
+  }
+  
+  .card {
+    padding: var(--space-lg);
+  }
+  
+  .sysadmin-badge {
+    padding: 0.7rem 1.4rem;
+    font-size: 0.875rem;
+  }
+  
+  #cv .cv-visual {
+    min-height: 320px;
+    padding: var(--space-xl) var(--space-md);
+  }
+  
+  #cv .document-icon {
+    font-size: 5rem;
+  }
+  
+  #cv .cv-stats {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  #cv .stat-item {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  #cv .cv-feature {
+    padding: var(--space-md);
+  }
+  
+  #cv .cv-download-btn {
+    min-width: auto;
+    width: 100%;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  
+  #cv .cv-download-btn .file-size {
+    margin-left: 0;
+  }
+}
+
+/* ===== ANIMACIONES ADICIONALES ===== */
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.card:hover {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(-10px) scale(1.02); }
+  50% { transform: translateY(-14px) scale(1.02); }
+}
+
+/* ===== MICRO-INTERACCIONES ===== */
+.card img,
+.banner-header,
+.social-float a,
+.nav-link {
+  will-change: transform;
+}
+
+/* Performance: reduce motion para usuarios con preferencias */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+  </style>
+
+
+
+  <!-- Script para activar la traducción -->
+  <script type="text/javascript">
+    // Inicializa el traductor de Google
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
         pageLanguage: 'es',
@@ -970,15 +1725,12 @@
       }, 'google_translate_element');
     }
 
-    // Cargar Google Translate de forma diferida
-    window.addEventListener('load', function() {
-      const gtScript = document.createElement('script');
-      gtScript.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-      gtScript.async = true;
-      document.head.appendChild(gtScript);
-    });
+    // Cargar el script de Google Translate
+    const gtScript = document.createElement('script');
+    gtScript.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    document.head.appendChild(gtScript);
 
-    // Función de traducción
+    // Cambiar idioma usando la cookie de Google Translate
     function translateTo(lang) {
       const domain = window.location.hostname.includes("github.io")
         ? "github.io"
@@ -987,16 +1739,1326 @@
       location.reload();
     }
 
-    // Event listener para botón FR
-    document.addEventListener("DOMContentLoaded", function() {
+    // Evento de clic en el botón
+    document.addEventListener("DOMContentLoaded", () => {
       const frBtn = document.getElementById("translate-fr");
-      if (frBtn) {
-        frBtn.addEventListener("click", function(e) {
-          e.preventDefault();
-          translateTo("fr");
-        });
-      }
+      frBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        translateTo("fr");
+      });
     });
   </script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+  <!-- Aquí va el script, justo antes de cerrar body -->
+  <script src="script.js"></script>
+
+
+<section id="sobre-mi">
+    <h2 class="terminal-heading">
+      <i class="fas fa-user-shield"></i> ~/sobre-mi
+    </h2>
+
+    
+
+    <div class="imagen-sobre-mi">
+   <img 
+  src="https://rafaelmperez.com/assets/img/sobremi2.jpg" 
+  alt="Foto de Rafael M. Pérez" 
+  fetchpriority="high">
+    </div>
+
+    
+
+<div class="texto-sobre-mi">
+  <p>
+    Hola, soy <strong>Rafael M. Pérez</strong>. 
+    Perfil técnico orientado a <strong>sistemas y ciberseguridad defensiva</strong>, 
+    con foco en la <strong>gestión del riesgo digital</strong>, la <strong>reducción de superficie de ataque</strong> 
+    y la <strong>toma de decisiones técnicas</strong> en entornos reales.
+  </p>
+
+  <p>
+    Trabajo en el <strong>diseño, operación y hardening de sistemas Linux y Windows</strong>, 
+    priorizando <strong>criterio técnico</strong>, <strong>automatización defensiva</strong> 
+    y <strong>documentación defendible</strong> frente a soluciones teóricas.
+  </p>
+
+  <p>
+    Formación en <strong>ASIR</strong> y certificaciones en <strong>IT y ciberseguridad</strong> 
+    (Cisco, Google Cybersecurity Certificate), aplicadas junto a estándares como 
+    <strong>OWASP</strong>, <strong>NIST</strong> y <strong>CIS</strong>.  
+    Mentalidad orientada a <strong>impacto real</strong>, mejora continua y validación de resultados.
+  </p>
+
+<p>
+  Hablo <strong>francés con fluidez</strong> y colaboro en entornos técnicos internacionales.  
+  Además, mantengo un 
+  <a href="https://www.upgrademe.blog/" 
+     class="terminal-link" 
+     target="_blank" 
+     rel="noopener noreferrer">
+    <strong>blog</strong>
+  </a> 
+  donde analizo <strong>riesgo digital</strong>, <strong>ciberseguridad defensiva</strong> y 
+  <strong>factor humano</strong> desde una perspectiva técnica y operativa.
+</p>
+
+</div>
+
+
+
+
+</a><a href="https://rafaelmperez.com/docs/CARTA_PRESENTACION.pdf" 
+   target="_blank" 
+   class="sysadmin-badge"
+   style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold; border:1px solid #d4af37; transition:all 0.3s ease;">
+  <i class="fa-regular fa-file-pdf" style="color:#ffffff; margin-right:6px;"></i>
+  Carta de presentación PDF
+</a>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="certificaciones">
+  <div class="certificaciones-vitrina">
+
+    <h2 class="terminal-heading">
+      <i class="fas fa-certificate"></i> certificaciones.py
+    </h2>
+
+    <div class="vitrina-badges">
+
+      <!-- Google Cybersecurity -->
+      <div class="badge-wrapper"
+           data-iframe-width="150"
+           data-iframe-height="270"
+           data-share-badge-id="357c2799-90a8-41c6-808e-5e979a958c7d"
+           data-share-badge-host="https://www.credly.com">
+      </div>
+
+      <!-- Cisco CCST Cybersecurity -->
+      <div class="badge-wrapper"
+           data-iframe-width="150"
+           data-iframe-height="270"
+           data-share-badge-id="dad4ad76-045d-4df9-b408-907234ae2168"
+           data-share-badge-host="https://www.credly.com">
+      </div>
+
+      <!-- Cisco CCST Networking -->
+      <div class="badge-wrapper"
+           data-iframe-width="150"
+           data-iframe-height="270"
+           data-share-badge-id="6ae1a6bb-5ef6-4dcb-97e3-965c7ebc4947"
+           data-share-badge-host="https://www.credly.com">
+      </div>
+
+      <!-- Extra badge añadido -->
+      <div class="badge-wrapper"
+           data-iframe-width="150"
+           data-iframe-height="270"
+           data-share-badge-id="a4726f31-8f90-4ce5-96bb-c72d3a65e692"
+           data-share-badge-host="https://www.credly.com">
+      </div>
+
+    </div>
+
+    <p class="certificacion-descripcion">
+      Estas certificaciones avalan mi formación en ciberseguridad, redes y análisis defensivo, demostrando una base sólida en prácticas modernas de protección, detección de amenazas y administración de infraestructuras seguras.
+    </p>
+
+<a href="https://rafaelmperez.com/docs/Diplomas_Publicos_final.pdf" 
+   target="_blank" 
+   class="sysadmin-badge"
+   style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold; border:1px solid #d4af37; transition:all 0.3s ease;">
+  <i class="fa-regular fa-file-pdf" style="color:#ffffff; margin-right:6px;"></i>
+  Ver Diplomas PDF
+</a>
+
+
+    <!-- Script Credly (solo una vez y optimizado) -->
+    <script async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+  </div>
+</section>
+
+<section id="docencia-mentoria">
+  <h2 class="terminal-heading">
+    <i class="fas fa-chalkboard-teacher"></i> ~/docencia.txt
+  </h2>
+
+  <p class="docencia-intro">
+    Esta sección recoge mi labor como <strong>formador y mentor técnico</strong>,
+    orientada a transferir conocimiento práctico en sistemas y ciberseguridad a perfiles
+    en proceso de especialización o mejora de empleabilidad.
+  </p>
+
+  <ul class="docencia-list">
+    <li>
+      <span class="docencia-label">Fundación GoodJobs — Programa IMPACT (2025):</span>
+      seleccionado como formador para impartir contenidos de sistemas, automatización y ciberseguridad defensiva.
+    </li>
+    <li>
+      <span class="docencia-label">Metodología aplicada:</span>
+      enseñanza basada en escenarios reales, reducción de superficie de ataque, toma de decisiones técnicas y validación de resultados.
+    </li>
+    <li>
+      <span class="docencia-label">Acompañamiento técnico:</span>
+      apoyo individualizado, resolución de dudas, revisión de prácticas y guía en la construcción de criterio técnico.
+    </li>
+    <li>
+      <span class="docencia-label">Enfoque humano:</span>
+      desarrollo de confianza técnica, gestión del error como aprendizaje y fortalecimiento del pensamiento crítico en entornos operativos.
+    </li>
+  </ul>
+
+  <p class="docencia-outro">
+    La docencia es una extensión natural de mi trabajo técnico:
+    <strong>compartir criterio</strong>, elevar estándares y facilitar el acceso a oportunidades reales mediante formación aplicada y defendible.
+  </p>
+</section>
+
+
+
+
+   <section id="habilidades">
+  <!-- Card envolvente -->
+
+    <!-- Terminal heading dentro de la card -->
+    <h2 class="terminal-heading">
+      <i class="fas fa-bolt"></i> ~/habilidades.sh
+    </h2>
+
+    <!-- Grid de habilidades con dos cards internas -->
+    <div class="grid-habilidades">
+
+<!-- Card 1: Responsabilidades técnicas -->
+<div class="card">
+  <h3 style="font-size: 1em;">
+    <i class="fas fa-bolt"></i> Responsabilidades técnicas
+  </h3>
+  <ul style="list-style:none; padding:0;">
+    <li>
+      <i class="fas fa-server"></i>
+      Diseño, administración y hardening de sistemas Linux y Windows
+    </li>
+    <li>
+      <i class="fas fa-shield-alt"></i>
+      Reducción de superficie de ataque y control de deriva de configuración
+    </li>
+    <li>
+      <i class="fas fa-eye"></i>
+      Monitorización activa, detección de anomalías y análisis de eventos
+    </li>
+    <li>
+      <i class="fas fa-bug"></i>
+      Respuesta a incidentes con foco en contención, impacto y continuidad
+    </li>
+    <li>
+      <i class="fas fa-terminal"></i>
+      Automatización defensiva para auditoría, control y reporting técnico
+    </li>
+    <li>
+      <i class="fas fa-user-shield"></i>
+      Gestión del riesgo humano en entornos técnicos y operativos
+    </li>
+  </ul>
+</div>
+
+
+<!-- Card 2: Tecnologías & Entornos -->
+<div class="card">
+  <h3 style="font-size: 1em;">
+    <i class="fas fa-layer-group"></i> Tecnologías & Entornos
+  </h3>
+
+  <ul style="list-style:none; padding:0;">
+    <li><i class="fas fa-desktop"></i> <strong>Sistemas:</strong> Linux (Ubuntu, Debian), Windows</li>
+    <li><i class="fas fa-terminal"></i> <strong>Automatización:</strong> Bash, Python, Ansible</li>
+    <li><i class="fas fa-eye"></i> <strong>Observabilidad:</strong> Grafana, Prometheus, Wireshark</li>
+    <li><i class="fas fa-shield-alt"></i> <strong>Defensiva:</strong> Nmap, Nikto, OWASP ZAP <span style="opacity:.75;">(validación)</span></li>
+    <li><i class="fas fa-cubes"></i> <strong>Infra:</strong> Proxmox, Docker, Vagrant, VirtualBox</li>
+    <li><i class="fas fa-code-branch"></i> <strong>Control:</strong> Git, GitHub, VS Code</li>
+    <li><i class="fas fa-cloud"></i> <strong>Cloud:</strong> AWS / Azure <span style="opacity:.75;">(básico)</span></li>
+    <li><i class="fas fa-language"></i> <strong>Idioma:</strong> Francés C1</li>
+  </ul>
+</div>
+
+
+
+</section>
+
+
+<!-- SECCIÓN ORIGINAL -->
+<section id="proyectos">
+<h2 class="terminal-heading">
+  <i class="fas fa-project-diagram"></i> ls ~/proyectos/
+</h2>
+  <div class="grid-proyectos">
+
+    <div class="card"> 
+  <img src="https://rafaelmperez.com/assets/img/resultadolynis.jpg" alt="Bastionado Ubuntu 24.04 LTS" style="width:100%; height:200px; object-fit:cover;">
+
+  <h3 style="font-size: 1em;"> <i class="fas fa-lock"></i> Bastionado completo de Ubuntu 24.04 LTS </h3>
+
+    <strong class="techline"> 
+    <span style="color:#E95420;">Kernel</span> | 
+    <span style="color:#007BFF;">PAM</span> | 
+    <span style="color:#28A745;">Auditd</span> | 
+    <span style="color:#6f42c1;">USBGuard</span> | 
+    <span style="color:#20c997;">Lynis</span> 
+  </strong>
+
+  <p> Este proyecto documenta el proceso completo de bastionado de un sistema Ubuntu 24.04 LTS, siguiendo estándares CIS, NIST y OWASP. Se aplicaron medidas defensivas en múltiples capas: kernel, autenticación, servicios, red, logging y control físico, sin comprometer la funcionalidad del sistema.
+
+  Se utilizó Lynis como herramienta de auditoría continua, logrando una mejora de seguridad de <strong>68 a 87 puntos</strong>. Cada fase está documentada con comandos, configuraciones y validaciones técnicas. 
+  </p>
+
+
+<a href="https://rafaelmperez.com/docs/Rafael_MPerez_Bastionado_Ubuntu24.04_Informe_Tecnico.pdf"
+   target="_blank"
+   class="sysadmin-badge"
+   style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+  Informe técnico PDF
+</a>
+
+</p>
+
+    
+  </div>
+
+
+    
+
+    
+    <!-- CARD NUEVO PROYECTO -->
+<div class="card">
+  <img src="https://rafaelmperez.com/assets/img/geoip.jpg" 
+       alt="Nombre del proyecto" 
+       style="width:100%; height:200px; object-fit:cover;">
+
+  <h3 style="font-size: 1em;">
+    <i class="fas fa-shield-alt"></i> Firewall dinámico con GeoIP
+  </h3>
+
+  <strong class="techline"> 
+  <span style="color:#E95420;">iptables</span> |
+  <span style="color:#007BFF;">GeoIP</span> |
+  <span style="color:#28A745;">Bash</span> |
+  <span style="color:#6f42c1;">SSH</span> |
+  <span style="color:#20c997;">Auth.log</span>
+</strong>
+
+
+<p>
+  Este proyecto implementa un sistema defensivo automatizado que analiza los intentos fallidos de acceso SSH y bloquea IPs sospechosas según su país de origen.
+
+  Utiliza GeoIP para identificar conexiones no españolas y aplica reglas dinámicas con iptables. El script se ejecuta localmente, registra cada acción y permite visualizar los bloqueos en tiempo real.
+
+  El resultado es una capa de protección reactiva, ligera y documentable, alineada con buenas prácticas de ciberseguridad operativa.
+</p>
+
+<p>
+  <a href="https://rafaelmperez.com/proyectogeoip.html" 
+     target="_blank" 
+     class="sysadmin-badge"
+     style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+    Ver documentación técnica
+  </a>
+</p>
+
+</div>
+
+
+<!-- CARD H-SHIELD -->
+<div class="card">
+  <img 
+    src="https://rafaelmperez.com/assets/img/proyectografana2.jpg" 
+    alt="H-SHIELD — Responsabilidad defensiva en entorno PYME" 
+    style="width:100%; height:200px; object-fit:cover;"
+  >
+
+  <h3 style="font-size: 1em;">
+    <i class="fas fa-shield-alt"></i> H-SHIELD — Responsabilidad defensiva en entorno PYME
+  </h3>
+      
+  <strong class="techline"> 
+    <span style="color:#E95420;">Ubuntu Server</span> |
+    <span style="color:#6C757D;">Hardening</span> |
+    <span style="color:#F46800;">Observabilidad</span> |
+    <span style="color:#28A745;">Detección</span> |
+    <span style="color:#007BFF;">Respuesta a incidentes</span>
+  </strong>
+
+  <p>
+    Proyecto central del portfolio orientado a <strong>simular la responsabilidad real de ciberseguridad</strong> 
+    en una <strong>PYME</strong>.  
+    El foco no está en desplegar herramientas, sino en <strong>diseñar decisiones defensivas</strong>: 
+    reducir superficie de ataque, establecer un <strong>baseline seguro</strong>, 
+    detectar desviaciones relevantes y <strong>responder a incidentes</strong> con criterio.
+  </p>
+
+  <p>
+    Incluye <strong>hardening de sistemas Linux</strong>, 
+    <strong>monitorización y detección basada en anomalías</strong>, 
+    análisis de eventos, respuesta proporcional y 
+    <strong>gestión del riesgo humano</strong> en entornos operativos.
+  </p>
+
+  <p>
+    Este proyecto está diseñado para ser <strong>defendible en entrevista técnica</strong> 
+    y funcionar como <strong>sustituto de experiencia junior</strong>, 
+    priorizando impacto real frente a complejidad innecesaria.
+  </p>
+</div>
+
+
+    
+
+
+
+      <!-- CARD IA LOCAL -->
+<div class="card">
+  <img src="https://rafaelmperez.com/assets/img/proyecto_pipeline1.jpg" 
+       alt="Desarrollo de Pipeline en Bash" 
+       style="width:100%; height:200px; object-fit:cover;">
+
+    <h3 style="font-size: 1em;"><i class="fas fa-robot"></i> Pipeline Bash de trazabilidad y reporting</h3>
+  <strong class="techline"> 
+  <span style="color:#E95420;">Ubuntu</span> |
+  <span style="color:#28A745;">Bash</span> |
+  <span style="color:#6F42C1;">Gemma&nbsp;2B</span> |
+  <span style="color:#17A2B8;">IA&nbsp;Local</span> |
+  <span style="color:#FF9800;">Markdown</span> |
+  <span style="color:#795548;">Pandoc</span>
+</strong>
+
+<p>
+  Este proyecto documenta el desarrollo de un pipeline modular en Bash diseñado para registrar las sesiones en la terminal, explicar automáticamente los comandos ejecutados y generar informes técnicos reproducibles en PDF/DOCX. El sistema prioriza trazabilidad, eficiencia y privacidad, su integración con el modelo de lenguaje local Gemma 2B permite potenciar la generación de explicaciones técnicas sin conexión a la red y automatizar tareas repetitivas. Esta arquitectura es aplicable en auditorías, bastionado de sistemas y formación técnica.
+</p>
+
+<p>
+  <a href="https://rafaelmperez.com/ialocal.html" 
+     target="_blank" 
+     class="sysadmin-badge"
+     style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+    Ver documentación técnica
+  </a>
+</p>
+
+</div>
+
+
+    
+
+      </div>
+</section>
+<!-- FIN SECCIÓN RETOS/MICROPROYECTOS -->
+
+  <!-- SECCIÓN ORIGINAL -->
+<section id="scripts">
+<h2 class="terminal-heading">
+  <i class="fas fa-project-diagram"></i> ls ~/scripts/
+</h2>
+  <div class="grid-proyectos">
+
+  <div class="card">
+  <img src="https://rafaelmperez.com/assets/img/report_snapshot.png" 
+       alt="Nmap Auto Scanner" 
+       style="width:100%; height:200px; object-fit:cover; border-radius:6px;">
+
+  <h3 style="font-size: 1em; margin-top: 10px;">
+    <i class="fas fa-bolt"></i> Nmap Auto Scanner
+  </h3>
+
+    <strong class="techline"> 
+    <span style="color:#3776AB;">Python</span> | 
+    <span style="color:#E95420;">Nmap</span> | 
+    <span style="color:#F0DB4F;">YAML</span> | 
+    <span style="color:#28A745;">Cron</span> | 
+    <span style="color:#6f42c1;">JSON/CSV</span>
+  </strong>
+
+  <p style="margin-top: 8px; text-align: justify;">
+    <strong>Nmap Auto Scanner</strong> automatiza escaneos de red en entornos Linux, 
+    genera reportes en <code>JSON</code> y <code>CSV</code>, y compara resultados entre ejecuciones
+    para detectar cambios, nuevos servicios o posibles amenazas. Ideal para auditorías 
+    periódicas, bastionado y tareas de <em>blue team</em>.
+  </p>
+
+  <p style="text-align: justify;">
+    Desarrollado en <strong>Python</strong> con integración de <code>python-nmap</code>, 
+    utiliza un archivo <code>config.yaml</code> para configurar objetivos, opciones y directorios 
+    de salida, además de soportar ejecución programada mediante <code>cron</code>.
+  </p>
+
+  <div style="margin-top: 10px;">
+    <a href="https://github.com/rafaelmperez/nmap-auto-scanner" 
+       target="_blank" 
+       class="sysadmin-badge"
+       style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+      <i class="fab fa-github"></i> Ver en GitHub
+    </a>
+
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://rafaelmperez.com/assets/img/scriptclonedvoice.png" 
+       alt="Python TTS — Cloned AI Voice" 
+       style="width:100%; height:200px; object-fit:cover; border-radius:6px;">
+
+  <h3 style="font-size: 1em; margin-top: 10px;">
+    <i class="fas fa-microphone"></i> Python TTS — Cloned AI Voice
+  </h3>
+
+    <strong class="techline"> 
+    <span style="color:#3776AB;">Python</span> | 
+    <span style="color:#FF6F00;">ElevenLabs API</span> | 
+    <span style="color:#00A67E;">OpenAI TTS</span> | 
+    <span style="color:#868E96;">dotenv</span> | 
+    <span style="color:#6f42c1;">CLI / Logging</span>
+  </strong>
+
+  <p style="margin-top: 8px; text-align: justify;">
+    Proyecto de <strong>text-to-speech (TTS)</strong> desarrollado en Python que convierte texto 
+    en voz usando tu <strong>voz clonada</strong> mediante <em>ElevenLabs</em> o 
+    <strong>voz neural realista</strong> de <em>OpenAI</em>. 
+    Diseñado como script CLI, permite integrar síntesis de voz en flujos de trabajo, 
+    automatizaciones o contenido multimedia.
+  </p>
+
+  <p style="text-align: justify;">
+    Soporta entrada por argumento, archivo o modo interactivo, configuración mediante 
+    <code>.env</code>, y salida de audio en <code>MP3/WAV</code>. 
+    Incluye sistema de logs y arquitectura extensible para añadir nuevos proveedores 
+    como Play.ht o VITS. Licenciado bajo <strong>MIT</strong>.
+  </p>
+
+  <div style="margin-top: 10px;">
+    <a href="https://github.com/rafaelmperez/python-tts-cloned-voice" 
+       target="_blank" 
+       class="sysadmin-badge"
+       style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+      <i class="fab fa-github"></i> Ver en GitHub
+    </a>
+
+  </div>
+</div>
+
+
+
+
+<!-- CARD NUEVO PROYECTO -->
+<div class="card">
+  <img src="https://rafaelmperez.com/assets/img/scriptgmail.png" 
+       alt="Gmail Auto-Responder" 
+       style="width:100%; height:200px; object-fit:cover; border-radius:6px;">
+
+  <h3 style="font-size: 1em; margin-top: 10px;">
+    <i class="fas fa-robot"></i> Gmail Auto-Responder
+  </h3>
+
+    <strong class="techline"> 
+    <span style="color:#3776AB;">Python</span> | 
+    <span style="color:#D44638;">Gmail API</span> | 
+    <span style="color:#00A67E;">OpenAI API</span> | 
+    <span style="color:#6C757D;">Systemd</span> | 
+    <span style="color:#28A745;">OAuth 2.0</span>
+  </strong>
+
+  <p style="margin-top: 8px; text-align: justify;">
+    Proyecto de <strong>automatización de respuestas en Gmail</strong> mediante Python y la 
+    <em>Gmail API</em>, diseñado para ejecutarse de forma autónoma como servicio 
+    <code>systemd</code>. Permite responder correos entrantes de manera automática, 
+    con opción de <strong>respuestas inteligentes generadas por IA (OpenAI)</strong>.
+  </p>
+
+  <p style="text-align: justify;">
+    Integra autenticación <strong>OAuth 2.0</strong>, gestión de logs detallada y control de 
+    duplicados para evitar bucles de respuesta. Su configuración se realiza mediante 
+    <code>.env</code>, con intervalos de verificación ajustables. 
+    Ideal para tareas de productividad, administración IT o flujos automatizados.
+  </p>
+
+  <div style="margin-top: 10px;">
+    <a href="https://github.com/rafaelmperez/gmail-auto-responder" 
+       target="_blank" 
+       class="sysadmin-badge"
+       style="display:inline-block; background-color:#24292e; color:white; padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">
+      <i class="fab fa-github"></i> Ver en GitHub
+    </a>
+
+  </div>
+</div>
+
+</section>
+    
+
+      </div>
+<section id="criterio-profesional">
+  <h2 class="terminal-heading">
+    <i class="fas fa-brain"></i> ~/criterio-tecnico.md
+  </h2>
+
+  <p>
+    Este portfolio está diseñado para reflejar <strong>criterio técnico aplicado</strong>,
+    no para enumerar herramientas ni maximizar cobertura superficial.
+  </p>
+
+  <ul>
+    <li>
+      <strong>Arquitectura y decisiones:</strong>
+      análisis de elecciones de diseño, compromisos asumidos y exclusiones conscientes
+      bajo restricciones reales.
+    </li>
+    <li>
+      <strong>Detección y respuesta:</strong>
+      identificación de señales relevantes, gestión del ruido y priorización operativa.
+    </li>
+    <li>
+      <strong>Factor humano:</strong>
+      evaluación de errores operativos, abuso de privilegios y riesgo organizativo
+      sin enfoques punitivos.
+    </li>
+    <li>
+      <strong>Gestión de incidentes:</strong>
+      contención, evaluación de impacto real y aprendizaje post-incidente.
+    </li>
+    <li>
+      <strong>Exposición y riesgo digital:</strong>
+      análisis de cómo la visibilidad pública y profesional amplifica el riesgo humano
+      y operativo, y cómo abordarlo desde un enfoque preventivo y no sensacionalista.
+    </li>
+  </ul>
+
+  <p>
+    El objetivo no es demostrar exhaustividad, sino
+    <strong>criterio defendible bajo restricciones reales</strong>,
+    priorizando impacto, riesgo y sostenibilidad frente a complejidad innecesaria.
+  </p>
+</section>
+
+
+
+
+
+
+<!-- Script de Credly -->
+<script type="text/javascript" src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+
+</section>
+
+
+<section id="cv">
+  <h2 class="terminal-heading">
+    <i class="fas fa-file-code"></i> $ ~/curriculum.pdf
+  </h2>
+
+  <div class="cv-container">
+    <!-- Visual izquierdo -->
+    <div class="cv-visual">
+      <i class="fas fa-file-pdf document-icon"></i>
+      <div class="document-info">
+        <h3>Curriculum Vitae</h3>
+        <p>Documento técnico completo con experiencia, formación y certificaciones verificables</p>
+      </div>
+      <div class="cv-stats">
+        <div class="stat-item">
+          <i class="fas fa-language"></i>
+          <span>Francés C1</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-certificate"></i>
+          <span>4+ Certificaciones</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-shield-alt"></i>
+          <span>Ciberseguridad</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contenido derecho -->
+    <div class="cv-content">
+      <div class="cv-feature">
+        <i class="fas fa-user-shield cv-feature-icon"></i>
+        <div>
+          <h4>Perfil Técnico</h4>
+          <p>Administración de sistemas y ciberseguridad defensiva con foco en gestión del riesgo digital</p>
+        </div>
+      </div>
+
+      <div class="cv-feature">
+        <i class="fas fa-server cv-feature-icon"></i>
+        <div>
+          <h4>Experiencia Operativa</h4>
+          <p>Diseño, hardening y operación de sistemas Linux/Windows en entornos reales</p>
+        </div>
+      </div>
+
+      <div class="cv-feature">
+        <i class="fas fa-graduation-cap cv-feature-icon"></i>
+        <div>
+          <h4>Formación Verificable</h4>
+          <p>ASIR + Certificaciones (Google Cybersecurity, Cisco CCST) con validación técnica</p>
+        </div>
+      </div>
+
+      <div class="cv-feature">
+        <i class="fas fa-chart-line cv-feature-icon"></i>
+        <div>
+          <h4>Mejora Continua</h4>
+          <p>Enfoque en impacto real, automatización defensiva y documentación defendible</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón de descarga -->
+  <div class="cv-download-wrapper">
+    <a href="https://rafaelmperez.com/docs/CV_RafaelMPerez.pdf" 
+       class="sysadmin-badge cv-download-btn" 
+       target="_blank" 
+       rel="noopener noreferrer">
+      <i class="fas fa-file-pdf"></i> 
+      <strong>Descargar CV</strong>
+      <span class="file-size">PDF • 2.4 MB</span>
+    </a>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section id="contacto">
+  <h2 class="terminal-heading">
+    <i class="fas fa-envelope"></i> Contacto
+  </h2>
+
+  <div class="phone-container">
+    <div class="phone-screen">
+      <form id="contactForm" action="https://formspree.io/f/mdkwngad" method="POST">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" required></textarea>
+        </div>
+
+        <button type="submit" class="sysadmin-badge">
+          <strong>Enviar mensaje</strong>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+
+      <div class="divider">
+        <span>- o si lo prefieres -</span>
+      </div>
+
+      <div class="email-link">
+        <a href="mailto:rmp.blueteam@proton.me" class="sysadmin-badge email-badge">
+          <i class="fa-solid fa-envelope"></i>
+          rmp.blueteam@proton.me
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  const submitBtn = this.querySelector('button[type="submit"]');
+  submitBtn.innerHTML = '<strong>Enviando...</strong> <i class="fa-solid fa-spinner fa-spin"></i>';
+  submitBtn.disabled = true;
+});
+</script>
+
+
+
+<footer>
+  <strong style="color: white; text-align:center; display:block;">
+    <p style="margin:0;">
+      © 2026 Rafael M. Pérez<br>
+      Sistemas · Ciberseguridad · Gestión del riesgo digital<br>
+    </p>
+
+    <p class="terminal-line" style="margin-top:10px;">
+      ¡Gracias por tu visita!
+    </p>
+  </strong>
+</footer>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector('.language-switcher').style.visibility = 'visible';
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const barra = document.querySelector(".barra-superior");
+    const offsetTop = barra.offsetTop;
+
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset >= offsetTop) {
+            barra.classList.add("sticky");
+        } else {
+            barra.classList.remove("sticky");
+        }
+    });
+});
+</script>
+
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
